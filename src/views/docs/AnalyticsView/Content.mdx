@@ -1,0 +1,76 @@
+# Analytics
+
+## Tool
+
+For this product we implemented <a target="_blank" href="https://analytics.google.com/">Google Analytics</a>. It helps us to track page views, but it can be extended to track specific user action, such as button clicks which can be important for your team to understand what can be improved.
+
+## Integration
+
+There are a few steps to implement the SDK.
+
+* Create a Google account, this gives you permission to multiple platforms.
+
+* Find your Google Analytics ID. For more information follow this <a target="_blank" href="https://support.google.com/analytics/answer/1008080?hl=en">link</a>.
+
+* Setup your Google Analytics ID as a process variable (`REACT_APP_GA_MEASUREMENT_ID`). We recommend to configure it in `.env` file. This allows you to have multiple environments with different accounts.
+
+* Load the SDK in all pages. We already prepared a component for you, it can be found in `src/components/GoogleAnalytics`. Since we are using React based on CRA, client side solution, we only have to load it in one place, the app root. Ensure it has access to the Router context if you want to automate pageview tracking.
+
+```jsx
+<Router history={history}>
+  <GoogleAnalytics />
+</Router>
+```
+
+## Tracking
+
+### Page views
+
+There are multiple ways to track a page view. For this project we decided to have a custom component, `Page`, and wrap each view with it. Once the component is mounted, it sends the page view event with the page information. It can be easily extended.
+If you want to do it manually do the following:
+
+```jsx
+import track from 'src/utils/analytics';
+
+function AccountBillingView() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    track.pageView({ 
+      page_path: location.pathname
+    });
+  }, []);
+
+  return (
+    <div>
+      Billing Details
+    </div>
+  );
+}
+```
+
+### Actions
+
+One action can trigger one or more events. Lets say that you want to track all link clicks, but one link is more important and you want to have an extra tracking event or you simply want to have specific actions tracked. It depends on your business requirements.
+Here is an example:
+
+
+```jsx
+import track from 'src/utils/analytics';
+
+function AccountSettingsView() {
+  const handleCloseAccount = () => {
+    track.event('close_account');
+  }
+
+  return (
+    <div>
+      Settings
+
+      <Button onClick={handleCloseAccount}>
+        Close Account
+      </Button>
+    </div>
+  );
+}
+```

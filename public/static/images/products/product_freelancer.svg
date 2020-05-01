@@ -1,0 +1,47 @@
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="46" height="46" rx="4"></rect>
+        <filter x="-10.9%" y="-8.7%" width="121.7%" height="121.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="1.41638472e-14%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#36B37E" offset="0%"></stop>
+            <stop stop-color="#399D6C" offset="100%"></stop>
+        </linearGradient>
+        <path d="M24.50525,24.50525 C24.50525,25.1499043 23.9826543,25.6725 23.338,25.6725 C22.6933457,25.6725 22.17075,25.1499043 22.17075,24.50525 L22.17075,22.17075 C22.17075,20.2367869 20.6029631,18.669 18.669,18.669 L9.331,18.669 C7.39703688,18.669 5.82925,20.2367869 5.82925,22.17075 L5.82925,24.50525 C5.82925,25.1499043 5.30665437,25.6725 4.662,25.6725 C4.01734563,25.6725 3.49475,25.1499043 3.49475,24.50525 L3.49475,22.17075 C3.49475,18.9474782 6.10772813,16.3345 9.331,16.3345 L18.669,16.3345 C21.8922718,16.3345 24.50525,18.9474782 24.50525,22.17075 L24.50525,24.50525 Z M14,14 C10.7767281,14 8.16375,11.3870219 8.16375,8.16375 C8.16375,4.94047813 10.7767281,2.3275 14,2.3275 C17.2232718,2.3275 19.83625,4.94047813 19.83625,8.16375 C19.83625,11.3870219 17.2232718,14 14,14 Z M14,11.6655 C15.9339631,11.6655 17.50175,10.0977131 17.50175,8.16375 C17.50175,6.22978688 15.9339631,4.662 14,4.662 C12.0660369,4.662 10.49825,6.22978688 10.49825,8.16375 C10.49825,10.0977131 12.0660369,11.6655 14,11.6655 Z" id="path-5"></path>
+    </defs>
+    <g id="Back-Office" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-1-1-Analytics-Overview" transform="translate(-849.000000, -885.000000)">
+            <g id="portlet-sales-copy-5" transform="translate(835.000000, 694.000000)">
+                <g id="Group-6-Copy" transform="translate(1.000000, 180.000000)">
+                    <g id="icon" transform="translate(16.000000, 13.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Rectangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                            <rect stroke="#E0E0E0" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="45" height="45" rx="4"></rect>
+                        </g>
+                        <g id="g/green" mask="url(#mask-2)" fill="url(#linearGradient-4)">
+                            <rect id="Shape" x="0" y="0" width="46" height="46"></rect>
+                        </g>
+                        <g id="icons/ic/user(custom)" mask="url(#mask-2)">
+                            <g transform="translate(9.000000, 9.000000)">
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <g id="icons/ic/user(custom)" stroke="none" fill="none" fill-rule="nonzero"></g>
+                                <g id="ic/color/white" stroke="none" fill="none" mask="url(#mask-6)" fill-rule="evenodd">
+                                    <rect id="BG" fill="#FFFFFF" x="0" y="0" width="28" height="28"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+# Theming
+
+For any type of application it is important for your customers to be able to control how it looks and we made that possible using Material UI theme setup. In this version we have two theme options, but we plan to plan to add at least one more.
+
+## How it works
+
+Before rendering the application, we extract the user settings and setup the theme.
+
+```jsx
+function App() {
+  // ...
+
+  return (
+    <ThemeProvider theme={createTheme(settings)}>
+      <StylesProvider jss={jss}>
+        {/* Content */}
+      </StylesProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+## Updating palette and other styles
+
+In `src/theme/index.js` you will see both theme setups. They have different palettes, shadows, overrides, etc. This allows you to control each of them individually. If you want to share a configuration globally, you can update the `base` object.

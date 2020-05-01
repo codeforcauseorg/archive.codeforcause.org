@@ -1,0 +1,71 @@
+# State Management
+
+## Context API
+
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+Context is designed to share data that can be considered "global" for a tree of React components, such as the current authenticated user, theme, or preferred language. You can read more about it <a target="_blank" href="https://reactjs.org/docs/context.html">here</a>.
+
+We used it to manage the app settings. Once the project is mounted we extract the stored settings from localStorage, pass the data to context provider and then use it when needed.
+
+## Redux
+
+Redux is more robust alternative and currently offers more helpful features. Here is a <a target="_blank" href="https://redux.js.org/basics/usage-with-react">link</a> that can help you understand the entire concept behind it.
+
+The project uses Redux with Hooks to help you manage authenticated user, chat, kanban, mail apps, etc. The clear project structure allows you to replace it whenever you need to with ease. There are 2 main folders located in src folder: "actions" and "reducers.
+
+Here is how to use it:
+
+```jsx
+// SettingsView.js
+
+import { useDispatch } from 'react-redux';
+import { logout } from 'src/actions/accountActions';
+
+function SettingsView() {
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
+  return (
+    <div>
+      Settings
+
+      <Button onClick={handleLogout}>
+        Logout
+      </Button>
+    </div>
+  );
+}
+```
+
+When clicking "logout" we dispatch the logout action. Now this action uses `authService` to clear the session and remove the JWT from future API requests.
+
+```jsx
+// src/actions/accountActions.js
+
+export function logout() {
+  return async (dispatch) => {
+    authService.logout();
+
+    dispatch({
+      type: LOGOUT
+    });
+  };
+}
+```
+
+AuthService does not control the app state, it only removes your authentication from next requests. So, now all we have to do is to ensure that we remove the user data from the store. Here is when the reducer does its job.
+
+```jsx
+// src/reducers/accountReducer.js
+
+    case LOGOUT: {
+      return produce(state, (draft) => {
+        draft.user = null;
+      });
+    }
+```
+
+When the `LOGOUT` action type is triggered, it produces a new state using `immer` module.

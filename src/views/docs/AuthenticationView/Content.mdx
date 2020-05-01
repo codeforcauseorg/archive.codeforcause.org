@@ -1,0 +1,11 @@
+# Authentication
+
+To help our customer we implemented JWT Authentication method. You can read more about it <a href="https://jwt.io/">here</a>. Once the user is logged in, each subsequent axios request should include the JWT, allowing the user to access routes, services, and resources that are permitted with that token.
+
+We plan to integrate solutions such as <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a> or <a href="https://auth0.com/">Auth0</a>. If you want this feature to be inclunded, let us know and we'll try to release it sooner.
+
+## How authentication works
+
+Accessing dashboard pages is only possible for authenticated users. If this condition is not fullfield, the user is redirected to a login page. To sign a user into your app, you first get authentication credentials from the user. These credentials can be the user's email address and password. Once the backend services confirm the credentials, we store the login state and user profile in the global state manager, Redux, but it can be replaced with other solutions such as React Context.
+
+We are able check user's credentials before accesing a component / route. Once the application is reloaded we silently retrieve the stored access token then check and restore user's identity before rendering the application content.

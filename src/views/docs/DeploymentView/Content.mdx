@@ -1,0 +1,79 @@
+# Deployment
+
+`npm run build` creates a build directory with a production build of your app. Set up your favorite HTTP server so that a visitor to your site is served `index.html`, and requests to static paths like `/static/js/main.<hash>.js` are served with the contents of the `/static/js/main.<hash>.js` file. For more information see the production build section.
+
+## Static Server
+For environments using Node, the easiest way to handle this would be to install serve and let it handle the rest:
+
+```sh
+npm install -g serve
+serve -s build
+```
+
+The last command shown above will serve your static site on the port **5000**. Like many of serve’s internal settings, the port can be adjusted using the `-l` or `--listen` flags:
+
+```sh
+serve -s build -l 4000
+```
+
+Run this command to get a full list of the options available:
+
+```sh
+serve -h
+```
+
+## Other Solutions
+
+You don’t necessarily need a static server in order to run a Create React App project in production. It also works well when integrated into an existing server side app.
+
+### ExpressJS
+
+Here’s a programmatic example using Node and Express:
+
+```js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.listen(9000);
+```
+
+The choice of your server software isn’t important either. Since Create React App is completely platform-agnostic, there’s no need to explicitly use Node.
+
+The build folder with static assets is the only output produced by Create React App.
+
+### Netlify CLI
+
+Netlify's command line interface (CLI) lets you deploy sites or configure continuous deployment straight from the command line.
+
+To install Netlify CLI, make sure you have Node.js version 8 or higher, then run this command from any directory in your terminal:
+
+```sh
+npm install netlify-cli -g
+```
+
+It is possible to deploy a site manually, without continuous deployment. This method uploads files directly from your local project directory to your site on Netlify.
+
+```sh
+netlify deploy
+```
+
+The first time you run the command, Netlify CLI will prompt you to select an existing site or create a new one, linking the site for all future deploys.
+
+You will need to set up a redirect and rewrite rule for the single page app.
+
+That redirect rule would look like this:
+
+```sh
+/*    /index.html   200
+```
+
+You can add redirect rules to the _redirects file or to your netlify.toml config file. For more information on redirects on Netlify <a href="https://www.netlify.com/docs/redirects" target="_blank">checkout the docs</a>.
+
+### Firebase Hosting
+
+Using the Firebase CLI, you deploy files from local directories on your computer to your Hosting server. Beyond serving static content, you can use Cloud Functions for Firebase or Cloud Run to serve dynamic content and host microservices on your sites. Read more about it from <a href="https://firebase.google.com/docs/hosting">official docs</a>.

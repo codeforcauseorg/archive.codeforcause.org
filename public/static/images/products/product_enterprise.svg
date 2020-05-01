@@ -1,0 +1,49 @@
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="46" height="46" rx="4"></rect>
+        <filter x="-10.9%" y="-8.7%" width="121.7%" height="121.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="1.41638472e-14%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#F7D154" offset="0%"></stop>
+            <stop stop-color="#F7AB54" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8.16433333,6.99708333 L8.16433333,5.82925 C8.16433333,3.89560904 9.73185904,2.32808333 11.6655,2.32808333 L16.3345,2.32808333 C18.268141,2.32808333 19.8356667,3.89560904 19.8356667,5.82925 L19.8356667,6.99708333 L23.3391667,6.99708333 C25.2721633,6.99708333 26.8391667,8.56408671 26.8391667,10.4970833 L26.8391667,22.1719167 C26.8391667,24.1049133 25.2721633,25.6719167 23.3391667,25.6719167 L4.66083333,25.6719167 C2.72783671,25.6719167 1.16083333,24.1049133 1.16083333,22.1719167 L1.16083333,10.4970833 C1.16083333,8.56408671 2.72783671,6.99708333 4.66083333,6.99708333 L8.16433333,6.99708333 Z M10.4976667,6.99708333 L17.5023333,6.99708333 L17.5023333,5.82925 C17.5023333,5.18427346 16.9794765,4.66141667 16.3345,4.66141667 L11.6655,4.66141667 C11.0205235,4.66141667 10.4976667,5.18427346 10.4976667,5.82925 L10.4976667,6.99708333 Z M8.16433333,9.33041667 L4.66083333,9.33041667 C4.01650113,9.33041667 3.49416667,9.85275113 3.49416667,10.4970833 L3.49416667,22.1719167 C3.49416667,22.8162489 4.01650113,23.3385833 4.66083333,23.3385833 L8.16433333,23.3385833 L8.16433333,9.33041667 Z M10.4976667,9.33041667 L10.4976667,23.3385833 L17.5023333,23.3385833 L17.5023333,9.33041667 L10.4976667,9.33041667 Z M19.8356667,9.33041667 L19.8356667,23.3385833 L23.3391667,23.3385833 C23.9834989,23.3385833 24.5058333,22.8162489 24.5058333,22.1719167 L24.5058333,10.4970833 C24.5058333,9.85275113 23.9834989,9.33041667 23.3391667,9.33041667 L19.8356667,9.33041667 Z" id="path-5"></path>
+    </defs>
+    <g id="Client-Side" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0-1-1-Subscription-Modal" transform="translate(-1120.000000, -391.000000)">
+            <g id="conformation-modals" transform="translate(567.000000, 217.000000)">
+                <g id="Group-2" transform="translate(24.000000, 143.000000)">
+                    <g id="Group-Copy-2" transform="translate(508.000000, 33.000000)">
+                        <g id="icon" transform="translate(24.000000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                                <rect stroke="#E0E0E0" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="45" height="45" rx="4"></rect>
+                            </g>
+                            <g id="g/yellow" mask="url(#mask-2)" fill="url(#linearGradient-4)">
+                                <rect id="Shape" x="0" y="0" width="46" height="46"></rect>
+                            </g>
+                            <g id="icons/ic/briefcase(custom)" mask="url(#mask-2)">
+                                <g transform="translate(9.000000, 9.000000)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <use id="Combined-Shape" stroke="none" fill="#546E7A" fill-rule="nonzero" xlink:href="#path-5"></use>
+                                    <g id="ic/color/white" stroke="none" fill="none" mask="url(#mask-6)" fill-rule="evenodd">
+                                        <rect id="BG" fill="#FFFFFF" x="0" y="0" width="28" height="28"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,62 @@
+# Api Calls
+
+## How can I make an AJAX call?
+You can use any library you like. We decided to use <a target="_blank" href="https://github.com/axios/axios">Axios</a> since it allows us to create instances. Another good alternative could be <a target="_blank" href="https://github.com/andris9/fetch">Fetch</a>.
+
+## Example
+Since we keep up to date with the latest updates of React, our product uses functional components with React Hooks, but this can be applied to Class components.
+
+```jsx
+function CustomerListView() {
+  const classes = useStyles();
+  const isMountedRef = useIsMountedRef();
+  const [customers, setCustomers] = useState(null);
+
+  const getCustomers = useCallback(() => {
+    axios
+      .get('/api/management/customers')
+      .then((response) => {
+        if (isMountedRef.current) {
+          setCustomers(response.data.customers);
+        }
+      })
+      .catch((error) => {
+        // Handle error
+      });
+  }, [isMountedRef]);
+
+  useEffect(() => {
+    getCustomers();
+  }, [getCustomers]);
+
+  return (
+    // Render data
+  );
+}
+```
+
+## Request interceptors
+
+Using Axios we were able to integrate <a target="_blank" href="https://github.com/ctimmerm/axios-mock-adapter">Axios Mock Adapter</a> to simulate real server calls. To archive that, you have to create an Axios instante and use it whenever you make a request call. Now you can extend your instance and add Axios Mock Adapter to listen for requests and return custom data.
+
+## Removing existing request interceptos
+
+There are two ways:
+
+1. Simply use a new instance of Axios
+2. Remove the interecept listener existing in `src/mock` folder.
+
+### Adding request interceptors
+
+It takes ony a few seconds to add a new call listener. The interceptor has a similar format to Express JS, for example:
+
+```js
+import mock from 'src/utils/mock';
+
+mock.onGet('/api/management/invoices').reply(200, {
+  invoices: [
+    { id: 1, total: 32.43 },
+    { id: 2, total: 67.00 }
+  ]
+});
+```

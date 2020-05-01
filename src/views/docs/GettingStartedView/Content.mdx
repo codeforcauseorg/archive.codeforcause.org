@@ -1,0 +1,55 @@
+# Getting started
+
+Before proceeding you'll need to have the laste stabe <a href="https://nodejs.org/en/" target="_blank">NodeJS</a> and <a href="https://www.npmjs.com"  target="_blank">npm</a> installed on your machine.
+
+You can use <a href="https://github.com/creationix/nvm#installation" target="_blank">nvm</a> (macOS/Linux) or <a href="https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows" target="_blank">nvm-windows</a> to switch Node versions between different projects.
+
+## Install dependencies
+Open the project folder and install it's dependencies. You can use any package manager you want. We recommend <a href="https://yarnpkg.com" target="_blank">Yarn</a> or <a href="https://www.npmjs.com"  target="_blank">npm</a>.
+
+```sh
+cd project-folder
+npm install
+```
+
+## Start development server
+
+Once the installation is done, you can now run your app by running `npm start` or `yarn start`.
+
+```sh
+npm start
+```
+
+You will see something similar to:
+
+```sh
+Compiled successfully!
+
+You can now view @devias-io/material-kit-pro-react in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.5:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+```
+
+This runs the app in development mode. Open <a href="http://localhost:3000" target="_blank">localhost:3000</a> to view it in the browser.
+
+The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console. Since we use `ESlint` you will get detailed warnings.
+
+## Build project files
+
+```sh
+npm run build
+```
+
+or `yarn build`
+
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
+Your app is ready to be deployed.
+
+> This project doesn’t handle backend logic or databases; it is just a frontend, so you can use it with any backend you want. 

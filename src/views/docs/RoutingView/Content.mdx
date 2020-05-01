@@ -1,0 +1,39 @@
+# Routing
+
+The entire routing is based on the `react-router` and `react-router-dom` modules.
+
+## Lazy loading routes
+
+Most React apps will have their files "bundled" using tools like Webpack, Rollup or Browserify. Bundling is the process of following imported files and merging them into a single file: a "bundle". This bundle can then be included on a webpage to load an entire app at once.
+
+To reduce bundle size, we use the new `lazy` and `Suspense` React methods with the dynamic import() syntax.
+
+```jsx
+import React, {
+  lazy,
+  Suspense
+} from 'react';
+import LoadingScreen from 'src/components/LoadingScreen';
+
+function Routes() {
+  return (
+    <Suspense fallback={<LoadingScreen />}>
+      <Switch>
+        <Route
+          exact
+          path="/404"
+          component={lazy(() => import('src/views/pages/ErrorView'))}
+        />
+      </Switch>
+    </Suspense>
+  );
+}
+```
+
+`lazy` takes a function that must call a dynamic `import()`. This must return a Promise which resolves to a module with a default export containing a React component.
+
+The lazy component should then be rendered inside a `Suspense` component, which allows us to show some fallback content (such as a loading indicator) while we’re waiting for the lazy component to load.
+
+## Protecting routes
+
+We created route wrappers to check the user credentials before displaying the route content. For example, we only allow the dashboard rendering only if the user is logged in and login/register pages for unauthencated users. This can be extended and add one extra layer of security by checking for user role. It's up to you to decide your protection method.
