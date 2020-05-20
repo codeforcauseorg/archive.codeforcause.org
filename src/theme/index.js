@@ -45,20 +45,20 @@ const themeConfigs = [
     palette: {
       type: 'light',
       action: {
-        active: colors.blueGrey[600]
+        active: colors.blueGrey[600] //small icons 
       },
       background: {
         default: colors.common.white,
         dark: '#f4f6f8',
-        paper: colors.common.white
+        paper: colors.common.white // background
       },
       primary: {
-        main: colors.indigo[600]
+        main: colors.indigo[600]  // for header and loader
       },
       secondary: {
-        main: '#5850EC'
+        main: '#5850EC' // for button and selected
       },
-      text: {
+      text: { // for text classes
         primary: colors.blueGrey[900],
         secondary: colors.blueGrey[600]
       }
