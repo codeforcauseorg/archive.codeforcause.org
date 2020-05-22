@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint ./src",
-    "start": "react-scripts start",
+    "start": "PORT=5000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -59,6 +59,7 @@
     "jss": "^10.1.1",
     "jss-rtl": "^0.3.0",
     "jwt-decode": "^2.2.0",
+    "keycloak-js": "^10.0.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "notistack": "^0.9.9",

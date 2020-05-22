@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+
 import {
   Box,
   Container,
   Grid,
   Typography,
-  makeStyles
+  makeStyles,useMediaQuery
 } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
-    paddingTop: 200,
-    paddingBottom: 200,
+    paddingTop: 40,
+    paddingBottom: 100,
     [theme.breakpoints.down('md')]: {
-      paddingTop: 60,
+      paddingTop: 40,
       paddingBottom: 60
     }
   },
@@ -26,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     '& > img': {
       maxWidth: '90%',
       height: 'auto',
-      transform: 'rotateY(-35deg) rotateX(15deg)',
       backfaceVisibility: 'hidden',
       boxShadow: theme.shadows[16]
     }
@@ -39,11 +40,16 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: '90%',
       height: 'auto'
     }
+  },
+  hide: {
+    display : 'none'
   }
 }));
 
 function Hero({ className, ...rest }) {
   const classes = useStyles();
+  const matches = useMediaQuery('(min-width:960px)');
+
 
   return (
     <div
@@ -145,13 +151,8 @@ function Hero({ className, ...rest }) {
             xs={12}
             md={7}
           >
-            <Box position="relative">
-              <div className={classes.shape}>
-                <img
-                  alt="Shapes"
-                  src="/static/home/shapes.svg"
-                />
-              </div>
+            <Box position="relative" className={matches ? '' : classes.hide}>
+             
               <div className={classes.image}>
                 <img
                   alt="Presentation"

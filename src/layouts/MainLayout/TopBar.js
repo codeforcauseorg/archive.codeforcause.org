@@ -15,6 +15,8 @@ import {
 } from '@material-ui/core';
 import { APP_VERSION } from 'src/config';
 import Logo from 'src/components/Logo';
+import authService from 'src/services/authService'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -88,11 +90,11 @@ function TopBar({ className, ...rest }) {
         <Button
           color="secondary"
           component="a"
-          href="https://material-ui.com/store/items/devias-kit-pro"
           variant="contained"
           size="small"
+          onClick={authService.logout}
         >
-          Get the kit
+          Logout
         </Button>
       </Toolbar>
     </AppBar>

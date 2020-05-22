@@ -1,11 +1,20 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import React, {
+  useCallback,
+  useState,
+  useEffect
+} from 'react';
+import { makeStyles, Container} from '@material-ui/core';
 import Page from 'src/components/Page';
 import Hero from './Hero';
-import Features from './Features';
-import Testimonials from './Testimonials';
 import CTA from './CTA';
-import FAQS from './FAQS';
+import Footer from './Footer';
+import axios from 'src/utils/axios';
+import useIsMountedRef from 'src/hooks/useIsMountedRef';
+import Mentors from './Mentors'
+import Header from './Header';
+import HeadeRight from './HeadeRight';
+
+
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -13,17 +22,42 @@ const useStyles = makeStyles(() => ({
 
 function HomeView() {
   const classes = useStyles();
+  const isMountedRef = useIsMountedRef();
+
+  const [project, setProject] = useState(null);
+
+
+  const getProject = useCallback(() => {
+    axios
+      .get('/api/projects/projects/1')
+      .then((response) => {
+        if (isMountedRef.current) {
+          setProject(response.data.project);
+        }
+      });
+  }, [isMountedRef]);
+  useEffect(() => {
+    getProject();
+  }, [getProject]);
+
+  if (!project) {
+    return null;
+  }
 
   return (
     <Page
       className={classes.root}
-      title="Home"
+      title="Code for Cause"
     >
       <Hero />
-      <Features />
-      <Testimonials />
-      <CTA />
-      <FAQS />
+      <Container maxWidth="lg">
+      <Header />
+      <HeadeRight />
+      </Container>
+      <Mentors mentors={project.mentors} />
+
+      <CTA/>
+      <Footer/>
     </Page>
   );
 }

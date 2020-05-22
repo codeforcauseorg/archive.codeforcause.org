@@ -34,14 +34,14 @@ function CTA({ className, ...rest }) {
           align="center"
           color="textPrimary"
         >
-          Ready to start building?
+         Ready to start your journey with us?
         </Typography>
         <Typography
           variant="h1"
           align="center"
           color="secondary"
         >
-          Download Devias Material Kit today.
+          You can change your future and of others.
         </Typography>
         <Box
           mt={6}
@@ -52,10 +52,10 @@ function CTA({ className, ...rest }) {
           <Button
             color="secondary"
             component="a"
-            href="https://material-ui.com/store/items/devias-kit-pro"
+            href="/register"
             variant="contained"
           >
-            Get the kit
+            Get started
           </Button>
         </Box>
       </Container>

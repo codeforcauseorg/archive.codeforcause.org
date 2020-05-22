@@ -370,7 +370,7 @@ The project has been created in Sketch so let me know if there are any problems 
           .getTime()
       }
     ],
-    subscribers: [
+    mentors: [
       {
         id: '5e887a62195cc5aef7e8ca5d',
         name: 'Ekaterina Tankova',

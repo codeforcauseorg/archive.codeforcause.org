@@ -9,12 +9,9 @@ import {
   Redirect,
   Route
 } from 'react-router-dom';
-import DashboardLayout from 'src/layouts/DashboardLayout';
-import DocsLayout from 'src/layouts/DocsLayout';
 import MainLayout from 'src/layouts/MainLayout';
 import HomeView from 'src/views/pages/HomeView';
 import LoadingScreen from 'src/components/LoadingScreen';
-import AuthGuard from 'src/components/AuthGuard';
 import GuestGuard from 'src/components/GuestGuard';
 
 const routesConfig = [
