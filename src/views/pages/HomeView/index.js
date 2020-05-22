@@ -11,8 +11,8 @@ import Footer from './Footer';
 import axios from 'src/utils/axios';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
 import Mentors from './Mentors'
-import Header from './Header';
-import HeadeRight from './HeadeRight';
+import OpenKnowledge from './OpenKnowledge';
+import OpenSource from './OpenSource';
 
 
 
@@ -51,8 +51,8 @@ function HomeView() {
     >
       <Hero />
       <Container maxWidth="lg">
-      <Header />
-      <HeadeRight />
+      <OpenKnowledge />
+      <OpenSource />
       </Container>
       <Mentors mentors={project.mentors} />
 

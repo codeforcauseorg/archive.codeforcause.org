@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function HeadeRight({ className, ...rest }) {
+function OpenSource({ className, ...rest }) {
   const classes = useStyles();
   // const { user } = useSelector((state) => state.account);
 
@@ -86,8 +86,8 @@ function HeadeRight({ className, ...rest }) {
   );
 }
 
-HeadeRight.propTypes = {
+OpenSource.propTypes = {
   className: PropTypes.string
 };
 
-export default HeadeRight;
+export default OpenSource;
