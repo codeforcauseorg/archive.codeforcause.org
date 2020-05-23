@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.5,
     minWidth: 20,
     padding: theme.spacing(0.5, 1),
-    // textTransform: 'titlecase',
+    textTransform: 'titlecase',
   },
   primary: {
     color: theme.palette.primary.main,

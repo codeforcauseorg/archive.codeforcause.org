@@ -18,11 +18,12 @@ function Auth({ children }) {
         onLogout: () => dispatch(logout())
       });
 
-      authService.handleAuthentication();
+      await authService.handleAuthentication();
+
+      console.log(authService.isAuthenticated());
 
       if (authService.isAuthenticated()) {
-        const user = await authService.loginInWithToken();
-
+        const user = await authService.loadUserProfile()
         await dispatch(setUserData(user));
       }
 

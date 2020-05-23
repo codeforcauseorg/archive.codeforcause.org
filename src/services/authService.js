@@ -9,6 +9,8 @@ class AuthService {
     clientId: 'sample-client'
   });
 
+  user = {}
+
   setAxiosInterceptors = ({ onLogout }) => {
     axios.interceptors.response.use(
       response => response,
@@ -29,63 +31,40 @@ class AuthService {
   };
 
   handleAuthentication() {
-    this.keycloak
-      .init()
-      .success(authenticated => {
-        if (!authenticated) {
-          this.keycloak.login();
-        } else {
-          console.log('authenticated');
-          console.log(this.keycloak.hasRealmRole("chacha"));
-          this.loadUserProfile();
-        }
+    return new Promise((resolve) => {
+      this.keycloak.init().then((authenticated) => {
+        resolve(authenticated);
       })
-      .error(function(e) {
-        console.log(e);
-      });
-      
-    const accessToken = this.getAccessToken();
-
-    if (!accessToken) {
-      return;
-    }
-
-    if (this.isValidToken(accessToken)) {
-      this.setSession(accessToken);
-    } else {
-      this.setSession(null);
-    }
-    
+    });
   }
 
   loadUserProfile() {
-    this.keycloak
+    return new Promise((resolve)=>{
+      this.keycloak
       .loadUserProfile()
       .then(profile => {
-        console.log(JSON.stringify(profile, null, '  '));
+        resolve(profile);
       })
       .catch(function() {
         alert('Failed to load user profile');
       });
+    })
+    
   }
 
-  loginWithEmailAndPassword = (email, password) =>
-    new Promise((resolve, reject) => {
-      axios
-        .post('/api/account/login', { email, password })
-        .then(response => {
-          if (response.data.user) {
-            this.setSession(response.data.accessToken);
-            resolve(response.data.user);
-          } else {
-            reject(response.data.error);
-          }
-        })
-        .catch(error => {
-          reject(error);
-        });
-    });
-
+  login = () => {
+    this.keycloak
+      .init()
+      .then(authenticated => {
+        if (!authenticated) {
+          this.keycloak.login();
+        }
+      })
+      .catch(function(e) {
+        console.log(e);
+      });
+  }
+  
   loginInWithToken = () =>
     new Promise((resolve, reject) => {
       axios
@@ -130,7 +109,7 @@ class AuthService {
     return decoded.exp > currentTime;
   };
 
-  isAuthenticated = () => !!this.getAccessToken();
+  isAuthenticated = () => !!this.keycloak.authenticated;
 }
 
 const authService = new AuthService();

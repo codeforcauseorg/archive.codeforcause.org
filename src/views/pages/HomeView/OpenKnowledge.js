@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Header({ className, ...rest }) {
+function OpenKnowledge({ className, ...rest }) {
   const classes = useStyles();
   // const { user } = useSelector((state) => state.account);
 
@@ -89,8 +89,8 @@ But who will support such a platform? We see a massive production of content, st
   );
 }
 
-Header.propTypes = {
+OpenKnowledge.propTypes = {
   className: PropTypes.string
 };
 
-export default Header;
+export default OpenKnowledge;

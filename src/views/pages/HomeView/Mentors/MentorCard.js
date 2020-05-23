@@ -75,21 +75,26 @@ function MentorCard({ mentor, className, ...rest }) {
           variant="body2"
           color="textSecondary"
         >
-          {mentor.commonContacts}
+          {mentor.designation}
           {' '}
-          Position
         </Typography>
         <Box my={2}>
           <Divider />
         </Box>
-        {mentor.labels.map((label) => (
+        <Typography
+            variant="body2"
+            color="textPrimary"
+          >
+            {`${mentor.name} ${mentor.profile}`}
+          </Typography>
+        {/* {mentor.labels.map((label) => (
           <Chip
             key={label}
             className={classes.chip}
             label={label}
             variant="outlined"
           />
-        ))}
+        ))} */}
       </CardContent>
     </Card>
   );

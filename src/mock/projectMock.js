@@ -376,40 +376,43 @@ The project has been created in Sketch so let me know if there are any problems 
         name: 'Ekaterina Tankova',
         avatar: '/static/images/avatars/avatar_2.png',
         cover: '/static/images/covers/cover_2.jpg',
-        commonContacts: 12,
+        designation: 'Team Leader',
         labels: [
           'User Experience',
           'FrontEnd development',
           'HTML5',
           'VueJS',
           'ReactJS'
-        ]
+        ],
+        profile : 'is open Source geek and a fitness freak. He was a Google Code-In mentor with JBoss Community under RedHat. He has worked with Debezium Project under Redhat and also with Vlyop technology . He loves to solve puzzles and generally found dwelling with Spring Boot applications.'
       },
       {
         id: '5e887ac47eed253091be10cb',
         name: 'Cao Yu',
         avatar: '/static/images/avatars/avatar_3.png',
         cover: '/static/images/covers/cover_3.jpg',
-        commonContacts: 5,
+        designation: 'Team Leader',
         labels: [
           'User Interface',
           'FullStack development',
           'Angular',
           'ExpressJS'
-        ]
+        ],
+        profile : 'is open Source geek and a fitness freak. He was a Google Code-In mentor with JBoss Community under RedHat. He has worked with Debezium Project under Redhat and also with Vlyop technology . He loves to solve puzzles and generally found dwelling with Spring Boot applications.'
       },
       {
         id: '5e86809283e28b96d2d38537',
         name: 'Katarina Smith',
         avatar: '/static/images/avatars/avatar_6.png',
         cover: '/static/images/covers/cover_1.jpg',
-        commonContacts: 17,
+        designation: 'Apple',
         labels: [
           'BackEnd development',
           'Firebase',
           'MongoDB',
           'ExpressJS'
-        ]
+        ],
+        profile : 'is open Source geek and a fitness freak. He was a Google Code-In mentor with JBoss Community under RedHat. He has worked with Debezium Project under Redhat and also with Vlyop technology . He loves to solve puzzles and generally found dwelling with Spring Boot applications.'
       }
     ],
     deadline: moment()

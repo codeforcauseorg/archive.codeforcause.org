@@ -4,7 +4,9 @@ function Logo(props) {
   return (
     <img
       alt="Logo"
-      src="/static/logo.svg"
+      width="42px"
+      height="43px"
+      src="/static/logo.jpg"
       {...props}
     />
   );
