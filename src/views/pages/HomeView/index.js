@@ -43,6 +43,45 @@ function HomeView() {
   if (!project) {
     return null;
   }
+  const footerInfo = [
+    {
+      id:1,
+      heading : 'Code for Cause',
+      column : [{
+        title : 'Blogs',
+        link : 'https://medium.com/code-for-cause'
+      },
+      {
+        title : 'Blogs',
+        link : 'https://medium.com/code-for-cause'
+      }]
+    },
+    {
+      id:2,
+      heading : 'Products',
+      column : [{
+        title : 'Events',
+        link : '#'
+      },
+      {
+        title : 'Op',
+        link : ''
+      }]
+    },
+    {
+      id:3,
+      heading : 'Contact Us',
+      column : [{
+        title : 'Blogs',
+        link : 'https://medium.com/@nbanzyme/easy-way-to-install-nvm-on-ubuntu-18-04-2cfb19ee5391'
+      },
+      {
+        title : 'Apple',
+        link : 'https://medium.com/@nbanzyme/easy-way-to-install-nvm-on-ubuntu-18-04-2cfb19ee5391'
+      }]
+    }
+  ]
+      
 
   return (
     <Page
@@ -57,7 +96,7 @@ function HomeView() {
       <Mentors mentors={project.mentors} />
 
       <CTA/>
-      <Footer/>
+      <Footer footerInfo={footerInfo}/>
     </Page>
   );
 }

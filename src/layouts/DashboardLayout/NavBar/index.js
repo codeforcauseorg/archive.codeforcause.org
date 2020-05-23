@@ -370,6 +370,9 @@ const useStyles = makeStyles(() => ({
     cursor: 'pointer',
     width: 64,
     height: 64
+  },
+  logo: {
+    borderRadius: '50%'
   }
 }));
 
@@ -399,7 +402,7 @@ function NavBar({ openMobile, onMobileClose, }) {
             justifyContent="center"
           >
             <RouterLink to="/">
-              <Logo />
+              <Logo className={classes.logo} />
             </RouterLink>
           </Box>
         </Hidden>

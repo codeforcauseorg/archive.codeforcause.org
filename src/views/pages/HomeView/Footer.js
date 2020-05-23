@@ -19,6 +19,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Logo from 'src/components/Logo';
+import FollowUs from './FollowUs'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,50 +42,46 @@ const useStyles = makeStyles(theme => ({
     padding: '7.5px 0px'
   },
   iconBtn: {
-    color: theme.palette.secondary.main
+    display: 'inline-flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    border:'2px solid #fff'
   },
   socialIcon: {
-    // width : '20px !important',
     color: theme.palette.secondary.main,
     backgroundColor: '#fff',
     marginLeft: '10px',
     padding: '6px 0px'
   },
   logo: {
-    width: 100,
-    height : 100,
-    // maxWidth: '50%',
+    width: 130,
+    height : 130,
     borderRadius: '50%'
   }
 }));
 
-function Footer({ className, ...rest }) {
+function Footer({ footerInfo, className, ...rest }) {
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Grid container component="dl">
-          <Grid item xs={12} md={2} >            
+        <Grid container component="dl" >
+          <Grid container direction="column" alignItems="center" item xs={12} md={3} sm={12} >            
             <Logo className={classes.logo} />
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Typography variant="h4">Product</Typography>
-            <FooterList></FooterList>
-          </Grid>
-          <Grid item xs={12} md={2}>
-            <Typography variant="h4">Product</Typography>
-            <FooterList></FooterList>
-          </Grid>
-          <Grid item xs={12} md={2}>
-            <Typography variant="h4">Product</Typography>
-            <FooterList></FooterList>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Typography variant="overline">
-              Subscribe to stay tuned for news and latest updates
+          {footerInfo.map(footerColumn => (
+            <Grid item container direction="column" alignItems="center" key={footerColumn.id} xs={12} md={2} sm={6}>
+               <Typography variant="h4">{footerColumn.heading}</Typography>
+              <FooterList footerColumn={footerColumn.column} />
+            </Grid>
+          ))}
+         
+           <Grid container direction="column" alignItems="center" item xs={12} md={2} sm={6}>
+            <Typography variant="h4">
+              Follow Us On
             </Typography>
-            <form className={classes.root} noValidate autoComplete="off">
+            {/* <form className={classes.root} noValidate autoComplete="off">
               <TextField
                 id="outlined-primary"
                 label=""
@@ -107,10 +104,10 @@ function Footer({ className, ...rest }) {
                   className={classes.iconBtn}
                   aria-label="register"
                 > */}
-                  <ArrowForwardIosIcon />
+                  {/* <ArrowForwardIosIcon /> */}
                 {/* </IconButton> */}
                 {/* register */}
-              </Button>
+              {/* </Button>
             </form>
             <Box mt={-1} display="flex" justifyContent="flex-start">
               <Button
@@ -160,6 +157,8 @@ function Footer({ className, ...rest }) {
                 <LinkedInIcon />
               </Button>
             </Box>
+           */} 
+           <FollowUs/>
           </Grid>
         </Grid>
       </Container>

@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     minHeight: 64
+  },
+  logo : {
+    borderRadius:'50%'
   }
 }));
 
@@ -62,7 +65,7 @@ function TopBar({
         </Hidden>
         <Hidden mdDown>
           <RouterLink to="/">
-            <Logo />
+          <Logo className={classes.logo} />
           </RouterLink>
         </Hidden>
         <Box

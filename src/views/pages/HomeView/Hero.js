@@ -7,7 +7,7 @@ import {
   Container,
   Grid,
   Typography,
-  makeStyles,useMediaQuery
+  makeStyles
 } from '@material-ui/core';
 
 
@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: '90%',
       height: 'auto',
       backfaceVisibility: 'hidden',
-      boxShadow: theme.shadows[16]
+      boxShadow: theme.shadows[16],
+      transform: 'rotateY(-35deg) rotateX(15deg)'
     }
   },
   shape: {
@@ -38,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     '& > img': {
       maxWidth: '90%',
-      height: 'auto'
+      height: 'auto',
+      // transform: 'rotateY(-35deg) rotateX(15deg)'
     }
   },
   hide: {
@@ -48,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Hero({ className, ...rest }) {
   const classes = useStyles();
-  const matches = useMediaQuery('(min-width:960px)');
 
 
   return (
@@ -151,12 +152,18 @@ function Hero({ className, ...rest }) {
             xs={12}
             md={7}
           >
-            <Box position="relative" className={matches ? '' : classes.hide}>
+            <Box position="relative">
+            <div className={classes.shape}>
+                <img
+                  alt="Shapes"
+                  src="/static/home/shapes.svg"
+                />
+              </div>
              
               <div className={classes.image}>
                 <img
                   alt="Presentation"
-                  src="/static/home/dark-light.png"
+                  src="/static/home/codeforcause.jpg"
                 />
               </div>
             </Box>
