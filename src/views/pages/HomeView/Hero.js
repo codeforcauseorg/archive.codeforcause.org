@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   shape: {
     position: 'absolute',
     top: '60px',
-    left: '-5px',
+    left: '0',
     '& > img': {
       maxWidth: '90%',
       height: 'auto',
@@ -72,17 +72,17 @@ function Hero({ className, ...rest }) {
               justifyContent="center"
               height="100%"
             >
-              {/* <Typography
+              <Typography
                 variant="overline"
                 color="secondary"
               >
-                Introducing
-              </Typography> */}
+                Welcome to
+              </Typography>
               <Typography
                 variant="h1"
-                color="secondary"
+                color="textSecondary"
               >
-                Welcome to Code for Cause
+                Code for Cause
               </Typography>
               <Box mt={3}>
                 <Typography
@@ -91,14 +91,8 @@ function Hero({ className, ...rest }) {
                 >
                   Code for Cause is an initiative to help the community by means of software.
                   Our primary focus is to provide guidance and mentorship to students who lack it. Not only for those who lack on-campus opportunities but also for those who lack awareness about the possibilities in the software field. 
-                </Typography>
-              </Box>
-              <Box mt={3}>
-                <Typography
-                  variant="body1"
-                  color="textSecondary"
-                >
-                  It does not matter which year you are in or what your current skill set is, we believe that it is never too late to start. Provided you have the right guidance and are willing to learn, not just from us, but from the entire community. 
+                  We believe that it is never too late to start. Provided you have the right guidance and are willing to learn, not just from us, but from the entire community. 
+
                 </Typography>
               </Box>
               {/* <Box mt={3}>
