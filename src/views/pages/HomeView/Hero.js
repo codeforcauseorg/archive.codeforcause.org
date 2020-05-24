@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   shape: {
     position: 'absolute',
-    top: '60px',
+    top: '0',
     left: '0',
     '& > img': {
       maxWidth: '90%',
