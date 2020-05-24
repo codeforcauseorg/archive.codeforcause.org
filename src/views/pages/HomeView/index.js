@@ -36,7 +36,7 @@ function HomeView() {
       id:3,
       heading : 'Contact Us',
       column : [{
-        title : 'Email: hello@scaler.com',
+        title : 'Email: team@codeforcause.org',
         link : '#'
       }]
     }
