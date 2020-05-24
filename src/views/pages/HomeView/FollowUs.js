@@ -31,41 +31,40 @@ export default function FollowUs() {
   const classes = useStyles();
   
   return (
-    <Grid container direction="column" alignItems="center">
+    <Grid container>
     <Grid item>
     <List className={classes.root}>
-    <ListItem className={classes.centerCls} component="a" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+    <ListItem className={classes.centerCls} component="a" href="https://www.youtube.com/channel/UCfv8cds8AfIM3UZtAWOz6Gg" target="_blank">
         <ListItemIcon className={classes.iconSocialMedia}>
           <YoutubeIcon />
         </ListItemIcon>
         <ListItemText className={classes.iconSocialMedia} primary="Youtube" />
       </ListItem>
-      <ListItem className={classes.centerCls} component="a" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+      <ListItem className={classes.centerCls} component="a" href="https://www.facebook.com/codeforcauseorg" target="_blank">
         <ListItemIcon className={classes.iconSocialMedia}>
           <FacebookIcon />
         </ListItemIcon>
         <ListItemText className={classes.iconSocialMedia} primary="Facebook" />
       </ListItem>
-      <ListItem className={classes.centerCls}>
+      <ListItem className={classes.centerCls} component="a" href="https://www.instagram.com/codeforcause/" target="_blank">
         <ListItemIcon className={classes.iconSocialMedia}>
           <InstagramIcon />
         </ListItemIcon>
         <ListItemText className={classes.iconSocialMedia} primary="Instagram" />
         
       </ListItem>
-      <ListItem className={classes.centerCls}>
+      <ListItem className={classes.centerCls} component="a" href="https://twitter.com/codeforcauseIn" target="_blank">
         <ListItemIcon className={classes.iconSocialMedia}>
           <TwitterIcon />
         </ListItemIcon>
         <ListItemText className={classes.iconSocialMedia} primary="Twitter" />
         
       </ListItem>
-      <ListItem className={classes.centerCls}>
+      <ListItem className={classes.centerCls} component="a" href="https://www.linkedin.com/company/codeforcauseorg/" target="_blank">
         <ListItemIcon className={classes.iconSocialMedia}>
           <LinkedInIcon />
         </ListItemIcon>
         <ListItemText className={classes.iconSocialMedia} primary="LinkedIn" />
-        
       </ListItem>
     </List>
     </Grid>

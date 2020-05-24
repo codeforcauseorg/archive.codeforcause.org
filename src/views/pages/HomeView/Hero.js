@@ -35,12 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
   shape: {
     position: 'absolute',
-    top: 0,
-    left: 0,
+    top: '60px',
+    left: '-5px',
     '& > img': {
       maxWidth: '90%',
       height: 'auto',
-      // transform: 'rotateY(-35deg) rotateX(15deg)'
     }
   },
   hide: {
@@ -73,30 +72,36 @@ function Hero({ className, ...rest }) {
               justifyContent="center"
               height="100%"
             >
-              <Typography
+              {/* <Typography
                 variant="overline"
                 color="secondary"
               >
                 Introducing
-              </Typography>
+              </Typography> */}
               <Typography
                 variant="h1"
-                color="textPrimary"
+                color="secondary"
               >
-                Devias React Material Kit - PRO
+                Welcome to Code for Cause
               </Typography>
               <Box mt={3}>
                 <Typography
                   variant="body1"
                   color="textSecondary"
                 >
-                  A professional kit that comes with ready-to-use Material-UI© components
-                  developed with one common goal in mind, help you build faster &amp; beautiful
-                  applications. Each component is fully customizable,
-                  responsive and easy to integrate.
+                  Code for Cause is an initiative to help the community by means of software.
+                  Our primary focus is to provide guidance and mentorship to students who lack it. Not only for those who lack on-campus opportunities but also for those who lack awareness about the possibilities in the software field. 
                 </Typography>
               </Box>
               <Box mt={3}>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                >
+                  It does not matter which year you are in or what your current skill set is, we believe that it is never too late to start. Provided you have the right guidance and are willing to learn, not just from us, but from the entire community. 
+                </Typography>
+              </Box>
+              {/* <Box mt={3}>
                 <Grid
                   container
                   spacing={3}
@@ -145,6 +150,7 @@ function Hero({ className, ...rest }) {
                   </Grid>
                 </Grid>
               </Box>
+            */}
             </Box>
           </Grid>
           <Grid

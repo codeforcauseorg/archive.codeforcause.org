@@ -3,23 +3,14 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import FooterList from './FooterList';
 import {
-  Box,
   Container,
-  Button,
+  Hidden,
   Grid,
   Typography,
   makeStyles
 } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TelegramIcon from '@material-ui/icons/Telegram';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Logo from 'src/components/Logo';
-import FollowUs from './FollowUs'
+import FollowUs from './FollowUs';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     display: 'inline-flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    border:'2px solid #fff'
+    border: '2px solid #fff'
   },
   socialIcon: {
     color: theme.palette.secondary.main,
@@ -55,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     width: 130,
-    height : 130,
+    height: 130,
     borderRadius: '50%'
   }
 }));
@@ -66,21 +57,33 @@ function Footer({ footerInfo, className, ...rest }) {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Grid container component="dl" >
-          <Grid container direction="column" alignItems="center" item xs={12} md={3} sm={12} >            
-            <Logo className={classes.logo} />
-          </Grid>
+        <Grid container component="dl">
+          <Hidden smDown>
+            <Grid
+              container
+              direction="column"
+              alignItems="center"
+              item
+              xs={12}
+              md={3}
+            >
+              <Logo className={classes.logo} />
+            </Grid>
+          </Hidden>
           {footerInfo.map(footerColumn => (
-            <Grid item container direction="column" alignItems="center" key={footerColumn.id} xs={12} md={2} sm={6}>
-               <Typography variant="h4">{footerColumn.heading}</Typography>
+            <Grid item key={footerColumn.id} xs={12} md={2}>
+              <Typography variant="h4">{footerColumn.heading}</Typography>
               <FooterList footerColumn={footerColumn.column} />
             </Grid>
           ))}
-         
-           <Grid container direction="column" alignItems="center" item xs={12} md={2} sm={6}>
-            <Typography variant="h4">
-              Follow Us On
-            </Typography>
+          <Hidden smDown>
+            <Grid container item xs={12} md={1}>
+              <Typography variant="h4">&nbsp;</Typography>
+            </Grid>
+          </Hidden>
+
+          <Grid container item xs={12} md={2}>
+            <Typography variant="h4">Follow Us On</Typography>
             {/* <form className={classes.root} noValidate autoComplete="off">
               <TextField
                 id="outlined-primary"
@@ -100,14 +103,14 @@ function Footer({ footerInfo, className, ...rest }) {
                 disableElevation
               >
                 {/* <IconButton */}
-                  {/* size="small"
+            {/* size="small"
                   className={classes.iconBtn}
                   aria-label="register"
                 > */}
-                  {/* <ArrowForwardIosIcon /> */}
-                {/* </IconButton> */}
-                {/* register */}
-              {/* </Button>
+            {/* <ArrowForwardIosIcon /> */}
+            {/* </IconButton> */}
+            {/* register */}
+            {/* </Button>
             </form>
             <Box mt={-1} display="flex" justifyContent="flex-start">
               <Button
@@ -157,8 +160,8 @@ function Footer({ footerInfo, className, ...rest }) {
                 <LinkedInIcon />
               </Button>
             </Box>
-           */} 
-           <FollowUs/>
+           */}
+            <FollowUs />
           </Grid>
         </Grid>
       </Container>

@@ -39,7 +39,7 @@ function OpenKnowledge({ className, ...rest }) {
         align="center"
         color="textPrimary"
       >
-        Our Goal
+        What we believe in
       </Typography>
       <Grid alignItems="center" container justify="space-between" spacing={3}>
         <Grid item md={4} xs={12}>

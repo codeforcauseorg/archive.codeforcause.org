@@ -7,9 +7,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    display: 'inline-flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap'
+  },
+  centerCls:{
+    padding : '1px',
   }
   }));
 
@@ -21,10 +21,12 @@ export default function SimpleList({footerColumn}) {
   const classes = useStyles();
 
   return (
+    // <Grid container>
+    // <Grid item>
     <div className={classes.root}>
       <List component="nav">
       {footerColumn.map(footer => (            
-            <ListItemLink href={footer.link} target="_blank">
+            <ListItemLink className={classes.centerCls} href={footer.link} target="_blank">
             <ListItemText primary={footer.title}  />
           </ListItemLink>
           ))}

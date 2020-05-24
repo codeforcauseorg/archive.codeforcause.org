@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     maxHeight: 400
   },
-  content:{
-    marginTop:'15px'
+  content: {
+    marginTop: '15px'
   }
 }));
 
@@ -32,31 +32,43 @@ function OpenSource({ className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Grid alignItems="center" container justify="space-between" spacing={3}>
         <Hidden smDown>
-          <Grid item md={6}>
-            <img
-              alt="Cover"
-              className={classes.image}
-              src="/static/images/open-source.svg"
-            />
-          </Grid>
+        <Grid item md={6}>
+          <img
+            alt="Cover"
+            className={classes.image}
+            src="/static/images/open-source.svg"
+          />
+        </Grid>
         </Hidden>
         <Grid item md={6} xs={12}>
           <Typography variant="h3" color="textPrimary">
-            Good Morning, {/* {user.firstName} */}
-            Chacha
+            Open Source
           </Typography>
           <Typography
             variant="subtitle1"
             color="textPrimary"
             className={classes.content}
           >
-            Here’s what’s happening with your projects today Here’s what’s
-            happening with your projects today Here’s what’s happening with your
-            projects today Here’s what’s happening with your projects today
-            Here’s what’s happening with your projects today Here’s what’s
-            happening with your projects today
+            A common misread can be that, how can software development help the
+            community. Think of a software development platform that could solve
+            it by Managing resources to cater to the problem of Hunger and
+            Education Health and hygiene observation and maintenance. A sense of
+            security for every individual. But again, who will support such a
+            platform? The world is having hundreds and thousands of hackathons
+            every year for the resolution to these problems but we do not reach
+            the target just by the completion of hackathons. We need to build a
+            community that stays.
           </Typography>
         </Grid>
+        <Hidden lgUp>
+        <Grid item md={6}>
+          <img
+            alt="Cover"
+            className={classes.image}
+            src="/static/images/open-source.svg"
+          />
+        </Grid>
+        </Hidden>
       </Grid>
     </div>
   );

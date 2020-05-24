@@ -85,7 +85,7 @@ function MentorCard({ mentor, className, ...rest }) {
             variant="body2"
             color="textPrimary"
           >
-            {`${mentor.name} ${mentor.profile}`}
+            {`${mentor.profile}`}
           </Typography>
         {/* {mentor.labels.map((label) => (
           <Chip

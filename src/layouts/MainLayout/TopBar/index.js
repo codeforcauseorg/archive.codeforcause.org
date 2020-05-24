@@ -13,29 +13,19 @@ import {
 } from '@material-ui/core';
 import { Menu as MenuIcon } from 'react-feather';
 import Logo from 'src/components/Logo';
-import { THEMES } from 'src/constants';
 import Account from './Account';
-import Contacts from './Contacts';
-import Notifications from './Notifications';
-import Search from './Search';
-import Settings from './Settings';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     zIndex: theme.zIndex.drawer + 100,
-    ...theme.name === THEMES.LIGHT ? {
-      boxShadow: 'none',
-      backgroundColor: theme.palette.secondary.main
-    } : {},
-    ...theme.name === THEMES.ONE_DARK ? {
       backgroundColor: theme.palette.background.default
-    } : {}
   },
   toolbar: {
     minHeight: 64
   },
   logo : {
-    borderRadius:'50%'
+    borderRadius:'50%',
+    border: `1px solid ${theme.palette.divider}`,
   }
 }));
 
@@ -52,22 +42,12 @@ function TopBar({
       {...rest}
     >
       <Toolbar className={classes.toolbar}>
-        <Hidden lgUp>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            onClick={onMobileNavOpen}
-          >
-            <SvgIcon fontSize="small">
-              <MenuIcon />
-            </SvgIcon>
-          </IconButton>
-        </Hidden>
-        <Hidden mdDown>
+        
+        {/* <Hidden mdDown> */}
           <RouterLink to="/">
           <Logo className={classes.logo} />
           </RouterLink>
-        </Hidden>
+        {/* </Hidden> */}
         <Box
           ml={2}
           flexGrow={1}
