@@ -91,11 +91,9 @@ function Hero({ className, ...rest }) {
                 >
                   Code for Cause is an initiative to help the community by means of software.
                   Our primary focus is to provide guidance and mentorship to students who lack it. Not only for those who lack on-campus opportunities but also for those who lack awareness about the possibilities in the software field. 
-                  We believe that it is never too late to start. Provided you have the right guidance and are willing to learn, not just from us, but from the entire community. 
-
                 </Typography>
               </Box>
-              {/* <Box mt={3}>
+              <Box mt={3}>
                 <Grid
                   container
                   spacing={3}
@@ -144,7 +142,7 @@ function Hero({ className, ...rest }) {
                   </Grid>
                 </Grid>
               </Box>
-            */}
+           
             </Box>
           </Grid>
           <Grid
