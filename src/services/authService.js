@@ -4,9 +4,9 @@ import Keycloak from 'keycloak-js';
 
 class AuthService {
   keycloak = Keycloak({
-    url: 'http://localhost:3000/auth',
-    realm: 'master',
-    clientId: 'sample-client'
+    url: 'https://authbox.codeforcause.org/auth',
+    realm: 'CFC',
+    clientId: 'Dashboard'
   });
 
   user = {}

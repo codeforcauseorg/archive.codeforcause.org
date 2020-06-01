@@ -60,7 +60,7 @@ function Account() {
             src={account.user.avatar}
           />
           {/* <Hidden smDown> */}
-          <Typography variant="h6" color="inherit">
+          <Typography variant="h6" color="textSecondary">
             {/* Hello happy */}
             Hello {`${account.user.firstName}`}
           </Typography>
@@ -84,12 +84,12 @@ function Account() {
         >
           Profile
         </MenuItem> */}
-        <MenuItem
+        {/* <MenuItem
           component={RouterLink}
           to="/app/account"
         >
           Account
-        </MenuItem>
+        </MenuItem> */}
           <MenuItem onClick={authService.logout}>Logout</MenuItem>
         </Menu>
       </>
