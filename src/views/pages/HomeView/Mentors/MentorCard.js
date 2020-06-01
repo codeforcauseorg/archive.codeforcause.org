@@ -85,16 +85,17 @@ function MentorCard({ mentor, className, ...rest }) {
             variant="body2"
             color="textPrimary"
           >
-            {`${mentor.profile}`}
-          </Typography>
-        {/* {mentor.labels.map((label) => (
+           
+        {mentor.skills.map((skill) => (
           <Chip
-            key={label}
+            key={skill}
             className={classes.chip}
-            label={label}
+            label={skill}
             variant="outlined"
           />
-        ))} */}
+        ))}
+         {/* {`${mentor.profile}`} */}
+          </Typography>
       </CardContent>
     </Card>
   );

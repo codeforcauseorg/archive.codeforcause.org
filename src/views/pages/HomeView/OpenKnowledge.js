@@ -16,10 +16,11 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: '100%',
-    maxHeight: 400
+    maxHeight: 'auto'
   },
   extraMargin: {
-    marginTop: '30px'
+    marginTop: '30px',
+    marginBottom : '30px'
   },
   content :{
     marginTop: '15px'
@@ -42,7 +43,7 @@ function OpenKnowledge({ className, ...rest }) {
         What we believe in
       </Typography>
       <Grid alignItems="center" container justify="space-between" spacing={3}>
-        <Grid item md={4} xs={12}>
+        <Grid item md={6} xs={12}>
           <Typography variant="h3" color="textPrimary">
             Open Knowledge {/* {user.firstName} */}
           </Typography>
@@ -57,11 +58,11 @@ function OpenKnowledge({ className, ...rest }) {
           </Typography>
         </Grid>
         {/* <Hidden smDown> */}
-        <Grid item md={8}>
+        <Grid item md={6}>
           <img
             alt="Cover"
             className={classes.image}
-            src="/static/images/open-knowledge.svg"
+            src="/static/images/open-knowledge.png"
           />
         </Grid>
         {/* </Hidden> */}

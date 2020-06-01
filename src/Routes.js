@@ -58,6 +58,11 @@ const routesConfig = [
         component: HomeView
       },
       {
+        exact: true,
+        path: '/app/account',
+        component: lazy(() => import('src/views/pages/AccountView'))
+      },
+      {
         component: () => <Redirect to="/404" />
       }
     ]

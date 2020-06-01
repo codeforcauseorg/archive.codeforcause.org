@@ -43,6 +43,7 @@ class AuthService {
       this.keycloak
       .loadUserProfile()
       .then(profile => {
+        console.log(JSON.stringify(profile))
         resolve(profile);
       })
       .catch(function() {

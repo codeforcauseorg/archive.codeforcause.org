@@ -36,7 +36,7 @@ function HomeView() {
       id:3,
       heading : 'Contact Us',
       column : [{
-        title : 'Email: team@codeforcause.org',
+        title : 'team@codeforcause.org',
         link : '#'
       }]
     }
@@ -48,6 +48,13 @@ function HomeView() {
       avatar: '/static/images/avatars/Anuj_garg.jpg',
       cover: '/static/images/covers/cover_1.jpg',
       designation: 'Senior Mentor',
+      skills: [
+        'User Experience',
+        'FrontEnd development',
+        'HTML5',
+        'VueJS',
+        'ReactJS'
+      ],
       profile : 'Anuj is our beloved kung fu panda. He is a super energetic guy and radiates aspiration and motivation. He is Admin in Google Summer of Code and Google Code-in for multiple years. He has four years of experience of mentoring and training software developers and a will to utilise it to make a change in the world. He is famous for his unique way of teaching that imprints the concept to never be lost again.'
     },
     {
@@ -56,6 +63,13 @@ function HomeView() {
       avatar: '/static/images/avatars/Gaurav_Beriwal.jpg',
       cover: '/static/images/covers/cover_1.jpg',
       designation: 'Kuch Marketing type role',
+      skills: [
+        'User Experience',
+        'FrontEnd development',
+        'HTML5',
+        'VueJS',
+        'ReactJS'
+      ],
       profile : 'Gaurav has worked as a Co-founder and Founding Member of a tech startup and an internet-based service company, He has learned to bridge the gap across teams. He is Masters in Psychology and has been helping school kids as a Google Code-in mentor. Being a stage lover, he has represented in dozens of events and has been guiding youth alongside. Also, an analyst by passion.'
     },
     {
@@ -64,6 +78,13 @@ function HomeView() {
       avatar: '/static/images/avatars/kunal_kush.jpg',
       cover: '/static/images/covers/cover_2.jpg',
       designation: 'Mentor',
+      skills: [
+        'User Experience',
+        'FrontEnd development',
+        'HTML5',
+        'VueJS',
+        'ReactJS'
+      ],
       profile : 'Kunal is a super charged public speaker who loves to convey knowledge and is always up for a hot cup of Chai. He is a recognised mentor in Google Summer of Code, Google Code-In with JBoss Community. He is well versed in Java, Python, Web Development and Machine Learning. He loves to dwell in DevOps, Kubernetes, Cloud. He is Microsoft Student Partner and Python Mentor at AnitaB.org.'
     }
   ];

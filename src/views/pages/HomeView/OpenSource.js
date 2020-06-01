@@ -36,7 +36,7 @@ function OpenSource({ className, ...rest }) {
           <img
             alt="Cover"
             className={classes.image}
-            src="/static/images/open-source.svg"
+            src="/static/images/open-source.png"
           />
         </Grid>
         </Hidden>
@@ -65,7 +65,7 @@ function OpenSource({ className, ...rest }) {
           <img
             alt="Cover"
             className={classes.image}
-            src="/static/images/open-source.svg"
+            src="/static/images/open-source.png"
           />
         </Grid>
         </Hidden>

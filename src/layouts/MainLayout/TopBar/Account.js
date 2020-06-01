@@ -83,13 +83,13 @@ function Account() {
           to="/app/social/profile"
         >
           Profile
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem
           component={RouterLink}
           to="/app/account"
         >
           Account
-        </MenuItem> */}
+        </MenuItem>
           <MenuItem onClick={authService.logout}>Logout</MenuItem>
         </Menu>
       </>
