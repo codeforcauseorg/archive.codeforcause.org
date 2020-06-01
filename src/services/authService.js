@@ -83,7 +83,7 @@ class AuthService {
     });
 
   logout = () => {
-    this.keycloak.logout({redirectUri : 'http://localhost:3000/home'});
+    this.keycloak.logout({});
     this.setSession(null);
   };
 
