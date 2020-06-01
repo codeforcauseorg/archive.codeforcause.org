@@ -103,13 +103,13 @@ function Hero({ className, ...rest }) {
                       variant="h1"
                       color="secondary"
                     >
-                      30+
+                      10+
                     </Typography>
                     <Typography
                       variant="overline"
                       color="textSecondary"
                     >
-                      Demo Pages
+                      Projects
                     </Typography>
                   </Grid>
                   <Grid item>
@@ -117,13 +117,13 @@ function Hero({ className, ...rest }) {
                       variant="h1"
                       color="secondary"
                     >
-                      UX
+                      OSS
                     </Typography>
                     <Typography
                       variant="overline"
                       color="textSecondary"
                     >
-                      Complete Flows
+                      Mindset
                     </Typography>
                   </Grid>
                   <Grid item>
@@ -131,13 +131,13 @@ function Hero({ className, ...rest }) {
                       variant="h1"
                       color="secondary"
                     >
-                      300+
+                      100+
                     </Typography>
                     <Typography
                       variant="overline"
                       color="textSecondary"
                     >
-                      Components
+                      Contributers
                     </Typography>
                   </Grid>
                 </Grid>
