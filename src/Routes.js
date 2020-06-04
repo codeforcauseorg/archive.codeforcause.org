@@ -12,7 +12,6 @@ import {
 import MainLayout from 'src/layouts/MainLayout';
 import HomeView from 'src/views/pages/HomeView';
 import LoadingScreen from 'src/components/LoadingScreen';
-import GuestGuard from 'src/components/GuestGuard';
 
 const routesConfig = [
   {
@@ -24,30 +23,7 @@ const routesConfig = [
     exact: true,
     path: '/404',
     component: lazy(() => import('src/views/pages/Error404View'))
-  },
-  {
-    exact: true,
-    guard: GuestGuard,
-    path: '/login',
-    component: lazy(() => import('src/views/auth/LoginView'))
-  },
-  {
-    exact: true,
-    path: '/login-unprotected',
-    component: lazy(() => import('src/views/auth/LoginView'))
-  },
-  {
-    exact: true,
-    guard: GuestGuard,
-    path: '/register',
-    component: lazy(() => import('src/views/auth/RegisterView'))
-  },
-  {
-    exact: true,
-    path: '/register-unprotected',
-    component: lazy(() => import('src/views/auth/RegisterView'))
-  },
-  
+  },  
   {
     path: '*',
     layout: MainLayout,
@@ -56,11 +32,6 @@ const routesConfig = [
         exact: true,
         path: '/home',
         component: HomeView
-      },
-      {
-        exact: true,
-        path: '/app/account',
-        component: lazy(() => import('src/views/pages/AccountView'))
       },
       {
         component: () => <Redirect to="/404" />

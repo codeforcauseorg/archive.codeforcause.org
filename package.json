@@ -1,9 +1,9 @@
 {
-  "name": "@devias-io/material-kit-pro-react",
-  "author": "DeviasIO",
-  "email": "contact@devias.io",
-  "licence": "UNLICENSED",
-  "version": "2.0.0",
+  "name": "cfc",
+  "author": "Code for Cause",
+  "email": "team@codeforcause.org",
+  "licence": "MIT",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "lint": "eslint ./src",
@@ -107,5 +107,5 @@
     "prettier": "^1.19.1",
     "typescript": "^3.8.3"
   },
-  "homepage" : "./"
+  "homepage": "./"
 }
