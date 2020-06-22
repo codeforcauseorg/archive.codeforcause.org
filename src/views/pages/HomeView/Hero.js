@@ -4,22 +4,29 @@ import clsx from 'clsx';
 
 import {
   Box,
+  Button,
   Container,
   Grid,
   Typography,
   makeStyles
 } from '@material-ui/core';
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.dark,
-    paddingTop: 40,
-    paddingBottom: 100,
+    paddingTop: 80,
+    paddingBottom: 60,
     [theme.breakpoints.down('md')]: {
       paddingTop: 40,
       paddingBottom: 60
     }
+  },
+  extraPadding: {
+    padding: '0 70px',
+    [theme.breakpoints.down('md')]: {
+      padding: '0 30px'
+    },
+    textAlign: 'justify'
   },
   image: {
     perspectiveOrigin: 'left center',
@@ -28,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
     '& > img': {
       maxWidth: '90%',
       height: 'auto',
-      backfaceVisibility: 'hidden',
-      boxShadow: theme.shadows[16],
-      transform: 'rotateY(-35deg) rotateX(15deg)'
+      backfaceVisibility: 'hidden'
+      // boxShadow: theme.shadows[16]
+      // transform: 'rotateY(-35deg) rotateX(15deg)'
     }
   },
   shape: {
@@ -39,129 +46,108 @@ const useStyles = makeStyles((theme) => ({
     left: '0',
     '& > img': {
       maxWidth: '90%',
-      height: 'auto',
+      height: 'auto'
     }
   },
   hide: {
-    display : 'none'
+    display: 'none'
+  },
+  Button: {
+    textTransform: 'capitalize'
+    // padding :
   }
 }));
 
 function Hero({ className, ...rest }) {
   const classes = useStyles();
 
-
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Grid
-          container
-          spacing={3}
-        >
-          <Grid
-            item
-            xs={12}
-            md={5}
-          >
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6}>
             <Box
               display="flex"
               flexDirection="column"
               justifyContent="center"
               height="100%"
+              className={clsx(classes.extraPadding, className)}
             >
-              <Typography
-                variant="overline"
-                color="secondary"
-              >
-                Welcome to
+              <Typography variant="h2" color="#000">
+                Learn for the Cause
               </Typography>
-              <Typography
-                variant="h1"
-                color="textSecondary"
-              >
-                Code for Cause
+              <Typography variant="h2" color="#000">
+                Code for the Cause
               </Typography>
-              <Box mt={3}>
-                <Typography
-                  variant="body1"
-                  color="textSecondary"
-                >
-                  Code for Cause is an initiative to help the community by means of software.
-                  Our primary focus is to provide guidance and mentorship to students who lack it. Not only for those who lack on-campus opportunities but also for those who lack awareness about the possibilities in the software field. 
+              <Box mt={6}>
+                <Typography variant="body1">
+                  An initiative to help the community by providing training,
+                  guidance and awareness about the possibilities in the software
+                  field to students &amp; professionals.
                 </Typography>
               </Box>
-              <Box mt={3}>
-                <Grid
-                  container
-                  spacing={3}
-                >
+              <Box mt={2}>
+                <Grid container spacing={3}>
                   <Grid item>
-                    <Typography
-                      variant="h1"
-                      color="secondary"
+                    <Typography variant="h1" color="secondary"></Typography>
+                    <Box
+                      mt={2}
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
                     >
-                      10+
-                    </Typography>
-                    <Typography
-                      variant="overline"
-                      color="textSecondary"
-                    >
-                      Projects
-                    </Typography>
+                      <Button
+                        style={{
+                          backgroundColor: '#A60000',
+                          color: '#ffffff',
+                          textTransform: 'capitalize'
+                        }}
+                        component="a"
+                        href="/register"
+                        size="large"
+                        variant="contained"
+                      >
+                        Register
+                      </Button>
+                    </Box>
                   </Grid>
                   <Grid item>
-                    <Typography
-                      variant="h1"
-                      color="secondary"
+                    <Typography variant="h1" color="secondary"></Typography>
+                    <Box
+                      mt={2}
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
                     >
-                      OSS
-                    </Typography>
-                    <Typography
-                      variant="overline"
-                      color="textSecondary"
-                    >
-                      Mindset
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="h1"
-                      color="secondary"
-                    >
-                      100+
-                    </Typography>
-                    <Typography
-                      variant="overline"
-                      color="textSecondary"
-                    >
-                      Contributers
-                    </Typography>
+                      <Button
+                        style={{
+                          borderColor: '#A60000',
+                          color: '#A60000',
+                          textTransform: 'capitalize'
+                        }}
+                        component="a"
+                        href="/register"
+                        variant="outlined"
+                        size="large"
+                      >
+                        Know more
+                      </Button>
+                    </Box>
                   </Grid>
                 </Grid>
               </Box>
-           
             </Box>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            md={7}
-          >
+          <Grid item xs={12} md={6}>
             <Box position="relative">
-            <div className={classes.shape}>
-                <img
-                  alt="Shapes"
-                  src="/static/home/shapes.svg"
-                />
-              </div>
-             
+              {/* <div className={classes.shape}>
+                <img alt="Shapes" src="/static/home/shapes.svg" />
+              </div> */}
+
               <div className={classes.image}>
                 <img
-                  alt="Presentation"
-                  src="/static/home/codeforcause.jpg"
+                  alt="codeforcauseimg"
+                  src="/static/home/codeforcause.png"
                 />
               </div>
             </Box>
