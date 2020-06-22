@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Grid, Hidden, Typography, makeStyles } from '@material-ui/core';
+import { Grid, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,9 +20,9 @@ const useStyles = makeStyles(theme => ({
   },
   extraMargin: {
     marginTop: '30px',
-    marginBottom : '30px'
+    marginBottom: '30px'
   },
-  content :{
+  content: {
     marginTop: '15px'
   }
 }));
@@ -47,7 +47,11 @@ function OpenKnowledge({ className, ...rest }) {
           <Typography variant="h3" color="textPrimary">
             Open Knowledge {/* {user.firstName} */}
           </Typography>
-          <Typography className={classes.content} variant="subtitle1" color="textPrimary">
+          <Typography
+            className={classes.content}
+            variant="subtitle1"
+            color="textPrimary"
+          >
             Think of a software education platform that could solve it by
             Providing hands-on learning Establishing a community Having
             discussions about ongoing trends in tech with students Follow the
