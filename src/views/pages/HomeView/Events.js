@@ -19,8 +19,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.LIGHT,
     paddingTop: '30px',
-    paddingLeft: theme.spacing(6),
-    paddingRight: theme.spacing(6)
+    paddingLeft: 70,
+    paddingRight: 70
+    //write css for small screen
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -44,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     padding: '32px !important'
   },
   extraPaddingLink: {
-    padding: '12px !important'
+    paddingLeft: '32px !important'
   }
 }));
 const cards = [1, 2, 3];
@@ -87,12 +88,24 @@ function Events({ className, ...rest }) {
               </Card>
             </Grid>
           ))}
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid
+            className={classes.extraPaddingLink}
+            item
+            xs={12}
+            sm={12}
+            md={1}
+          >
             <Button size="small" color="primary" variant="contained">
               Subscribe
             </Button>
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid
+            className={classes.extraPaddingLink}
+            item
+            xs={12}
+            sm={12}
+            md={6}
+          >
             <Typography
               className={classes.extraPaddingLink}
               variant="body2"
