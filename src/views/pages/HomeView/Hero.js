@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     transformStyle: 'preserve-3d',
     perspective: 1500,
     '& > img': {
-      maxWidth: '90%',
+      maxWidth: '100%',
       height: 'auto',
       backfaceVisibility: 'hidden'
       // boxShadow: theme.shadows[16]
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     top: '0',
     left: '0',
     '& > img': {
-      maxWidth: '90%',
+      maxWidth: '100%',
       height: 'auto'
     }
   },
@@ -73,10 +73,10 @@ function Hero({ className, ...rest }) {
               height="100%"
               className={clsx(classes.extraPadding, className)}
             >
-              <Typography variant="h2" color="#000">
+              <Typography variant="h1" color="#000">
                 Learn for the Cause
               </Typography>
-              <Typography variant="h2" color="#000">
+              <Typography variant="h1" color="#000">
                 Code for the Cause
               </Typography>
               <Box mt={6}>
