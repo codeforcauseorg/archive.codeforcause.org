@@ -16,16 +16,18 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.dark,
     paddingTop: 80,
     paddingBottom: 60,
+    paddingLeft: 70,
+    paddingRight: 70,
     [theme.breakpoints.down('md')]: {
       paddingTop: 40,
       paddingBottom: 60
     }
   },
   extraPadding: {
-    padding: '0 70px',
-    [theme.breakpoints.down('md')]: {
-      padding: '0 30px'
-    },
+    padding: '0 70px 0px 0px',
+    // [theme.breakpoints.down('md')]: {
+    //   padding: '0 30px'
+    // },
     textAlign: 'justify'
   },
   image: {
@@ -38,15 +40,6 @@ const useStyles = makeStyles(theme => ({
       backfaceVisibility: 'hidden'
       // boxShadow: theme.shadows[16]
       // transform: 'rotateY(-35deg) rotateX(15deg)'
-    }
-  },
-  shape: {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    '& > img': {
-      maxWidth: '100%',
-      height: 'auto'
     }
   },
   hide: {
