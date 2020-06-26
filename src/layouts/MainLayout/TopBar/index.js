@@ -7,7 +7,7 @@ import Logo from 'src/components/Logo';
 import Item from './Item';
 import OpenSource from './OpenSource';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     zIndex: theme.zIndex.drawer + 100,
     backgroundColor: theme.palette.background.default
