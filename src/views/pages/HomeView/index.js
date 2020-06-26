@@ -70,7 +70,7 @@ function HomeView() {
       name: 'Gaurav Beriwal',
       avatar: '/static/images/avatars/Gaurav_Beriwal.jpg',
       cover: '/static/images/covers/cover_1.jpg',
-      designation: 'Kuch Marketing type role',
+      designation: 'Head of Management',
       skills: [
         'User Experience',
         'FrontEnd development',
