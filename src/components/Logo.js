@@ -4,9 +4,8 @@ function Logo(props) {
   return (
     <img
       alt="Logo"
-      width="42px"
-      height="43px"
-      src="/static/logo.jpg"
+      height="32px"
+      src="/static/logo/logo.png"
       {...props}
     />
   );

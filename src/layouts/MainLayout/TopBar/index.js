@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { AppBar, Box, Toolbar, makeStyles } from '@material-ui/core';
 import Logo from 'src/components/Logo';
-import Account from './Account';
+import Item from './Item';
+import OpenSource from './OpenSource';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,10 +15,6 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     minHeight: 64
   },
-  logo: {
-    borderRadius: '50%',
-    border: `1px solid ${theme.palette.divider}`
-  }
 }));
 
 function TopBar({ className, onMobileNavOpen, ...rest }) {
@@ -32,13 +29,15 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
         </RouterLink>
         {/* </Hidden> */}
         <Box ml={2} flexGrow={1} />
-        {/* <Search /> */}
-        {/* <Contacts /> */}
-        {/* <Notifications /> */}
-        {/* <Settings /> */}
+        <Item title="About" />
+        <Item title="Team" />
+        <Item title="Our Process" />
+        <Item title="Courses" />
+        <Box ml={2} flexGrow={0.05} />
         <Box ml={2}>
-          <Account />
+          <OpenSource />
         </Box>
+        <Box ml={2} flexGrow={0.05} />
       </Toolbar>
     </AppBar>
   );
