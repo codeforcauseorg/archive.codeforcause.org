@@ -1,16 +1,13 @@
 import React from 'react';
-import { makeStyles, Container } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import WhatWeStandFor from './WhatWeStandFor';
 import MainCards from './MainCards';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: '#350070'
   },
-  extraPadding: {
-    
-  }
 }));
 
 const StandForSection = () => {
@@ -18,8 +15,8 @@ const StandForSection = () => {
   return (
     <div className={classes.root}>
       { ' ' }
-      <WhatWeStandFor className={classes.extraPadding} />
-      <MainCards className={classes.extraPadding} />
+      <WhatWeStandFor />
+      <MainCards />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid, Typography, makeStyles } from '@material-ui/core';
 
-const primaryContentColor = '#F8F6FA';
-const secondaryContentColor = '#D2CCD7';
 const backgroundColor = '#350070';
 
 const useStyles = makeStyles(() => ({
