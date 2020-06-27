@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '15px '
   },
   card: {
-    backgroundColor: '#D3C9FF',
+    backgroundColor: '#EEF5FF',
     borderRadius: '10px',
     padding: '50px 32px'
   }

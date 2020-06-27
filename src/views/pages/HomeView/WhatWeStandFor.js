@@ -9,7 +9,7 @@ const backgroundColor = '#350070';
 
 const useStyles = makeStyles(() => ({
   root: {
-    padding: '100px 10px',
+    padding: '100px 30px',
     paddingBottom: '40px',
     color: 'white',
     backgroundColor

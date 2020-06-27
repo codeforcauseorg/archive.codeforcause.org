@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography, makeStyles } from '@material-ui/core';
 
-const backgroundColor = '#350070';
+const backgroundColor = '#1D006F';
 
 const useStyles = makeStyles(() => ({
   root: {
