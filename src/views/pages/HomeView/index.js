@@ -1,16 +1,15 @@
 import React from 'react';
-import { makeStyles, Container } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Hero from './Hero';
 import Events from './Events';
 import CTA from './CTA';
 import Footer from './Footer';
 import Mentors from './Mentors';
-import OpenKnowledge from './OpenKnowledge';
-import OpenSource from './OpenSource';
+import StandForSection from './StandForView';
 
 const useStyles = makeStyles(() => ({
-  root: {}
+  root: {},
 }));
 
 function HomeView() {
@@ -103,10 +102,7 @@ function HomeView() {
     <Page className={classes.root} title="Code for Cause">
       <Hero />
       <Events />
-      <Container maxWidth="lg">
-        <OpenKnowledge />
-        <OpenSource />
-      </Container>
+      <StandForSection />
       <Mentors mentors={mentors} />
 
       <CTA />
