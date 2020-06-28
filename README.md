@@ -23,6 +23,10 @@ npm run start
 npm run build
 ```
 
+## Design
+
+- Home : [Web](/design/home_view/home_web.pdf), [Mobile](/design/home_view/home_mobile.pdf), [Mobile Nav](/design/home_view/home_mobile_nav.pdf), [Figma](/design/home_view/home_complete.fig).
+
 ## Project Structure
 
     .
