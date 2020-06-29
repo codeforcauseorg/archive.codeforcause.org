@@ -1,8 +1,4 @@
-import React, {
-  useRef,
-  useState,
-  memo
-} from 'react';
+import React, { useRef, useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import {
   ListItemIcon,
@@ -42,11 +38,7 @@ function GenericMoreButton(props) {
   return (
     <>
       <Tooltip title="More options">
-        <IconButton
-          {...props}
-          onClick={handleMenuOpen}
-          ref={moreRef}
-        >
+        <IconButton {...props} onClick={handleMenuOpen} ref={moreRef}>
           <MoreIcon fontSize="small" />
         </IconButton>
       </Tooltip>

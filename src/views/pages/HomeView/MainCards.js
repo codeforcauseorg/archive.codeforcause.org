@@ -7,10 +7,9 @@ import MainCard from '../../../components/AboutCard/MainCard';
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: '#350070',
-    padding: '120px 2em',
-  },
+    padding: '120px 2em'
+  }
 }));
-
 
 function MainCards({ className, ...rest }) {
   const classes = useStyles();

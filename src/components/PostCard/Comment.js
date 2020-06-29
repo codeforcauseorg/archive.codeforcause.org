@@ -3,15 +3,9 @@ import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';
-import {
-  Avatar,
-  Box,
-  Link,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Avatar, Box, Link, Typography, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     marginBottom: theme.spacing(2)
@@ -25,10 +19,7 @@ function Comment({ comment, className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <Avatar
         alt="Person"
         component={RouterLink}
@@ -42,31 +33,16 @@ function Comment({ comment, className, ...rest }) {
         bgcolor="background.dark"
         className={classes.bubble}
       >
-        <Box
-          display="flex"
-          alignItems="center"
-          mb={1}
-        >
-          <Link
-            color="textPrimary"
-            component={RouterLink}
-            to="#"
-            variant="h6"
-          >
+        <Box display="flex" alignItems="center" mb={1}>
+          <Link color="textPrimary" component={RouterLink} to="#" variant="h6">
             {comment.author.name}
           </Link>
           <Box flexGrow={1} />
-          <Typography
-            color="textSecondary"
-            variant="caption"
-          >
+          <Typography color="textSecondary" variant="caption">
             {moment(comment.createdAt).fromNow()}
           </Typography>
         </Box>
-        <Typography
-          variant="body1"
-          color="textPrimary"
-        >
+        <Typography variant="body1" color="textPrimary">
           {comment.message}
         </Typography>
       </Box>

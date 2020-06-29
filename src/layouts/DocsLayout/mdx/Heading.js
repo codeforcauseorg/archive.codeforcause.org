@@ -1,9 +1,8 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   h1: {
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(2)
@@ -30,11 +29,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Heading({
-  children,
-  variant,
-  ...rest
-}) {
+function Heading({ children, variant, ...rest }) {
   const classes = useStyles();
 
   return (
@@ -53,6 +48,5 @@ Heading.propTypes = {
   children: PropTypes.any,
   variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 };
-
 
 export default Heading;

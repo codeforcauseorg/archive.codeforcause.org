@@ -13,7 +13,7 @@ import {
 import { Menu as MenuIcon } from 'react-feather';
 import Logo from 'src/components/Logo';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
     color: theme.palette.text.primary,
@@ -49,10 +49,7 @@ function TopBar({ onMobileNavOpen }) {
             <Logo />
           </RouterLink>
         </Hidden>
-        <Box
-          ml={2}
-          flexGrow={1}
-        />
+        <Box ml={2} flexGrow={1} />
         <Link
           className={classes.link}
           color="textSecondary"

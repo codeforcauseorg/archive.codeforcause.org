@@ -1,14 +1,7 @@
-import React, {
-  useRef,
-  useState,
-  useEffect
-} from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import moment from 'moment';
-import {
-  useDispatch,
-  useSelector
-} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Avatar,
   Box,
@@ -28,7 +21,7 @@ import { Users as UsersIcon } from 'react-feather';
 import OnlineIndicator from 'src/components/OnlineIndicator';
 import { getContacts } from 'src/actions/chatActions';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   popover: {
     width: 320,
     padding: theme.spacing(2)
@@ -48,7 +41,7 @@ function Contacts() {
   const classes = useStyles();
   const ref = useRef(null);
   const dispatch = useDispatch();
-  const { contacts } = useSelector((state) => state.chat);
+  const { contacts } = useSelector(state => state.chat);
   const [isOpen, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -66,11 +59,7 @@ function Contacts() {
   return (
     <>
       <Tooltip title="Contacts">
-        <IconButton
-          color="inherit"
-          onClick={handleOpen}
-          ref={ref}
-        >
+        <IconButton color="inherit" onClick={handleOpen} ref={ref}>
           <SvgIcon fontSize="small">
             <UsersIcon />
           </SvgIcon>
@@ -86,33 +75,23 @@ function Contacts() {
         onClose={handleClose}
         open={isOpen}
       >
-
-        <Typography
-          variant="h4"
-          color="textPrimary"
-        >
+        <Typography variant="h4" color="textPrimary">
           Contacts
         </Typography>
         <Box mt={2}>
           <List disablePadding>
-            {contacts.allIds.map((contactId) => {
+            {contacts.allIds.map(contactId => {
               const contact = contacts.byId[contactId];
 
               return (
-                <ListItem
-                  disableGutters
-                  key={contact.id}
-                >
+                <ListItem disableGutters key={contact.id}>
                   <ListItemAvatar>
-                    <Avatar
-                      alt="Person"
-                      src={contact.avatar}
-                    />
+                    <Avatar alt="Person" src={contact.avatar} />
                   </ListItemAvatar>
                   <ListItemText
                     className={classes.listItemText}
                     disableTypography
-                    primary={(
+                    primary={
                       <Link
                         color="textPrimary"
                         component={RouterLink}
@@ -124,19 +103,12 @@ function Contacts() {
                       >
                         {contact.name}
                       </Link>
-                    )}
+                    }
                   />
                   {contact.isActive ? (
-                    <OnlineIndicator
-                      size="small"
-                      status="online"
-                    />
+                    <OnlineIndicator size="small" status="online" />
                   ) : (
-                    <Typography
-                      color="textSecondary"
-                      noWrap
-                      variant="caption"
-                    >
+                    <Typography color="textSecondary" noWrap variant="caption">
                       {moment(contact.lastActivity).fromNow()}
                     </Typography>
                   )}

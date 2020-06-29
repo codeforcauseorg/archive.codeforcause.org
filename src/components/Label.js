@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import {
-  fade,
-  makeStyles
-} from '@material-ui/core';
+import { fade, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     fontFamily: theme.typography.fontFamily,
     alignItems: 'center',
@@ -23,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.5,
     minWidth: 20,
     padding: theme.spacing(0.5, 1),
-    textTransform: 'titlecase',
+    textTransform: 'titlecase'
   },
   primary: {
     color: theme.palette.primary.main,
@@ -47,22 +44,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Label({
-  className,
-  color,
-  children,
-  style,
-  ...rest
-}) {
+function Label({ className, color, children, style, ...rest }) {
   const classes = useStyles();
 
   return (
     <span
-      className={
-        clsx(classes.root, {
+      className={clsx(
+        classes.root,
+        {
           [classes[color]]: color
-        }, className)
-      }
+        },
+        className
+      )}
       {...rest}
     >
       {children}
@@ -74,7 +67,13 @@ Label.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   style: PropTypes.object,
-  color: PropTypes.oneOf(['primary', 'secondary', 'error', 'warning', 'success'])
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'error',
+    'warning',
+    'success'
+  ])
 };
 
 Label.defaultProps = {

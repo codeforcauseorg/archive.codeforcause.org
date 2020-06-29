@@ -15,7 +15,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   media: {
     height: 125
@@ -36,21 +36,10 @@ function MentorCard({ mentor, className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
-      <CardMedia
-        className={classes.media}
-        image={mentor.cover}
-      />
+    <Card className={clsx(classes.root, className)} {...rest}>
+      <CardMedia className={classes.media} image={mentor.cover} />
       <CardContent className={classes.content}>
-        <Box
-          mt={-9}
-          mb={2}
-          display="flex"
-          justifyContent="center"
-        >
+        <Box mt={-9} mb={2} display="flex" justifyContent="center">
           <Avatar
             alt="Mentor"
             className={classes.avatar}
@@ -70,32 +59,23 @@ function MentorCard({ mentor, className, ...rest }) {
         >
           {mentor.name}
         </Link>
-        <Typography
-          align="center"
-          variant="body2"
-          color="textSecondary"
-        >
-          {mentor.designation}
-          {' '}
+        <Typography align="center" variant="body2" color="textSecondary">
+          {mentor.designation}{' '}
         </Typography>
         <Box my={2}>
           <Divider />
         </Box>
-        <Typography
-            variant="body2"
-            color="textPrimary"
-          >
-           
-        {mentor.skills.map((skill) => (
-          <Chip
-            key={skill}
-            className={classes.chip}
-            label={skill}
-            variant="outlined"
-          />
-        ))}
-         {/* {`${mentor.profile}`} */}
-          </Typography>
+        <Typography variant="body2" color="textPrimary">
+          {mentor.skills.map(skill => (
+            <Chip
+              key={skill}
+              className={classes.chip}
+              label={skill}
+              variant="outlined"
+            />
+          ))}
+          {/* {`${mentor.profile}`} */}
+        </Typography>
       </CardContent>
     </Card>
   );

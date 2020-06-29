@@ -179,31 +179,19 @@ const navConfig = [
         title: 'Mail',
         href: '/app/mail',
         icon: MailIcon,
-        info: () => (
-          <Chip
-            color="secondary"
-            size="small"
-            label="Updated"
-          />
-        )
+        info: () => <Chip color="secondary" size="small" label="Updated" />
       },
       {
         title: 'Chat',
         href: '/app/chat',
         icon: MessageCircleIcon,
-        info: () => (
-          <Chip
-            color="secondary"
-            size="small"
-            label="Updated"
-          />
-        )
+        info: () => <Chip color="secondary" size="small" label="Updated" />
       },
       {
         title: 'Calendar',
         href: '/app/calendar',
         icon: CalendarIcon
-      },
+      }
     ]
   },
   {
@@ -278,7 +266,7 @@ const navConfig = [
           {
             title: 'Redux Forms',
             href: '/app/extra/forms/redux'
-          },
+          }
         ]
       },
       {
@@ -311,12 +299,7 @@ function renderNavItems({ items, ...rest }) {
   );
 }
 
-function reduceChildRoutes({
-  acc,
-  pathname,
-  item,
-  depth = 0
-}) {
+function reduceChildRoutes({ acc, pathname, item, depth = 0 }) {
   const key = item.title + depth;
 
   if (item.items) {
@@ -376,10 +359,10 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function NavBar({ openMobile, onMobileClose, }) {
+function NavBar({ openMobile, onMobileClose }) {
   const classes = useStyles();
   const location = useLocation();
-  const { user } = useSelector((state) => state.account);
+  const { user } = useSelector(state => state.account);
 
   useEffect(() => {
     if (openMobile && onMobileClose) {
@@ -389,40 +372,22 @@ function NavBar({ openMobile, onMobileClose, }) {
   }, [location.pathname]);
 
   const content = (
-    <Box
-      height="100%"
-      display="flex"
-      flexDirection="column"
-    >
+    <Box height="100%" display="flex" flexDirection="column">
       <PerfectScrollbar options={{ suppressScrollX: true }}>
         <Hidden lgUp>
-          <Box
-            p={2}
-            display="flex"
-            justifyContent="center"
-          >
+          <Box p={2} display="flex" justifyContent="center">
             <RouterLink to="/">
               <Logo className={classes.logo} />
             </RouterLink>
           </Box>
         </Hidden>
         <Box p={2}>
-          <Box
-            display="flex"
-            justifyContent="center"
-          >
+          <Box display="flex" justifyContent="center">
             <RouterLink to="/app/account">
-              <Avatar
-                alt="User"
-                className={classes.avatar}
-                src={user.avatar}
-              />
+              <Avatar alt="User" className={classes.avatar} src={user.avatar} />
             </RouterLink>
           </Box>
-          <Box
-            mt={2}
-            textAlign="center"
-          >
+          <Box mt={2} textAlign="center">
             <Link
               component={RouterLink}
               to="/app/account"
@@ -432,43 +397,33 @@ function NavBar({ openMobile, onMobileClose, }) {
             >
               {`${user.firstName} ${user.lastName}`}
             </Link>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-            >
+            <Typography variant="body2" color="textSecondary">
               {user.bio}
             </Typography>
           </Box>
         </Box>
         <Divider />
         <Box p={2}>
-          {navConfig.map((config) => (
+          {navConfig.map(config => (
             <List
               key={config.subheader}
-              subheader={(
-                <ListSubheader
-                  disableGutters
-                  disableSticky
-                >
+              subheader={
+                <ListSubheader disableGutters disableSticky>
                   {config.subheader}
                 </ListSubheader>
-              )}
+              }
             >
-              {renderNavItems({ items: config.items, pathname: location.pathname })}
+              {renderNavItems({
+                items: config.items,
+                pathname: location.pathname
+              })}
             </List>
           ))}
         </Box>
         <Divider />
         <Box p={2}>
-          <Box
-            p={2}
-            borderRadius="borderRadius"
-            bgcolor="background.dark"
-          >
-            <Typography
-              variant="h6"
-              color="textPrimary"
-            >
+          <Box p={2} borderRadius="borderRadius" bgcolor="background.dark">
+            <Typography variant="h6" color="textPrimary">
               Need Help?
             </Typography>
             <Link

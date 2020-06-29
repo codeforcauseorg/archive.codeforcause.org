@@ -21,7 +21,7 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import bytesToSize from 'src/utils/bytesToSize';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {},
   dropZone: {
     border: `1px dashed ${theme.palette.divider}`,
@@ -64,8 +64,8 @@ function FilesDropzone({ className, ...rest }) {
   const classes = useStyles();
   const [files, setFiles] = useState([]);
 
-  const handleDrop = useCallback((acceptedFiles) => {
-    setFiles((prevFiles) => [...prevFiles].concat(acceptedFiles));
+  const handleDrop = useCallback(acceptedFiles => {
+    setFiles(prevFiles => [...prevFiles].concat(acceptedFiles));
   }, []);
 
   const handleRemoveAll = () => {
@@ -77,10 +77,7 @@ function FilesDropzone({ className, ...rest }) {
   });
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       <div
         className={clsx({
           [classes.dropZone]: true,
@@ -97,21 +94,12 @@ function FilesDropzone({ className, ...rest }) {
           />
         </div>
         <div>
-          <Typography
-            gutterBottom
-            variant="h3"
-          >
+          <Typography gutterBottom variant="h3">
             Select files
           </Typography>
           <Box mt={2}>
-            <Typography
-              color="textPrimary"
-              variant="body1"
-            >
-              Drop files here or click
-              {' '}
-              <Link underline="always">browse</Link>
-              {' '}
+            <Typography color="textPrimary" variant="body1">
+              Drop files here or click <Link underline="always">browse</Link>{' '}
               thorough your machine
             </Typography>
           </Box>
@@ -122,10 +110,7 @@ function FilesDropzone({ className, ...rest }) {
           <PerfectScrollbar options={{ suppressScrollX: true }}>
             <List className={classes.list}>
               {files.map((file, i) => (
-                <ListItem
-                  divider={i < files.length - 1}
-                  key={i}
-                >
+                <ListItem divider={i < files.length - 1} key={i}>
                   <ListItemIcon>
                     <FileCopyIcon />
                   </ListItemIcon>
@@ -144,17 +129,10 @@ function FilesDropzone({ className, ...rest }) {
             </List>
           </PerfectScrollbar>
           <div className={classes.actions}>
-            <Button
-              onClick={handleRemoveAll}
-              size="small"
-            >
+            <Button onClick={handleRemoveAll} size="small">
               Remove all
             </Button>
-            <Button
-              color="secondary"
-              size="small"
-              variant="contained"
-            >
+            <Button color="secondary" size="small" variant="contained">
               Upload files
             </Button>
           </div>

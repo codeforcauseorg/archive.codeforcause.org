@@ -36,15 +36,15 @@ const WhatWeStandFor = ({ className, ...rest }) => {
       {' '}
       <Grid alignItems="center" container justify="space-between" spacing={3}>
         <Grid item md={6} xs={12}>
-          <Typography variant="h3">
-            What We Stand For
-          </Typography>
+          <Typography variant="h3">What We Stand For</Typography>
           <Typography className={classes.content} variant="subtitle1">
             Think of a software education platform that could solve it by
             Providing hands-on learning Establishing a community Having
             discussions about ongoing trends in tech with students Follow the
             T-Shape learning path.
-            <strong className={classes.primarySubtitle}>Open Source & Open Knowledge</strong>
+            <strong className={classes.primarySubtitle}>
+              Open Source & Open Knowledge
+            </strong>
           </Typography>
         </Grid>
         {/* <Hidden smDown> */}
@@ -59,7 +59,7 @@ const WhatWeStandFor = ({ className, ...rest }) => {
       </Grid>
     </Container>
   );
-}
+};
 
 WhatWeStandFor.propTypes = {
   className: PropTypes.string

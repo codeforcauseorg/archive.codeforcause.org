@@ -38,12 +38,9 @@ function PostCard({ className, post, ...rest }) {
 
   return (
     <>
-      <Card
-        className={clsx(classes.root, className)}
-        {...rest}
-      >
+      <Card className={clsx(classes.root, className)} {...rest}>
         <CardHeader
-          avatar={(
+          avatar={
             <Avatar
               alt="Person"
               className={classes.avatar}
@@ -51,13 +48,10 @@ function PostCard({ className, post, ...rest }) {
               src={post.author.avatar}
               to="#"
             />
-          )}
+          }
           disableTypography
-          subheader={(
-            <Box
-              display="flex"
-              alignItems="center"
-            >
+          subheader={
+            <Box display="flex" alignItems="center">
               <AccessTimeIcon fontSize="small" />
               <Typography
                 variant="caption"
@@ -67,8 +61,8 @@ function PostCard({ className, post, ...rest }) {
                 {moment(post.createdAt).fromNow()}
               </Typography>
             </Box>
-          )}
-          title={(
+          }
+          title={
             <Link
               color="textPrimary"
               component={RouterLink}
@@ -77,38 +71,27 @@ function PostCard({ className, post, ...rest }) {
             >
               {post.author.name}
             </Link>
-          )}
+          }
         />
         <Box px={3} pb={2}>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-          >
+          <Typography variant="body1" color="textPrimary">
             {post.message}
           </Typography>
           {post.media && (
-          <Box mt={2}>
-            <CardActionArea onClick={() => setOpenedFile(post.media)}>
-              <CardMedia
-                className={classes.media}
-                image={post.media}
-              />
-            </CardActionArea>
-          </Box>
+            <Box mt={2}>
+              <CardActionArea onClick={() => setOpenedFile(post.media)}>
+                <CardMedia className={classes.media} image={post.media} />
+              </CardActionArea>
+            </Box>
           )}
-          <Box
-            mt={2}
-          >
+          <Box mt={2}>
             <Reactions post={post} />
           </Box>
           <Box my={2}>
             <Divider />
           </Box>
-          {post.comments.map((comment) => (
-            <Comment
-              comment={comment}
-              key={comment.id}
-            />
+          {post.comments.map(comment => (
+            <Comment comment={comment} key={comment.id} />
           ))}
           <Box my={2}>
             <Divider />
@@ -117,10 +100,7 @@ function PostCard({ className, post, ...rest }) {
         </Box>
       </Card>
       {openedFile && (
-        <Lightbox
-          large={openedFile}
-          onClose={() => setOpenedFile(null)}
-        />
+        <Lightbox large={openedFile} onClose={() => setOpenedFile(null)} />
       )}
     </>
   );

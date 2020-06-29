@@ -2,13 +2,9 @@ import React from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import {
-  Button,
-  ListItem,
-  makeStyles
-} from '@material-ui/core';
+import { Button, ListItem, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   item: {
     display: 'block',
     paddingTop: 0,
@@ -39,18 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
   active: {
     color: theme.palette.secondary.main,
-    fontWeight: theme.typography.fontWeightMedium,
+    fontWeight: theme.typography.fontWeightMedium
   }
 }));
 
-function NavItem({
-  title,
-  href,
-  depth,
-  children,
-  className,
-  ...rest
-}) {
+function NavItem({ title, href, depth, children, className, ...rest }) {
   const classes = useStyles();
   let paddingLeft = 8;
 
@@ -67,10 +56,7 @@ function NavItem({
         disableGutters
         {...rest}
       >
-        <Button
-          className={classes.button}
-          style={style}
-        >
+        <Button className={classes.button} style={style}>
           {title}
         </Button>
         {children}

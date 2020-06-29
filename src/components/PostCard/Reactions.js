@@ -30,25 +30,19 @@ function Reactions({ post, className, ...rest }) {
 
   const handleLike = () => {
     setLiked(true);
-    setLikes((prevLikes) => prevLikes + 1);
+    setLikes(prevLikes => prevLikes + 1);
   };
 
   const handleUnlike = () => {
     setLiked(false);
-    setLikes((prevLikes) => prevLikes - 1);
+    setLikes(prevLikes => prevLikes - 1);
   };
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       {liked ? (
         <Tooltip title="Unlike">
-          <IconButton
-            className={classes.likedButton}
-            onClick={handleUnlike}
-          >
+          <IconButton className={classes.likedButton} onClick={handleUnlike}>
             <FavoriteIcon fontSize="small" />
           </IconButton>
         </Tooltip>
@@ -59,10 +53,7 @@ function Reactions({ post, className, ...rest }) {
           </IconButton>
         </Tooltip>
       )}
-      <Typography
-        color="textSecondary"
-        variant="h6"
-      >
+      <Typography color="textSecondary" variant="h6">
         {likes}
       </Typography>
       <Box flexGrow={1} />

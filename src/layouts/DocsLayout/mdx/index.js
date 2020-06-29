@@ -9,14 +9,14 @@ import Code from './Code';
 import InlineCode from './InlineCode';
 
 const components = {
-  h1: (props) => <Heading variant="h1" {...props} />,
-  h2: (props) => <Heading variant="h2" {...props} />,
-  h3: (props) => <Heading variant="h3" {...props} />,
-  h4: (props) => <Heading variant="h4" {...props} />,
-  h5: (props) => <Heading variant="h5" {...props} />,
-  h6: (props) => <Heading variant="h6" {...props} />,
-  ul: (props) => <List variant="ul" {...props} />,
-  ol: (props) => <List variant="ol" {...props} />,
+  h1: props => <Heading variant="h1" {...props} />,
+  h2: props => <Heading variant="h2" {...props} />,
+  h3: props => <Heading variant="h3" {...props} />,
+  h4: props => <Heading variant="h4" {...props} />,
+  h5: props => <Heading variant="h5" {...props} />,
+  h6: props => <Heading variant="h6" {...props} />,
+  ul: props => <List variant="ul" {...props} />,
+  ol: props => <List variant="ol" {...props} />,
   hr: Divider,
   li: ListItem,
   p: Paragraph,

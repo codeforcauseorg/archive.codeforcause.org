@@ -11,7 +11,7 @@ const notificationsReducer = (state = initialState, action) => {
     case GET_NOTIFICATIONS: {
       const { notifications } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.notifications = notifications;
       });
     }

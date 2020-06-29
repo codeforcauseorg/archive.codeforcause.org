@@ -11,22 +11,26 @@ export const CLOSE_SIDEBAR = '@chat/close-sidebar';
 export function getContacts() {
   const request = axios.get('/api/chat/contacts');
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: GET_CONTACTS,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: GET_CONTACTS,
+        payload: response.data
+      })
+    );
   };
 }
 
 export function getThreads() {
   const request = axios.get('/api/chat/threads');
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: GET_THREADS,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: GET_THREADS,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -37,8 +41,8 @@ export function getThread(threadKey) {
     }
   });
 
-  return (dispatch) => {
-    request.then((response) => {
+  return dispatch => {
+    request.then(response => {
       if (response.data.thread) {
         dispatch({
           type: GET_THREAD,
@@ -56,22 +60,19 @@ export function markThreadAsSeen(threadKey) {
     }
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: MARK_THREAD_AS_SEEN,
-      payload: {
-        threadKey
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: MARK_THREAD_AS_SEEN,
+        payload: {
+          threadKey
+        }
+      })
+    );
   };
 }
 
-export function addMessage({
-  userId,
-  threadKey,
-  body,
-  attachments
-}) {
+export function addMessage({ userId, threadKey, body, attachments }) {
   const request = axios.post('/api/chat/messages/new', {
     userId,
     threadKey,
@@ -79,14 +80,16 @@ export function addMessage({
     attachments
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: ADD_MESSAGE,
-      payload: {
-        userId,
-        ...response.data
-      }
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: ADD_MESSAGE,
+        payload: {
+          userId,
+          ...response.data
+        }
+      })
+    );
   };
 }
 

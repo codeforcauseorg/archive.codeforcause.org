@@ -1,7 +1,4 @@
-import React, {
-  useRef,
-  useState
-} from 'react';
+import React, { useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,7 +15,7 @@ import {
 } from '@material-ui/core';
 import { logout } from 'src/actions/accountActions';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   avatar: {
     height: 32,
     width: 32,
@@ -34,7 +31,7 @@ function Account() {
   const history = useHistory();
   const ref = useRef(null);
   const dispatch = useDispatch();
-  const account = useSelector((state) => state.account);
+  const account = useSelector(state => state.account);
   const { enqueueSnackbar } = useSnackbar();
   const [isOpen, setOpen] = useState(false);
 
@@ -73,10 +70,7 @@ function Account() {
           src={account.user.avatar}
         />
         <Hidden smDown>
-          <Typography
-            variant="h6"
-            color="inherit"
-          >
+          <Typography variant="h6" color="inherit">
             {`${account.user.firstName} ${account.user.lastName}`}
           </Typography>
         </Hidden>
@@ -93,21 +87,13 @@ function Account() {
         anchorEl={ref.current}
         open={isOpen}
       >
-        <MenuItem
-          component={RouterLink}
-          to="/app/social/profile"
-        >
+        <MenuItem component={RouterLink} to="/app/social/profile">
           Profile
         </MenuItem>
-        <MenuItem
-          component={RouterLink}
-          to="/app/account"
-        >
+        <MenuItem component={RouterLink} to="/app/account">
           Account
         </MenuItem>
-        <MenuItem onClick={handleLogout}>
-          Logout
-        </MenuItem>
+        <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
     </>
   );

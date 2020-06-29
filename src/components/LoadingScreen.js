@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import NProgress from 'nprogress';
 import { Box, LinearProgress, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     alignItems: 'center',
     backgroundColor: theme.palette.background.default,

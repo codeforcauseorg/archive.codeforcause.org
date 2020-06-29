@@ -16,7 +16,7 @@ const initialState = {
 const accountReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_REQUEST: {
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         // Ensure we clear current session
         draft.user = null;
       });
@@ -25,7 +25,7 @@ const accountReducer = (state = initialState, action) => {
     case LOGIN_SUCCESS: {
       const { user } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.user = user;
       });
     }
@@ -37,7 +37,7 @@ const accountReducer = (state = initialState, action) => {
     }
 
     case LOGOUT: {
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.user = null;
       });
     }
@@ -45,7 +45,7 @@ const accountReducer = (state = initialState, action) => {
     case SILENT_LOGIN: {
       const { user } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.user = user;
       });
     }
@@ -53,7 +53,7 @@ const accountReducer = (state = initialState, action) => {
     case UPDATE_PROFILE: {
       const { user } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.user = user;
       });
     }

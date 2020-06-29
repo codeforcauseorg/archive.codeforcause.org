@@ -10,12 +10,7 @@ const useStyles = makeStyles(() => ({
 export default function Code({ className, ...rest }) {
   const classes = useStyles();
 
-  return (
-    <code
-      className={clsx(classes.root, className)}
-      {...rest}
-    />
-  );
+  return <code className={clsx(classes.root, className)} {...rest} />;
 }
 
 Code.propTypes = {

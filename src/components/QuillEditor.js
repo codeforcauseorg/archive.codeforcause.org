@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import ReactQuill from 'react-quill';
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     '& .ql-toolbar': {
       borderLeft: 'none',
@@ -76,12 +76,7 @@ const useStyles = makeStyles((theme) => ({
 function QuillEditor({ className, ...rest }) {
   const classes = useStyles();
 
-  return (
-    <ReactQuill
-      className={clsx(classes.root, className)}
-      {...rest}
-    />
-  );
+  return <ReactQuill className={clsx(classes.root, className)} {...rest} />;
 }
 
 QuillEditor.propTypes = {

@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 import TopBar from './TopBar';
 import components from './mdx';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   wrapper: {
     backgroundColor: theme.palette.background.default,
     display: 'flex',
@@ -39,13 +39,8 @@ function DocsLayout({ children }) {
       />
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
-          <Container
-            maxWidth="md"
-            className={classes.content}
-          >
-            <MDXProvider components={components}>
-              {children}
-            </MDXProvider>
+          <Container maxWidth="md" className={classes.content}>
+            <MDXProvider components={components}>{children}</MDXProvider>
           </Container>
         </div>
       </div>

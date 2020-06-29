@@ -28,7 +28,7 @@ const chatReducer = (state = initialState, action) => {
     case GET_CONTACTS: {
       const { contacts } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.contacts.byId = objFromArray(contacts);
         draft.contacts.allIds = Object.keys(draft.contacts.byId);
       });
@@ -37,7 +37,7 @@ const chatReducer = (state = initialState, action) => {
     case GET_THREADS: {
       const { threads } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.threads.byKey = objFromArray(threads, 'key');
         draft.threads.allKeys = Object.keys(draft.threads.byKey);
       });
@@ -46,7 +46,7 @@ const chatReducer = (state = initialState, action) => {
     case GET_THREAD: {
       const { thread } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.threads.byKey[thread.key] = thread;
 
         if (!draft.threads.allKeys.includes(thread.key)) {
@@ -58,7 +58,7 @@ const chatReducer = (state = initialState, action) => {
     case MARK_THREAD_AS_SEEN: {
       const { threadKey } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const thread = draft.threads.byKey[threadKey];
 
         if (thread) {
@@ -68,14 +68,9 @@ const chatReducer = (state = initialState, action) => {
     }
 
     case ADD_MESSAGE: {
-      const {
-        threadKey,
-        message,
-        userId,
-        otherUserId
-      } = action.payload;
+      const { threadKey, message, userId, otherUserId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         let thread = draft.threads.byKey[threadKey];
 
         if (!thread) {
@@ -95,13 +90,13 @@ const chatReducer = (state = initialState, action) => {
     }
 
     case OPEN_SIDEBAR: {
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.sidebarOpen = true;
       });
     }
 
     case CLOSE_SIDEBAR: {
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.sidebarOpen = false;
       });
     }
