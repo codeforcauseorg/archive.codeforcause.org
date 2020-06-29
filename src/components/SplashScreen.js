@@ -1,12 +1,8 @@
 import React from 'react';
-import {
-  Box,
-  CircularProgress,
-  makeStyles
-} from '@material-ui/core';
+import { Box, CircularProgress, makeStyles } from '@material-ui/core';
 import Logo from 'src/components/Logo';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     alignItems: 'center',
     backgroundColor: theme.palette.background.default,
@@ -32,11 +28,7 @@ function SlashScreen() {
 
   return (
     <div className={classes.root}>
-      <Box
-        display="flex"
-        justifyContent="center"
-        mb={6}
-      >
+      <Box display="flex" justifyContent="center" mb={6}>
         <Logo className={classes.logo} />
       </Box>
       <CircularProgress />

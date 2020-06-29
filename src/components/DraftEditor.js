@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Editor } from 'react-draft-wysiwyg';
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     fontFamily: theme.typography.fontFamily,
     '& .rdw-option-wrapper': {
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     '& .rdw-dropdown-wrapper': {
       boxShadow: 'none',
-      background: 'transparent',
+      background: 'transparent'
     },
     '& .rdw-dropdown-optionwrapper': {
       overflowY: 'auto',

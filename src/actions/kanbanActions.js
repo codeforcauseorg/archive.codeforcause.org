@@ -20,11 +20,13 @@ export const DELETE_CHECK_ITEM = '@kanban/delete-check-item';
 export function getBoard() {
   const request = axios.get('/api/kanban/board');
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: GET_BOARD,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: GET_BOARD,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -33,11 +35,13 @@ export function createList(name) {
     name
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: CREATE_LIST,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: CREATE_LIST,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -47,11 +51,13 @@ export function updateList(listId, update) {
     update
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: UPDATE_LIST,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: UPDATE_LIST,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -60,13 +66,15 @@ export function clearList(listId) {
     listId
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: CLEAR_LIST,
-      payload: {
-        listId
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: CLEAR_LIST,
+        payload: {
+          listId
+        }
+      })
+    );
   };
 }
 
@@ -75,13 +83,15 @@ export function deleteList(listId) {
     listId
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: DELETE_LIST,
-      payload: {
-        listId
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: DELETE_LIST,
+        payload: {
+          listId
+        }
+      })
+    );
   };
 }
 
@@ -91,11 +101,13 @@ export function createCard(listId, name) {
     name
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: CREATE_CARD,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: CREATE_CARD,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -105,11 +117,13 @@ export function updateCard(cardId, update) {
     update
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: UPDATE_CARD,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: UPDATE_CARD,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -120,15 +134,17 @@ export function moveCard(cardId, position, listId) {
     listId
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: MOVE_CARD,
-      payload: {
-        cardId,
-        position,
-        listId
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: MOVE_CARD,
+        payload: {
+          cardId,
+          position,
+          listId
+        }
+      })
+    );
   };
 }
 
@@ -137,13 +153,15 @@ export function deleteCard(cardId) {
     cardId
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: DELETE_CARD,
-      payload: {
-        cardId
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: DELETE_CARD,
+        payload: {
+          cardId
+        }
+      })
+    );
   };
 }
 
@@ -154,11 +172,13 @@ export function addComment(userId, cardId, message) {
     message
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: ADD_COMMENT,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: ADD_COMMENT,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -168,14 +188,16 @@ export function addChecklist(cardId, name) {
     name
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: ADD_CHECKLIST,
-      payload: {
-        cardId,
-        ...response.data
-      }
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: ADD_CHECKLIST,
+        payload: {
+          cardId,
+          ...response.data
+        }
+      })
+    );
   };
 }
 
@@ -186,15 +208,17 @@ export function updateChecklist(cardId, checklistId, update) {
     update
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: UPDATE_CHECKLIST,
-      payload: {
-        cardId,
-        checklistId,
-        ...response.data
-      }
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: UPDATE_CHECKLIST,
+        payload: {
+          cardId,
+          checklistId,
+          ...response.data
+        }
+      })
+    );
   };
 }
 
@@ -204,14 +228,16 @@ export function deleteChecklist(cardId, checklistId) {
     checklistId
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: DELETE_CHECKLIST,
-      payload: {
-        cardId,
-        checklistId
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: DELETE_CHECKLIST,
+        payload: {
+          cardId,
+          checklistId
+        }
+      })
+    );
   };
 }
 
@@ -222,15 +248,17 @@ export function addCheckItem(cardId, checklistId, name) {
     name
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: ADD_CHECK_ITEM,
-      payload: {
-        cardId,
-        checklistId,
-        ...response.data
-      }
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: ADD_CHECK_ITEM,
+        payload: {
+          cardId,
+          checklistId,
+          ...response.data
+        }
+      })
+    );
   };
 }
 
@@ -242,16 +270,18 @@ export function updateCheckItem(cardId, checklistId, checkItemId, update) {
     update
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: UPDATE_CHECK_ITEM,
-      payload: {
-        cardId,
-        checklistId,
-        checkItemId,
-        ...response.data
-      }
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: UPDATE_CHECK_ITEM,
+        payload: {
+          cardId,
+          checklistId,
+          checkItemId,
+          ...response.data
+        }
+      })
+    );
   };
 }
 
@@ -262,14 +292,16 @@ export function deleteCheckItem(cardId, checklistId, checkItemId) {
     checkItemId
   });
 
-  return (dispatch) => {
-    request.then(() => dispatch({
-      type: DELETE_CHECK_ITEM,
-      payload: {
-        cardId,
-        checklistId,
-        checkItemId
-      }
-    }));
+  return dispatch => {
+    request.then(() =>
+      dispatch({
+        type: DELETE_CHECK_ITEM,
+        payload: {
+          cardId,
+          checklistId,
+          checkItemId
+        }
+      })
+    );
   };
 }

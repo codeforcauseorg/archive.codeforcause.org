@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function GuestGuard({ children }) {
-  const account = useSelector((state) => state.account);
+  const account = useSelector(state => state.account);
 
   if (account.user) {
     return <Redirect to="/app/account" />;

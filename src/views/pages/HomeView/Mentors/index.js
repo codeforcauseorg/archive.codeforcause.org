@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Grid, makeStyles, Typography, Box, Container } from '@material-ui/core';
+import {
+  Grid,
+  makeStyles,
+  Typography,
+  Box,
+  Container
+} from '@material-ui/core';
 import MentorCard from './MentorCard';
 
 const useStyles = makeStyles(() => ({
-  root: {
-  },
-  extraMargin : {
+  root: {},
+  extraMargin: {
     marginTop: '40px'
   }
 }));

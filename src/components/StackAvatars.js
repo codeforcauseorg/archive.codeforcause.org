@@ -9,7 +9,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     paddingLeft: 20
@@ -27,49 +27,28 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function StackAvatars({
-  avatars,
-  limit,
-  className,
-  ...rest
-}) {
+function StackAvatars({ avatars, limit, className, ...rest }) {
   const classes = useStyles();
   let lastIndex = 0;
 
-  const avatarNodes = avatars.slice(0, limit).map((item) => (
-    <Tooltip
-      key={++lastIndex}
-      title="View"
-    >
-      <Avatar
-        className={classes.avatar}
-        src={item}
-      />
+  const avatarNodes = avatars.slice(0, limit).map(item => (
+    <Tooltip key={++lastIndex} title="View">
+      <Avatar className={classes.avatar} src={item} />
     </Tooltip>
   ));
 
   if (avatars.length > limit) {
     avatarNodes.push(
-      <Avatar
-        key={++lastIndex}
-        className={clsx(classes.avatar, classes.more)}
-      >
-        <Typography
-          color="inherit"
-          variant="subtitle2"
-        >
-          +
-          {avatars.length - limit}
+      <Avatar key={++lastIndex} className={clsx(classes.avatar, classes.more)}>
+        <Typography color="inherit" variant="subtitle2">
+          +{avatars.length - limit}
         </Typography>
       </Avatar>
     );
   }
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <div className={clsx(classes.root, className)} {...rest}>
       {avatarNodes}
     </div>
   );

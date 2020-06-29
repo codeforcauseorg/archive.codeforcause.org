@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { colors, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'inline-block',
     borderRadius: '50%',
@@ -36,12 +36,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function OnlineIndicator({
-  className,
-  size,
-  status,
-  ...rest
-}) {
+function OnlineIndicator({ className, size, status, ...rest }) {
   const classes = useStyles();
   const rootClassName = clsx(
     {
@@ -52,12 +47,7 @@ function OnlineIndicator({
     className
   );
 
-  return (
-    <span
-      className={rootClassName}
-      {...rest}
-    />
-  );
+  return <span className={rootClassName} {...rest} />;
 }
 
 OnlineIndicator.propTypes = {

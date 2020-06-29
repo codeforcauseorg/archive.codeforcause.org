@@ -5,7 +5,7 @@ const backgroundColor = '#1D006F';
 
 const useStyles = makeStyles(() => ({
   root: {
-    paddingTop: '40px',
+    paddingTop: '40px'
   },
 
   avatar: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
     height: 70,
     marginRight: 15,
     backgroundColor
-  },
+  }
 }));
 
 const SubCard = ({ description }) => {
@@ -29,18 +29,8 @@ const SubCard = ({ description }) => {
       className={classes.root}
     >
       <Grid className={classes.avatar} />
-      <Grid
-        item
-        xs={8}
-        alignItems="flex-start"
-        container
-        justify="flex-start"
-      >
-        <Typography
-          variant="subtitle2"
-        >
-          {description}
-        </Typography>
+      <Grid item xs={8} alignItems="flex-start" container justify="flex-start">
+        <Typography variant="subtitle2">{description}</Typography>
       </Grid>
     </Grid>
   );

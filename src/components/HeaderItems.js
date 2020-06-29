@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import {
-  Box,
-  Link,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Link, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -19,9 +14,9 @@ const useStyles = makeStyles(() => ({
       position: 'relative',
       top: '2px',
       'text-decoration': 'none',
-      'border-bottom': 'solid 4px',
-    },
-  },
+      'border-bottom': 'solid 4px'
+    }
+  }
 }));
 
 const HeaderItem = ({ title }) => {
@@ -35,10 +30,7 @@ const HeaderItem = ({ title }) => {
         variant="h5"
         className={classes.textStyle}
       >
-        <Typography
-          variant="h6"
-          color="textPrimary"
-        >
+        <Typography variant="h6" color="textPrimary">
           {title}
         </Typography>
       </Link>

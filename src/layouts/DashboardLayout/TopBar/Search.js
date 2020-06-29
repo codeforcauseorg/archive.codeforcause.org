@@ -16,10 +16,7 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import {
-  Search as SearchIcon,
-  XCircle as XIcon
-} from 'react-feather';
+import { Search as SearchIcon, XCircle as XIcon } from 'react-feather';
 import axios from 'src/utils/axios';
 
 const useStyles = makeStyles(() => ({
@@ -64,10 +61,7 @@ function Search() {
   return (
     <>
       <Tooltip title="Search">
-        <IconButton
-          color="inherit"
-          onClick={handleOpen}
-        >
+        <IconButton color="inherit" onClick={handleOpen}>
           <SvgIcon fontSize="small">
             <SearchIcon />
           </SvgIcon>
@@ -88,10 +82,7 @@ function Search() {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Typography
-                variant="h4"
-                color="textPrimary"
-              >
+              <Typography variant="h4" color="textPrimary">
                 Search
               </Typography>
               <IconButton onClick={handleClose}>
@@ -107,26 +98,19 @@ function Search() {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <SvgIcon
-                        fontSize="small"
-                        color="action"
-                      >
+                      <SvgIcon fontSize="small" color="action">
                         <SearchIcon />
                       </SvgIcon>
                     </InputAdornment>
                   )
                 }}
-                onChange={(event) => setValue(event.target.value)}
+                onChange={event => setValue(event.target.value)}
                 placeholder="Search people &amp; places"
                 value={value}
                 variant="outlined"
               />
             </Box>
-            <Box
-              mt={2}
-              display="flex"
-              justifyContent="flex-end"
-            >
+            <Box mt={2} display="flex" justifyContent="flex-end">
               <Button
                 color="secondary"
                 variant="contained"
@@ -137,32 +121,27 @@ function Search() {
             </Box>
             <Box mt={4}>
               {isLoading ? (
-                <Box
-                  display="flex"
-                  justifyContent="center"
-                >
+                <Box display="flex" justifyContent="center">
                   <CircularProgress />
                 </Box>
               ) : (
                 <>
-                  {results && results.map((result) => (
-                    <Box mb={2}>
-                      <Link
-                        variant="h4"
-                        color="textPrimary"
-                        component={RouterLink}
-                        to="/app"
-                      >
-                        {result.title}
-                      </Link>
-                      <Typography
-                        variant="body2"
-                        color="textPrimary"
-                      >
-                        {result.description}
-                      </Typography>
-                    </Box>
-                  ))}
+                  {results &&
+                    results.map(result => (
+                      <Box mb={2}>
+                        <Link
+                          variant="h4"
+                          color="textPrimary"
+                          component={RouterLink}
+                          to="/app"
+                        >
+                          {result.title}
+                        </Link>
+                        <Typography variant="body2" color="textPrimary">
+                          {result.description}
+                        </Typography>
+                      </Box>
+                    ))}
                 </>
               )}
             </Box>

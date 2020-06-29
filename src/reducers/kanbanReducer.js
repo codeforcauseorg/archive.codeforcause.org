@@ -42,7 +42,7 @@ const kanbanReducer = (state = initialState, action) => {
     case GET_BOARD: {
       const { board } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.lists.byId = objFromArray(board.lists);
         draft.lists.allIds = Object.keys(draft.lists.byId);
         draft.cards.byId = objFromArray(board.cards);
@@ -56,7 +56,7 @@ const kanbanReducer = (state = initialState, action) => {
     case CREATE_LIST: {
       const { list } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.lists.byId[list.id] = list;
         draft.lists.allIds.push(list.id);
       });
@@ -65,7 +65,7 @@ const kanbanReducer = (state = initialState, action) => {
     case UPDATE_LIST: {
       const { list } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         _.merge(draft.lists.byId[list.id], list);
       });
     }
@@ -73,7 +73,7 @@ const kanbanReducer = (state = initialState, action) => {
     case CLEAR_LIST: {
       const { listId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const { cardIds } = draft.lists.byId[listId];
 
         draft.lists.byId[listId].cardIds = [];
@@ -85,7 +85,7 @@ const kanbanReducer = (state = initialState, action) => {
     case DELETE_LIST: {
       const { listId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.lists.byId = _.omit(draft.lists.byId, listId);
         _.pull(draft.lists.allIds, listId);
       });
@@ -94,7 +94,7 @@ const kanbanReducer = (state = initialState, action) => {
     case CREATE_CARD: {
       const { card } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.cards.byId[card.id] = card;
         draft.cards.allIds.push(card.id);
         draft.lists.byId[card.listId].cardIds.push(card.id);
@@ -104,7 +104,7 @@ const kanbanReducer = (state = initialState, action) => {
     case UPDATE_CARD: {
       const { card } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         _.merge(draft.cards.byId[card.id], card);
       });
     }
@@ -112,7 +112,7 @@ const kanbanReducer = (state = initialState, action) => {
     case MOVE_CARD: {
       const { cardId, position, listId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const { listId: sourceListId } = draft.cards.byId[cardId];
 
         // Remove card from source list
@@ -132,7 +132,7 @@ const kanbanReducer = (state = initialState, action) => {
     case DELETE_CARD: {
       const { cardId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const { listId } = draft.cards.byId[cardId];
 
         draft.cards.byId = _.omit(draft.cards.byId, cardId);
@@ -144,7 +144,7 @@ const kanbanReducer = (state = initialState, action) => {
     case ADD_COMMENT: {
       const { comment } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.cards.byId[comment.cardId].comments.push(comment);
       });
     }
@@ -152,7 +152,7 @@ const kanbanReducer = (state = initialState, action) => {
     case ADD_CHECKLIST: {
       const { cardId, checklist } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         draft.cards.byId[cardId].checklists.push(checklist);
       });
     }
@@ -160,10 +160,10 @@ const kanbanReducer = (state = initialState, action) => {
     case UPDATE_CHECKLIST: {
       const { cardId, checklist } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const card = draft.cards.byId[cardId];
 
-        card.checklists = _.map(card.checklists, (_checklist) => {
+        card.checklists = _.map(card.checklists, _checklist => {
           if (_checklist.id === checklist.id) {
             return checklist;
           }
@@ -176,7 +176,7 @@ const kanbanReducer = (state = initialState, action) => {
     case DELETE_CHECKLIST: {
       const { cardId, checklistId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const card = draft.cards.byId[cardId];
 
         card.checklists = _.reject(card.checklists, { id: checklistId });
@@ -186,11 +186,11 @@ const kanbanReducer = (state = initialState, action) => {
     case ADD_CHECK_ITEM: {
       const { cardId, checklistId, checkItem } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const card = draft.cards.byId[cardId];
 
         _.assign(card, {
-          checklists: _.map(card.checklists, (checklist) => {
+          checklists: _.map(card.checklists, checklist => {
             if (checklist.id === checklistId) {
               _.assign(checklist, {
                 checkItems: [...checklist.checkItems, checkItem]
@@ -204,20 +204,15 @@ const kanbanReducer = (state = initialState, action) => {
     }
 
     case UPDATE_CHECK_ITEM: {
-      const {
-        cardId,
-        checklistId,
-        checkItemId,
-        checkItem
-      } = action.payload;
+      const { cardId, checklistId, checkItemId, checkItem } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const card = draft.cards.byId[cardId];
 
-        card.checklists = _.map(card.checklists, (checklist) => {
+        card.checklists = _.map(card.checklists, checklist => {
           if (checklist.id === checklistId) {
             _.assign(checklist, {
-              checkItems: _.map(checklist.checkItems, (_checkItem) => {
+              checkItems: _.map(checklist.checkItems, _checkItem => {
                 if (_checkItem.id === checkItemId) {
                   return checkItem;
                 }
@@ -235,10 +230,10 @@ const kanbanReducer = (state = initialState, action) => {
     case DELETE_CHECK_ITEM: {
       const { cardId, checklistId, checkItemId } = action.payload;
 
-      return produce(state, (draft) => {
+      return produce(state, draft => {
         const card = draft.cards.byId[cardId];
 
-        card.checklists = _.map(card.checklists, (checklist) => {
+        card.checklists = _.map(card.checklists, checklist => {
           if (checklist.id === checklistId) {
             _.assign(checklist, {
               checkItems: _.reject(checklist.checkItems, { id: checkItemId })

@@ -9,7 +9,7 @@ class AuthService {
     clientId: 'Dashboard'
   });
 
-  user = {}
+  user = {};
 
   setAxiosInterceptors = ({ onLogout }) => {
     axios.interceptors.response.use(
@@ -19,9 +19,7 @@ class AuthService {
           this.setSession(null);
 
           if (onLogout) {
-            onLogout(
-
-            );
+            onLogout();
           }
         }
 
@@ -31,26 +29,25 @@ class AuthService {
   };
 
   handleAuthentication() {
-    return new Promise((resolve) => {
-      this.keycloak.init().then((authenticated) => {
+    return new Promise(resolve => {
+      this.keycloak.init().then(authenticated => {
         resolve(authenticated);
-      })
+      });
     });
   }
 
   loadUserProfile() {
-    return new Promise((resolve)=>{
+    return new Promise(resolve => {
       this.keycloak
-      .loadUserProfile()
-      .then(profile => {
-        console.log(JSON.stringify(profile))
-        resolve(profile);
-      })
-      .catch(function() {
-        alert('Failed to load user profile');
-      });
-    })
-    
+        .loadUserProfile()
+        .then(profile => {
+          console.log(JSON.stringify(profile));
+          resolve(profile);
+        })
+        .catch(function() {
+          alert('Failed to load user profile');
+        });
+    });
   }
 
   login = () => {
@@ -64,8 +61,8 @@ class AuthService {
       .catch(function(e) {
         console.log(e);
       });
-  }
-  
+  };
+
   loginInWithToken = () =>
     new Promise((resolve, reject) => {
       axios

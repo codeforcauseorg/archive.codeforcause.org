@@ -1,7 +1,4 @@
-import React, {
-  useEffect,
-  useState
-} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import SplashScreen from 'src/components/SplashScreen';
@@ -23,7 +20,7 @@ function Auth({ children }) {
       console.log(authService.isAuthenticated());
 
       if (authService.isAuthenticated()) {
-        const user = await authService.loadUserProfile()
+        const user = await authService.loadUserProfile();
         await dispatch(setUserData(user));
       }
 

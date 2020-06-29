@@ -11,11 +11,13 @@ export const CLOSE_NEW_MESSAGE = '@mail/close-new-message';
 export function getLabels() {
   const request = axios.get('/api/mail/labels');
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: GET_LABELS,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: GET_LABELS,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -24,11 +26,13 @@ export function getMails(params) {
     params
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: GET_MAILS,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: GET_MAILS,
+        payload: response.data
+      })
+    );
   };
 }
 
@@ -39,11 +43,13 @@ export function getMail(mailId) {
     }
   });
 
-  return (dispatch) => {
-    request.then((response) => dispatch({
-      type: GET_MAIL,
-      payload: response.data
-    }));
+  return dispatch => {
+    request.then(response =>
+      dispatch({
+        type: GET_MAIL,
+        payload: response.data
+      })
+    );
   };
 }
 

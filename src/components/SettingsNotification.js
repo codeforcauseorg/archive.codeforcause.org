@@ -1,7 +1,4 @@
-import React, {
-  useState,
-  useEffect
-} from 'react';
+import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import {
   Box,
@@ -14,7 +11,7 @@ import {
 import useSettings from 'src/hooks/useSettings';
 import { THEMES } from 'src/constants';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 420,
     position: 'fixed',
@@ -57,37 +54,17 @@ function SettingsNotification() {
 
   return (
     <Portal>
-      <Paper
-        className={classes.root}
-        elevation={3}
-      >
-        <Typography
-          variant="h4"
-          color="textPrimary"
-          gutterBottom
-        >
+      <Paper className={classes.root} elevation={3}>
+        <Typography variant="h4" color="textPrimary" gutterBottom>
           Settings Updated
         </Typography>
-        <Typography
-          variant="body2"
-          color="textSecondary"
-        >
-          We automatically updated your settings.
-          You change the settings any time from your dashboard settings.
+        <Typography variant="body2" color="textSecondary">
+          We automatically updated your settings. You change the settings any
+          time from your dashboard settings.
         </Typography>
-        <Box
-          mt={2}
-          display="flex"
-          justifyContent="space-between"
-        >
-          <Button onClick={handleClose}>
-            Close
-          </Button>
-          <Button
-            color="secondary"
-            variant="contained"
-            onClick={handleSwitch}
-          >
+        <Box mt={2} display="flex" justifyContent="space-between">
+          <Button onClick={handleClose}>Close</Button>
+          <Button color="secondary" variant="contained" onClick={handleSwitch}>
             Switch
           </Button>
         </Box>

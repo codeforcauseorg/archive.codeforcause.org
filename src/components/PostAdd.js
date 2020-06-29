@@ -32,9 +32,9 @@ function PostAdd({ className, ...rest }) {
   const classes = useStyles();
   const fileInputRef = useRef(null);
   const [value, setValue] = useState('');
-  const account = useSelector((state) => state.account);
+  const account = useSelector(state => state.account);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     event.persist();
     setValue(event.target.value);
   };
@@ -44,15 +44,9 @@ function PostAdd({ className, ...rest }) {
   };
 
   return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <Card className={clsx(classes.root, className)} {...rest}>
       <CardContent>
-        <Box
-          display="flex"
-          alignItems="center"
-        >
+        <Box display="flex" alignItems="center">
           <Paper
             component={Box}
             flexGrow={1}
@@ -74,26 +68,16 @@ function PostAdd({ className, ...rest }) {
           </Tooltip>
           <Divider className={classes.divider} />
           <Tooltip title="Attach image">
-            <IconButton
-              edge="end"
-              onClick={handleAttach}
-            >
+            <IconButton edge="end" onClick={handleAttach}>
               <AddPhotoIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title="Attach file">
-            <IconButton
-              edge="end"
-              onClick={handleAttach}
-            >
+            <IconButton edge="end" onClick={handleAttach}>
               <AttachFileIcon />
             </IconButton>
           </Tooltip>
-          <input
-            className={classes.fileInput}
-            ref={fileInputRef}
-            type="file"
-          />
+          <input className={classes.fileInput} ref={fileInputRef} type="file" />
         </Box>
       </CardContent>
     </Card>

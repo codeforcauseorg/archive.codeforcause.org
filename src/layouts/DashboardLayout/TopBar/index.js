@@ -20,34 +20,31 @@ import Notifications from './Notifications';
 import Search from './Search';
 import Settings from './Settings';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     zIndex: theme.zIndex.drawer + 100,
-    ...theme.name === THEMES.LIGHT ? {
-      boxShadow: 'none',
-      backgroundColor: theme.palette.primary.main
-    } : {},
-    ...theme.name === THEMES.ONE_DARK ? {
-      backgroundColor: theme.palette.background.default
-    } : {}
+    ...(theme.name === THEMES.LIGHT
+      ? {
+          boxShadow: 'none',
+          backgroundColor: theme.palette.primary.main
+        }
+      : {}),
+    ...(theme.name === THEMES.ONE_DARK
+      ? {
+          backgroundColor: theme.palette.background.default
+        }
+      : {})
   },
   toolbar: {
     minHeight: 64
   }
 }));
 
-function TopBar({
-  className,
-  onMobileNavOpen,
-  ...rest
-}) {
+function TopBar({ className, onMobileNavOpen, ...rest }) {
   const classes = useStyles();
 
   return (
-    <AppBar
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
+    <AppBar className={clsx(classes.root, className)} {...rest}>
       <Toolbar className={classes.toolbar}>
         <Hidden lgUp>
           <IconButton
@@ -65,10 +62,7 @@ function TopBar({
             <Logo />
           </RouterLink>
         </Hidden>
-        <Box
-          ml={2}
-          flexGrow={1}
-        />
+        <Box ml={2} flexGrow={1} />
         <Search />
         <Contacts />
         <Notifications />

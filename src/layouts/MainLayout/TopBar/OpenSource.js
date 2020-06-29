@@ -4,23 +4,22 @@ import { Typography } from '@material-ui/core';
 // import authService from 'src/services/authService';
 
 const OpenSource = () => (
-  <div style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: 64,
-    backgroundColor: '#A60000',
-  }}
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: 64,
+      backgroundColor: '#A60000'
+    }}
   >
     <div
       style={{
         padding: '10% 10px',
-        whiteSpace: 'nowrap',
+        whiteSpace: 'nowrap'
       }}
     >
-      <Typography variant="h6">
-        Open Source
-      </Typography>
+      <Typography variant="h6">Open Source</Typography>
     </div>
   </div>
 );

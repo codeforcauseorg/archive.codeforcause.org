@@ -32,11 +32,11 @@ const useStyles = makeStyles(() => ({
 
 function CommentAdd({ className, ...rest }) {
   const classes = useStyles();
-  const { user } = useSelector((state) => state.account);
+  const { user } = useSelector(state => state.account);
   const fileInputRef = useRef(null);
   const [value, setValue] = useState('');
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     event.persist();
     setValue(event.target.value);
   };
@@ -46,14 +46,8 @@ function CommentAdd({ className, ...rest }) {
   };
 
   return (
-    <div
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
-      <Avatar
-        alt="Person"
-        src={user.avatar}
-      />
+    <div className={clsx(classes.root, className)} {...rest}>
+      <Avatar alt="Person" src={user.avatar} />
       <Paper
         variant="outlined"
         flexGrow={1}
@@ -76,26 +70,16 @@ function CommentAdd({ className, ...rest }) {
       </Tooltip>
       <Divider className={classes.divider} />
       <Tooltip title="Attach image">
-        <IconButton
-          edge="end"
-          onClick={handleAttach}
-        >
+        <IconButton edge="end" onClick={handleAttach}>
           <AddPhotoIcon />
         </IconButton>
       </Tooltip>
       <Tooltip title="Attach file">
-        <IconButton
-          edge="end"
-          onClick={handleAttach}
-        >
+        <IconButton edge="end" onClick={handleAttach}>
           <AttachFileIcon />
         </IconButton>
       </Tooltip>
-      <input
-        className={classes.fileInput}
-        ref={fileInputRef}
-        type="file"
-      />
+      <input className={classes.fileInput} ref={fileInputRef} type="file" />
     </div>
   );
 }

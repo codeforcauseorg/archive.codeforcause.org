@@ -45,7 +45,7 @@ const themeConfigs = [
     palette: {
       type: 'light',
       action: {
-        active: colors.blueGrey[600] //small icons 
+        active: colors.blueGrey[600] //small icons
       },
       background: {
         default: colors.common.white,
@@ -53,12 +53,13 @@ const themeConfigs = [
         paper: colors.common.white // background
       },
       primary: {
-        main: colors.indigo[600]  // for header and loader
+        main: colors.indigo[600] // for header and loader
       },
       secondary: {
         main: '#5850EC' // for button and selected
       },
-      text: { // for text classes
+      text: {
+        // for text classes
         primary: colors.blueGrey[900],
         secondary: colors.blueGrey[600]
       }
@@ -128,7 +129,7 @@ const themeConfigs = [
 ];
 
 export function createTheme(settings = {}) {
-  let themeConfig = themeConfigs.find((theme) => theme.name === settings.theme);
+  let themeConfig = themeConfigs.find(theme => theme.name === settings.theme);
 
   if (!themeConfig) {
     console.warn(new Error(`The theme ${settings.theme} is not valid`));
@@ -136,12 +137,7 @@ export function createTheme(settings = {}) {
   }
 
   let theme = createMuiTheme(
-    _.merge(
-      {},
-      baseConfig,
-      themeConfig,
-      { direction: settings.direction }
-    )
+    _.merge({}, baseConfig, themeConfig, { direction: settings.direction })
   );
 
   if (settings.responsiveFontSizes) {

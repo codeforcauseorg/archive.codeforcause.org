@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingLeft: theme.spacing(2),
     paddingBottom: theme.spacing(1),
@@ -18,12 +18,7 @@ const useStyles = makeStyles((theme) => ({
 function Blockquote(props) {
   const classes = useStyles();
 
-  return (
-    <blockquote
-      className={classes.root}
-      {...props}
-    />
-  );
+  return <blockquote className={classes.root} {...props} />;
 }
 
 export default Blockquote;
