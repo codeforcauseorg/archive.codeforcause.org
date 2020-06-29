@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Link as RouterLink } from 'react-router-dom';
 
 import {
   Avatar,
   Box,
-  Link,
-  Button,
   Container,
   Grid,
   Typography,
@@ -56,7 +53,6 @@ const useStyles = makeStyles(theme => ({
     width: 122
   }
 }));
-const cards = [1, 2, 3];
 
 function Team({ mentors, className, ...rest }) {
   const classes = useStyles();
