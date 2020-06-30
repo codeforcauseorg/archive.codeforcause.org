@@ -20,8 +20,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.LIGHT,
     paddingTop: '30px',
     paddingLeft: 70,
-    paddingRight: 70
-    //write css for small screen
+    paddingRight: 70,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    }
   },
   cardGrid: {
     paddingTop: theme.spacing(8),

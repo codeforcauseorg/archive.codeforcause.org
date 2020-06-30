@@ -7,12 +7,18 @@ const primaryContentColor = '#F8F6FA';
 const secondaryContentColor = '#D2CCD7';
 const backgroundColor = '#350070';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: '100px 30px',
     paddingBottom: '40px',
     color: 'white',
-    backgroundColor
+    backgroundColor,
+    paddingLeft: 70,
+    paddingRight: 70,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    }
   },
   image: {
     width: '100%',
@@ -43,7 +49,7 @@ const WhatWeStandFor = ({ className, ...rest }) => {
             discussions about ongoing trends in tech with students Follow the
             T-Shape learning path.
             <strong className={classes.primarySubtitle}>
-              Open Source & Open Knowledge
+              Open Source &amp; Open Knowledge
             </strong>
           </Typography>
         </Grid>

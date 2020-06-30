@@ -1,26 +1,31 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import FooterList from './FooterList';
 import {
   Container,
-  Hidden,
   Grid,
   Typography,
-  makeStyles
+  makeStyles,
+  Link
 } from '@material-ui/core';
 import Logo from 'src/components/Logo';
-import FollowUs from './FollowUs';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.secondary.main,
-    paddingTop: theme.spacing(6),
-    paddingBottom: theme.spacing(6),
-    '& dt': {
-      marginTop: theme.spacing(2)
+    backgroundColor: '#F2F7FF',
+    paddingTop: theme.spacing(8),
+    paddingLeft: 70,
+    paddingRight: 70,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15,
+      paddingRight: 15
     },
-    color: '#FFF'
+    color: '#000000'
   },
   input: {
     color: theme.palette.secondary.main,
@@ -45,124 +50,173 @@ const useStyles = makeStyles(theme => ({
     padding: '6px 0px'
   },
   logo: {
-    width: 130,
-    height: 130,
+    width: 320,
+    height: 'auto'
+    // borderRadius: '50%'
+  },
+  iconSocialMedia: {
+    color: '#000'
+  },
+  centerCls: {
+    paddingLeft: '5px',
+    paddingRight: '5px'
+  },
+  circleCls: {
+    // padding: '10px',
+    backgroundColor: '#fff',
+    color: '#000',
+    // border: '2px solid red',
     borderRadius: '50%'
+  },
+  extraMarginTop: {
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(4)
+  },
+  extraMargin: {
+    marginTop: '10px'
+  },
+  copyRightPadding: {
+    paddingTop: theme.spacing(6),
+    paddingBottom: theme.spacing(4)
   }
 }));
 
 function Footer({ footerInfo, className, ...rest }) {
   const classes = useStyles();
+  const flexContainer = {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: 0
+  };
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
+      {/* <img
+        alt="Select file"
+        className={classes.image}
+        src="/static/footer.jpeg"
+      /> */}
       <Container maxWidth="lg">
         <Grid container component="dl">
-          <Hidden smDown>
-            <Grid
-              container
-              direction="column"
-              alignItems="center"
-              item
-              xs={12}
-              md={3}
-            >
-              <Logo className={classes.logo} />
-            </Grid>
-          </Hidden>
-          {footerInfo.map(footerColumn => (
-            <Grid item key={footerColumn.id} xs={12} md={2}>
-              <Typography variant="h4">{footerColumn.heading}</Typography>
-              <FooterList footerColumn={footerColumn.column} />
-            </Grid>
-          ))}
-          <Hidden smDown>
-            <Grid container item xs={12} md={1}>
-              <Typography variant="h4">&nbsp;</Typography>
-            </Grid>
-          </Hidden>
-
-          <Grid container item xs={12} md={2}>
-            <Typography variant="h4">Follow Us On</Typography>
-            {/* <form className={classes.root} noValidate autoComplete="off">
-              <TextField
-                id="outlined-primary"
-                label=""
-                placeholder="email"
-                variant="outlined"
-                size="small"
-                defaultValue=""
-                InputProps={{
-                  className: classes.input
-                }}
-              />
-              <Button
-                variant="contained"
-                className={classes.registerBtn}
-                size="small"
-                disableElevation
-              >
-                {/* <IconButton */}
-            {/* size="small"
-                  className={classes.iconBtn}
-                  aria-label="register"
-                > */}
-            {/* <ArrowForwardIosIcon /> */}
-            {/* </IconButton> */}
-            {/* register */}
-            {/* </Button>
-            </form>
-            <Box mt={-1} display="flex" justifyContent="flex-start">
-              <Button
-                component="a"
-                href="https://www.facebook.com/"
-                target="_blank"
-                variant="contained"
-                className={classes.socialIcon}
-                size="small"
-                disableElevation
-              >
-                <FacebookIcon />
-              </Button>
-
-              <Button
-                component="a"
-                href="https://www.facebook.com/"
-                target="_blank"
-                variant="contained"
-                className={classes.socialIcon}
-                size="small"
-                disableElevation
-              >
-                <TwitterIcon />
-              </Button>
-              <Button
-                component="a"
-                href="https://www.facebook.com/"
-                target="_blank"
-                variant="contained"
-                className={classes.socialIcon}
-                size="small"
-                disableElevation
-              >
-                <InstagramIcon />
-              </Button>
-
-              <Button
-                component="a"
-                href="https://www.facebook.com/"
-                target="_blank"
-                variant="contained"
-                className={classes.socialIcon}
-                size="small"
-                disableElevation
-              >
-                <LinkedInIcon />
-              </Button>
-            </Box>
-           */}
-            <FollowUs />
+          <Grid item xs={12} md={4} className={classes.extraMarginTop}>
+            <Logo className={classes.logo} />
           </Grid>
+          <Grid item xs={12} md={4} className={classes.extraMarginTop}>
+            <Typography variant="h4" gutterBottom>
+              Contact us
+            </Typography>
+            <Grid item xs={3} md={3} className={classes.extraMargin}>
+              <List style={flexContainer}>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://www.linkedin.com/company/codeforcauseorg/"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon="envelope" size="lg" />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="team@codeforcause.org"
+                  />
+                </ListItem>
+              </List>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={2} className={classes.extraMarginTop}>
+            <Typography variant="h4" gutterBottom>
+              Our Blog
+            </Typography>
+            <Grid item xs={3} md={2} className={classes.extraMargin}>
+              <List style={flexContainer}>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://www.linkedin.com/company/codeforcauseorg/"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'medium']} size="lg" />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="Medium"
+                  />
+                </ListItem>
+              </List>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} md={2} className={classes.extraMarginTop}>
+            <Typography variant="h4" gutterBottom>
+              Follow us on
+            </Typography>
+            <Grid item xs={3} md={3} className={classes.extraMargin}>
+              <List style={flexContainer}>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://www.facebook.com/codeforcauseorg"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />
+                  </ListItemIcon>
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://twitter.com/codeforcauseIn"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'twitter']} size="lg" />
+                  </ListItemIcon>
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://www.instagram.com/codeforcause/"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
+                  </ListItemIcon>
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://www.youtube.com/channel/UCfv8cds8AfIM3UZtAWOz6Gg"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'youtube']} size="lg" />
+                  </ListItemIcon>
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="https://www.linkedin.com/company/codeforcauseorg/"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg" />
+                  </ListItemIcon>
+                </ListItem>
+              </List>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid className={classes.extraMarginTop}>
+          <Typography variant="body2" color="textSecondary">
+            {'Copyright © '}
+            {new Date().getFullYear()}{' '}
+            <Link color="inherit" href="https://codeforcause.org">
+              Code For Cause
+            </Link>
+            {'. All rights reserved.'}
+          </Typography>
         </Grid>
       </Container>
     </div>
