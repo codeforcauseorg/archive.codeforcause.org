@@ -5,14 +5,13 @@ import clsx from 'clsx';
 import {
   Avatar,
   Box,
-  Container,
   Grid,
+  Container,
   Typography,
   makeStyles
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,6 +50,13 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     height: 122,
     width: 122
+  },
+  member: {
+    border: 'none',
+    boxShadow: 'none'
+  },
+  pointer: {
+    cursor: 'pointer'
   }
 }));
 
@@ -64,10 +70,13 @@ function Team({ mentors, className, ...rest }) {
           Our Team
         </Typography>
         {/* End hero unit */}
-        <Grid container spacing={4} className={classes.extraMargin}>
+        <Grid container spacing={2} className={classes.extraMargin}>
           {mentors.map(mentor => (
-            <Grid item key={mentor.id} xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
+            <Grid item key={mentor.id} xs={6} sm={6} md={4} lg={2}>
+              <Card
+                className={classes.card + ' ' + classes.member}
+                onClick={() => window.open(mentor.linkedin, '_blank')}
+              >
                 <CardContent>
                   <Box
                     display="flex"
@@ -75,29 +84,20 @@ function Team({ mentors, className, ...rest }) {
                     flexDirection="column"
                     textAlign="center"
                   >
-                    <Avatar className={classes.avatar} src={mentor.avatar} />
+                    <Avatar
+                      className={classes.avatar + ' ' + classes.pointer}
+                      src={mentor.avatar}
+                    />
 
                     <Typography
-                      className={classes.extraMarginTop}
+                      className={classes.extraMarginTop + ' ' + classes.pointer}
                       color="textPrimary"
                       variant="h5"
                     >
                       {mentor.name}
                     </Typography>
-                    {/* <Typography color="textSecondary" variant="body2">
-                      {mentor.designation}
-                    </Typography> */}
                   </Box>
                 </CardContent>
-                <CardActions>
-                  <Typography
-                    align="justify"
-                    color="textSecondary"
-                    variant="body2"
-                  >
-                    {mentor.description}
-                  </Typography>
-                </CardActions>
               </Card>
             </Grid>
           ))}

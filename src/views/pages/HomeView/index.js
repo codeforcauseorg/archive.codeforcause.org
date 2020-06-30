@@ -52,49 +52,37 @@ function HomeView() {
       id: '1',
       name: 'Anuj Garg',
       avatar: '/static/images/avatars/Anuj_garg.jpg',
-      designation: 'Senior Mentor',
-      description:
-        'Google Summer of Code and Google Code-in Org Admin. Four years of experience of mentoring software developers. Famous for his unique way of teaching that imprints concepts. Love discussing aspects of Reinforcement Learning.'
+      linkedin: 'https://www.linkedin.com/in/keenwarrior/'
     },
     {
       id: '2',
       name: 'Gaurav Beriwal',
       avatar: '/static/images/avatars/Gaurav_Beriwal.jpg',
-      designation: 'Head of Management',
-      description:
-        'Gaurav has worked as a Co-founder and Founding Member of a tech startup and an internet-based service company, He has learned to bridge the gap across teams. He is Masters in Psychology and has been helping school kids as a Google Code-in mentor. Being a stage lover, he has represented in dozens of events and has been guiding youth alongside. Also, an analyst by passion.'
+      linkedin: 'https://www.linkedin.com/in/gauravberiwal/'
     },
     {
       id: '3',
       name: 'Kunal Kushwaha',
       avatar: '/static/images/avatars/kunal_kush.jpg',
-      designation: 'Mentor',
-      description:
-        'Kunal is a super charged public speaker who loves to convey knowledge and is always up for a hot cup of Chai. He is a recognised mentor in Google Summer of Code, Google Code-In with JBoss Community. He is well versed in Java, Python, Web Development and Machine Learning. He loves to dwell in DevOps, Kubernetes, Cloud. He is Microsoft Student Partner and Python Mentor at AnitaB.org.'
+      linkedin: 'https://www.linkedin.com/in/kunal-kushwaha/'
     },
     {
       id: '4',
       name: 'Ganga Chaturvedi',
       avatar: '/static/images/avatars/kunal_kush.jpg',
-      designation: 'Mentor',
-      description:
-        'Kunal is a super charged public speaker who loves to convey knowledge and is always up for a hot cup of Chai. He is a recognised mentor in Google Summer of Code, Google Code-In with JBoss Community. He is well versed in Java, Python, Web Development and Machine Learning. He loves to dwell in DevOps, Kubernetes, Cloud. He is Microsoft Student Partner and Python Mentor at AnitaB.org.'
+      linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
     },
     {
       id: '5',
       name: 'Ekta Mishra',
       avatar: '/static/images/avatars/kunal_kush.jpg',
-      designation: 'Mentor',
-      description:
-        'Kunal is a super charged public speaker who loves to convey knowledge and is always up for a hot cup of Chai. He is a recognised mentor in Google Summer of Code, Google Code-In with JBoss Community. He is well versed in Java, Python, Web Development and Machine Learning. He loves to dwell in DevOps, Kubernetes, Cloud. He is Microsoft Student Partner and Python Mentor at AnitaB.org.'
+      linkedin: 'https://www.linkedin.com/in/darecoder/'
     },
     {
       id: '6',
       name: 'Bharat Bhardwaj',
       avatar: '/static/images/avatars/kunal_kush.jpg',
-      designation: 'Mentor',
-      description:
-        'Kunal is a super charged public speaker who loves to convey knowledge and is always up for a hot cup of Chai. He is a recognised mentor in Google Summer of Code, Google Code-In with JBoss Community. He is well versed in Java, Python, Web Development and Machine Learning. He loves to dwell in DevOps, Kubernetes, Cloud. He is Microsoft Student Partner and Python Mentor at AnitaB.org.'
+      linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
     }
   ];
 
