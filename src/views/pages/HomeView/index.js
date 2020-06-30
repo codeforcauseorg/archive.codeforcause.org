@@ -7,6 +7,7 @@ import CTA from './CTA';
 import Footer from './Footer';
 import StandForSection from './StandForView';
 import Team from './Team';
+import Promoters from './Promoters';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -101,6 +102,7 @@ function HomeView() {
   return (
     <Page className={classes.root} title="Code for Cause">
       <Hero />
+      <Promoters />
       <Events />
       <StandForSection />
       <Team mentors={mentors} />

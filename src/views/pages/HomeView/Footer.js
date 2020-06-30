@@ -91,11 +91,6 @@ function Footer({ footerInfo, className, ...rest }) {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      {/* <img
-        alt="Select file"
-        className={classes.image}
-        src="/static/footer.jpeg"
-      /> */}
       <Container maxWidth="lg">
         <Grid container component="dl">
           <Grid item xs={12} md={4} className={classes.extraMarginTop}>
@@ -110,7 +105,7 @@ function Footer({ footerInfo, className, ...rest }) {
                 <ListItem
                   className={classes.centerCls}
                   component="a"
-                  href="https://www.linkedin.com/company/codeforcauseorg/"
+                  href="mailto:team@codeforcause.org"
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
