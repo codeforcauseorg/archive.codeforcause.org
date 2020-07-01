@@ -19,8 +19,12 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '30px',
     paddingLeft: 70,
     paddingRight: 70,
-    textAlign: 'center'
+    textAlign: 'center',
     //write css for small screen
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    }
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -73,10 +77,7 @@ function Team({ mentors, className, ...rest }) {
         <Grid container spacing={2} className={classes.extraMargin}>
           {mentors.map(mentor => (
             <Grid item key={mentor.id} xs={6} sm={6} md={4} lg={2}>
-              <Card
-                className={classes.card + ' ' + classes.member}
-                onClick={() => window.open(mentor.linkedin, '_blank')}
-              >
+              <Card className={classes.card + ' ' + classes.member}>
                 <CardContent>
                   <Box
                     display="flex"
@@ -85,12 +86,16 @@ function Team({ mentors, className, ...rest }) {
                     textAlign="center"
                   >
                     <Avatar
-                      className={classes.avatar + ' ' + classes.pointer}
+                      className={classes.avatar}
+                      component="a"
+                      href={mentor.linkedin}
                       src={mentor.avatar}
                     />
 
                     <Typography
-                      className={classes.extraMarginTop + ' ' + classes.pointer}
+                      className={classes.extraMarginTop}
+                      component="a"
+                      href={mentor.linkedin}
                       color="textPrimary"
                       variant="h5"
                     >
