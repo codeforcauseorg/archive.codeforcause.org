@@ -1,23 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+
 import {
   Box,
-  Button,
+  Grid,
   Container,
   Typography,
-  makeStyles
+  makeStyles,
+  Button,
+  Hidden
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.default,
-    paddingTop: 128,
-    paddingBottom: 128
+    backgroundColor: theme.palette.background.LIGHT,
+    paddingTop: '30px',
+    paddingLeft: 70,
+    paddingRight: 70,
+    //write css for small screen
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    }
   },
-  browseButton: {
-    marginLeft: theme.spacing(2)
-  }
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8)
+  },
+  extraMargin: {
+    marginTop: theme.spacing(6)
+  },
+  extraMarginTop: {
+    marginTop: theme.spacing(2)
+  },
+  extraPadding: {
+    padding: '32px !important'
+  },
+  flex: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4)
+  },
+
 }));
 
 function CTA({ className, ...rest }) {
@@ -25,23 +49,157 @@ function CTA({ className, ...rest }) {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="lg">
-        <Typography variant="h1" align="center" color="textPrimary">
-          Ready to start your journey with us?
-        </Typography>
-        <Typography variant="h1" align="center" color="secondary">
-          You can change your future and of others.
-        </Typography>
-        <Box mt={6} display="flex" justifyContent="center" alignItems="center">
-          <Button
-            color="secondary"
-            component="a"
-            href="/register"
-            variant="contained"
-          >
-            Get started
-          </Button>
-        </Box>
+      <Container className={classes.cardGrid} maxWidth="lg">
+
+        <Grid container spacing={2} className={classes.extraMargin}>
+          
+            <Grid container key={1} xs={12} sm={6} md={4}>
+                  <Box
+                    className={classes.flex}
+                    display="flex"
+                    flexDirection="column"
+                  >
+                    <Hidden mdUp>
+                      <Typography
+                        color="textPrimary"
+                        variant="h3"
+                      >
+                        Want Us to do a Workshop
+                      </Typography>
+                    </Hidden>
+
+                    <Hidden smDown>
+                      <Typography
+                        color="textPrimary"
+                        variant="h3"
+                      >
+                        Want Us to do a <br/> Workshop
+                      </Typography>
+                    </Hidden>
+
+                    <Box
+                      className={classes.flex}
+                      display="flex"
+                      flexDirection="row"
+                    >
+
+                      <Button
+                          style={{
+                            backgroundColor: '#A60000',
+                            color: '#ffffff',
+                            textTransform: 'capitalize'
+                          }}
+                          component="a"
+                          href="/register"
+                          size="large"
+                          variant="contained"
+                        >
+                          Register
+                        </Button>
+
+                      </Box>
+                  </Box>
+            </Grid>
+
+            <Grid container key={2} xs={12} sm={6} md={4}>
+                  <Box
+                    className={classes.flex}
+                    display="flex"
+                    flexDirection="column"
+                  >
+
+                    <Hidden mdUp>
+                      <Typography
+                        color="textPrimary"
+                        variant="h3"
+                      >
+                        Join Us or Submit a YouTube Video
+                      </Typography>
+                    </Hidden>
+
+                    <Hidden smDown>
+                      <Typography
+                        color="textPrimary"
+                        variant="h3"
+                      >
+                        Join Us or Submit a <br/> YouTube Video
+                      </Typography>
+                    </Hidden>
+
+                    <Box
+                      className={classes.flex}
+                      display="flex"
+                      flexDirection="row"
+                    >
+                    
+                      <Button
+                          style={{
+                            borderColor: '#A60000',
+                            color: '#A60000',
+                            textTransform: 'capitalize'
+                          }}
+                          component="a"
+                          href="/register"
+                          variant="outlined"
+                          size="large"
+                        >
+                          Know more
+                        </Button>
+
+                      </Box>
+                  </Box>
+            </Grid>
+
+            <Grid container key={3} xs={12} sm={12} md={4}>
+                  <Box
+                    className={classes.flex}
+                    display="flex"
+                    flexDirection="column"
+                  >
+                    
+
+                    <Hidden mdUp>
+                      <Typography
+                        color="textPrimary"
+                        variant="h3"
+                      >
+                         Get Updates About Our Initiatives
+                      </Typography>
+                    </Hidden>
+
+                    <Hidden smDown>
+                      <Typography
+                        color="textPrimary"
+                        variant="h3"
+                      >
+                         Get Updates About Our <br/> Initiatives
+                      </Typography>
+                    </Hidden>
+                    
+                    <Box
+                      className={classes.flex}
+                      display="flex"
+                      flexDirection="row"
+                    >
+
+                      <Button
+                          style={{
+                            borderColor: '#A60000',
+                            color: '#A60000',
+                            textTransform: 'capitalize'
+                          }}
+                          component="a"
+                          href="/register"
+                          variant="outlined"
+                          size="large"
+                        >
+                          Enroll
+                        </Button>
+                      </Box>
+                  </Box>
+            </Grid>
+     
+        </Grid>
       </Container>
     </div>
   );
