@@ -11,9 +11,12 @@ import {
   makeStyles
 } from '@material-ui/core';
 
+const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
+
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.dark,
+    color: '#FFF',
+    background,
     paddingTop: 80,
     paddingBottom: 60,
     paddingLeft: 70,
@@ -65,17 +68,15 @@ function Hero({ className, ...rest }) {
               height="100%"
               className={clsx(classes.extraPadding, className)}
             >
-              <Typography variant="h1" color="#000">
+              <Typography variant="h1">
                 Learn for the Cause
               </Typography>
-              <Typography variant="h1" color="#000">
+              <Typography variant="h1">
                 Code for the Cause
               </Typography>
               <Box mt={6}>
-                <Typography variant="body1">
-                  An initiative to help the community by providing training,
-                  guidance and awareness about the possibilities in the software
-                  field to students &amp; professionals.
+                <Typography variant="h4">
+                Start Your journey with the best tech enthusiasts.
                 </Typography>
               </Box>
               <Box mt={2}>
@@ -103,29 +104,6 @@ function Hero({ className, ...rest }) {
                       </Button>
                     </Box>
                   </Grid>
-                  <Grid item>
-                    <Typography variant="h1" color="secondary"></Typography>
-                    <Box
-                      mt={2}
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                    >
-                      <Button
-                        style={{
-                          borderColor: '#A60000',
-                          color: '#A60000',
-                          textTransform: 'capitalize'
-                        }}
-                        component="a"
-                        href="/register"
-                        variant="outlined"
-                        size="large"
-                      >
-                        Know more
-                      </Button>
-                    </Box>
-                  </Grid>
                 </Grid>
               </Box>
             </Box>
@@ -139,7 +117,7 @@ function Hero({ className, ...rest }) {
               <div className={classes.image}>
                 <img
                   alt="codeforcauseimg"
-                  src="/static/home/codeforcause.png"
+                  src="/static/home/codeforcause.svg"
                 />
               </div>
             </Box>
