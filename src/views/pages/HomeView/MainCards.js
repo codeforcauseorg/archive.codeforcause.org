@@ -6,7 +6,7 @@ import MainCard from '../../../components/AboutCard/MainCard';
 
 const useStyles = makeStyles(() => ({
   root: {
-    padding: '120px 2em'
+    padding: '40px 70px 120px'
   }
 }));
 
