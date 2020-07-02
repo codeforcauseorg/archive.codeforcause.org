@@ -13,8 +13,8 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       position: 'relative',
       top: '2px',
-      'text-decoration': 'none',
-      'border-bottom': 'solid 4px'
+      textDecoration: 'none',
+      borderBottom: '4px solid #A60000'
     }
   }
 }));
@@ -24,7 +24,6 @@ const HeaderItem = ({ title }) => {
   return (
     <Box ml={2}>
       <Link
-        color="black"
         component={RouterLink}
         to={title}
         variant="h5"

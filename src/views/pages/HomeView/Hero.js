@@ -28,9 +28,6 @@ const useStyles = makeStyles(theme => ({
   },
   extraPadding: {
     padding: '0 70px 0px 0px',
-    // [theme.breakpoints.down('md')]: {
-    //   padding: '0 30px'
-    // },
     textAlign: 'justify'
   },
   image: {
@@ -68,15 +65,19 @@ function Hero({ className, ...rest }) {
               height="100%"
               className={clsx(classes.extraPadding, className)}
             >
-              <Typography variant="h1">
-                Learn for the Cause
+              <Typography
+                variant="h4"
+                gutterBottom
+                style={{ color: '#A60000' }}
+              >
+                Welcome to
               </Typography>
-              <Typography variant="h1">
-                Code for the Cause
-              </Typography>
-              <Box mt={6}>
-                <Typography variant="h4">
-                Start Your journey with the best tech enthusiasts.
+              <Typography variant="h1">Code for Cause</Typography>
+              <Box mt={5}>
+                <Typography style={{ lineHeight: '1.5' }} variant="h5">
+                  An initiative to help the community by providing training,
+                  guidance and awareness about the possibilities in the software
+                  field to students &amp; professionals.
                 </Typography>
               </Box>
               <Box mt={2}>
@@ -109,11 +110,7 @@ function Hero({ className, ...rest }) {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box position="relative">
-              {/* <div className={classes.shape}>
-                <img alt="Shapes" src="/static/home/shapes.svg" />
-              </div> */}
-
+            <Box>
               <div className={classes.image}>
                 <img
                   alt="codeforcauseimg"
