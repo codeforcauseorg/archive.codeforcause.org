@@ -8,6 +8,7 @@ import Footer from './Footer';
 import StandForSection from './StandForView';
 import Team from './Team';
 import Promoters from './Promoters';
+import MentorExperience from './MentorExperience';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -46,6 +47,32 @@ function HomeView() {
           link: '#'
         }
       ]
+    }
+  ];
+  const experience = [
+    {
+      id: '1',
+      img: '/static/images/experience/students.svg',
+      count: '5000+',
+      title: 'Students'
+    },
+    {
+      id: '2',
+      img: '/static/images/experience/teaching_hours.svg',
+      count: '3200+',
+      title: ' Teaching Hours'
+    },
+    {
+      id: '3',
+      img: '/static/images/experience/projects.svg',
+      count: '1000+',
+      title: 'Projects'
+    },
+    {
+      id: '4',
+      img: '/static/images/experience/contributors.svg',
+      count: '100+',
+      title: 'Contributers'
     }
   ];
   const mentors = [
@@ -92,6 +119,7 @@ function HomeView() {
       <Hero />
       <Promoters />
       <Events />
+      <MentorExperience experience={experience} />
       <StandForSection />
       <Team mentors={mentors} />
       <CTA />
