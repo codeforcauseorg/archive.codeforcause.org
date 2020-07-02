@@ -5,14 +5,12 @@ import { Grid, Typography, makeStyles, Container } from '@material-ui/core';
 
 const primaryContentColor = '#F8F6FA';
 const secondaryContentColor = '#D2CCD7';
-const backgroundColor = '#350070';
 
 const useStyles = makeStyles(theme => ({
   root: {
     padding: '100px 30px',
     paddingBottom: '40px',
     color: 'white',
-    backgroundColor,
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('sm')]: {

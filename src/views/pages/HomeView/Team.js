@@ -13,9 +13,10 @@ import {
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
+const backgroundColor = '#F2F7FF';
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.LIGHT,
+    backgroundColor,
     paddingTop: '30px',
     paddingLeft: 70,
     paddingRight: 70,
@@ -56,6 +57,7 @@ const useStyles = makeStyles(theme => ({
     width: 122
   },
   member: {
+    backgroundColor,
     border: 'none',
     boxShadow: 'none'
   },

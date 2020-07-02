@@ -3,9 +3,11 @@ import { makeStyles } from '@material-ui/core';
 import WhatWeStandFor from './WhatWeStandFor';
 import MainCards from './MainCards';
 
+const background = 'linear-gradient(180deg, #180254 0%, #0D012F 100%)';
+
 const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor: '#350070'
+    background
   }
 }));
 
