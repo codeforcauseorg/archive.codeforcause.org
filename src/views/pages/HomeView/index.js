@@ -9,6 +9,7 @@ import StandForSection from './StandForView';
 import Team from './Team';
 import Promoters from './Promoters';
 import MentorExperience from './MentorExperience';
+import WatchOurVideoView from './WatchVideos';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -122,6 +123,7 @@ function HomeView() {
       <MentorExperience experience={experience} />
       <StandForSection />
       <Team mentors={mentors} />
+      <WatchOurVideoView />
       <CTA />
       <Footer footerInfo={footerInfo} />
     </Page>
