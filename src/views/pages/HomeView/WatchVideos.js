@@ -4,7 +4,6 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 const background = 'linear-gradient(180deg, #1d006f 10%, #3500C9 100%)';
 
@@ -64,9 +63,9 @@ const WatchVideosView = () => {
           Start Learning Today
         </Typography>
         <div className={classes.box2}>
-          <Link to="/courses">
+          <a href="https://www.youtube.com/codeforcause" target="_blank" rel="noopener noreferrer">
             <img alt="play" className={classes.icon} src="/static/images/icons/play1.svg" />
-          </Link>
+          </a>
           <Typography
             variant="h2"
             className={classes.secondaryText}
