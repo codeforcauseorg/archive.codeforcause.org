@@ -4,19 +4,12 @@ import clsx from 'clsx';
 import { Grid, Typography, makeStyles, Container } from '@material-ui/core';
 
 const primaryContentColor = '#F8F6FA';
-const secondaryContentColor = '#D2CCD7';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: '100px 30px',
+    padding: '100px 0px',
     paddingBottom: '40px',
-    color: 'white',
-    paddingLeft: 70,
-    paddingRight: 70,
-    [theme.breakpoints.down('sm')]: {
-      paddingLeft: 15,
-      paddingRight: 15
-    }
+    color: 'white'
   },
   image: {
     width: '100%',
@@ -24,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     marginTop: '34px',
-    color: secondaryContentColor
+    color: '#FFF'
   },
   primarySubtitle: {
     color: primaryContentColor
@@ -40,15 +33,17 @@ const WhatWeStandFor = ({ className, ...rest }) => {
       {' '}
       <Grid alignItems="center" container justify="space-between" spacing={3}>
         <Grid item md={6} xs={12}>
-          <Typography variant="h3">What We Stand For</Typography>
-          <Typography className={classes.content} variant="subtitle1">
-            Think of a software education platform that could solve it by
-            Providing hands-on learning Establishing a community Having
-            discussions about ongoing trends in tech with students Follow the
-            T-Shape learning path.
-            <strong className={classes.primarySubtitle}>
-              Open Source &amp; Open Knowledge
-            </strong>
+          <Typography variant="h4" style={{ color: '#A60000' }}>
+            About Us
+          </Typography>
+          <Typography variant="h3" style={{ marginTop: '10px' }}>
+            What We Stand For
+          </Typography>
+          <Typography className={classes.content}>
+            We aim to provide a real world practical learning experience and
+            keep students informed about the latest trends in technology,
+            open-source and opportunities, so that they can keep up with the
+            fast-paced digital world by following a pi-shaped learning pattern.
           </Typography>
         </Grid>
         {/* <Hidden smDown> */}

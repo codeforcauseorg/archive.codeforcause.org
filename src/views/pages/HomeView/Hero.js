@@ -7,6 +7,7 @@ import {
   Button,
   Container,
   Grid,
+  Hidden,
   Typography,
   makeStyles
 } from '@material-ui/core';
@@ -28,7 +29,10 @@ const useStyles = makeStyles(theme => ({
   },
   extraPadding: {
     padding: '0 70px 0px 0px',
-    textAlign: 'justify'
+    textAlign: 'justify',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0'
+    }
   },
   image: {
     perspectiveOrigin: 'left center',
@@ -38,15 +42,18 @@ const useStyles = makeStyles(theme => ({
       maxWidth: '100%',
       height: 'auto',
       backfaceVisibility: 'hidden'
-      // boxShadow: theme.shadows[16]
-      // transform: 'rotateY(-35deg) rotateX(15deg)'
     }
   },
   hide: {
     display: 'none'
   },
   Button: {
-    textTransform: 'capitalize'
+    backgroundColor: '#A60000',
+    color: '#ffffff',
+    textTransform: 'capitalize',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+    }
   }
 }));
 
@@ -73,52 +80,52 @@ function Hero({ className, ...rest }) {
                 Welcome to
               </Typography>
               <Typography variant="h1">Code for Cause</Typography>
+              <Hidden smUp>
+                <Box mt={6} mb={2}>
+                  <div className={classes.image}>
+                    <img
+                      alt="codeforcauseimg"
+                      src="/static/home/codeforcause.svg"
+                    />
+                  </div>
+                </Box>
+              </Hidden>
               <Box mt={5}>
-                <Typography style={{ lineHeight: '1.5' }} variant="h5">
+                <Typography variant="body1">
                   An initiative to help the community by providing training,
                   guidance and awareness about the possibilities in the software
                   field to students &amp; professionals.
                 </Typography>
               </Box>
-              <Box mt={2}>
-                <Grid container spacing={3}>
-                  <Grid item>
-                    <Typography variant="h1" color="secondary"></Typography>
-                    <Box
-                      mt={2}
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
+              <Box mt={4}>
+                <Grid container xs={12} md={12}>
+                  <Grid item xs={12} md={12}>
+                    <Button
+                      className={classes.Button}
+                      component="a"
+                      href="/register"
+                      size="large"
+                      variant="contained"
                     >
-                      <Button
-                        style={{
-                          backgroundColor: '#A60000',
-                          color: '#ffffff',
-                          textTransform: 'capitalize'
-                        }}
-                        component="a"
-                        href="/register"
-                        size="large"
-                        variant="contained"
-                      >
-                        Register
-                      </Button>
-                    </Box>
+                      Register
+                    </Button>
                   </Grid>
                 </Grid>
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box>
-              <div className={classes.image}>
-                <img
-                  alt="codeforcauseimg"
-                  src="/static/home/codeforcause.svg"
-                />
-              </div>
-            </Box>
-          </Grid>
+          <Hidden smDown>
+            <Grid item xs={12} md={6}>
+              <Box>
+                <div className={classes.image}>
+                  <img
+                    alt="codeforcauseimg"
+                    src="/static/home/codeforcause.svg"
+                  />
+                </div>
+              </Box>
+            </Grid>
+          </Hidden>
         </Grid>
       </Container>
     </div>

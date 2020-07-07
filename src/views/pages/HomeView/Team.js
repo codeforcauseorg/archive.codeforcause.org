@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import {
   Avatar,
   Box,
+  Link,
   Grid,
   Container,
   Typography,
@@ -34,8 +35,9 @@ const useStyles = makeStyles(theme => ({
   extraMargin: {
     marginTop: theme.spacing(6)
   },
-  extraMarginTop: {
-    marginTop: theme.spacing(2)
+  teamName: {
+    marginTop: theme.spacing(2),
+    textDecoration: 'none'
   },
   card: {
     padding: ''
@@ -90,19 +92,21 @@ function Team({ mentors, className, ...rest }) {
                     <Avatar
                       className={classes.avatar}
                       component="a"
+                      target="_blank"
                       href={mentor.linkedin}
                       src={mentor.avatar}
                     />
-
-                    <Typography
-                      className={classes.extraMarginTop}
+                    <Link
                       component="a"
-                      href={mentor.linkedin}
+                      className={classes.teamName}
                       color="textPrimary"
                       variant="h5"
+                      underline="never"
+                      href={mentor.linkedin}
+                      target="_blank"
                     >
                       {mentor.name}
-                    </Typography>
+                    </Link>
                   </Box>
                 </CardContent>
               </Card>

@@ -18,38 +18,6 @@ const useStyles = makeStyles(() => ({
 function HomeView() {
   const classes = useStyles();
 
-  const footerInfo = [
-    {
-      id: 1,
-      heading: 'Code for Cause',
-      column: [
-        {
-          title: 'Blogs',
-          link: 'https://medium.com/code-for-cause'
-        }
-      ]
-    },
-    {
-      id: 2,
-      heading: 'Products',
-      column: [
-        {
-          title: 'Events',
-          link: '#'
-        }
-      ]
-    },
-    {
-      id: 3,
-      heading: 'Contact Us',
-      column: [
-        {
-          title: 'team@codeforcause.org',
-          link: '#'
-        }
-      ]
-    }
-  ];
   const experience = [
     {
       id: '1',
@@ -125,7 +93,7 @@ function HomeView() {
       <Team mentors={mentors} />
       <WatchOurVideoView />
       <CTA />
-      <Footer footerInfo={footerInfo} />
+      <Footer />
     </Page>
   );
 }

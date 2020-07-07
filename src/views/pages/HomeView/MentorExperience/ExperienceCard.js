@@ -30,7 +30,7 @@ function ExperienceCard({ exp, className, ...rest }) {
         >
           <img width="70px" alt={exp.title} src={exp.img} />
         </Typography>
-        <Typography variant="h4" align="center" style={{ marginTop: 20 }}>
+        <Typography variant="h3" align="center" style={{ marginTop: 20 }}>
           {exp.count}
         </Typography>
         <Typography variant="h4" align="center">
