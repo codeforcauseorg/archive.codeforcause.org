@@ -15,7 +15,6 @@ import {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.LIGHT,
-    paddingTop: '30px',
     paddingLeft: 70,
     paddingRight: 70,
     //write css for small screen
@@ -25,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   cardGrid: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(8)
   },
   extraMargin: {
@@ -40,8 +39,7 @@ const useStyles = makeStyles(theme => ({
   flex: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4)
-  },
-
+  }
 }));
 
 function CTA({ className, ...rest }) {
@@ -50,155 +48,126 @@ function CTA({ className, ...rest }) {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container className={classes.cardGrid} maxWidth="lg">
-
         <Grid container spacing={2} className={classes.extraMargin}>
-          
-            <Grid container key={1} xs={12} sm={6} md={4}>
-                  <Box
-                    className={classes.flex}
-                    display="flex"
-                    flexDirection="column"
-                  >
-                    <Hidden mdUp>
-                      <Typography
-                        color="textPrimary"
-                        variant="h3"
-                      >
-                        Want Us to do a Workshop
-                      </Typography>
-                    </Hidden>
+          <Grid container xs={12} sm={6} md={4}>
+            <Box className={classes.flex} display="flex" flexDirection="column">
+              <Hidden mdUp>
+                <Typography
+                  color="textPrimary"
+                  variant="h4"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Want Us to do a Workshop
+                </Typography>
+              </Hidden>
 
-                    <Hidden smDown>
-                      <Typography
-                        color="textPrimary"
-                        variant="h3"
-                      >
-                        Want Us to do a <br/> Workshop
-                      </Typography>
-                    </Hidden>
+              <Hidden smDown>
+                <Typography
+                  color="textPrimary"
+                  variant="h4"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Want Us to do a <br /> Workshop
+                </Typography>
+              </Hidden>
 
-                    <Box
-                      className={classes.flex}
-                      display="flex"
-                      flexDirection="row"
-                    >
+              <Box className={classes.flex} display="flex" flexDirection="row">
+                <Button
+                  style={{
+                    backgroundColor: '#A60000',
+                    color: '#ffffff',
+                    textTransform: 'capitalize'
+                  }}
+                  component="a"
+                  href="/register"
+                  size="large"
+                  variant="contained"
+                >
+                  Register
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
 
-                      <Button
-                          style={{
-                            backgroundColor: '#A60000',
-                            color: '#ffffff',
-                            textTransform: 'capitalize'
-                          }}
-                          component="a"
-                          href="/register"
-                          size="large"
-                          variant="contained"
-                        >
-                          Register
-                        </Button>
+          <Grid container key={2} xs={12} sm={6} md={4}>
+            <Box className={classes.flex} display="flex" flexDirection="column">
+              <Hidden mdUp>
+                <Typography
+                  color="textPrimary"
+                  variant="h4"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Join Us or Submit a YouTube Video
+                </Typography>
+              </Hidden>
 
-                      </Box>
-                  </Box>
-            </Grid>
+              <Hidden smDown>
+                <Typography
+                  color="textPrimary"
+                  variant="h4"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Join Us or Submit a <br /> YouTube Video
+                </Typography>
+              </Hidden>
 
-            <Grid container key={2} xs={12} sm={6} md={4}>
-                  <Box
-                    className={classes.flex}
-                    display="flex"
-                    flexDirection="column"
-                  >
+              <Box className={classes.flex} display="flex" flexDirection="row">
+                <Button
+                  style={{
+                    borderColor: '#A60000',
+                    color: '#A60000',
+                    textTransform: 'capitalize'
+                  }}
+                  component="a"
+                  href="/register"
+                  variant="outlined"
+                  size="large"
+                >
+                  Know more
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
 
-                    <Hidden mdUp>
-                      <Typography
-                        color="textPrimary"
-                        variant="h3"
-                      >
-                        Join Us or Submit a YouTube Video
-                      </Typography>
-                    </Hidden>
+          <Grid container key={3} xs={12} sm={12} md={4}>
+            <Box className={classes.flex} display="flex" flexDirection="column">
+              <Hidden mdUp>
+                <Typography
+                  color="textPrimary"
+                  variant="h4"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Get Updates About Our Initiatives
+                </Typography>
+              </Hidden>
 
-                    <Hidden smDown>
-                      <Typography
-                        color="textPrimary"
-                        variant="h3"
-                      >
-                        Join Us or Submit a <br/> YouTube Video
-                      </Typography>
-                    </Hidden>
+              <Hidden smDown>
+                <Typography
+                  color="textPrimary"
+                  variant="h4"
+                  style={{ lineHeight: '1.5' }}
+                >
+                  Get Updates About Our <br /> Initiatives
+                </Typography>
+              </Hidden>
 
-                    <Box
-                      className={classes.flex}
-                      display="flex"
-                      flexDirection="row"
-                    >
-                    
-                      <Button
-                          style={{
-                            borderColor: '#A60000',
-                            color: '#A60000',
-                            textTransform: 'capitalize'
-                          }}
-                          component="a"
-                          href="/register"
-                          variant="outlined"
-                          size="large"
-                        >
-                          Know more
-                        </Button>
-
-                      </Box>
-                  </Box>
-            </Grid>
-
-            <Grid container key={3} xs={12} sm={12} md={4}>
-                  <Box
-                    className={classes.flex}
-                    display="flex"
-                    flexDirection="column"
-                  >
-                    
-
-                    <Hidden mdUp>
-                      <Typography
-                        color="textPrimary"
-                        variant="h3"
-                      >
-                         Get Updates About Our Initiatives
-                      </Typography>
-                    </Hidden>
-
-                    <Hidden smDown>
-                      <Typography
-                        color="textPrimary"
-                        variant="h3"
-                      >
-                         Get Updates About Our <br/> Initiatives
-                      </Typography>
-                    </Hidden>
-                    
-                    <Box
-                      className={classes.flex}
-                      display="flex"
-                      flexDirection="row"
-                    >
-
-                      <Button
-                          style={{
-                            borderColor: '#A60000',
-                            color: '#A60000',
-                            textTransform: 'capitalize'
-                          }}
-                          component="a"
-                          href="/register"
-                          variant="outlined"
-                          size="large"
-                        >
-                          Enroll
-                        </Button>
-                      </Box>
-                  </Box>
-            </Grid>
-     
+              <Box className={classes.flex} display="flex" flexDirection="row">
+                <Button
+                  style={{
+                    borderColor: '#A60000',
+                    color: '#A60000',
+                    textTransform: 'capitalize'
+                  }}
+                  component="a"
+                  href="/register"
+                  variant="outlined"
+                  size="large"
+                >
+                  Enroll
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
         </Grid>
       </Container>
     </div>

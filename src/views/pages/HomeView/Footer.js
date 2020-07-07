@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Footer({ footerInfo, className, ...rest }) {
+function Footer({ className, ...rest }) {
   const classes = useStyles();
   const flexContainer = {
     display: 'flex',
@@ -106,7 +106,6 @@ function Footer({ footerInfo, className, ...rest }) {
                   className={classes.centerCls}
                   component="a"
                   href="mailto:team@codeforcause.org"
-                  target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
                     <FontAwesomeIcon icon="envelope" size="lg" />
@@ -128,7 +127,7 @@ function Footer({ footerInfo, className, ...rest }) {
                 <ListItem
                   className={classes.centerCls}
                   component="a"
-                  href="https://www.linkedin.com/company/codeforcauseorg/"
+                  href="https://medium.com/code-for-cause"
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>

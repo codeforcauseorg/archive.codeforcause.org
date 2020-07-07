@@ -5,9 +5,15 @@ import MainCards from './MainCards';
 
 const background = 'linear-gradient(180deg, #180254 0%, #0D012F 100%)';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    background
+    background,
+    paddingLeft: 70,
+    paddingRight: 70,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15,
+      paddingRight: 17
+    }
   }
 }));
 

@@ -5,6 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import {
   Link,
+  Box,
   Button,
   Container,
   Grid,
@@ -18,7 +19,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.LIGHT,
-    paddingTop: '30px',
+    padding: '30px 0',
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('sm')]: {
@@ -49,9 +50,58 @@ const useStyles = makeStyles(theme => ({
   },
   extraPaddingLink: {
     paddingLeft: '32px !important'
+  },
+  icon: {
+    backgroundColor: '#000',
+    color: '#fff',
+    borderRadius: 0,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      marginBottom: '20px'
+    }
+  },
+  btn: {
+    padding: '0 20px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+    }
+  },
+  box2: {
+    verticalAlign: 'middle',
+    display: 'flex',
+    alignItems: 'center',
+    justifyItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
+    }
   }
 }));
-const cards = [1, 2, 3];
+const events = [
+  {
+    id: '1',
+    img: '/static/images/open-source.png',
+    title: 'Machine Learning',
+    type: 'Webinar',
+    description: 'Machine learning ki kahani likhni hai badi wali',
+    date_time: 'Today, 9pm IST'
+  },
+  {
+    id: '2',
+    img: '/static/images/open-source.png',
+    title: 'Machine Learning',
+    type: 'Webinar',
+    description: 'Machine learning ki kahani likhni hai badi wali',
+    date_time: 'Today, 9pm IST'
+  },
+  {
+    id: '3',
+    img: '/static/images/open-source.png',
+    title: 'Machine Learning',
+    type: 'Webinar',
+    description: 'Machine learning ki kahani likhni hai badi wali',
+    date_time: 'Today, 9pm IST'
+  }
+];
 
 function Events({ className, ...rest }) {
   const classes = useStyles();
@@ -62,13 +112,12 @@ function Events({ className, ...rest }) {
         <Typography variant="h1" align="center" color="textPrimary">
           Our Online Events
         </Typography>
-        {/* End hero unit */}
         <Grid container spacing={4} className={classes.extraMargin}>
-          {cards.map(card => (
+          {events.map((event, index) => (
             <Grid
               className={classes.extraPadding}
               item
-              key={card}
+              key={index}
               xs={12}
               sm={6}
               md={4}
@@ -76,54 +125,71 @@ function Events({ className, ...rest }) {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
-                  title="Image title"
+                  image={event.img}
+                  title={event.title}
                 />
                 <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Machine Learning
+                  <Typography
+                    display="inline"
+                    style={{ paddingRight: '15px' }}
+                    gutterBottom
+                  >
+                    {event.title}
                   </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
+                  <Typography
+                    variant="span"
+                    display="inline"
+                    style={{
+                      background: '#1D006E',
+                      color: '#fff',
+                      padding: '0px 8px',
+                      fontSize: '14px',
+                      borderRadius: '2px'
+                    }}
+                    gutterBottom
+                  >
+                    {event.type}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{
+                      color: '#A60000',
+                      marginTop: '5px',
+                      lineHeight: '1.3'
+                    }}
+                  >
+                    {event.description}
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
           ))}
-          <Grid
-            className={classes.extraPaddingLink}
-            item
-            xs={12}
-            sm={12}
-            md={1}
-          >
-            <Button size="small" color="primary" variant="contained">
-              Subscribe
-            </Button>
-          </Grid>
-          <Grid
-            className={classes.extraPaddingLink}
-            item
-            xs={12}
-            sm={12}
-            md={6}
-          >
-            <Typography
-              className={classes.extraPaddingLink}
-              variant="body2"
-              display="inline"
-            >
-              Our Youtube Channel For
-              <Link
-                color="textPrimary"
-                component={RouterLink}
-                to="#"
-                variant="h6"
+          <Grid item xs={12} sm={12} md={12}>
+            <div className={classes.box2}>
+              <Box
+                display="flex"
+                justifyContent="center"
+                className={classes.btn}
               >
-                {` Previous Webinars`}
-              </Link>
-            </Typography>
+                <Grid item xs={12} sm={12} md={12}>
+                  <Button
+                    component={RouterLink}
+                    to="/"
+                    variant="contained"
+                    size="small"
+                    className={classes.icon}
+                  >
+                    Subscribe
+                  </Button>
+                </Grid>
+              </Box>
+              <Typography className={classes.secondaryText}>
+                Our Youtube Channel For
+                <Link color="error" component={RouterLink} to="#">
+                  {` Previous Webinars`}
+                </Link>
+              </Typography>
+            </div>
           </Grid>
         </Grid>
       </Container>

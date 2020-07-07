@@ -1,13 +1,10 @@
 import React from 'react';
 
-import {
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Typography, makeStyles } from '@material-ui/core';
 
-const background = 'linear-gradient(180deg, #1d006f 10%, #3500C9 100%)';
+const background = 'linear-gradient(180deg, #180253 0%, #0E0131 100%)';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     height: '75vh',
     display: 'flex',
@@ -48,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column'
     }
-  },
+  }
 }));
 
 const WatchVideosView = () => {
@@ -56,20 +53,22 @@ const WatchVideosView = () => {
   return (
     <div className={classes.root}>
       <div>
-        <Typography
-          variant="h2"
-          className={classes.primaryText}
-        >
+        <Typography variant="h2" className={classes.primaryText}>
           Start Learning Today
         </Typography>
         <div className={classes.box2}>
-          <a href="https://www.youtube.com/codeforcause" target="_blank" rel="noopener noreferrer">
-            <img alt="play" className={classes.icon} src="/static/images/icons/play1.svg" />
-          </a>
-          <Typography
-            variant="h2"
-            className={classes.secondaryText}
+          <a
+            href="https://www.youtube.com/codeforcause"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            <img
+              alt="play"
+              className={classes.icon}
+              src="/static/images/icons/play1.svg"
+            />
+          </a>
+          <Typography variant="h2" className={classes.secondaryText}>
             Watch Our Videos
           </Typography>
         </div>
