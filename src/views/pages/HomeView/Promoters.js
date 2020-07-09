@@ -10,10 +10,12 @@ const useStyles = makeStyles(theme => ({
     // paddingBottom: theme.spacing(2),
     paddingLeft: 70,
     paddingRight: 70,
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: theme.spacing(6),
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing(6)
     },
     color: '#000000'
   },

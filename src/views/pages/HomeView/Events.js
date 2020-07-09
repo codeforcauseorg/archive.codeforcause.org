@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     padding: '30px 0',
     paddingLeft: 70,
     paddingRight: 70,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
     }
@@ -46,7 +46,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   extraPadding: {
-    padding: '32px !important'
+    padding: '32px !important',
+    [theme.breakpoints.down('md')]: {
+      padding: '15px !important'
+    }
   },
   extraPaddingLink: {
     paddingLeft: '32px !important'

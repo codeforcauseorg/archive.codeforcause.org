@@ -10,14 +10,17 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(10),
     paddingLeft: 70,
     paddingRight: 70,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
     },
     color: '#000000'
   },
   centerPadding: {
-    padding: 30
+    padding: 30,
+    [theme.breakpoints.down('md')]: {
+      padding: 15
+    }
   }
 }));
 
@@ -45,8 +48,8 @@ function MentorExperience({ experience, className, ...rest }) {
               item
               key={i}
               md={3}
-              sm={6}
-              xs={12}
+              sm={3}
+              xs={6}
               className={classes.centerPadding}
             >
               <ExperienceCard exp={exp} />

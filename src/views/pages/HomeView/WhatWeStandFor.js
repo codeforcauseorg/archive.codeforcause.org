@@ -9,6 +9,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     padding: '100px 0px',
     paddingBottom: '40px',
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    },
     color: 'white'
   },
   image: {
