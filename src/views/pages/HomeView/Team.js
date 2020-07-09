@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: 70,
     textAlign: 'center',
     //write css for small screen
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
     }
@@ -80,7 +80,7 @@ function Team({ mentors, className, ...rest }) {
         {/* End hero unit */}
         <Grid container spacing={2} className={classes.extraMargin}>
           {mentors.map(mentor => (
-            <Grid item key={mentor.id} xs={6} sm={6} md={4} lg={2}>
+            <Grid item key={mentor.id} xs={6} sm={4} md={4} lg={2}>
               <Card className={classes.card + ' ' + classes.member}>
                 <CardContent>
                   <Box

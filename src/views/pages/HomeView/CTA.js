@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 70,
     paddingRight: 70,
     //write css for small screen
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
     }

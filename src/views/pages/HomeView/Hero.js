@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 60,
     paddingLeft: 70,
     paddingRight: 70,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
     }
@@ -42,6 +42,13 @@ const useStyles = makeStyles(theme => ({
       maxWidth: '100%',
       height: 'auto',
       backfaceVisibility: 'hidden'
+    },
+    [theme.breakpoints.down('md')]: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      justifyContent: 'center'
     }
   },
   hide: {
@@ -80,7 +87,7 @@ function Hero({ className, ...rest }) {
                 Welcome to
               </Typography>
               <Typography variant="h1">Code for Cause</Typography>
-              <Hidden smUp>
+              <Hidden mdUp>
                 <Box mt={6} mb={2}>
                   <div className={classes.image}>
                     <img
