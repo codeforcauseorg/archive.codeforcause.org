@@ -24,7 +24,7 @@ function MainCard({ content, ...props }) {
       <Typography variant="subtitle1" className={classes.content}>
         {content.about}
       </Typography>
-      <Hidden mdDown>
+      <Hidden smDown>
         {content.points.map(point => (
           <SubCard key={point.id} point={point} />
         ))}
