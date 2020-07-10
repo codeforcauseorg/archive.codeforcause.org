@@ -41,7 +41,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: '0px'
   },
   list: {
-    width: '100% !important'
+    width: '100% !important',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   textStyle: {
     textDecoration: 'none'
@@ -77,7 +80,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
               variant="h5"
               className={classes.textStyle}
             >
-              <Typography variant="h6" color="textPrimary">
+              <Typography variant="h4" color="textPrimary">
                 {item.title}
               </Typography>
             </Link>
