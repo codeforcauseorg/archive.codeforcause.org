@@ -41,7 +41,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: '0px'
   },
   list: {
-    width: '100% !important'
+    width: '100% !important',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   textStyle: {
     textDecoration: 'none'
