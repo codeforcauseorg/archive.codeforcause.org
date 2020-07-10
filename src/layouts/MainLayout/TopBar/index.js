@@ -80,7 +80,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
               variant="h5"
               className={classes.textStyle}
             >
-              <Typography variant="h6" color="textPrimary">
+              <Typography variant="h4" color="textPrimary">
                 {item.title}
               </Typography>
             </Link>
