@@ -2,7 +2,14 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { AppBar, Box, Hidden, Toolbar, makeStyles } from '@material-ui/core';
+import {
+  AppBar,
+  Box,
+  Hidden,
+  Toolbar,
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 import Logo from 'src/components/Logo';
 import Item from './Item';
 import OpenSource from './OpenSource';
@@ -12,8 +19,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-
 import { HashLink as Link } from 'react-router-hash-link';
 
 const useStyles = makeStyles(theme => ({
@@ -72,7 +77,9 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
               variant="h5"
               className={classes.textStyle}
             >
-              <ListItemText primary={item.title} />
+              <Typography variant="h6" color="textPrimary">
+                {item.title}
+              </Typography>
             </Link>
           </ListItem>
         ))}
