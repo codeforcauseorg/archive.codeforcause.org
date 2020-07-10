@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       position: 'relative',
       top: '2px',
-      
+
       borderBottom: '4px solid #A60000'
     }
   }
@@ -24,12 +24,7 @@ const HeaderItem = ({ title, link }) => {
   const classes = useStyles();
   return (
     <Box ml={2}>
-      <Link
-        smooth
-        to={link}
-        variant="h5"
-        className={classes.textStyle}
-      >
+      <Link smooth to={link} variant="h5" className={classes.textStyle}>
         <Typography variant="h6" color="textPrimary">
           {title}
         </Typography>
