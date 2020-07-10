@@ -14,6 +14,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 const useStyles = makeStyles(theme => ({
   root: {
     zIndex: theme.zIndex.drawer + 100,
@@ -35,6 +37,9 @@ const useStyles = makeStyles(theme => ({
   },
   list: {
     width: '100% !important'
+  },
+  textStyle: {
+    textDecoration: 'none'
   }
 }));
 
@@ -54,9 +59,21 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
       onKeyDown={toggleDrawer('right', false)}
     >
       <List>
-        {['About Us', 'Test', 'Our Team'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+        {[
+          {title:"Events", link:"#events"},
+          {title:"About", link:"#about"},
+          {title:"Team", link:"#team"},
+          {title:"Actions", link:"#actions"}
+        ].map((item, index) => (
+          <ListItem button key={index}>
+            <Link
+              smooth
+              to={item.link}
+              variant="h5"
+              className={classes.textStyle}
+            >
+              <ListItemText primary={item.title}/>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -83,10 +100,10 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
         {/* </Hidden> */}
         <Hidden smDown>
           <Box ml={2} flexGrow={1} />
-          <Item title="About" />
-          <Item title="Team" />
-          <Item title="Our Process" />
-          <Item title="Courses" />
+          <Item title="Events" link="#events"/>
+          <Item title="About" link="#about" />
+          <Item title="Team" link="#team"/>
+          <Item title="Actions" link="#actions"/>
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
             <OpenSource />
