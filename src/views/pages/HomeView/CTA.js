@@ -39,6 +39,22 @@ const useStyles = makeStyles(theme => ({
   flex: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4)
+  },
+  Button: {
+    textTransform: 'capitalize',
+    fontSize: '16px',
+    padding: '8px 32px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+    }
+  },
+  primeBtn: {
+    backgroundColor: '#A60000',
+    color: '#ffffff'
+  },
+  secondaryBtn: {
+    borderColor: '#A60000',
+    color: '#A60000'
   }
 }));
 
@@ -49,7 +65,7 @@ function CTA({ className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container className={classes.cardGrid} maxWidth="lg">
         <Grid container spacing={2} className={classes.extraMargin}>
-          <Grid container xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box className={classes.flex} display="flex" flexDirection="column">
               <Hidden mdUp>
                 <Typography
@@ -71,8 +87,21 @@ function CTA({ className, ...rest }) {
                 </Typography>
               </Hidden>
 
-              <Box className={classes.flex} display="flex" flexDirection="row">
-                <Button
+              <Box className={classes.flex}>
+                <Grid container xs={12} sm={12}>
+                  <Grid item xs={12} sm={12}>
+                    <Button
+                      className={classes.Button + ' ' + classes.primeBtn}
+                      component="a"
+                      href="/register"
+                      size="large"
+                      variant="contained"
+                    >
+                      Register
+                    </Button>
+                  </Grid>
+                </Grid>
+                {/* <Button
                   style={{
                     backgroundColor: '#A60000',
                     color: '#ffffff',
@@ -85,11 +114,12 @@ function CTA({ className, ...rest }) {
                 >
                   Register
                 </Button>
+              */}
               </Box>
             </Box>
           </Grid>
 
-          <Grid container key={2} xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box className={classes.flex} display="flex" flexDirection="column">
               <Hidden mdUp>
                 <Typography
@@ -111,25 +141,25 @@ function CTA({ className, ...rest }) {
                 </Typography>
               </Hidden>
 
-              <Box className={classes.flex} display="flex" flexDirection="row">
-                <Button
-                  style={{
-                    borderColor: '#A60000',
-                    color: '#A60000',
-                    textTransform: 'capitalize'
-                  }}
-                  component="a"
-                  href="/register"
-                  variant="outlined"
-                  size="large"
-                >
-                  Know more
-                </Button>
+              <Box className={classes.flex}>
+                <Grid container xs={12} sm={12}>
+                  <Grid item xs={12} sm={12}>
+                    <Button
+                      className={classes.Button + ' ' + classes.secondaryBtn}
+                      component="a"
+                      href="/register"
+                      size="large"
+                      variant="outlined"
+                    >
+                      Know More
+                    </Button>
+                  </Grid>
+                </Grid>
               </Box>
             </Box>
           </Grid>
 
-          <Grid container key={3} xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             <Box className={classes.flex} display="flex" flexDirection="column">
               <Hidden mdUp>
                 <Typography
@@ -151,20 +181,20 @@ function CTA({ className, ...rest }) {
                 </Typography>
               </Hidden>
 
-              <Box className={classes.flex} display="flex" flexDirection="row">
-                <Button
-                  style={{
-                    borderColor: '#A60000',
-                    color: '#A60000',
-                    textTransform: 'capitalize'
-                  }}
-                  component="a"
-                  href="/register"
-                  variant="outlined"
-                  size="large"
-                >
-                  Enroll
-                </Button>
+              <Box className={classes.flex}>
+                <Grid container xs={12} sm={12}>
+                  <Grid item xs={12} sm={12}>
+                    <Button
+                      className={classes.Button + ' ' + classes.secondaryBtn}
+                      component="a"
+                      href="/register"
+                      size="large"
+                      variant="outlined"
+                    >
+                      Enroll Now
+                    </Button>
+                  </Grid>
+                </Grid>
               </Box>
             </Box>
           </Grid>
