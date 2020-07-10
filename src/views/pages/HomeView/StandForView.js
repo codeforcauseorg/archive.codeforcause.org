@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 const StandForSection = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div id="about" className={classes.root}>
       {' '}
       <WhatWeStandFor />
       <MainCards />

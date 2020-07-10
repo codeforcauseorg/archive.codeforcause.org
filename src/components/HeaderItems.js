@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { Box, Link, Typography, makeStyles } from '@material-ui/core';
+import { HashLink as Link } from 'react-router-hash-link';
+import { Box, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -10,22 +10,23 @@ const useStyles = makeStyles(() => ({
     fontColor: 'blue',
     display: 'flex',
     padding: ' 19px 19px',
+    textDecoration: 'none',
     '&:hover': {
       position: 'relative',
       top: '2px',
-      textDecoration: 'none',
+      
       borderBottom: '4px solid #A60000'
     }
   }
 }));
 
-const HeaderItem = ({ title }) => {
+const HeaderItem = ({ title, link }) => {
   const classes = useStyles();
   return (
     <Box ml={2}>
       <Link
-        component={RouterLink}
-        to={title}
+        smooth
+        to={link}
         variant="h5"
         className={classes.textStyle}
       >

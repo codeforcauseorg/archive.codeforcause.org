@@ -85,14 +85,14 @@ function HomeView() {
 
   return (
     <Page className={classes.root} title="Code for Cause">
-      <Hero />
+      <Hero/>
       <Promoters />
-      <Events />
+      <Events id="events"/>
       <MentorExperience experience={experience} />
-      <StandForSection />
-      <Team mentors={mentors} />
+      <StandForSection id="about"/>
+      <Team id="team" mentors={mentors} />
       <WatchOurVideoView />
-      <CTA />
+      <CTA id="actions"/>
       <Footer />
     </Page>
   );
