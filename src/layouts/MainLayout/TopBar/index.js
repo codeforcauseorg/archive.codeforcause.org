@@ -2,18 +2,23 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { AppBar, Box, Hidden, Toolbar, makeStyles } from '@material-ui/core';
+import {
+  AppBar,
+  Box,
+  Hidden,
+  Toolbar,
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 import Logo from 'src/components/Logo';
 import Item from './Item';
 import OpenSource from './OpenSource';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 import Drawer from '@material-ui/core/Drawer';
-// import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-
 import { HashLink as Link } from 'react-router-hash-link';
 
 const useStyles = makeStyles(theme => ({
@@ -60,10 +65,10 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
     >
       <List>
         {[
-          {title:"Events", link:"#events"},
-          {title:"About", link:"#about"},
-          {title:"Team", link:"#team"},
-          {title:"Actions", link:"#actions"}
+          { title: 'Events', link: '#events' },
+          { title: 'About', link: '#about' },
+          { title: 'Team', link: '#team' },
+          { title: 'Actions', link: '#actions' }
         ].map((item, index) => (
           <ListItem button key={index}>
             <Link
@@ -72,13 +77,37 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
               variant="h5"
               className={classes.textStyle}
             >
-              <ListItemText primary={item.title}/>
+              <Typography variant="h6" color="textPrimary">
+                {item.title}
+              </Typography>
             </Link>
           </ListItem>
         ))}
       </List>
     </div>
   );
+  const headerMoblie = () => (
+    <div>
+      <RouterLink
+        to="/"
+        style={{ position: 'absolute', left: '20px', top: '3%' }}
+      >
+        <Logo className={classes.logo} />
+      </RouterLink>
+      <Box ml={8}>
+        <IconButton
+          edge="end"
+          className={classes.menuButton}
+          aria-label="menu"
+          onClick={toggleDrawer('right', false)}
+          style={{ position: 'absolute', right: '15px', top: '1%' }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </Box>
+    </div>
+  );
+
   const toggleDrawer = (anchor, open) => event => {
     if (
       event.type === 'keydown' &&
@@ -93,17 +122,15 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
   return (
     <AppBar className={clsx(classes.root, className)} {...rest}>
       <Toolbar className={classes.toolbar}>
-        {/* <Hidden mdDown> */}
         <RouterLink to="/">
           <Logo className={classes.logo} />
         </RouterLink>
-        {/* </Hidden> */}
         <Hidden smDown>
           <Box ml={2} flexGrow={1} />
-          <Item title="Events" link="#events"/>
+          <Item title="Events" link="#events" />
           <Item title="About" link="#about" />
-          <Item title="Team" link="#team"/>
-          <Item title="Actions" link="#actions"/>
+          <Item title="Team" link="#team" />
+          <Item title="Actions" link="#actions" />
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
             <OpenSource />
@@ -123,10 +150,12 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             </IconButton>
           </Box>
           <Drawer
+            width={'100%'}
             anchor="right"
             open={state['right']}
             onClose={toggleDrawer('right', false)}
           >
+            {headerMoblie()}
             {list()}
           </Drawer>
         </Hidden>
