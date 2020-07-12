@@ -77,7 +77,15 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column'
     }
-  }
+  },
+  eventdate: {
+    position: 'relative',
+    display: 'inline-block',
+    bottom: '185px',
+    borderRadius: '0px 5px 5px 0px',
+    color: 'black',
+    backgroundColor: '#00FF75'
+  },
 }));
 const events = [
   {
@@ -102,7 +110,7 @@ const events = [
     title: 'Machine Learning',
     type: 'Webinar',
     description: 'Machine learning ki kahani likhni hai badi wali',
-    date_time: 'Today, 9pm IST'
+    // date_time: 'Today, 9pm IST'
   }
 ];
 
@@ -130,7 +138,24 @@ function Events({ className, ...rest }) {
                   className={classes.cardMedia}
                   image={event.img}
                   title={event.title}
-                />
+                >
+                  {
+                    event.date_time ? (
+                      <Box className={classes.eventdate}>
+                        <Typography
+                          variant="caption"
+                          style={{
+                            padding: '0px 10px',
+                            fontWeight: 500
+                          }}
+                        >
+                          {event.date_time}
+                        </Typography>
+                      </Box>
+                    )
+                      : <></>
+                  }
+                </CardMedia>
                 <CardContent className={classes.cardContent}>
                   <Typography
                     display="inline"
