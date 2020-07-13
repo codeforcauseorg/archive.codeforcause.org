@@ -37,10 +37,11 @@ const useStyles = makeStyles(theme => ({
   card: {
     height: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    position: 'relative',
   },
   cardMedia: {
-    paddingTop: '61.25%' // 16:9
+    paddingTop: '61.25%', // 16:9
   },
   cardContent: {
     flexGrow: 1
@@ -79,9 +80,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   eventdate: {
-    position: 'relative',
-    display: 'inline-block',
-    bottom: '185px',
+    position: 'absolute',
+    top: 18,
+    zIndex: 1,
     borderRadius: '0px 5px 5px 0px',
     color: 'black',
     backgroundColor: '#00FF75'
@@ -134,28 +135,27 @@ function Events({ className, ...rest }) {
               md={4}
             >
               <Card className={classes.card}>
+                {
+                  event.date_time ? (
+                    <div className={classes.eventdate}>
+                      <Typography
+                        variant="caption"
+                        style={{
+                          padding: '0px 12px',
+                          fontWeight: 500
+                        }}
+                      >
+                        {event.date_time}
+                      </Typography>
+                    </div>
+                  )
+                    : <></>
+                }
                 <CardMedia
                   className={classes.cardMedia}
                   image={event.img}
                   title={event.title}
-                >
-                  {
-                    event.date_time ? (
-                      <Box className={classes.eventdate}>
-                        <Typography
-                          variant="caption"
-                          style={{
-                            padding: '0px 10px',
-                            fontWeight: 500
-                          }}
-                        >
-                          {event.date_time}
-                        </Typography>
-                      </Box>
-                    )
-                      : <></>
-                  }
-                </CardMedia>
+                />
                 <CardContent className={classes.cardContent}>
                   <Typography
                     display="inline"
