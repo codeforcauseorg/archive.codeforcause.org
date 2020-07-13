@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Link as RouterLink } from 'react-router-dom';
 
 import {
   Link,
@@ -45,8 +44,9 @@ const useStyles = makeStyles(theme => ({
   cardContent: {
     flexGrow: 1
   },
-  extraPadding: {
+  gridCls: {
     padding: '32px !important',
+    textDecoration: 'none',
     [theme.breakpoints.down('md')]: {
       padding: '15px !important'
     }
@@ -81,28 +81,28 @@ const useStyles = makeStyles(theme => ({
 }));
 const events = [
   {
-    id: '1',
-    img: '/static/images/open-source.png',
+    img: '/static/images/events/mlboot/session2.jpg',
     title: 'Machine Learning',
+    link: 'https://www.youtube.com/watch?v=FAposp6k-lA',
     type: 'Webinar',
-    description: 'Machine learning ki kahani likhni hai badi wali',
-    date_time: 'Today, 9pm IST'
+    description: 'Image Processing with NumPy and OpenCV',
+    date_time: 'July 12, 7pm IST'
   },
   {
-    id: '2',
-    img: '/static/images/open-source.png',
+    img: '/static/images/events/mlboot/session1.jpg',
     title: 'Machine Learning',
+    link: 'https://www.youtube.com/watch?v=ycvSMpsg7qk',
     type: 'Webinar',
-    description: 'Machine learning ki kahani likhni hai badi wali',
-    date_time: 'Today, 9pm IST'
+    description: 'Introduction to Machine Learning',
+    date_time: 'July 11, 7pm IST'
   },
   {
-    id: '3',
-    img: '/static/images/open-source.png',
-    title: 'Machine Learning',
+    img: '/static/images/events/workshops/api.png',
+    title: 'Web Development',
+    link: 'https://www.youtube.com/watch?v=QHS7_IwTMcc',
     type: 'Webinar',
-    description: 'Machine learning ki kahani likhni hai badi wali',
-    date_time: 'Today, 9pm IST'
+    description: 'What is Web API? Hands-on with GitHub API',
+    date_time: 'July 7, 6pm IST'
   }
 ];
 
@@ -116,9 +116,12 @@ function Events({ className, ...rest }) {
           Our Online Events
         </Typography>
         <Grid container spacing={4} className={classes.extraMargin}>
-          {events.map((event, index) => (
+          {events.slice(Math.max(events.length - 3, 0)).map((event, index) => (
             <Grid
-              className={classes.extraPadding}
+              className={classes.gridCls}
+              component="a"
+              href={event.link}
+              target="_blank"
               item
               key={index}
               xs={12}
@@ -157,6 +160,7 @@ function Events({ className, ...rest }) {
                     variant="subtitle1"
                     style={{
                       color: '#A60000',
+                      fontWeight: '500',
                       marginTop: '5px',
                       lineHeight: '1.3'
                     }}
@@ -176,8 +180,9 @@ function Events({ className, ...rest }) {
               >
                 <Grid item xs={12} sm={12} md={12}>
                   <Button
-                    component={RouterLink}
-                    to="/"
+                    component="a"
+                    href="https://www.youtube.com/channel/UCfv8cds8AfIM3UZtAWOz6Gg?sub_confirmation=1"
+                    target="_blank"
                     variant="contained"
                     size="small"
                     className={classes.icon}
@@ -187,8 +192,15 @@ function Events({ className, ...rest }) {
                 </Grid>
               </Box>
               <Typography className={classes.secondaryText}>
-                Our Youtube Channel For
-                <Link color="error" component={RouterLink} to="#">
+                Our Youtube Channel for
+                <Link
+                  style={{
+                    color: '#a60000'
+                  }}
+                  component="a"
+                  href="https://www.youtube.com/c/CodeforCause/videos"
+                  target="_blank"
+                >
                   {` Previous Webinars`}
                 </Link>
               </Typography>

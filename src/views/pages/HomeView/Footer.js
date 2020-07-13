@@ -18,7 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: '#F2F7FF',
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(15),
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('md')]: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: '10px'
   },
   copyRightPadding: {
-    paddingTop: theme.spacing(6),
+    paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(4)
   }
 }));
@@ -202,7 +202,7 @@ function Footer({ className, ...rest }) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid className={classes.extraMarginTop}>
+        <Grid className={classes.copyRightPadding}>
           <Typography variant="body2" color="textSecondary">
             {'Copyright © '}
             {new Date().getFullYear()}{' '}

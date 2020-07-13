@@ -73,7 +73,7 @@ function CTA({ className, ...rest }) {
                   variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Want Us to do a Workshop
+                  Want Us to conduct a Workshop
                 </Typography>
               </Hidden>
 
@@ -83,7 +83,7 @@ function CTA({ className, ...rest }) {
                   variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Want Us to do a <br /> Workshop
+                  Want Us to conduct a <br /> Workshop
                 </Typography>
               </Hidden>
 
@@ -93,7 +93,8 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.primeBtn}
                       component="a"
-                      href="/register"
+                      href="https://codecau.se/ws"
+                      target="_blank"
                       size="large"
                       variant="contained"
                     >
@@ -101,20 +102,6 @@ function CTA({ className, ...rest }) {
                     </Button>
                   </Grid>
                 </Grid>
-                {/* <Button
-                  style={{
-                    backgroundColor: '#A60000',
-                    color: '#ffffff',
-                    textTransform: 'capitalize'
-                  }}
-                  component="a"
-                  href="/register"
-                  size="large"
-                  variant="contained"
-                >
-                  Register
-                </Button>
-              */}
               </Box>
             </Box>
           </Grid>
@@ -147,7 +134,8 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
                       component="a"
-                      href="/register"
+                      href="https://codecau.se/sv"
+                      target="_blank"
                       size="large"
                       variant="outlined"
                     >
@@ -187,7 +175,8 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
                       component="a"
-                      href="/register"
+                      href="https://codecau.se/sv"
+                      target="_blank"
                       size="large"
                       variant="outlined"
                     >

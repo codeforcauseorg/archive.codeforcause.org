@@ -31,7 +31,7 @@ function MentorExperience({ experience, className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Typography variant="h4" align="center" style={{ color: '#A60000' }}>
-          Mentors Experience
+          Experienced Mentors
         </Typography>
         <Typography
           style={{ marginTop: '10px' }}
