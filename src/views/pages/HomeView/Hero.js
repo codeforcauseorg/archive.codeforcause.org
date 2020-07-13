@@ -11,6 +11,7 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
 
@@ -110,11 +111,13 @@ function Hero({ className, ...rest }) {
                     <Button
                       className={classes.Button}
                       component="a"
-                      href="/register"
+                      href="https://youtube.com/codeforcause"
+                      target="_blank"
                       size="large"
                       variant="contained"
                     >
-                      Register
+                      <PlayArrowIcon style={{ paddingRight: 5 }} />
+                      Watch Our Videos
                     </Button>
                   </Grid>
                 </Grid>
