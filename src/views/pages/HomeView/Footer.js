@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
+import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import {
   Container,
@@ -18,7 +19,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: '#F2F7FF',
-    paddingTop: theme.spacing(15),
+    paddingTop: theme.spacing(12),
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('md')]: {
@@ -77,7 +78,7 @@ const useStyles = makeStyles(theme => ({
   },
   copyRightPadding: {
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(4)
+    paddingBottom: theme.spacing(3)
   }
 }));
 
@@ -203,13 +204,33 @@ function Footer({ className, ...rest }) {
           </Grid>
         </Grid>
         <Grid className={classes.copyRightPadding}>
-          <Typography variant="body2" color="textSecondary">
+          <Typography display="block" variant="body2" color="textSecondary">
             {'Copyright © '}
             {new Date().getFullYear()}{' '}
             <Link color="inherit" href="https://codeforcause.org">
               Code For Cause
             </Link>
             {'. All rights reserved.'}
+          </Typography>
+
+          <Typography
+            display="block"
+            guitterBottom
+            variant="body2"
+            color="textSecondary"
+          >
+            <Link
+              color="inherit"
+              component={RouterLink}
+              to="/documents/privacy"
+            >
+              Privacy Policy
+            </Link>
+            {' | '}
+
+            <Link color="inherit" component={RouterLink} to="/documents/terms">
+              Terms of Use
+            </Link>
           </Typography>
         </Grid>
       </Container>

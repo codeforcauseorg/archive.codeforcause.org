@@ -1,16 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  Hidden,
-  IconButton,
-  Link,
-  makeStyles
-} from '@material-ui/core';
-import { Menu as MenuIcon } from 'react-feather';
+import { AppBar, Box, Toolbar, makeStyles } from '@material-ui/core';
 import Logo from 'src/components/Logo';
 
 const useStyles = makeStyles(theme => ({
@@ -19,7 +10,13 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.primary,
     boxShadow: 'none',
     borderBottom: `1px solid ${theme.palette.divider}`,
-    zIndex: theme.zIndex.drawer + 100
+    zIndex: theme.zIndex.drawer + 100,
+    paddingLeft: 70,
+    paddingRight: 70,
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    }
   },
   toolbar: {
     height: 64
@@ -29,37 +26,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function TopBar({ onMobileNavOpen }) {
+function TopBar() {
   const classes = useStyles();
 
   return (
     <AppBar className={classes.root}>
       <Toolbar className={classes.toolbar}>
-        <Hidden lgUp>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            onClick={onMobileNavOpen}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Hidden>
-        <Hidden mdDown>
-          <RouterLink to="/">
-            <Logo />
-          </RouterLink>
-        </Hidden>
+        <RouterLink to="/">
+          <Logo />
+        </RouterLink>
         <Box ml={2} flexGrow={1} />
-        <Link
-          className={classes.link}
-          color="textSecondary"
-          component={RouterLink}
-          to="/app"
-          underline="none"
-          variant="body2"
-        >
-          Dashboard
-        </Link>
       </Toolbar>
     </AppBar>
   );
