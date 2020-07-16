@@ -1,3 +1,31 @@
+// event data------------------
+export const events = [
+  {
+    img: 'https://img.youtube.com/vi/bAp8YJAJ5Ek/hqdefault.jpg',
+    title: 'Machine Learning',
+    link: 'https://www.youtube.com/watch?v=bAp8YJAJ5Ek',
+    type: 'Webinar',
+    description: 'Collecting and Generating data with Pandas',
+    date_time: 'July 16, 7pm IST'
+  },
+  {
+    img: 'https://img.youtube.com/vi/Ir9FNhoPyYc/hqdefault.jpg',
+    title: 'Machine Learning Web',
+    link: 'https://www.youtube.com/watch?v=Ir9FNhoPyYc',
+    type: 'Webinar',
+    description: 'Machine Learning for the web with TensorFlow.js',
+    date_time: 'July 19, 9:30pm IST'
+  },
+  {
+    img: 'https://img.youtube.com/vi/QHS7_IwTMcc/hqdefault.jpg',
+    title: 'Web Development',
+    link: 'https://www.youtube.com/watch?v=QHS7_IwTMcc',
+    type: 'Webinar',
+    description: 'What is Web API? Hands-on with GitHub API',
+    date_time: 'July 7, 6pm IST'
+  }
+];
+
 // mentors data----------------
 
 export const mentors = [

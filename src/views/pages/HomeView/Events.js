@@ -14,8 +14,9 @@ import {
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import { events } from './HomeViewData';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.LIGHT,
     padding: '30px 0',
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
   },
   cardMedia: {
-    paddingTop: '61.25%', // 16:9
+    paddingTop: '55.75%', // set 61.25% for 16:9 or highresolution images--- currently set to 55.75% to fit hqquality images.
   },
   cardContent: {
     flexGrow: 1
@@ -88,32 +89,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#00FF75'
   },
 }));
-const events = [
-  {
-    img: '/static/images/events/mlboot/session2.jpg',
-    title: 'Machine Learning',
-    link: 'https://www.youtube.com/watch?v=FAposp6k-lA',
-    type: 'Webinar',
-    description: 'Image Processing with NumPy and OpenCV',
-    date_time: 'July 12, 7pm IST'
-  },
-  {
-    img: '/static/images/events/mlboot/session1.jpg',
-    title: 'Machine Learning',
-    link: 'https://www.youtube.com/watch?v=ycvSMpsg7qk',
-    type: 'Webinar',
-    description: 'Introduction to Machine Learning',
-    date_time: 'July 11, 7pm IST'
-  },
-  {
-    img: '/static/images/events/workshops/api.png',
-    title: 'Web Development',
-    link: 'https://www.youtube.com/watch?v=QHS7_IwTMcc',
-    type: 'Webinar',
-    description: 'What is Web API? Hands-on with GitHub API',
-    date_time: 'July 7, 6pm IST'
-  }
-];
 
 function Events({ className, ...rest }) {
   const classes = useStyles();
