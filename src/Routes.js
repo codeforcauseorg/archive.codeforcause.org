@@ -2,6 +2,7 @@
 import React, { lazy, Suspense, Fragment } from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import MainLayout from 'src/layouts/MainLayout';
+import DocsLayout from 'src/layouts/DocsLayout';
 import HomeView from 'src/views/pages/HomeView';
 import LoadingScreen from 'src/components/LoadingScreen';
 
@@ -15,6 +16,25 @@ const routesConfig = [
     exact: true,
     path: '/404',
     component: lazy(() => import('src/views/pages/Error404View'))
+  },
+  {
+    path: '/documents',
+    layout: DocsLayout,
+    routes: [
+      {
+        exact: true,
+        path: '/documents/privacy',
+        component: lazy(() => import('src/views/pages/documents/privacyView'))
+      },
+      {
+        exact: true,
+        path: '/documents/terms',
+        component: lazy(() => import('src/views/pages/documents/termsView'))
+      },
+      {
+        component: () => <Redirect to="/404" />
+      }
+    ]
   },
   {
     path: '*',
