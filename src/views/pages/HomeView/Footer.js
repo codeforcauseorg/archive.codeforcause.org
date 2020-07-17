@@ -219,16 +219,12 @@ function Footer({ className, ...rest }) {
             variant="body2"
             color="textSecondary"
           >
-            <Link
-              color="inherit"
-              component={RouterLink}
-              to="/documents/privacy"
-            >
+            <Link color="inherit" component={RouterLink} to="/privacy">
               Privacy Policy
             </Link>
             {' | '}
 
-            <Link color="inherit" component={RouterLink} to="/documents/terms">
+            <Link color="inherit" component={RouterLink} to="/terms">
               Terms of Use
             </Link>
           </Typography>
