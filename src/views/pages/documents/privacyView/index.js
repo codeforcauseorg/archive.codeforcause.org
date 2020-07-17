@@ -5,7 +5,7 @@ const Content = lazy(() => import('!babel-loader!mdx-loader!./Content.mdx'));
 
 function privacyView() {
   return (
-    <Page title="Welcome">
+    <Page title="Privacy Policy">
       <Suspense fallback={null}>
         <Content />
       </Suspense>
