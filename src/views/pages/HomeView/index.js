@@ -12,6 +12,8 @@ import MentorExperience from './MentorExperience';
 import WatchOurVideoView from './WatchVideos';
 import { experience, mentors } from './HomeViewData';
 
+import TestimonialCard from './Testimonials/TestimonialCard';
+
 const useStyles = makeStyles(() => ({
   root: {}
 }));
@@ -26,6 +28,7 @@ function HomeView() {
       <Events id="events" />
       <MentorExperience experience={experience} />
       <StandForSection id="about" />
+      <TestimonialCard />
       <Team id="team" mentors={mentors} />
       <WatchOurVideoView />
       <CTA id="actions" />
