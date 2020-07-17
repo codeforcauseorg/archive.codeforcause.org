@@ -18,17 +18,23 @@ const routesConfig = [
     component: lazy(() => import('src/views/pages/Error404View'))
   },
   {
-    path: '/documents',
+    path: '/privacy',
     layout: DocsLayout,
     routes: [
       {
         exact: true,
-        path: '/documents/privacy',
+        path: '/privacy',
         component: lazy(() => import('src/views/pages/documents/privacyView'))
-      },
+      }
+    ]
+  },
+  {
+    path: '/terms',
+    layout: DocsLayout,
+    routes: [
       {
         exact: true,
-        path: '/documents/terms',
+        path: '/terms',
         component: lazy(() => import('src/views/pages/documents/termsView'))
       },
       {

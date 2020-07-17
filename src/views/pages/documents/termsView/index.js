@@ -5,7 +5,7 @@ const Content = lazy(() => import('!babel-loader!mdx-loader!./Content.mdx'));
 
 function termsView() {
   return (
-    <Page title="Welcome">
+    <Page title="Terms of Use">
       <Suspense fallback={null}>
         <Content />
       </Suspense>
