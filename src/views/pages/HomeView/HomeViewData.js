@@ -160,5 +160,23 @@ export const whatWeStandForDescription = ' We aim to provide a real world practi
       msg: 'CFC Testimonial msg',
       img: '/static/images.icons/os3.svg',
       name: 'Name1'
+    },
+    {
+      id: 2,
+      msg: 'CFC Testimonial msg 2',
+      img: '/static/images.icons/os3.svg',
+      name: 'Name2'
+    },
+    {
+      id: 3,
+      msg: 'CFC Testimonial msg 3',
+      img: '/static/images.icons/os3.svg',
+      name: 'Name3'
+    },
+    {
+      id: 4,
+      msg: 'CFC Testimonial msg 4',
+      img: '/static/images.icons/os3.svg',
+      name: 'Name4'
     }
   ]

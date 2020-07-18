@@ -10,9 +10,9 @@ import Team from './Team';
 import Promoters from './Promoters';
 import MentorExperience from './MentorExperience';
 import WatchOurVideoView from './WatchVideos';
-import { experience, mentors } from './HomeViewData';
+import { experience, students, mentors } from './HomeViewData';
 
-import TestimonialCard from './Testimonials/TestimonialCard';
+import Testimonials from './Testimonials/index'
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -28,7 +28,7 @@ function HomeView() {
       <Events id="events" />
       <MentorExperience experience={experience} />
       <StandForSection id="about" />
-      <TestimonialCard />
+      <Testimonials students={students} />
       <Team id="team" mentors={mentors} />
       <WatchOurVideoView />
       <CTA id="actions" />

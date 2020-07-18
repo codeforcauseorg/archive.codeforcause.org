@@ -22,26 +22,26 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function TestimonialCard() {
+function TestimonialCard({ student }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Box style={{ margin: '40px' }}>
+      <Box style={{ margin: '80px 10px' }}>
         <Paper elevation={3} style={{ padding: '40px 0px' }}>
           <FormatQuoteIcon
             fontSize="large"
             style={{ margin: '0px 50px', color: 'purple' }}
           />
           <Typography variant="h3" align="center" style={{ fontSize: '20px' }}>
-            Some review
+            {student.msg}
           </Typography>
         </Paper>
         <Box style={{ margin: '10px 47px' }}>
           <Avatar alt="Student 1" src="./quote.png" className={classes.small} />
         </Box>
         <Typography variant="h6" align="center">
-          Name
+          {student.name}
         </Typography>
       </Box>
     </div>
