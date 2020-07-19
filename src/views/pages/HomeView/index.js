@@ -12,7 +12,7 @@ import MentorExperience from './MentorExperience';
 import WatchOurVideoView from './WatchVideos';
 import { experience, students, mentors } from './HomeViewData';
 
-import Testimonials from './Testimonials/index'
+import Testimonials from './Testimonials/index';
 
 const useStyles = makeStyles(() => ({
   root: {}

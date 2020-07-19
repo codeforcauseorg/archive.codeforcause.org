@@ -8,7 +8,7 @@ import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,13 +40,17 @@ function TestimonialCard({ student }) {
           <Typography variant="h3" align="center" style={{ fontSize: '20px' }}>
             {student.msg}
           </Typography>
-          </Message>
+        </Message>
         <Box style={{ margin: '2rem 7rem' }}>
-          <Avatar alt="Student 1" src="./quote.png" className={classes.small} />
-      
-        <Typography variant="h6" align="center" style={{margin: '0px -10px'}}>
-          {student.name}
-        </Typography>
+          <Avatar alt={student.name} src="./quote.png" className={classes.small} />
+
+          <Typography
+            variant="h6"
+            align="center"
+            style={{ margin: '0px -10px' }}
+          >
+            {student.name}
+          </Typography>
         </Box>
       </Box>
     </div>
@@ -54,34 +58,33 @@ function TestimonialCard({ student }) {
 }
 
 const Message = styled.div`
-position: relative;
-height: 200px;
-width: 250px;
-max-width: 400px;
-background: white;
-border: 0.5px solid black;
-padding: 40px 20px;
-box-sizing: box-order;
-&:after {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-top: 0px solid black;
-  border-right: 0.5px solid black;
-  border-bottom: 0.5px solid black;
-  border-left: 0px solid black;
-  top: 100%;
-  left: 50%;
-  margin-left: -10px;
-  content: "";
-  transform: rotate(45deg);
-  margin-top: -10px;
+  position: relative;
+  height: 200px;
+  width: 250px;
+  max-width: 400px;
   background: white;
-}
-&:hover {
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-}
-`
-
+   border: 0.5px solid black;
+  padding: 40px 20px;
+  box-sizing: box-order;
+  &:after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 0px solid black;
+    border-right: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    border-left: 0px solid black;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    content: '';
+    transform: rotate(45deg);
+    margin-top: -10px;
+    background: white;
+  }
+  &:hover {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+`;
 
 export default TestimonialCard;
