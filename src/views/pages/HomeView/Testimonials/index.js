@@ -4,13 +4,14 @@ import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
 
 import TestimonialCard from './TestimonialCard';
 
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles(theme => ({
   root: {
+    flexGrow: 1,
     backgroundColor: 'white',
     padding: theme.spacing(10),
     paddingLeft: 70,
     paddingRight: 70,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       paddingLeft: 15,
       paddingRight: 15
     }
@@ -33,9 +34,9 @@ const Testimonials = ({ students }) => {
         >
           What do our Mentees Say About Us
         </Typography>
-        <Grid container component="dl" style={{ padding: '20px' }}>
+        <Grid container spacing={2} component="div">
           {students.map((student, i) => (
-            <Grid item key={i} md={3} sm={3} xs={6}>
+            <Grid item key={i} md={3} sm={6} xs={12}>
               <TestimonialCard student={student} />
             </Grid>
           ))}
