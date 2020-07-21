@@ -1,13 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Box from '@material-ui/core/Box';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import '@emotion/core';
 import styled from '@emotion/styled';
 
 const useStyles = makeStyles(theme => ({
@@ -42,7 +41,11 @@ function TestimonialCard({ student }) {
           </Typography>
         </Message>
         <Box style={{ margin: '2rem 7rem' }}>
-          <Avatar alt={student.name} src="./quote.png" className={classes.small} />
+          <Avatar
+            alt={student.name}
+            src="./quote.png"
+            className={classes.small}
+          />
 
           <Typography
             variant="h6"
@@ -63,7 +66,7 @@ const Message = styled.div`
   width: 250px;
   max-width: 400px;
   background: white;
-   border: 0.5px solid black;
+  border: 0.5px solid black;
   padding: 40px 20px;
   box-sizing: box-order;
   &:after {

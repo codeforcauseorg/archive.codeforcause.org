@@ -46,4 +46,8 @@ const Testimonials = ({ students }) => {
   );
 };
 
+Testimonials.propTypes = {
+  students: PropTypes.array.isRequired
+};
+
 export default Testimonials;
