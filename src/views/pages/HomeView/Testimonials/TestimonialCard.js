@@ -1,3 +1,4 @@
+//eslint-disable-next-line
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -6,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 /** @jsx jsx */
-import '@emotion/core';
+import {jsx} from '@emotion/core';
 import styled from '@emotion/styled';
 
 const useStyles = makeStyles(theme => ({
