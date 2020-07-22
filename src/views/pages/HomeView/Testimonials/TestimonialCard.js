@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    padding: '130px 0px',
     '& > *': {
       margin: theme.spacing(1),
       width: theme.spacing(16),
@@ -31,29 +32,36 @@ function TestimonialCard({ student }) {
 
   return (
     <div className={classes.root}>
-      <Box style={{ margin: '80px 10px' }}>
+      <Box style={{ margin: '20px 10px'}}>
         <Message>
           <FormatQuoteIcon
             fontSize="large"
-            style={{ margin: '0px 80px', color: 'purple' }}
+            style={{ margin: '0px 115px', color: 'purple' }}
           />
           <Typography variant="h3" align="center" style={{ fontSize: '20px' }}>
             {student.msg}
           </Typography>
         </Message>
-        <Box style={{ margin: '2rem 7rem' }}>
+        <Box style={{ margin: '2.3rem 8.2rem' }}>
           <Avatar
             alt={student.name}
             src="./quote.png"
-            className={classes.small}
+            className={classes.large}
           />
 
           <Typography
-            variant="h6"
+            variant="h5"
             align="center"
-            style={{ margin: '0px -10px' }}
+            style={{ margin: '10px -5px' }}
           >
             {student.name}
+          </Typography>
+          <Typography
+            variant="h7"
+            align="center"
+            style={{ margin: '10px' }}
+          >
+            {student.subName}
           </Typography>
         </Box>
       </Box>
@@ -64,10 +72,10 @@ function TestimonialCard({ student }) {
 const Message = styled.div`
   position: relative;
   height: 200px;
-  width: 250px;
+  width: 300px;
   max-width: 400px;
   background: white;
-  border: 0.5px solid black;
+
   padding: 40px 20px;
   box-sizing: box-order;
   &:after {
@@ -75,9 +83,7 @@ const Message = styled.div`
     width: 20px;
     height: 20px;
     border-top: 0px solid black;
-    border-right: 0.5px solid black;
-    border-bottom: 0.5px solid black;
-    border-left: 0px solid black;
+   
     top: 100%;
     left: 50%;
     margin-left: -10px;

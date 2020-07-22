@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative'
   },
   cardMedia: {
-    paddingTop: '61.25%' // 16:9
+    paddingTop: '55.75%' // 16:9
   },
   cardContent: {
     flexGrow: 1
