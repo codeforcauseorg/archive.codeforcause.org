@@ -39,7 +39,7 @@ function Promoters({ className, ...rest }) {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={5}>
             <Typography variant="h4" gutterBottom>
               Our mentors are associated with
             </Typography>
@@ -51,11 +51,10 @@ function Promoters({ className, ...rest }) {
             <img alt="Logo" src="/static/images/promoters/microsoft.svg" />
           </Grid>
           <Grid item xs={6} md={2}>
-            <img alt="Logo" src="/static/images/promoters/ibm.svg" />
-          </Grid>
-
-          <Grid item xs={6} md={2}>
             <img alt="Logo" src="/static/images/promoters/redhat.svg" />
+          </Grid>
+          <Grid item xs={6} md={1}>
+            <img alt="Logo" src="/static/images/promoters/ibm.svg" />
           </Grid>
         </Grid>
       </Container>
