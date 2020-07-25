@@ -29,7 +29,8 @@ const useStyles = makeStyles(theme => ({
     height: 90,
     '&:hover': {
       scale: 1.2,
-      transition: 'ease-in .2s'
+      transition: 'ease-in .2s',
+      opacity: '0.8'
     },
     [theme.breakpoints.down('sm')]: {
       height: 120,

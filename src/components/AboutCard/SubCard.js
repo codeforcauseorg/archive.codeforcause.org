@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, makeStyles } from '@material-ui/core';
+import { Grid, Typography, makeStyles, Box } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,14 +20,16 @@ const SubCard = ({ point }) => {
   return (
     <Grid container className={classes.root}>
       <Grid item md={2}>
-        <img alt="Select file" height="55px" src={point.img} />
+        <img alt="title-img" style={{ marginTop: '6px' }} height="55px" src={point.img} />
       </Grid>
       <Grid item md={10}>
+
         <Typography
           className={classes.extraMargin}
-          align="justify"
-          variant="subtitle2"
+          variant="subtitle1"
         >
+          <Box component="span" style={{ fontWeight: 'bold' }} display="inline-block">{`${point.contentTitle} :`}</Box>
+          {` `}
           {point.content}
         </Typography>
       </Grid>

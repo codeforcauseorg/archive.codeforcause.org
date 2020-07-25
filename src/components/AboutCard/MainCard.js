@@ -9,6 +9,7 @@ const useStyles = makeStyles(theme => ({
     padding: 0
   },
   card: {
+    minHeight: '628px',
     backgroundColor: '#EEF5FF',
     borderRadius: '10px',
     padding: '50px 30px'
