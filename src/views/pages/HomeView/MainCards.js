@@ -21,10 +21,10 @@ function MainCards({ className, ...rest }) {
   return (
     <Container className={clsx(classes.root, className)} {...rest}>
       <Grid alignItems="center" container justify="center" spacing={8}>
-        <Grid item md={6} sm={6} xs={12}>
+        <Grid item md={6} xs={12}>
           <MainCard content={openKnowledgeContent} />
         </Grid>
-        <Grid item md={6} sm={6} xs={12}>
+        <Grid item md={6} xs={12}>
           <MainCard content={openSourceContent} />
         </Grid>
       </Grid>

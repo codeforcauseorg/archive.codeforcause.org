@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, makeStyles, Container, Hidden } from '@material-ui/core';
+import { Typography, makeStyles, Container } from '@material-ui/core';
 import SubCard from './SubCard';
 
 const useStyles = makeStyles(theme => ({
@@ -25,11 +25,11 @@ function MainCard({ content, ...props }) {
       <Typography variant="subtitle1" className={classes.content}>
         {content.about}
       </Typography>
-      <Hidden smDown>
+      <>
         {content.points.map(point => (
           <SubCard key={point.id} point={point} />
         ))}
-      </Hidden>
+      </>
     </Container>
   );
 }
