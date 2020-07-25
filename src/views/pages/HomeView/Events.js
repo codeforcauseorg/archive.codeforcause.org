@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import {
-  Link,
   Box,
   Button,
   Container,
@@ -63,6 +62,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       marginBottom: '20px'
+    },
+    '&:hover': {
+      backgroundColor: '#000',
+      opacity: '0.8',
     }
   },
   btn: {
@@ -192,18 +195,8 @@ function Events({ className, ...rest }) {
                 </Grid>
               </Box>
               <Typography className={classes.secondaryText}>
-                Our Youtube Channel for
-                <Link
-                  style={{
-                    color: '#a60000'
-                  }}
-                  component="a"
-                  href="https://www.youtube.com/c/CodeforCause/videos"
-                  target="_blank"
-                >
-                  {` Previous Webinars`}
-                </Link>
-              </Typography>
+                Our Youtube Channel for Upcoming Webinars
+               </Typography>
             </div>
           </Grid>
         </Grid>

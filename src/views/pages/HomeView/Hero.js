@@ -55,12 +55,15 @@ const useStyles = makeStyles(theme => ({
   hide: {
     display: 'none'
   },
-  Button: {
+  btn: {
     backgroundColor: '#A60000',
     color: '#ffffff',
     textTransform: 'capitalize',
     [theme.breakpoints.down('sm')]: {
       width: '100%'
+    },
+    '&:hover': {
+      backgroundColor: 'rgba(166, 0, 0, 0.8)',
     }
   }
 }));
@@ -81,11 +84,10 @@ function Hero({ className, ...rest }) {
               className={clsx(classes.extraPadding, className)}
             >
               <Typography
-                variant="h4"
+                variant="h1"
                 gutterBottom
-                style={{ color: '#A60000' }}
               >
-                Welcome to
+                Learn for Cause
               </Typography>
               <Typography variant="h1">Code for Cause</Typography>
               <Hidden mdUp>
@@ -109,7 +111,7 @@ function Hero({ className, ...rest }) {
                 <Grid container xs={12} md={12}>
                   <Grid item xs={12} md={12}>
                     <Button
-                      className={classes.Button}
+                      className={classes.btn}
                       component="a"
                       href="https://youtube.com/codeforcause"
                       target="_blank"

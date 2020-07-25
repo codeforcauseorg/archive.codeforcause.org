@@ -50,7 +50,11 @@ const useStyles = makeStyles(theme => ({
   },
   primeBtn: {
     backgroundColor: '#A60000',
-    color: '#ffffff'
+    color: '#ffffff',
+    '&:hover': {
+      backgroundColor: '#A60000',
+      opacity: '0.8',
+    }
   },
   secondaryBtn: {
     borderColor: '#A60000',
