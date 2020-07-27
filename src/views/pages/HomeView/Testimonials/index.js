@@ -8,9 +8,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: 'white',
-    padding: theme.spacing(10),
     paddingLeft: 70,
     paddingRight: 70,
+    paddingTop: 100,
+    paddingBottom: 170,
     [theme.breakpoints.down('xs')]: {
       paddingLeft: 15,
       paddingRight: 15
