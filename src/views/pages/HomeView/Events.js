@@ -37,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    position: 'relative',
+    position: 'relative'
   },
   cardMedia: {
-    paddingTop: '55.75%', // set 61.25% for 16:9 or highresolution images--- currently set to 55.75% to fit hqquality images.
+    paddingTop: '55.75%' // 16:9
   },
   cardContent: {
     flexGrow: 1
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '0px 5px 5px 0px',
     color: 'black',
     backgroundColor: '#00FF75'
-  },
+  }
 }));
 
 function Events({ className, ...rest }) {
@@ -116,22 +116,21 @@ function Events({ className, ...rest }) {
               md={4}
             >
               <Card className={classes.card}>
-                {
-                  event.date_time ? (
-                    <div className={classes.eventdate}>
-                      <Typography
-                        variant="caption"
-                        style={{
-                          padding: '0px 12px',
-                          fontWeight: 500
-                        }}
-                      >
-                        {event.date_time}
-                      </Typography>
-                    </div>
-                  )
-                    : <></>
-                }
+                {event.date_time ? (
+                  <div className={classes.eventdate}>
+                    <Typography
+                      variant="caption"
+                      style={{
+                        padding: '0px 12px',
+                        fontWeight: 500
+                      }}
+                    >
+                      {event.date_time}
+                    </Typography>
+                  </div>
+                ) : (
+                  <></>
+                )}
                 <CardMedia
                   className={classes.cardMedia}
                   image={event.img}

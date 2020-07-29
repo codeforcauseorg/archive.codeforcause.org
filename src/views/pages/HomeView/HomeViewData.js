@@ -156,7 +156,39 @@ export const openSourceContent = {
   ]
 };
 
-export const whatWeStandForDescription = ' We aim to provide a real world practical learning experience and'
-  + 'keep students informed about the latest trends in technology,'
-  + 'open-source and opportunities, so that they can keep up with the'
-  + 'fast-paced digital world by following a pi-shaped learning pattern.';
+export const whatWeStandForDescription =
+  ' We aim to provide a real world practical learning experience and' +
+  'keep students informed about the latest trends in technology,' +
+  'open-source and opportunities, so that they can keep up with the' +
+  'fast-paced digital world by following a pi-shaped learning pattern.';
+
+export const students = [
+  {
+    id: 1,
+    msg: 'Thank you for the great ML webinars this is just a small gesture :)',
+    img: '/static/images.icons/os3.svg',
+    name: 'Sarthak',
+    subName: 'Dell'
+  },
+  {
+    id: 2,
+    msg: 'CFC Testimonial msg 2',
+    img: '/static/images.icons/os3.svg',
+    name: 'Name2',
+    subName: 'Dell'
+  },
+  {
+    id: 3,
+    msg: 'CFC Testimonial msg 3',
+    img: '/static/images.icons/os3.svg',
+    name: 'Name3',
+    subName: 'Dell'
+  },
+  {
+    id: 4,
+    msg: 'CFC Testimonial msg 4',
+    img: '/static/images.icons/os3.svg',
+    name: 'Name4',
+    subName: 'Dell'
+  }
+];
