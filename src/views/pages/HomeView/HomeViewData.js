@@ -150,7 +150,6 @@ export const openSourceContent = {
       img: '/static/images/icons/os3.svg',
       contentTitle: 'Networking Events',
       content:
-
         'As we already know software development professionals flourish by networking. Get connected to people who matter by our online/offline events.'
     }
   ]

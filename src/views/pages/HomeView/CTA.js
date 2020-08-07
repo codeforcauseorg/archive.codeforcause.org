@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     color: '#ffffff',
     '&:hover': {
       backgroundColor: '#A60000',
-      opacity: '0.8',
+      opacity: '0.8'
     }
   },
   secondaryBtn: {

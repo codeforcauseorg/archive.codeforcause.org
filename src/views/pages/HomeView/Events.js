@@ -15,7 +15,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import { events } from './HomeViewData';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.LIGHT,
     padding: '30px 0',
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
     '&:hover': {
       backgroundColor: '#000',
-      opacity: '0.8',
+      opacity: '0.8'
     }
   },
   btn: {
@@ -195,7 +195,7 @@ function Events({ className, ...rest }) {
               </Box>
               <Typography className={classes.secondaryText}>
                 Our Youtube Channel for Upcoming Webinars
-               </Typography>
+              </Typography>
             </div>
           </Grid>
         </Grid>

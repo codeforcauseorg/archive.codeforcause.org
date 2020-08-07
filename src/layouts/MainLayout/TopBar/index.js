@@ -68,6 +68,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
     >
       <List>
         {[
+          { title: 'Campus Leaders', link: '/campusLeaders' },
           { title: 'Events', link: '#events' },
           { title: 'About', link: '#about' },
           { title: 'Team', link: '#team' },
@@ -130,6 +131,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
         </RouterLink>
         <Hidden smDown>
           <Box ml={2} flexGrow={1} />
+          <Item title="Campus Leaders" link="/campusLeaders" />
           <Item title="Events" link="#events" />
           <Item title="About" link="#about" />
           <Item title="Team" link="#team" />

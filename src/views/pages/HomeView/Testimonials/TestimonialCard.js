@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 /** @jsx jsx */
-import {jsx} from '@emotion/core';
+import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +32,7 @@ function TestimonialCard({ student }) {
 
   return (
     <div className={classes.root}>
-      <Box style={{ margin: '20px 10px'}}>
+      <Box style={{ margin: '20px 10px' }}>
         <Message>
           <FormatQuoteIcon
             fontSize="large"
@@ -56,11 +56,7 @@ function TestimonialCard({ student }) {
           >
             {student.name}
           </Typography>
-          <Typography
-            variant="h7"
-            align="center"
-            style={{ margin: '10px' }}
-          >
+          <Typography variant="h7" align="center" style={{ margin: '10px' }}>
             {student.subName}
           </Typography>
         </Box>
@@ -83,7 +79,7 @@ const Message = styled.div`
     width: 20px;
     height: 20px;
     border-top: 0px solid black;
-   
+
     top: 100%;
     left: 50%;
     margin-left: -10px;
