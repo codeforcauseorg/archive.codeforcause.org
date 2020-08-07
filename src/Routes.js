@@ -4,6 +4,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import MainLayout from 'src/layouts/MainLayout';
 import DocsLayout from 'src/layouts/DocsLayout';
 import HomeView from 'src/views/pages/HomeView';
+import CAView from 'src/views/pages/CAView';
 import LoadingScreen from 'src/components/LoadingScreen';
 
 const routesConfig = [
@@ -36,6 +37,20 @@ const routesConfig = [
         exact: true,
         path: '/terms',
         component: lazy(() => import('src/views/pages/documents/termsView'))
+      },
+      {
+        component: () => <Redirect to="/404" />
+      }
+    ]
+  },
+  {
+    path: '/campusLeaders',
+    layout: MainLayout,
+    routes: [
+      {
+        exact: true,
+        path: '/campusLeaders',
+        component: CAView
       },
       {
         component: () => <Redirect to="/404" />

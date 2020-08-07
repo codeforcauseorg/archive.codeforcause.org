@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography, makeStyles, Box, Hidden } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: 0,
     paddingTop: '40px',
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       margin: '0 auto',
       float: 'none',
-      textAlign: 'center',
+      textAlign: 'center'
     }
   },
   contentTitle: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     float: 'left',
     [theme.breakpoints.down('xs')]: {
-      float: 'none',
+      float: 'none'
     }
   }
 }));
@@ -41,7 +41,12 @@ const SubCard = ({ point }) => {
   return (
     <Grid container className={classes.root}>
       <Grid className={classes.image} item sm={2} xs={12}>
-        <img alt="title-img" style={{ marginTop: '6px' }} height="55px" src={point.img} />
+        <img
+          alt="title-img"
+          style={{ marginTop: '6px' }}
+          height="55px"
+          src={point.img}
+        />
       </Grid>
       <Grid item sm={10} xs={12}>
         <Typography
@@ -49,10 +54,15 @@ const SubCard = ({ point }) => {
           align="justify"
           variant="subtitle1"
         >
-          <Box component="span" className={classes.contentTitle} display="inline-block">{`${ point.contentTitle }`}</Box>
-          
+          <Box
+            component="span"
+            className={classes.contentTitle}
+            display="inline-block"
+          >{`${point.contentTitle}`}</Box>
+
           <Hidden xsDown>
-            <strong> : </strong>{ point.content }
+            <strong> : </strong>
+            {point.content}
           </Hidden>
         </Typography>
       </Grid>
