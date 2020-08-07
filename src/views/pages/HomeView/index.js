@@ -4,7 +4,7 @@ import Page from 'src/components/Page';
 import Hero from './Hero';
 import Events from './Events';
 import CTA from './CTA';
-import Footer from './Footer';
+import Footer from '../common/Footer';
 import StandForSection from './StandForView';
 import Team from './Team';
 import Promoters from './Promoters';

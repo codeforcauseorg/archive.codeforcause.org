@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
-    },
+    }
   },
   main: {
     display: 'flex',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0px',
-    color: '#FFF',
+    color: '#FFF'
   },
   btn: {
     backgroundColor: '#A60000',
@@ -42,7 +42,6 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: 'rgba(166, 0, 0, 0.8)'
     }
   }
-
 }));
 
 function Hero({ className, ...rest }) {
@@ -52,9 +51,7 @@ function Hero({ className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <div className={classes.main}>
-          <Typography variant="h1">
-            Campus Leaders
-              </Typography>
+          <Typography variant="h1">Campus Leaders</Typography>
           <Box mt={2}>
             <Typography variant="body1" align="center">
               Stand Up and fight for the Cause with the Code For Cause
@@ -70,9 +67,8 @@ function Hero({ className, ...rest }) {
               variant="contained"
             >
               Apply Now
-                    </Button>
+            </Button>
           </Box>
-
         </div>
       </Container>
     </div>
