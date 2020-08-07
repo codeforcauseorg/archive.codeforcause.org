@@ -4,14 +4,12 @@ import clsx from 'clsx';
 
 import {
     Box,
-    Button,
     Container,
     Grid,
     Hidden,
     Typography,
     makeStyles
 } from '@material-ui/core';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 
 const useStyles = makeStyles(theme => ({
