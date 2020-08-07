@@ -6,54 +6,30 @@ import {
   Box,
   Button,
   Container,
-  Grid,
-  Hidden,
   Typography,
   makeStyles
 } from '@material-ui/core';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    minHeight: '350px',
     color: '#FFF',
     background,
-    paddingTop: 80,
-    paddingBottom: 60,
-    paddingLeft: 70,
-    paddingRight: 70,
+    padding: '100px 70px',
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
-    }
-  },
-  extraPadding: {
-    padding: '0 70px 0px 0px',
-    textAlign: 'justify',
-    [theme.breakpoints.down('sm')]: {
-      padding: '0'
-    }
-  },
-  image: {
-    perspectiveOrigin: 'left center',
-    transformStyle: 'preserve-3d',
-    perspective: 1500,
-    '& > img': {
-      maxWidth: '100%',
-      height: 'auto',
-      backfaceVisibility: 'hidden'
     },
-    [theme.breakpoints.down('md')]: {
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-      justifyContent: 'center'
-    }
   },
-  hide: {
-    display: 'none'
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '0px',
+    color: '#FFF',
   },
   btn: {
     backgroundColor: '#A60000',
@@ -66,6 +42,7 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: 'rgba(166, 0, 0, 0.8)'
     }
   }
+
 }));
 
 function Hero({ className, ...rest }) {
@@ -74,68 +51,29 @@ function Hero({ className, ...rest }) {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              height="100%"
-              className={clsx(classes.extraPadding, className)}
-            >
-              <Typography variant="h1" gutterBottom>
-                Learn for Cause
+        <div className={classes.main}>
+          <Typography variant="h1">
+            Campus Leaders
               </Typography>
-              <Typography variant="h1">Code for Cause</Typography>
-              <Hidden mdUp>
-                <Box mt={6} mb={2}>
-                  <div className={classes.image}>
-                    <img
-                      alt="codeforcauseimg"
-                      src="/static/home/codeforcause.svg"
-                    />
-                  </div>
-                </Box>
-              </Hidden>
-              <Box mt={5}>
-                <Typography variant="body1">
-                  An initiative to help the community by providing training,
-                  guidance and awareness about the possibilities in the software
-                  field to students &amp; professionals.
-                </Typography>
-              </Box>
-              <Box mt={4}>
-                <Grid container xs={12} md={12}>
-                  <Grid item xs={12} md={12}>
-                    <Button
-                      className={classes.btn}
-                      component="a"
-                      href="https://youtube.com/codeforcause"
-                      target="_blank"
-                      size="large"
-                      variant="contained"
-                    >
-                      <PlayArrowIcon style={{ paddingRight: 5 }} />
-                      Watch Our Videos
+          <Box mt={2}>
+            <Typography variant="body1" align="center">
+              Stand Up and fight for the Cause with the Code For Cause
+            </Typography>
+          </Box>
+          <Box mt={2}>
+            <Button
+              className={classes.btn}
+              component="a"
+              href="https://youtube.com/codeforcause"
+              target="_blank"
+              size="large"
+              variant="contained"
+            >
+              Apply Now
                     </Button>
-                  </Grid>
-                </Grid>
-              </Box>
-            </Box>
-          </Grid>
-          <Hidden smDown>
-            <Grid item xs={12} md={6}>
-              <Box>
-                <div className={classes.image}>
-                  <img
-                    alt="codeforcauseimg"
-                    src="/static/home/codeforcause.svg"
-                  />
-                </div>
-              </Box>
-            </Grid>
-          </Hidden>
-        </Grid>
+          </Box>
+
+        </div>
       </Container>
     </div>
   );
