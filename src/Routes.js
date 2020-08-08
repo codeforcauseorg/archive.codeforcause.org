@@ -4,7 +4,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import MainLayout from 'src/layouts/MainLayout';
 import DocsLayout from 'src/layouts/DocsLayout';
 import HomeView from 'src/views/pages/HomeView';
-import CAView from 'src/views/pages/CAView';
+import CAView from 'src/views/pages/CLView';
 import LoadingScreen from 'src/components/LoadingScreen';
 
 const routesConfig = [

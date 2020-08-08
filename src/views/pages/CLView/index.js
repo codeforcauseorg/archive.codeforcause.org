@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
   root: {}
 }));
 
-function HomeView() {
+function CLView() {
   const classes = useStyles();
 
   return (
@@ -30,4 +30,4 @@ function HomeView() {
   );
 }
 
-export default HomeView;
+export default CLView;
