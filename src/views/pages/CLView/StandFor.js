@@ -15,16 +15,16 @@ const useStyles = makeStyles(theme => ({
   root: {
     background: '#FFF',
     paddingTop: 80,
-    paddingBottom: 60,
+    paddingBottom: 80,
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
-      paddingRight: 15
+      paddingRight: 15,
     }
   },
   extraPadding: {
-    padding: '0 70px 0px 0px',
+    padding: '0 35px',
     textAlign: 'justify',
     [theme.breakpoints.down('sm')]: {
       padding: '0'
@@ -64,6 +64,12 @@ const useStyles = makeStyles(theme => ({
   listPointers: {
     fontSize: '45px',
     marginRight: '5px'
+  },
+  extraMargin: {
+    marginTop: '50px',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '30px',
+    }
   }
 }));
 
@@ -82,7 +88,20 @@ function StandsFor({ className, ...rest }) {
         >
           What Does the Campus Leader Stands For
         </Typography>
-        <Grid container spacing={3} style={{ marginTop: '50px' }}>
+        <Grid container spacing={3} className={classes.extraMargin}>
+          <Hidden smDown>
+            <Grid item xs={12} md={6}>
+              <Box>
+                <div className={classes.image}>
+                  <img
+                    alt="What Does the Campus Leader Stands For"
+                    src="/static/campusLeaders/standFor.png"
+                  />
+                </div>
+              </Box>
+            </Grid>
+          </Hidden>
+
           <Grid item xs={12} md={6}>
             <Box
               display="flex"
@@ -101,27 +120,27 @@ function StandsFor({ className, ...rest }) {
                   from our campus leaders are
                 </Typography>
               </Box>
-              <Box mt={5}>
+              <Box mt={2}>
                 <Typography variant="body1">
                   He/she shall be entusiastic about going social and build &amp;
                   contribute for the community<h4>- An Initiative taker</h4>
                 </Typography>
               </Box>
-              <Box mt={4}>
+              <Box mt={2}>
                 <Typography variant="body1">
                   A Leader shall always have a way of talking people out from
                   problems and leading them to do that for others too{' '}
                   <h4> - A Community Builder</h4>
                 </Typography>
               </Box>
-              <Box mt={4}>
+              <Box mt={2}>
                 <Typography variant="body1">
                   He/she should be connecting to the resources available in
                   community that might help in building a better &amp; more
                   helpful community <h4>- A Resource Seeker</h4>
                 </Typography>
               </Box>
-              <Box mt={4}>
+              <Box mt={2}>
                 <Typography variant="body1">
                   Most sought after value - an effort maker and giving
                   peronality <h4>- An Investor</h4>
@@ -129,18 +148,6 @@ function StandsFor({ className, ...rest }) {
               </Box>
             </Box>
           </Grid>
-          <Hidden smDown>
-            <Grid item xs={12} md={6}>
-              <Box>
-                <div className={classes.image}>
-                  <img
-                    alt="codeforcauseimg"
-                    src="/static/campusLeaders/standFor.png"
-                  />
-                </div>
-              </Box>
-            </Grid>
-          </Hidden>
         </Grid>
       </Container>
     </div>
