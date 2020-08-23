@@ -6,9 +6,10 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
-import SettingsIcon from '@material-ui/icons/Settings';
-import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import VideoLabelIcon from '@material-ui/icons/VideoLabel';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import PeopleIcon from '@material-ui/icons/People';
+import VideocamIcon from '@material-ui/icons/Videocam';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import StepConnector from '@material-ui/core/StepConnector';
 
 const useQontoStepIconStyles = makeStyles({
@@ -47,8 +48,8 @@ function QontoStepIcon(props) {
       {completed ? (
         <Check className={classes.completed} />
       ) : (
-        <div className={classes.circle} />
-      )}
+          <div className={classes.circle} />
+        )}
     </div>
   );
 }
@@ -116,10 +117,12 @@ function ColorlibStepIcon(props) {
   const { active, completed } = props;
 
   const icons = {
-    1: <SettingsIcon />,
-    2: <GroupAddIcon />,
-    3: <VideoLabelIcon />,
-    4: <VideoLabelIcon />
+    1: <ListAltIcon />,
+
+    // 1: <SettingsIcon />,
+    2: <AssignmentTurnedInIcon />,
+    3: <VideocamIcon />,
+    4: <PeopleIcon />
   };
 
   return (

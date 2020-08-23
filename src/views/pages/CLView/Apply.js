@@ -11,13 +11,11 @@ import {
   Hidden
 } from '@material-ui/core';
 
-const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
 
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '350px',
     color: '#FFF',
-    background,
     padding: '100px 70px',
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
@@ -54,7 +52,7 @@ function Apply({ className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} {...rest}>
+    <div className={clsx(classes.root, className)} style={{ backgroundImage: 'url("/static/campusLeaders/apply.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} {...rest}>
       <Grid container maxWidth="lg">
         <Grid item lg={9} md={12} sm={12} xs={12} className={classes.applyleft}>
           <div className={classes.main}>

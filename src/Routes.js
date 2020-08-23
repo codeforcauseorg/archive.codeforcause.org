@@ -2,6 +2,7 @@
 import React, { lazy, Suspense, Fragment } from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import MainLayout from 'src/layouts/MainLayout';
+import CLLayout from 'src/layouts/CLLayout';
 import DocsLayout from 'src/layouts/DocsLayout';
 import HomeView from 'src/views/pages/HomeView';
 import CAView from 'src/views/pages/CLView';
@@ -46,7 +47,7 @@ const routesConfig = [
   },
   {
     path: '/campusLeaders',
-    layout: MainLayout,
+    layout: CLLayout,
     routes: [
       {
         exact: true,
@@ -108,8 +109,8 @@ const renderRoutes = routes =>
                     {route.routes ? (
                       renderRoutes(route.routes)
                     ) : (
-                      <Component {...props} />
-                    )}
+                        <Component {...props} />
+                      )}
                   </Layout>
                 </Guard>
               )}

@@ -10,13 +10,11 @@ import {
   makeStyles
 } from '@material-ui/core';
 
-const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
 
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '350px',
     color: '#FFF',
-    background,
     padding: '100px 70px',
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
@@ -48,7 +46,7 @@ function Hero({ className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} {...rest}>
+    <div className={clsx(classes.root, className)} style={{ backgroundImage: 'url("/static/campusLeaders/hero.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} {...rest}>
       <Container maxWidth="lg">
         <div className={classes.main}>
           <Typography variant="h1">Campus Leaders</Typography>
