@@ -52,9 +52,14 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
           <Logo className={classes.logo} />
         </RouterLink>
         <Hidden smDown>
+          <Box ml={2} flexGrow={1} />
+          <Box ml={2} flexGrow={0.05} />
+
           <Box ml={2}>
             <OpenSource />
           </Box>
+          <Box ml={2} flexGrow={0.05} />
+
         </Hidden>
       </Toolbar>
     </AppBar>
