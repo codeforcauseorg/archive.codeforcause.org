@@ -4,11 +4,11 @@ import clsx from 'clsx';
 
 import {
   Box,
-  Button,
   Container,
   Typography,
   makeStyles
 } from '@material-ui/core';
+import ApplyNowModal from './ApplyNowModal';
 
 
 const useStyles = makeStyles(theme => ({
@@ -56,16 +56,7 @@ function Hero({ className, ...rest }) {
             </Typography>
           </Box>
           <Box mt={2}>
-            <Button
-              className={classes.btn}
-              component="a"
-              href="https://youtube.com/codeforcause"
-              target="_blank"
-              size="large"
-              variant="contained"
-            >
-              Apply Now
-            </Button>
+            <ApplyNowModal />
           </Box>
         </div>
       </Container>

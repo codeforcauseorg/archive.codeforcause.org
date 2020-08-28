@@ -4,12 +4,12 @@ import clsx from 'clsx';
 
 import {
   Box,
-  Button,
   Grid,
   Typography,
   makeStyles,
   Hidden
 } from '@material-ui/core';
+import ApplyNowModal from './ApplyNowModal';
 
 
 const useStyles = makeStyles(theme => ({
@@ -73,16 +73,7 @@ function Apply({ className, ...rest }) {
               powered by Code for Cause
             </Typography>
             <Box mt={2}>
-              <Button
-                className={classes.btn}
-                component="a"
-                href="https://youtube.com/codeforcause"
-                target="_blank"
-                size="large"
-                variant="contained"
-              >
-                Apply Now
-              </Button>
+              <ApplyNowModal />
             </Box>
           </div>
         </Grid>
