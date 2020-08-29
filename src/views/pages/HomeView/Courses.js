@@ -134,7 +134,7 @@ export default function Courses() {
             marginBottom: '20px'
           }}
         >
-          Explore Our Upcoming Courses
+          Explore Our Courses
         </Typography>
       </Grid>
 
@@ -148,8 +148,7 @@ export default function Courses() {
             color: '#848484'
           }}
         >
-          Our courses are designed according to his/her mental growth. Taking
-          junior’s school as standard the checkout the courses below.
+          Our courses are designed to fulfil the need of both students and professional developers. Learn from ground and become expert with pure practical approch of learning.
         </Typography>
       </Grid>
 
