@@ -88,6 +88,22 @@ const routesConfig = [
     ]
   },
   {
+    path: '/courses',
+    layout: MainLayout,
+    routes: [
+      {
+        exact: true,
+        path: '/courses',
+        component: () => <Redirect to="/home" />
+      },
+      {
+        exact: true,
+        path: '/courses/machineLearning',
+        component: lazy(() => import('src/views/pages/Courses/MachineLearningView'))
+      },
+    ]
+  },
+  {
     path: '*',
     layout: MainLayout,
     routes: [
