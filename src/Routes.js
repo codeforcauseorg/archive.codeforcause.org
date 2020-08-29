@@ -46,6 +46,20 @@ const routesConfig = [
     ]
   },
   {
+    path: '/refundpolicies',
+    layout: DocsLayout,
+    routes: [
+      {
+        exact: true,
+        path: '/refundpolicies',
+        component: lazy(() => import('src/views/pages/documents/refundView'))
+      },
+      {
+        component: () => <Redirect to="/404" />
+      }
+    ]
+  },
+  {
     path: '/campusLeaders',
     layout: CLLayout,
     routes: [

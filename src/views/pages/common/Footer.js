@@ -227,6 +227,11 @@ function Footer({ className, ...rest }) {
             <Link color="inherit" component={RouterLink} to="/terms">
               Terms of Use
             </Link>
+            {' | '}
+
+            <Link color="inherit" component={RouterLink} to="/refundpolicies">
+              Refund &amp; Cancellation Policy
+            </Link>
           </Typography>
         </Grid>
       </Container>
