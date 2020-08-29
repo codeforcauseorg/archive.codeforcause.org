@@ -80,7 +80,7 @@ function StandsFor({ className, ...rest }) {
               alignItems: "center",
               overflow: "hidden"
             }}>
-                <img src="/static/campusLeaders/standFor.png" style={{
+                <img alt="this is what we stand for" src="/static/campusLeaders/standFor.png" style={{
                       flexShrink: "0",
                       minWidth: "100%"
                 }}/>
