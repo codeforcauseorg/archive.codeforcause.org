@@ -8,6 +8,7 @@ import HomeView from 'src/views/pages/HomeView';
 import CAView from 'src/views/pages/CLView';
 import EventsView from 'src/views/pages/EventsView';
 import LoadingScreen from 'src/components/LoadingScreen';
+import machineLearningView from 'src/views/pages/Courses/MachineLearningView'
 
 const routesConfig = [
   {
@@ -88,19 +89,14 @@ const routesConfig = [
     ]
   },
   {
-    path: '/courses',
+    path: '/machineLearning',
     layout: MainLayout,
     routes: [
       {
         exact: true,
-        path: '/courses',
-        component: () => <Redirect to="/home" />
-      },
-      {
-        exact: true,
-        path: '/courses/machineLearning',
-        component: lazy(() => import('src/views/pages/Courses/MachineLearningView'))
-      },
+        path: '/machineLearning',
+        component: machineLearningView
+      }
     ]
   },
   {
