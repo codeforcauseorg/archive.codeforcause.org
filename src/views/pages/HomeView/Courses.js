@@ -16,6 +16,7 @@ import { insideTriangleTabsStylesHook } from '@mui-treasury/styles/tabs';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import coursesContent from 'src/data/courses';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
@@ -401,12 +402,14 @@ const CourseCard = ({ course }) => {
         </Box>
       </CardContent>
 
-      <Box
+      <Link
         display="flex"
         justifyContent="center"
+        to="{course.link}"
         style={{
           background: '#A60000',
-          color: '#FF4C00'
+          color: '#FF4C00',
+          textDecoration: 'none',
         }}
       >
         <Typography align="center" style={{
@@ -416,13 +419,12 @@ const CourseCard = ({ course }) => {
             Check Details
           </Box>
         </Typography>
-      </Box>
+      </Link>
     </Card>
   );
 };
 
 const ParallaxCarousel = ({ slides }) => {
-  const classes = useStyles();
   const renderChildren = () =>
     slides.map((slide, index) => {
 
@@ -453,7 +455,7 @@ const ParallaxCarousel = ({ slides }) => {
 };
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index } = props;
 
   return (
     <div role="tabpanel" hidden={value !== index}>
@@ -468,9 +470,3 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired
 };
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-auto-tab-${index}`,
-    'aria-controls': `scrollable-auto-tabpanel-${index}`
-  };
-}
