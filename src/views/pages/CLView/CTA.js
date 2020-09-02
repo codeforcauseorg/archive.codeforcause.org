@@ -141,7 +141,7 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
                       component="a"
-                      href="https://codecau.se/sv"
+                      href="https://codecau.se/blogr"
                       target="_blank"
                       size="large"
                       variant="outlined"
@@ -203,7 +203,7 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
                       component="a"
-                      href="https://cdn.forms-content.sg-form.com/34a5f5b6-c515-11ea-ae40-26ea0c9b1f0c"
+                      href="https://codecau.se/ws"
                       target="_blank"
                       size="large"
                       variant="outlined"
@@ -269,6 +269,7 @@ function CTA({ className, ...rest }) {
                       target="_blank"
                       size="large"
                       variant="outlined"
+                      disabled="true"
                     >
                       Apply Now
                     </Button>

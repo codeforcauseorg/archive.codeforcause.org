@@ -1,29 +1,30 @@
 // event data------------------
 export const events = [
   {
-    img: 'https://img.youtube.com/vi/bAp8YJAJ5Ek/hqdefault.jpg',
-    title: 'Machine Learning',
-    link: 'https://www.youtube.com/watch?v=bAp8YJAJ5Ek',
-    type: 'Webinar',
-    description: 'Collecting and Generating data with Pandas',
-    date_time: 'July 16, 7pm IST'
-  },
-  {
-    img: 'https://img.youtube.com/vi/Ir9FNhoPyYc/hqdefault.jpg',
-    title: 'Machine Learning Web',
-    link: 'https://www.youtube.com/watch?v=Ir9FNhoPyYc',
-    type: 'Webinar',
-    description: 'Machine Learning for the web with TensorFlow.js',
-    date_time: 'July 19, 9:30pm IST'
-  },
-  {
-    img: 'https://img.youtube.com/vi/QHS7_IwTMcc/hqdefault.jpg',
+    img: 'https://img.youtube.com/vi/hkx_JFFwM1o/hqdefault.jpg',
     title: 'Web Development',
-    link: 'https://www.youtube.com/watch?v=QHS7_IwTMcc',
+    link: 'https://codecau.se/algo3w',
     type: 'Webinar',
-    description: 'What is Web API? Hands-on with GitHub API',
-    date_time: 'July 7, 6pm IST'
-  }
+    description: 'DS and Algo with Java Bootcamp Induction',
+    date_time: 'Aug 29, 7pm IST'
+  },
+  {
+    img: 'https://img.youtube.com/vi/0ASPY4e9His/hqdefault.jpg',
+    title: 'Machine Learning',
+    link: 'https://www.youtube.com/watch?v=0ASPY4e9His',
+    type: 'Webinar',
+    description: 'Remote Work Best Practices by Joe Nash',
+    date_time: 'Sept 16, 6:30pm IST'
+  },
+  {
+    img: 'https://img.youtube.com/vi/4sOn2HmVBlM/hqdefault.jpg',
+    title: 'Machine Learning Web',
+    link: 'https://www.youtube.com/watch?v=4sOn2HmVBlM',
+    type: 'Webinar',
+    description: 'Empowering the Hacker Community - QnA with Mike Swift',
+    date_time: 'Sept 7, 5:30pm IST'
+  },
+
 ];
 
 // mentors data----------------

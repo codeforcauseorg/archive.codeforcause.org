@@ -30,23 +30,7 @@ const useStyles = makeStyles(theme => ({
       padding: '0'
     }
   },
-  image: {
-    perspectiveOrigin: 'left center',
-    transformStyle: 'preserve-3d',
-    perspective: 1500,
-    '& > img': {
-      maxWidth: '100%',
-      height: 'auto',
-      backfaceVisibility: 'hidden'
-    },
-    [theme.breakpoints.down('md')]: {
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-      justifyContent: 'center'
-    }
-  },
+
   hide: {
     display: 'none'
   },
@@ -90,15 +74,16 @@ function StandsFor({ className, ...rest }) {
         </Typography>
         <Grid container spacing={3} className={classes.extraMargin}>
           <Hidden smDown>
-            <Grid item xs={12} md={6}>
-              <Box>
-                <div className={classes.image}>
-                  <img
-                    alt="What Does the Campus Leader Stands For"
-                    src="/static/campusLeaders/standFor.png"
-                  />
-                </div>
-              </Box>
+            <Grid item xs={12} md={6} style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              overflow: "hidden"
+            }}>
+                <img alt="this is what we stand for" src="/static/campusLeaders/standFor.png" style={{
+                      flexShrink: "0",
+                      minWidth: "100%"
+                }}/>
             </Grid>
           </Hidden>
 
@@ -106,7 +91,6 @@ function StandsFor({ className, ...rest }) {
             <Box
               display="flex"
               flexDirection="column"
-              justifyContent="center"
               height="100%"
               className={clsx(classes.extraPadding, className)}
             >
