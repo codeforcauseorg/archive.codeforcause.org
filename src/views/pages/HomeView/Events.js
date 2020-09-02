@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {
+  useCallback,
+  useState,
+  useEffect
+} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import axios from 'src/utils/axios';
+import useIsMountedRef from 'src/hooks/useIsMountedRef';
 
 import {
   Box,
@@ -13,7 +19,6 @@ import {
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import { events } from './HomeViewData';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,7 +45,8 @@ const useStyles = makeStyles(theme => ({
     position: 'relative'
   },
   cardMedia: {
-    paddingTop: '55.75%' // 16:9
+    paddingTop: '55.75%', // 16:9
+    borderBottom: '1px solid #eee'
   },
   cardContent: {
     flexGrow: 1
@@ -95,6 +101,26 @@ const useStyles = makeStyles(theme => ({
 
 function Events({ className, ...rest }) {
   const classes = useStyles();
+  const isMountedRef = useIsMountedRef();
+  const [events, setEvents] = useState(null);
+
+  const getEvents = useCallback(() => {
+    axios
+      .get('https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/events')
+      .then((response) => {
+        if (isMountedRef.current) {
+          setEvents(response.data);
+        }
+      });
+  }, [isMountedRef]);
+
+  useEffect(() => {
+    getEvents();
+  }, [getEvents]);
+
+  if (!events) {
+    return null;
+  }
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -116,7 +142,7 @@ function Events({ className, ...rest }) {
               md={4}
             >
               <Card className={classes.card}>
-                {event.date_time ? (
+                {event.time ? (
                   <div className={classes.eventdate}>
                     <Typography
                       variant="caption"
@@ -125,15 +151,15 @@ function Events({ className, ...rest }) {
                         fontWeight: 500
                       }}
                     >
-                      {event.date_time}
+                      {event.time}
                     </Typography>
                   </div>
                 ) : (
-                  <></>
-                )}
+                    <></>
+                  )}
                 <CardMedia
                   className={classes.cardMedia}
-                  image={event.img}
+                  image={event.image}
                   title={event.title}
                 />
                 <CardContent className={classes.cardContent}>
@@ -142,7 +168,7 @@ function Events({ className, ...rest }) {
                     style={{ paddingRight: '15px' }}
                     gutterBottom
                   >
-                    {event.title}
+                    {event.domain}
                   </Typography>
                   <Typography
                     variant="span"
@@ -167,7 +193,7 @@ function Events({ className, ...rest }) {
                       lineHeight: '1.3'
                     }}
                   >
-                    {event.description}
+                    {event.title}
                   </Typography>
                 </CardContent>
               </Card>
