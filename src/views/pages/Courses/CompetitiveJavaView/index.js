@@ -10,7 +10,7 @@ import coursesContent from 'src/data/courses';
 import Major from '../Major';
 
 const advanced = coursesContent.advanced;
-const course = advanced.machineLearning;
+const course = advanced.competitiveJava;
 
 const useStyles = makeStyles(() => ({
   root: {}

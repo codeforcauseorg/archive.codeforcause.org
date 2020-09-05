@@ -14,7 +14,7 @@ import { experience, /*students,*/ mentors } from './HomeViewData';
 
 import Courses from './Courses';
 
-// import Testimonials from './Testimonials/index';
+import Recommendations from '../common/Recommendations'
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -31,7 +31,7 @@ function HomeView() {
       <MentorExperience experience={experience} />
       <StandForSection id="about" />
       <Courses />
-      {/* <Testimonials students={students} /> */}
+      <Recommendations />
       <Team id="team" mentors={mentors} />
       <WatchOurVideoView />
       <CTA id="actions" />

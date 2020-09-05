@@ -1,6 +1,6 @@
-import { ar } from './Ar';
-import { vr } from './Vr';
-import { web } from './Web';
-const foundation = {ar, vr, web};
+import { machineLearning } from './MachineLearning';
+import { webDevelopment } from './WebDevelopment';
+import { competitiveJava } from './CompetitiveJava';
+const advanced = {machineLearning, webDevelopment, competitiveJava};
 
-export default foundation;
+export default advanced;
