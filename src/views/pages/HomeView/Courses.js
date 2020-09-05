@@ -264,7 +264,7 @@ export default function Courses() {
                   <GridListTile
                     key={course.id}
                     style={{
-                      height: '500px'
+                      height: '500px',
                     }}
                   >
                     <CourseCard course={course} />
@@ -307,6 +307,7 @@ const CourseCard = ({ course }) => {
         display="flex"
         style={{
           background: '#FFFCFB',
+          maxWidth: '320px'
         }}
       >
         <CardContent className={classes.cardContent}>

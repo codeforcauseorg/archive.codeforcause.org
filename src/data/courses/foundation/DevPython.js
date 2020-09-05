@@ -3,7 +3,7 @@ export const devPython = {
   duration: '24 Lectures',
   level: 'Level 1',
   link: '/application-dev-using-python',
-  domain: 'Algorithms',
+  domain: 'Development',
   title: 'Application Development with Python',
   upcoming: 'Oct 1st',
   projects: [
