@@ -1,6 +1,6 @@
-import { ar } from './Ar';
-import { vr } from './Vr';
-import { web } from './Web';
-const foundation = {ar, vr, web};
+import { algoPython } from './AlgoPython';
+import { algoJava } from './AlgoJava';
+import { devPython } from './DevPython';
+const foundation = {algoPython, algoJava, devPython};
 
 export default foundation;

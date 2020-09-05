@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 import PropTypes from 'prop-types';
+
 import {
   Grid,
   Typography,
@@ -10,14 +11,15 @@ import {
   Box,
   Card,
   CardContent,
-  Chip
+  Chip,
+  GridList,
+  GridListTile
 } from '@material-ui/core';
 import { insideTriangleTabsStylesHook } from '@mui-treasury/styles/tabs';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import coursesContent from 'src/data/courses';
 import { Link } from 'react-router-dom';
-
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -100,12 +102,21 @@ const useStyles = makeStyles(theme => ({
     height: 'auto',
     backgroundPosition: 'bottom center',
     backgroundSize: 'cover'
+  },
+  gridList: {
+    flexWrap: 'nowrap',
+    width: '100%',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: 'translateZ(0)'
   }
 }));
 
 export default function Courses() {
   const classes = useStyles();
-  const matches = useMediaQuery('(min-width:500px)');
+  const large = useMediaQuery('(min-width:1100px)');
+  const medium = useMediaQuery('(min-width:900px)');
+  const small = useMediaQuery('(min-width:600px)');
+  const extraSmall = useMediaQuery('(max-width:600px)');
 
   const tabsStyles = insideTriangleTabsStylesHook.useTabs();
   const tabItemStyles = insideTriangleTabsStylesHook.useTabItem({
@@ -120,8 +131,6 @@ export default function Courses() {
 
   const foundation = coursesContent.foundation;
   const advanced = coursesContent.advanced;
-  const expert = coursesContent.expert;
-
 
   return (
     <Grid container className={classes.root}>
@@ -148,7 +157,9 @@ export default function Courses() {
             color: '#848484'
           }}
         >
-          Our courses are designed to fulfil the need of both students and professional developers. Learn from ground and become expert with pure practical approch of learning.
+          Our courses are designed to fulfil the need of both students and
+          professional developers. Learn from ground and become expert with pure
+          practical approch of learning.
         </Typography>
       </Grid>
 
@@ -190,7 +201,7 @@ export default function Courses() {
             onChange={handleChange}
             aria-label="Tabs"
             centered={true}
-            variant={matches ? 'standard' : 'scrollable'}
+            variant={extraSmall ? 'scrollable' : 'standard'}
             scrollButtons="auto"
             classes={tabsStyles}
             style={{
@@ -204,8 +215,8 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Foundation</Box>
                   </Typography>
-                  <Typography variant="h6">
-                    <Box>Grade (5-6)</Box>
+                  <Typography variant="body2">
+                    <Box>(Reg. Open)</Box>
                   </Typography>
                 </Fragment>
               }
@@ -218,55 +229,68 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Advanced</Box>
                   </Typography>
-                  <Typography variant="h6">
-                    <Box>Grade (7-9)</Box>
+                  <Typography variant="body2">
+                    <Box>(Reg. Open)</Box>
                   </Typography>
                 </Fragment>
               }
               disableRipple={true}
             />
+
             <Tab
               classes={tabItemStyles}
               label={
                 <Fragment>
                   <Typography variant="h5">
-                    <Box fontWeight={600}>Expert</Box>
+                    <Box fontWeight={600}>Complete</Box>
                   </Typography>
-                  <Typography variant="h6">
-                    <Box>Grade (10+)</Box>
+                  <Typography variant="body2">
+                    <Box>(Launching Soon)</Box>
                   </Typography>
                 </Fragment>
               }
+              disabled
               disableRipple={true}
             />
           </Tabs>
 
           <TabPanel value={value} index={0}>
-            {Object.entries(foundation).map(([cname, course], index) => {
-              return (
-                <Grid id={course.id} item xs={12} sm={6} md={4} lg={4}>
-                  <CourseCard course={course} />
-                </Grid>
-              );
-            })}
+            <GridList
+              className={classes.gridList}
+              cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
+            >
+              {Object.entries(foundation).map(([cname, course], index) => {
+                return (
+                  <GridListTile
+                    key={course.id}
+                    style={{
+                      height: '500px',
+                    }}
+                  >
+                    <CourseCard course={course} />
+                  </GridListTile>
+                );
+              })}
+            </GridList>
           </TabPanel>
           <TabPanel value={value} index={1}>
-          {Object.entries(advanced).map(([cname, course], index) => {
+          <GridList
+              className={classes.gridList}
+              cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
+            >
+            {Object.entries(advanced).map(([cname, course], index) => {
               return (
-                <Grid id={course.id} item xs={12} sm={6} md={4} lg={4}>
+                <GridListTile
+                    key={course.id}
+                    style={{
+                      height: '500px'
+                    }}
+                  >
                   <CourseCard course={course} />
-                </Grid>
+                </GridListTile>
               );
             })}
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-          {Object.entries(expert).map(([cname, course], index) => {
-              return (
-                <Grid id={course.id} item xs={12} sm={6} md={4} lg={4}>
-                  <CourseCard course={course} />
-                </Grid>
-              );
-            })}
+            </GridList>
           </TabPanel>
         </Grid>
       </Grid>
@@ -277,156 +301,161 @@ export default function Courses() {
 const CourseCard = ({ course }) => {
   const classes = useStyles();
   return (
-    <Card
-      className={classes.card}
-      style={{
-        background: '#FFFCFB',
-        maxWidth: '350px'
-      }}
-    >
-      <CardContent className={classes.cardContent}>
-        <Box display="flex" flexDirection="column">
-          <Box
-            display="flex"
-            flexDirection="row"
-            style={{
-              margin: '8px 0px 0px'
-            }}
-          >
-            <Typography
-              align="left"
-              variant="body2"
-              style={{
-                width: '50%',
-                color: '#0085FF'
-              }}
-            >
-              {course.difficulty}
-            </Typography>
-            <Typography
-              align="right"
-              variant="body2"
-              style={{
-                width: '50%'
-              }}
-            >
-              <Box fontWeight={600}>{course.level}</Box>
-            </Typography>
-          </Box>
-
-          <Typography
-            variant="h5"
-            align="left"
-            style={{
-              marginBottom: '16px',
-              color: '#FF4C00'
-            }}
-          >
-            {course.domain}
-          </Typography>
-
-          <Typography variant="h4" align="left">
-            {course.title}
-          </Typography>
-        </Box>
-      </CardContent>
-
-      <ParallaxCarousel slides={course.slides}/>
-
-      <CardContent className={classes.cardContent}>
-        <Box display="flex" flexDirection="column">
-          <Box
-            display="flex"
-            flexDirection="row"
-            style={{
-              marginTop: '4px 0px'
-            }}
-          >
-            <Typography
-              style={{
-                marginRight: '8px',
-                color: '#A3A3A3'
-              }}
-            >
-              Duration
-            </Typography>
-            <Typography>{course.duration}</Typography>
-          </Box>
-
-          <Box
-            display="flex"
-            flexDirection="row"
-            style={{
-              marginTop: '4px 0px'
-            }}
-          >
-            <Typography
-              style={{
-                marginRight: '8px',
-                color: '#A3A3A3'
-              }}
-            >
-              Upcoming
-            </Typography>
-            <Typography>No upcoming</Typography>
-          </Box>
-
-          <Box
-            display="flex"
-            flexDirection="row"
-            justifyContent="center"
-            style={{
-              marginTop: '16px'
-            }}
-          >
-            {course.tags.map((tag, index) => (
-              <Chip
-                label={
-                  <Typography
-                    variant="body2"
-                    style={{
-                      color: '#A6A6A6'
-                    }}
-                  >
-                    {tag}
-                  </Typography>
-                }
-                variant="outlined"
-                style={{
-                  margin: '4px'
-                }}
-              />
-            ))}
-          </Box>
-        </Box>
-      </CardContent>
-
-      <Link
+    <Box>
+      <Card
+        className={classes.card}
         display="flex"
-        justifyContent="center"
-        to="{course.link}"
         style={{
-          background: '#A60000',
-          color: '#FF4C00',
-          textDecoration: 'none',
+          background: '#FFFCFB',
+          maxWidth: '320px'
         }}
       >
-        <Typography align="center" style={{
-          color:"#FFFFFF"
-        }}>
-          <Box m={1} fontWeight={600}>
-            Check Details
+        <CardContent className={classes.cardContent}>
+          <Box display="flex" flexDirection="column">
+            <Box
+              display="flex"
+              flexDirection="row"
+              style={{
+                margin: '8px 0px 0px'
+              }}
+            >
+              <Typography
+                align="left"
+                variant="body2"
+                style={{
+                  width: '50%',
+                  color: '#0085FF'
+                }}
+              >
+                {course.difficulty}
+              </Typography>
+              <Typography
+                align="right"
+                variant="body2"
+                style={{
+                  width: '50%'
+                }}
+              >
+                <Box fontWeight={600}>{course.level}</Box>
+              </Typography>
+            </Box>
+
+            <Typography
+              variant="h5"
+              align="left"
+              style={{
+                marginBottom: '16px',
+                color: '#FF4C00'
+              }}
+            >
+              {course.domain}
+            </Typography>
+
+            <Typography variant="h4" align="left">
+              {course.title}
+            </Typography>
           </Box>
-        </Typography>
-      </Link>
-    </Card>
+        </CardContent>
+
+        <ParallaxCarousel slides={course.slides} />
+
+        <CardContent className={classes.cardContent}>
+          <Box display="flex" flexDirection="column">
+            <Box
+              display="flex"
+              flexDirection="row"
+              style={{
+                marginTop: '4px 0px'
+              }}
+            >
+              <Typography
+                style={{
+                  marginRight: '8px',
+                  color: '#A3A3A3'
+                }}
+              >
+                Duration
+              </Typography>
+              <Typography>{course.duration}</Typography>
+            </Box>
+
+            <Box
+              display="flex"
+              flexDirection="row"
+              style={{
+                marginTop: '4px 0px'
+              }}
+            >
+              <Typography
+                style={{
+                  marginRight: '8px',
+                  color: '#A3A3A3'
+                }}
+              >
+                Upcoming
+              </Typography>
+              <Typography>{course.upcoming}</Typography>
+            </Box>
+
+            <Box
+              display="flex"
+              flexDirection="row"
+              justifyContent="center"
+              style={{
+                marginTop: '16px'
+              }}
+            >
+              {course.tags.slice(0, 3).map((tag, index) => (
+                <Chip
+                  label={
+                    <Typography
+                      variant="body2"
+                      style={{
+                        color: '#A6A6A6'
+                      }}
+                    >
+                      {tag}
+                    </Typography>
+                  }
+                  variant="outlined"
+                  style={{
+                    margin: '4px'
+                  }}
+                />
+              ))}
+            </Box>
+          </Box>
+        </CardContent>
+
+        <Link
+          display="flex"
+          justifyContent="center"
+          to={course.link}
+          style={{
+            background: '#A60000',
+            color: '#FF4C00',
+            textDecoration: 'none'
+          }}
+        >
+          <Typography
+            align="center"
+            style={{
+              color: '#FFFFFF'
+            }}
+          >
+            <Box m={1} fontWeight={600}>
+              Check Details
+            </Box>
+          </Typography>
+        </Link>
+      </Card>
+    </Box>
   );
 };
 
 const ParallaxCarousel = ({ slides }) => {
   const renderChildren = () =>
     slides.map((slide, index) => {
-
       return (
         <Box
           display="flex"
@@ -438,7 +467,6 @@ const ParallaxCarousel = ({ slides }) => {
             color: '#FFFFFF',
             padding: '8px',
             backgroundImage: `url(${slide.image})`
-
           }}
         >
           <Typography variant="h4" align="left">
@@ -468,4 +496,3 @@ TabPanel.propTypes = {
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired
 };
-

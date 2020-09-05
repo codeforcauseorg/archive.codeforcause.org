@@ -9,8 +9,8 @@ import Schedule from '../Schedule'
 import coursesContent from 'src/data/courses';
 import Major from '../Major';
 
-const advanced = coursesContent.advanced;
-const course = advanced.machineLearning;
+const foundation = coursesContent.foundation;
+const course = foundation.devPython;
 
 const useStyles = makeStyles(() => ({
   root: {}

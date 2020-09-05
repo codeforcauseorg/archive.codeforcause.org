@@ -53,7 +53,7 @@ const themeConfigs = [
         paper: colors.common.white // background
       },
       primary: {
-        main: colors.indigo[600] // for header and loader
+        main: "#A60000" // for header and loader
       },
       secondary: {
         main: '#5850EC' // for button and selected
