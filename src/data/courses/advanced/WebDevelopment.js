@@ -8,101 +8,105 @@ export const webDevelopment = {
   upcoming: 'Oct 1st',
   projects: [
     {
-      title: 'Mobile App Development',
+      title: 'Chat App with WebSockets',
       img: '/static/images/projects/p1.png'
     },
     {
-      title: 'Mobile App Development',
+      title: 'Protfolio Website to Standout',
       img: '/static/images/projects/p1.png'
     },
     {
-      title: 'Mobile App Development',
+      title: 'Vendor App with Payment Gateway',
       img: '/static/images/projects/p1.png'
     },
     {
-      title: 'Mobile App Development',
+      title: 'GitHub CLI App',
       img: '/static/images/projects/p1.png'
     },
-    {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
-    }
   ],
   topics: [
     {
-      title: 'Revising Python Fundamentals',
-      classes: 'Classes 1-4',
+      title: 'Introduction to JavaSript',
+      classes: 'Classes 1-5',
       subtopics: [
-        'In-built Data Structures',
-        'Control Flow Statements ',
-        'Underatanding OOPS and Modules',
-        'Various File operations'
+        'Variables, Data Types and Statements',
+        'Functions, Conditions and looping',
+        'Workin with Arrays and Maps',
+        'String processing and manipulation',
+        'Introduction to OOP in JS'
       ]
     },
     {
-      title: 'Data Discovery and Visualiation',
-      classes: 'Classes 5-8',
+      title: 'Building application with npm',
+      classes: 'Classes 6-9',
       subtopics: [
-        'Numpy and array computation',
-        'Processing Images with Numpy',
-        'Data Acquisition - Web Scrapping, Web APIs',
-        'Data Analysis using Pandas',
-        'Importing and Exporting Data '
+        'Getting hands on with npm package management',
+        'Understanding components of API call',
+        'GitHub API calls with Axios',
+        'Creating and deploying new npm module',
+        'Mini-project : file downloader'
       ]
     },
     {
-      title: 'Classical Machine Learning Algorithms',
-      classes: 'Classes 9-13',
+      title: 'Setting up pace with HTML and CSS ',
+      classes: 'Classes 10-14',
       subtopics: [
-        'K-Nearest Neighbour search',
-        'K-means clustering',
-        'Linear Regression',
-        'Logistic Regression',
-        'Decision trees and Ensembling Learning',
-        'Random Forest Classifiers',
-        'Support Vector Machines'
+        'HTML Tags and attributes',
+        'Styling and CSS Selectors',
+        'Understanding a figma design',
+        'Creating forms and validations',
+        'Responsive website design Using bootstrap',
+        'FlexBoxes for rest practices of alignments'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      classes: 'Classes 14-18',
+      title: 'Getting hands-on with frameworks',
+      classes: 'Classes 15-18',
       subtopics: [
-        'Text generation using Markov Chain',
-        'Text classification using Naive Bayes',
-        'Deploy ML model with flask on heroku',
-        'Create a facebook chatbot with flask'
+        'React concepts and building components',
+        'ExpressJS Framework for creating REST APIs',
+        'Various HTTP requests and Form Submissions',
+        'Socket.IO for realtime communication',
       ]
     },
     {
-      title: 'Deep Neural Networks',
+      title: 'Diving Deep with React and Material UI',
       classes: 'Classes 19-22',
       subtopics: [
-        'Neural Architectures and Training',
-        'Deep Learning with Keras',
-        'Convolutions and the GoogLe Net',
-        'Transfer Learning with ResNet and AlexNet',
-        'Dimensionality Reduction using Auto-encoders'
+        'React Props, State, Lifecycle Methods, and Keys',
+        'Using hooks for functional React experience',
+        'Theme and Typography with React MUI',
+        'Horizontal and Verical Steppers with React MUI',
+        'Animations and Transitions with React Spring'
       ]
     },
     {
-      title: 'Advanced Deep Learning',
-      classes: 'Classes 23-27',
+      title: 'Realtional and Not Relational Databases',
+      classes: 'Classes 23-25',
       subtopics: [
-        'Recurrent Neural Network',
-        'Long Short Term Memory',
-        'Music Generation using LSTM',
-        'Predict Gender from name with LSTM',
-        'Generative Adversarial Nets'
+        'Walk trhough with SQL Queries',
+        'H2 and MySQL Databases and connecting with ORM',
+        'Handling documents with MongoDB',
+        'Setting up geolocation indexing for Uber like search',
       ]
     },
     {
-      title: 'Reinforcemnt Learning',
-      classes: 'Classes 27-30',
+      title: 'Cloud Authentication, Hosting and Functions',
+      classes: 'Classes 26-28',
       subtopics: [
-        'Foundational Reinforcemnt Learning',
-        'Evolutionary Algorithms and Genetic Algorithms',
-        'Deep Q-learning and training',
-        'Training on OpenAI Gym Simulaters'
+        'Setting up auth with passport',
+        'Social auth with Google, Facebook and GitHub',
+        'Cloud Functions for scaled Arch',
+        'Firestore and other firebase products',
+      ]
+    },
+    {
+      title: 'Project discussion and best practices',
+      classes: 'Classes 29-30',
+      subtopics: [
+        'Spinning up project ideas and how to explore',
+        'Pitching session and walkthough presentation',
+        'Best Practices for follow for web projects'
       ]
     }
   ],
