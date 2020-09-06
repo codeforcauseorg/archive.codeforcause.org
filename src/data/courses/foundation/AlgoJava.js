@@ -30,79 +30,128 @@ export const algoJava = {
   ],
   topics: [
     {
-      title: 'Revising Python Fundamentals',
-      classes: 'Classes 1-4',
+      title: 'Getting started with Java',
+      classes: 'Classes 1-3',
       subtopics: [
-        'In-built Data Structures',
+        'Flowcharts & Pseudocode',
         'Control Flow Statements ',
-        'Underatanding OOPS and Modules',
-        'Various File operations'
+        'Setting up IntelliJ idea & Java',
+        'Primitive data-types',
+        'Input-Output on online judge',
+        'Coding standards in Java',
+        'Methods along with problems',
+        'Setting up debugger'
       ]
     },
     {
-      title: 'Data Discovery and Visualiation',
-      classes: 'Classes 5-8',
+      title: 'Arrays & ArrayList',
+      classes: 'Classes 4-7',
       subtopics: [
-        'Numpy and array computation',
-        'Processing Images with Numpy',
-        'Data Acquisition - Web Scrapping, Web APIs',
-        'Data Analysis using Pandas',
-        'Importing and Exporting Data '
+        'Introduction of arrays',
+        'Input-output & traversing',
+        'Linear Search & Binary Search',
+        'Bubble sort, Insertion sort, Selection sort, Count sort',
+        'Multi-Dimensional arrays',
+        'Rotation in arrays',
+        'Intro to ArrayList',
+        'Interview problems on Arrays & ArrayList'
       ]
     },
     {
-      title: 'Classical Machine Learning Algorithms',
-      classes: 'Classes 9-13',
+      title: 'Number theory & Bitmasking',
+      classes: 'Classes 8-9',
       subtopics: [
-        'K-Nearest Neighbour search',
-        'K-means clustering',
-        'Linear Regression',
-        'Logistic Regression',
-        'Decision trees and Ensembling Learning',
-        'Random Forest Classifiers',
-        'Support Vector Machines'
+        'Euclidean algorithms',
+        'Sieve of eratosthenes',
+        'Puzzle problems',
+        'Bitwise operators',
+        'Advantages & cost-effectiveness',
+        'Backtracking with Bitmasking',
+        'Interview problems'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      classes: 'Classes 14-18',
+      title: 'String & String-Builder',
+      classes: 'Classes 10-11',
       subtopics: [
-        'Text generation using Markov Chain',
-        'Text classification using Naive Bayes',
-        'Deploy ML model with flask on heroku',
-        'Create a facebook chatbot with flask'
+        'Intro to Strings in Java',
+        'Mutability and behavior',
+        'String pool and need of equals',
+        'String operations',
+        'StringBuilder operations and optimization',
+        'String Manipulation'
       ]
     },
     {
-      title: 'Deep Neural Networks',
-      classes: 'Classes 19-22',
+      title: 'Space and Time complexity analysis',
+      classes: 'Classes 12',
       subtopics: [
-        'Neural Architectures and Training',
-        'Deep Learning with Keras',
-        'Convolutions and the GoogLe Net',
-        'Transfer Learning with ResNet and AlexNet',
-        'Dimensionality Reduction using Auto-encoders'
+        'Best case, worst case, average case',
+        'Sandwich theorem, recurrence relation',
+        
       ]
     },
     {
-      title: 'Advanced Deep Learning',
-      classes: 'Classes 23-27',
+      title: 'Recursion & Backtracking',
+      classes: 'Classes 13-16',
       subtopics: [
-        'Recurrent Neural Network',
-        'Long Short Term Memory',
-        'Music Generation using LSTM',
-        'Predict Gender from name with LSTM',
-        'Generative Adversarial Nets'
+        'Recursion- what, why, when?',
+        'Control flow & stack trace',
+        'understanding recursive tree',
+        'Interview problems on Recursion',
+        'Backtracking-Sudoku solver, N-Queens, lexo-permute',
+        'Merge sort & Quick sort'
       ]
     },
     {
-      title: 'Reinforcemnt Learning',
-      classes: 'Classes 27-30',
+      title: 'Object Oriented Programming',
+      classes: 'Classes 17-18',
       subtopics: [
-        'Foundational Reinforcemnt Learning',
-        'Evolutionary Algorithms and Genetic Algorithms',
-        'Deep Q-learning and training',
-        'Training on OpenAI Gym Simulaters'
+        'Classes & Objects',
+        '',
+        'Inheritance, Polymorphism, Encapsulation',
+      ]
+    },
+    {
+      title: 'Stack & Queue',
+      classes: 'Classes 19-20',
+      subtopics: [
+        
+      ]
+    },
+    {
+      title: 'LinkedList',
+      classes: 'Classes 21-22',
+      subtopics: [
+        
+      ]
+    },
+    {
+      title: 'Binary Trees',
+      classes: 'Classes 23-24',
+      subtopics: [
+        
+      ]
+    },
+    {
+      title: 'Heap & HashMap',
+      classes: 'Classes 25-26',
+      subtopics: [
+        
+      ]
+    },
+    {
+      title: 'Graph',
+      classes: 'Classes 27-28',
+      subtopics: [
+        
+      ]
+    },
+    {
+      title: 'Dynamic Programming',
+      classes: 'Classes 29-30',
+      subtopics: [
+        
       ]
     }
   ],
@@ -129,15 +178,14 @@ export const algoJava = {
     }
   ],
   tags: [
-    'ML',
-    'Image Processing',
-    'Deep Learning',
-    'Neural Network',
-    'CNN',
-    'Python'
+    'Data Structures',
+    'Algorithms',
+    'Problem Solving',
+    'Java',
+    'Competitive Programming',
+    'Interview Preparation'
   ],
   overview: [
-    "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",
-    "We’ve been teaching VR for over 12 months but this AR course is BRAND NEW! You’ll learn to design and code Augmented Reality apps using Camp K12's very own HatchXR platform."
+    "Every students have in their mind that why to study Data Structure. How it helps me in real life problem? Data Structures are the most important skills for a person belonging to computer-science background to understand the nature of problems, develop the logic to solve a problem in an optimised way with an efficient use of appropriate Data Structures. From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimised and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!"
   ]
 };
