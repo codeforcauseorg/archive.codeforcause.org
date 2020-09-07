@@ -11,7 +11,6 @@ import {
   Box,
   Card,
   CardContent,
-  Chip,
   GridList,
   GridListTile
 } from '@material-ui/core';
@@ -43,7 +42,8 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     borderRadius: '10px',
-    margin: '12px'
+    margin: '12px',
+    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)'
   },
   cardMedia: {
     width: '100%',
@@ -257,6 +257,8 @@ export default function Courses() {
           <TabPanel value={value} index={0}>
             <GridList
               className={classes.gridList}
+              display="flex"
+              alignItems="center"
               cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
             >
               {Object.entries(foundation).map(([cname, course], index) => {
@@ -274,22 +276,22 @@ export default function Courses() {
             </GridList>
           </TabPanel>
           <TabPanel value={value} index={1}>
-          <GridList
+            <GridList
               className={classes.gridList}
               cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
             >
-            {Object.entries(advanced).map(([cname, course], index) => {
-              return (
-                <GridListTile
+              {Object.entries(advanced).map(([cname, course], index) => {
+                return (
+                  <GridListTile
                     key={course.id}
                     style={{
                       height: '500px'
                     }}
                   >
-                  <CourseCard course={course} />
-                </GridListTile>
-              );
-            })}
+                    <CourseCard course={course} />
+                  </GridListTile>
+                );
+              })}
             </GridList>
           </TabPanel>
         </Grid>
@@ -306,7 +308,6 @@ const CourseCard = ({ course }) => {
         className={classes.card}
         display="flex"
         style={{
-          background: '#FFFCFB',
           maxWidth: '320px'
         }}
       >
@@ -397,31 +398,22 @@ const CourseCard = ({ course }) => {
               <Typography>{course.upcoming}</Typography>
             </Box>
 
-            <Box
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
-              style={{
-                marginTop: '16px'
-              }}
-            >
+            <Box mb={4} display="flex" flexDirection="row">
               {course.tags.slice(0, 3).map((tag, index) => (
-                <Chip
-                  label={
-                    <Typography
-                      variant="body2"
-                      style={{
-                        color: '#A6A6A6'
-                      }}
-                    >
-                      {tag}
-                    </Typography>
-                  }
-                  variant="outlined"
+                <div
                   style={{
-                    margin: '4px'
+                    margin: '4px 16px 4px 0px',
+                    padding: '4px 8px',
+                    border: '1px solid',
+                    borderColor: '#A60000',
+                    borderRadius: '5px'
                   }}
-                />
+                  variant="outlined"
+                >
+                  <Typography color="primary" variant="body2" noWrap={true}>
+                    {tag}
+                  </Typography>
+                </div>
               ))}
             </Box>
           </Box>
@@ -469,12 +461,17 @@ const ParallaxCarousel = ({ slides }) => {
             backgroundImage: `url(${slide.image})`
           }}
         >
-          <Typography variant="h4" align="left">
-            <Box>{slide.heading}</Box>
-          </Typography>
-          <Typography variant="h6" align="left">
-            <Box fontWeight={600}>{slide.subheading}</Box>
-          </Typography>
+          <Box display="flex" flexDirection="column" style={{
+              position: "absolute",
+              bottom: 8
+          }}>
+            <Typography variant="h4" align="left">
+              <Box>{slide.heading}</Box>
+            </Typography>
+            <Typography variant="h6" align="left">
+              <Box fontWeight={600}>{slide.subheading}</Box>
+            </Typography>
+          </Box>
         </Box>
       );
     });

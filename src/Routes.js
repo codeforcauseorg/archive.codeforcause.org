@@ -14,6 +14,7 @@ import AlgoPythonView from 'src/views/pages/Courses/AlgoPythonView'
 import WebFullStakView from 'src/views/pages/Courses/WebFullStakView'
 import CompetitiveJavaView from 'src/views/pages/Courses/CompetitiveJavaView'
 import PythonDevelopmentView from 'src/views/pages/Courses/PythonDevelopmentView'
+import CoursesView from 'src/views/pages/CoursesView';
 
 const routesConfig = [
   {
@@ -87,6 +88,20 @@ const routesConfig = [
         exact: true,
         path: '/events',
         component: EventsView
+      },
+      {
+        component: () => <Redirect to="/404" />
+      }
+    ]
+  },
+  {
+    path: '/courses',
+    layout: MainLayout,
+    routes: [
+      {
+        exact: true,
+        path: '/courses',
+        component: CoursesView
       },
       {
         component: () => <Redirect to="/404" />

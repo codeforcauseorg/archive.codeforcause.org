@@ -69,31 +69,48 @@ function CTA({ className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container className={classes.cardGrid} maxWidth="lg">
         <Grid container spacing={2} className={classes.extraMargin}>
-          <Grid item xs={12} sm={12} md={3}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box className={classes.flex} display="flex" flexDirection="column">
               <Hidden mdUp>
                 <Typography
                   color="textPrimary"
-                  variant="h3"
+                  variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Collaborate With Us
+                  Want Us to conduct a Workshop
                 </Typography>
               </Hidden>
 
               <Hidden smDown>
                 <Typography
                   color="textPrimary"
-                  variant="h3"
+                  variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Collaborate <br /> With Us
+                  Want Us to conduct a <br /> Workshop
                 </Typography>
               </Hidden>
+
+              <Box className={classes.flex}>
+                <Grid container xs={12} sm={12}>
+                  <Grid item xs={12} sm={12}>
+                    <Button
+                      className={classes.Button + ' ' + classes.primeBtn}
+                      component="a"
+                      href="https://codecau.se/ws"
+                      target="_blank"
+                      size="large"
+                      variant="contained"
+                    >
+                      Register
+                    </Button>
+                  </Grid>
+                </Grid>
+              </Box>
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={3}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box className={classes.flex} display="flex" flexDirection="column">
               <Hidden mdUp>
                 <Typography
@@ -101,7 +118,7 @@ function CTA({ className, ...rest }) {
                   variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Publish Your Article With Us
+                  Join Us or Submit a YouTube Video
                 </Typography>
               </Hidden>
 
@@ -111,27 +128,7 @@ function CTA({ className, ...rest }) {
                   variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Publish Your Article <br /> With Us
-                </Typography>
-              </Hidden>
-
-              <Hidden mdUp>
-                <Typography
-                  color="textPrimary"
-                  variant="body1"
-                  style={{ lineHeight: '1.5', marginTop: '12px' }}
-                >
-                  Aware people about new tech and thoughts
-                </Typography>
-              </Hidden>
-
-              <Hidden smDown>
-                <Typography
-                  color="textPrimary"
-                  variant="body1"
-                  style={{ lineHeight: '1.5', marginTop: '12px' }}
-                >
-                  Aware people about new <br /> tech and thoughts
+                  Join Us or Submit a <br /> YouTube Video
                 </Typography>
               </Hidden>
 
@@ -146,7 +143,7 @@ function CTA({ className, ...rest }) {
                       size="large"
                       variant="outlined"
                     >
-                      Submit Request
+                      Know More
                     </Button>
                   </Grid>
                 </Grid>
@@ -154,7 +151,7 @@ function CTA({ className, ...rest }) {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={3}>
+          <Grid item xs={12} sm={12} md={4}>
             <Box className={classes.flex} display="flex" flexDirection="column">
               <Hidden mdUp>
                 <Typography
@@ -162,7 +159,7 @@ function CTA({ className, ...rest }) {
                   variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Organize a Workshop for your Community
+                  Get Updates About Our Initiatives
                 </Typography>
               </Hidden>
 
@@ -172,28 +169,7 @@ function CTA({ className, ...rest }) {
                   variant="h4"
                   style={{ lineHeight: '1.5' }}
                 >
-                  Organize a Workshop <br /> for your Community
-                </Typography>
-              </Hidden>
-
-              <Hidden mdUp>
-                <Typography
-                  color="textPrimary"
-                  variant="body1"
-                  style={{ lineHeight: '1.5', marginTop: '12px' }}
-                >
-                  Teach yourself and your people best practices in the world.
-                </Typography>
-              </Hidden>
-
-              <Hidden smDown>
-                <Typography
-                  color="textPrimary"
-                  variant="body1"
-                  style={{ lineHeight: '1.5', marginTop: '12px' }}
-                >
-                  Teach yourself and your people <br /> best practices in the
-                  world
+                  Get Updates About Our <br /> Initiatives
                 </Typography>
               </Hidden>
 
@@ -208,69 +184,7 @@ function CTA({ className, ...rest }) {
                       size="large"
                       variant="outlined"
                     >
-                      Submit Request
-                    </Button>
-                  </Grid>
-                </Grid>
-              </Box>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={3}>
-            <Box className={classes.flex} display="flex" flexDirection="column">
-              <Hidden mdUp>
-                <Typography
-                  color="textPrimary"
-                  variant="h4"
-                  style={{ lineHeight: '1.5' }}
-                >
-                  Volunteer to work on our platform
-                </Typography>
-              </Hidden>
-
-              <Hidden smDown>
-                <Typography
-                  color="textPrimary"
-                  variant="h4"
-                  style={{ lineHeight: '1.5' }}
-                >
-                  Volunteer to work on <br /> our platform
-                </Typography>
-              </Hidden>
-
-              <Hidden mdUp>
-                <Typography
-                  color="textPrimary"
-                  variant="body1"
-                  style={{ lineHeight: '1.5', marginTop: '12px' }}
-                >
-                  Gather work experience in the real world by working with Us.
-                </Typography>
-              </Hidden>
-
-              <Hidden smDown>
-                <Typography
-                  color="textPrimary"
-                  variant="body1"
-                  style={{ lineHeight: '1.5', marginTop: '12px' }}
-                >
-                  Gather work experience in the <br /> real world by working
-                  with Us
-                </Typography>
-              </Hidden>
-
-              <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
-                  <Grid item xs={12} sm={12}>
-                    <Button
-                      className={classes.Button + ' ' + classes.secondaryBtn}
-                      component="a"
-                      href="https://cdn.forms-content.sg-form.com/34a5f5b6-c515-11ea-ae40-26ea0c9b1f0c"
-                      target="_blank"
-                      size="large"
-                      variant="outlined"
-                    >
-                      Apply Now
+                      Enroll Now
                     </Button>
                   </Grid>
                 </Grid>

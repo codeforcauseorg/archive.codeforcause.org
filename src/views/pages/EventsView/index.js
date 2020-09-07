@@ -4,6 +4,8 @@ import Page from 'src/components/Page';
 import Hero from './Hero';
 import Footer from '../common/Footer';
 import CTA from './CTA';
+import Events from './Events';
+import Apply from './Apply';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -15,6 +17,8 @@ function EventsView() {
   return (
     <Page className={classes.root} title="Campus Leaders">
       <Hero />
+      <Events />
+      <Apply />
       <CTA />
       <Footer />
     </Page>
