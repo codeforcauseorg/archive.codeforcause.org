@@ -1,18 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 import PropTypes from 'prop-types';
 
 import {
   Grid,
-  Typography,
-  Box,
-  Card,
-  CardContent,
+  Typography
 } from '@material-ui/core';
 
 import coursesContent from 'src/data/courses';
-import { Link } from 'react-router-dom';
+import CourseCard from '../common/CourseCard';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -211,181 +207,7 @@ const CoursesGrid = ({ courses }) => {
   );
 };
 
-const CourseCard = ({ course }) => {
-  const classes = useStyles();
-  return (
-    <Box>
-      <Card className={classes.card} display="flex">
-        <CardContent className={classes.cardContent}>
-          <Box display="flex" flexDirection="column">
-            <Box
-              display="flex"
-              flexDirection="row"
-              style={{
-                margin: '8px 0px 0px'
-              }}
-            >
-              <Typography
-                align="left"
-                variant="body2"
-                style={{
-                  width: '50%',
-                  color: '#0085FF'
-                }}
-              >
-                {course.difficulty}
-              </Typography>
-              <Typography
-                align="right"
-                variant="body2"
-                style={{
-                  width: '50%'
-                }}
-              >
-                <Box fontWeight={600}>{course.level}</Box>
-              </Typography>
-            </Box>
 
-            <Typography
-              variant="h5"
-              align="left"
-              style={{
-                marginBottom: '16px',
-                color: '#FF4C00'
-              }}
-            >
-              {course.domain}
-            </Typography>
-
-            <Typography variant="h4" align="left">
-              {course.title}
-            </Typography>
-          </Box>
-        </CardContent>
-
-        <ParallaxCarousel slides={course.slides} />
-
-        <CardContent className={classes.cardContent}>
-          <Box display="flex" flexDirection="column">
-            <Box
-              display="flex"
-              flexDirection="row"
-              style={{
-                marginTop: '4px 0px'
-              }}
-            >
-              <Typography
-                style={{
-                  marginRight: '8px',
-                  color: '#A3A3A3'
-                }}
-              >
-                Duration
-              </Typography>
-              <Typography>{course.duration}</Typography>
-            </Box>
-
-            <Box
-              display="flex"
-              flexDirection="row"
-              style={{
-                marginTop: '4px 0px'
-              }}
-            >
-              <Typography
-                style={{
-                  marginRight: '8px',
-                  color: '#A3A3A3'
-                }}
-              >
-                Upcoming
-              </Typography>
-              <Typography>{course.upcoming}</Typography>
-            </Box>
-
-            <Box mb={4} display="flex" flexDirection="row">
-              {course.tags.slice(0, 3).map((tag, index) => (
-                <div
-                  style={{
-                    margin: '4px 16px 4px 0px',
-                    padding: '4px 8px',
-                    border: '1px solid',
-                    borderColor: '#A60000',
-                    borderRadius: '5px'
-                  }}
-                  variant="outlined"
-                >
-                  <Typography color="primary" variant="body2" noWrap={true}>
-                    {tag}
-                  </Typography>
-                </div>
-              ))}
-            </Box>
-          </Box>
-        </CardContent>
-
-        <Link
-          display="flex"
-          justifyContent="center"
-          to={course.link}
-          style={{
-            background: '#A60000',
-            color: '#FF4C00',
-            textDecoration: 'none'
-          }}
-        >
-          <Typography
-            align="center"
-            style={{
-              color: '#FFFFFF'
-            }}
-          >
-            <Box m={1} fontWeight={600}>
-              Check Details
-            </Box>
-          </Typography>
-        </Link>
-      </Card>
-    </Box>
-  );
-};
-
-const ParallaxCarousel = ({ slides }) => {
-  const renderChildren = () =>
-    slides.map((slide, index) => {
-      return (
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="bottom"
-          style={{
-            height: '141px',
-            width: '100%',
-            color: '#FFFFFF',
-            padding: '8px',
-            backgroundImage: `url(${slide.image})`
-          }}
-        >
-          <Box
-            display="flex"
-            flexDirection="column"
-            style={{
-              position: 'absolute',
-              bottom: 8
-            }}
-          >
-            <Typography variant="h4" align="left">
-              <Box>{slide.heading}</Box>
-            </Typography>
-            <Typography variant="h6" align="left">
-              <Box fontWeight={600}>{slide.subheading}</Box>
-            </Typography>
-          </Box>
-        </Box>
-      );
-    });
-  return <ParallaxSlide>{renderChildren}</ParallaxSlide>;
-};
 
 function TabPanel(props) {
   const { children, value, index } = props;

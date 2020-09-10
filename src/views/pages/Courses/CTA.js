@@ -202,7 +202,7 @@ export default function CTA() {
                 <Button
                   className={classes.btn}
                   variant="contained"
-                  color="primary"
+                  color="secondary"
                   target="_blank"
                 >
                   <Typography variant="body1">Submit</Typography>
@@ -250,9 +250,9 @@ export default function CTA() {
 
               <Typography
                 variant="body1"
-                color= "primary"
+                color= "secondary"
               >
-                <Box fontWeight="fontWeightBold" color="primary">
+                <Box fontWeight="fontWeightBold" color="secondary">
                   Take a Test
                 </Box>
               </Typography>
@@ -294,7 +294,7 @@ export default function CTA() {
 
               <Typography
                 variant="body1"
-                color= "primary"
+                color= "secondary"
               >
                 <Box fontWeight="fontWeightBold">Try Now !</Box>
               </Typography>

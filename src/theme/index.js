@@ -53,10 +53,10 @@ const themeConfigs = [
         paper: colors.common.white // background
       },
       primary: {
-        main: "#A60000" // for header and loader
+        main: colors.indigo[600] // for header and loader
       },
       secondary: {
-        main: '#5850EC' // for button and selected
+        main: '#A60000' // for button and selected
       },
       text: {
         // for text classes
@@ -84,7 +84,7 @@ const themeConfigs = [
         paper: '#282C34'
       },
       primary: {
-        main: '#8a85ff'
+        main: colors.indigo[600]
       },
       secondary: {
         main: '#8a85ff'

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  TextField,
   Dialog,
   DialogActions,
   DialogContent,
@@ -11,6 +10,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
 import axios from 'axios';
 
@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '16px'
   },
   submissions: {
-    width: "80px",
-    height: "50px"
+    width: '80px',
+    height: '50px'
   }
 }));
 
@@ -55,7 +55,6 @@ export default function ApplyNowModal() {
       [event.target.name]: event.target.value
     });
   };
-
 
   const handleSubmit = e => {
     setSubmitting(1);
@@ -84,6 +83,7 @@ export default function ApplyNowModal() {
         Apply now
       </Button>
       <Dialog
+        fullWidth
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
@@ -95,8 +95,8 @@ export default function ApplyNowModal() {
           <DialogContentText>
             <Typography>Please provide your details below.</Typography>
           </DialogContentText>
-          <form noValidate autoComplete="off">
-            <TextField
+          <ValidatorForm onSubmit={handleSubmit}>
+            <TextValidator
               key="name"
               className={classes.textField}
               label="Full Name"
@@ -105,9 +105,11 @@ export default function ApplyNowModal() {
               fullWidth
               name="name"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <TextField
+            <TextValidator
               key="email"
               className={classes.textField}
               label="Email"
@@ -116,9 +118,11 @@ export default function ApplyNowModal() {
               fullWidth
               name="email"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <TextField
+            <TextValidator
               key="contact"
               className={classes.textField}
               label="WhatsApp / Contact Number "
@@ -127,9 +131,11 @@ export default function ApplyNowModal() {
               fullWidth
               name="phone"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <TextField
+            <TextValidator
               key="linkedIn"
               className={classes.textField}
               label="LinkedIn URL"
@@ -138,9 +144,11 @@ export default function ApplyNowModal() {
               fullWidth
               name="linkedIn"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <TextField
+            <TextValidator
               key="course"
               className={classes.textField}
               label="Course & Branch"
@@ -149,20 +157,24 @@ export default function ApplyNowModal() {
               fullWidth
               name="course"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <TextField
+            <TextValidator
               key="year"
               className={classes.textField}
-              label="year"
+              label="Year"
               variant="outlined"
               value={formData.year}
               fullWidth
               name="year"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <TextField
+            <TextValidator
               key="college"
               className={classes.textField}
               label="College Name"
@@ -171,21 +183,33 @@ export default function ApplyNowModal() {
               fullWidth
               name="college"
               onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
-          </form>
-        </DialogContent>
-        <DialogActions>
-          <Button className={classes.submissions} onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          {submitting === 0 ? (
-            <Button className={classes.submissions} onClick={handleSubmit} color="primary">
-              Apply
+
+            {submitting === 0 ? (
+              <Button type="submit" variant="contained" color="secondary">
+                Apply
+              </Button>
+            ) : (
+              <div className={classes.submissions}>
+                <CircularProgress />
+              </div>
+            )}
+
+            <Button
+              variant="outlined"
+              onClick={handleClose}
+              color="secondary"
+              style={{
+                marginLeft: '16px'
+              }}
+            >
+              Cancel
             </Button>
-          ) : (
-          <div className={classes.submissions}><CircularProgress /></div>
-          )}
-        </DialogActions>
+          </ValidatorForm>
+        </DialogContent>
+        <DialogActions></DialogActions>
       </Dialog>
     </div>
   );

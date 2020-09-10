@@ -59,6 +59,16 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
     bottom: false,
     right: false
   });
+
+  const pathname = window.location.pathname;
+
+  const navItems = [
+    { title: 'Campus Leaders', link: '/campusLeaders' },
+    { title: 'Events', link: '/events' },
+    { title: 'Courses', link: '/courses' },
+    { title: 'Team', link: '/team' }
+  ]
+
   const list = () => (
     <div
       className={classes.list}
@@ -67,13 +77,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
       onKeyDown={toggleDrawer('right', false)}
     >
       <List>
-        {[
-          { title: 'Campus Leaders', link: '/campusLeaders' },
-          { title: 'Events', link: '#events' },
-          { title: 'About', link: '#about' },
-          { title: 'Team', link: '#team' },
-          { title: 'Actions', link: '#actions' }
-        ].map((item, index) => (
+        {navItems.map((item, index) => (
           <ListItem button key={index}>
             <Link
               smooth
@@ -131,11 +135,9 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
         </RouterLink>
         <Hidden smDown>
           <Box ml={2} flexGrow={1} />
-          <Item title="Campus Leaders" link="/campusLeaders" />
-          <Item title="Events" link="#events" />
-          <Item title="About" link="#about" />
-          <Item title="Team" link="#team" />
-          <Item title="Actions" link="#actions" />
+          {navItems.map((item, index) => (
+            <Item active={item.link === pathname} title={item.title} link={item.link} />
+          ))};
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
             <OpenSource />

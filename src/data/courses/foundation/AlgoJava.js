@@ -1,31 +1,33 @@
 export const algoJava = {
   difficulty: 'Foundation',
-  duration: '24 Lectures',
+  duration: '30 Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-java',
   domain: 'Algorithms',
   title: 'Data Structure and Algorithms with Java',
   upcoming: 'Oct 1st',
+  priceCut: 15000,
+  price: 4850,
   projects: [
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Automatic Sudoku Solver',
+      img: '/static/images/courses/projects/sudoku.jpg'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'File Encryption and Compression',
+      img: '/static/images/courses/projects/security.jpg'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Splitwise Cashflow Minimization',
+      img: '/static/images/courses/projects/split.png'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Search routes like Google Maps',
+      img: '/static/images/courses/projects/maps.png'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Git Version Control Replica',
+      img: '/static/images/courses/projects/git.png'
     }
   ],
   topics: [
@@ -200,35 +202,21 @@ export const algoJava = {
   ],
   slides: [
     {
-      heading: 'Create Facebook Chatbot',
-      subheading: 'Using Natural Language Processing',
-      image: '/static/swipes/bot.png'
+      heading: 'Search routes like Google Maps',
+      subheading: 'Using Graph Algorithms',
+      image: '/static/images/courses/projects/maps.png'
     },
-    {
-      heading: 'Dedect and recognize Faces',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Generate machine made music',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Learn To make Snapchat Filters',
-      subheading: 'Using Image Processing',
-      image: '/static/swipes/ar.png'
-    }
   ],
   tags: [
     'Data Structures',
     'Algorithms',
     'Problem Solving',
     'Java',
-    'Competitive Programming',
-    'Interview Preparation'
+    'CP',
+    'Interview Prep'
   ],
   overview: [
-    "Every students have in their mind that why to study Data Structure. How it helps me in real life problem? Data Structures are the most important skills for a person belonging to computer-science background to understand the nature of problems, develop the logic to solve a problem in an optimised way with an efficient use of appropriate Data Structures. From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimised and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!"
+    "Every students have in their mind that why to study Data Structure. How it helps me in real life problem? Data Structures are the most important skills for a person belonging to computer-science background to understand the nature of problems, develop the logic to solve a problem in an optimised way with an efficient use of appropriate Data Structures.",
+    "From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimised and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!"
   ]
 };

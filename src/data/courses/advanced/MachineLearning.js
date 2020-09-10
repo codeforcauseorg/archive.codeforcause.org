@@ -130,11 +130,11 @@ export const machineLearning = {
   ],
   tags: [
     'ML',
+    'CNN',
+    'Python',
     'Image Processing',
     'Deep Learning',
     'Neural Network',
-    'CNN',
-    'Python'
   ],
   overview: [
     "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",
