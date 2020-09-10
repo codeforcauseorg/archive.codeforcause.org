@@ -124,8 +124,8 @@ export default function Recommendations({ recommendationsImages }) {
       >
         <Grid item lg={11} md={11} sm={12}>
           <Typography variant="h2" gutterBottom>
-            <Box className={classes.text}>What Do Students Say About</Box>
-            <Box className={classes.textHighlight}>Say about Us</Box>
+            <Box className={classes.text}>What Do Our Students Say</Box>
+            <Box className={classes.textHighlight}>About Us</Box>
           </Typography>
         </Grid>
 

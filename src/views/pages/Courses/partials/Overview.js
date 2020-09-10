@@ -33,10 +33,13 @@ export default function Overview({ course }) {
               variant="body1"
               align="left"
               style={{
-                marginBottom: '16px'
+                marginBottom: '16px',
+                color:'#606060'
               }}
             >
-              {paragraph}
+              <Box fontWeight={400}>
+                {paragraph}
+              </Box>
             </Typography>);
           })}
         </Box>

@@ -7,21 +7,26 @@ export const webDevelopment = {
   title: 'Full Stack Web Development with JS',
   upcoming: 'Oct 1st',
   projects: [
+
     {
-      title: 'Chat App with WebSockets',
-      img: '/static/images/projects/p1.png'
+      title: 'Vendor App with Payment Gateway',
+      img: '/static/images/courses/projects/payment.jpg'
+    },
+    {
+      title: 'GitHub CLI Replica',
+      img: '/static/images/courses/projects/githubcli.png'
     },
     {
       title: 'Protfolio Website to Standout',
-      img: '/static/images/projects/p1.png'
+      img: '/static/images/courses/projects/portfolio.png'
     },
     {
-      title: 'Vendor App with Payment Gateway',
-      img: '/static/images/projects/p1.png'
+      title: 'Pastebin snippet Pusher',
+      img: '/static/images/courses/projects/apicall.jpg'
     },
     {
-      title: 'GitHub CLI App',
-      img: '/static/images/projects/p1.png'
+      title: 'Chat App with WebSockets',
+      img: '/static/images/courses/projects/chat.jpg'
     },
   ],
   topics: [
@@ -133,12 +138,12 @@ export const webDevelopment = {
     }
   ],
   tags: [
-    'ML',
-    'Image Processing',
-    'Deep Learning',
-    'Neural Network',
-    'CNN',
-    'Python'
+    'Web',
+    'JS',
+    'React',
+    'Server',
+    'Firebase',
+    
   ],
   overview: [
     "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",

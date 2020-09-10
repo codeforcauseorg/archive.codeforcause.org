@@ -5,8 +5,6 @@ import {
   Typography,
   makeStyles,
   Box,
-  GridList,
-  GridListTile
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -27,18 +25,31 @@ function Projects({ projects, flat }) {
 
   return (
     <div className={classes.root}>
-      <Container maxWidth="lg" style={{
-        width: flat ? "100%" :'360px',
-      }}>
-        <GridList
+      <Container
+        maxWidth="lg"
+        style={{
+          width: flat ? '100%' : '360px'
+        }}
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
           style={{
-            flexWrap: flat ? "nowrap" :'wrap',
+            flexWrap: flat ? 'nowrap' : 'wrap'
           }}
         >
+          <Typography
+            variant="h4"
+            style={{
+              margin: '12px 0px 12px 8px'
+            }}
+          >
+            Learn To Make From this Course
+          </Typography>
           {projects.map((project, index) => {
             return <Project project={project} />;
           })}
-        </GridList>
+        </Box>
       </Container>
     </div>
   );
@@ -46,29 +57,26 @@ function Projects({ projects, flat }) {
 
 function Project({ project }) {
   return (
-    <GridListTile>
-      <Box
-        display="inline-flex"
-        flexDirection="column"
-        width="300px"
+    <Box
+      display="inline-flex"
+      flexDirection="column"
+      width="300px"
+      style={{
+        margin: '8px',
+        padding: '8px 0px'
+      }}
+    >
+      <img
+        alt={project.title}
+        src={project.img}
         style={{
-          margin: '8px',
-          padding: '8px 0px'
+          width: '100%',
+          height: '100%',
+          marginBottom: '8px'
         }}
-      >
-        <img
-          alt={project.title}
-          src={project.img}
-          style={{
-            width: '100%',
-            height: '100%',
-            boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.18)',
-            marginBottom: '8px'
-          }}
-        />
-        <Typography>{project.title}</Typography>
-      </Box>
-    </GridListTile>
+      />
+      <Typography>{project.title}</Typography>
+    </Box>
   );
 }
 

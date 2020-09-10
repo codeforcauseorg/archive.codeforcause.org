@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box, Button, Hidden } from '@material-ui/core';
+import { Grid, Typography, Box, Button } from '@material-ui/core';
 
 export default function Details({ course, bottom }) {
   return (
@@ -24,7 +24,7 @@ export default function Details({ course, bottom }) {
           <Typography
             variant="h3"
             align="left"
-            color="primary"
+            color="secondary"
             style={{
               marginBottom: '16px'
             }}
@@ -72,8 +72,7 @@ export default function Details({ course, bottom }) {
             <Typography variant="body1">{course.level}</Typography>
           </Box>
 
-          <Hidden smDown>
-            <Box mb={4} display="flex" flexDirection="row">
+            <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
               {course.tags.map((tag, index) => (
                 <div
                   style={{
@@ -85,16 +84,15 @@ export default function Details({ course, bottom }) {
                   }}
                   variant="outlined"
                 >
-                  <Typography color="primary" variant="body2">
+                  <Typography color="secondary" variant="body2">
                     {tag}
                   </Typography>
                 </div>
               ))}
             </Box>
-          </Hidden>
         </Box>
         {!bottom ? (
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="secondary">
             Enroll Now
           </Button>
         ) : (

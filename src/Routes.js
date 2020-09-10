@@ -2,7 +2,6 @@
 import React, { lazy, Suspense, Fragment } from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import MainLayout from 'src/layouts/MainLayout';
-import CLLayout from 'src/layouts/CLLayout';
 import DocsLayout from 'src/layouts/DocsLayout';
 import HomeView from 'src/views/pages/HomeView';
 import CAView from 'src/views/pages/CLView';
@@ -15,6 +14,7 @@ import WebFullStakView from 'src/views/pages/Courses/WebFullStakView'
 import CompetitiveJavaView from 'src/views/pages/Courses/CompetitiveJavaView'
 import PythonDevelopmentView from 'src/views/pages/Courses/PythonDevelopmentView'
 import CoursesView from 'src/views/pages/CoursesView';
+import ProfileView from 'src/views/pages/ProfileView'
 
 const routesConfig = [
   {
@@ -68,7 +68,7 @@ const routesConfig = [
   },
   {
     path: '/campusLeaders',
-    layout: CLLayout,
+    layout: MainLayout,
     routes: [
       {
         exact: true,
@@ -102,6 +102,20 @@ const routesConfig = [
         exact: true,
         path: '/courses',
         component: CoursesView
+      },
+      {
+        component: () => <Redirect to="/404" />
+      }
+    ]
+  },
+  {
+    path: '/profile',
+    layout: MainLayout,
+    routes: [
+      {
+        exact: true,
+        path: '/profile',
+        component: ProfileView
       },
       {
         component: () => <Redirect to="/404" />

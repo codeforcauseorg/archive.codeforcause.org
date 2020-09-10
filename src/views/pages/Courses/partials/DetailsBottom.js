@@ -22,7 +22,7 @@ export default function DetailsBottom({ course, bottom }) {
           <Typography
             variant="h3"
             align="left"
-            color="primary"
+            color="secondary"
             style={{
               marginBottom: '16px'
             }}
@@ -91,7 +91,7 @@ export default function DetailsBottom({ course, bottom }) {
                 }}
                 variant="outlined"
               >
-                <Typography color="primary" variant="body2">
+                <Typography color="secondary" variant="body2">
                   {tag}
                 </Typography>
               </div>
