@@ -145,7 +145,7 @@ function EventCards({ events, upcoming }) {
 
   return (
     <Grid container spacing={4} className={classes.extraMargin}>
-      {events.slice(Math.max(events.length - 3, 0)).map((event, index) => {
+      {events.map((event, index) => {
         if (event.upcoming !== upcoming) {
           return null;
         }
