@@ -1,8 +1,8 @@
 import React from 'react';
-import { Grid, Typography, Box, Hidden} from '@material-ui/core';
+import { Grid, Typography, Box } from '@material-ui/core';
 
 
-export default function DetailsBottom({ course, bottom }) {
+export default function DetailsBottom({ course, batch }) {
   return (
     <Grid
       container
@@ -74,30 +74,41 @@ export default function DetailsBottom({ course, bottom }) {
             <Typography variant="body1">{course.level}</Typography>
           </Box>
 
-          <Hidden smDown>
-          <Box
+          <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
+              {course.tags.map((tag, index) => (
+                <div
+                  style={{
+                    margin: '4px 16px 4px 0px',
+                    padding: '4px 8px',
+                    border: '1px solid',
+                    borderColor: '#A60000',
+                    borderRadius: '5px'
+                  }}
+                  variant="outlined"
+                >
+                  <Typography color="secondary" variant="body2">
+                    {tag}
+                  </Typography>
+                </div>
+              ))}
+            </Box>
+
+            <Box mb={2}
             display="flex"
             flexDirection="row"
             
           >
-            {course.tags.map((tag, index) => (
-              <div
-                style={{
-                  margin: '4px 16px 4px 0px',
-                  padding: '4px 8px',
-                  border: '1px solid',
-                  borderColor: '#A60000',
-                  borderRadius: '5px'
-                }}
-                variant="outlined"
-              >
-                <Typography color="secondary" variant="body2">
-                  {tag}
-                </Typography>
-              </div>
-            ))}
-          </Box> 
-          </Hidden>         
+            <Typography
+              style={{
+                marginRight: '24px',
+                color: '#939393',
+              }}
+              variant="body2"
+            >
+              You will need to pay only after your application have been accepted.
+            </Typography>
+          </Box>
+             
         </Box>
         
       </Grid>

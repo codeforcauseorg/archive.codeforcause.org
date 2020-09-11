@@ -139,7 +139,7 @@ export default function Recommendations({ recommendationsImages }) {
       <Grid container spacing={4}>
         <GridList
           className={classes.gridList}
-          cols={large ? 4 : medium ? 3.5 : small ? 2.7 : 1.2}
+          cols={large ? 4 : medium ? 3.5 : small ? 2.7 : 1.4}
         >
           {recommendations.map((recommendation, index) => {
             return (

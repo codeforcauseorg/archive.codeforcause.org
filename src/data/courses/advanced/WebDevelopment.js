@@ -6,6 +6,26 @@ export const webDevelopment = {
   domain: 'Web Development',
   title: 'Full Stack Web Development with JS',
   upcoming: 'Oct 1st',
+  schedule: [
+    {
+      dates: "1st Oct - 5th Dec",
+      days: "Sat, Sun, Tue, Thur",
+      timing: "06:00 PM - 08:00 PM (IST)",
+      link: "",
+      priceCut: "₹ 22,000",
+      price: "₹ 6,850",
+      active: true,
+    },
+    {
+      dates: "10th Jan - 10th Apr",
+      days: "Sat, Sun, Wed",
+      timing: "06:00 PM - 08:00 PM (IST)",
+      link: "",
+      priceCut: "15,000 INR",
+      price: "8,850 INR",
+      active: false,
+    }
+  ],
   projects: [
 
     {

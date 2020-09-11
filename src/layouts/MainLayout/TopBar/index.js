@@ -66,7 +66,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
     { title: 'Campus Leaders', link: '/campusLeaders' },
     { title: 'Events', link: '/events' },
     { title: 'Courses', link: '/courses' },
-    { title: 'Team', link: '/team' }
+    // { title: 'Team', link: '/team' }
   ]
 
   const list = () => (

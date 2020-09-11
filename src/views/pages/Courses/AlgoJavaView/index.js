@@ -11,6 +11,7 @@ import Major from '../Major';
 
 const foundation = coursesContent.foundation;
 const course = foundation.algoJava;
+const batch = course.schedule[0];
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -23,9 +24,10 @@ function CoursesView() {
     <Page className={classes.root} title="Courses">
       <Major course={course}/>
       {/* <CourseRecommendations /> */}
-      <Schedule course={course}/>
+      {/* <Mentors mentors={course.mentors} /> */}
+      <Schedule course={course} />
       <Recommendations />
-      <FinalAction course={course}/>
+      <FinalAction course={course} batch={batch}/>
       <CTA />
       <Footer />
     </Page>

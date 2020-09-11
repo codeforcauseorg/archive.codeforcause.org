@@ -11,6 +11,7 @@ import Major from '../Major';
 
 const advanced = coursesContent.advanced;
 const course = advanced.webDevelopment;
+const batch = course.schedule[0];
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -23,9 +24,9 @@ function CoursesView() {
     <Page className={classes.root} title="Courses">
       <Major course={course}/>
       {/* <CourseRecommendations /> */}
-      <Schedule course={course}/>
+      <Schedule course={course} />
       <Recommendations />
-      <FinalAction course={course}/>
+      <FinalAction course={course} batch={batch}/>
       <CTA />
       <Footer />
     </Page>

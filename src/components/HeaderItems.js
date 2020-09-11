@@ -15,7 +15,6 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       position: 'relative',
       top: '2px',
-
       borderBottom: '4px solid #A60000'
     }
   },

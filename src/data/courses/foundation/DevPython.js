@@ -6,6 +6,26 @@ export const devPython = {
   domain: 'Development',
   title: 'Application Development with Python',
   upcoming: 'Oct 1st',
+  schedule: [
+    {
+      dates: "01st Oct - 05th Dec",
+      days: "Sat Sun Tue Thur",
+      timing: "06:00 PM - 08:00 PM (IST)",
+      link: "",
+      priceCut: "₹ 15,000",
+      price: "₹ 4,850",
+      active: true,
+    },
+    {
+      dates: "10th Jan - 10th Apr",
+      days: "Sat, Sun, Wed",
+      timing: "06:00 PM - 08:00 PM (IST)",
+      link: "",
+      priceCut: "15,000 INR",
+      price: "6,850 INR",
+      active: false,
+    }
+  ],
   projects: [
     {
       title: 'Mobile App Development',
