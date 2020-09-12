@@ -31,7 +31,6 @@ const useStyles = makeStyles(theme => ({
 
 const WhatWeStandFor = ({ className, ...rest }) => {
   const classes = useStyles();
-  // const { user } = useSelector((state) => state.account);
 
   return (
     <Container className={clsx(classes.root, className)} {...rest}>

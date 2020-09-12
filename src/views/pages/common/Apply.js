@@ -104,7 +104,7 @@ function Apply({ className, ...rest }) {
               }}
             />
             <Box mt={3}>
-              <Button color="primary" size="large" variant="contained">
+              <Button color="secondary" size="large" variant="contained">
                 Submit
               </Button>
             </Box>

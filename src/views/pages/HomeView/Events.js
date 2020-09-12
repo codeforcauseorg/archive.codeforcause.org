@@ -94,8 +94,8 @@ const useStyles = makeStyles(theme => ({
     top: 18,
     zIndex: 1,
     borderRadius: '0px 5px 5px 0px',
-    color: 'black',
-    backgroundColor: '#00FF75'
+    color: 'white',
+    backgroundColor: '#000000'
   }
 }));
 

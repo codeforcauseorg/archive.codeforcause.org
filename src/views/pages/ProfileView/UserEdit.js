@@ -23,7 +23,6 @@ export class UserEdit extends React.Component {
             <ValidatorForm
                 ref="form"
                 onSubmit={this.handleSubmit}
-                onError={errors => console.log(errors)}
             >
                 <TextValidator
                     label="Email"

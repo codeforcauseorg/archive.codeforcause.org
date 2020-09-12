@@ -12,6 +12,9 @@ import {
   makeStyles
 } from '@material-ui/core';
 
+import { login } from 'src/actions/accountActions';
+import { useDispatch, useSelector } from 'react-redux';
+
 const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
 
 const useStyles = makeStyles(theme => ({
@@ -70,6 +73,13 @@ const useStyles = makeStyles(theme => ({
 function Hero({ className, ...rest }) {
   const classes = useStyles();
 
+  const user = useSelector(state => state.account.user);
+
+  const dispatch = useDispatch();
+  const handleLoginOpen = () => {
+    dispatch(login());
+  };
+
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
@@ -83,37 +93,47 @@ function Hero({ className, ...rest }) {
               className={clsx(classes.extraPadding, className)}
             >
               <Typography variant="h1" gutterBottom>
-                Workshops, Bootcamps
+                Industry Grade Courses
               </Typography>
-              <Typography variant="h1"> &amp; Webinars</Typography>
+              <Typography variant="h1"> with Live Projects</Typography>
               <Hidden mdUp>
                 <Box mt={6} mb={2}>
                   <div className={classes.image}>
-                    <img
-                      alt="codeforcauseimg"
-                      src="/static/events/hero.png"
-                    />
+                    <img alt="codeforcauseimg" src="/static/events/hero.png" />
                   </div>
                 </Box>
               </Hidden>
               <Box mt={5}>
-                <Typography variant="body1">
-                Login To get regular Updates.
-                </Typography>
+                {!!user ? (
+                  <Typography variant="body1">It's the time to learn from Experts.</Typography>
+                ) : (
+                  <Typography variant="body1">
+                    Login To get regular Updates.
+                  </Typography>
+                )}
               </Box>
               <Box mt={4}>
                 <Grid container xs={12} md={12}>
                   <Grid item xs={12} md={12}>
-                    <Button
-                      className={classes.btn}
-                      component="a"
-                      href="https://youtube.com/codeforcause"
-                      target="_blank"
-                      size="large"
-                      variant="contained"
-                    >
-                      Login / Signup
-                    </Button>
+                    {!!user ? (
+                      <Button
+                        className={classes.btn}
+                        onClick={handleLoginOpen}
+                        size="large"
+                        variant="contained"
+                      >
+                        Check Your Enrollments
+                      </Button>
+                    ) : (
+                      <Button
+                        className={classes.btn}
+                        onClick={handleLoginOpen}
+                        size="large"
+                        variant="contained"
+                      >
+                        Login / Signup
+                      </Button>
+                    )}
                   </Grid>
                 </Grid>
               </Box>
@@ -123,10 +143,7 @@ function Hero({ className, ...rest }) {
             <Grid item xs={12} md={6}>
               <Box>
                 <div className={classes.image}>
-                  <img
-                    alt="codeforcauseimg"
-                    src="/static/events/hero.png"
-                  />
+                  <img alt="codeforcauseimg" src="/static/events/hero.png" />
                 </div>
               </Box>
             </Grid>

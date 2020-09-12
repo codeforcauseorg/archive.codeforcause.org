@@ -5,7 +5,7 @@ import Hero from './Hero';
 import Footer from '../common/Footer';
 import CTA from './CTA';
 import Events from './Events';
-import Apply from './Apply';
+import Apply from '../common/Apply';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -15,7 +15,7 @@ function EventsView() {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Campus Leaders">
+    <Page className={classes.root} title="Events">
       <Hero />
       <Events />
       <Apply />
