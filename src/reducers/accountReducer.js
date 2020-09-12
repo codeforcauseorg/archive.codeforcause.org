@@ -2,6 +2,7 @@
 import produce from 'immer';
 import {
   LOGIN_REQUEST,
+  DISMISS_LOGIN,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   LOGOUT,
@@ -10,15 +11,21 @@ import {
 } from 'src/actions/accountActions';
 
 const initialState = {
-  user: null
+  user: null,
+  login: null
 };
 
 const accountReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_REQUEST: {
       return produce(state, draft => {
-        // Ensure we clear current session
-        draft.user = null;
+        draft.login = true;
+      });
+    }
+
+    case DISMISS_LOGIN: {
+      return produce(state, draft => {
+        draft.login = false;
       });
     }
 

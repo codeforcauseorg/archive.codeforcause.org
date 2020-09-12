@@ -2,6 +2,7 @@ import axios from 'src/utils/axios';
 import authService from 'src/services/authService';
 
 export const LOGIN_REQUEST = '@account/login-request';
+export const DISMISS_LOGIN = '@account/dismiss-login';
 export const LOGIN_SUCCESS = '@account/login-success';
 export const LOGIN_FAILURE = '@account/login-failure';
 export const SILENT_LOGIN = '@account/silent-login';
@@ -9,23 +10,15 @@ export const LOGOUT = '@account/logout';
 export const REGISTER = '@account/register';
 export const UPDATE_PROFILE = '@account/update-profile';
 
-export function login(email, password) {
+export function login() {
   return async dispatch => {
-    try {
       dispatch({ type: LOGIN_REQUEST });
+  };
+}
 
-      const user = await authService.loginWithEmailAndPassword(email, password);
-
-      dispatch({
-        type: LOGIN_SUCCESS,
-        payload: {
-          user
-        }
-      });
-    } catch (error) {
-      dispatch({ type: LOGIN_FAILURE });
-      throw error;
-    }
+export function dismissLogin() {
+  return async dispatch => {
+      dispatch({ type: DISMISS_LOGIN });
   };
 }
 
@@ -42,7 +35,6 @@ export function setUserData(user) {
 export function logout() {
   return async dispatch => {
     authService.logout();
-
     dispatch({
       type: LOGOUT
     });

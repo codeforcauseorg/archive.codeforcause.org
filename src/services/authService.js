@@ -1,13 +1,30 @@
 import jwtDecode from 'jwt-decode';
 import axios from 'src/utils/axios';
-import Keycloak from 'keycloak-js';
+
+import firebase from 'firebase';
 
 class AuthService {
-  keycloak = Keycloak({
-    url: 'https://authbox.codeforcause.org/auth',
-    realm: 'CFC',
-    clientId: 'Dashboard'
-  });
+  // Configure Firebase.
+  config = {
+    apiKey: 'AIzaSyAbqqXtHNIuNrsamkCxRk9sOuMO-ZWDiEk',
+    authDomain: 'codeforcauseorg.firebaseapp.com'
+    // ...
+  };
+
+  // Configure FirebaseUI.
+  uiConfig = {
+    // Popup signin flow rather than redirect flow.
+    signInFlow: 'popup',
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+      // Avoid redirects after sign-in.
+      signInSuccessWithAuthResult: () => false
+    }
+  };
+
+  firebase = firebase;
 
   user = {};
 
@@ -29,11 +46,7 @@ class AuthService {
   };
 
   handleAuthentication() {
-    return new Promise(resolve => {
-      this.keycloak.init().then(authenticated => {
-        resolve(authenticated);
-      });
-    });
+    this.firebase.initializeApp(this.config);
   }
 
   loadUserProfile() {
@@ -41,7 +54,6 @@ class AuthService {
       this.keycloak
         .loadUserProfile()
         .then(profile => {
-          console.log(JSON.stringify(profile));
           resolve(profile);
         })
         .catch(function() {
@@ -80,12 +92,13 @@ class AuthService {
     });
 
   logout = () => {
-    this.keycloak.logout({});
+    this.firebase.auth().signOut();
     this.setSession(null);
   };
 
   setSession = accessToken => {
     if (accessToken) {
+      console.log(accessToken);
       localStorage.setItem('accessToken', accessToken);
       axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
     } else {

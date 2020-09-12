@@ -21,7 +21,7 @@ function CoursesView() {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Courses">
+    <Page className={classes.root} title={course.title}>
       <Major course={course}/>
       {/* <CourseRecommendations /> */}
       <Schedule course={course} />

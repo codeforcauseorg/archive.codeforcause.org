@@ -8,16 +8,7 @@ export const devPython = {
   upcoming: 'Oct 1st',
   schedule: [
     {
-      dates: "01st Oct - 05th Dec",
-      days: "Sat Sun Tue Thur",
-      timing: "06:00 PM - 08:00 PM (IST)",
-      link: "",
-      priceCut: "₹ 15,000",
-      price: "₹ 4,850",
-      active: true,
-    },
-    {
-      dates: "10th Jan - 10th Apr",
+      dates: "15th Jan - 20th Apr",
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",
       link: "",
@@ -28,136 +19,139 @@ export const devPython = {
   ],
   projects: [
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Under Developemnt',
+      img: '/static/images/courses/projects/sudoku.jpg'
     },
-    {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
-    },
-    {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
-    },
-    {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
-    },
-    {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
-    }
+
   ],
   topics: [
     {
-      title: 'Revising Python Fundamentals',
-      classes: 'Classes 1-4',
+      title: 'Getting started with Python',
+      classes: 'Classes 01-03',
       subtopics: [
-        'In-built Data Structures',
+        'Flowcharts & Pseudocode',
         'Control Flow Statements ',
-        'Underatanding OOPS and Modules',
-        'Various File operations'
+        'Setting up IntelliJ idea & Java',
+        'Primitive data-types',
+        'Input-Output on online judge',
+        'Coding standards in Java',
+        'Methods along with problems',
+        'Setting up debugger'
       ]
     },
     {
-      title: 'Data Discovery and Visualiation',
-      classes: 'Classes 5-8',
+      title: 'Arrays & ArrayList',
+      classes: 'Classes 04-07',
       subtopics: [
-        'Numpy and array computation',
-        'Processing Images with Numpy',
-        'Data Acquisition - Web Scrapping, Web APIs',
-        'Data Analysis using Pandas',
-        'Importing and Exporting Data '
+        'Introduction of arrays',
+        'Input-output & traversing',
+        'Linear Search & Binary Search',
+        'Bubble sort, Insertion sort, Selection sort, Count sort',
+        'Multi-Dimensional arrays',
+        'Rotation in arrays',
+        'Intro to ArrayList',
+        'Interview problems on Arrays & ArrayList'
       ]
     },
     {
-      title: 'Classical Machine Learning Algorithms',
-      classes: 'Classes 9-13',
+      title: 'Number theory & Bitmasking',
+      classes: 'Classes 08-09',
       subtopics: [
-        'K-Nearest Neighbour search',
-        'K-means clustering',
-        'Linear Regression',
-        'Logistic Regression',
-        'Decision trees and Ensembling Learning',
-        'Random Forest Classifiers',
-        'Support Vector Machines'
+        'Euclidean algorithms',
+        'Sieve of eratosthenes',
+        'Puzzle problems',
+        'Bitwise operators',
+        'Advantages & cost-effectiveness',
+        'Backtracking with Bitmasking',
+        'Interview problems'
       ]
     },
     {
-      title: 'Natural Language Processing',
-      classes: 'Classes 14-18',
+      title: 'String & String-Builder',
+      classes: 'Classes 10-11',
       subtopics: [
-        'Text generation using Markov Chain',
-        'Text classification using Naive Bayes',
-        'Deploy ML model with flask on heroku',
-        'Create a facebook chatbot with flask'
+        'Intro to Strings in Java',
+        'Mutability and behavior',
+        'String pool and need of equals',
+        'String operations',
+        'StringBuilder operations and optimization',
+        'String Manipulation'
       ]
     },
     {
-      title: 'Deep Neural Networks',
-      classes: 'Classes 19-22',
+      title: 'Space and Time complexity analysis',
+      classes: 'Classes 12-13',
       subtopics: [
-        'Neural Architectures and Training',
-        'Deep Learning with Keras',
-        'Convolutions and the GoogLe Net',
-        'Transfer Learning with ResNet and AlexNet',
-        'Dimensionality Reduction using Auto-encoders'
+        'Best case, worst case, average case',
+        'Sandwich theorem, recurrence relation',
+        'Theta, Big-oh, Omega notations',
+        'Understanding complexity of loops',
+        'Auxiliary vs Total space',
+        'Static & Dynamic Memory Allocation'
       ]
     },
     {
-      title: 'Advanced Deep Learning',
-      classes: 'Classes 23-27',
+      title: 'Recursion & Backtracking',
+      classes: 'Classes 14-16',
       subtopics: [
-        'Recurrent Neural Network',
-        'Long Short Term Memory',
-        'Music Generation using LSTM',
-        'Predict Gender from name with LSTM',
-        'Generative Adversarial Nets'
+        'Recursion- what, why, when?',
+        'Control flow & stack trace',
+        'understanding recursive tree',
+        'Merge sort & Quick sort',
+        'Interview problems on Recursion',
+        'Backtracking-Sudoku solver, N-Queens, lexo-permute'
       ]
     },
     {
-      title: 'Reinforcemnt Learning',
-      classes: 'Classes 27-30',
+      title: 'Object Oriented Programming',
+      classes: 'Classes 17-18',
       subtopics: [
-        'Foundational Reinforcemnt Learning',
-        'Evolutionary Algorithms and Genetic Algorithms',
-        'Deep Q-learning and training',
-        'Training on OpenAI Gym Simulaters'
+        'Classes & Objects',
+        'Constructors, states & behaviors',
+        'this keyword',
+        'Abstraction, Inheritance, Polymorphism, Encapsulation',
+        'Access modifiers',
+        'Static & non-static',
+        'final, finally, finalize'
+      ]
+    },
+    {
+      title: 'Under Developemnt',
+      classes: 'Classes 19-30',
+      subtopics: [
+      ]
+    },
+    {
+      title: 'Dynamic Programming',
+      classes: 'Classes 29-30',
+      subtopics: [
+        'Understanding the concept in Dynamic Programming',
+        'Understanding overlapping subproblems',
+        'Memorization vs Tabulation',
+        'Top down & bottom-up approach',
+        '0-1 KnapSack problem',
+        'Wildcard pattern problem',
+        'Egg drop problem',
+        'Matrix chain multiplication'
       ]
     }
   ],
   slides: [
     {
-      heading: 'Create Facebook Chatbot',
-      subheading: 'Using Natural Language Processing',
-      image: '/static/swipes/bot.png'
+      heading: 'Automatic Sudoku Solver',
+      subheading: 'Using Back Tracking',
+      image: '/static/images/courses/projects/sudoku.jpg'
     },
-    {
-      heading: 'Dedect and recognize Faces',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Generate machine made music',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Learn To make Snapchat Filters',
-      subheading: 'Using Image Processing',
-      image: '/static/swipes/ar.png'
-    }
   ],
   tags: [
-    'ML',
-    'Image Processing',
-    'Deep Learning',
-    'Neural Network',
-    'CNN',
-    'Python'
+    'Django',
+    'Rest API',
+    'Mongo DB',
+    'Relational DB',
+    'Authentication',
+    'User Management',
   ],
   overview: [
-    "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",
-    "We’ve been teaching VR for over 12 months but this AR course is BRAND NEW! You’ll learn to design and code Augmented Reality apps using Camp K12's very own HatchXR platform."
+    "Under Developemnt"
   ]
 };

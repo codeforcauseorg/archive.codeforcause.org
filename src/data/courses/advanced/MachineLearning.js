@@ -28,24 +28,28 @@ export const machineLearning = {
   ],
   projects: [
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Movie Recommendation System',
+      img: '/static/images/courses/projects/ml/movie.jpg'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Face Detection and Recognition',
+      img: '/static/images/courses/projects/ml/face.jpg'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Image Classsification with Neural Network',
+      img: '/static/images/courses/projects/ml/classification.jpg'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Text Based Sentiment Analysis',
+      img: '/static/images/courses/projects/ml/sentiment.png'
     },
     {
-      title: 'Mobile App Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Generate new faces with GAN',
+      img: '/static/images/courses/projects/ml/gan.jpg'
+    },
+    {
+      title: 'Simmulator Learning with OpenAI Gym',
+      img: '/static/images/courses/projects/ml/gym.jpg'
     }
   ],
   topics: [

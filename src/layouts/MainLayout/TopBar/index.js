@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core';
 import Logo from 'src/components/Logo';
 import Item from './Item';
-import OpenSource from './OpenSource';
+import OpenSource from './Account';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
