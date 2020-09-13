@@ -3,11 +3,13 @@ import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Footer from '../../common/Footer';
 import Recommendations from '../../common/Recommendations'
-import CTA from '../CTA'
+import FAQ from '../FAQ'
 import FinalAction from '../FinalAction'
 import Schedule from '../Schedule'
 import coursesContent from 'src/data/courses';
 import Major from '../Major';
+import Features from '../Features'
+import Process from '../Process'
 
 const foundation = coursesContent.foundation;
 const course = foundation.algoJava;
@@ -25,10 +27,12 @@ function CoursesView() {
       <Major course={course}/>
       {/* <CourseRecommendations /> */}
       {/* <Mentors mentors={course.mentors} /> */}
+      <Process />
       <Schedule course={course} />
+      <Features />
       <Recommendations />
       <FinalAction course={course} batch={batch}/>
-      <CTA />
+      <FAQ course={course}/>
       <Footer />
     </Page>
   );

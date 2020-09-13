@@ -238,5 +238,23 @@ export const algoPython = {
   overview: [
     "Every student has in their mind that why to study Data Structure. How it helps them in a real-life problem? Data Structures are the most important skills for a person belonging to the computer-science background to understand the nature of problems, develop the logic to solve a problem in an optimized way with the efficient use of appropriate Data Structures.",
     "From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimized and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!"
+  ],
+  faqs: [
+    {
+      title:
+        'Will this help me with my career path?',
+      answer:
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+    }, {
+      title:
+        'How your doubts will get resolved?',
+      answer:
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+    }, {
+      title:
+        'Is this course suitable for me?',
+      answer:
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
+    },
   ]
 };

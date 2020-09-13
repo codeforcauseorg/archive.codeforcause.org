@@ -165,10 +165,10 @@ const useStyles = makeStyles(theme => ({
 
 function getSteps() {
   return [
-    'You Fill The Form',
-    'You Get Shortlisted',
+    'Fill Application',
+    'Get Shortlisted',
     'Online Meeting',
-    'Welcome to The Team'
+    'Welcome Aboard'
   ];
 }
 
@@ -183,6 +183,9 @@ export default function ProcessSteppers() {
         alternativeLabel
         activeStep={activeStep}
         connector={<ColorlibConnector />}
+        style={{
+          padding: '24px 0px'
+        }}
       >
         {steps.map(label => (
           <Step key={label}>

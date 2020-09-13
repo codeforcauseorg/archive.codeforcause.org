@@ -16,12 +16,12 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2)
   },
   root: {
-    padding: theme.spacing(0, 10, 0),
+    padding: theme.spacing(0, 10, 10),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(0, 3, 0)
+      padding: theme.spacing(0, 3, 10)
     }
   },
 

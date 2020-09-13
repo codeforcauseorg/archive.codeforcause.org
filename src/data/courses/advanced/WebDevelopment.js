@@ -168,5 +168,23 @@ export const webDevelopment = {
   overview: [
     "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",
     "We’ve been teaching VR for over 12 months but this AR course is BRAND NEW! You’ll learn to design and code Augmented Reality apps using Camp K12's very own HatchXR platform."
+  ],
+  faqs: [
+    {
+      title:
+        'Will this help me with my career path?',
+      answer:
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+    }, {
+      title:
+        'How your doubts will get resolved?',
+      answer:
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+    }, {
+      title:
+        'Is this course suitable for me?',
+      answer:
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
+    },
   ]
 };
