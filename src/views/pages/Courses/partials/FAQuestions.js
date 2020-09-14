@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Grid,
   Typography,
-  Hidden,
   Box,
   Collapse,
   IconButton
