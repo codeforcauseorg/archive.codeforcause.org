@@ -2,7 +2,7 @@ export const machineLearning = {
   difficulty: 'Intermediate',
   duration: '30 Lectures',
   level: 'Level 2',
-  link: '/machine-learning-using-python',
+  link: '/courses/machine-learning-using-python',
   domain: 'Artificial Intelligence',
   title: 'Master Machine Learning using Python',
   upcoming: 'Oct 1st',

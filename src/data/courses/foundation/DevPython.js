@@ -2,7 +2,7 @@ export const devPython = {
   difficulty: 'Foundation',
   duration: '24 Lectures',
   level: 'Level 1',
-  link: '/application-dev-using-python',
+  link: '/courses/application-dev-using-python',
   domain: 'Development',
   title: 'Application Development with Python',
   upcoming: 'Oct 1st',

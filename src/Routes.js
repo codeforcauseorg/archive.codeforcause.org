@@ -7,13 +7,7 @@ import HomeView from 'src/views/pages/HomeView';
 import CAView from 'src/views/pages/CLView';
 import EventsView from 'src/views/pages/EventsView';
 import LoadingScreen from 'src/components/LoadingScreen';
-import MachineLearningView from 'src/views/pages/Courses/MachineLearningView'
-import AlgoJavaView from 'src/views/pages/Courses/AlgoJavaView'
-import AlgoPythonView from 'src/views/pages/Courses/AlgoPythonView'
-import WebFullStakView from 'src/views/pages/Courses/WebFullStakView'
-import CompetitiveJavaView from 'src/views/pages/Courses/CompetitiveJavaView'
-import PythonDevelopmentView from 'src/views/pages/Courses/PythonDevelopmentView'
-import CoursesView from 'src/views/pages/CoursesView';
+import Courses from 'src/views/pages/Courses';
 import ProfileView from 'src/views/pages/ProfileView'
 import ApplicationsView from 'src/views/pages/ApplicationsView'
 
@@ -102,7 +96,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/courses',
-        component: CoursesView
+        component: Courses
       },
       {
         component: () => <Redirect to="/404" />
@@ -136,72 +130,7 @@ const routesConfig = [
       }
     ]
   },
-  {
-    path: '/machine-learning-using-python',
-    layout: MainLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/machine-learning-using-python',
-        component: MachineLearningView
-      }
-    ]
-  },
-  {
-    path: '/ds-algo-with-java',
-    layout: MainLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/ds-algo-with-java',
-        component: AlgoJavaView
-      }
-    ]
-  },
-  {
-    path: '/ds-algo-with-python',
-    layout: MainLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/ds-algo-with-python',
-        component: AlgoPythonView
-      }
-    ]
-  },
-  {
-    path: '/fullstack-webdev-with-js',
-    layout: MainLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/fullstack-webdev-with-js',
-        component: WebFullStakView
-      }
-    ]
-  },
-  {
-    path: '/competitive-programming-using-java',
-    layout: MainLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/competitive-programming-using-java',
-        component: CompetitiveJavaView
-      }
-    ]
-  },
-  {
-    path: '/application-dev-using-python',
-    layout: MainLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/application-dev-using-python',
-        component: PythonDevelopmentView
-      }
-    ]
-  },
+
   {
     path: '*',
     layout: MainLayout,

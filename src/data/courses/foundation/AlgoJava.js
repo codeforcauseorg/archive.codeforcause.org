@@ -2,7 +2,7 @@ export const algoJava = {
   difficulty: 'Foundation',
   duration: '30 Lectures',
   level: 'Level 1',
-  link: '/ds-algo-with-java',
+  link: '/courses/ds-algo-with-java',
   domain: 'Algorithms',
   title: 'Data Structure and Algorithms with Java',
   upcoming: 'Oct 1st',

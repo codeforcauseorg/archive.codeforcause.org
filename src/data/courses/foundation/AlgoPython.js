@@ -2,7 +2,7 @@ export const algoPython = {
   difficulty: 'Foundation',
   duration: '30 Lectures',
   level: 'Level 1',
-  link: '/ds-algo-with-python',
+  link: '/courses/ds-algo-with-python',
   domain: 'Algorithms',
   title: 'Data Structure and Algorithms with Python',
   upcoming: 'Oct 1st',

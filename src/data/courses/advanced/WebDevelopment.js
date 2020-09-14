@@ -2,7 +2,7 @@ export const webDevelopment = {
   difficulty: 'Intermediate',
   duration: '30 Lectures',
   level: 'Level 2',
-  link: '/fullstack-webdev-with-js',
+  link: '/courses/fullstack-webdev-with-js',
   domain: 'Web Development',
   title: 'Full Stack Web Development with JS',
   upcoming: 'Oct 1st',
