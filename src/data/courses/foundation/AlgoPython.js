@@ -255,9 +255,6 @@ export const algoPython = {
     'Problem Solving',
     'Python',
     'CP',
-    'Interview Prep',
-    'Python',
-    'CP',
     'Interview Prep'
   ],
   overview: [
