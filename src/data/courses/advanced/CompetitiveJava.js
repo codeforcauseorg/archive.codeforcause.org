@@ -35,11 +35,11 @@ export const competitiveJava = {
       ]
     },
     {
-      title: 'Getting started with Codeforces',
+      title: 'Understanding online platforms: Codeforces & Leetcode',
       classes: 'Classes 5-8',
       subtopics: [
         'Start Competitive Programming on Codeforces',
-        'Set up Sublime Text for Competitive Coding',
+        'Set up IntelliJ idea for Competitive Coding',
         'Create Template to save time in Competitive Coding'
       ]
     },
@@ -51,14 +51,71 @@ export const competitiveJava = {
         'Fast Exponentiation using Bitmasking',
         'Generate Subsets using Bitmasking',
         'Decimal to Binary using Bitwise',
-        'Inclusion Exclusion Concept + Implementation',
+        'Backtracking with Bitmasking',
+        'Binary Search + Bitmaksing',
+        'Inclusion Exclusion Concept + Implementation'
       ]
     },
     {
-      title: 'Under Development',
-      classes: 'Classes 14-30',
+      title: 'Number theory & Computational Theory',
+      classes: 'Classes ',
       subtopics: []
     },
+    {
+      title: 'Divide & Conquer Algorithms',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Recursion & Backtracking',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Dynamic Programming',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Greedy Algorithms',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Binary Tree',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Tries',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Segment Tree',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Fenwick Tree',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Graphs',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Advanced Mathematics',
+      classes: 'Classes ',
+      subtopics: []
+    },
+    {
+      title: 'Game Theory',
+      classes: 'Classes 30',
+      subtopics: []
+    }
   ],
   slides: [
     {
@@ -76,8 +133,8 @@ export const competitiveJava = {
     'Number Theory',
     'Segment Tree',
     'Fenwick Tree',
-    'Decompositions'
-
+    'Decompositions',
+    'Tries'
   ],
   overview: [
     "Under Development"
