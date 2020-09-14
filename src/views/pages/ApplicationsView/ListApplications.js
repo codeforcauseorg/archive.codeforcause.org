@@ -4,8 +4,6 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import axios from 'axios';
-
 const useStyles = makeStyles(theme => ({
   btn: {
     backgroundColor: '#A60000',
@@ -27,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function UserProfile() {
+export default function ListApplications() {
   const classes = useStyles();
   const [formData, updateFormData] = useState({});
 
@@ -37,22 +35,6 @@ export default function UserProfile() {
       [event.target.name]: event.target.value
     });
   };
-
-
-  // const handleSubmit = e => {
-  //   setSubmitting(1);
-  //   e.preventDefault();
-  //   axios({
-  //     method: 'post',
-  //     url:
-  //       'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/leads',
-  //     data: formData
-  //   })
-  //     .then(response => {
-  //       setSubmitting(0);
-  //     })
-  //     .catch(error => {});
-  // };
 
   return (
     <div>

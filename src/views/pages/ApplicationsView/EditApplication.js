@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
  
-export class UserEdit extends React.Component {
+export class EditApplication extends React.Component {
  
     state = {
         email: '',

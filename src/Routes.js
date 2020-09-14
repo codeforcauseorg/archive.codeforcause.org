@@ -15,6 +15,7 @@ import CompetitiveJavaView from 'src/views/pages/Courses/CompetitiveJavaView'
 import PythonDevelopmentView from 'src/views/pages/Courses/PythonDevelopmentView'
 import CoursesView from 'src/views/pages/CoursesView';
 import ProfileView from 'src/views/pages/ProfileView'
+import ApplicationsView from 'src/views/pages/ApplicationsView'
 
 const routesConfig = [
   {
@@ -116,6 +117,19 @@ const routesConfig = [
         exact: true,
         path: '/profile',
         component: ProfileView
+      },
+      {
+        component: () => <Redirect to="/404" />
+      }
+    ]
+  },
+  {
+    path: '/applications',
+    layout: MainLayout,
+    routes: [
+      {
+        path: '/applications',
+        component: ApplicationsView
       },
       {
         component: () => <Redirect to="/404" />

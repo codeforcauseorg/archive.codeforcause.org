@@ -47,30 +47,15 @@ export const algoPython = {
       title: 'Git Version Control Replica',
       img: '/static/images/courses/projects/git.png'
     },
-    {
-      title: 'Crossword Puzzle Game',
-      img: '/static/images/courses/projects/git.png'
-    },
-    {
-      title: 'Automatic Episode Player',
-      img: '/static/images/courses/projects/git.png'
-    },
-    {
-      title: 'Download Files from Internet with Python',
-      img: '/static/images/courses/projects/git.png'
-    },
-    {
-      title: 'Automated Code Submission on Platforms',
-      img: '/static/images/courses/projects/git.png'
-    },
-    {
-      title: 'WhatsApp Bot',
-      img: '/static/images/courses/projects/git.png'
-    },
-    {
-      title: 'Chat Application',
-      img: '/static/images/courses/projects/git.png'
-    },
+    // {
+    //   title: 'Crossword Puzzle Game',
+    //   img: '/static/images/courses/projects/git.png'
+    // },
+    // {
+    //   title: 'Automatic Episode Player',
+    //   img: '/static/images/courses/projects/git.png'
+    // },
+  
   ],
   topics: [
     {
@@ -254,7 +239,13 @@ export const algoPython = {
     'Algorithms',
     'Problem Solving',
     'Python',
-    'CP',
+    'Recursion',
+    'Backtracking',
+    'Dynamic Programming',
+    'Stack',
+    'Queue',
+    'Sets',
+    'Bit Masking',
     'Interview Prep'
   ],
   overview: [
