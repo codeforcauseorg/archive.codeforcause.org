@@ -132,7 +132,6 @@ export const algoPython = {
       subtopics: [
         'Best case, worst case, average case',
         'Sandwich theorem, recurrence relation',
-        'Sandwich theorem, recurrence relation',
         'Solving Complex Linear Recurrences',
         'Solving Divide & Conquer Recurrences',
         'Theta, Big-oh, Omega notations',
