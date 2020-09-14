@@ -46,35 +46,60 @@ export const algoPython = {
     {
       title: 'Git Version Control Replica',
       img: '/static/images/courses/projects/git.png'
-    }
+    },
+    {
+      title: 'Crossword Puzzle Game',
+      img: '/static/images/courses/projects/git.png'
+    },
+    {
+      title: 'Automatic Episode Player',
+      img: '/static/images/courses/projects/git.png'
+    },
+    {
+      title: 'Download Files from Internet with Python',
+      img: '/static/images/courses/projects/git.png'
+    },
+    {
+      title: 'Automated Code Submission on Platforms',
+      img: '/static/images/courses/projects/git.png'
+    },
+    {
+      title: 'WhatsApp Bot',
+      img: '/static/images/courses/projects/git.png'
+    },
+    {
+      title: 'Chat Application',
+      img: '/static/images/courses/projects/git.png'
+    },
   ],
   topics: [
     {
-      title: 'Getting started with Java',
+      title: 'Getting started with Python',
       classes: 'Classes 01-03',
       subtopics: [
         'Flowcharts & Pseudocode',
         'Control Flow Statements ',
-        'Setting up IntelliJ idea & Java',
+        'Setting up Python Environment',
         'Primitive data-types',
         'Input-Output on online judge',
-        'Coding standards in Java',
+        'File Handling',
+        'Coding standards in Python',
         'Methods along with problems',
         'Setting up debugger'
       ]
     },
     {
-      title: 'Arrays & ArrayList',
+      title: 'Lists & NumPy Arrays',
       classes: 'Classes 04-07',
       subtopics: [
-        'Introduction of arrays',
+        'Introduction of Lists',
         'Input-output & traversing',
         'Linear Search & Binary Search',
         'Bubble sort, Insertion sort, Selection sort, Count sort',
         'Multi-Dimensional arrays',
         'Rotation in arrays',
-        'Intro to ArrayList',
-        'Interview problems on Arrays & ArrayList'
+        'Intro to NumPy',
+        'Interview problems on Arrays'
       ]
     },
     {
@@ -91,14 +116,13 @@ export const algoPython = {
       ]
     },
     {
-      title: 'String & String-Builder',
+      title: 'Strings',
       classes: 'Classes 10-11',
       subtopics: [
-        'Intro to Strings in Java',
-        'Mutability and behavior',
-        'String pool and need of equals',
+        'Intro to Strings in Python',
+        'Mutability and Behavior',
+        'is vs ==',
         'String operations',
-        'StringBuilder operations and optimization',
         'String Manipulation'
       ]
     },
@@ -108,9 +132,11 @@ export const algoPython = {
       subtopics: [
         'Best case, worst case, average case',
         'Sandwich theorem, recurrence relation',
+        'Solving Complex Linear Recurrences',
+        'Solving Divide & Conquer Recurrences',
         'Theta, Big-oh, Omega notations',
         'Understanding complexity of loops',
-        'Auxiliary vs Total space',
+        'Auxiliary vs Total Space',
         'Static & Dynamic Memory Allocation'
       ]
     },
@@ -120,7 +146,7 @@ export const algoPython = {
       subtopics: [
         'Recursion- what, why, when?',
         'Control flow & stack trace',
-        'understanding recursive tree',
+        'Understanding Recursive Tree',
         'Merge sort & Quick sort',
         'Interview problems on Recursion',
         'Backtracking-Sudoku solver, N-Queens, lexo-permute'
@@ -131,21 +157,22 @@ export const algoPython = {
       classes: 'Classes 17-18',
       subtopics: [
         'Classes & Objects',
-        'Constructors, states & behaviors',
-        'this keyword',
+        'Constructors, States & Behaviors',
+        'self keyword',
         'Abstraction, Inheritance, Polymorphism, Encapsulation',
-        'Access modifiers',
+        'Scopes & Closures',
         'Static & non-static',
-        'final, finally, finalize'
+        'Class Methods',
+        'Decorators, Iterators & Generators'
       ]
     },
     {
       title: 'Stack & Queue',
       classes: 'Classes 19-20',
       subtopics: [
-        'Stack as generic collection',
+        'Stack as an Abstract Data Type',
         'Operations in Stack',
-        'Stack using Array & LinkedList',
+        'Stack using NumPy',
         'Push efficient & Pop efficient Stacks',
         'Queue as generic collection',
         'Operations in Queue',
@@ -178,16 +205,14 @@ export const algoPython = {
       ]
     },
     {
-      title: 'Heap & HashMap',
+      title: 'Heap & Dictionary',
       classes: 'Classes 25-26',
       subtopics: [
         'Implementation of Heaps',
-        'PriorityQueue as generic collection',
         'HeapSort with complexity analysis',
         'Concept of Hashing',
-        'HashMap implementation using ArrayList & LinkedList',
-        'Types of Maps in Java collections',
-        'Problems on Hashmap & Heaps'
+        'Dictionary implementation',
+        'Problems on Dictionary & Heaps'
       ]
     },
     {
@@ -228,10 +253,7 @@ export const algoPython = {
   tags: [
     'Algorithms',
     'Problem Solving',
-    'Java',
-    'CP',
-    'Interview Prep',
-    'Java',
+    'Python',
     'CP',
     'Interview Prep'
   ],
