@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import CoursesView from '../CoursesView';
 
 import MachineLearningView from 'src/views/pages/Courses/MachineLearningView'
@@ -14,7 +14,6 @@ function ApplicationsView({ match }) {
   console.log('Matched in routing', match);
 
   return (
-    <Router>
       <Switch> 
         <Route path={`${match.path}/machine-learning-using-python`} component={MachineLearningView} />
         <Route path={`${match.path}/ds-algo-with-java`} component={AlgoJavaView} />
@@ -24,7 +23,6 @@ function ApplicationsView({ match }) {
         <Route path={`${match.path}/application-dev-using-python`} component={PythonDevelopmentView} />
         <Route path={`${match.path}/`} component={CoursesView} />
       </Switch>
-    </Router>
   );
 }
 
