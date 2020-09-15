@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
   root: {}
 }));
 
-function EventsView() {
+function CoursesView() {
   const classes = useStyles();
 
   return (
@@ -25,4 +25,4 @@ function EventsView() {
   );
 }
 
-export default EventsView;
+export default CoursesView;
