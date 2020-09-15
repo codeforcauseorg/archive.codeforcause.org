@@ -94,7 +94,6 @@ const routesConfig = [
     layout: MainLayout,
     routes: [
       {
-        exact: true,
         path: '/courses',
         component: Courses
       },

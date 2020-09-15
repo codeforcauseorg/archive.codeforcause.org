@@ -1,40 +1,37 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
- 
-export class EditApplication extends React.Component {
- 
-    state = {
-        email: '',
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
+import { ApplicationSteps } from './ApplicationSteps';
+// import axios from 'src/utils/axios';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(10, 10, 10),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(10, 3, 10)
     }
- 
-    handleChange = (event) => {
-        const email = event.target.value;
-        this.setState({ email });
-    }
- 
-    handleSubmit = () => {
-        // your submit logic
-    }
- 
-    render() {
-        const { email } = this.state;
-        return (
-            <ValidatorForm
-                ref="form"
-                onSubmit={this.handleSubmit}
-            >
-                <TextValidator
-                    label="Email"
-                    variant="outlined"
-                    onChange={this.handleChange}
-                    name="email"
-                    value={email}
-                    validators={['required']}
-                    errorMessages={['This is a required field']}
-                />
-                <Button type="submit">Submit</Button>
-            </ValidatorForm>
-        );
-    }
+  }
+}));
+
+export function EditApplication() {
+  const classes = useStyles();
+
+  return (
+    <Grid container className={classes.root}>
+      <Grid item lg={6} md={6} sm={12} xs={12}>
+        <Typography variant="h2">
+          Fill the Application to be Considered for the Course
+        </Typography>
+      </Grid>
+
+      <Grid item lg={6} md={6} sm={12} xs={12}></Grid>
+
+      <Grid item lg={6} md={6} sm={12} xs={12}>
+        <ApplicationSteps />
+      </Grid>
+    </Grid>
+  );
 }

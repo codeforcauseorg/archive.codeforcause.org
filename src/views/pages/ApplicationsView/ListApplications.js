@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ListApplications() {
+export function ListApplications() {
   const classes = useStyles();
   const [formData, updateFormData] = useState({});
 
