@@ -2,12 +2,13 @@ export const algoPython = {
   difficulty: 'Foundation',
   duration: '30 Lectures',
   level: 'Level 1',
-  link: '/courses/ds-algo-with-python',
+  link: '/ds-algo-with-python',
   domain: 'Algorithms',
   title: 'Data Structure and Algorithms with Python',
   upcoming: 'Oct 1st',
   schedule: [
     {
+      courseId: "pds1020",
       dates: "1st Oct - 5th Dec",
       days: "Sat, Sun, Tue, Thur",
       timing: "06:00 PM - 08:00 PM (IST)",
@@ -17,6 +18,7 @@ export const algoPython = {
       active: true,
     },
     {
+      courseId: "pds0121",
       dates: "10th Jan - 10th Apr",
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",

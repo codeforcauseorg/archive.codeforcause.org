@@ -2,12 +2,13 @@ export const devPython = {
   difficulty: 'Foundation',
   duration: '24 Lectures',
   level: 'Level 1',
-  link: '/courses/application-dev-using-python',
+  link: '/application-dev-using-python',
   domain: 'Development',
   title: 'Application Development with Python',
   upcoming: 'Oct 1st',
   schedule: [
     {
+      courseId: "pdev0121",
       dates: "15th Jan - 20th Apr",
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",

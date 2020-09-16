@@ -1,13 +1,15 @@
 export const webDevelopment = {
+  courseid: "",
   difficulty: 'Intermediate',
   duration: '30 Lectures',
   level: 'Level 2',
-  link: '/courses/fullstack-webdev-with-js',
+  link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
   title: 'Full Stack Web Development with JS',
   upcoming: 'Oct 1st',
   schedule: [
     {
+      courseId: "jsfs1020",
       dates: "1st Oct - 5th Dec",
       days: "Sat, Sun, Tue, Thur",
       timing: "06:00 PM - 08:00 PM (IST)",
@@ -17,6 +19,7 @@ export const webDevelopment = {
       active: true,
     },
     {
+      courseId: "jsfs0121",
       dates: "10th Jan - 10th Apr",
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",

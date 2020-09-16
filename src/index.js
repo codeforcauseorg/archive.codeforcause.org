@@ -16,6 +16,7 @@ import { SettingsProvider } from 'src/context/SettingsContext';
 import { configureStore } from 'src/store';
 import { restoreSettings } from 'src/utils/settings';
 import App from 'src/App';
+import { BrowserRouter } from 'react-router-dom';
 
 enableES5();
 
@@ -25,7 +26,9 @@ const settings = restoreSettings();
 ReactDOM.render(
   <Provider store={store}>
     <SettingsProvider settings={settings}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </SettingsProvider>
   </Provider>,
   document.getElementById('root')

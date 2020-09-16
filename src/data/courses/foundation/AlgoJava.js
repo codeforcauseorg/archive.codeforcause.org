@@ -2,12 +2,13 @@ export const algoJava = {
   difficulty: 'Foundation',
   duration: '30 Lectures',
   level: 'Level 1',
-  link: '/courses/ds-algo-with-java',
+  link: '/ds-algo-with-java',
   domain: 'Algorithms',
   title: 'Data Structure and Algorithms with Java',
   upcoming: 'Oct 1st',
   schedule: [
     {
+      courseId: "jds1020",
       dates: '01st Oct - 05th Dec',
       days: 'Sat, Sun, Tue, Thur',
       timing: '06:00 PM - 08:00 PM (IST)',
@@ -17,6 +18,7 @@ export const algoJava = {
       active: true
     },
     {
+      courseId: "jds0121",
       dates: '10th Jan - 10th Apr',
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',

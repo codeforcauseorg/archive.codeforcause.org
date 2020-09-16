@@ -2,12 +2,13 @@ export const machineLearning = {
   difficulty: 'Intermediate',
   duration: '30 Lectures',
   level: 'Level 2',
-  link: '/courses/machine-learning-using-python',
+  link: '/machine-learning-using-python',
   domain: 'Artificial Intelligence',
   title: 'Master Machine Learning using Python',
   upcoming: 'Oct 1st',
   schedule: [
     {
+      courseId: "mlpy1020",
       dates: "1st Oct - 5th Dec",
       days: "Sat, Sun, Tue, Thur",
       timing: "06:00 PM - 08:00 PM (IST)",
@@ -17,6 +18,7 @@ export const machineLearning = {
       active: true,
     },
     {
+      courseId: "mlpy0121",
       dates: "10th Jan - 10th Apr",
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",

@@ -2,12 +2,13 @@ export const competitiveJava = {
   difficulty: 'Intermediate',
   duration: '30 Lectures',
   level: 'Level 2',
-  link: '/courses/competitive-programming-using-java',
+  link: '/competitive-programming-using-java',
   domain: 'Interview Prepration',
   title: 'Competitve Programming using Java',
   upcoming: 'Oct 1st',
   schedule: [
     {
+      courseId: "jcomp0121",
       dates: "10th Jan - 15th Apr",
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",
