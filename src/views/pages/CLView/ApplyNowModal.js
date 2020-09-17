@@ -11,7 +11,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
-
+import { useSnackbar } from 'notistack';
 import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
@@ -41,6 +41,8 @@ export default function ApplyNowModal() {
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
 
+  const { enqueueSnackbar } = useSnackbar();
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -68,8 +70,11 @@ export default function ApplyNowModal() {
       .then(response => {
         setSubmitting(0);
         handleClose();
+        enqueueSnackbar('Application Submitted Successfully');
       })
-      .catch(error => {});
+      .catch(error => {
+        enqueueSnackbar('Application Failed. Try again later');
+      });
   };
 
   return (

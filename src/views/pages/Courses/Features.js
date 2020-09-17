@@ -68,7 +68,7 @@ const Features = () => {
           <Typography variant="h2" align="center" style={{
             marginBottom: "32px"
           }}>
-            Courses Designed So You Munch Every Bit
+            Courses Designed so You can Munch Every Bit
           </Typography>
 
           <Grid container display="flex" flexDirection="row" justify="center" alignItems="center" style={{
@@ -78,7 +78,8 @@ const Features = () => {
               return (
                 <Grid item lg={3} md={3} sm={6} xs={6} justify="center" alignItems="center">
                   <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" style={{
-                    padding: "40px"
+                    padding: "40px",
+                    minWidth: "200px",
                   }}>
                     <img src={feature.image} alt={feature.line2} style={{
                       width: "80px",

@@ -214,11 +214,13 @@ export default function FinalAction({ course, batch }) {
             variant="contained"
             color="secondary"
             fullWidth
+
             style={{
-              marginTop: '24px'
+              marginTop: '24px',
+              textTransform: 'capitalize'
             }}
           >
-            Apply
+            Apply Now
           </Button>
         </Box>
       </Grid>

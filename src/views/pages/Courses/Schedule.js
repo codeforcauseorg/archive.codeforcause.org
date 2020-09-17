@@ -288,7 +288,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
             alignItems="center"
             style={{
               padding: '4px 16px',
-              background: '#000000',
+              background: '#282828',
               borderRadius: '5px'
             }}
           >
@@ -296,11 +296,13 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               color="secondary"
               variant="contained"
               style={{
-                textTransform: 'capitalize'
+                textTransform: 'capitalize',
+                height: '45px',
+                width: '150px'
               }}
             >
               <Typography>
-                <Box fontWeight={500}>Apply</Box>
+                <Box fontWeight={500}>Apply Now</Box>
               </Typography>
             </Button>
             <Button
@@ -308,7 +310,9 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               style={{
                 background: '#FFFFFF',
                 marginLeft: '16px',
-                textTransform: 'capitalize'
+                textTransform: 'capitalize',
+                height: '45px',
+                width: '150px'
               }}
               onClick={() => {
                 setExpanded(-1);

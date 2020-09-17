@@ -6,8 +6,12 @@ import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import Paper from '@material-ui/core/Paper';
 
-import { Button, Typography } from '@material-ui/core';
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import { Button, Typography, MenuItem } from '@material-ui/core';
+import {
+  ValidatorForm,
+  TextValidator,
+  SelectValidator
+} from 'react-material-ui-form-validator';
 
 // import axios from 'axios';
 
@@ -26,12 +30,16 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3)
   },
   textField: {
-    marginBottom: '12px'
+    marginBottom: '16px'
   }
 }));
 
 function getSteps() {
-  return ['Profile Information', 'Education Information', 'Application Challenge'];
+  return [
+    'Profile Information',
+    'Education Information',
+    'Application Challenge'
+  ];
 }
 
 function getStepContent(step, setActiveStep, formData, setFormData) {
@@ -67,16 +75,16 @@ function getStepContent(step, setActiveStep, formData, setFormData) {
 
 export function ApplicationSteps() {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(2);
   const [formData, setFormData] = React.useState({
-    personal : {},
-    education : {},
+    personal: {},
+    education: {},
     challenge: {}
   });
   const steps = getSteps();
 
   const handleSubmitApplication = () => {
-    console.log(formData)
+    console.log(formData);
   };
 
   return (
@@ -126,16 +134,29 @@ function FormPersonalInfo({ setActiveStep, data, setData }) {
   return (
     <ValidatorForm onSubmit={handleSubmit}>
       <TextValidator
-        key="name"
+        key="fullName"
         className={classes.textField}
-        label="Full Name"
+        label="Name"
         variant="outlined"
-        value={formData.name}
+        value={formData.fullName}
         fullWidth
-        name="name"
+        name="fullName"
         onChange={handleChange}
         validators={['required']}
-        errorMessages={['This is a required field']}
+        errorMessages={['Name is a required field']}
+      />
+
+      <TextValidator
+        key="phone"
+        className={classes.textField}
+        label="Phone"
+        variant="outlined"
+        value={formData.phone}
+        fullWidth
+        name="phone"
+        onChange={handleChange}
+        validators={['required']}
+        errorMessages={['Phone number is a required field']}
       />
 
       <TextValidator
@@ -147,9 +168,29 @@ function FormPersonalInfo({ setActiveStep, data, setData }) {
         fullWidth
         name="email"
         onChange={handleChange}
-        validators={['required']}
-        errorMessages={['This is a required field']}
+        validators={['required', 'isEmail']}
+        errorMessages={[
+          'Email is a required field',
+          'Must be a valid Email address'
+        ]}
       />
+
+      <SelectValidator
+        key="gender"
+        className={classes.textField}
+        value={formData.gender}
+        onChange={handleChange}
+        name="gender"
+        variant="outlined"
+        validators={['required']}
+        errorMessages={['Please select a gender']}
+        label="Gender"
+        fullWidth
+      >
+        <MenuItem value="male">Male</MenuItem>
+        <MenuItem value="female">Female</MenuItem>
+        <MenuItem value="other">Other</MenuItem>
+      </SelectValidator>
 
       <Button variant="outlined" disabled color="secondary">
         Cancel
@@ -163,7 +204,7 @@ function FormPersonalInfo({ setActiveStep, data, setData }) {
           marginLeft: '16px'
         }}
       >
-        Next
+        Save
       </Button>
     </ValidatorForm>
   );
@@ -193,32 +234,66 @@ function FormEducationInfo({ setActiveStep, data, setData }) {
     setActiveStep(2);
   };
 
+  const years = Array(25)
+    .fill(2000)
+    .map((x, y) => x + y);
+
   return (
     <ValidatorForm onSubmit={handleSubmit}>
-      <TextValidator
-        key="name"
+      <SelectValidator
+        key="year"
         className={classes.textField}
-        label="Full Name"
+        value={formData.year}
+        onChange={handleChange}
+        name="year"
         variant="outlined"
-        value={formData.name}
+        validators={['required']}
+        errorMessages={['Please select your Graduation Year']}
+        label="Graduation Year"
         fullWidth
-        name="name"
+      >
+        {years.map((year, index) => {
+          return <MenuItem value={year}>{year}</MenuItem>;
+        })}
+      </SelectValidator>
+
+      <TextValidator
+        key="college"
+        className={classes.textField}
+        label="College"
+        variant="outlined"
+        value={formData.college}
+        fullWidth
+        name="college"
         onChange={handleChange}
         validators={['required']}
-        errorMessages={['This is a required field']}
+        errorMessages={['College is a required field']}
       />
 
       <TextValidator
-        key="email"
+        key="state"
         className={classes.textField}
-        label="Email"
+        label="State"
         variant="outlined"
-        value={formData.email}
+        value={formData.state}
         fullWidth
-        name="email"
+        name="state"
         onChange={handleChange}
         validators={['required']}
-        errorMessages={['This is a required field']}
+        errorMessages={['State is a required field']}
+      />
+
+      <TextValidator
+        key="country"
+        className={classes.textField}
+        label="Country"
+        variant="outlined"
+        value={formData.country}
+        fullWidth
+        name="country"
+        onChange={handleChange}
+        validators={['required']}
+        errorMessages={['Country is a required field']}
       />
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">
@@ -232,7 +307,7 @@ function FormEducationInfo({ setActiveStep, data, setData }) {
           marginLeft: '16px'
         }}
       >
-        Next
+        Save
       </Button>
     </ValidatorForm>
   );
@@ -265,29 +340,33 @@ function FormChallenge({ setActiveStep, data, setData }) {
   return (
     <ValidatorForm onSubmit={handleSubmit}>
       <TextValidator
-        key="name"
         className={classes.textField}
-        label="Full Name"
-        variant="outlined"
-        value={formData.name}
+        multiline
         fullWidth
-        name="name"
+        label="Why ?"
+        variant="outlined"
         onChange={handleChange}
-        validators={['required']}
-        errorMessages={['This is a required field']}
+        rows={4}
       />
 
       <TextValidator
-        key="email"
         className={classes.textField}
-        label="Email"
-        variant="outlined"
-        value={formData.email}
+        multiline
         fullWidth
-        name="email"
+        label="What is your expectation from this course?"
+        variant="outlined"
         onChange={handleChange}
-        validators={['required']}
-        errorMessages={['This is a required field']}
+        rows={4}
+      />
+
+      <TextValidator
+        className={classes.textField}
+        multiline
+        fullWidth
+        label="What is your viewpoint toward Coding in Community Contribution?"
+        variant="outlined"
+        onChange={handleChange}
+        rows={4}
       />
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">
@@ -301,7 +380,7 @@ function FormChallenge({ setActiveStep, data, setData }) {
           marginLeft: '16px'
         }}
       >
-        Next
+        Save
       </Button>
     </ValidatorForm>
   );

@@ -72,28 +72,34 @@ export default function Details({ course, bottom }) {
             <Typography variant="body1">{course.level}</Typography>
           </Box>
 
-            <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
-              {course.tags.map((tag, index) => (
-                <div
-                  style={{
-                    margin: '4px 16px 4px 0px',
-                    padding: '4px 8px',
-                    border: '1px solid',
-                    borderColor: '#A60000',
-                    borderRadius: '5px'
-                  }}
-                  variant="outlined"
-                >
-                  <Typography color="secondary" variant="body2">
-                    {tag}
-                  </Typography>
-                </div>
-              ))}
-            </Box>
+          <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
+            {course.tags.map((tag, index) => (
+              <div
+                style={{
+                  margin: '4px 16px 4px 0px',
+                  padding: '4px 8px',
+                  border: '1px solid',
+                  borderColor: '#A60000',
+                  borderRadius: '5px'
+                }}
+                variant="outlined"
+              >
+                <Typography color="secondary" variant="body2">
+                  {tag}
+                </Typography>
+              </div>
+            ))}
+          </Box>
         </Box>
         {!bottom ? (
-          <Button variant="contained" color="secondary">
-            Enroll Now
+          <Button
+            variant="contained"
+            color="secondary"
+            style={{
+              textTransform: 'capitalize'
+            }}
+          >
+            Apply Now
           </Button>
         ) : (
           undefined

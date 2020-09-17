@@ -271,12 +271,12 @@ const ParallaxCarousel = ({ slides }) => {
               bottom: 8
             }}
           >
-            <Typography variant="h4" align="left">
+            {/* <Typography variant="h4" align="left">
               <Box>{slide.heading}</Box>
             </Typography>
             <Typography variant="h6" align="left">
               <Box fontWeight={600}>{slide.subheading}</Box>
-            </Typography>
+            </Typography> */}
           </Box>
         </Box>
       );
