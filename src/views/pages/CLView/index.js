@@ -4,7 +4,7 @@ import Page from 'src/components/Page';
 import Hero from './Hero';
 import StandFor from './StandFor';
 import CLBenefits from './CLBenefits';
-import { benefits } from './CLViewData';
+import { benefits } from '../../../data/campusLeaders/CLViewData';
 import Footer from '../common/Footer';
 import Process from './Process';
 import CTA from './CTA';
