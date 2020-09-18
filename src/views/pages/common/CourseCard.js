@@ -2,12 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 
-import {
-  Typography,
-  Box,
-  Card,
-  CardContent,
-} from '@material-ui/core';
+import { Typography, Box, Card, CardContent } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -118,12 +113,12 @@ export default function CourseCard({ course }) {
               display="flex"
               flexDirection="row"
               style={{
-                margin: '8px 0px 0px'
+                margin: '8px 0px 16px'
               }}
             >
               <Typography
                 align="left"
-                variant="body2"
+                variant="h5"
                 style={{
                   width: '50%',
                   color: '#0085FF'
@@ -133,25 +128,15 @@ export default function CourseCard({ course }) {
               </Typography>
               <Typography
                 align="right"
-                variant="body2"
+                variant="h5"
                 style={{
-                  width: '50%'
+                  width: '50%',
+                  color: '#FF4C00'
                 }}
               >
-                <Box fontWeight={600}>{course.level}</Box>
+                {course.domain}
               </Typography>
             </Box>
-
-            <Typography
-              variant="h5"
-              align="left"
-              style={{
-                marginBottom: '16px',
-                color: '#FF4C00'
-              }}
-            >
-              {course.domain}
-            </Typography>
 
             <Typography variant="h4" align="left">
               {course.title}

@@ -4,7 +4,7 @@ export const competitiveJava = {
   level: 'Level 2',
   link: '/competitive-programming-using-java',
   domain: 'Interview Prepration',
-  title: 'Competitve Programming using Java',
+  title: 'Competitive Programming using Java',
   upcoming: 'Oct 1st',
   schedule: [
     {

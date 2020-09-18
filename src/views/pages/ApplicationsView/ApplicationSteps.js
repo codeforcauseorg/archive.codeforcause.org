@@ -13,7 +13,6 @@ import {
   SelectValidator
 } from 'react-material-ui-form-validator';
 
-// import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -337,36 +336,52 @@ function FormChallenge({ setActiveStep, data, setData }) {
     setActiveStep(3);
   };
 
+  // useEffect(() => {
+  //   ValidatorForm.addValidationRule('isNotShort', value => {
+  //     console.log(value);
+  //     if (value.length < 100) {
+  //       return false;
+  //     }
+  //     return true;
+  //   });
+  // });
+
   return (
     <ValidatorForm onSubmit={handleSubmit}>
       <TextValidator
         className={classes.textField}
         multiline
         fullWidth
-        label="Why ?"
+        label="Why do you wish to take up this course?"
         variant="outlined"
         onChange={handleChange}
         rows={4}
+        validators={['required']}
+        errorMessages={['College is a required field']}
       />
 
       <TextValidator
         className={classes.textField}
         multiline
         fullWidth
-        label="What is your expectation from this course?"
+        label="Why do you deserve this scholarship?"
         variant="outlined"
         onChange={handleChange}
         rows={4}
+        validators={['required']}
+        errorMessages={['College is a required field']}
       />
 
       <TextValidator
         className={classes.textField}
         multiline
         fullWidth
-        label="What is your viewpoint toward Coding in Community Contribution?"
+        label="What is your viewpoint towards Coding for a Cause?"
         variant="outlined"
         onChange={handleChange}
         rows={4}
+        validators={['required']}
+        errorMessages={['College is a required field']}
       />
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">

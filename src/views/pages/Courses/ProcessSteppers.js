@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import Stepper from '@material-ui/core/Stepper';
+import { Stepper, Typography } from '@material-ui/core';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
@@ -48,8 +48,8 @@ function QontoStepIcon(props) {
       {completed ? (
         <Check className={classes.completed} />
       ) : (
-          <div className={classes.circle} />
-        )}
+        <div className={classes.circle} />
+      )}
     </div>
   );
 }
@@ -71,14 +71,12 @@ const ColorlibConnector = withStyles({
   },
   active: {
     '& $line': {
-      backgroundImage:
-        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)'
+      background: '#ffffff'
     }
   },
   completed: {
     '& $line': {
-      backgroundImage:
-        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)'
+      background: '#ffffff'
     }
   },
   line: {
@@ -93,7 +91,7 @@ const useColorlibStepIconStyles = makeStyles({
   root: {
     backgroundColor: '#ccc',
     zIndex: 1,
-    color: '#fff',
+    color: 'linear-gradient(180deg, #2A185A 0%, #000000 100%)',
     width: 50,
     height: 50,
     display: 'flex',
@@ -102,13 +100,10 @@ const useColorlibStepIconStyles = makeStyles({
     alignItems: 'center'
   },
   active: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
-    boxShadow: '0 4px 10px 0 rgba(0,0,0,.25)'
+    background: '#ffffff'
   },
   completed: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)'
+    background: '#ffffff'
   }
 });
 
@@ -174,7 +169,7 @@ function getSteps() {
 
 export default function ProcessSteppers() {
   const classes = useStyles();
-  const activeStep = 3;
+  const activeStep = 4;
   const steps = getSteps();
 
   return (
@@ -184,12 +179,21 @@ export default function ProcessSteppers() {
         activeStep={activeStep}
         connector={<ColorlibConnector />}
         style={{
-          padding: '24px 0px'
+          padding: '24px 0px',
+          backgroundColor: 'transparent'
         }}
       >
         {steps.map(label => (
           <Step key={label}>
-            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+            <StepLabel StepIconComponent={ColorlibStepIcon}>
+              <Typography
+                style={{
+                  color: '#ffffff'
+                }}
+              >
+                {label}
+              </Typography>
+            </StepLabel>
           </Step>
         ))}
       </Stepper>

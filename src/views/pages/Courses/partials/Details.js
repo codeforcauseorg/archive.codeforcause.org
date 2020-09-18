@@ -62,14 +62,13 @@ export default function Details({ course, bottom }) {
           <Box mb={2} display="flex" flexDirection="row">
             <Typography
               style={{
-                marginRight: '48px',
+                marginRight: '24px',
                 color: '#0085FF'
               }}
               variant="body1"
             >
               {course.difficulty}
             </Typography>
-            <Typography variant="body1">{course.level}</Typography>
           </Box>
 
           <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
