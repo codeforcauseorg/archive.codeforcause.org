@@ -1,8 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React, { Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import MainLayout from 'src/layouts/MainLayout';
-import HomeView from 'src/views/pages/HomeView';
+import MainLayout from 'src/components/Header';
+import HomeView from 'src/views/pages/HomePage';
 import CAView from 'src/views/pages/CLView';
 import EventsView from 'src/views/pages/EventsView';
 import LoadingScreen from 'src/components/LoadingScreen';
