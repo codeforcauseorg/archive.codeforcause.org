@@ -13,7 +13,7 @@ import {
   ThemeProvider
 } from '@material-ui/core';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import Auth from 'src/components/Auth/Auth';
+import Auth from 'src/components/auth/Auth';
 // import CookiesNotification from 'src/components/CookiesNotification';
 // import SettingsNotification from 'src/components/SettingsNotification';
 import GoogleAnalytics from 'src/components/GoogleAnalytics';
