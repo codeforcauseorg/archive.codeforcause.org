@@ -97,7 +97,7 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
   const isMountedRef = useIsMountedRef();
   const baseUrl =
     'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications/request';
-  const [activeStep, setActiveStep] = React.useState(-1);
+  const [activeStep, setActiveStep] = React.useState(1);
   const [formData, setFormData] = React.useState({
     personal: {},
     education: {},
