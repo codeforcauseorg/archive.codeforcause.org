@@ -17,7 +17,7 @@ import {
   SelectValidator
 } from 'react-material-ui-form-validator';
 
-import { getStates, getDistrict, getColleges } from './helper';
+import { getStates, getDistrict, getColleges } from './educationFormUtil';
 
 // import axios from 'axios';
 
@@ -181,7 +181,10 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
       )}
       {activeStep === steps.length + 1 && (
         <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>Application have been submitted successfully. We will email/call you for further process.</Typography>
+          <Typography>
+            Application have been submitted successfully. We will email/call you
+            for further process.
+          </Typography>
         </Paper>
       )}
     </div>
@@ -352,6 +355,8 @@ function FormEducationInfo({
       [event.target.name]: event.target.value
     });
     updateDistrictToCollegePair(getDistrict(event.target.value));
+    updateDistricts([]);
+    updateCollege([]);
   };
 
   const handleDistrictFieldChange = event => {
@@ -411,6 +416,7 @@ function FormEducationInfo({
         validators={['required']}
         errorMessages={['Country is a required field']}
       />
+
       {notIndia() ? (
         <TextValidator
           key="state"
@@ -474,7 +480,7 @@ function FormEducationInfo({
           validators={['required']}
           errorMessages={['State is a required field']}
         >
-          {formData.state === undefined ? (
+          {districts.length === 0 ? (
             <MenuItem value="undefined">{'Select State'}</MenuItem>
           ) : (
             districts.sort().map(dis => {
@@ -510,7 +516,7 @@ function FormEducationInfo({
           validators={['required']}
           errorMessages={['College is a required field']}
         >
-          {formData.district === undefined ? (
+          {collegeList.length === 0 ? (
             <MenuItem value="undefined">{'Select District'}</MenuItem>
           ) : (
             collegeList.sort().map(college => {
