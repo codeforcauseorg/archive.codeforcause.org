@@ -53,16 +53,10 @@ export const competitiveJava = {
         'Fast Exponentiation using Bitmasking',
         'Generate Subsets using Bitmasking',
         'Decimal to Binary using Bitwise',
-<<<<<<< Updated upstream
-        'Backtracking with Bitmasking',
-        'Binary Search + Bitmaksing',
-=======
->>>>>>> Stashed changes
         'Inclusion Exclusion Concept + Implementation'
       ]
     },
     {
-<<<<<<< Updated upstream
       title: 'Number theory & Computational Theory',
       classes: 'Lectures 6-7',
       subtopics: [
@@ -239,11 +233,7 @@ export const competitiveJava = {
         'Game of chocolates',
         'Robot problems'
       ]
-=======
-      title: 'Under Development',
-      classes: 'Classes 14-30',
-      subtopics: []
->>>>>>> Stashed changes
+
     }
   ],
   slides: [
@@ -262,15 +252,7 @@ export const competitiveJava = {
     'Number Theory',
     'Segment Tree',
     'Fenwick Tree',
-<<<<<<< Updated upstream
-    'Decompositions',
-    'Tries'
-  ],
-  overview: [
-    "Under Development"
-=======
     'Decompositions'
->>>>>>> Stashed changes
   ],
   overview: ['Under Development'],
   faqs: [
