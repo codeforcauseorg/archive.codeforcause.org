@@ -363,7 +363,7 @@ function FormEducationInfo({
   };
 
   const handleDistrictFocus = () => {
-    if (formData.state != undefined) {
+    if (formData.state !== undefined) {
       updateDistricts(Object.keys(districtToCollegePair));
     }
   };

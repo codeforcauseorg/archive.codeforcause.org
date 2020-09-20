@@ -6,7 +6,7 @@ export function getStates() {
 
 export function getDistrict(state) {
   const disToC = Object.keys(Data)
-    .filter(st => st == state)
+    .filter(st => st === state)
     .reduce((obj, key) => {
       obj[key] = Data[key];
       return obj;
@@ -17,7 +17,7 @@ export function getDistrict(state) {
 
 export function getColleges(districtToCollegePair, district) {
   const colleges = Object.keys(districtToCollegePair)
-    .filter(dis => dis == district)
+    .filter(dis => dis === district)
     .reduce((obj, key) => {
       obj[key] = districtToCollegePair[key];
       return obj;
