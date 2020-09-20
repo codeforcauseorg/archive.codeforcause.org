@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Grid, Typography, makeStyles, Container } from '@material-ui/core';
-import { whatWeStandForDescription } from './HomeViewData';
+import { whatWeStandForDescription } from '../../../../../data/HomeViewData/HomeViewData';
 
 const primaryContentColor = '#F8F6FA';
 
