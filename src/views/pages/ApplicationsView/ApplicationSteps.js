@@ -400,16 +400,16 @@ function FormEducationInfo({
         })}
       </SelectValidator>
       <TextValidator
-        key="college"
+        key="country"
         className={classes.textField}
-        label="College"
+        label="Country"
         variant="outlined"
-        value={formData.college}
+        value={formData.country}
         fullWidth
-        name="college"
+        name="country"
         onChange={handleChange}
         validators={['required']}
-        errorMessages={['College is a required field']}
+        errorMessages={['Country is a required field']}
       />
       {notIndia() ? (
         <TextValidator
