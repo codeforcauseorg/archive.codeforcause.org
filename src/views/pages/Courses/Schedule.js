@@ -318,7 +318,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               }}
             >
               <Typography>
-                <Box fontWeight={500}>Apply Now</Box>
+                <Box fontWeight={500}>Apply</Box>
               </Typography>
             </Button>
             <Button

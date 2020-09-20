@@ -226,7 +226,7 @@ function Process({ benefits, className, ...rest }) {
                 size="large"
                 startIcon={<PhoneIcon />}
                 component="a"
-                href="tel:919810468685"
+                href="tel:+919810468685"
                 target="_blank"
               >
                 <Typography>+91 98104 68685 </Typography>
@@ -240,7 +240,7 @@ function Process({ benefits, className, ...rest }) {
                 size="large"
                 startIcon={<PhoneIcon />}
                 component="a"
-                href="tel:918221843032"
+                href="tel:+918221843032"
                 target="_blank"
               >
                 <Typography>+91 82218 43032 </Typography>
