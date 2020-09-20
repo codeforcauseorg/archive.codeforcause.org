@@ -4,6 +4,7 @@ import Page from 'src/components/Page';
 import Footer from '../../common/Footer';
 import Recommendations from '../../common/Recommendations'
 import FAQ from '../FAQ'
+import CTA from '../CTA'
 import FinalAction from '../FinalAction'
 import Schedule from '../Schedule'
 import coursesContent from 'src/data/courses';
@@ -32,6 +33,7 @@ function CoursesView() {
       <Recommendations />
       <FinalAction course={course} batch={batch}/>
       <FAQ course={course}/>
+      <CTA />
       <Footer />
     </Page>
   );

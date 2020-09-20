@@ -1,16 +1,17 @@
 export const algoPython = {
   difficulty: 'Foundation',
-  duration: '30 Lectures',
+  duration: '30 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-python',
-  domain: 'Algorithms',
+  domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with Python',
-  upcoming: 'Oct 1st',
+  upcoming: 'Oct 14th',
+  mentors: ['kunal', 'anuj'],
   schedule: [
     {
       courseId: "pds1020",
-      dates: "1st Oct - 5th Dec",
-      days: "Sat, Sun, Tue, Thur",
+      dates: "14th Oct - 16th Dec",
+      days: "Sat, Sun, Tue, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",
       link: "",
       priceCut: "₹ 15,000",
@@ -232,9 +233,9 @@ export const algoPython = {
   ],
   slides: [
     {
-      heading: 'Automatic Sudoku Solver',
-      subheading: 'Using Back Tracking',
-      image: '/static/images/courses/projects/sudoku.jpg'
+      heading: '',
+      subheading: '',
+      image: '/static/swipes/python.png'
     },
   ],
   tags: [

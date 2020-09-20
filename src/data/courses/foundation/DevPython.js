@@ -1,11 +1,12 @@
 export const devPython = {
   difficulty: 'Foundation',
-  duration: '24 Lectures',
+  duration: '30 Live Lectures',
   level: 'Level 1',
   link: '/application-dev-using-python',
-  domain: 'Development',
+  domain: 'Development and Automation',
   title: 'Application Development with Python',
-  upcoming: 'Oct 1st',
+  upcoming: 'Jan 15th',
+  mentors: ['kunal'],
   schedule: [
     {
       courseId: "pdev0121",
@@ -139,9 +140,9 @@ export const devPython = {
   ],
   slides: [
     {
-      heading: 'Automatic Sudoku Solver',
-      subheading: 'Using Back Tracking',
-      image: '/static/images/courses/projects/sudoku.jpg'
+      heading: '',
+      subheading: '',
+      image: '/static/swipes/apps.png'
     },
   ],
   tags: [

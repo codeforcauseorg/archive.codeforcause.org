@@ -5,7 +5,8 @@ export const competitiveJava = {
   link: '/competitive-programming-using-java',
   domain: 'Interview Prepration',
   title: 'Competitive Programming using Java',
-  upcoming: 'Oct 1st',
+  upcoming: 'Jan 10th',
+  mentors: ['kunal', 'ekta'],
   schedule: [
     {
       courseId: "jcomp0121",
@@ -63,9 +64,9 @@ export const competitiveJava = {
   ],
   slides: [
     {
-      heading: 'Create Facebook Chatbot',
-      subheading: 'Using Natural Language Processing',
-      image: '/static/swipes/bot.png'
+      heading: '',
+      subheading: '',
+      image: '/static/swipes/comp.png'
     },
   ],
   tags: [

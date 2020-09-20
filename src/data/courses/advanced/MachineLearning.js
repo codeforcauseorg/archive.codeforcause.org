@@ -5,13 +5,14 @@ export const machineLearning = {
   link: '/machine-learning-using-python',
   domain: 'Artificial Intelligence',
   title: 'Master Machine Learning using Python',
-  upcoming: 'Oct 1st',
+  upcoming: 'Oct 20th',
+  mentors: ['anuj', 'kunal'],
   schedule: [
     {
       courseId: "mlpy1020",
-      dates: "1st Oct - 5th Dec",
-      days: "Sat, Sun, Tue, Thur",
-      timing: "06:00 PM - 08:00 PM (IST)",
+      dates: "20th Oct - 20th Dec",
+      days: "Sat, Sun, Wed, Thur",
+      timing: "08:30 PM - 10:30 PM (IST)",
       link: "",
       priceCut: "22,000 INR",
       price: "6,850 INR",
@@ -134,37 +135,36 @@ export const machineLearning = {
   ],
   slides: [
     {
-      heading: 'Create Facebook Chatbot',
-      subheading: 'Using Natural Language Processing',
-      image: '/static/swipes/bot.png'
-    },
-    {
-      heading: 'Dedect and recognize Faces',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Generate machine made music',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Learn To make Snapchat Filters',
-      subheading: 'Using Image Processing',
-      image: '/static/swipes/ar.png'
+      heading: '',
+      subheading: '',
+      image: '/static/swipes/ml.png'
     }
   ],
   tags: [
-    'ML',
-    'CNN',
-    'Python',
-    'Image Processing',
     'Deep Learning',
+    'NLP',
+    'Convolution',
+    'Image Processing',
+    'Deployment',
+    'Data Aqisition',
+    'Data Processing',
+    'Git',
+    'Ensemble Learning',
+    'Recommendations',
+    'Traffic Assesment',
+    'Cyber fraud Overvation',
     'Neural Network',
+    'NLP',
+    'GAN',
+    'Simmulators',
+    'Reinforcement Learning',
+    'Genetic Algorithm',
+    
+
   ],
   overview: [
-    "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",
-    "We’ve been teaching VR for over 12 months but this AR course is BRAND NEW! You’ll learn to design and code Augmented Reality apps using Camp K12's very own HatchXR platform."
+    "Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.",
+    "We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning. Understanding what can be done and how to proceed with understanding what is important and start exploring it the right way. We will guide you to build your career in machine learning."
   ],
   faqs: [
     {

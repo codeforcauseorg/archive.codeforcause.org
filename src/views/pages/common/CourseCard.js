@@ -109,34 +109,24 @@ export default function CourseCard({ course }) {
       >
         <CardContent className={classes.cardContent}>
           <Box display="flex" flexDirection="column">
-            <Box
-              display="flex"
-              flexDirection="row"
+            <Typography
+              align="left"
+              variant="h5"
               style={{
-                margin: '8px 0px 16px'
+                color: '#0085FF'
               }}
             >
-              <Typography
-                align="left"
-                variant="h5"
-                style={{
-                  width: '50%',
-                  color: '#0085FF'
-                }}
-              >
-                {course.difficulty}
-              </Typography>
-              <Typography
-                align="right"
-                variant="h5"
-                style={{
-                  width: '50%',
-                  color: '#FF4C00'
-                }}
-              >
-                {course.domain}
-              </Typography>
-            </Box>
+              {course.difficulty}
+            </Typography>
+            <Typography
+              align="left"
+              style={{
+                color: '#FF4C00',
+                marginBottom: '12px'
+              }}
+            >
+              {course.domain}
+            </Typography>
 
             <Typography variant="h4" align="left">
               {course.title}
@@ -241,28 +231,21 @@ const ParallaxCarousel = ({ slides }) => {
           flexDirection="column"
           alignItems="bottom"
           style={{
-            height: '141px',
+            height: '160px',
             width: '100%',
-            color: '#FFFFFF',
-            padding: '8px',
-            backgroundImage: `url(${slide.image})`
+            color: '#FFFFFF'
           }}
         >
-          <Box
-            display="flex"
-            flexDirection="column"
+          <img
+            src={slide.image}
+            alt=""
             style={{
-              position: 'absolute',
-              bottom: 8
+              height: '160px',
+              width: '100%',
+              color: '#FFFFFF',
+              padding: '8px'
             }}
-          >
-            {/* <Typography variant="h4" align="left">
-              <Box>{slide.heading}</Box>
-            </Typography>
-            <Typography variant="h6" align="left">
-              <Box fontWeight={600}>{slide.subheading}</Box>
-            </Typography> */}
-          </Box>
+          />
         </Box>
       );
     });

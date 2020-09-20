@@ -6,11 +6,12 @@ export const webDevelopment = {
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
   title: 'Full Stack Web Development with JS',
-  upcoming: 'Oct 1st',
+  upcoming: 'Oct 22nd',
+  mentors: ['ganga', 'anuj'],
   schedule: [
     {
       courseId: "jsfs1020",
-      dates: "1st Oct - 5th Dec",
+      dates: "22nd Oct - 22nd Dec",
       days: "Sat, Sun, Tue, Thur",
       timing: "06:00 PM - 08:00 PM (IST)",
       link: "",
@@ -140,37 +141,32 @@ export const webDevelopment = {
   ],
   slides: [
     {
-      heading: 'Create Facebook Chatbot',
-      subheading: 'Using Natural Language Processing',
-      image: '/static/swipes/bot.png'
+      heading: '',
+      subheading: '',
+      image: '/static/swipes/web.png'
     },
-    {
-      heading: 'Dedect and recognize Faces',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Generate machine made music',
-      subheading: 'Using Deep Learning',
-      image: '/static/swipes/cup.png'
-    },
-    {
-      heading: 'Learn To make Snapchat Filters',
-      subheading: 'Using Image Processing',
-      image: '/static/swipes/ar.png'
-    }
   ],
   tags: [
-    'Web',
-    'JS',
+    'Bootstrap',
+    'Express',
+    'Mongodb',
     'React',
+    'Redux',
     'Server',
     'Firebase',
+    'Web Services',
+    'Rest API',
+    'Databases',
+    'SQL',
+    'Model Creation',
+    'Authentication',
+    'Cloud Functions',
+    'UI Interpretation',
     
   ],
   overview: [
-    "While VR is all about taking people into virtual worlds, AR is about bringing virtual elements into your real world. Imagine learning about dinosaurs by having life-sized ones walk in front of you. See how a particular dress fits you just by having it be augmented onto your body using your phone's camera. Want a virtual pet to roam around in your house? AR can make that possible.",
-    "We’ve been teaching VR for over 12 months but this AR course is BRAND NEW! You’ll learn to design and code Augmented Reality apps using Camp K12's very own HatchXR platform."
+    "Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly and, to the user, the server-side becomes irrelevant! Today’s user expects a lot out of the web page: it has to load fast, expose the desired service, and be comfortable to view on all devices: from a desktop computers to tablets and mobile phones.",
+    "In this course, we will learn the basic tools that every web page coder needs to know. We will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the user’s screen."
   ],
   faqs: [
     {

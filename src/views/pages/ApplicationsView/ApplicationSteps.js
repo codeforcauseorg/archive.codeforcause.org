@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -336,15 +336,15 @@ function FormChallenge({ setActiveStep, data, setData }) {
     setActiveStep(3);
   };
 
-  // useEffect(() => {
-  //   ValidatorForm.addValidationRule('isNotShort', value => {
-  //     console.log(value);
-  //     if (value.length < 100) {
-  //       return false;
-  //     }
-  //     return true;
-  //   });
-  // });
+  useEffect(() => {
+    ValidatorForm.addValidationRule('isNotShort', value => {
+      console.log(value);
+      if (value.length < 100) {
+        return false;
+      }
+      return true;
+    });
+  });
 
   return (
     <ValidatorForm onSubmit={handleSubmit}>
@@ -355,9 +355,11 @@ function FormChallenge({ setActiveStep, data, setData }) {
         label="Why do you wish to take up this course?"
         variant="outlined"
         onChange={handleChange}
+        name="q1"
+        value={formData.q1}
         rows={4}
-        validators={['required']}
-        errorMessages={['College is a required field']}
+        validators={['required', 'isNotShort']}
+        errorMessages={['This is a required field', 'Text too short. Put in atleast 150 chars.']}
       />
 
       <TextValidator
@@ -367,9 +369,11 @@ function FormChallenge({ setActiveStep, data, setData }) {
         label="Why do you deserve this scholarship?"
         variant="outlined"
         onChange={handleChange}
+        name="q2"
+        value={formData.q2}
         rows={4}
-        validators={['required']}
-        errorMessages={['College is a required field']}
+        validators={['required', 'isNotShort']}
+        errorMessages={['This is a required field', 'Text too short. Put in atleast 150 chars.']}
       />
 
       <TextValidator
@@ -379,9 +383,11 @@ function FormChallenge({ setActiveStep, data, setData }) {
         label="What is your viewpoint towards Coding for a Cause?"
         variant="outlined"
         onChange={handleChange}
+        name="q3"
+        value={formData.q3}
         rows={4}
-        validators={['required']}
-        errorMessages={['College is a required field']}
+        validators={['required', 'isNotShort']}
+        errorMessages={['This is a required field', 'Text too short. Put in atleast 150 chars.']}
       />
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">

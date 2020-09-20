@@ -181,8 +181,6 @@ function Account() {
           open={!!anchorEl}
           onClose={handleCloseMenu}
         >
-          <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
-          <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
           <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>
       </div>

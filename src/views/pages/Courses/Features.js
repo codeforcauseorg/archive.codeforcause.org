@@ -63,7 +63,7 @@ const Features = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div>
+     
         <Box className={classes.rootBox} display="flex" flexDirection="column">
           <Typography variant="h2" align="center" style={{
             marginBottom: "32px"
@@ -78,23 +78,23 @@ const Features = () => {
               return (
                 <Grid item lg={3} md={3} sm={6} xs={6} justify="center" alignItems="center">
                   <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" style={{
-                    padding: "40px",
-                    minWidth: "200px",
+                    padding: "20px",
+                    minWidth: "150px",
                   }}>
                     <img src={feature.image} alt={feature.line2} style={{
-                      width: "80px",
-                      height: "80px",
+                      width: "auto",
+                      height: "50px",
                       marginBottom: "12px"
                     }}/>
-                    <Typography align="center" variant="body1">{feature.line1}</Typography>
-                    <Typography align="center" variant="body1">{feature.line2}</Typography>
+                    <Typography align="center" variant="body2">{feature.line1}</Typography>
+                    <Typography align="center" variant="body2">{feature.line2}</Typography>
                   </Box>
                 </Grid>
               );
             })}
           </Grid>
         </Box>
-      </div>
+ 
     </div>
   );
 };

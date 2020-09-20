@@ -276,7 +276,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               }}
               align="left"
             >
-              You will need to pay only after your application have been
+              You will need to pay only after your application has been
               accepted.
             </Typography>
           </Box>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Grid, Typography, Box, Button } from '@material-ui/core';
+import { Grid, Typography, Box, Button, Avatar } from '@material-ui/core';
+
+import { members } from 'src/data/Members';
 
 export default function Details({ course, bottom }) {
   return (
@@ -90,6 +92,39 @@ export default function Details({ course, bottom }) {
             ))}
           </Box>
         </Box>
+
+        <Box mb={4}>
+          <Box display="flex" flexDirection="row" flexWrap="wrap">
+            {course.mentors.map((mentor, index) => {
+              return (
+                <Box m={2} display="flex" flexDirection="row">
+                  <Avatar
+                    style={{
+                      width: '64px',
+                      height: '64px'
+                    }}
+                    src={members[mentor].avatar}
+                  />
+
+                  <Box
+                    ml={2}
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="center"
+                  >
+                    <Typography noWrap={true}>
+                      <Box fontWeight={500}>{members[mentor].name}</Box>
+                    </Typography>
+                    <Typography variant='body2'>
+                      <Box fontWeight={300}>{members[mentor].position}</Box>
+                    </Typography>
+                  </Box>
+                </Box>
+              );
+            })}
+          </Box>
+        </Box>
+
         {!bottom ? (
           <Button
             variant="contained"

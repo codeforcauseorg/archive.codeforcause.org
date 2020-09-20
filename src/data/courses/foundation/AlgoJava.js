@@ -1,15 +1,16 @@
 export const algoJava = {
   difficulty: 'Foundation',
-  duration: '30 Lectures',
+  duration: '30 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-java',
-  domain: 'Algorithms',
+  domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with Java',
-  upcoming: 'Oct 1st',
+  upcoming: 'Oct 17th',
+  mentors: ['anuj', 'ekta'],
   schedule: [
     {
       courseId: "jds1020",
-      dates: '01st Oct - 05th Dec',
+      dates: "17th Oct - 16th Dec",
       days: 'Sat, Sun, Tue, Thur',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
@@ -222,10 +223,10 @@ export const algoJava = {
   ],
   slides: [
     {
-      heading: 'Search routes like Google Maps',
-      subheading: 'Using Graph Algorithms',
-      image: '/static/images/courses/projects/maps.png'
-    }
+      heading: '',
+      subheading: '',
+      image: '/static/swipes/java.png'
+    },
   ],
   tags: [
     'Problem Solving',
@@ -246,7 +247,6 @@ export const algoJava = {
     'Every students have in their mind that why to study Data Structure. How it helps me in real life problem? Data Structures are the most important skills for a person belonging to computer-science background to understand the nature of problems, develop the logic to solve a problem in an optimised way with an efficient use of appropriate Data Structures.',
     'From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimised and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!'
   ],
-  mentors: ['anuj', 'kunal'],
   faqs: [
     {
       title:
