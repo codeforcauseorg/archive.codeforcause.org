@@ -25,8 +25,8 @@ export const webDevelopment = {
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",
       link: "",
-      priceCut: "15,000 INR",
-      price: "8,850 INR",
+      priceCut: "₹ 15,000",
+      price: "₹ 8,850",
       active: false,
     }
   ],

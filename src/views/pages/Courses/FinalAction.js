@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography, Card, Button } from '@material-ui/core';
 import DetailsBottom from './partials/DetailsBottom';
 
+import { login } from 'src/actions/accountActions';
+import axios from 'src/utils/axios';
+import { useDispatch, useSelector } from 'react-redux';
+
 const useStyles = makeStyles(theme => ({
   icon: {
     marginRight: theme.spacing(2)
@@ -85,6 +89,21 @@ const useStyles = makeStyles(theme => ({
 
 export default function FinalAction({ course, batch }) {
   const classes = useStyles();
+
+  const user = useSelector(state => state.account.user);
+  const baseUrl =
+    'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
+  const dispatch = useDispatch();
+  const handleApply = () => {
+    const url = `${baseUrl}/${batch.courseId}`;
+    if (!user) {
+      dispatch(login());
+    } else {
+      axios.post(url).then(result => {
+        window.location.href = `/applications?id=${result.data.id}`;
+      });
+    }
+  };
 
   return (
     <Grid container className={classes.root}>
@@ -213,8 +232,8 @@ export default function FinalAction({ course, batch }) {
           <Button
             variant="contained"
             color="secondary"
+            onClick={handleApply}
             fullWidth
-
             style={{
               marginTop: '24px',
               textTransform: 'capitalize'

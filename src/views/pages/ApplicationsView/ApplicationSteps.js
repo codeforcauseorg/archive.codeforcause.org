@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import Paper from '@material-ui/core/Paper';
+import useIsMountedRef from 'src/hooks/useIsMountedRef';
+import { useSnackbar } from 'notistack';
+
+import axios from 'src/utils/axios';
 
 import { Button, Typography, MenuItem } from '@material-ui/core';
 import {
@@ -12,7 +16,6 @@ import {
   TextValidator,
   SelectValidator
 } from 'react-material-ui-form-validator';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,7 +44,14 @@ function getSteps() {
   ];
 }
 
-function getStepContent(step, setActiveStep, formData, setFormData) {
+function getStepContent(
+  step,
+  setActiveStep,
+  formData,
+  setFormData,
+  baseUrl,
+  applicationId
+) {
   switch (step) {
     case 0:
       return (
@@ -49,6 +59,8 @@ function getStepContent(step, setActiveStep, formData, setFormData) {
           setActiveStep={setActiveStep}
           data={formData}
           setData={setFormData}
+          baseUrl={baseUrl}
+          applicationId={applicationId}
         />
       );
     case 1:
@@ -57,6 +69,8 @@ function getStepContent(step, setActiveStep, formData, setFormData) {
           setActiveStep={setActiveStep}
           data={formData}
           setData={setFormData}
+          baseUrl={baseUrl}
+          applicationId={applicationId}
         />
       );
     case 2:
@@ -65,6 +79,8 @@ function getStepContent(step, setActiveStep, formData, setFormData) {
           setActiveStep={setActiveStep}
           data={formData}
           setData={setFormData}
+          baseUrl={baseUrl}
+          applicationId={applicationId}
         />
       );
     default:
@@ -72,19 +88,65 @@ function getStepContent(step, setActiveStep, formData, setFormData) {
   }
 }
 
-export function ApplicationSteps() {
+export function ApplicationSteps({ applicationId, setCourseTitle }) {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(2);
+  const isMountedRef = useIsMountedRef();
+  const baseUrl =
+    'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications/request';
+  const [activeStep, setActiveStep] = React.useState(-1);
   const [formData, setFormData] = React.useState({
     personal: {},
     education: {},
     challenge: {}
   });
   const steps = getSteps();
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleSubmitApplication = () => {
-    console.log(formData);
+    const url = `${baseUrl}/${applicationId}/submit`;
+
+    formData.submitted = true;
+
+    axios({
+      method: 'put',
+      url: url,
+      data: formData
+    })
+      .then(response => {
+        enqueueSnackbar('Application Completed Successfully.');
+      })
+      .catch(e => {
+        enqueueSnackbar('Failed with error. Try again later.');
+      });
+    setActiveStep(4);
   };
+
+  const getApplication = useCallback(() => {
+    axios
+      .get(`${baseUrl}/${applicationId}`)
+      .then(response => {
+        setCourseTitle(response.data.batch.courseName);
+
+        if (isMountedRef.current) {
+          if (response.data.submitted) {
+            setActiveStep(4);
+            enqueueSnackbar(
+              'You application in submitted. We will contact you back with result.'
+            );
+          } else {
+            setFormData(response.data);
+            setActiveStep(0);
+          }
+        }
+      })
+      .catch(e => {
+        console.log('Failed');
+      });
+  }, [isMountedRef, applicationId, enqueueSnackbar, setCourseTitle]);
+
+  useEffect(() => {
+    getApplication();
+  }, [getApplication]);
 
   return (
     <div className={classes.root}>
@@ -93,7 +155,14 @@ export function ApplicationSteps() {
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
             <StepContent>
-              {getStepContent(index, setActiveStep, formData, setFormData)}
+              {getStepContent(
+                index,
+                setActiveStep,
+                formData,
+                setFormData,
+                baseUrl,
+                applicationId
+              )}
             </StepContent>
           </Step>
         ))}
@@ -106,11 +175,22 @@ export function ApplicationSteps() {
           </Button>
         </Paper>
       )}
+      {activeStep === steps.length + 1 && (
+        <Paper square elevation={0} className={classes.resetContainer}>
+          <Typography>Application have been submitted successfully. We will email/call you for further process.</Typography>
+        </Paper>
+      )}
     </div>
   );
 }
 
-function FormPersonalInfo({ setActiveStep, data, setData }) {
+function FormPersonalInfo({
+  setActiveStep,
+  data,
+  setData,
+  baseUrl,
+  applicationId
+}) {
   const classes = useStyles();
   const [formData, updateFormData] = useState(data.personal);
 
@@ -127,19 +207,29 @@ function FormPersonalInfo({ setActiveStep, data, setData }) {
       ...data,
       personal: formData
     });
+
+    const url = `${baseUrl}/${applicationId}/personal`;
+
+    axios({
+      method: 'put',
+      url: url,
+      data: formData
+    })
+      .then(response => {})
+      .catch(e => {});
     setActiveStep(1);
   };
 
   return (
     <ValidatorForm onSubmit={handleSubmit}>
       <TextValidator
-        key="fullName"
+        key="name"
         className={classes.textField}
         label="Name"
         variant="outlined"
-        value={formData.fullName}
+        value={formData.name}
         fullWidth
-        name="fullName"
+        name="name"
         onChange={handleChange}
         validators={['required']}
         errorMessages={['Name is a required field']}
@@ -209,7 +299,13 @@ function FormPersonalInfo({ setActiveStep, data, setData }) {
   );
 }
 
-function FormEducationInfo({ setActiveStep, data, setData }) {
+function FormEducationInfo({
+  setActiveStep,
+  data,
+  setData,
+  baseUrl,
+  applicationId
+}) {
   const classes = useStyles();
   const [formData, updateFormData] = useState(data.education);
 
@@ -230,6 +326,16 @@ function FormEducationInfo({ setActiveStep, data, setData }) {
       ...data,
       education: formData
     });
+
+    const url = `${baseUrl}/${applicationId}/education`;
+
+    axios({
+      method: 'put',
+      url: url,
+      data: formData
+    })
+      .then(response => {})
+      .catch(e => {});
     setActiveStep(2);
   };
 
@@ -312,7 +418,13 @@ function FormEducationInfo({ setActiveStep, data, setData }) {
   );
 }
 
-function FormChallenge({ setActiveStep, data, setData }) {
+function FormChallenge({
+  setActiveStep,
+  data,
+  setData,
+  baseUrl,
+  applicationId
+}) {
   const classes = useStyles();
   const [formData, updateFormData] = useState(data.challenge);
 
@@ -333,6 +445,16 @@ function FormChallenge({ setActiveStep, data, setData }) {
       ...data,
       challenge: formData
     });
+
+    const url = `${baseUrl}/${applicationId}/challenge`;
+
+    axios({
+      method: 'put',
+      url: url,
+      data: formData
+    })
+      .then(response => {})
+      .catch(e => {});
     setActiveStep(3);
   };
 
@@ -359,7 +481,10 @@ function FormChallenge({ setActiveStep, data, setData }) {
         value={formData.q1}
         rows={4}
         validators={['required', 'isNotShort']}
-        errorMessages={['This is a required field', 'Text too short. Put in atleast 150 chars.']}
+        errorMessages={[
+          'This is a required field',
+          'Text too short. Put in atleast 150 chars.'
+        ]}
       />
 
       <TextValidator
@@ -373,7 +498,10 @@ function FormChallenge({ setActiveStep, data, setData }) {
         value={formData.q2}
         rows={4}
         validators={['required', 'isNotShort']}
-        errorMessages={['This is a required field', 'Text too short. Put in atleast 150 chars.']}
+        errorMessages={[
+          'This is a required field',
+          'Text too short. Put in atleast 150 chars.'
+        ]}
       />
 
       <TextValidator
@@ -387,7 +515,10 @@ function FormChallenge({ setActiveStep, data, setData }) {
         value={formData.q3}
         rows={4}
         validators={['required', 'isNotShort']}
-        errorMessages={['This is a required field', 'Text too short. Put in atleast 150 chars.']}
+        errorMessages={[
+          'This is a required field',
+          'Text too short. Put in atleast 150 chars.'
+        ]}
       />
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">

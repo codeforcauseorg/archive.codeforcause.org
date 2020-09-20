@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box, Button, Avatar } from '@material-ui/core';
+import { Grid, Typography, Box, Avatar } from '@material-ui/core';
 
 import { members } from 'src/data/Members';
 
@@ -124,20 +124,6 @@ export default function Details({ course, bottom }) {
             })}
           </Box>
         </Box>
-
-        {!bottom ? (
-          <Button
-            variant="contained"
-            color="secondary"
-            style={{
-              textTransform: 'capitalize'
-            }}
-          >
-            Apply Now
-          </Button>
-        ) : (
-          undefined
-        )}
       </Grid>
     </Grid>
   );

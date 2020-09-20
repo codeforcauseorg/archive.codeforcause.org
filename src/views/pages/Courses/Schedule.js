@@ -11,6 +11,10 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { login } from 'src/actions/accountActions';
+import axios from 'src/utils/axios';
+import { useDispatch, useSelector } from 'react-redux';
+
 const useStyles = makeStyles(theme => ({
   icon: {
     marginRight: theme.spacing(2)
@@ -91,6 +95,22 @@ export default function Schedule({ course }) {
 }
 
 function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
+
+  const user = useSelector(state => state.account.user);
+  const baseUrl =
+    'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
+  const dispatch = useDispatch();
+  const handleApply = () => {
+    const url = `${baseUrl}/${batch.courseId}`;
+    if (!user) {
+      dispatch(login());
+    } else {
+      axios.post(url).then(result => {
+        window.location.href = `/applications?id=${result.data.id}`;
+      });
+    }
+  };
+
   return (
     <Box
       display="flex"
@@ -236,14 +256,9 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               >
                 Schedule
               </Typography>
-              <Typography
-                align="left"
-                variant="body2"
-              >
+              <Typography align="left" variant="body2">
                 {`${batch.days} (${batch.timing})`}
               </Typography>
-
-            
             </Box>
 
             <Box mb={1} display="flex" flexDirection="row">
@@ -295,6 +310,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
             <Button
               color="secondary"
               variant="contained"
+              onClick={handleApply}
               style={{
                 textTransform: 'capitalize',
                 height: '45px',

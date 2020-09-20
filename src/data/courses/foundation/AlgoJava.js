@@ -14,8 +14,8 @@ export const algoJava = {
       days: 'Sat, Sun, Tue, Thur',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '15,000 INR',
-      price: '4,850 INR',
+      priceCut: '₹ 14,999',
+      price: '₹ 4,850',
       active: true
     },
     {
@@ -24,8 +24,8 @@ export const algoJava = {
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '15,000 INR',
-      price: '6,850 INR',
+      priceCut: '₹ 14,999',
+      price: '₹ 6,850',
       active: false
     }
   ],

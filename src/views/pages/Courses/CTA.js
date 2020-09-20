@@ -63,13 +63,16 @@ function Process({ benefits, className, ...rest }) {
   const handleSubmit = e => {
     setSubmitting(1);
     e.preventDefault();
+    formData.source = window.location.href;
     axios({
       method: 'post',
-      url: 'https://us-central1-codeforcauseorg.cloudfunctions.net',
+      url:
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/enquiries',
       data: formData
     })
       .then(response => {
         setSubmitting(0);
+        updateFormData({ name: '', email: '', phone: '' });
         enqueueSnackbar('Request Submitted Successfully.');
       })
       .catch(error => {
@@ -139,8 +142,11 @@ function Process({ benefits, className, ...rest }) {
                   fullWidth
                   name="email"
                   onChange={handleChange}
-                  validators={['required']}
-                  errorMessages={['This is a required field']}
+                  validators={['required', 'isEmail']}
+                  errorMessages={[
+                    'This is a required field',
+                    'Ender a valid Email'
+                  ]}
                 />
 
                 <TextValidator

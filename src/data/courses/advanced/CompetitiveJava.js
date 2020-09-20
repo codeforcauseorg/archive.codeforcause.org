@@ -9,21 +9,21 @@ export const competitiveJava = {
   mentors: ['kunal', 'ekta'],
   schedule: [
     {
-      courseId: "jcomp0121",
-      dates: "10th Jan - 15th Apr",
-      days: "Sat, Sun, Wed",
-      timing: "06:00 PM - 08:00 PM (IST)",
-      link: "",
-      priceCut: "15,000 INR",
-      price: "8,850 INR",
-      active: false,
+      courseId: 'jcomp0121',
+      dates: '10th Jan - 15th Apr',
+      days: 'Sat, Sun, Wed',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 15,000',
+      price: '₹ 8,850',
+      active: false
     }
   ],
   projects: [
     {
       title: 'Under Development',
       img: '/static/images/projects/p1.png'
-    },
+    }
   ],
   topics: [
     {
@@ -53,12 +53,16 @@ export const competitiveJava = {
         'Fast Exponentiation using Bitmasking',
         'Generate Subsets using Bitmasking',
         'Decimal to Binary using Bitwise',
+<<<<<<< Updated upstream
         'Backtracking with Bitmasking',
         'Binary Search + Bitmaksing',
+=======
+>>>>>>> Stashed changes
         'Inclusion Exclusion Concept + Implementation'
       ]
     },
     {
+<<<<<<< Updated upstream
       title: 'Number theory & Computational Theory',
       classes: 'Lectures 6-7',
       subtopics: [
@@ -235,6 +239,11 @@ export const competitiveJava = {
         'Game of chocolates',
         'Robot problems'
       ]
+=======
+      title: 'Under Development',
+      classes: 'Classes 14-30',
+      subtopics: []
+>>>>>>> Stashed changes
     }
   ],
   slides: [
@@ -242,7 +251,7 @@ export const competitiveJava = {
       heading: '',
       subheading: '',
       image: '/static/swipes/comp.png'
-    },
+    }
   ],
   tags: [
     'Dynamic Programming',
@@ -253,28 +262,32 @@ export const competitiveJava = {
     'Number Theory',
     'Segment Tree',
     'Fenwick Tree',
+<<<<<<< Updated upstream
     'Decompositions',
     'Tries'
   ],
   overview: [
     "Under Development"
+=======
+    'Decompositions'
+>>>>>>> Stashed changes
   ],
+  overview: ['Under Development'],
   faqs: [
     {
-      title:
-        'Will this help me with my career path?',
+      title: 'Will this help me with my career path?',
       answer:
         'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
-    }, {
-      title:
-        'How your doubts will get resolved?',
+    },
+    {
+      title: 'How your doubts will get resolved?',
       answer:
         'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
-    }, {
-      title:
-        'Is this course suitable for me?',
+    },
+    {
+      title: 'Is this course suitable for me?',
       answer:
         'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    },
+    }
   ]
 };

@@ -14,8 +14,8 @@ export const machineLearning = {
       days: "Sat, Sun, Wed, Thur",
       timing: "08:30 PM - 10:30 PM (IST)",
       link: "",
-      priceCut: "22,000 INR",
-      price: "6,850 INR",
+      priceCut: "₹ 22,000",
+      price: "₹ 6,850",
       active: true,
     },
     {
@@ -24,8 +24,8 @@ export const machineLearning = {
       days: "Sat, Sun, Wed",
       timing: "06:00 PM - 08:00 PM (IST)",
       link: "",
-      priceCut: "15,000 INR",
-      price: "8,850 INR",
+      priceCut: "₹ 15,000",
+      price: "₹ 8,850",
       active: false,
     }
   ],
