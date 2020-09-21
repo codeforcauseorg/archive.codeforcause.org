@@ -11,7 +11,8 @@ import {
   Box,
   Avatar,
   Menu,
-  MenuItem
+  MenuItem,
+  Hidden
 } from '@material-ui/core';
 import authService from 'src/services/authService';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
@@ -76,7 +77,7 @@ function Account() {
             alignItems="center"
             onClick={handleOpenMenu}
             style={{
-              cursor: "pointer"
+              cursor: 'pointer'
             }}
           >
             <Avatar
@@ -104,16 +105,17 @@ function Account() {
                 />
               )}
             </Avatar>
-
-            <Typography variant="h6">
-              <Box
-                style={{
-                  color: '#A60000'
-                }}
-              >
-                {`Hello ${truncate(user.displayName)}`}
-              </Box>
-            </Typography>
+            <Hidden smDown>
+              <Typography variant="h6">
+                <Box
+                  style={{
+                    color: '#A60000'
+                  }}
+                >
+                  {`Hello ${truncate(user.displayName)}`}
+                </Box>
+              </Typography>
+            </Hidden>
           </Box>
         ) : (
           <Button
@@ -124,7 +126,7 @@ function Account() {
               textTransform: 'capitalize'
             }}
           >
-            <Typography variant="h6">Login / Sign Up</Typography>
+            <Typography variant="h6">Login</Typography>
           </Button>
         )}
 

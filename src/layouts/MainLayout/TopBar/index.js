@@ -65,9 +65,9 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
   const navItems = [
     { title: 'Campus Leaders', link: '/campusLeaders' },
     { title: 'Events', link: '/events' },
-    { title: 'Courses', link: '/courses' },
+    { title: 'Courses', link: '/courses' }
     // { title: 'Team', link: '/team' }
-  ]
+  ];
 
   const list = () => (
     <div
@@ -136,8 +136,13 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
         <Hidden smDown>
           <Box ml={2} flexGrow={1} />
           {navItems.map((item, index) => (
-            <Item active={item.link === pathname} title={item.title} link={item.link} />
-          ))};
+            <Item
+              active={item.link === pathname}
+              title={item.title}
+              link={item.link}
+            />
+          ))}
+          ;
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
             <OpenSource />
@@ -145,13 +150,19 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
           <Box ml={2} flexGrow={0.05} />
         </Hidden>
         <Hidden mdUp>
-          <Box ml={8}>
+          <Box
+            display="flex"
+            flexDirection="row"
+            alignItems="center"
+            style={{ position: 'absolute', right: '0px'}}
+          >
+            <OpenSource />
+
             <IconButton
               edge="end"
               className={classes.menuButton}
               aria-label="menu"
               onClick={toggleDrawer('right', true)}
-              style={{ position: 'absolute', right: '15px', top: '15%' }}
             >
               <MenuIcon />
             </IconButton>
