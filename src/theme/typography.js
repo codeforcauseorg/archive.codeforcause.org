@@ -1,8 +1,12 @@
 export default {
+  fontFamily: [
+    '"Montserrat"',
+  ].join(','),
+
   h1: {
     fontWeight: 500,
     fontSize: 35,
-    letterSpacing: '-0.24px'
+    letterSpacing: '-0.24px',
   },
   h2: {
     fontWeight: 500,
@@ -20,12 +24,12 @@ export default {
     letterSpacing: '-0.06px'
   },
   h5: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 16,
     letterSpacing: '-0.05px'
   },
   h6: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 14,
     letterSpacing: '-0.05px'
   },

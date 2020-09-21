@@ -33,7 +33,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   toolbar: {
-    minHeight: 64
+    minHeight: 64,
+    maxHeight: 64
   },
   menuButton: {
     float: 'right',
