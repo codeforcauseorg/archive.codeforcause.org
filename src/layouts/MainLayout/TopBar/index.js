@@ -142,7 +142,6 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
               link={item.link}
             />
           ))}
-          ;
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
             <OpenSource />

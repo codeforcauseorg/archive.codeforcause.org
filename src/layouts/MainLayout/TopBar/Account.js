@@ -22,7 +22,7 @@ import { login, dismissLogin, logout } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    minWidth: '126px'
+    minWidth: '120px'
   }
 }));
 
@@ -139,7 +139,7 @@ function Account() {
             {user === undefined ? (
               <CircularProgress size="24px" color="inherit" />
             ) : (
-              <Typography variant="h6">Login / Sign Up</Typography>
+              <Typography variant="h6">Login</Typography>
             )}
           </Button>
         )}
