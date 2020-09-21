@@ -106,25 +106,27 @@ function Hero({ className, ...rest }) {
               </Hidden>
               <Box mt={5}>
                 {!!user ? (
-                  <Typography variant="body1">It's the time to learn from Experts.</Typography>
+                  <Typography variant="h4">
+                    It's the time to learn from Experts.
+                  </Typography>
                 ) : (
-                  <Typography variant="body1">
+                  <Typography variant="h4">
                     Login To get regular Updates.
                   </Typography>
                 )}
               </Box>
-              <Box mt={4}>
+              <Box mt={2} mb={3}>
                 <Grid container xs={12} md={12}>
                   <Grid item xs={12} md={12}>
                     {!!user ? (
-                      <Button
-                        className={classes.btn}
-                        onClick={handleLoginOpen}
-                        size="large"
-                        variant="contained"
+                      <Typography
+                        variant="h4"
+                        style={{
+                          color: '#ffffff'
+                        }}
                       >
-                        Check Your Enrollments
-                      </Button>
+                        Explore our live events below
+                      </Typography>
                     ) : (
                       <Button
                         className={classes.btn}

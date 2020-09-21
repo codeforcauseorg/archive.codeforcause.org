@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography, Card, Button } from '@material-ui/core';
 import DetailsBottom from './partials/DetailsBottom';
@@ -89,6 +89,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function FinalAction({ course, batch }) {
   const classes = useStyles();
+  const [applyState, setApplyState] = useState("Apply");
 
   const user = useSelector(state => state.account.user);
   const baseUrl =
@@ -99,6 +100,7 @@ export default function FinalAction({ course, batch }) {
     if (!user) {
       dispatch(login());
     } else {
+      setApplyState("Generating...");
       axios.post(url).then(result => {
         window.location.href = `/applications?id=${result.data.id}`;
       });
@@ -239,7 +241,7 @@ export default function FinalAction({ course, batch }) {
               textTransform: 'capitalize'
             }}
           >
-            Apply Now
+            {applyState}
           </Button>
         </Box>
       </Grid>

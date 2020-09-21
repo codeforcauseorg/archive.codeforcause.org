@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Grid,
   Typography,
@@ -97,6 +97,8 @@ export default function Schedule({ course }) {
 function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
 
   const user = useSelector(state => state.account.user);
+  const [applyState, setApplyState] = useState("Apply");
+
   const baseUrl =
     'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
   const dispatch = useDispatch();
@@ -105,6 +107,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
     if (!user) {
       dispatch(login());
     } else {
+      setApplyState("Generating...");
       axios.post(url).then(result => {
         window.location.href = `/applications?id=${result.data.id}`;
       });
@@ -318,7 +321,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               }}
             >
               <Typography>
-                <Box fontWeight={500}>Apply</Box>
+                <Box fontWeight={500}>{applyState}</Box>
               </Typography>
             </Button>
             <Button
