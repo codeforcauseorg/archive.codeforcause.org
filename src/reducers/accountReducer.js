@@ -11,8 +11,8 @@ import {
 } from 'src/actions/accountActions';
 
 const initialState = {
-  user: null,
-  login: null
+  user: undefined,
+  login: undefined
 };
 
 const accountReducer = (state = initialState, action) => {
