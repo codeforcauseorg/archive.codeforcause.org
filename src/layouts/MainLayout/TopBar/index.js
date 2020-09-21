@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core';
 import Logo from 'src/components/Logo';
 import Item from './Item';
-import OpenSource from './Account';
+import Account from './Account';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -143,10 +143,9 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
               link={item.link}
             />
           ))}
-          ;
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
-            <OpenSource />
+            <Account />
           </Box>
           <Box ml={2} flexGrow={0.05} />
         </Hidden>
@@ -157,7 +156,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             alignItems="center"
             style={{ position: 'absolute', right: '0px'}}
           >
-            <OpenSource />
+            <Account />
 
             <IconButton
               edge="end"

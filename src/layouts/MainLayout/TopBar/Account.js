@@ -12,17 +12,26 @@ import {
   Avatar,
   Menu,
   MenuItem,
-  Hidden
+  Hidden,
+  CircularProgress,
+  makeStyles
 } from '@material-ui/core';
 import authService from 'src/services/authService';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { login, dismissLogin, logout } from 'src/actions/accountActions';
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    minWidth: '120px'
+  }
+}));
 
 function Account() {
   const user = useSelector(state => state.account.user);
   const loginFlag = useSelector(state => state.account.login);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const dispatch = useDispatch();
+  const classes = useStyles();
 
   const handleLogout = () => {
     handleCloseMenu();
@@ -70,7 +79,7 @@ function Account() {
           color: '#000000'
         }}
       >
-        {!!user ? (
+        {user ? (
           <Box
             display="flex"
             flexDirection="row"
@@ -121,12 +130,17 @@ function Account() {
           <Button
             variant="contained"
             color="secondary"
+            className={classes.button}
             onClick={handleLoginOpen}
             style={{
               textTransform: 'capitalize'
             }}
           >
-            <Typography variant="h6">Login</Typography>
+            {user === undefined ? (
+              <CircularProgress size="24px" color="inherit" />
+            ) : (
+              <Typography variant="h6">Login</Typography>
+            )}
           </Button>
         )}
 
