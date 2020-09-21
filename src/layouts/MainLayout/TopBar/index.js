@@ -148,6 +148,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
           <Box ml={2}>
             <OpenSource />
           </Box>
+          <Box ml={2} flexGrow={0.05} />
         </Hidden>
         <Hidden mdUp>
           <Box

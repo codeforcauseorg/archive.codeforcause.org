@@ -1,11 +1,6 @@
 export default {
   fontFamily: [
     '"Montserrat"',
-    'Roboto',
-    'Arial',
-    'sans-serif',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
   ].join(','),
 
   h1: {
@@ -29,7 +24,7 @@ export default {
     letterSpacing: '-0.06px'
   },
   h5: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 16,
     letterSpacing: '-0.05px'
   },
