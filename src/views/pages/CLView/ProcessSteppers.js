@@ -48,8 +48,8 @@ function QontoStepIcon(props) {
       {completed ? (
         <Check className={classes.completed} />
       ) : (
-          <div className={classes.circle} />
-        )}
+        <div className={classes.circle} />
+      )}
     </div>
   );
 }

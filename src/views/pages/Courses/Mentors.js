@@ -65,7 +65,7 @@ function Mentors({ mentors, className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Box display="flex" flexDirection="column" className={classes.cardGrid}>
         <Typography variant="h3" align="left" color="textPrimary">
-        Meet Our Mentors
+          Meet Our Mentors
         </Typography>
         {/* End hero unit */}
         <Grid

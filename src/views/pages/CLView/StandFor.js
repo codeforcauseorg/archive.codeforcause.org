@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: 70,
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
-      paddingRight: 15,
+      paddingRight: 15
     }
   },
   extraPadding: {
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
   extraMargin: {
     marginTop: '50px',
     [theme.breakpoints.down('md')]: {
-      marginTop: '30px',
+      marginTop: '30px'
     }
   }
 }));
@@ -74,16 +74,25 @@ function StandsFor({ className, ...rest }) {
         </Typography>
         <Grid container spacing={3} className={classes.extraMargin}>
           <Hidden smDown>
-            <Grid item xs={12} md={6} style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              overflow: "hidden"
-            }}>
-                <img alt="this is what we stand for" src="/static/campusLeaders/standFor.png" style={{
-                      flexShrink: "0",
-                      minWidth: "100%"
-                }}/>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                overflow: 'hidden'
+              }}
+            >
+              <img
+                alt="this is what we stand for"
+                src="/static/campusLeaders/standFor.png"
+                style={{
+                  flexShrink: '0',
+                  minWidth: '100%'
+                }}
+              />
             </Grid>
           </Hidden>
 

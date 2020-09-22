@@ -29,7 +29,15 @@ const HeaderItem = ({ title, link, active }) => {
   const classes = useStyles();
   return (
     <Box ml={2}>
-      <Link smooth to={link} variant="h5" className={clsx({ [classes.textStyle]:true, [classes.activeCls]:active })} >
+      <Link
+        smooth
+        to={link}
+        variant="h5"
+        className={clsx({
+          [classes.textStyle]: true,
+          [classes.activeCls]: active
+        })}
+      >
         <Typography variant="h6" color="textPrimary">
           {title}
         </Typography>

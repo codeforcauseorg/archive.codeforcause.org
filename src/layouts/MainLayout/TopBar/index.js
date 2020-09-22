@@ -154,7 +154,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             display="flex"
             flexDirection="row"
             alignItems="center"
-            style={{ position: 'absolute', right: '0px'}}
+            style={{ position: 'absolute', right: '0px' }}
           >
             <Account />
 

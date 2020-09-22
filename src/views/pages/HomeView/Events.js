@@ -1,8 +1,4 @@
-import React, {
-  useCallback,
-  useState,
-  useEffect
-} from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import axios from 'src/utils/axios';
@@ -106,8 +102,10 @@ function Events({ className, ...rest }) {
 
   const getEvents = useCallback(() => {
     axios
-      .get('https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/events')
-      .then((response) => {
+      .get(
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/events'
+      )
+      .then(response => {
         if (isMountedRef.current) {
           setEvents(response.data);
         }
@@ -155,8 +153,8 @@ function Events({ className, ...rest }) {
                     </Typography>
                   </div>
                 ) : (
-                    <></>
-                  )}
+                  <></>
+                )}
                 <CardMedia
                   className={classes.cardMedia}
                   image={event.image}

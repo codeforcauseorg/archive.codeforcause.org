@@ -1,12 +1,9 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@material-ui/core';
 
-
 export default function DetailsBottom({ course, batch }) {
   return (
-    <Grid
-      container
-    >
+    <Grid container>
       <Grid
         item
         xs={12}
@@ -57,11 +54,7 @@ export default function DetailsBottom({ course, batch }) {
             <Typography>{course.duration}</Typography>
           </Box>
 
-          <Box mb={2}
-            display="flex"
-            flexDirection="row"
-            
-          >
+          <Box mb={2} display="flex" flexDirection="row">
             <Typography
               style={{
                 marginRight: '24px',
@@ -74,42 +67,37 @@ export default function DetailsBottom({ course, batch }) {
           </Box>
 
           <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
-              {course.tags.map((tag, index) => (
-                <div
-                  style={{
-                    margin: '4px 16px 4px 0px',
-                    padding: '4px 8px',
-                    border: '1px solid',
-                    borderColor: '#A60000',
-                    borderRadius: '5px'
-                  }}
-                  variant="outlined"
-                >
-                  <Typography color="secondary" variant="body2">
-                    {tag}
-                  </Typography>
-                </div>
-              ))}
-            </Box>
+            {course.tags.map((tag, index) => (
+              <div
+                style={{
+                  margin: '4px 16px 4px 0px',
+                  padding: '4px 8px',
+                  border: '1px solid',
+                  borderColor: '#A60000',
+                  borderRadius: '5px'
+                }}
+                variant="outlined"
+              >
+                <Typography color="secondary" variant="body2">
+                  {tag}
+                </Typography>
+              </div>
+            ))}
+          </Box>
 
-            <Box mb={2}
-            display="flex"
-            flexDirection="row"
-            
-          >
+          <Box mb={2} display="flex" flexDirection="row">
             <Typography
               style={{
                 marginRight: '24px',
-                color: '#939393',
+                color: '#939393'
               }}
               variant="body2"
             >
-              You will need to pay only after your application have been accepted.
+              You will need to pay only after your application have been
+              accepted.
             </Typography>
           </Box>
-             
         </Box>
-        
       </Grid>
     </Grid>
   );

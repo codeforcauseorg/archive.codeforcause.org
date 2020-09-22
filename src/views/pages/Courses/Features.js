@@ -63,38 +63,69 @@ const Features = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-     
-        <Box className={classes.rootBox} display="flex" flexDirection="column">
-          <Typography variant="h2" align="center" style={{
-            marginBottom: "32px"
-          }}>
-            Courses Designed so You can Munch Every Bit
-          </Typography>
+      <Box className={classes.rootBox} display="flex" flexDirection="column">
+        <Typography
+          variant="h2"
+          align="center"
+          style={{
+            marginBottom: '32px'
+          }}
+        >
+          Courses Designed so You can Munch Every Bit
+        </Typography>
 
-          <Grid container display="flex" flexDirection="row" justify="center" alignItems="center" style={{
-            width: "100%"
-          }}>
-            {features.primary.map((feature, index) => {
-              return (
-                <Grid item lg={3} md={3} sm={6} xs={6} justify="center" alignItems="center">
-                  <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" style={{
-                    padding: "20px",
-                    minWidth: "150px",
-                  }}>
-                    <img src={feature.image} alt={feature.line2} style={{
-                      width: "auto",
-                      height: "50px",
-                      marginBottom: "12px"
-                    }}/>
-                    <Typography align="center" variant="body2">{feature.line1}</Typography>
-                    <Typography align="center" variant="body2">{feature.line2}</Typography>
-                  </Box>
-                </Grid>
-              );
-            })}
-          </Grid>
-        </Box>
- 
+        <Grid
+          container
+          display="flex"
+          flexDirection="row"
+          justify="center"
+          alignItems="center"
+          style={{
+            width: '100%'
+          }}
+        >
+          {features.primary.map((feature, index) => {
+            return (
+              <Grid
+                item
+                lg={3}
+                md={3}
+                sm={6}
+                xs={6}
+                justify="center"
+                alignItems="center"
+              >
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  style={{
+                    padding: '20px',
+                    minWidth: '150px'
+                  }}
+                >
+                  <img
+                    src={feature.image}
+                    alt={feature.line2}
+                    style={{
+                      width: 'auto',
+                      height: '50px',
+                      marginBottom: '12px'
+                    }}
+                  />
+                  <Typography align="center" variant="body2">
+                    {feature.line1}
+                  </Typography>
+                  <Typography align="center" variant="body2">
+                    {feature.line2}
+                  </Typography>
+                </Box>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
     </div>
   );
 };

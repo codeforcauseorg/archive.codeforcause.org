@@ -2,14 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import {
-  Box,
-  Container,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Container, Typography, makeStyles } from '@material-ui/core';
 import ApplyNowModal from './ApplyNowModal';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,7 +40,15 @@ function Hero({ className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} style={{ backgroundImage: 'url("/static/campusLeaders/hero.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} {...rest}>
+    <div
+      className={clsx(classes.root, className)}
+      style={{
+        backgroundImage: 'url("/static/campusLeaders/hero.png")',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }}
+      {...rest}
+    >
       <Container maxWidth="lg">
         <div className={classes.main}>
           <Typography variant="h1">Campus Leaders</Typography>

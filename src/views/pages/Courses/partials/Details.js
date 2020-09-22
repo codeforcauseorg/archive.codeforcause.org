@@ -115,7 +115,7 @@ export default function Details({ course, bottom }) {
                     <Typography noWrap={true}>
                       <Box fontWeight={500}>{members[mentor].name}</Box>
                     </Typography>
-                    <Typography variant='body2'>
+                    <Typography variant="body2">
                       <Box fontWeight={300}>{members[mentor].position}</Box>
                     </Typography>
                   </Box>

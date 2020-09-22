@@ -12,13 +12,13 @@ export const UPDATE_PROFILE = '@account/update-profile';
 
 export function login() {
   return async dispatch => {
-      dispatch({ type: LOGIN_REQUEST });
+    dispatch({ type: LOGIN_REQUEST });
   };
 }
 
 export function dismissLogin() {
   return async dispatch => {
-      dispatch({ type: DISMISS_LOGIN });
+    dispatch({ type: DISMISS_LOGIN });
   };
 }
 

@@ -233,7 +233,6 @@ export const competitiveJava = {
         'Game of chocolates',
         'Robot problems'
       ]
-
     }
   ],
   slides: [

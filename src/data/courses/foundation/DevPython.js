@@ -9,22 +9,21 @@ export const devPython = {
   mentors: ['kunal'],
   schedule: [
     {
-      courseId: "pdev0121",
-      dates: "15th Jan - 20th Apr",
-      days: "Sat, Sun, Wed",
-      timing: "06:00 PM - 08:00 PM (IST)",
-      link: "",
-      priceCut: "₹ 15,000",
-      price: "₹ 6,850",
-      active: false,
+      courseId: 'pdev0121',
+      dates: '15th Jan - 20th Apr',
+      days: 'Sat, Sun, Wed',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 15,000',
+      price: '₹ 6,850',
+      active: false
     }
   ],
   projects: [
     {
       title: 'Under Developemnt',
       img: '/static/images/courses/projects/sudoku.jpg'
-    },
-
+    }
   ],
   topics: [
     {
@@ -120,8 +119,7 @@ export const devPython = {
     {
       title: 'Under Developemnt',
       classes: 'Classes 19-30',
-      subtopics: [
-      ]
+      subtopics: []
     },
     {
       title: 'Dynamic Programming',
@@ -143,7 +141,7 @@ export const devPython = {
       heading: '',
       subheading: '',
       image: '/static/swipes/apps.png'
-    },
+    }
   ],
   tags: [
     'Django',
@@ -151,27 +149,24 @@ export const devPython = {
     'Mongo DB',
     'Relational DB',
     'Authentication',
-    'User Management',
+    'User Management'
   ],
-  overview: [
-    "Under Developemnt"
-  ],
+  overview: ['Under Developemnt'],
   faqs: [
     {
-      title:
-        'Will this help me with my career path?',
+      title: 'Will this help me with my career path?',
       answer:
         'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
-    }, {
-      title:
-        'How your doubts will get resolved?',
+    },
+    {
+      title: 'How your doubts will get resolved?',
       answer:
         'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
-    }, {
-      title:
-        'Is this course suitable for me?',
+    },
+    {
+      title: 'Is this course suitable for me?',
       answer:
         'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    },
+    }
   ]
 };
