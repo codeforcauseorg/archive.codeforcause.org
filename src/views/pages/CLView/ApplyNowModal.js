@@ -7,14 +7,11 @@ import {
   DialogTitle,
   Button,
   Typography,
-  Select,
-  FormControl,
   MenuItem,
-  InputLabel
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import { ValidatorForm, TextValidator, SelectValidator } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
 
@@ -189,24 +186,25 @@ export default function ApplyNowModal() {
               errorMessages={['This is a required field']}
             />
 
-            <FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel id="year-label">Year</InputLabel>
-              <Select
-                labelId="year-label"
-                id="year-label"
-                onChange={handleChange}
-                name="year"
-                label="Year"
-                value={formData.year || ''}
-              >
-                <MenuItem value={1}>1st</MenuItem>
-                <MenuItem value={2}>2nd</MenuItem>
-                <MenuItem value={3}>3rd</MenuItem>
-                <MenuItem value={4}>4th</MenuItem>
-                <MenuItem value={5}>5th</MenuItem>
-                <MenuItem value={6}>6th</MenuItem>
-              </Select>
-            </FormControl>
+            <SelectValidator
+              key="year"
+              className={classes.textField}
+              value={formData.year}
+              onChange={handleChange}
+              name="year"
+              variant="outlined"
+              validators={['required']}
+              errorMessages={['Please select a year']}
+              label="Year"
+              fullWidth
+            >
+              <MenuItem value={1}>1st</MenuItem>
+              <MenuItem value={2}>2nd</MenuItem>
+              <MenuItem value={3}>3rd</MenuItem>
+              <MenuItem value={4}>4th</MenuItem>
+              <MenuItem value={5}>5th</MenuItem>
+              <MenuItem value={6}>6th</MenuItem>
+            </SelectValidator>
 
             <TextValidator
               key="college"
