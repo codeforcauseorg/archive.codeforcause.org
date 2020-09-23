@@ -6,11 +6,12 @@ import {
   DialogContentText,
   DialogTitle,
   Button,
-  Typography
+  Typography,
+  MenuItem
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import { ValidatorForm, TextValidator, SelectValidator } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
 
@@ -123,8 +124,8 @@ export default function ApplyNowModal() {
               fullWidth
               name="email"
               onChange={handleChange}
-              validators={['required']}
-              errorMessages={['This is a required field']}
+              validators={['required', 'isEmail']}
+              errorMessages={['This is a required field', 'Please enter a valid email']}
             />
 
             <TextValidator
@@ -136,8 +137,8 @@ export default function ApplyNowModal() {
               fullWidth
               name="phone"
               onChange={handleChange}
-              validators={['required']}
-              errorMessages={['This is a required field']}
+              validators={['required', 'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$']}
+              errorMessages={['This is a required field', 'Please enter a valid contact number']}
             />
 
             <TextValidator
@@ -149,8 +150,8 @@ export default function ApplyNowModal() {
               fullWidth
               name="linkedIn"
               onChange={handleChange}
-              validators={['required']}
-              errorMessages={['This is a required field']}
+              validators={['required', 'matchRegexp:^(http(s)?://)?([w]+.)?linkedin.com/(pub|in|profile)']}
+              errorMessages={['This is a required field', 'Please enter a valid URL']}
             />
 
             <TextValidator
@@ -166,18 +167,25 @@ export default function ApplyNowModal() {
               errorMessages={['This is a required field']}
             />
 
-            <TextValidator
+            <SelectValidator
               key="year"
               className={classes.textField}
-              label="Year"
-              variant="outlined"
               value={formData.year}
-              fullWidth
-              name="year"
               onChange={handleChange}
+              name="year"
+              variant="outlined"
               validators={['required']}
-              errorMessages={['This is a required field']}
-            />
+              errorMessages={['Please select a year']}
+              label="Year"
+              fullWidth
+            >
+              <MenuItem value={1}>1st</MenuItem>
+              <MenuItem value={2}>2nd</MenuItem>
+              <MenuItem value={3}>3rd</MenuItem>
+              <MenuItem value={4}>4th</MenuItem>
+              <MenuItem value={5}>5th</MenuItem>
+              <MenuItem value={6}>6th</MenuItem>
+            </SelectValidator>
 
             <TextValidator
               key="college"
