@@ -464,7 +464,6 @@ function FormChallenge({
 
   const countChar = string => string.replace(/\s/g, '').length;
 
-
   useEffect(() => {
     ValidatorForm.addValidationRule('isNotShort', value => {
       if (countChar(value) < MIN_CHAR) {
