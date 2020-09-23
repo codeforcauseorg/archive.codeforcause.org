@@ -463,8 +463,7 @@ function FormChallenge({
 
   useEffect(() => {
     ValidatorForm.addValidationRule('isNotShort', value => {
-      console.log(value);
-      if (value.length < 100) {
+      if (value.length < 150) {
         return false;
       }
       return true;
@@ -486,7 +485,7 @@ function FormChallenge({
         validators={['required', 'isNotShort']}
         errorMessages={[
           'This is a required field',
-          'Text too short. Put in atleast 150 chars.'
+          `Text too short. Put in atleast 150 chars. ${formData.q1 && formData.q1.length ? "Remaining " + (150 - formData.q1.length) + `${formData.q1.length < 149 ?  " characters" : " character"}`: ""} `
         ]}
       />
 
@@ -503,7 +502,7 @@ function FormChallenge({
         validators={['required', 'isNotShort']}
         errorMessages={[
           'This is a required field',
-          'Text too short. Put in atleast 150 chars.'
+          `Text too short. Put in atleast 150 chars. ${formData.q2 && formData.q2.length ? "Remaining " + (150 - formData.q2.length) + `${formData.q2.length < 149 ?  " characters" : " character"}`: ""} `
         ]}
       />
 
@@ -520,7 +519,7 @@ function FormChallenge({
         validators={['required', 'isNotShort']}
         errorMessages={[
           'This is a required field',
-          'Text too short. Put in atleast 150 chars.'
+          `Text too short. Put in atleast 150 chars. ${formData.q3 && formData.q3.length ? "Remaining " + (150 - formData.q3.length) + `${formData.q3.length < 149 ?  " characters" : " character"}`: ""} `
         ]}
       />
 
