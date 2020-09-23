@@ -462,9 +462,8 @@ function FormChallenge({
     setActiveStep(3);
   };
 
-  const countChar = string => {
-    return string.replace(/\s/g, '').length;
-  };
+  const countChar = string => string.replace(/\s/g, '').length;
+
 
   useEffect(() => {
     ValidatorForm.addValidationRule('isNotShort', value => {
