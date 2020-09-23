@@ -17,6 +17,10 @@ import AlgoPythonView from 'src/views/pages/Courses/AlgoPythonView';
 import WebFullStakView from 'src/views/pages/Courses/WebFullStakView';
 import CompetitiveJavaView from 'src/views/pages/Courses/CompetitiveJavaView';
 import PythonDevelopmentView from 'src/views/pages/Courses/PythonDevelopmentView';
+import TermsView from './views/pages/documents/termsView';
+import DocsLayout from './layouts/DocsLayout';
+import PrivacyView from './views/pages/documents/privacyView';
+import RefundView from './views/pages/documents/refundView';
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -134,6 +138,34 @@ const renderRoutes = () => (
         )}
       />
 
+      {/* Privacy, refund policies, and terms and conditions routes */}
+      <Route
+        path={`/privacy`}
+        exact
+        render={props => (
+          <DocsLayout>
+            <PrivacyView />
+          </DocsLayout>
+        )}
+      />
+      <Route
+        path={`/terms`}
+        exact
+        render={props => (
+          <DocsLayout>
+            <TermsView />
+          </DocsLayout>
+        )}
+      />
+      <Route
+        path={`/refundpolicies`}
+        exact
+        render={props => (
+          <DocsLayout>
+            <RefundView />
+          </DocsLayout>
+        )}
+      />
       <Route component={Error404View} />
     </Switch>
   </Suspense>
