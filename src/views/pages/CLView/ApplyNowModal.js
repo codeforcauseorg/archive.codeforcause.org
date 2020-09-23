@@ -7,7 +7,8 @@ import {
   DialogTitle,
   Button,
   Typography,
-  MenuItem
+  MenuItem,
+  Grid
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -46,6 +47,8 @@ export default function ApplyNowModal() {
 
   const handleClickOpen = () => {
     setOpen(true);
+    formData.countryCode = '+91';
+    formData.phone = '';
   };
 
   const handleClose = () => {
@@ -60,6 +63,7 @@ export default function ApplyNowModal() {
   };
 
   const handleSubmit = e => {
+    formData.phone = `${formData.countryCode}-${formData.phone}`;
     setSubmitting(1);
     e.preventDefault();
     axios({
@@ -77,6 +81,11 @@ export default function ApplyNowModal() {
         enqueueSnackbar('Application Failed. Try again later');
       });
   };
+
+  const countryCodes = Array(100)
+    .fill(1)
+    .map((x, y) => x + y)
+    .reverse();
 
   return (
     <div>
@@ -128,18 +137,40 @@ export default function ApplyNowModal() {
               errorMessages={['This is a required field', 'Please enter a valid email']}
             />
 
-            <TextValidator
-              key="contact"
-              className={classes.textField}
-              label="WhatsApp / Contact Number "
-              variant="outlined"
-              value={formData.phone}
-              fullWidth
-              name="phone"
-              onChange={handleChange}
-              validators={['required', 'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$']}
-              errorMessages={['This is a required field', 'Please enter a valid contact number']}
-            />
+            <Grid container spacing={2} justify="space-evenly">
+              <Grid item xs={2}>
+                <SelectValidator
+                  key="countryCode"
+                  className={classes.textField}
+                  value={formData.countryCode}
+                  onChange={handleChange}
+                  name="countryCode"
+                  variant="outlined"
+                  validators={['required']}
+                  errorMessages={['Please select a country code']}
+                  fullWidth
+                >
+                  {countryCodes.map((code) => {
+                    return <MenuItem value={`+${code}`}>+{code}</MenuItem>;
+                  })}
+                </SelectValidator>
+              </Grid>
+
+              <Grid item xs={10}>
+                <TextValidator
+                  key="contact"
+                  className={classes.textField}
+                  label="WhatsApp / Contact Number "
+                  variant="outlined"
+                  value={formData.phone}
+                  fullWidth
+                  name="phone"
+                  onChange={handleChange}
+                  validators={['required', 'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$']}
+                  errorMessages={['This is a required field', 'Please enter a valid contact number']}
+                />
+              </Grid>
+            </Grid>
 
             <TextValidator
               key="linkedIn"
