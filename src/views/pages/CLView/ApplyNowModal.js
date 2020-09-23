@@ -12,7 +12,11 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { ValidatorForm, TextValidator, SelectValidator } from 'react-material-ui-form-validator';
+import {
+  ValidatorForm,
+  TextValidator,
+  SelectValidator
+} from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
 
@@ -134,7 +138,10 @@ export default function ApplyNowModal() {
               name="email"
               onChange={handleChange}
               validators={['required', 'isEmail']}
-              errorMessages={['This is a required field', 'Please enter a valid email']}
+              errorMessages={[
+                'This is a required field',
+                'Please enter a valid email'
+              ]}
             />
 
             <Grid container spacing={2} justify="space-evenly">
@@ -150,7 +157,7 @@ export default function ApplyNowModal() {
                   errorMessages={['Please select a country code']}
                   fullWidth
                 >
-                  {countryCodes.map((code) => {
+                  {countryCodes.map(code => {
                     return <MenuItem value={`+${code}`}>+{code}</MenuItem>;
                   })}
                 </SelectValidator>
@@ -166,8 +173,14 @@ export default function ApplyNowModal() {
                   fullWidth
                   name="phone"
                   onChange={handleChange}
-                  validators={['required', 'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$']}
-                  errorMessages={['This is a required field', 'Please enter a valid contact number']}
+                  validators={[
+                    'required',
+                    'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$'
+                  ]}
+                  errorMessages={[
+                    'This is a required field',
+                    'Please enter a valid contact number'
+                  ]}
                 />
               </Grid>
             </Grid>
@@ -181,8 +194,14 @@ export default function ApplyNowModal() {
               fullWidth
               name="linkedIn"
               onChange={handleChange}
-              validators={['required', 'matchRegexp:^(http(s)?://)?([w]+.)?linkedin.com/(pub|in|profile)']}
-              errorMessages={['This is a required field', 'Please enter a valid URL']}
+              validators={[
+                'required',
+                'matchRegexp:^(http(s)?://)?([w]+.)?linkedin.com/(pub|in|profile)'
+              ]}
+              errorMessages={[
+                'This is a required field',
+                'Please enter a valid URL'
+              ]}
             />
 
             <TextValidator
