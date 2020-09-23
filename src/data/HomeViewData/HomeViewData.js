@@ -23,8 +23,7 @@ export const events = [
     type: 'Webinar',
     description: 'Empowering the Hacker Community - QnA with Mike Swift',
     date_time: 'Sept 7, 5:30pm IST'
-  },
-
+  }
 ];
 
 // mentors data----------------

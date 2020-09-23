@@ -10,7 +10,6 @@ import {
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-
 export default function Topics({ course }) {
   return (
     <Grid container>

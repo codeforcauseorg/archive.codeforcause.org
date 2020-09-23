@@ -97,10 +97,7 @@ function Hero({ className, ...rest }) {
               <Hidden mdUp>
                 <Box mt={6} mb={2}>
                   <div className={classes.image}>
-                    <img
-                      alt="codeforcauseimg"
-                      src="/static/events/hero.png"
-                    />
+                    <img alt="codeforcauseimg" src="/static/events/hero.png" />
                   </div>
                 </Box>
               </Hidden>
@@ -140,16 +137,13 @@ function Hero({ className, ...rest }) {
                   </Grid>
                 </Grid>
               </Box>
-             </Box>
+            </Box>
           </Grid>
           <Hidden smDown>
             <Grid item xs={12} md={6}>
               <Box>
                 <div className={classes.image}>
-                  <img
-                    alt="codeforcauseimg"
-                    src="/static/events/hero.png"
-                  />
+                  <img alt="codeforcauseimg" src="/static/events/hero.png" />
                 </div>
               </Box>
             </Grid>

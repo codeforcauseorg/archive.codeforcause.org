@@ -9,24 +9,24 @@ export const machineLearning = {
   mentors: ['anuj', 'kunal'],
   schedule: [
     {
-      courseId: "mlpy1020",
-      dates: "20th Oct - 20th Dec",
-      days: "Sat, Sun, Wed, Thur",
-      timing: "08:30 PM - 10:30 PM (IST)",
-      link: "",
-      priceCut: "₹ 22,000",
-      price: "₹ 6,850",
-      active: true,
+      courseId: 'mlpy1020',
+      dates: '20th Oct - 20th Dec',
+      days: 'Sat, Sun, Wed, Thur',
+      timing: '08:30 PM - 10:30 PM (IST)',
+      link: '',
+      priceCut: '₹ 22,000',
+      price: '₹ 6,850',
+      active: true
     },
     {
-      courseId: "mlpy0121",
-      dates: "10th Jan - 10th Apr",
-      days: "Sat, Sun, Wed",
-      timing: "06:00 PM - 08:00 PM (IST)",
-      link: "",
-      priceCut: "₹ 15,000",
-      price: "₹ 8,850",
-      active: false,
+      courseId: 'mlpy0121',
+      dates: '10th Jan - 10th Apr',
+      days: 'Sat, Sun, Wed',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 15,000',
+      price: '₹ 8,850',
+      active: false
     }
   ],
   projects: [
@@ -158,30 +158,27 @@ export const machineLearning = {
     'GAN',
     'Simmulators',
     'Reinforcement Learning',
-    'Genetic Algorithm',
-    
-
+    'Genetic Algorithm'
   ],
   overview: [
-    "Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.",
-    "We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning. Understanding what can be done and how to proceed with understanding what is important and start exploring it the right way. We will guide you to build your career in machine learning."
+    'Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.',
+    'We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning. Understanding what can be done and how to proceed with understanding what is important and start exploring it the right way. We will guide you to build your career in machine learning.'
   ],
   faqs: [
     {
-      title:
-        'Will this help me with my career path?',
+      title: 'Will this help me with my career path?',
       answer:
         'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
-    }, {
-      title:
-        'How your doubts will get resolved?',
+    },
+    {
+      title: 'How your doubts will get resolved?',
       answer:
         'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
-    }, {
-      title:
-        'Is this course suitable for me?',
+    },
+    {
+      title: 'Is this course suitable for me?',
       answer:
         'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    },
+    }
   ]
 };

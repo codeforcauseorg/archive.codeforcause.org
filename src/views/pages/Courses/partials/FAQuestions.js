@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Grid,
-  Typography,
-  Box,
-  Collapse,
-  IconButton
-} from '@material-ui/core';
+import { Grid, Typography, Box, Collapse, IconButton } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -43,12 +37,7 @@ export function FAQuestions({ course }) {
   );
 }
 
-function QuestionDropBox({
-  question,
-  questionIndex,
-  expanded,
-  setExpanded
-}) {
+function QuestionDropBox({ question, questionIndex, expanded, setExpanded }) {
   return (
     <Box
       style={{
@@ -63,11 +52,7 @@ function QuestionDropBox({
         setExpanded(questionIndex);
       }}
     >
-      <Box
-        display="flex"
-        flexDirection="row"
-        alignItems="center"
-      >
+      <Box display="flex" flexDirection="row" alignItems="center">
         <Typography
           align="left"
           variant="body1"
@@ -79,11 +64,11 @@ function QuestionDropBox({
         </Typography>
 
         <IconButton>
-          {expanded===questionIndex ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          {expanded === questionIndex ? <ExpandLessIcon /> : <ExpandMoreIcon />}
         </IconButton>
       </Box>
 
-      <Collapse in={expanded===questionIndex}>
+      <Collapse in={expanded === questionIndex}>
         <Box
           style={{
             display: 'flex',

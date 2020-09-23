@@ -118,19 +118,20 @@ export default function CourseRecommendations() {
         </Typography>
       </Grid>
 
-      <Grid container
-          align="center"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
-          {Object.entries(foundation).map(([cname, course], index) => {
-            return (
-              <Grid id={course.id} item xs={12} sm={6} md={4} lg={4}>
-                <CourseCard course={course} />
-              </Grid>
-            );
-          })}
+      <Grid
+        container
+        align="center"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        {Object.entries(foundation).map(([cname, course], index) => {
+          return (
+            <Grid id={course.id} item xs={12} sm={6} md={4} lg={4}>
+              <CourseCard course={course} />
+            </Grid>
+          );
+        })}
       </Grid>
     </Grid>
   );

@@ -10,11 +10,14 @@ import Team from './AboutUs/OurTeam/Team';
 import Promoters from './Promoters';
 import MentorExperience from './MentorExperience';
 import WatchOurVideoView from './WatchVideos';
-import { experience, /*students,*/ mentors } from '../../../data/HomeViewData/HomeViewData';
+import {
+  experience,
+  /*students,*/ mentors
+} from '../../../data/HomeViewData/HomeViewData';
 
 import Courses from './Courses';
 
-import Recommendations from '../common/Recommendations'
+import Recommendations from '../common/Recommendations';
 
 const useStyles = makeStyles(() => ({
   root: {}

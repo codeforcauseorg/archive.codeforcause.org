@@ -132,8 +132,6 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
-
-      
     </Switch>
   </Suspense>
 );

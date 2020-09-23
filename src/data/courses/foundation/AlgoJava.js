@@ -9,8 +9,8 @@ export const algoJava = {
   mentors: ['anuj', 'ekta'],
   schedule: [
     {
-      courseId: "jds1020",
-      dates: "17th Oct - 16th Dec",
+      courseId: 'jds1020',
+      dates: '17th Oct - 16th Dec',
       days: 'Sat, Sun, Tue, Thur',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
@@ -19,7 +19,7 @@ export const algoJava = {
       active: true
     },
     {
-      courseId: "jds0121",
+      courseId: 'jds0121',
       dates: '10th Jan - 10th Apr',
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
@@ -226,7 +226,7 @@ export const algoJava = {
       heading: '',
       subheading: '',
       image: '/static/swipes/java.png'
-    },
+    }
   ],
   tags: [
     'Problem Solving',
@@ -249,20 +249,19 @@ export const algoJava = {
   ],
   faqs: [
     {
-      title:
-        'Will this help me with my career path?',
+      title: 'Will this help me with my career path?',
       answer:
         'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
-    }, {
-      title:
-        'How your doubts will get resolved?',
+    },
+    {
+      title: 'How your doubts will get resolved?',
       answer:
         'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
-    }, {
-      title:
-        'Is this course suitable for me?',
+    },
+    {
+      title: 'Is this course suitable for me?',
       answer:
         'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    },
+    }
   ]
 };

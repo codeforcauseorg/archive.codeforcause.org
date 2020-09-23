@@ -2,10 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
-import {
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
 import coursesContent from 'src/data/courses';
 import CourseCard from '../common/CourseCard';
@@ -137,11 +134,17 @@ export default function Courses() {
           <CoursesGrid courses={foundation} />
         </Grid>
       </Grid>
-    
-    
-      <Grid item lg={12} md={12} sm={12} xs={12} style={{
-        marginTop: "48px"
-      }}>
+
+      <Grid
+        item
+        lg={12}
+        md={12}
+        sm={12}
+        xs={12}
+        style={{
+          marginTop: '48px'
+        }}
+      >
         <Typography
           variant="h1"
           align="center"
@@ -169,8 +172,6 @@ export default function Courses() {
           <CoursesGrid courses={advanced} />
         </Grid>
       </Grid>
-    
-    
     </Grid>
   );
 }
@@ -206,8 +207,6 @@ const CoursesGrid = ({ courses }) => {
     </Grid>
   );
 };
-
-
 
 function TabPanel(props) {
   const { children, value, index } = props;

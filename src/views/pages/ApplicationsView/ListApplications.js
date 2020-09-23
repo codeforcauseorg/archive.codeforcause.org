@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import {
-  TextField,
-} from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -20,8 +18,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '16px'
   },
   submissions: {
-    width: "80px",
-    height: "50px"
+    width: '80px',
+    height: '50px'
   }
 }));
 
@@ -38,85 +36,84 @@ export function ListApplications() {
 
   return (
     <div>
-          <form noValidate autoComplete="off">
-            <TextField
-              key="name"
-              className={classes.textField}
-              label="Full Name"
-              variant="outlined"
-              value={formData.name}
-              fullWidth
-              name="name"
-              onChange={handleChange}
-            />
+      <form noValidate autoComplete="off">
+        <TextField
+          key="name"
+          className={classes.textField}
+          label="Full Name"
+          variant="outlined"
+          value={formData.name}
+          fullWidth
+          name="name"
+          onChange={handleChange}
+        />
 
-            <TextField
-              key="email"
-              className={classes.textField}
-              label="Email"
-              variant="outlined"
-              value={formData.email}
-              fullWidth
-              name="email"
-              onChange={handleChange}
-            />
+        <TextField
+          key="email"
+          className={classes.textField}
+          label="Email"
+          variant="outlined"
+          value={formData.email}
+          fullWidth
+          name="email"
+          onChange={handleChange}
+        />
 
-            <TextField
-              key="contact"
-              className={classes.textField}
-              label="WhatsApp / Contact Number "
-              variant="outlined"
-              value={formData.phone}
-              fullWidth
-              name="phone"
-              onChange={handleChange}
-            />
+        <TextField
+          key="contact"
+          className={classes.textField}
+          label="WhatsApp / Contact Number "
+          variant="outlined"
+          value={formData.phone}
+          fullWidth
+          name="phone"
+          onChange={handleChange}
+        />
 
-            <TextField
-              key="linkedIn"
-              className={classes.textField}
-              label="LinkedIn URL"
-              variant="outlined"
-              value={formData.linkedIn}
-              fullWidth
-              name="linkedIn"
-              onChange={handleChange}
-            />
+        <TextField
+          key="linkedIn"
+          className={classes.textField}
+          label="LinkedIn URL"
+          variant="outlined"
+          value={formData.linkedIn}
+          fullWidth
+          name="linkedIn"
+          onChange={handleChange}
+        />
 
-            <TextField
-              key="course"
-              className={classes.textField}
-              label="Course & Branch"
-              variant="outlined"
-              value={formData.course}
-              fullWidth
-              name="course"
-              onChange={handleChange}
-            />
+        <TextField
+          key="course"
+          className={classes.textField}
+          label="Course & Branch"
+          variant="outlined"
+          value={formData.course}
+          fullWidth
+          name="course"
+          onChange={handleChange}
+        />
 
-            <TextField
-              key="year"
-              className={classes.textField}
-              label="year"
-              variant="outlined"
-              value={formData.year}
-              fullWidth
-              name="year"
-              onChange={handleChange}
-            />
+        <TextField
+          key="year"
+          className={classes.textField}
+          label="year"
+          variant="outlined"
+          value={formData.year}
+          fullWidth
+          name="year"
+          onChange={handleChange}
+        />
 
-            <TextField
-              key="college"
-              className={classes.textField}
-              label="College Name"
-              variant="outlined"
-              value={formData.college}
-              fullWidth
-              name="college"
-              onChange={handleChange}
-            />
-          </form>
-
+        <TextField
+          key="college"
+          className={classes.textField}
+          label="College Name"
+          variant="outlined"
+          value={formData.college}
+          fullWidth
+          name="college"
+          onChange={handleChange}
+        />
+      </form>
     </div>
   );
 }

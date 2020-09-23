@@ -3,9 +3,12 @@ import { Grid, Typography, Box } from '@material-ui/core';
 
 export default function Overview({ course }) {
   return (
-    <Grid container style={{
-      marginBottom: '42px'
-    }}>
+    <Grid
+      container
+      style={{
+        marginBottom: '42px'
+      }}
+    >
       <Grid
         item
         xs={12}
@@ -28,19 +31,19 @@ export default function Overview({ course }) {
             Course Overview
           </Typography>
 
-          {course.overview.map((paragraph, index) =>{
-            return (<Typography
-              variant="body1"
-              align="left"
-              style={{
-                marginBottom: '16px',
-                color:'#606060'
-              }}
-            >
-              <Box fontWeight={400}>
-                {paragraph}
-              </Box>
-            </Typography>);
+          {course.overview.map((paragraph, index) => {
+            return (
+              <Typography
+                variant="body1"
+                align="left"
+                style={{
+                  marginBottom: '16px',
+                  color: '#606060'
+                }}
+              >
+                <Box fontWeight={400}>{paragraph}</Box>
+              </Typography>
+            );
           })}
         </Box>
       </Grid>

@@ -177,7 +177,10 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
       )}
       {activeStep === steps.length + 1 && (
         <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>Application have been submitted successfully. We will email/call you for further process.</Typography>
+          <Typography>
+            Application have been submitted successfully. We will email/call you
+            for further process.
+          </Typography>
         </Paper>
       )}
     </div>
