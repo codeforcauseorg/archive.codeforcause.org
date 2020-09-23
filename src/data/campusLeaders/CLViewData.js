@@ -25,7 +25,8 @@ export const benefits = [
 export const values = [
   {
     id: '1',
-    detail: 'He/she shall be entusiastic about going social and build & contribute for the community'
+    detail:
+      'He/she shall be entusiastic about going social and build & contribute for the community'
   },
   {
     id: '2',
@@ -34,7 +35,8 @@ export const values = [
   },
   {
     id: '3',
-    detail: 'He/she should be connecting to the resources available in community that might help in building a better & more helpful community'
+    detail:
+      'He/she should be connecting to the resources available in community that might help in building a better & more helpful community'
   },
   {
     id: '4',

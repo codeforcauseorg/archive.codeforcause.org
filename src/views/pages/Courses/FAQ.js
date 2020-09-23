@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
-import {FAQuestions} from './partials/FAQuestions'
+import { FAQuestions } from './partials/FAQuestions';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,11 +20,7 @@ function FAQ({ course, className, ...rest }) {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Typography
-          variant="h2"
-          align="center"
-          gutterBottom
-        >
+        <Typography variant="h2" align="center" gutterBottom>
           Frequently Asked Questions
         </Typography>
         <Grid container component="dl" style={{ padding: '20px 0px 20px' }}>

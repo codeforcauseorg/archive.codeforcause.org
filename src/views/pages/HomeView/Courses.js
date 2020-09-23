@@ -15,7 +15,7 @@ import { insideTriangleTabsStylesHook } from '@mui-treasury/styles/tabs';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import coursesContent from 'src/data/courses';
-import CourseCard from '../common/CourseCard'
+import CourseCard from '../common/CourseCard';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -153,7 +153,9 @@ export default function Courses() {
             color: '#848484'
           }}
         >
-          Our courses are designed to fulfill the need of both students and professional developers. Learn from the ground and become an expert with a purely practical approach to learning.
+          Our courses are designed to fulfill the need of both students and
+          professional developers. Learn from the ground and become an expert
+          with a purely practical approach to learning.
         </Typography>
       </Grid>
       <Grid container>
@@ -271,8 +273,6 @@ export default function Courses() {
     </Grid>
   );
 }
-
-
 
 function TabPanel(props) {
   const { children, value, index } = props;

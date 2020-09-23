@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Grid, makeStyles, Container } from '@material-ui/core';
 import MainCard from 'src/components/AboutCard/MainCard';
-import { openKnowledgeContent, openSourceContent } from '../../../../../data/HomeViewData/HomeViewData';
+import {
+  openKnowledgeContent,
+  openSourceContent
+} from '../../../../../data/HomeViewData/HomeViewData';
 
 const useStyles = makeStyles(theme => ({
   root: {

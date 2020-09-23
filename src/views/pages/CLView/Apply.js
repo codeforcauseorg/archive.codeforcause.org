@@ -2,15 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import {
-  Box,
-  Grid,
-  Typography,
-  makeStyles,
-  Hidden
-} from '@material-ui/core';
+import { Box, Grid, Typography, makeStyles, Hidden } from '@material-ui/core';
 import ApplyNowModal from './ApplyNowModal';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,7 +45,15 @@ function Apply({ className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} style={{ backgroundImage: 'url("/static/campusLeaders/apply.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} {...rest}>
+    <div
+      className={clsx(classes.root, className)}
+      style={{
+        backgroundImage: 'url("/static/campusLeaders/apply.png")',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }}
+      {...rest}
+    >
       <Grid container maxWidth="lg">
         <Grid item lg={9} md={12} sm={12} xs={12} className={classes.applyleft}>
           <div className={classes.main}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
-import {UserEdit} from './UserEdit';
+import { UserEdit } from './UserEdit';
 
 const useStyles = makeStyles(() => ({
   root: {}
