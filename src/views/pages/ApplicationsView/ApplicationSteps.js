@@ -430,6 +430,7 @@ function FormChallenge({
 }) {
   const classes = useStyles();
   const [formData, updateFormData] = useState(data.challenge);
+  const MIN_CHAR = 150;
 
   const handleChange = event => {
     updateFormData({
@@ -461,10 +462,11 @@ function FormChallenge({
     setActiveStep(3);
   };
 
+  const countChar = string => string.replace(/\s/g, '').length;
+
   useEffect(() => {
     ValidatorForm.addValidationRule('isNotShort', value => {
-      console.log(value);
-      if (value.length < 100) {
+      if (countChar(value) < MIN_CHAR) {
         return false;
       }
       return true;
@@ -486,7 +488,18 @@ function FormChallenge({
         validators={['required', 'isNotShort']}
         errorMessages={[
           'This is a required field',
-          'Text too short. Put in atleast 150 chars.'
+          `Text too short.
+            ${
+              formData.q1 && formData.q1.length
+                ? 'Put in ' +
+                  (MIN_CHAR - countChar(formData.q1)) +
+                  `${
+                    countChar(formData.q1) < MIN_CHAR - 1
+                      ? ' characters more'
+                      : ' character more'
+                  }`
+                : `Put in ${MIN_CHAR} characters more`
+            }`
         ]}
       />
 
@@ -503,7 +516,18 @@ function FormChallenge({
         validators={['required', 'isNotShort']}
         errorMessages={[
           'This is a required field',
-          'Text too short. Put in atleast 150 chars.'
+          `Text too short.
+            ${
+              formData.q2 && formData.q2.length
+                ? 'Put in ' +
+                  (MIN_CHAR - countChar(formData.q2)) +
+                  `${
+                    countChar(formData.q2) < MIN_CHAR - 1
+                      ? ' characters more'
+                      : ' character more'
+                  }`
+                : `Put in ${MIN_CHAR} characters more`
+            }`
         ]}
       />
 
@@ -520,7 +544,18 @@ function FormChallenge({
         validators={['required', 'isNotShort']}
         errorMessages={[
           'This is a required field',
-          'Text too short. Put in atleast 150 chars.'
+          `Text too short.
+            ${
+              formData.q3 && formData.q3.length
+                ? 'Put in ' +
+                  (MIN_CHAR - countChar(formData.q3)) +
+                  `${
+                    countChar(formData.q3) < MIN_CHAR - 1
+                      ? ' characters more'
+                      : ' character more'
+                  }`
+                : `Put in ${MIN_CHAR} characters more`
+            }`
         ]}
       />
 
