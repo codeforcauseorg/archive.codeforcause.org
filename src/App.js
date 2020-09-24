@@ -41,15 +41,17 @@ const useStyles = makeStyles(() =>
       html: {
         '-webkit-font-smoothing': 'antialiased',
         '-moz-osx-font-smoothing': 'grayscale',
-        height: '100%',
-        width: '100%'
+        height: '100vh',
+        width: '100%',
+        overflow: 'hidden'
       },
       body: {
-        height: '100%',
-        width: '100%'
+        height: '100vh',
+        width: '100%',
+        overflow: 'hidden'
       },
       '#root': {
-        height: '100%',
+        height: '100vh',
         width: '100%'
       }
     }
