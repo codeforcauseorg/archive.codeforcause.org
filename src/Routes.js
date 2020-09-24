@@ -9,7 +9,7 @@ import LoadingScreen from 'src/components/LoadingScreen';
 import CoursesView from 'src/views/pages/CoursesView';
 import ProfileView from 'src/views/pages/ProfileView';
 import ApplicationsView from 'src/views/pages/ApplicationsView';
-import Error404View from 'src/views/pages/Error404View'
+import Error404View from 'src/views/pages/Error404View';
 
 import MachineLearningView from 'src/views/pages/Courses/MachineLearningView';
 import AlgoJavaView from 'src/views/pages/Courses/AlgoJavaView';
@@ -135,7 +135,6 @@ const renderRoutes = () => (
       />
 
       <Route component={Error404View} />
-
     </Switch>
   </Suspense>
 );
