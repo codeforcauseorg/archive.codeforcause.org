@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
     paddingLeft: 70,
     paddingRight: 70,
+    top: 'auto',
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15

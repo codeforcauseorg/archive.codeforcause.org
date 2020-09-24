@@ -42,11 +42,12 @@ const useStyles = makeStyles(() =>
         '-webkit-font-smoothing': 'antialiased',
         '-moz-osx-font-smoothing': 'grayscale',
         height: '100%',
-        width: '100%'
+        width: '100%',
       },
       body: {
         height: '100%',
-        width: '100%'
+        width: '100%',
+        overflow: 'hidden'
       },
       '#root': {
         height: '100%',
