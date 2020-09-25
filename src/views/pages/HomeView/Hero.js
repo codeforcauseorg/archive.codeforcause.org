@@ -21,15 +21,18 @@ function Hero({ className, ...rest }) {
   return (
     <div className={className} {...rest}>
       <HeroWithLogo
+        style={{height: "420px"}}
         title="Learn for Cause"
         title2="Code for Cause"
         imageUrl="/static/home/codeforcause.svg"
         firstComponent={
-          <Typography variant="body1">
+          <><Typography variant="body1">
             An initiative to help the community by providing training, guidance
             and awareness about the possibilities in the software field to
             students & professionals.
           </Typography>
+            <div style={{height:"16px"}}></div>
+          </>
         }
         secondComponent={
           <ButtonComponent
