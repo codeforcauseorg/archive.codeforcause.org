@@ -1,24 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Hidden,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 import HeroWithLogo from '../../../components/Hero/HeroWithLogo';
 import ButtonComponent from '../../../components/Button/ButtonComponent';
 
 import { login } from 'src/actions/accountActions';
 import { useDispatch, useSelector } from 'react-redux';
-
-const background = 'linear-gradient(270.72deg, #180255 0.25%, #000000 97.54%)';
 
 function Hero({ className, ...rest }) {
   const user = useSelector(state => state.account.user);
