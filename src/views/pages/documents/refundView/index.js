@@ -3,7 +3,7 @@ import Page from 'src/components/Page';
 
 const Content = lazy(() => import('!babel-loader!mdx-loader!./Content.mdx'));
 
-function privacyView() {
+function RefundView() {
   return (
     <Page title="Privacy Policy">
       <Suspense fallback={null}>
@@ -13,4 +13,4 @@ function privacyView() {
   );
 }
 
-export default privacyView;
+export default RefundView;
