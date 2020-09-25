@@ -136,7 +136,7 @@ function CTA({ className, ...rest }) {
               </Hidden>
 
               <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
+                <Grid item container xs={12} sm={12}>
                   <Grid item xs={12} sm={12}>
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
@@ -198,7 +198,7 @@ function CTA({ className, ...rest }) {
               </Hidden>
 
               <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
+                <Grid item container xs={12} sm={12}>
                   <Grid item xs={12} sm={12}>
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
@@ -260,7 +260,7 @@ function CTA({ className, ...rest }) {
               </Hidden>
 
               <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
+                <Grid item container xs={12} sm={12}>
                   <Grid item xs={12} sm={12}>
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
@@ -269,7 +269,7 @@ function CTA({ className, ...rest }) {
                       target="_blank"
                       size="large"
                       variant="outlined"
-                      disabled="true"
+                      disabled={true}
                     >
                       Apply Now
                     </Button>

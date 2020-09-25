@@ -213,12 +213,7 @@ function Footer({ className, ...rest }) {
             {'. All rights reserved.'}
           </Typography>
 
-          <Typography
-            display="block"
-            guitterBottom
-            variant="body2"
-            color="textSecondary"
-          >
+          <Typography display="block" variant="body2" color="textSecondary">
             <Link color="inherit" component={RouterLink} to="/privacy">
               Privacy Policy
             </Link>

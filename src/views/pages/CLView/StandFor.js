@@ -116,28 +116,31 @@ function StandsFor({ className, ...rest }) {
               <Box mt={2}>
                 <Typography variant="body1">
                   He/she shall be entusiastic about going social and build &amp;
-                  contribute for the community<h4>- An Initiative taker</h4>
+                  contribute for the community
                 </Typography>
+                <Typography variant="h4">- An Initiative taker</Typography>
               </Box>
               <Box mt={2}>
                 <Typography variant="body1">
                   A Leader shall always have a way of talking people out from
                   problems and leading them to do that for others too{' '}
-                  <h4> - A Community Builder</h4>
                 </Typography>
+                <Typography variant="h4"> - A Community Builder</Typography>
               </Box>
               <Box mt={2}>
                 <Typography variant="body1">
                   He/she should be connecting to the resources available in
                   community that might help in building a better &amp; more
-                  helpful community <h4>- A Resource Seeker</h4>
+                  helpful community
                 </Typography>
+                <Typography variant="h4">- A Resource Seeker</Typography>
               </Box>
               <Box mt={2}>
                 <Typography variant="body1">
                   Most sought after value - an effort maker and giving
-                  peronality <h4>- An Investor</h4>
+                  peronality
                 </Typography>
+                <Typography variant="h4">- An Investor</Typography>
               </Box>
             </Box>
           </Grid>

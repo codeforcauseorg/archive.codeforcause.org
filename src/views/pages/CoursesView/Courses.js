@@ -119,7 +119,7 @@ export default function Courses() {
         </Typography>
       </Grid>
 
-      <Grid container>
+      <Grid container alignItems="center">
         <Grid
           item
           lg={12}
@@ -128,8 +128,6 @@ export default function Courses() {
           xs={12}
           align="center"
           display="flex"
-          justifyContent="center"
-          alignItems="center"
         >
           <CoursesGrid courses={foundation} />
         </Grid>
@@ -157,7 +155,7 @@ export default function Courses() {
         </Typography>
       </Grid>
 
-      <Grid container>
+      <Grid container alignItems="center">
         <Grid
           item
           lg={12}
@@ -166,8 +164,6 @@ export default function Courses() {
           xs={12}
           align="center"
           display="flex"
-          justifyContent="center"
-          alignItems="center"
         >
           <CoursesGrid courses={advanced} />
         </Grid>
@@ -191,7 +187,7 @@ const CoursesGrid = ({ courses }) => {
         return (
           <Grid
             item
-            key={course.id}
+            key={cname}
             lg={4}
             md={4}
             sm={6}

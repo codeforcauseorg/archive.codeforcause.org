@@ -157,8 +157,12 @@ export default function ApplyNowModal() {
                   errorMessages={['Please select a country code']}
                   fullWidth
                 >
-                  {countryCodes.map(code => {
-                    return <MenuItem value={`+${code}`}>+{code}</MenuItem>;
+                  {countryCodes.map((code, index) => {
+                    return (
+                      <MenuItem key={index} value={`+${code}`}>
+                        +{code}
+                      </MenuItem>
+                    );
                   })}
                 </SelectValidator>
               </Grid>

@@ -177,6 +177,7 @@ export default function CourseCard({ course }) {
             <Box mt={2} display="flex" flexDirection="row">
               {course.tags.slice(0, 3).map((tag, index) => (
                 <div
+                  key={index}
                   style={{
                     margin: '4px 8px 4px 0px',
                     padding: '4px 8px',
@@ -197,7 +198,6 @@ export default function CourseCard({ course }) {
 
         <Link
           display="flex"
-          justifyContent="center"
           to={course.link}
           style={{
             background: '#A60000',
@@ -206,16 +206,16 @@ export default function CourseCard({ course }) {
             marginBottom: '16px'
           }}
         >
-          <Typography
-            align="center"
-            style={{
-              color: '#FFFFFF'
-            }}
-          >
-            <Box m={1} fontWeight={600}>
+          <Box m={1} fontWeight={600}>
+            <Typography
+              align="center"
+              style={{
+                color: '#FFFFFF'
+              }}
+            >
               Check Details
-            </Box>
-          </Typography>
+            </Typography>
+          </Box>
         </Link>
       </Card>
     </Box>
@@ -227,6 +227,7 @@ const ParallaxCarousel = ({ slides }) => {
     slides.map((slide, index) => {
       return (
         <Box
+          key={index}
           display="flex"
           flexDirection="column"
           alignItems="bottom"

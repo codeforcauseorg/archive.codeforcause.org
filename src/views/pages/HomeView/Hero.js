@@ -105,7 +105,7 @@ function Hero({ className, ...rest }) {
                 </Typography>
               </Box>
               <Box mt={4}>
-                <Grid container xs={12} md={12}>
+                <Grid item container xs={12} md={12}>
                   <Grid item xs={12} md={12}>
                     <Button
                       className={classes.btn}

@@ -158,7 +158,7 @@ export default function Courses() {
           with a purely practical approach to learning.
         </Typography>
       </Grid>
-      <Grid container>
+      <Grid container alignItems="center">
         <Grid
           item
           lg={12}
@@ -167,8 +167,6 @@ export default function Courses() {
           xs={12}
           align="center"
           display="flex"
-          justifyContent="center"
-          alignItems="center"
         >
           <Tabs
             value={value}
@@ -189,9 +187,7 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Foundation</Box>
                   </Typography>
-                  <Typography variant="body2">
-                    <Box>(Reg. Open)</Box>
-                  </Typography>
+                  <Typography variant="body2">(Reg. Open)</Typography>
                 </Fragment>
               }
               disableRipple={true}
@@ -203,9 +199,7 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Advanced</Box>
                   </Typography>
-                  <Typography variant="body2">
-                    <Box>(Reg. Open)</Box>
-                  </Typography>
+                  <Typography variant="body2">(Reg. Open)</Typography>
                 </Fragment>
               }
               disableRipple={true}
@@ -218,9 +212,7 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Complete</Box>
                   </Typography>
-                  <Typography variant="body2">
-                    <Box>(Launching Soon)</Box>
-                  </Typography>
+                  <Typography variant="body2">(Launching Soon)</Typography>
                 </Fragment>
               }
               disabled
@@ -232,13 +224,12 @@ export default function Courses() {
             <GridList
               className={classes.gridList}
               display="flex"
-              alignItems="center"
               cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
             >
               {Object.entries(foundation).map(([cname, course], index) => {
                 return (
                   <GridListTile
-                    key={course.id}
+                    key={cname}
                     style={{
                       height: '530px'
                     }}
@@ -257,7 +248,7 @@ export default function Courses() {
               {Object.entries(advanced).map(([cname, course], index) => {
                 return (
                   <GridListTile
-                    key={course.id}
+                    key={cname}
                     style={{
                       height: '530px'
                     }}

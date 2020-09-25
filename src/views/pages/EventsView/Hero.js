@@ -113,7 +113,7 @@ function Hero({ className, ...rest }) {
                 )}
               </Box>
               <Box mt={2} mb={3}>
-                <Grid container xs={12} md={12}>
+                <Grid item container xs={12} md={12}>
                   <Grid item xs={12} md={12}>
                     {!!user ? (
                       <Typography

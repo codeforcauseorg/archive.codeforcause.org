@@ -192,7 +192,7 @@ function EventCards({ events, upcoming }) {
                   {event.domain}
                 </Typography>
                 <Typography
-                  variant="span"
+                  variant="caption"
                   display="inline"
                   style={{
                     background: '#1D006E',

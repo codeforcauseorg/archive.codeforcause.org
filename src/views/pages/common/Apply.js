@@ -73,7 +73,7 @@ function Apply({ className, ...rest }) {
       }}
       {...rest}
     >
-      <Grid container maxWidth="lg">
+      <Grid container>
         <Grid
           item
           lg={12}
