@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Projects({ projects, flat }) {
+function Projects({ title, projects, flat }) {
   const classes = useStyles();
 
   return (
@@ -39,7 +39,7 @@ function Projects({ projects, flat }) {
               margin: '12px 0px 12px 8px'
             }}
           >
-            Projects you'll make in this course
+            {title}
           </Typography>
           {projects.map((project, index) => {
             return <Project project={project} />;

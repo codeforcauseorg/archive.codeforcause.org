@@ -16,6 +16,7 @@ import Error404View from 'src/views/pages/Error404View';
 import StudentDashboardView from 'src/views/pages/StudentDashboardView';
 import EditProfileView from 'src/views/pages/StudentDashboardView/EditProfile';
 import CoursePage from 'src/views/pages/Course/CoursePage';
+import WorkshopView from 'src/views/pages/WorkshopView';
 import TermsView from './views/pages/documents/termsView';
 import DocsLayout from './layouts/DocsLayout';
 import PrivacyView from './views/pages/documents/privacyView';
@@ -153,6 +154,16 @@ const renderRoutes = () => (
               <Blog {...props} />
             </MainLayout>
           </>
+        )}
+      />
+
+      <Route
+        path="/workshops"
+        exact
+        render={props => (
+          <MainLayout>
+            <WorkshopView {...props} />
+          </MainLayout>
         )}
       />
 

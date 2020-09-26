@@ -4,7 +4,7 @@ import { Grid, Box, Hidden } from '@material-ui/core';
 import Details from './partials/Details';
 import Overview from './partials/Overview';
 import Topics from './partials/Topics';
-import Projects from './partials/Projects';
+import Projects from '../../../components/SidePanel/Projects';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -106,7 +106,10 @@ export default function Major({ course }) {
 
         <Hidden smDown>
           <Box display="flex" flexDirection="column" mb={3} ml={2}>
-            <Projects projects={course.projects} />
+            <Projects
+              title="Learn To Make From This Course"
+              projects={course.projects}
+            />
           </Box>
         </Hidden>
       </Box>

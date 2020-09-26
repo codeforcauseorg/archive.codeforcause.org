@@ -145,6 +145,7 @@ function CTA({ className, ...rest }) {
                       target="_blank"
                       size="large"
                       variant="outlined"
+                      focusRipple={false}
                     >
                       Submit Request
                     </Button>
@@ -203,10 +204,11 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
                       component="a"
-                      href="https://codecau.se/ws"
+                      href="/workshops"
                       target="_blank"
                       size="large"
                       variant="outlined"
+                      focusRipple={false}
                     >
                       Submit Request
                     </Button>
