@@ -54,7 +54,7 @@ function Apply({ className, ...rest }) {
       }}
       {...rest}
     >
-      <Grid container>
+      <Grid container maxwidth="lg">
         <Grid item lg={9} md={12} sm={12} xs={12} className={classes.applyleft}>
           <div className={classes.main}>
             <Typography
