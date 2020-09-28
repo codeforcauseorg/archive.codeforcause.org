@@ -8,7 +8,7 @@ import {
   Hidden,
   Toolbar,
   Typography,
-  makeStyles
+  makeStyles,
 } from '@material-ui/core';
 import Logo from 'src/components/Logo';
 import Item from './Item';
@@ -158,7 +158,6 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             style={{ position: 'absolute', right: '0px' }}
           >
             <Account />
-
             <IconButton
               edge="end"
               className={classes.menuButton}

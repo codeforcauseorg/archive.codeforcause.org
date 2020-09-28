@@ -61,12 +61,13 @@ function Hero({
   firstComponent,
   secondComponent,
   imageUrl,
+  className,
   ...rest
 }) {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root)} {...rest}>
+    <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>

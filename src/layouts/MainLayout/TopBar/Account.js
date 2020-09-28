@@ -127,21 +127,23 @@ function Account() {
             </Hidden>
           </Box>
         ) : (
-          <Button
-            variant="contained"
-            color="secondary"
-            className={classes.button}
-            onClick={handleLoginOpen}
-            style={{
-              textTransform: 'capitalize'
-            }}
-          >
-            {user === undefined ? (
-              <CircularProgress size="24px" color="inherit" />
-            ) : (
-              <Typography variant="h6">Login</Typography>
-            )}
-          </Button>
+          <Hidden smDown>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+              onClick={handleLoginOpen}
+              style={{
+                textTransform: 'capitalize'
+              }}
+            >
+              {user === undefined ? (
+                <CircularProgress size="24px" color="inherit" />
+              ) : (
+                <Typography variant="h6">Login</Typography>
+              )}
+            </Button>
+          </Hidden>
         )}
 
         <Dialog
