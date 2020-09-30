@@ -1,17 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 import HeroWithLogo from '../../../components/Hero/HeroWithLogo';
 import ButtonComponent from 'src/components/Button/ButtonComponent';
 
+const useStyles = makeStyles(theme => ({
+  root: {},
+  hero: {
+    height: '420px',
+    [theme.breakpoints.down('md')]: {
+      height: '100%'
+    }
+  }
+}));
+
 function Hero({ className, ...rest }) {
+  const classes = useStyles();
   return (
     <div className={className} {...rest}>
       <HeroWithLogo
-        style={{ height: '420px' }}
+        className={classes.hero}
         title="Learn for Cause"
         title2="Code for Cause"
         imageUrl="/static/home/codeforcause.svg"

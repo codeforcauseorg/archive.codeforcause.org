@@ -20,6 +20,8 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { HashLink as Link } from 'react-router-hash-link';
+import LoginDialog from './LoginDialog';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,6 +57,7 @@ const useStyles = makeStyles(theme => ({
 
 function TopBar({ className, onMobileNavOpen, ...rest }) {
   const classes = useStyles();
+  const user = useSelector(state => state.account.user);
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -93,6 +96,13 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             </Link>
           </ListItem>
         ))}
+        {!user ? (
+          <ListItem>
+            <Account />
+          </ListItem>
+        ) : (
+          <div />
+        )}
       </List>
     </div>
   );
@@ -146,6 +156,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
           ))}
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
+            <LoginDialog />
             <Account />
           </Box>
           <Box ml={2} flexGrow={0.05} />
@@ -157,8 +168,8 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             alignItems="center"
             style={{ position: 'absolute', right: '0px' }}
           >
-            <Account />
-
+            <LoginDialog />
+            {user ? <Account /> : <div />}
             <IconButton
               edge="end"
               className={classes.menuButton}

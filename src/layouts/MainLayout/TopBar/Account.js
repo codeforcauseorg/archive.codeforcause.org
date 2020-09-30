@@ -2,11 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import PersonIcon from '@material-ui/icons/Person';
-
 import {
   Typography,
-  Dialog,
-  DialogContent,
   Button,
   Box,
   Avatar,
@@ -16,8 +13,6 @@ import {
   CircularProgress,
   makeStyles
 } from '@material-ui/core';
-import authService from 'src/services/authService';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { login, dismissLogin, logout } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +23,6 @@ const useStyles = makeStyles(theme => ({
 
 function Account() {
   const user = useSelector(state => state.account.user);
-  const loginFlag = useSelector(state => state.account.login);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -36,10 +30,6 @@ function Account() {
   const handleLogout = () => {
     handleCloseMenu();
     dispatch(logout());
-    dispatch(dismissLogin());
-  };
-
-  const handleClose = () => {
     dispatch(dismissLogin());
   };
 
@@ -143,53 +133,6 @@ function Account() {
             )}
           </Button>
         )}
-
-        <Dialog
-          open={!user && !!loginFlag}
-          onClose={handleClose}
-          aria-labelledby="form-dialog-title"
-        >
-          <DialogContent
-            style={{
-              background: '#E2E9FF'
-            }}
-          >
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-              mt={2}
-              mb={2}
-            >
-              <Typography
-                variant="h3"
-                style={{
-                  marginBottom: '8px'
-                }}
-              >
-                Login / Sign Up
-              </Typography>
-
-              <Typography variant="body2">Explore learning with</Typography>
-
-              <Typography
-                variant="body2"
-                style={{
-                  marginBottom: '12px'
-                }}
-              >
-                Open Source
-              </Typography>
-
-              <StyledFirebaseAuth
-                uiConfig={authService.uiConfig}
-                firebaseAuth={authService.firebase.auth()}
-              />
-            </Box>
-          </DialogContent>
-        </Dialog>
-
         <Menu
           id="menu-appbar"
           anchorEl={anchorEl}
