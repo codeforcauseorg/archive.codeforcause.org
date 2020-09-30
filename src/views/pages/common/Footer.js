@@ -79,6 +79,16 @@ const useStyles = makeStyles(theme => ({
   copyRightPadding: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(3)
+  },
+  pledgeLogo: {
+    width: '1.3em',
+  },
+  footerExplore:{
+    paddingLeft: '50px',
+  },
+  exploreListItems: {
+    paddingTop: '0px',
+    paddingBottom: '0px',
   }
 }));
 
@@ -97,7 +107,7 @@ function Footer({ className, ...rest }) {
           <Grid item xs={12} md={4} className={classes.extraMarginTop}>
             <Logo className={classes.logo} />
           </Grid>
-          <Grid item xs={12} md={4} className={classes.extraMarginTop}>
+          <Grid item xs={12} md={3} className={classes.extraMarginTop}>
             <Typography variant="h4" gutterBottom>
               Contact us
             </Typography>
@@ -119,14 +129,14 @@ function Footer({ className, ...rest }) {
               </List>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={2} className={classes.extraMarginTop}>
+          <Grid item xs={12} md={3} className={[classes.extraMarginTop, classes.footerExplore]}>
             <Typography variant="h4" gutterBottom>
-              Our Blog
+              Explore
             </Typography>
-            <Grid item xs={3} md={2} className={classes.extraMargin}>
-              <List style={flexContainer}>
+            <Grid item xs={12} md={12} className={classes.extraMargin}>
+              <List className={classes.exploreList}>
                 <ListItem
-                  className={classes.centerCls}
+                  className={[classes.centerCls, classes.exploreListItems]}
                   component="a"
                   href="https://medium.com/code-for-cause"
                   target="_blank"
@@ -136,7 +146,35 @@ function Footer({ className, ...rest }) {
                   </ListItemIcon>
                   <ListItemText
                     className={classes.iconSocialMedia}
-                    primary="Medium"
+                    primary="Read with Us"
+                  />
+                </ListItem>
+                <ListItem
+                  className={[classes.centerCls, classes.exploreListItems]}
+                  component="a"
+                  href="https://github.com/codeforcauseorg"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon={['fab', 'github']} size="lg" />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="Code with Us"
+                  />
+                </ListItem>
+                <ListItem
+                  className={[classes.centerCls, classes.exploreListItems]}
+                  component="a"
+                  href="https://pledge.codeforcause.org/"
+                  target="_blank"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                  <img alt="Logo" src="/favicon.ico" className={classes.pledgeLogo} />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="Pledge with Us"
                   />
                 </ListItem>
               </List>
