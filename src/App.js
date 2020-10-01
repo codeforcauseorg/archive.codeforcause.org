@@ -71,8 +71,7 @@ function App() {
               <Auth>
                 <ScrollReset />
                 <GoogleAnalytics />
-                {/* <CookiesNotification /> */}
-                {/* <SettingsNotification /> */}
+               
                 <Routes />
               </Auth>
             </Router>

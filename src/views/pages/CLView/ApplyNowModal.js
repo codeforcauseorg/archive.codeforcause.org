@@ -158,7 +158,7 @@ export default function ApplyNowModal() {
                   fullWidth
                 >
                   {countryCodes.map(code => {
-                    return <MenuItem value={`+${code}`}>+{code}</MenuItem>;
+                    return <MenuItem value={'+${code}'}>+{code}</MenuItem>;
                   })}
                 </SelectValidator>
               </Grid>

@@ -50,14 +50,7 @@ export const algoPython = {
       title: 'Git Version Control Replica',
       img: '/static/images/courses/projects/git.png'
     }
-    // {
-    //   title: 'Crossword Puzzle Game',
-    //   img: '/static/images/courses/projects/git.png'
-    // },
-    // {
-    //   title: 'Automatic Episode Player',
-    //   img: '/static/images/courses/projects/git.png'
-    // },
+   
   ],
   topics: [
     {

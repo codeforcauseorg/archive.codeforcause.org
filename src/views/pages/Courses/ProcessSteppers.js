@@ -50,7 +50,7 @@ function QontoStepIcon(props) {
       ) : (
         <div className={classes.circle} />
       )}
-    </div>
+    <div>
   );
 }
 
@@ -126,7 +126,7 @@ function ColorlibStepIcon(props) {
       })}
     >
       {icons[String(props.icon)]}
-    </div>
+    <div>
   );
 }
 
