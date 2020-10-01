@@ -1,15 +1,17 @@
-## Code for Cause home website
+[![Discord](https://img.shields.io/discord/463752820026376202.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/jBHPxUz)
+
+# Code for Cause home website
 
 ## Contributions and PR
 
 - PRs should be generated against `development`.
 - Remember to run `npm run format` before creating pull request.
-- Netlify willl create a preview inside pull request, Please check if your work is fine.
-- Development, preview and sandbox uses our https://authbox.codeforcause.org server.
+- Netlify will create a preview inside pull request, please check if your work is fine.
+- When in doubt, ask your queries on [#cfc-website channel on our Discord server](https://discord.gg/jBHPxUz)
 
 ## Sandbox Deployment
 
-you can find sandbox deployment at https://sandbox.codeforcause.org
+You can find sandbox deployment at https://sandbox.codeforcause.org
 
 ## Build Setup
 
