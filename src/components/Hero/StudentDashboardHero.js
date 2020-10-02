@@ -127,6 +127,7 @@ function Hero({ className, ...rest }) {
                 >
                   Profile Settings
                   <img
+                    alt="setting-icon"
                     className={classes.icon}
                     src="/static/icons/Vector.svg"
                   ></img>

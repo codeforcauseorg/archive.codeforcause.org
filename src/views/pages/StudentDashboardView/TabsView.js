@@ -44,7 +44,7 @@ export default function MainTab() {
   const medium = useMediaQuery('(min-width:900px)');
   const small = useMediaQuery('(min-width:600px)');
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

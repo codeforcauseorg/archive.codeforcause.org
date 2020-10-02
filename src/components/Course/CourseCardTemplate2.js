@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 
 import {
   Typography,
@@ -11,7 +10,6 @@ import {
   LinearProgress
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import typography from 'src/theme/typography';
 import { withStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({

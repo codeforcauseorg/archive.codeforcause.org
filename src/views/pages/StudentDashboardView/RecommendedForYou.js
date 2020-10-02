@@ -1,5 +1,4 @@
 import {
-  Grid,
   GridList,
   GridListTile,
   makeStyles,
@@ -9,7 +8,6 @@ import {
 import React from 'react';
 import CourseCard1 from '../../../components/Course/CourseCardTemplate1';
 import coursesContent from 'src/data/courses';
-import CourseCard from '../../../components/Course/CourseCardTemplate1';
 
 const useStyles = makeStyles(theme => ({
   root: {
