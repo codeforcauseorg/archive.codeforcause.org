@@ -10,6 +10,7 @@ import CoursesView from 'src/views/pages/CoursesView';
 import ProfileView from 'src/views/pages/ProfileView';
 import ApplicationsView from 'src/views/pages/ApplicationsView';
 import Error404View from 'src/views/pages/Error404View';
+import StudentDashboardView from 'src/views/pages/StudentDashboardView';
 
 import MachineLearningView from 'src/views/pages/Courses/MachineLearningView';
 import AlgoJavaView from 'src/views/pages/Courses/AlgoJavaView';
@@ -61,6 +62,15 @@ const renderRoutes = () => (
         render={props => (
           <MainLayout>
             <ProfileView {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path="/student"
+        exact
+        render={props => (
+          <MainLayout>
+            <StudentDashboardView {...props} />
           </MainLayout>
         )}
       />
