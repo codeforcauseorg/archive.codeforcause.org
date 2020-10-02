@@ -27,8 +27,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0px',
-    color: '#FFF',
-    width: '100%'
+    color: '#FFF'
   },
   btn: {
     backgroundColor: '#A60000',
