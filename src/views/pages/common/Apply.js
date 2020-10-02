@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0px',
-    color: '#FFF'
+    color: '#FFF',
+    width: '100%'
   },
   btn: {
     backgroundColor: '#A60000',
@@ -62,7 +63,6 @@ const useStyles = makeStyles(theme => ({
 
 function Apply({ className, ...rest }) {
   const classes = useStyles();
-
   return (
     <div
       className={clsx(classes.root, className)}
@@ -97,7 +97,8 @@ function Apply({ className, ...rest }) {
               variant="outlined"
               rows={5}
               style={{
-                minWidth: '500px',
+                maxWidth: '500px',
+                width: '100%',
                 background: 'rgba(255, 255, 255, 0.8)',
                 borderRadius: '5px',
                 color: 'white'
