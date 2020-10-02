@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Grid, Typography } from '@material-ui/core';
 
 import coursesContent from 'src/data/courses';
-import CourseCard from '../common/CourseCard';
+import CourseCard from '../../../components/Course/CourseCardTemplate1';
 
 const useStyles = makeStyles(theme => ({
   icon: {

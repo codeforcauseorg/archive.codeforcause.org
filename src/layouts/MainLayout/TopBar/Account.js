@@ -14,6 +14,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import { login, dismissLogin, logout } from 'src/actions/accountActions';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -141,6 +142,14 @@ function Account() {
           onClose={handleCloseMenu}
         >
           <MenuItem onClick={handleLogout}>Logout</MenuItem>
+          <MenuItem onClick={handleCloseMenu}>
+            <Link
+              to="/student"
+              style={{ textDecoration: 'none', color: 'black' }}
+            >
+              My Profile
+            </Link>
+          </MenuItem>
         </Menu>
       </div>
     </div>

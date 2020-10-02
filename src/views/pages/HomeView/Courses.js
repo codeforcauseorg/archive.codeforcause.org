@@ -15,7 +15,7 @@ import { insideTriangleTabsStylesHook } from '@mui-treasury/styles/tabs';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import coursesContent from 'src/data/courses';
-import CourseCard from '../common/CourseCard';
+import CourseCard from '../../../components/Course/CourseCardTemplate1';
 
 const useStyles = makeStyles(theme => ({
   icon: {
