@@ -13,6 +13,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
   root: {
+    color: '#000',
     background: '#FFF',
     paddingTop: 80,
     paddingBottom: 80,
