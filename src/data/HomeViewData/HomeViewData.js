@@ -156,9 +156,9 @@ export const openSourceContent = {
 };
 
 export const whatWeStandForDescription =
-  ' We aim to provide a real world practical learning experience and' +
-  'keep students informed about the latest trends in technology,' +
-  'open-source and opportunities, so that they can keep up with the' +
+  ' We aim to provide a real world practical learning experience and ' +
+  'keep students informed about the latest trends in technology, ' +
+  'open-source and opportunities, so that they can keep up with the ' +
   'fast-paced digital world by following a pi-shaped learning pattern.';
 
 export const students = [
