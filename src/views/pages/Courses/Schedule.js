@@ -194,7 +194,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
             {batchIndex === expanded ? (
               <IconButton
                 onClick={() => {
-                  setExpanded(-1);
+                  batchIndex = !batchIndex;
                 }}
               >
                 <ExpandLessIcon />
