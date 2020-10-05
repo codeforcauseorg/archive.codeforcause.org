@@ -22,6 +22,7 @@ import TermsView from './views/pages/documents/termsView';
 import DocsLayout from './layouts/DocsLayout';
 import PrivacyView from './views/pages/documents/privacyView';
 import RefundView from './views/pages/documents/refundView';
+import ScrollReset from './components/ScrollReset';
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -30,9 +31,12 @@ const renderRoutes = () => (
         path="/"
         exact
         render={props => (
-          <MainLayout>
-            <HomeView {...props} />
-          </MainLayout>
+          <>
+            <ScrollReset />
+            <MainLayout>
+              <HomeView {...props} />
+            </MainLayout>
+          </>
         )}
       />
 
@@ -51,6 +55,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
+            <ScrollReset />
             <EventsView {...props} />
           </MainLayout>
         )}
@@ -78,9 +83,12 @@ const renderRoutes = () => (
       <Route
         path="/courses"
         render={props => (
-          <MainLayout>
-            <CoursesView {...props} />
-          </MainLayout>
+          <>
+            <ScrollReset />
+            <MainLayout>
+              <CoursesView {...props} />
+            </MainLayout>
+          </>
         )}
       />
       <Route
@@ -88,6 +96,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
+            <ScrollReset />
             <CAView {...props} />
           </MainLayout>
         )}
