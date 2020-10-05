@@ -62,10 +62,19 @@ function QuestionDropBox({ question, questionIndex, expanded, setExpanded }) {
         >
           <Box fontWeight={500}>{question.title}</Box>
         </Typography>
-
-        <IconButton>
-          {expanded === questionIndex ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
+        {questionIndex === expanded ? (
+          <IconButton
+            onClick={() => {
+              questionIndex = !questionIndex;
+            }}
+          >
+            <ExpandLessIcon />
+          </IconButton>
+        ) : (
+          <IconButton>
+            <ExpandMoreIcon />
+          </IconButton>
+        )}
       </Box>
 
       <Collapse in={expanded === questionIndex}>
