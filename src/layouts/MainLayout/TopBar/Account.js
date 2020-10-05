@@ -14,7 +14,6 @@ import {
   makeStyles
 } from '@material-ui/core';
 import { login, dismissLogin, logout } from 'src/actions/accountActions';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -142,14 +141,15 @@ function Account() {
           onClose={handleCloseMenu}
         >
           <MenuItem onClick={handleLogout}>Logout</MenuItem>
-          <MenuItem onClick={handleCloseMenu}>
+          {/* This shortcut to Profile will be activated once things are fully complete with Profile */}
+          {/* <MenuItem onClick={handleCloseMenu}>
             <Link
               to="/student"
               style={{ textDecoration: 'none', color: 'black' }}
             >
               My Profile
             </Link>
-          </MenuItem>
+          </MenuItem> */}
         </Menu>
       </div>
     </div>
