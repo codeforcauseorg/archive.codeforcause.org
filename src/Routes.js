@@ -7,6 +7,7 @@ import CAView from 'src/views/pages/CLView';
 import EventsView from 'src/views/pages/EventsView';
 import LoadingScreen from 'src/components/LoadingScreen';
 import CoursesView from 'src/views/pages/CoursesView';
+import Bootcamps from 'src/views/pages/BootCampsView/Bootcamps';
 import ProfileView from 'src/views/pages/ProfileView';
 import ApplicationsView from 'src/views/pages/ApplicationsView';
 import Error404View from 'src/views/pages/Error404View';
@@ -86,6 +87,16 @@ const renderRoutes = () => (
           </>
         )}
       />
+
+      <Route
+        path="/bootcamp"
+        render={props => (
+          <MainLayout>
+            <Bootcamps {...props} />
+          </MainLayout>
+        )}
+      />
+
       <Route
         path="/campusLeaders"
         exact
@@ -102,7 +113,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.advanced.machineLearning} {...props} />
+            <CoursePage
+              course={coursesContent.advanced.machineLearning}
+              {...props}
+            />
           </MainLayout>
         )}
       />
@@ -111,7 +125,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.foundation.algoJava} {...props} />
+            <CoursePage
+              course={coursesContent.foundation.algoJava}
+              {...props}
+            />
           </MainLayout>
         )}
       />
@@ -120,7 +137,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.foundation.algoPython} {...props} />
+            <CoursePage
+              course={coursesContent.foundation.algoPython}
+              {...props}
+            />
           </MainLayout>
         )}
       />
@@ -129,7 +149,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.advanced.webDevelopment} {...props} />
+            <CoursePage
+              course={coursesContent.advanced.webDevelopment}
+              {...props}
+            />
           </MainLayout>
         )}
       />
@@ -138,7 +161,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.advanced.competitiveJava} {...props} />
+            <CoursePage
+              course={coursesContent.advanced.competitiveJava}
+              {...props}
+            />
           </MainLayout>
         )}
       />
@@ -147,7 +173,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.foundation.devPython} {...props} />
+            <CoursePage
+              course={coursesContent.foundation.devPython}
+              {...props}
+            />
           </MainLayout>
         )}
       />
