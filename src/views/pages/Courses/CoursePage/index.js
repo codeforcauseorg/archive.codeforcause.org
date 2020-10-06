@@ -7,27 +7,22 @@ import FAQ from '../FAQ';
 import CTA from '../CTA';
 import FinalAction from '../FinalAction';
 import Schedule from '../Schedule';
-import coursesContent from 'src/data/courses';
 import Major from '../Major';
 import Features from '../Features';
 import Process from '../Process';
-
-const foundation = coursesContent.foundation;
-const course = foundation.algoJava;
-const batch = course.schedule[0];
 
 const useStyles = makeStyles(() => ({
   root: {}
 }));
 
-function CoursesView() {
+function CoursePage({ course }) {
+  const batch = course.schedule[0];
+
   const classes = useStyles();
 
   return (
     <Page className={classes.root} title={course.title}>
       <Major course={course} />
-      {/* <CourseRecommendations /> */}
-      {/* <Mentors mentors={course.mentors} /> */}
       <Process />
       <Schedule course={course} />
       <Features />
@@ -40,4 +35,4 @@ function CoursesView() {
   );
 }
 
-export default CoursesView;
+export default CoursePage;
