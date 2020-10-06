@@ -11,18 +11,13 @@ import ProfileView from 'src/views/pages/ProfileView';
 import ApplicationsView from 'src/views/pages/ApplicationsView';
 import Error404View from 'src/views/pages/Error404View';
 import StudentDashboardView from 'src/views/pages/StudentDashboardView';
-
-import MachineLearningView from 'src/views/pages/Courses/MachineLearningView';
-import AlgoJavaView from 'src/views/pages/Courses/AlgoJavaView';
-import AlgoPythonView from 'src/views/pages/Courses/AlgoPythonView';
-import WebFullStakView from 'src/views/pages/Courses/WebFullStakView';
-import CompetitiveJavaView from 'src/views/pages/Courses/CompetitiveJavaView';
-import PythonDevelopmentView from 'src/views/pages/Courses/PythonDevelopmentView';
+import CoursePage from 'src/views/pages/Courses/CoursePage';
 import TermsView from './views/pages/documents/termsView';
 import DocsLayout from './layouts/DocsLayout';
 import PrivacyView from './views/pages/documents/privacyView';
 import RefundView from './views/pages/documents/refundView';
 import ScrollReset from './components/ScrollReset';
+import coursesContent from 'src/data/courses';
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -107,7 +102,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <MachineLearningView {...props} />
+            <CoursePage course={coursesContent.advanced.machineLearning} {...props} />
           </MainLayout>
         )}
       />
@@ -116,7 +111,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <AlgoJavaView {...props} />
+            <CoursePage course={coursesContent.foundation.algoJava} {...props} />
           </MainLayout>
         )}
       />
@@ -125,7 +120,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <AlgoPythonView {...props} />
+            <CoursePage course={coursesContent.foundation.algoPython} {...props} />
           </MainLayout>
         )}
       />
@@ -134,7 +129,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <WebFullStakView {...props} />
+            <CoursePage course={coursesContent.advanced.webDevelopment} {...props} />
           </MainLayout>
         )}
       />
@@ -143,7 +138,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CompetitiveJavaView {...props} />
+            <CoursePage course={coursesContent.advanced.competitiveJava} {...props} />
           </MainLayout>
         )}
       />
@@ -152,7 +147,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <PythonDevelopmentView {...props} />
+            <CoursePage course={coursesContent.foundation.devPython} {...props} />
           </MainLayout>
         )}
       />
