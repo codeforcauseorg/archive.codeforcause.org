@@ -104,7 +104,8 @@ export default function CourseCard({ course }) {
         className={classes.card}
         display="flex"
         style={{
-          maxWidth: '320px'
+          minWidth: '200px',
+          maxWidth: '500px'
         }}
       >
         <CardContent className={classes.cardContent}>
