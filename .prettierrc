@@ -4,6 +4,7 @@
   "singleQuote": true,
   "trailingComma": "none",
   "tabWidth": 2,
+  "semi": true,
   "useTabs": false,
   "react/jsx-max-props-per-line": [1, { "when": "always" }]
 }
