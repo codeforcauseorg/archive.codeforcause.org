@@ -70,8 +70,8 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
   const navItems = [
     { title: 'Campus Leaders', link: '/campusLeaders' },
     { title: 'Events', link: '/events' },
-    { title: 'Courses', link: '/courses' }
-    // { title: 'Team', link: '/team' }
+    { title: 'Courses', link: '/courses' },
+    { title: 'BootCamps', link: '/bootcamp' }
   ];
 
   const list = () => (
