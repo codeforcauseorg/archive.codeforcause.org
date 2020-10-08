@@ -204,7 +204,7 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" />
+            <FontAwesomeIcon icon={['fab', 'facebook-square']} size="2x" />
           </ListItemIcon>
         </ListItem>
         <ListItem
