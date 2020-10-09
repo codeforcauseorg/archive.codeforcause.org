@@ -18,7 +18,7 @@ function Hero({ className, ...rest }) {
       title="Code For Cause Blog"
       subtitle="Learn the Technology Old and New from the experienced techies"
       subtitleDesign={classes.subtitle}
-      backgroundImage="/static/images/backs/blogs.png"
+      backgroundImage="url(/static/images/backs/blogs.png)"
     />
   );
 }
