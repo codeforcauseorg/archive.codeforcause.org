@@ -41,12 +41,7 @@ const SubCard = ({ point }) => {
   return (
     <Grid container className={classes.root}>
       <Grid className={classes.image} item sm={2} xs={12}>
-        <img
-          alt="title-img"
-          style={{ marginTop: '6px' }}
-          height="55px"
-          src={point.img}
-        />
+        <img alt="title-img" height="55px" src={point.img} />
       </Grid>
       <Grid item sm={10} xs={12}>
         <Typography

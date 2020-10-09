@@ -46,6 +46,14 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center'
   },
   textDetails: {
+    background: 'rgba(255, 255, 255, 0.8)',
+    borderRadius: '5px',
+    color: 'white',
+    margin: '32px 100px',
+    [theme.breakpoints.down('sm')]: {
+      margin: '32px 40px'
+    },
+
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: 'rgba(255, 255, 255, 0.2)'
@@ -73,44 +81,31 @@ function Apply({ className, ...rest }) {
       }}
       {...rest}
     >
-      <Grid container maxWidth="lg">
-        <Grid
-          item
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          className={classes.applyleft}
+      <Grid container>
+        <Typography
+          variant="h3"
+          align='center'
+          style={{
+            margin: '24px auto'
+          }}
         >
-          <div className={classes.main}>
-            <Typography
-              variant="h3"
-              style={{
-                marginBottom: '24px'
-              }}
-            >
-              Tell Us What You Want To Learn Next
+          Tell Us What You Want To Learn Next
             </Typography>
-            <TextField
-              className={classes.textDetails}
-              multiline
-              variant="outlined"
-              rows={5}
-              style={{
-                maxWidth: '500px',
-                width: '100%',
-                background: 'rgba(255, 255, 255, 0.8)',
-                borderRadius: '5px',
-                color: 'white'
-              }}
-            />
-            <Box mt={3}>
-              <Button color="secondary" size="large" variant="contained">
-                Submit
+
+        <TextField
+          className={classes.textDetails}
+          placeholder="I wanna Learn..."
+          multiline
+          variant="outlined"
+          rows={5}
+          fullWidth
+        />
+
+        <Box mt={2} style={{width:'inherit', textAlign: 'center'}}>
+          <Button color="secondary" size="large" variant="contained" style={{margin: '0px auto'}} >
+            Submit
               </Button>
-            </Box>
-          </div>
-        </Grid>
+        </Box>
       </Grid>
     </div>
   );

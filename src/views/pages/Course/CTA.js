@@ -29,19 +29,32 @@ const useStyles = makeStyles(theme => ({
     color: '#000000'
   },
   textField: {
-    marginBottom: '16px'
+    marginBottom: '16px',
+    marginTop: '8px',
+    backgroundColor: '#fff',
+    borderBlockColor: 'green',
+    borderColor: 'green',
+    '& .MuiOutlinedInput-notchedOutline': {
+        borderColor: '#F2F7FF'
+    }
   },
   text: {
-    marginBottom: '16px'
+    marginBottom: '16px',
+    fontWeight: '700'
   },
   actBtn: {
     marginBottom: '16px',
-    background: '#F2F7FF',
+    padding: '14px',
+    background: '#fff',
     color: '#A60000',
     textTransform: 'lowercase',
+    borderColor: 'yellow !important',
+    '&,.MuiButton-contained': {
+      boxShadow: 'none'
+    },
     '&:hover': {
-      backgroundColor: 'rgba(242,247,255, 0.8)'
-    }
+      backgroundColor: '#fff'
+    },
   }
 }));
 
@@ -103,9 +116,9 @@ function Process({ benefits, className, ...rest }) {
         >
           <Card
             style={{
-              padding: '24px',
+              padding: '50px 24px',
               borderRadius: '6px',
-              background: '#ffffff',
+              background: '#F2F7FF',
               height: '100%'
             }}
           >
@@ -114,16 +127,17 @@ function Process({ benefits, className, ...rest }) {
                 Request a Consultation
               </Typography>
 
-              <Typography className={classes.text} variant="body1">
+              <Typography style={{paddingBottom: '16px'}} variant="body1">
                 Setup a call with our counsellor and figure out what’s best for
                 you.
               </Typography>
 
               <ValidatorForm onSubmit={handleSubmit}>
+                <Typography variant='caption'>Full Name</Typography><Typography variant='caption' color='secondary'>*</Typography>
                 <TextValidator
                   key="name"
                   className={classes.textField}
-                  label="Full Name"
+                  placeholder="Example: Elizabeth"
                   variant="outlined"
                   value={formData.name}
                   fullWidth
@@ -132,15 +146,15 @@ function Process({ benefits, className, ...rest }) {
                   validators={['required']}
                   errorMessages={['This is a required field']}
                 />
-
+                <Typography variant='caption'>Email</Typography><Typography variant='caption' color='secondary'>*</Typography>
                 <TextValidator
                   key="email"
                   className={classes.textField}
-                  label="Email"
                   variant="outlined"
                   value={formData.email}
                   fullWidth
                   name="email"
+                  placeholder="john@example.com"
                   onChange={handleChange}
                   validators={['required', 'isEmail']}
                   errorMessages={[
@@ -148,15 +162,15 @@ function Process({ benefits, className, ...rest }) {
                     'Ender a valid Email'
                   ]}
                 />
-
+                <Typography variant='caption'>Contact Number</Typography><Typography variant='caption' color='secondary'>*</Typography>
                 <TextValidator
                   key="phone"
                   className={classes.textField}
-                  label="Contact Number"
                   variant="outlined"
                   value={formData.phone}
                   fullWidth
                   name="phone"
+                  placeholder="+91 12345 12345"
                   onChange={handleChange}
                   validators={['required']}
                   errorMessages={['This is a required field']}
@@ -177,10 +191,10 @@ function Process({ benefits, className, ...rest }) {
                     Request
                   </Button>
                 ) : (
-                  <div className={classes.submissions}>
-                    <CircularProgress />
-                  </div>
-                )}
+                    <div className={classes.submissions}>
+                      <CircularProgress />
+                    </div>
+                  )}
               </ValidatorForm>
             </CardContent>
           </Card>
@@ -197,9 +211,9 @@ function Process({ benefits, className, ...rest }) {
         >
           <Card
             style={{
-              padding: '24px',
+              padding: '50px 24px',
               borderRadius: '6px',
-              background: '#ffffff',
+              background: '#F2F7FF',
               height: '100%'
             }}
           >
@@ -219,7 +233,7 @@ function Process({ benefits, className, ...rest }) {
                 Call Us
               </Typography>
 
-              <Button
+              <Button              
                 className={classes.actBtn}
                 fullWidth
                 variant="contained"

@@ -197,7 +197,7 @@ const CoursesGrid = ({ courses }) => {
             sm={6}
             xs={12}
             style={{
-              maxWidth: '320px'
+              maxWidth: '330px'
             }}
           >
             <CourseCard course={course} />

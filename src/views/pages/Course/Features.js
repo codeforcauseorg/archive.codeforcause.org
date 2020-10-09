@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Typography, makeStyles, Box, Grid } from '@material-ui/core';
+import { Typography, makeStyles, Box, Grid, Hidden } from '@material-ui/core';
 import { features } from 'src/data/CourseFeatures';
 
-const background = 'linear-gradient(180deg, #180253 0%, #0E0131 100%)';
+const background = 'linear-gradient(180deg, #2A185A 0%, #000000 100%)';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,6 +34,13 @@ const useStyles = makeStyles(theme => ({
   secondaryText: {
     paddingLeft: '10px',
     fontWeight: 900
+  },
+  box: {
+    padding: '40px 20px',
+    minWidth: '150px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '20px'
+    }
   },
   icon: {
     height: 90,
@@ -88,39 +95,19 @@ const Features = () => {
             return (
               <Grid
                 item
-                lg={3}
-                md={3}
+                lg={4}
+                md={4}
                 sm={6}
                 xs={6}
                 justify="center"
                 alignItems="center"
               >
-                <Box
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="center"
-                  alignItems="center"
-                  style={{
-                    padding: '20px',
-                    minWidth: '150px'
-                  }}
-                >
-                  <img
-                    src={feature.image}
-                    alt={feature.line2}
-                    style={{
-                      width: 'auto',
-                      height: '50px',
-                      marginBottom: '12px'
-                    }}
-                  />
-                  <Typography align="center" variant="body2">
-                    {feature.line1}
-                  </Typography>
-                  <Typography align="center" variant="body2">
-                    {feature.line2}
-                  </Typography>
-                </Box>
+                <Hidden smDown>
+                  <Boxes flexDirection="row" feature={feature} />
+                </Hidden>
+                <Hidden mdUp>
+                  <Boxes flexDirection="column" feature={feature} />
+                </Hidden>
               </Grid>
             );
           })}
@@ -129,5 +116,42 @@ const Features = () => {
     </div>
   );
 };
+
+function Boxes({ flexDirection, feature }) {
+  const classes = useStyles();
+
+  return (
+    <Box
+      display="flex"
+      flexDirection={flexDirection}
+      justifyContent="flex-start"
+      alignItems="center"
+      className={classes.box}
+    >
+      <img
+        src={feature.image}
+        alt={feature.line2}
+        style={{
+          width: 'auto',
+          height: '40px',
+          margin: '10px 16px'
+        }}
+      />
+      <Hidden smDown>
+        <Typography align="center" variant="caption">
+          {feature.line1} {feature.line2}
+        </Typography>
+      </Hidden>
+      <Hidden mdUp>
+        <Typography align="center" variant="body2">
+          {feature.line1}
+        </Typography>
+        <Typography align="center" variant="body2">
+          {feature.line2}
+        </Typography>
+      </Hidden>
+    </Box>
+  );
+}
 
 export default Features;

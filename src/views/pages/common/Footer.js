@@ -156,7 +156,7 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />
+                    <img src='/static/images/icons/social/fb.svg' height='23px'/>
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -166,7 +166,7 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon={['fab', 'twitter']} size="lg" />
+                  <img src='/static/images/icons/social/tw.svg'  height='23px'/>
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -176,7 +176,7 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />
+                  <img src='/static/images/icons/social/ins.svg' height='23px' />
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -186,7 +186,7 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon={['fab', 'youtube']} size="lg" />
+                  <img src='/static/images/icons/social/yt.svg'  height='23px'/>
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -196,7 +196,7 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg" />
+                  <img src='/static/images/icons/social/lin.svg'  height='23px'/>
                   </ListItemIcon>
                 </ListItem>
               </List>

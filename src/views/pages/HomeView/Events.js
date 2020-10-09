@@ -1,20 +1,17 @@
-import React, { useCallback, useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import axios from 'src/utils/axios';
-import useIsMountedRef from 'src/hooks/useIsMountedRef';
-
 import {
   Box,
   Button,
   Container,
   Grid,
-  Typography,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import React, { useCallback, useEffect, useState } from 'react';
+import useIsMountedRef from 'src/hooks/useIsMountedRef';
+import axios from 'src/utils/axios';
+import EventCard from '../../../components/Event/EventCard';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,7 +35,13 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    position: 'relative'
+    position: 'relative',
+    borderRadius: '10px',
+    color: '#000',
+    '&:hover': {
+      color: '#B20000',
+      boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.12)'
+    }
   },
   cardMedia: {
     paddingTop: '55.75%', // 16:9
@@ -69,6 +72,11 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: '#000',
       opacity: '0.8'
     }
+  },
+  titleDesc: {
+    fontWeight: '500',
+    marginTop: '5px',
+    lineHeight: '1.3'
   },
   btn: {
     padding: '0 20px',
@@ -128,74 +136,7 @@ function Events({ className, ...rest }) {
         </Typography>
         <Grid container spacing={4} className={classes.extraMargin}>
           {events.slice(Math.max(events.length - 3, 0)).map((event, index) => (
-            <Grid
-              className={classes.gridCls}
-              component="a"
-              href={event.link}
-              target="_blank"
-              item
-              key={index}
-              xs={12}
-              sm={6}
-              md={4}
-            >
-              <Card className={classes.card}>
-                {event.time ? (
-                  <div className={classes.eventdate}>
-                    <Typography
-                      variant="caption"
-                      style={{
-                        padding: '0px 12px',
-                        fontWeight: 500
-                      }}
-                    >
-                      {event.time}
-                    </Typography>
-                  </div>
-                ) : (
-                  <></>
-                )}
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={event.image}
-                  title={event.title}
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography
-                    display="inline"
-                    style={{ paddingRight: '15px' }}
-                    gutterBottom
-                  >
-                    {event.domain}
-                  </Typography>
-                  <Typography
-                    variant="span"
-                    display="inline"
-                    style={{
-                      background: '#1D006E',
-                      color: '#fff',
-                      padding: '0px 8px',
-                      fontSize: '14px',
-                      borderRadius: '2px'
-                    }}
-                    gutterBottom
-                  >
-                    {event.type}
-                  </Typography>
-                  <Typography
-                    variant="subtitle1"
-                    style={{
-                      color: '#A60000',
-                      fontWeight: '500',
-                      marginTop: '5px',
-                      lineHeight: '1.3'
-                    }}
-                  >
-                    {event.title}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            <EventCard event={event} index={index} />
           ))}
           <Grid item xs={12} sm={12} md={12}>
             <div className={classes.box2}>

@@ -124,7 +124,8 @@ export default function CourseCard({ course }) {
               align="left"
               variant="h5"
               style={{
-                color: '#0085FF'
+                color: '#0085FF',
+                paddingBottom: '11px'
               }}
             >
               {course.difficulty}

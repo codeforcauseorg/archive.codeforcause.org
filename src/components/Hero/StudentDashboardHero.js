@@ -204,7 +204,7 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'facebook-square']} size="2x" />
+            <img src='/static/images/icons/socialwhite/fb.svg' height='28.35px'/>
           </ListItemIcon>
         </ListItem>
         <ListItem
@@ -214,11 +214,7 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon
-              style={{ borderRadius: '20px' }}
-              icon={['fab', 'twitter-square']}
-              size="2x"
-            />
+          <img src='/static/images/icons/socialwhite/tw.svg' height='28.35px'/>
           </ListItemIcon>
         </ListItem>
         <ListItem
@@ -228,7 +224,7 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'instagram-square']} size="2x" />
+          <img src='/static/images/icons/socialwhite/in.svg' height='28.35px'/>
           </ListItemIcon>
         </ListItem>
         <ListItem
@@ -238,7 +234,7 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" />
+          <img src='/static/images/icons/socialwhite/li.svg' height='28.35px'/>
           </ListItemIcon>
         </ListItem>
       </List>

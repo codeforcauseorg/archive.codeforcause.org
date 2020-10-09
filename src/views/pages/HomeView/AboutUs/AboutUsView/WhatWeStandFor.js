@@ -40,7 +40,7 @@ const WhatWeStandFor = ({ className, ...rest }) => {
           <Typography variant="h4" style={{ color: '#A60000' }}>
             About Us
           </Typography>
-          <Typography variant="h3" style={{ marginTop: '10px' }}>
+          <Typography variant="h3" style={{ marginTop: '24px' }}>
             What We Stand For
           </Typography>
           <Typography className={classes.content}>
