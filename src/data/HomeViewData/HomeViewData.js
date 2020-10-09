@@ -92,7 +92,7 @@ export const experience = [
     id: '4',
     img: '/static/images/experience/contributors.svg',
     count: '100+',
-    title: 'Contributers'
+    title: 'Contributors'
   }
 ];
 
