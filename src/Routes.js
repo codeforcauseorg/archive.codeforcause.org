@@ -12,6 +12,7 @@ import ProfileView from 'src/views/pages/ProfileView';
 import ApplicationsView from 'src/views/pages/ApplicationsView';
 import Error404View from 'src/views/pages/Error404View';
 import StudentDashboardView from 'src/views/pages/StudentDashboardView';
+import EditProfileView from 'src/views/pages/StudentDashboardView/EditProfile';
 import CoursePage from 'src/views/pages/Course/CoursePage';
 import TermsView from './views/pages/documents/termsView';
 import DocsLayout from './layouts/DocsLayout';
@@ -72,6 +73,15 @@ const renderRoutes = () => (
         render={props => (
           <MainLayout>
             <StudentDashboardView {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path="/editProfile"
+        exact
+        render={props => (
+          <MainLayout>
+            <EditProfileView {...props} />
           </MainLayout>
         )}
       />
