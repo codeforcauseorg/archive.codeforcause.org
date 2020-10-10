@@ -96,7 +96,6 @@ class AuthService {
 
   setSession = accessToken => {
     if (accessToken) {
-      console.log(accessToken);
       localStorage.setItem('accessToken', accessToken);
       axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
     } else {
