@@ -52,9 +52,10 @@ function Hero({
         <div
           className={clsx(classes.root, className)}
           style={{
-            backgroundImage: `url(${backgroundImage})`,
+            backgroundImage: `${backgroundImage}`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'no-repeat',
+            backgroundPositionY: 'center'
           }}
           {...rest}
         >
