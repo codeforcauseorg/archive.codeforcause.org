@@ -10,6 +10,7 @@ import CoursesView from 'src/views/pages/CoursesView';
 import Bootcamps from 'src/views/pages/BootCampsView/Bootcamps';
 import ProfileView from 'src/views/pages/ProfileView';
 import ApplicationsView from 'src/views/pages/ApplicationsView';
+import BlogsView from 'src/views/pages/BlogsView';
 import Error404View from 'src/views/pages/Error404View';
 import StudentDashboardView from 'src/views/pages/StudentDashboardView';
 import EditProfileView from 'src/views/pages/StudentDashboardView/EditProfile';
@@ -82,6 +83,15 @@ const renderRoutes = () => (
         render={props => (
           <MainLayout>
             <EditProfileView {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path="/blogs"
+        exact
+        render={props => (
+          <MainLayout>
+            <BlogsView {...props} />
           </MainLayout>
         )}
       />

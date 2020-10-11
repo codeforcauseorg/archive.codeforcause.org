@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '350px',
     color: '#FFF',
-    padding: '100px 70px',
+    padding: '127px 70px',
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       paddingRight: 15
@@ -39,6 +39,7 @@ const useStyles = makeStyles(theme => ({
 function Hero({
   title,
   subtitle,
+  subtitleDesign,
   className, // className
   backgroundImage = null, // Link to the  background image if any
   component = null, // The Button or any component provided
@@ -52,18 +53,23 @@ function Hero({
         <div
           className={clsx(classes.root, className)}
           style={{
-            backgroundImage: `${backgroundImage}`,
+            backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPositionY: 'center'
+            backgroundRepeat: 'no-repeat'
           }}
           {...rest}
         >
           <Container maxWidth="lg">
             <div className={classes.main}>
-              <Typography variant="h1">{title}</Typography>
+              <Typography align="center" variant="h2">
+                {title}
+              </Typography>
               <Box mt={2}>
-                <Typography variant="body1" align="center">
+                <Typography
+                  className={subtitleDesign}
+                  variant="body1"
+                  align="center"
+                >
                   {subtitle}
                 </Typography>
               </Box>
@@ -93,6 +99,7 @@ function Hero({
 Hero.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
+  subtitleDesign: PropTypes.string,
   className: PropTypes.string,
   backgroundImage: PropTypes.string,
   component: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
