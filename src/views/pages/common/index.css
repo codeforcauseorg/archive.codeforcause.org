@@ -31,5 +31,5 @@
 @keyframes slideshow {
     0%    { left: 0%; }
     50%  { left: -150%; }
-    100%  { left: 0%; }
+    100%  { left: -0%; }
   }
