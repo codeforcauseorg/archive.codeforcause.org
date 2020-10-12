@@ -156,7 +156,11 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                    <img src='/static/images/icons/social/fb.svg' height='23px'/>
+                    <img
+                      src="/static/images/icons/social/fb.svg"
+                      height="23px"
+                      alt="fb"
+                    />
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -166,7 +170,11 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                  <img src='/static/images/icons/social/tw.svg'  height='23px'/>
+                    <img
+                      src="/static/images/icons/social/tw.svg"
+                      height="23px"
+                      alt="tw"
+                    />
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -176,7 +184,11 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                  <img src='/static/images/icons/social/ins.svg' height='23px' />
+                    <img
+                      src="/static/images/icons/social/ins.svg"
+                      height="23px"
+                      alt="insta"
+                    />
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -186,7 +198,11 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                  <img src='/static/images/icons/social/yt.svg'  height='23px'/>
+                    <img
+                      src="/static/images/icons/social/yt.svg"
+                      height="23px"
+                      alt="yt"
+                    />
                   </ListItemIcon>
                 </ListItem>
                 <ListItem
@@ -196,7 +212,11 @@ function Footer({ className, ...rest }) {
                   target="_blank"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
-                  <img src='/static/images/icons/social/lin.svg'  height='23px'/>
+                    <img
+                      src="/static/images/icons/social/lin.svg"
+                      height="23px"
+                      alt="linkedin"
+                    />
                   </ListItemIcon>
                 </ListItem>
               </List>

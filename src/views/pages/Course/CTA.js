@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     borderBlockColor: 'green',
     borderColor: 'green',
     '& .MuiOutlinedInput-notchedOutline': {
-        borderColor: '#F2F7FF'
+      borderColor: '#F2F7FF'
     }
   },
   text: {
@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
     },
     '&:hover': {
       backgroundColor: '#fff'
-    },
+    }
   }
 }));
 
@@ -127,13 +127,16 @@ function Process({ benefits, className, ...rest }) {
                 Request a Consultation
               </Typography>
 
-              <Typography style={{paddingBottom: '16px'}} variant="body1">
+              <Typography style={{ paddingBottom: '16px' }} variant="body1">
                 Setup a call with our counsellor and figure out what’s best for
                 you.
               </Typography>
 
               <ValidatorForm onSubmit={handleSubmit}>
-                <Typography variant='caption'>Full Name</Typography><Typography variant='caption' color='secondary'>*</Typography>
+                <Typography variant="caption">Full Name</Typography>
+                <Typography variant="caption" color="secondary">
+                  *
+                </Typography>
                 <TextValidator
                   key="name"
                   className={classes.textField}
@@ -146,7 +149,10 @@ function Process({ benefits, className, ...rest }) {
                   validators={['required']}
                   errorMessages={['This is a required field']}
                 />
-                <Typography variant='caption'>Email</Typography><Typography variant='caption' color='secondary'>*</Typography>
+                <Typography variant="caption">Email</Typography>
+                <Typography variant="caption" color="secondary">
+                  *
+                </Typography>
                 <TextValidator
                   key="email"
                   className={classes.textField}
@@ -162,7 +168,10 @@ function Process({ benefits, className, ...rest }) {
                     'Ender a valid Email'
                   ]}
                 />
-                <Typography variant='caption'>Contact Number</Typography><Typography variant='caption' color='secondary'>*</Typography>
+                <Typography variant="caption">Contact Number</Typography>
+                <Typography variant="caption" color="secondary">
+                  *
+                </Typography>
                 <TextValidator
                   key="phone"
                   className={classes.textField}
@@ -191,10 +200,10 @@ function Process({ benefits, className, ...rest }) {
                     Request
                   </Button>
                 ) : (
-                    <div className={classes.submissions}>
-                      <CircularProgress />
-                    </div>
-                  )}
+                  <div className={classes.submissions}>
+                    <CircularProgress />
+                  </div>
+                )}
               </ValidatorForm>
             </CardContent>
           </Card>
@@ -233,7 +242,7 @@ function Process({ benefits, className, ...rest }) {
                 Call Us
               </Typography>
 
-              <Button              
+              <Button
                 className={classes.actBtn}
                 fullWidth
                 variant="contained"

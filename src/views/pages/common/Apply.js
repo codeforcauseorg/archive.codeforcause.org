@@ -84,13 +84,13 @@ function Apply({ className, ...rest }) {
       <Grid container>
         <Typography
           variant="h3"
-          align='center'
+          align="center"
           style={{
             margin: '24px auto'
           }}
         >
           Tell Us What You Want To Learn Next
-            </Typography>
+        </Typography>
 
         <TextField
           className={classes.textDetails}
@@ -101,10 +101,15 @@ function Apply({ className, ...rest }) {
           fullWidth
         />
 
-        <Box mt={2} style={{width:'inherit', textAlign: 'center'}}>
-          <Button color="secondary" size="large" variant="contained" style={{margin: '0px auto'}} >
+        <Box mt={2} style={{ width: 'inherit', textAlign: 'center' }}>
+          <Button
+            color="secondary"
+            size="large"
+            variant="contained"
+            style={{ margin: '0px auto' }}
+          >
             Submit
-              </Button>
+          </Button>
         </Box>
       </Grid>
     </div>
