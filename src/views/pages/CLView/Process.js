@@ -20,6 +20,15 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       padding: 15
     }
+  },
+  stepper: {
+    padding: '20px',
+    [theme.breakpoints.down('md')]: {
+      padding: 0,
+      '& .MuiStepper-root': {
+        padding: '0px'
+      }
+    }
   }
 }));
 
@@ -37,7 +46,7 @@ function Process({ benefits, className, ...rest }) {
         >
           How to become Campus Leader
         </Typography>
-        <Grid container component="dl" style={{ padding: '20px' }}>
+        <Grid container component="dl" className={classes.stepper}>
           <ProcessSteppers />
         </Grid>
       </Container>
