@@ -1,0 +1,35 @@
+:root{
+    scrollbar-color:#000000 white !important;
+    scrollbar-width:thin !important;
+}
+::-webkit-scrollbar-track {
+    border: 1px solid gray;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}  
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+}  
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #000000;
+    animation: animate 6s linear infinite;
+}
+#recommendation_grid{
+    position:relative;
+    overflow: hidden;
+}
+.recommendation_slide{
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250%;
+  animation: slideshow 100s linear infinite; 
+}
+@keyframes slideshow {
+    0%    { left: 0%; }
+    50%  { left: -150%; }
+    100%  { left: -0%; }
+  }

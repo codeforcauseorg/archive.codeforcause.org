@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import './index.css';
 import {
   Grid,
   Typography,
@@ -138,12 +139,14 @@ export default function Recommendations({ recommendationsImages }) {
 
       <Grid container spacing={4}>
         <GridList
+          id="recommendation_grid"
           className={classes.gridList}
           cols={large ? 4 : medium ? 3.5 : small ? 2.7 : 1.4}
         >
           {recommendations.map((recommendation, index) => {
             return (
               <GridListTile
+                className="recommendation_slide"
                 key={index}
                 style={{
                   margin: '20px',
