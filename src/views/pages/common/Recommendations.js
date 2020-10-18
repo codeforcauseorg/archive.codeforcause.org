@@ -113,6 +113,9 @@ export default function Recommendations({ recommendationsImages }) {
   const medium = useMediaQuery('(min-width:900px)');
   const small = useMediaQuery('(min-width:600px)');
 
+  let topMargin = 0;
+  let bottomMargin = 0;
+
   return (
     <Grid container className={classes.heroContent}>
       {/* Hero unit */}
@@ -144,12 +147,20 @@ export default function Recommendations({ recommendationsImages }) {
           cols={large ? 4 : medium ? 3.5 : small ? 2.7 : 1.4}
         >
           {recommendations.map((recommendation, index) => {
+            if (index % 2 === 0) {
+              topMargin = '110px';
+              bottomMargin = '20px';
+            } else {
+              topMargin = '20px';
+              bottomMargin = '110px';
+            }
+
             return (
               <GridListTile
                 className="recommendation_slide"
                 key={index}
                 style={{
-                  margin: '20px',
+                  margin: `${topMargin} 20px ${bottomMargin} 20px`,
                   borderRadius: '5px',
                   height: 'auto',
                   overflow: 'hidden',
@@ -161,6 +172,9 @@ export default function Recommendations({ recommendationsImages }) {
                     <img
                       alt=""
                       width="70px"
+                      style={{
+                        paddingTop: '20px'
+                      }}
                       src={
                         index % 2 === 0
                           ? '/static/reviews/high.png'

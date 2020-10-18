@@ -58,17 +58,19 @@ function Apply({ className, ...rest }) {
         <Grid item lg={9} md={12} sm={12} xs={12} className={classes.applyleft}>
           <div className={classes.main}>
             <Typography
-              variant="h3"
+              variant="h2"
               style={{
-                marginBottom: '10px'
+                marginBottom: '10px',
+                fontWeight: 700
               }}
             >
               Lead a community at your campus
             </Typography>
             <Typography
-              variant="h3"
+              variant="h2"
               style={{
-                marginBottom: '10px'
+                marginBottom: '24px',
+                fontWeight: 700
               }}
             >
               powered by Code for Cause

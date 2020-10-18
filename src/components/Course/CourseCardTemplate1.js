@@ -2,7 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 
-import { Typography, Box, Card, CardContent } from '@material-ui/core';
+import {
+  Typography,
+  Box,
+  Card,
+  CardContent,
+  Container
+} from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -113,22 +119,24 @@ export default function CourseCard({ course }) {
               align="left"
               variant="h5"
               style={{
-                color: '#0085FF'
+                color: '#0085FF',
+                paddingTop: '14px'
               }}
             >
               {course.difficulty}
             </Typography>
             <Typography
               align="left"
+              variant="h6"
+              color="secondary"
               style={{
-                color: '#FF4C00',
-                marginBottom: '12px'
+                margin: '12px 0'
               }}
             >
               {course.domain}
             </Typography>
 
-            <Typography variant="h4" align="left">
+            <Typography variant="h4" align="left" style={{ fontWeight: 500 }}>
               {course.title}
             </Typography>
           </Box>
@@ -137,15 +145,39 @@ export default function CourseCard({ course }) {
         <ParallaxCarousel slides={course.slides} />
 
         <CardContent className={classes.cardContent}>
+          <Box mt={0} display="flex" flexDirection="row">
+            {course.tags.slice(0, 3).map((tag, index) => (
+              <Container
+                style={{
+                  margin: '0px 8px 18px 0px',
+                  padding: '4px 8px',
+                  border: '1px solid',
+                  borderColor: '#A6A6A6',
+                  borderRadius: '5px'
+                }}
+                variant="outlined"
+              >
+                <Typography
+                  style={{ color: '#a6a6a6', fontWeight: 500 }}
+                  variant="caption"
+                  noWrap={true}
+                >
+                  {tag}
+                </Typography>
+              </Container>
+            ))}
+          </Box>
+
           <Box display="flex" flexDirection="column">
             <Box
               display="flex"
               flexDirection="row"
               style={{
-                marginTop: '4px 0px'
+                marginBottom: '8px'
               }}
             >
               <Typography
+                variant="caption"
                 style={{
                   marginRight: '8px',
                   color: '#A3A3A3'
@@ -153,44 +185,27 @@ export default function CourseCard({ course }) {
               >
                 Duration
               </Typography>
-              <Typography>{course.duration}</Typography>
+              <Typography variant="caption">{course.duration}</Typography>
             </Box>
 
             <Box
               display="flex"
               flexDirection="row"
               style={{
-                marginTop: '4px 0px'
+                marginTop: '4px'
               }}
             >
               <Typography
+                variant="caption"
                 style={{
                   marginRight: '8px',
+                  marginBottom: '8px',
                   color: '#A3A3A3'
                 }}
               >
                 Upcoming
               </Typography>
-              <Typography>{course.upcoming}</Typography>
-            </Box>
-
-            <Box mt={2} display="flex" flexDirection="row">
-              {course.tags.slice(0, 3).map((tag, index) => (
-                <div
-                  style={{
-                    margin: '4px 8px 4px 0px',
-                    padding: '4px 8px',
-                    border: '1px solid',
-                    borderColor: '#A60000',
-                    borderRadius: '5px'
-                  }}
-                  variant="outlined"
-                >
-                  <Typography color="secondary" variant="caption" noWrap={true}>
-                    <Box fontWeight={400}>{tag}</Box>
-                  </Typography>
-                </div>
-              ))}
+              <Typography variant="caption">{course.upcoming}</Typography>
             </Box>
           </Box>
         </CardContent>
@@ -206,16 +221,18 @@ export default function CourseCard({ course }) {
             marginBottom: '16px'
           }}
         >
-          <Typography
-            align="center"
-            style={{
-              color: '#FFFFFF'
-            }}
-          >
-            <Box m={1} fontWeight={600}>
+          <Box m={1}>
+            <Typography
+              align="center"
+              variant="h6"
+              style={{
+                color: '#fff',
+                padding: '8px 0px'
+              }}
+            >
               Check Details
-            </Box>
-          </Typography>
+            </Typography>
+          </Box>
         </Link>
       </Card>
     </Box>
@@ -243,7 +260,7 @@ const ParallaxCarousel = ({ slides }) => {
               height: '160px',
               width: '100%',
               color: '#FFFFFF',
-              padding: '8px'
+              padding: '8px 0px'
             }}
           />
         </Box>

@@ -2,7 +2,7 @@ export default {
   fontFamily: ['"Montserrat"'].join(','),
 
   h1: {
-    fontWeight: 600,
+    fontWeight: 700,
     fontSize: 35,
     letterSpacing: '-0.24px'
   },
@@ -42,6 +42,9 @@ export default {
     letterSpacing: '-0.05px'
   },
   overline: {
+    fontWeight: 500
+  },
+  caption: {
     fontWeight: 500
   }
 };

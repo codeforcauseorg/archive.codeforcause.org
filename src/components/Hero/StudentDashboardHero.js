@@ -1,21 +1,20 @@
-import React from 'react';
-import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  Avatar,
   Box,
   Container,
   Grid,
   Hidden,
-  Typography,
-  makeStyles,
-  Avatar,
+  LinearProgress,
   ListItem,
-  LinearProgress
+  makeStyles,
+  Typography
 } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/styles';
+import clsx from 'clsx';
+import React from 'react';
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles(theme => ({
   root: {
     color: '#FFF',
@@ -204,7 +203,11 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'facebook-square']} size="2x" />
+            <img
+              src="/static/images/icons/socialwhite/fb.svg"
+              height="28.35px"
+              alt="icon"
+            />
           </ListItemIcon>
         </ListItem>
         <ListItem
@@ -214,10 +217,10 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon
-              style={{ borderRadius: '20px' }}
-              icon={['fab', 'twitter-square']}
-              size="2x"
+            <img
+              src="/static/images/icons/socialwhite/tw.svg"
+              height="28.35px"
+              alt="icon"
             />
           </ListItemIcon>
         </ListItem>
@@ -228,7 +231,11 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'instagram-square']} size="2x" />
+            <img
+              src="/static/images/icons/socialwhite/in.svg"
+              height="28.35px"
+              alt="icon"
+            />
           </ListItemIcon>
         </ListItem>
         <ListItem
@@ -238,7 +245,11 @@ function IconsList() {
           target="_blank"
         >
           <ListItemIcon className={classes.iconSocialMedia}>
-            <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" />
+            <img
+              src="/static/images/icons/socialwhite/li.svg"
+              height="28.35px"
+              alt="icon"
+            />
           </ListItemIcon>
         </ListItem>
       </List>
