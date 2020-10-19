@@ -1,7 +1,7 @@
 export const benefits = [
   {
     id: '1',
-    img: '/static/images/cl/benefits/b1.png',
+    img: '/static/images/cl/benefits/b1.svg',
     detail: 'Code for Cause VIP Swags. Oportunities to get special editions.'
   },
   {
@@ -17,7 +17,7 @@ export const benefits = [
   },
   {
     id: '4',
-    img: '/static/images/cl/benefits/b4.png',
+    img: '/static/images/cl/benefits/b4.svg',
     detail: 'Connect with our mentors and Industry experts linked with us.'
   }
 ];

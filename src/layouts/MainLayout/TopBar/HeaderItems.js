@@ -38,7 +38,11 @@ const HeaderItem = ({ title, link, active }) => {
           [classes.activeCls]: active
         })}
       >
-        <Typography variant="h6" color="textPrimary">
+        <Typography
+          variant="h6"
+          color="textPrimary"
+          style={{ fontWeight: 600 }}
+        >
           {title}
         </Typography>
       </Link>

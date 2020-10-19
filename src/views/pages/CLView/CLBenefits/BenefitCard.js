@@ -33,7 +33,7 @@ function BenefitCard({ benefit, className, ...rest }) {
         <Typography
           variant="h6"
           align="center"
-          style={{ marginTop: 20, color: '#FFFFFF' }}
+          style={{ marginTop: 20, color: '#FFFFFF', fontWeight: 600 }}
         >
           {benefit.detail}
         </Typography>

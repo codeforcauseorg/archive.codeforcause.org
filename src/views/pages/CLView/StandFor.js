@@ -91,7 +91,8 @@ function StandsFor({ className, ...rest }) {
                 src="/static/campusLeaders/standFor.png"
                 style={{
                   flexShrink: '0',
-                  minWidth: '100%'
+                  minWidth: '100%',
+                  borderRadius: '10px'
                 }}
               />
             </Grid>
