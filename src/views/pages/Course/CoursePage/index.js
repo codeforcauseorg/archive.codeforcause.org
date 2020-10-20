@@ -12,7 +12,9 @@ import Features from '../Features';
 import Process from '../Process';
 
 const useStyles = makeStyles(() => ({
-  root: {}
+  root: {
+    overflowX: 'hidden'
+  }
 }));
 
 function CoursePage({ course }) {

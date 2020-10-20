@@ -97,7 +97,7 @@ const useColorlibStepIconStyles = makeStyles({
     display: 'flex',
     borderRadius: '50%',
     justifyContent: 'center',
-    alignItems: 'center',    
+    alignItems: 'center'
   },
   active: {
     background: '#ffffff'
