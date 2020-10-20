@@ -8,7 +8,8 @@ import PublishBlog from './PublishBlog';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: '#f2f2f2'
+    backgroundColor: '#f2f2f2',
+    overflowX: 'hidden'
   },
   paddingTop: {
     padding: '50px auto 100px',

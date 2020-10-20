@@ -233,7 +233,7 @@ export default function Courses() {
               className={classes.gridList}
               display="flex"
               alignItems="center"
-              cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
+              cols={large ? 3 : medium ? 2.5 : small ? 2.0 : 1.04}
             >
               {Object.entries(foundation).map(([cname, course], index) => {
                 return (

@@ -59,6 +59,7 @@ function Apply({ className, ...rest }) {
           <div className={classes.main}>
             <Typography
               variant="h2"
+              align="center"
               style={{
                 marginBottom: '10px',
                 fontWeight: 700

@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     margin: '32px 100px',
     [theme.breakpoints.down('sm')]: {
-      margin: '32px 40px'
+      margin: '32px 24px'
     },
 
     '& .MuiOutlinedInput-root': {

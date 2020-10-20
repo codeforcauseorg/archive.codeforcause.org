@@ -56,7 +56,8 @@ function Hero({
             backgroundImage: `${backgroundImage}`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPositionY: 'center'
+            backgroundPositionY: 'center',
+            backgroundPositionX: 'center'
           }}
           {...rest}
         >
