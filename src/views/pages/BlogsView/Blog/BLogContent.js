@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Blogs() {
+export default function Blogs({ id }) {
   const classes = useStyles();
   const isMountedRef = useIsMountedRef();
   const [blog, setBlog] = useState(null);
@@ -61,14 +61,23 @@ export default function Blogs() {
     getEvents();
   }, [getEvents]);
 
-  if (blog === null) {
-    return null;
+  if (blog === null || blog[id] === undefined) {
+    return (
+      <div style={{ height: '50vh', width: '100vw' }}>
+        <Typography
+          align="center"
+          style={{ margin: 'auto', fontWeight: 800, fontSize: '2.25rem' }}
+        >
+          Loading
+        </Typography>
+      </div>
+    );
   }
 
   return (
     <div>
       <div className={classes.blogText}>
-        <Blog rawHtml={blog[7]} />
+        <Blog rawHtml={blog[id]} />
       </div>
       <div className={classes.remaining}>
         <Typography className={classes.extraPadding} variant="h2">

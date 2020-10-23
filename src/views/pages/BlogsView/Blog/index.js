@@ -5,12 +5,11 @@ import PublishBlog from '../PublishBlog';
 import BlogContent from './BLogContent';
 import Hero from './Hero';
 
-export default function Blog() {
+export default function Blog({ id, ...props }) {
   return (
     <Page title="Blog">
-      {/* <BlogCard /><BlogCard /><BlogCard /> */}
       <Hero />
-      <BlogContent />
+      <BlogContent id={props.match.params.id} />
       <PublishBlog />
       <Footer />
     </Page>

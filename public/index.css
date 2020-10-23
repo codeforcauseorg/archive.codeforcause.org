@@ -1,0 +1,15 @@
+@media only screen and (min-width: 800px) {
+  :root {
+    scrollbar-color: #000000 white !important;
+    scrollbar-width: thin !important;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #e2e2e2;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #000000;
+    animation: animate 6s linear infinite;
+  }
+}
