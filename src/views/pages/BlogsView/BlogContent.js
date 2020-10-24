@@ -1,4 +1,10 @@
-import { Container, Grid, Hidden, makeStyles } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  Hidden,
+  makeStyles,
+  Typography
+} from '@material-ui/core';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
@@ -72,9 +78,17 @@ export default function BlogContent() {
   }, [getEvents]);
 
   if (blog === null) {
-    return null;
+    return (
+      <div style={{ height: '50vh', width: '100vw' }}>
+        <Typography
+          align="center"
+          style={{ margin: ' 80px auto', fontWeight: 800, fontSize: '2.25rem' }}
+        >
+          Loading...
+        </Typography>
+      </div>
+    );
   }
-
   return (
     <div>
       <BlogHead blogHead={blog[0]} />

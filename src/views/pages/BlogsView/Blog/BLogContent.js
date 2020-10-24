@@ -94,6 +94,7 @@ export default function Blogs({ id }) {
               author={item.author}
               link={item.link}
               thumbnail={item.thumbnail}
+              category={item.categories[0]}
             />
           );
         })}
