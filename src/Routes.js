@@ -97,12 +97,15 @@ const renderRoutes = () => (
         )}
       />
       <Route
-        path="/blog"
+        path="/blog/:id"
         exact
         render={props => (
-          <MainLayout>
-            <Blog {...props} />
-          </MainLayout>
+          <>
+            <ScrollReset />
+            <MainLayout>
+              <Blog {...props} />
+            </MainLayout>
+          </>
         )}
       />
 

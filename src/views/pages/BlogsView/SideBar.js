@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Typography, makeStyles, Box } from '@material-ui/core';
-import blogs from '../../../data/blogs';
+import { Link } from 'react-router-dom';
+// import blogs from '../../../data/blogs';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,8 +28,8 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function SideBar() {
-  return <SideBarItems blogs={blogs} />;
+function SideBar({ blog }) {
+  return <SideBarItems blogs={blog} />;
 }
 
 function SideBarItems({ blogs, flat }) {
@@ -59,7 +60,7 @@ function SideBarItems({ blogs, flat }) {
             Popular Among Readers
           </Typography>
           {blogs.map((blog, index) => {
-            return <Blog blog={blog} />;
+            return <Blog blog={blog} index={index} />;
           })}
         </Box>
       </Container>
@@ -67,31 +68,40 @@ function SideBarItems({ blogs, flat }) {
   );
 }
 
-function Blog({ blog }) {
+function Blog({ blog, index }) {
   const classes = useStyles();
   return (
     <Box display="inline-flex" flexDirection="column" className={classes.box}>
-      <img alt={blog.title} src={blog.img} className={classes.img} />
+      <img alt={blog.title} src={blog.thumbnail} className={classes.img} />
       <Typography variant="h6" color="secondary">
-        {blog.title}
+        {blog.categories[0]}
       </Typography>
-      <Typography
-        variant="body1"
-        style={{ fontWeight: 600, fontSize: '20px', padding: '8px 12px 8px 0' }}
+      <Link
+        to={`blog/${index + 5}`}
+        style={{ textDecoration: 'none', color: '#fff' }}
       >
-        {blog.desc}
-      </Typography>
-      <Typography variant="caption">
-        {blog.date}
-        {' | '}
-        {blog.time}
-      </Typography>
-      <Typography
-        variant="caption"
-        style={{ fontWeight: 700, paddingTop: '8px' }}
-      >
-        By {blog.author}
-      </Typography>
+        <Typography
+          variant="body1"
+          style={{
+            fontWeight: 600,
+            fontSize: '20px',
+            padding: '8px 12px 8px 0'
+          }}
+        >
+          {blog.title}
+        </Typography>
+        <Typography variant="caption">
+          {'Published on '}
+          {blog.pubDate.split(' ')[0]}
+        </Typography>
+        <Typography
+          variant="caption"
+          display="block"
+          style={{ fontWeight: 700, paddingTop: '8px' }}
+        >
+          By {blog.author}
+        </Typography>
+      </Link>
     </Box>
   );
 }

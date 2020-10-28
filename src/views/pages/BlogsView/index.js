@@ -1,12 +1,10 @@
+import { makeStyles } from '@material-ui/core';
 import React from 'react';
-import Hero from './Hero';
 import Page from '../../../components/Page';
-import BlogHead from './BlogHead';
-import { Container, Grid, Hidden, makeStyles } from '@material-ui/core';
-import BlogItem from './BlogItem';
-import SideBar from './SideBar';
-import PublishBlog from './PublishBlog';
 import Footer from '../common/Footer';
+import BlogContent from './BlogContent';
+import Hero from './Hero';
+import PublishBlog from './PublishBlog';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,22 +27,7 @@ export default function BlogsView() {
     <div>
       <Page className={classes.root} title="CFC Blogs">
         <Hero />
-        <BlogHead />
-        <Container className={classes.paddingTop}>
-          <Grid container justify="space-between">
-            <Grid item md={8} sm={12}>
-              <BlogItem />
-              <BlogItem />
-              <BlogItem />
-              <BlogItem />
-            </Grid>
-            <Hidden smDown>
-              <Grid item md={4}>
-                <SideBar />
-              </Grid>
-            </Hidden>
-          </Grid>
-        </Container>
+        <BlogContent />
         <PublishBlog />
         <Footer />
       </Page>

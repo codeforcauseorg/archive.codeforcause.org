@@ -1,6 +1,5 @@
 import { Box, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,18 +23,18 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function BlogCard({ title, link, author, thumbnail }) {
+export default function BlogCard({ title, link, author, thumbnail, category }) {
   const classes = useStyles();
 
   return (
-    <Link to={link} className={classes.link}>
+    <a href={link} className={classes.link}>
       <Paper elevation={3} className={classes.root}>
         <Typography
           className={classes.extraPadding}
           variant="h6"
           color="secondary"
         >
-          Experience
+          {category}
         </Typography>
         <Grid container style={{ flex: '1 1 auto' }}>
           <Grid item xs={7} md={9}>
@@ -56,6 +55,6 @@ export default function BlogCard({ title, link, author, thumbnail }) {
           </Grid>
         </Grid>
       </Paper>
-    </Link>
+    </a>
   );
 }
