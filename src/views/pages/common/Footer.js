@@ -1,14 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import {
   Container,
   Grid,
   Typography,
   makeStyles,
-  Link
+  Link,
+  Hidden
 } from '@material-ui/core';
 import Logo from 'src/components/Logo';
 import List from '@material-ui/core/List';
@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: '#F2F7FF',
     paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(3),
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('md')]: {
@@ -60,10 +61,10 @@ const useStyles = makeStyles(theme => ({
   },
   centerCls: {
     paddingLeft: '5px',
-    paddingRight: '5px'
+    paddingRight: '5px',
+    paddingTop: '5px'
   },
   circleCls: {
-    // padding: '10px',
     backgroundColor: '#fff',
     color: '#000',
     // border: '2px solid red',
@@ -79,183 +80,207 @@ const useStyles = makeStyles(theme => ({
   copyRightPadding: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(3)
+  },
+  flexContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 0,
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'row'
+    }
+  },
+  extremeFooter: {
+    color: '#8A8A8A',
+    backgroundColor: '#EBF3FF',
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    paddingLeft: 70,
+    paddingRight: 70,
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 15,
+      paddingRight: 15
+    }
   }
 }));
 
 function Footer({ className, ...rest }) {
   const classes = useStyles();
-  const flexContainer = {
-    display: 'flex',
-    flexDirection: 'row',
-    padding: 0
-  };
 
   return (
-    <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="lg">
-        <Grid container component="dl">
-          <Grid item xs={12} md={4} className={classes.extraMarginTop}>
-            <Logo className={classes.logo} />
-          </Grid>
-          <Grid item xs={12} md={4} className={classes.extraMarginTop}>
-            <Typography variant="h4" gutterBottom>
-              Contact us
-            </Typography>
-            <Grid item xs={3} md={3} className={classes.extraMargin}>
-              <List style={flexContainer}>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="mailto:team@codeforcause.org"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon="envelope" size="lg" />
-                  </ListItemIcon>
-                  <ListItemText
-                    className={classes.iconSocialMedia}
-                    primary="team@codeforcause.org"
-                  />
-                </ListItem>
-              </List>
+    <div>
+      <div className={clsx(classes.root, className)} {...rest}>
+        <Container maxWidth="lg">
+          <Grid container component="dl">
+            <Grid item xs={12} md={4} className={classes.extraMarginTop}>
+              <Logo className={classes.logo} />
             </Grid>
-          </Grid>
-          <Grid item xs={12} md={2} className={classes.extraMarginTop}>
-            <Typography variant="h4" gutterBottom>
-              Our Blog
-            </Typography>
-            <Grid item xs={3} md={2} className={classes.extraMargin}>
-              <List style={flexContainer}>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="https://medium.com/code-for-cause"
-                  target="_blank"
+            <Grid item xs={12} md={4} className={classes.extraMarginTop}>
+              <Typography variant="h4" gutterBottom>
+                Contact us
+              </Typography>
+              <Grid item xs={3} md={3} className={classes.extraMargin}>
+                <List
+                  className={classes.flexContainer}
+                  style={{ flexDirection: 'column' }}
                 >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <FontAwesomeIcon icon={['fab', 'medium']} size="lg" />
-                  </ListItemIcon>
-                  <ListItemText
-                    className={classes.iconSocialMedia}
-                    primary="Medium"
-                  />
-                </ListItem>
-              </List>
+                  <ListItem
+                    className={classes.centerCls}
+                    component="a"
+                    href="mailto:team@codeforcause.org"
+                  >
+                    <ListItemIcon className={classes.iconSocialMedia}>
+                      <img
+                        src={`/static/images/icons/social/mail.svg`}
+                        height="23px"
+                        alt="mail"
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      className={classes.iconSocialMedia}
+                      primary="team@codeforcause.org"
+                    />
+                  </ListItem>
+                  <ListItem
+                    className={classes.centerCls}
+                    component="a"
+                    href="/terms"
+                  >
+                    <ListItemText
+                      className={classes.iconSocialMedia}
+                      primary="Terms Of Use"
+                      style={{ whiteSpace: 'nowrap' }}
+                    />
+                  </ListItem>
+                  <ListItem
+                    className={classes.centerCls}
+                    component="a"
+                    href="/privacy"
+                  >
+                    <ListItemText
+                      className={classes.iconSocialMedia}
+                      primary="Privacy Policy"
+                      style={{ whiteSpace: 'nowrap' }}
+                    />
+                  </ListItem>
+                  <ListItem
+                    className={classes.centerCls}
+                    component="a"
+                    href="/refundpolicies"
+                  >
+                    <ListItemText
+                      className={classes.iconSocialMedia}
+                      primary="Refund & Cancellation Policy"
+                      style={{ whiteSpace: 'nowrap' }}
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
             </Grid>
-          </Grid>
+            <Grid item xs={12} md={2} className={classes.extraMarginTop}>
+              <Typography variant="h4" gutterBottom>
+                Our Blog
+              </Typography>
+              <Grid item xs={3} md={2} className={classes.extraMargin}>
+                <List className={classes.flexContainer}>
+                  <ListItem
+                    className={classes.centerCls}
+                    component="a"
+                    href="https://medium.com/code-for-cause"
+                    target="_blank"
+                  >
+                    <ListItemIcon className={classes.iconSocialMedia}>
+                      <FontAwesomeIcon icon={['fab', 'medium']} size="lg" />
+                    </ListItemIcon>
+                    <ListItemText
+                      className={classes.iconSocialMedia}
+                      primary="Medium"
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>
 
-          <Grid item xs={12} md={2} className={classes.extraMarginTop}>
-            <Typography variant="h4" gutterBottom>
-              Follow us on
-            </Typography>
-            <Grid item xs={3} md={3} className={classes.extraMargin}>
-              <List style={flexContainer}>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="https://www.facebook.com/codeforcauseorg"
-                  target="_blank"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <img
-                      src="/static/images/icons/social/fb.svg"
-                      height="23px"
-                      alt="fb"
-                    />
-                  </ListItemIcon>
-                </ListItem>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="https://twitter.com/codeforcauseIn"
-                  target="_blank"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <img
-                      src="/static/images/icons/social/tw.svg"
-                      height="23px"
-                      alt="tw"
-                    />
-                  </ListItemIcon>
-                </ListItem>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="https://www.instagram.com/codeforcause/"
-                  target="_blank"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <img
-                      src="/static/images/icons/social/ins.svg"
-                      height="23px"
-                      alt="insta"
-                    />
-                  </ListItemIcon>
-                </ListItem>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="https://www.youtube.com/channel/UCfv8cds8AfIM3UZtAWOz6Gg"
-                  target="_blank"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <img
-                      src="/static/images/icons/social/yt.svg"
-                      height="23px"
-                      alt="yt"
-                    />
-                  </ListItemIcon>
-                </ListItem>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
-                  href="https://www.linkedin.com/company/codeforcauseorg/"
-                  target="_blank"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <img
-                      src="/static/images/icons/social/lin.svg"
-                      height="23px"
-                      alt="linkedin"
-                    />
-                  </ListItemIcon>
-                </ListItem>
-              </List>
+            <Grid item xs={12} md={2} className={classes.extraMarginTop}>
+              <Typography variant="h4" gutterBottom>
+                Follow us on
+              </Typography>
+              <Grid item xs={3} md={3} className={classes.extraMargin}>
+                <List className={classes.flexContainer}>
+                  <ListIcons
+                    link="https://www.facebook.com/codeforcauseorg"
+                    icon="fb"
+                    text="Facebook"
+                  />
+                  <ListIcons
+                    link="https://twitter.com/codeforcauseIn"
+                    icon="tw"
+                    text="Twitter"
+                  />
+                  <ListIcons
+                    link="https://www.instagram.com/codeforcause/"
+                    icon="ins"
+                    text="Instagram"
+                  />
+                  <ListIcons
+                    link="https://www.linkedin.com/company/codeforcauseorg/"
+                    icon="lin"
+                    text="LinkedIn"
+                  />
+                  <ListIcons
+                    link="https://t.me/codeforcause"
+                    icon="tele"
+                    text="Telegram"
+                  />
+                  <ListIcons
+                    link="https://www.youtube.com/channel/UCfv8cds8AfIM3UZtAWOz6Gg"
+                    icon="yt"
+                    text="YouTube"
+                  />
+                </List>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid className={classes.copyRightPadding}>
-          <Typography display="block" variant="body2" color="textSecondary">
-            {'Copyright © '}
-            {new Date().getFullYear()}{' '}
-            <Link color="inherit" href="https://codeforcause.org">
-              Code For Cause
-            </Link>
-            {'. All rights reserved.'}
-          </Typography>
-
-          <Typography
-            display="block"
-            guitterBottom
-            variant="body2"
-            color="textSecondary"
+        </Container>
+      </div>
+      <Grid xs={12} className={classes.extremeFooter}>
+        <Typography display="block" variant="body2">
+          {'Copyright © '}
+          {new Date().getFullYear()}{' '}
+          <Link
+            style={{ textDecoration: 'none', color: '#8A8A8A' }}
+            href="https://codeforcause.org"
           >
-            <Link color="inherit" component={RouterLink} to="/privacy">
-              Privacy Policy
-            </Link>
-            {' | '}
-
-            <Link color="inherit" component={RouterLink} to="/terms">
-              Terms of Use
-            </Link>
-            {' | '}
-
-            <Link color="inherit" component={RouterLink} to="/refundpolicies">
-              Refund &amp; Cancellation Policy
-            </Link>
-          </Typography>
-        </Grid>
-      </Container>
+            {' '}
+            Code For Cause
+          </Link>
+          {'. All rights reserved.'}
+        </Typography>
+      </Grid>
     </div>
+  );
+}
+
+function ListIcons({ link, icon, text }) {
+  const classes = useStyles();
+
+  return (
+    <ListItem
+      className={classes.centerCls}
+      component="a"
+      href={link}
+      target="_blank"
+    >
+      <ListItemIcon className={classes.iconSocialMedia}>
+        <img
+          src={`/static/images/icons/social/${icon}.svg`}
+          height="23px"
+          alt={icon}
+        />
+      </ListItemIcon>
+      <Hidden smDown>
+        <ListItemText className={classes.iconSocialMedia} primary={text} />
+      </Hidden>
+    </ListItem>
   );
 }
 
