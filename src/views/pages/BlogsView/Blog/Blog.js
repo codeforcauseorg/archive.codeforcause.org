@@ -45,7 +45,10 @@ const useStyles = makeStyles(theme => ({
     },
     '& img': {
       width: '70%',
-      margin: 'auto'
+      margin: 'auto',
+      [theme.breakpoints.down('sm')]: {
+        width: '90%'
+      }
     },
     '& ul,ol': {
       marginLeft: '50px',

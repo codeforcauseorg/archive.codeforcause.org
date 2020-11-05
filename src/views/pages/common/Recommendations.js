@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
-import './index.css';
 import {
   Grid,
   Typography,
@@ -21,9 +20,9 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2)
   },
   heroContent: {
-    padding: theme.spacing(10, 10, 10),
+    padding: theme.spacing(10, 10, 0),
     [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(10, 3, 10)
+      padding: theme.spacing(10, 3, 0)
     }
   },
   heroButtons: {
@@ -37,7 +36,12 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'nowrap',
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
+    position: 'relative',
+    overflow: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      overflow: 'scroll'
+    }
   },
   card: {
     height: '100%',
@@ -90,7 +94,8 @@ const useStyles = makeStyles(theme => ({
     color: '#000'
   },
   textHighlight: {
-    color: '#A60000'
+    color: '#A60000',
+    paddingTop: '20px'
   },
   avatarLarge: {
     width: '50px',
@@ -103,6 +108,28 @@ const useStyles = makeStyles(theme => ({
   recommenderDetail: {
     color: '#9C9C9C',
     textAlign: 'center'
+  },
+  '@keyframes slideshow': {
+    '0%': {
+      left: '10%'
+    },
+    '50%': {
+      left: '-150%'
+    },
+    '100%': {
+      left: '10%'
+    }
+  },
+  recommendation_slide: {
+    position: 'inherit',
+    left: 0,
+    top: 0,
+    height: '100%',
+    width: '250%',
+    animation: '$slideshow 150s linear infinite',
+    [theme.breakpoints.down('sm')]: {
+      animation: '$slideshow 160s linear infinite'
+    }
   }
 }));
 
@@ -117,16 +144,15 @@ export default function Recommendations({ recommendationsImages }) {
   let bottomMargin = 0;
 
   return (
-    <Grid container className={classes.heroContent}>
-      {/* Hero unit */}
-
+    <Grid container>
       <Grid
+        className={classes.heroContent}
         container
         style={{
           marginBottom: '50px'
         }}
       >
-        <Grid item lg={11} md={11} sm={12}>
+        <Grid item lg={10} md={10} sm={12}>
           <Typography variant="h2" gutterBottom>
             <Box className={classes.text}>What Do Our Students Say</Box>
             <Box className={classes.textHighlight}>About Us</Box>
@@ -140,11 +166,11 @@ export default function Recommendations({ recommendationsImages }) {
         </Hidden>
       </Grid>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} style={{ paddingBottom: '60px' }}>
         <GridList
           id="recommendation_grid"
           className={classes.gridList}
-          cols={large ? 4 : medium ? 3.5 : small ? 2.7 : 1.4}
+          cols={large ? 4.4 : medium ? 3.8 : small ? 2.7 : 1.5}
         >
           {recommendations.map((recommendation, index) => {
             if (index % 2 === 0) {
@@ -157,7 +183,7 @@ export default function Recommendations({ recommendationsImages }) {
 
             return (
               <GridListTile
-                className="recommendation_slide"
+                className={classes.recommendation_slide}
                 key={index}
                 style={{
                   margin: `${topMargin} 20px ${bottomMargin} 20px`,

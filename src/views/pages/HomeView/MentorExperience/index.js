@@ -11,8 +11,8 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 70,
     paddingRight: 70,
     [theme.breakpoints.down('md')]: {
-      paddingLeft: 15,
-      paddingRight: 15
+      paddingLeft: 0,
+      paddingRight: 0
     },
     color: '#000000'
   },
@@ -20,6 +20,12 @@ const useStyles = makeStyles(theme => ({
     padding: 30,
     [theme.breakpoints.down('md')]: {
       padding: 15
+    }
+  },
+  responsivePadding: {
+    padding: '20px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0px'
     }
   }
 }));
@@ -42,7 +48,7 @@ function MentorExperience({ experience, className, ...rest }) {
         >
           Learn from the Best!
         </Typography>
-        <Grid container component="dl" style={{ padding: '20px' }}>
+        <Grid container component="dl" className={classes.responsivePadding}>
           {experience.map((exp, i) => (
             <Grid
               item

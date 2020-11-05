@@ -78,7 +78,12 @@ function Hero({
               height="100%"
               className={clsx(classes.extraPadding)}
             >
-              <Typography variant="h1" gutterBottom>
+              <Typography
+                align="left"
+                variant="h1"
+                gutterBottom
+                style={{ width: '110%' }}
+              >
                 {title}
               </Typography>
               <Typography variant="h1"> {title2}</Typography>

@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#fff',
     padding: theme.spacing(20, 10, 20),
     [theme.breakpoints.down('sm')]: {
-      padding: theme.spacing(20, 5, 20)
+      padding: theme.spacing(20, 3, 20)
     }
   },
   heading: {

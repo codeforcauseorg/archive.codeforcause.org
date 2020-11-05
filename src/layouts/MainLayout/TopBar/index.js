@@ -109,6 +109,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
     <div>
       <RouterLink
         to="/"
+        onClick={toggleDrawer('right', false)}
         style={{ position: 'absolute', left: '20px', top: '3%' }}
       >
         <Logo className={classes.logo} />

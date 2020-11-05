@@ -20,7 +20,9 @@ import Courses from './Courses';
 import Recommendations from '../common/Recommendations';
 
 const useStyles = makeStyles(() => ({
-  root: {}
+  root: {
+    overflowX: 'hidden'
+  }
 }));
 
 function HomeView() {

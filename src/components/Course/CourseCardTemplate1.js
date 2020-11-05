@@ -1,14 +1,7 @@
-import React from 'react';
+import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ParallaxSlide from '@mui-treasury/components/slide/parallax';
-
-import {
-  Typography,
-  Box,
-  Card,
-  CardContent,
-  Container
-} from '@material-ui/core';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -41,7 +34,9 @@ const useStyles = makeStyles(theme => ({
     height: 'auto'
     // paddingTop: "56.25%", // 16:9
   },
-  cardContent: {},
+  cardContent: {
+    padding: '16px 0px 16px 16px'
+  },
   chipActions: {
     display: 'block'
   },
@@ -99,6 +94,14 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)'
+  },
+  bottomCardContent: {
+    margin: '0px 8px 18px 0px',
+    padding: '4px 8px',
+    border: '1px solid',
+    borderColor: '#A6A6A6',
+    borderRadius: '5px',
+    width: 'min-content'
   }
 }));
 
@@ -113,7 +116,7 @@ export default function CourseCard({ course }) {
           maxWidth: '320px'
         }}
       >
-        <CardContent className={classes.cardContent}>
+        <CardContent>
           <Box display="flex" flexDirection="column">
             <Typography
               align="left"
@@ -145,18 +148,16 @@ export default function CourseCard({ course }) {
         <ParallaxCarousel slides={course.slides} />
 
         <CardContent className={classes.cardContent}>
-          <Box mt={0} display="flex" flexDirection="row">
+          <Box
+            mt={0}
+            mr={0}
+            display="flex"
+            flexDirection="row"
+            flexWrap="wrap"
+            style={{ width: '102%' }}
+          >
             {course.tags.slice(0, 3).map((tag, index) => (
-              <Container
-                style={{
-                  margin: '0px 8px 18px 0px',
-                  padding: '4px 8px',
-                  border: '1px solid',
-                  borderColor: '#A6A6A6',
-                  borderRadius: '5px'
-                }}
-                variant="outlined"
-              >
+              <div className={classes.bottomCardContent} variant="outlined">
                 <Typography
                   style={{ color: '#a6a6a6', fontWeight: 500 }}
                   variant="caption"
@@ -164,7 +165,7 @@ export default function CourseCard({ course }) {
                 >
                   {tag}
                 </Typography>
-              </Container>
+              </div>
             ))}
           </Box>
 

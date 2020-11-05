@@ -11,7 +11,9 @@ import CTA from './CTA';
 import Apply from './Apply';
 
 const useStyles = makeStyles(() => ({
-  root: {}
+  root: {
+    overflowX: 'hidden'
+  }
 }));
 
 function CLView() {

@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import clsx from 'clsx';
-import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ProcessSteppers from './ProcessSteppers';
 
 const useStyles = makeStyles(theme => ({
@@ -23,11 +23,18 @@ const useStyles = makeStyles(theme => ({
   },
   stepper: {
     padding: '20px',
-    [theme.breakpoints.down('md')]: {
-      padding: 0,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 0,
+      paddingRight: 0,
       '& .MuiStepper-root': {
-        padding: '0px'
+        padding: '20px 0px'
       }
+    }
+  },
+  responsivePadding: {
+    padding: '0px 16px',
+    [theme.breakpoints.down('sm')]: {
+      padding: 0
     }
   }
 }));
@@ -37,7 +44,7 @@ function Process({ benefits, className, ...rest }) {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="lg">
+      <div className={classes.responsivePadding}>
         <Typography
           style={{ marginTop: '10px' }}
           variant="h2"
@@ -49,7 +56,7 @@ function Process({ benefits, className, ...rest }) {
         <Grid container component="dl" className={classes.stepper}>
           <ProcessSteppers />
         </Grid>
-      </Container>
+      </div>
     </div>
   );
 }
