@@ -6,7 +6,7 @@ export const features = {
       image: '/static/images/courses/features/oneonone.png'
     },
     {
-      line1: 'Quik Doubt ',
+      line1: 'Quick Doubt ',
       line2: 'Resolution',
       image: '/static/images/courses/features/doubts.png'
     },

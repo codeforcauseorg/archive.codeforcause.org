@@ -148,7 +148,9 @@ ColorlibStepIcon.propTypes = {
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    overflowX: 'scroll'
+    [theme.breakpoints.down('xs')]: {
+      overflowX: 'scroll'
+    }
   },
   button: {
     marginRight: theme.spacing(1)

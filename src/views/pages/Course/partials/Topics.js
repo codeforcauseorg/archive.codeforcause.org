@@ -1,14 +1,28 @@
-import React from 'react';
 import {
-  Grid,
-  Typography,
-  Hidden,
   Box,
   Collapse,
-  IconButton
+  Grid,
+  Hidden,
+  IconButton,
+  makeStyles,
+  Typography
 } from '@material-ui/core';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import clsx from 'clsx';
+import React from 'react';
+
+const useStyles = makeStyles(theme => ({
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.short
+    })
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)'
+  }
+}));
 
 export default function Topics({ course }) {
   return (
@@ -47,6 +61,7 @@ export default function Topics({ course }) {
 
 function TopicDropBox({ topic, topicIndex }) {
   const [expanded, setExpanded] = React.useState(false);
+  const classes = useStyles();
 
   return (
     <Box
@@ -57,9 +72,6 @@ function TopicDropBox({ topic, topicIndex }) {
         padding: '8px 16px',
         margin: '8px 0px',
         flexDirection: 'column'
-      }}
-      onClick={() => {
-        setExpanded(!expanded);
       }}
     >
       <Box
@@ -77,7 +89,7 @@ function TopicDropBox({ topic, topicIndex }) {
             width: '100%'
           }}
         >
-          <Box fontWeight={500}>{`Topic ${topicIndex + 1} : ${
+          <Box fontWeight={500}>{`Topic ${topicIndex + 1}: ${
             topic.title
           }`}</Box>
         </Typography>
@@ -85,23 +97,37 @@ function TopicDropBox({ topic, topicIndex }) {
           <Box
             display="flex"
             alignItems="center"
+            justifyContent="flex-end"
             style={{
-              width: '200px',
+              width: '180px',
+              whiteSpace: 'nowrap',
               color: '#A60000'
             }}
           >
-            <Typography variant="body1">
+            <Typography align="left" variant="body1" style={{ width: '100%' }}>
               <Box>{topic.classes}</Box>
             </Typography>
-            <IconButton>
-              {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            <IconButton
+              onClick={() => {
+                setExpanded(!expanded);
+              }}
+            >
+              <ExpandMoreIcon
+                className={clsx(classes.expand, {
+                  [classes.expandOpen]: expanded
+                })}
+              />
             </IconButton>
           </Box>
         </Hidden>
 
         <Hidden smUp>
-          <IconButton>
-            {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          <IconButton
+            onClick={() => {
+              setExpanded(!expanded);
+            }}
+          >
+            <ExpandMoreIcon />
           </IconButton>
         </Hidden>
       </Box>
