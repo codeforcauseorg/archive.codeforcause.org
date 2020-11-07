@@ -13,7 +13,7 @@ export default {
   },
   h3: {
     fontWeight: 600,
-    fontSize: 24,
+    fontSize: 26,
     letterSpacing: '-0.06px'
   },
   h4: {
