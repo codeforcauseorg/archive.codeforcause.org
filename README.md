@@ -1,8 +1,13 @@
 [![Discord](https://img.shields.io/discord/717102560909197493.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/jBHPxUz)
+[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/codeforcause) 
+[![Twitter URL](https://img.shields.io/twitter/follow/codeforcausein?style=social&logo=twitter)](https://twitter.com/codeforcausein)
+
+![](./public/static/logo/logo.png)
 
 # Code for Cause home website
 
 ## Contributions and PR
+ [![GitHub issues by-label](https://img.shields.io/github/issues/codeforcauseorg/codeforcause.org/good%20first%20issue)](https://github.com/codeforcauseorg/codeforcause.org/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 - PRs should be generated against `development`.
 - Remember to run `npm run format` before creating pull request.
