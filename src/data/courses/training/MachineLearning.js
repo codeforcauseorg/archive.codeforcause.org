@@ -1,23 +1,23 @@
 export const machineLearning = {
-  difficulty: 'Intermediate',
-  duration: '30 Lectures',
+  difficulty: 'Six Months Training ',
+  duration: '70 Live Lectures',
   level: 'Level 2',
-  link: '/machine-learning-using-python',
-  domain: 'Artificial Intelligence',
-  title: 'Master Machine Learning using Python',
-  upcoming: 'Oct 20th',
+  link: '/six-months-machine-learning-with-python',
+  domain: 'Interview Targetted Prepration',
+  title: 'DS Algo and Machine Learning with Python',
+  upcoming: 'Jan 15th',
   mentors: ['anuj', 'kunal'],
   schedule: [
     {
-      courseId: 'mlpy0121',
-      dates: '10th Jan - 10th Apr',
-      days: 'Sat, Sun, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      courseId: 'mlpy1020',
+      dates: '15th Jan - 30th Jun',
+      days: 'Sat, Sun, Thur',
+      timing: '06:00 PM - 8:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
-      active: false
-    }
+      priceCut: '₹ 33,000',
+      price: '₹ 9,900',
+      active: true
+    },
   ],
   projects: [
     {
@@ -45,11 +45,9 @@ export const machineLearning = {
       img: '/static/images/courses/projects/ml/gym.jpg'
     }
   ],
-
   sections: [
     {
       title: 'section 1',
-
   topics: [
     {
       title: 'Revising Python Fundamentals',
@@ -127,7 +125,7 @@ export const machineLearning = {
         'Training on OpenAI Gym Simulaters'
       ]
     }
-  ]
+  ],
 }],
   slides: [
     {

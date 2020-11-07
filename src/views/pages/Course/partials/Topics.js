@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Topics({ course }) {
+
+  const [expanded, setExpanded] = React.useState(0);
+
   return (
     <Grid container>
       <Grid
@@ -50,12 +53,52 @@ export default function Topics({ course }) {
             Topics To Be Covered
           </Typography>
 
-          {course.topics.map((topic, topicIndex) => {
-            return <TopicDropBox topic={topic} topicIndex={topicIndex} />;
+          {course.sections.map((section, sectionIndex) => {
+            console.log(section);
+            return (
+              <Box m={1}>
+                <SectionDropBox section={section} sectionIndex={sectionIndex} expanded={expanded} setExpanded={setExpanded}/>
+              </Box>
+              
+            );
           })}
         </Box>
       </Grid>
     </Grid>
+  );
+}
+
+function SectionDropBox({ section, sectionIndex, expanded, setExpanded }) {
+  
+
+  return (
+    <Box
+      style={{
+        background: '#F1F4FE',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+      onClick={() => {
+        setExpanded(sectionIndex);
+      }}
+    >
+      <Box display="flex" flexDirection="row" alignItems="center" style={{
+        padding : "16px"
+      }}>
+        <Typography
+            variant="h4"
+        >
+          {"Section : " + section.title}
+        </Typography>
+      </Box>
+
+      <Collapse in={sectionIndex === expanded}>
+        {section.topics.map((topic, topicIndex) => {
+          return <TopicDropBox topic={topic} topicIndex={topicIndex} />;
+        })}
+      </Collapse>
+    </Box>
   );
 }
 

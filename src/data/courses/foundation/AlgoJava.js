@@ -9,16 +9,6 @@ export const algoJava = {
   mentors: ['anuj', 'ekta'],
   schedule: [
     {
-      courseId: 'jds1020',
-      dates: '17th Oct - 16th Dec',
-      days: 'Sat, Sun, Tue, Thur',
-      timing: '06:00 PM - 08:00 PM (IST)',
-      link: '',
-      priceCut: '₹ 14,999',
-      price: '₹ 4,850',
-      active: true
-    },
-    {
       courseId: 'jds0121',
       dates: '10th Jan - 10th Apr',
       days: 'Sat, Sun, Wed',
@@ -51,6 +41,10 @@ export const algoJava = {
       img: '/static/images/courses/projects/git.png'
     }
   ],
+
+  sections: [
+    {
+      title: 'section 1',
   topics: [
     {
       title: 'Getting started with Java',
@@ -221,6 +215,7 @@ export const algoJava = {
       ]
     }
   ],
+}],
   slides: [
     {
       heading: '',

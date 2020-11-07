@@ -25,6 +25,9 @@ export const devPython = {
       img: '/static/images/courses/projects/sudoku.jpg'
     }
   ],
+  sections: [
+    {
+      title: 'section 1',
   topics: [
     {
       title: 'Getting started with Python',
@@ -136,6 +139,7 @@ export const devPython = {
       ]
     }
   ],
+}],
   slides: [
     {
       heading: '',

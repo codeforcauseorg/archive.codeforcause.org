@@ -9,16 +9,6 @@ export const algoPython = {
   mentors: ['kunal', 'anuj'],
   schedule: [
     {
-      courseId: 'pds1020',
-      dates: '14th Oct - 16th Dec',
-      days: 'Sat, Sun, Tue, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
-      link: '',
-      priceCut: '₹ 14,999',
-      price: '₹ 4,850',
-      active: true
-    },
-    {
       courseId: 'pds0121',
       dates: '10th Jan - 10th Apr',
       days: 'Sat, Sun, Wed',
@@ -50,15 +40,10 @@ export const algoPython = {
       title: 'Git Version Control Replica',
       img: '/static/images/courses/projects/git.png'
     }
-    // {
-    //   title: 'Crossword Puzzle Game',
-    //   img: '/static/images/courses/projects/git.png'
-    // },
-    // {
-    //   title: 'Automatic Episode Player',
-    //   img: '/static/images/courses/projects/git.png'
-    // },
   ],
+  sections: [
+    {
+      title: 'section 1',
   topics: [
     {
       title: 'Getting started with Python',
@@ -230,6 +215,7 @@ export const algoPython = {
       ]
     }
   ],
+}],
   slides: [
     {
       heading: '',
