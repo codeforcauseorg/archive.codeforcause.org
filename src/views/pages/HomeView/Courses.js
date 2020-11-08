@@ -104,7 +104,13 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'nowrap',
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
+    [theme.breakpoints.up('lg')]: {
+      padding: '0px 50px'
+    },
+    [theme.breakpoints.up('xl')]: {
+      padding: '0px 20%'
+    }
   }
 }));
 

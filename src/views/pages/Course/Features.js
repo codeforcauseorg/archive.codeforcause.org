@@ -54,6 +54,12 @@ const useStyles = makeStyles(theme => ({
       padding: '20px 0'
     }
   },
+  grid: {
+    width: '100%',
+    [theme.breakpoints.up('xl')]: {
+      width: '75%'
+    }
+  },
   box2: {
     height: 90,
     verticalAlign: 'middle',
@@ -87,21 +93,11 @@ const Features = () => {
           flexDirection="row"
           justify="center"
           alignItems="center"
-          style={{
-            width: '100%'
-          }}
+          className={classes.grid}
         >
           {features.primary.map((feature, index) => {
             return (
-              <Grid
-                item
-                lg={4}
-                md={4}
-                sm={6}
-                xs={6}
-                justify="center"
-                alignItems="center"
-              >
+              <Grid item lg={4} md={4} sm={6} xs={6}>
                 <Hidden smDown>
                   <Boxes flexDirection="row" feature={feature} />
                 </Hidden>
