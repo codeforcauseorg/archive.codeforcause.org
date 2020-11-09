@@ -113,11 +113,8 @@ const useStyles = makeStyles(theme => ({
     '0%': {
       left: '10%'
     },
-    '50%': {
-      left: '-150%'
-    },
     '100%': {
-      left: '10%'
+      left: '-140%'
     }
   },
   recommendation_slide: {
