@@ -123,10 +123,7 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     height: '100%',
     width: '250%',
-    animation: '$slideshow 150s linear infinite',
-    [theme.breakpoints.down('sm')]: {
-      animation: '$slideshow 160s linear infinite'
-    }
+    animation: '$slideshow 140s linear infinite'
   }
 }));
 
