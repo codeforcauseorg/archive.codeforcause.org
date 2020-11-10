@@ -113,11 +113,8 @@ const useStyles = makeStyles(theme => ({
     '0%': {
       left: '10%'
     },
-    '50%': {
-      left: '-150%'
-    },
     '100%': {
-      left: '10%'
+      left: '-140%'
     }
   },
   recommendation_slide: {
@@ -126,10 +123,7 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     height: '100%',
     width: '250%',
-    animation: '$slideshow 150s linear infinite',
-    [theme.breakpoints.down('sm')]: {
-      animation: '$slideshow 160s linear infinite'
-    }
+    animation: '$slideshow 140s linear infinite'
   }
 }));
 
