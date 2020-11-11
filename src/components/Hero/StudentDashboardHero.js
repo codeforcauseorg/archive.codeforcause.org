@@ -167,7 +167,7 @@ function StudentNameWithAvatar({ wrap }) {
       <Avatar
         item
         alt="the firebase user ***"
-        src="/static/images/avatars/kunal_kush.jpg"
+        src="/static/sample.png"
         className={classes.avatar}
         xs={12}
       />

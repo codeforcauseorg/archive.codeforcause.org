@@ -7,6 +7,8 @@ import coursesContent from 'src/data/courses';
 import { Grid, GridList, GridListTile, useMediaQuery } from '@material-ui/core';
 import CourseCard1 from '../../../components/Course/CourseCardTemplate1';
 import CourseCard2 from '../../../components/Course/CourseCardTemplate2';
+import EnrolledCourse from '../../../components/Course/EnrolledCourse';
+import NotEnrolled from '../../../components/Course/NotEnrolled';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,7 +46,7 @@ export default function MainTab() {
   const medium = useMediaQuery('(min-width:900px)');
   const small = useMediaQuery('(min-width:600px)');
 
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -64,7 +66,7 @@ export default function MainTab() {
         scrollButtons="on"
         variant="fullWidth"
       >
-        <Tab label="Our Courses " disableRipple={true} />
+        <Tab label="Your Courses " disableRipple={true} />
         <Tab label="Your Applications" disableRipple={true} />
         <Tab label="Other Programs" disableRipple={true} />
       </Tabs>
@@ -75,18 +77,13 @@ export default function MainTab() {
           alignItems="center"
           cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
         >
-          {Object.entries(foundation).map(([cname, course], index) => {
-            return (
-              <GridListTile
-                key={course.id}
-                style={{
-                  height: '530px'
-                }}
-              >
-                <CourseCard1 course={course} />
-              </GridListTile>
-            );
-          })}
+          <GridListTile
+            style={{
+              height: '100%'
+            }}
+          >
+            <NotEnrolled />
+          </GridListTile>
         </GridList>
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -101,10 +98,14 @@ export default function MainTab() {
               <GridListTile
                 key={course.id}
                 style={{
-                  height: '530px'
+                  height: '100%'
                 }}
               >
-                <CourseCard2 course={course} />
+                {index === 0 ? (
+                  <EnrolledCourse course={course} />
+                ) : (
+                  <CourseCard2 course={course} />
+                )}
               </GridListTile>
             );
           })}
