@@ -10,7 +10,7 @@ import Schedule from '../Schedule';
 import Major from '../Major';
 import Features from '../Features';
 import Process from '../Process';
-import CourseFeatures from '../partials/CourseFeatures';
+// import CourseFeatures from '../partials/CourseFeatures';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -26,7 +26,7 @@ function CoursePage({ course }) {
   return (
     <Page className={classes.root} title={course.title}>
       <Major course={course} />
-      <CourseFeatures />
+      {/* <CourseFeatures /> */}
       <Process />
       <Schedule course={course} />
       <Features />

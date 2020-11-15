@@ -1,7 +1,7 @@
 export const webDevelopment = {
   courseid: '',
   difficulty: 'Intermediate',
-  duration: '30 Lectures',
+  duration: '40 Live Lectures',
   level: 'Level 2',
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
@@ -45,7 +45,8 @@ export const webDevelopment = {
 
   sections: [
     {
-      title: 'Javascript Introduction',
+      title: 'Introduction to Web Dev Elements',
+      classes: 'Classes 01-20',
       topics: [
         {
           title: 'Introduction to JavaSript',
@@ -80,7 +81,13 @@ export const webDevelopment = {
             'Responsive website design Using bootstrap',
             'FlexBoxes for rest practices of alignments'
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: 'Building Full Stack Capability',
+      classes: 'Classes 20-40',
+      topics: [
         {
           title: 'Getting hands-on with frameworks',
           classes: 'Classes 15-18',
@@ -90,12 +97,7 @@ export const webDevelopment = {
             'Various HTTP requests and Form Submissions',
             'Socket.IO for realtime communication'
           ]
-        }
-      ]
-    },
-    {
-      title: 'Javascript Introduction',
-      topics: [
+        },
         {
           title: 'Diving Deep with React and Material UI',
           classes: 'Classes 19-22',

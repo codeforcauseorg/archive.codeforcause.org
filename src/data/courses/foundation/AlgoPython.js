@@ -1,12 +1,12 @@
 export const algoPython = {
   difficulty: 'Foundation',
-  duration: '30 Live Lectures',
+  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-python',
   domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with Python',
-  upcoming: 'Oct 14th',
-  mentors: ['kunal', 'anuj'],
+  upcoming: 'Jan 15th',
+  mentors: ['anuj', 'kunal'],
   schedule: [
     {
       courseId: 'pds0121',
@@ -43,7 +43,8 @@ export const algoPython = {
   ],
   sections: [
     {
-      title: 'section 1',
+      title: 'Python foundation constructs',
+      classes: 'Classes 1-30',
       topics: [
         {
           title: 'Getting started with Python',

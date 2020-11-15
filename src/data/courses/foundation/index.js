@@ -1,6 +1,6 @@
 import { algoPython } from './AlgoPython';
 import { algoJava } from './AlgoJava';
-import { devPython } from './DevPython';
-const foundation = { algoPython, algoJava, devPython };
+import { algoJS } from './AlgoJS';
+const foundation = { algoJS, algoPython, algoJava };
 
 export default foundation;

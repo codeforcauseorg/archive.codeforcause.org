@@ -1,10 +1,10 @@
 export const competitiveJava = {
   difficulty: 'Six Months Training ',
-  duration: '70 Live Lectures',
+  duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-competitive-programming-with-java',
   domain: 'Interview Targetted Prepration',
-  title: 'DS Algo and Competitive Programming with Java',
+  title: 'Competitive Programming with DS & Algo in Java',
   upcoming: 'Jan 10th',
   mentors: ['anuj', 'ekta'],
   schedule: [
@@ -21,14 +21,210 @@ export const competitiveJava = {
   ],
   projects: [
     {
-      title: 'Under Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Automatic Sudoku Solver',
+      img: '/static/images/courses/projects/sudoku.jpg'
+    },
+    {
+      title: 'File Encryption and Compression',
+      img: '/static/images/courses/projects/security.jpg'
+    },
+    {
+      title: 'Splitwise Cashflow Minimization',
+      img: '/static/images/courses/projects/split.png'
+    },
+    {
+      title: 'Search routes like Google Maps',
+      img: '/static/images/courses/projects/maps.png'
+    },
+    {
+      title: 'Git Version Control Replica',
+      img: '/static/images/courses/projects/git.png'
     }
   ],
   sections: [
     {
-      title: 'section 1',
-      classes: 'Classes 1-30',
+      title: 'Java Foundation Constructs',
+      classes: 'Classes 01-20',
+      topics: [
+        {
+          title: 'Getting started with Java',
+          classes: 'Classes 1-3',
+          subtopics: [
+            'Flowcharts & Pseudocode',
+            'Control Flow Statements ',
+            'Setting up IntelliJ idea & Java',
+            'Primitive data-types',
+            'Input-Output on online judge',
+            'Coding standards in Java',
+            'Methods along with problems',
+            'Setting up debugger'
+          ]
+        },
+        {
+          title: 'Arrays & ArrayList',
+          classes: 'Classes 4-7',
+          subtopics: [
+            'Introduction of arrays',
+            'Input-output & traversing',
+            'Linear Search & Binary Search',
+            'Bubble sort, Insertion sort, Selection sort, Count sort',
+            'Multi-Dimensional arrays',
+            'Rotation in arrays',
+            'Intro to ArrayList',
+            'Interview problems on Arrays & ArrayList'
+          ]
+        },
+        {
+          title: 'Number theory & Bitmasking',
+          classes: 'Classes 8-9',
+          subtopics: [
+            'Euclidean algorithms',
+            'Sieve of eratosthenes',
+            'Puzzle problems',
+            'Bitwise operators',
+            'Advantages & cost-effectiveness',
+            'Backtracking with Bitmasking',
+            'Interview problems'
+          ]
+        },
+        {
+          title: 'String & String-Builder',
+          classes: 'Classes 10-11',
+          subtopics: [
+            'Intro to Strings in Java',
+            'Mutability and behavior',
+            'String pool and need of equals',
+            'String operations',
+            'StringBuilder operations and optimization',
+            'String Manipulation'
+          ]
+        },
+        {
+          title: 'Space and Time complexity analysis',
+          classes: 'Classes 12',
+          subtopics: [
+            'Best case, worst case, average case',
+            'Sandwich theorem, recurrence relation',
+            'Theta, Big-oh, Omega notations',
+            'Understanding complexity of loops',
+            'Auxiliary vs Total space',
+            'Static & Dynamic Memory Allocation'
+          ]
+        },
+        {
+          title: 'Recursion & Backtracking',
+          classes: 'Classes 13-16',
+          subtopics: [
+            'Recursion- what, why, when?',
+            'Control flow & stack trace',
+            'understanding recursive tree',
+            'Merge sort & Quick sort',
+            'Interview problems on Recursion',
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
+          ]
+        },
+        {
+          title: 'Object Oriented Programming',
+          classes: 'Classes 17-18',
+          subtopics: [
+            'Classes & Objects',
+            'Constructors, states & behaviors',
+            'this keyword',
+            'Abstraction, Inheritance, Polymorphism, Encapsulation',
+            'Access modifiers',
+            'Static & non-static',
+            'final, finally, finalize'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Data Structure & Algorithms',
+      classes: 'Classes 21-40',
+      topics: [
+        {
+          title: 'Stack & Queue',
+          classes: 'Classes 19-20',
+          subtopics: [
+            'Stack as generic collection',
+            'Operations in Stack',
+            'Stack using Array & LinkedList',
+            'Push efficient & Pop efficient Stacks',
+            'Queue as generic collection',
+            'Operations in Queue',
+            'Queue using 2 stacks',
+            'Interview problems on Stack & Queue'
+          ]
+        },
+        {
+          title: 'LinkedList',
+          classes: 'Classes 21-22',
+          subtopics: [
+            'Intro to LinkedList',
+            'Implementation of LinkedList',
+            'Operations in LinkedList',
+            'Cycle detection Algorithms',
+            'Problems based on LinkedList'
+          ]
+        },
+        {
+          title: 'Binary Trees',
+          classes: 'Classes 23-24',
+          subtopics: [
+            'Implementation of Binary Trees',
+            'Tree traversal- inorder, preorder, postorder',
+            'Searching Algorithms- DFS, BFS',
+            'Calculate- hieght, depth, diameter of tree',
+            'Implementation of Binary Search Tree',
+            'AVL Trees & Rotations',
+            'Interview problems on BT & BST'
+          ]
+        },
+        {
+          title: 'Heap & HashMap',
+          classes: 'Classes 25-26',
+          subtopics: [
+            'Implementation of Heaps',
+            'PriorityQueue as generic collection',
+            'HeapSort with complexity analysis',
+            'Concept of Hashing',
+            'HashMap implementation using ArrayList & LinkedList',
+            'Types of Maps in Java collections',
+            'Problems on Hashmap & Heaps'
+          ]
+        },
+        {
+          title: 'Graph',
+          classes: 'Classes 27-28',
+          subtopics: [
+            'Terminologies in Graph',
+            'EdgeList implementation',
+            'AdjacencyList implementation',
+            'AdjacencyMap implementation',
+            'Searching Algorithms- DFS, BFS',
+            'Connected component, Cycle detection',
+            "Kruskal's, Dijkstra's, Prim's Algorithms"
+          ]
+        },
+        {
+          title: 'Dynamic Programming',
+          classes: 'Classes 29-30',
+          subtopics: [
+            'Understanding the concept in Dynamic Programming',
+            'Understanding overlapping subproblems',
+            'Memorization vs Tabulation',
+            'Top down & bottom-up approach',
+            '0-1 KnapSack problem',
+            'Wildcard pattern problem',
+            'Egg drop problem',
+            'Matrix chain multiplication'
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Advance Competetive Algorithms',
+      classes: 'Classes 41-60',
       topics: [
         {
           title: 'Revisiting Java Collection Framework',
@@ -133,7 +329,13 @@ export const competitiveJava = {
             'Minimum Spanning Tree',
             'Memory Management Algorithms'
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: 'Advanced non-linear data structures',
+      classes: 'Classes 61-80',
+      topics: [
         {
           title: 'Binary Tree',
           classes: 'Lectures 17-18',
@@ -259,7 +461,10 @@ export const competitiveJava = {
     'Fenwick Tree',
     'Decompositions'
   ],
-  overview: ['Under Development'],
+  overview: [
+    'During the course, you’ll learn everything needed to participate in real competitions — that’s the main goal. Along the way you’ll also gain useful skills for which competitive programmers are so highly valued by employers: ability to write efficient, reliable, and compact code, manage your time well when it’s limited, apply basic algorithmic ideas to real problems, etc.',
+    'We start from the very beginning by teaching you what competitions there are, what are their rules, what specifics problems have, how to read problem statements, how to organize your work, and what you should and shouldn’t do. So it’s fine if you’ve never taken part in programming competitions before.'
+  ],
   faqs: [
     {
       title: 'Will this help me with my career path?',

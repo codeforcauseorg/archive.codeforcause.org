@@ -1,6 +1,6 @@
 export const machineLearning = {
   difficulty: 'Intermediate',
-  duration: '30 Lectures',
+  duration: '40 Live Lectures',
   level: 'Level 2',
   link: '/machine-learning-using-python',
   domain: 'Artificial Intelligence',
@@ -48,8 +48,8 @@ export const machineLearning = {
 
   sections: [
     {
-      title: 'section 1',
-
+      title: 'Classical ML Algos and NLP',
+      classes: 'Classes 01-20',
       topics: [
         {
           title: 'Revising Python Fundamentals',
@@ -94,7 +94,13 @@ export const machineLearning = {
             'Deploy ML model with flask on heroku',
             'Create a facebook chatbot with flask'
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: 'Deep Learning with Linear, Image and Signal Processing',
+      classes: 'Classes 20-40',
+      topics: [
         {
           title: 'Deep Neural Networks',
           classes: 'Classes 19-22',

@@ -1,11 +1,11 @@
 export const algoJava = {
   difficulty: 'Foundation',
-  duration: '30 Live Lectures',
+  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-java',
   domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with Java',
-  upcoming: 'Oct 17th',
+  upcoming: 'Jan 10th',
   mentors: ['anuj', 'ekta'],
   schedule: [
     {
@@ -44,7 +44,8 @@ export const algoJava = {
 
   sections: [
     {
-      title: 'section 1',
+      title: 'Java Foundation Constructs',
+      classes: 'Classes 01-20',
       topics: [
         {
           title: 'Getting started with Java',
@@ -135,7 +136,13 @@ export const algoJava = {
             'Static & non-static',
             'final, finally, finalize'
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: 'Data Structure & Algorithms',
+      classes: 'Classes 20-40',
+      topics: [
         {
           title: 'Stack & Queue',
           classes: 'Classes 19-20',

@@ -113,8 +113,8 @@ function ColorlibStepIcon(props) {
 
   const icons = {
     1: <ListAltIcon />,
-    2: <AssignmentTurnedInIcon />,
-    3: <VideocamIcon />,
+    2: <VideocamIcon />,
+    3: <AssignmentTurnedInIcon />,
     4: <PeopleIcon />
   };
 
@@ -164,8 +164,8 @@ const useStyles = makeStyles(theme => ({
 function getSteps() {
   return [
     'Fill Application',
-    'Get Shortlisted',
     'Online Meeting',
+    'Get Shortlisted',
     'Welcome Aboard'
   ];
 }

@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import {
-  Grid,
-  Typography,
-  Box,
-  Collapse,
-  IconButton,
-  Button,
-} from '@material-ui/core';
+import { Grid, Typography, Box, Collapse, IconButton } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { login } from 'src/actions/accountActions';
-import axios from 'src/utils/axios';
-import { useDispatch, useSelector } from 'react-redux';
+import ApplyModal from './ApplyModal';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -28,7 +19,6 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(10, 3, 10)
     }
   },
-
   boxCover: {
     margin: theme.spacing(3, 3),
     [theme.breakpoints.down('md')]: {
@@ -50,7 +40,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Schedule({ course }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(0);
+  const [expanded, setExpanded] = useState(0);
 
   return (
     <Grid container className={classes.root}>
@@ -108,24 +98,6 @@ export default function Schedule({ course }) {
 }
 
 function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
-  const user = useSelector(state => state.account.user);
-  const [applyState, setApplyState] = useState('Apply');
-
-  const baseUrl =
-    'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
-  const dispatch = useDispatch();
-  const handleApply = () => {
-    const url = `${baseUrl}/${batch.courseId}`;
-    if (!user) {
-      dispatch(login());
-    } else {
-      setApplyState('Generating...');
-      axios.post(url).then(result => {
-        window.location.href = `/applications?id=${result.data.id}`;
-      });
-    }
-  };
-
   return (
     <Box
       display="flex"
@@ -322,37 +294,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               borderRadius: '5px'
             }}
           >
-            <Button
-              color="secondary"
-              variant="contained"
-              onClick={handleApply}
-              style={{
-                textTransform: 'capitalize',
-                height: '45px',
-                width: '150px'
-              }}
-            >
-              <Typography>
-                <Box fontWeight={500}>{applyState}</Box>
-              </Typography>
-            </Button>
-            <Button
-              variant="contained"
-              style={{
-                background: '#FFFFFF',
-                marginLeft: '16px',
-                textTransform: 'capitalize',
-                height: '45px',
-                width: '150px'
-              }}
-              onClick={() => {
-                setExpanded(-1);
-              }}
-            >
-              <Typography>
-                <Box fontWeight={500}>Cancel</Box>
-              </Typography>
-            </Button>
+            <ApplyModal />
           </Box>
         </Box>
       </Collapse>

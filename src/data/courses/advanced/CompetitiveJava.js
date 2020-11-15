@@ -1,6 +1,6 @@
 export const competitiveJava = {
   difficulty: 'Intermediate',
-  duration: '70 Lectures',
+  duration: '40 Live Lectures',
   level: 'Level 2',
   link: '/competitive-programming-using-java',
   domain: 'Interview Prepration',
@@ -21,13 +21,30 @@ export const competitiveJava = {
   ],
   projects: [
     {
-      title: 'Under Development',
-      img: '/static/images/projects/p1.png'
+      title: 'Automatic Sudoku Solver',
+      img: '/static/images/courses/projects/sudoku.jpg'
+    },
+    {
+      title: 'File Encryption and Compression',
+      img: '/static/images/courses/projects/security.jpg'
+    },
+    {
+      title: 'Splitwise Cashflow Minimization',
+      img: '/static/images/courses/projects/split.png'
+    },
+    {
+      title: 'Search routes like Google Maps',
+      img: '/static/images/courses/projects/maps.png'
+    },
+    {
+      title: 'Git Version Control Replica',
+      img: '/static/images/courses/projects/git.png'
     }
   ],
   sections: [
     {
-      title: 'section 1',
+      title: 'Advance Competetive Algorithms',
+      classes: 'Classes 01-20',
       topics: [
         {
           title: 'Revisiting Java Collection Framework',
@@ -132,7 +149,13 @@ export const competitiveJava = {
             'Minimum Spanning Tree',
             'Memory Management Algorithms'
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: 'Advanced non-linear data structures',
+      classes: 'Classes 21-40',
+      topics: [
         {
           title: 'Binary Tree',
           classes: 'Lectures 17-18',
@@ -259,7 +282,10 @@ export const competitiveJava = {
     'Fenwick Tree',
     'Decompositions'
   ],
-  overview: ['Under Development'],
+  overview: [
+    'During the course, you’ll learn everything needed to participate in real competitions — that’s the main goal. Along the way you’ll also gain useful skills for which competitive programmers are so highly valued by employers: ability to write efficient, reliable, and compact code, manage your time well when it’s limited, apply basic algorithmic ideas to real problems, etc.',
+    'We start from the very beginning by teaching you what competitions there are, what are their rules, what specifics problems have, how to read problem statements, how to organize your work, and what you should and shouldn’t do. So it’s fine if you’ve never taken part in programming competitions before.'
+  ],
   faqs: [
     {
       title: 'Will this help me with my career path?',

@@ -37,10 +37,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return [
-    'Profile Information',
-    'Education Information'
-  ];
+  return ['Profile Information', 'Education Information'];
 }
 
 function getStepContent(
@@ -120,7 +117,7 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
           if (response.data.submitted) {
             setActiveStep(3);
             enqueueSnackbar(
-              'You application in submitted. We will contact you back with result.'
+              'You application in submitted. We will contact you back.'
             );
           } else {
             setFormData(response.data);

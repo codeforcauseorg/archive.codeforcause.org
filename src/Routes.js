@@ -178,6 +178,15 @@ const renderRoutes = () => (
         )}
       />
       <Route
+        path={`/ds-algo-with-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage course={coursesContent.foundation.algoJS} {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
         path={`/fullstack-webdev-with-js`}
         exact
         render={props => (
