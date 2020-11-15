@@ -39,8 +39,7 @@ const useStyles = makeStyles(theme => ({
 function getSteps() {
   return [
     'Profile Information',
-    'Education Information',
-    'Application Challenge'
+    'Education Information'
   ];
 }
 
@@ -66,16 +65,6 @@ function getStepContent(
     case 1:
       return (
         <FormEducationInfo
-          setActiveStep={setActiveStep}
-          data={formData}
-          setData={setFormData}
-          baseUrl={baseUrl}
-          applicationId={applicationId}
-        />
-      );
-    case 2:
-      return (
-        <FormChallenge
           setActiveStep={setActiveStep}
           data={formData}
           setData={setFormData}
@@ -118,7 +107,7 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
       .catch(e => {
         enqueueSnackbar('Failed with error. Try again later.');
       });
-    setActiveStep(4);
+    setActiveStep(3);
   };
 
   const getApplication = useCallback(() => {
@@ -129,7 +118,7 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
 
         if (isMountedRef.current) {
           if (response.data.submitted) {
-            setActiveStep(4);
+            setActiveStep(3);
             enqueueSnackbar(
               'You application in submitted. We will contact you back with result.'
             );
@@ -402,161 +391,6 @@ function FormEducationInfo({
         onChange={handleChange}
         validators={['required']}
         errorMessages={['Country is a required field']}
-      />
-
-      <Button variant="outlined" onClick={handlePrev} color="secondary">
-        Prev
-      </Button>
-      <Button
-        type="submit"
-        variant="contained"
-        color="secondary"
-        style={{
-          marginLeft: '16px'
-        }}
-      >
-        Save
-      </Button>
-    </ValidatorForm>
-  );
-}
-
-function FormChallenge({
-  setActiveStep,
-  data,
-  setData,
-  baseUrl,
-  applicationId
-}) {
-  const classes = useStyles();
-  const [formData, updateFormData] = useState(data.challenge);
-  const MIN_CHAR = 150;
-
-  const handleChange = event => {
-    updateFormData({
-      ...formData,
-      [event.target.name]: event.target.value
-    });
-  };
-
-  const handlePrev = () => {
-    setActiveStep(1);
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    setData({
-      ...data,
-      challenge: formData
-    });
-
-    const url = `${baseUrl}/${applicationId}/challenge`;
-
-    axios({
-      method: 'put',
-      url: url,
-      data: formData
-    })
-      .then(response => {})
-      .catch(e => {});
-    setActiveStep(3);
-  };
-
-  const countChar = string => string.replace(/\s/g, '').length;
-
-  useEffect(() => {
-    ValidatorForm.addValidationRule('isNotShort', value => {
-      if (countChar(value) < MIN_CHAR) {
-        return false;
-      }
-      return true;
-    });
-  });
-
-  return (
-    <ValidatorForm onSubmit={handleSubmit}>
-      <TextValidator
-        className={classes.textField}
-        multiline
-        fullWidth
-        label="Why do you wish to take up this course?"
-        variant="outlined"
-        onChange={handleChange}
-        name="q1"
-        value={formData.q1}
-        rows={4}
-        validators={['required', 'isNotShort']}
-        errorMessages={[
-          'This is a required field',
-          `Text too short.
-            ${
-              formData.q1 && formData.q1.length
-                ? 'Put in ' +
-                  (MIN_CHAR - countChar(formData.q1)) +
-                  `${
-                    countChar(formData.q1) < MIN_CHAR - 1
-                      ? ' characters more'
-                      : ' character more'
-                  }`
-                : `Put in ${MIN_CHAR} characters more`
-            }`
-        ]}
-      />
-
-      <TextValidator
-        className={classes.textField}
-        multiline
-        fullWidth
-        label="Why do you deserve this scholarship?"
-        variant="outlined"
-        onChange={handleChange}
-        name="q2"
-        value={formData.q2}
-        rows={4}
-        validators={['required', 'isNotShort']}
-        errorMessages={[
-          'This is a required field',
-          `Text too short.
-            ${
-              formData.q2 && formData.q2.length
-                ? 'Put in ' +
-                  (MIN_CHAR - countChar(formData.q2)) +
-                  `${
-                    countChar(formData.q2) < MIN_CHAR - 1
-                      ? ' characters more'
-                      : ' character more'
-                  }`
-                : `Put in ${MIN_CHAR} characters more`
-            }`
-        ]}
-      />
-
-      <TextValidator
-        className={classes.textField}
-        multiline
-        fullWidth
-        label="What is your viewpoint towards Coding for a Cause?"
-        variant="outlined"
-        onChange={handleChange}
-        name="q3"
-        value={formData.q3}
-        rows={4}
-        validators={['required', 'isNotShort']}
-        errorMessages={[
-          'This is a required field',
-          `Text too short.
-            ${
-              formData.q3 && formData.q3.length
-                ? 'Put in ' +
-                  (MIN_CHAR - countChar(formData.q3)) +
-                  `${
-                    countChar(formData.q3) < MIN_CHAR - 1
-                      ? ' characters more'
-                      : ' character more'
-                  }`
-                : `Put in ${MIN_CHAR} characters more`
-            }`
-        ]}
       />
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">
