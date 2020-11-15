@@ -5,6 +5,7 @@ import Details from './partials/Details';
 import Overview from './partials/Overview';
 import Topics from './partials/Topics';
 import Projects from './partials/Projects';
+import CourseFeatures from './partials/CourseFeatures';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -102,6 +103,7 @@ export default function Major({ course }) {
 
           <Overview course={course} />
           <Topics course={course} />
+          <CourseFeatures />
         </Box>
 
         <Hidden smDown>
