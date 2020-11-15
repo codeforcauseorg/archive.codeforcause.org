@@ -103,13 +103,6 @@ export default function Schedule({ course }) {
           </Box>
         </Box>
       </Grid>
-      <Hidden xsDown>
-        <img
-          src="/static/images/courses/limitedTimeBookNow.jpg"
-          alt="Limited Time Available"
-          className={classes.marginTop}
-        />
-      </Hidden>
     </Grid>
   );
 }
