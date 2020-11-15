@@ -45,93 +45,95 @@ export const webDevelopment = {
   sections: [
     {
       title: 'section 1',
-  topics: [
-    {
-      title: 'Introduction to JavaSript',
-      classes: 'Classes 1-5',
-      subtopics: [
-        'Variables, Data Types and Statements',
-        'Functions, Conditions and looping',
-        'Workin with Arrays and Maps',
-        'String processing and manipulation',
-        'Introduction to OOP in JS'
-      ]
-    },
-    {
-      title: 'Building application with npm',
-      classes: 'Classes 6-9',
-      subtopics: [
-        'Getting hands on with npm package management',
-        'Understanding components of API call',
-        'GitHub API calls with Axios',
-        'Creating and deploying new npm module',
-        'Mini-project : file downloader'
-      ]
-    },
-    {
-      title: 'Setting up pace with HTML and CSS ',
-      classes: 'Classes 10-14',
-      subtopics: [
-        'HTML Tags and attributes',
-        'Styling and CSS Selectors',
-        'Understanding a figma design',
-        'Creating forms and validations',
-        'Responsive website design Using bootstrap',
-        'FlexBoxes for rest practices of alignments'
-      ]
-    },
-    {
-      title: 'Getting hands-on with frameworks',
-      classes: 'Classes 15-18',
-      subtopics: [
-        'React concepts and building components',
-        'ExpressJS Framework for creating REST APIs',
-        'Various HTTP requests and Form Submissions',
-        'Socket.IO for realtime communication'
-      ]
-    },
-    {
-      title: 'Diving Deep with React and Material UI',
-      classes: 'Classes 19-22',
-      subtopics: [
-        'React Props, State, Lifecycle Methods, and Keys',
-        'Using hooks for functional React experience',
-        'Theme and Typography with React MUI',
-        'Horizontal and Verical Steppers with React MUI',
-        'Animations and Transitions with React Spring'
-      ]
-    },
-    {
-      title: 'Realtional and Not Relational Databases',
-      classes: 'Classes 23-25',
-      subtopics: [
-        'Walk trhough with SQL Queries',
-        'H2 and MySQL Databases and connecting with ORM',
-        'Handling documents with MongoDB',
-        'Setting up geolocation indexing for Uber like search'
-      ]
-    },
-    {
-      title: 'Cloud Authentication, Hosting and Functions',
-      classes: 'Classes 26-28',
-      subtopics: [
-        'Setting up auth with passport',
-        'Social auth with Google, Facebook and GitHub',
-        'Cloud Functions for scaled Arch',
-        'Firestore and other firebase products'
-      ]
-    },
-    {
-      title: 'Project discussion and best practices',
-      classes: 'Classes 29-30',
-      subtopics: [
-        'Spinning up project ideas and how to explore',
-        'Pitching session and walkthough presentation',
-        'Best Practices for follow for web projects'
+      classes: 'Classes 1-30',
+      topics: [
+        {
+          title: 'Introduction to JavaSript',
+          classes: 'Classes 1-5',
+          subtopics: [
+            'Variables, Data Types and Statements',
+            'Functions, Conditions and looping',
+            'Workin with Arrays and Maps',
+            'String processing and manipulation',
+            'Introduction to OOP in JS'
+          ]
+        },
+        {
+          title: 'Building application with npm',
+          classes: 'Classes 6-9',
+          subtopics: [
+            'Getting hands on with npm package management',
+            'Understanding components of API call',
+            'GitHub API calls with Axios',
+            'Creating and deploying new npm module',
+            'Mini-project : file downloader'
+          ]
+        },
+        {
+          title: 'Setting up pace with HTML and CSS ',
+          classes: 'Classes 10-14',
+          subtopics: [
+            'HTML Tags and attributes',
+            'Styling and CSS Selectors',
+            'Understanding a figma design',
+            'Creating forms and validations',
+            'Responsive website design Using bootstrap',
+            'FlexBoxes for rest practices of alignments'
+          ]
+        },
+        {
+          title: 'Getting hands-on with frameworks',
+          classes: 'Classes 15-18',
+          subtopics: [
+            'React concepts and building components',
+            'ExpressJS Framework for creating REST APIs',
+            'Various HTTP requests and Form Submissions',
+            'Socket.IO for realtime communication'
+          ]
+        },
+        {
+          title: 'Diving Deep with React and Material UI',
+          classes: 'Classes 19-22',
+          subtopics: [
+            'React Props, State, Lifecycle Methods, and Keys',
+            'Using hooks for functional React experience',
+            'Theme and Typography with React MUI',
+            'Horizontal and Verical Steppers with React MUI',
+            'Animations and Transitions with React Spring'
+          ]
+        },
+        {
+          title: 'Realtional and Not Relational Databases',
+          classes: 'Classes 23-25',
+          subtopics: [
+            'Walk trhough with SQL Queries',
+            'H2 and MySQL Databases and connecting with ORM',
+            'Handling documents with MongoDB',
+            'Setting up geolocation indexing for Uber like search'
+          ]
+        },
+        {
+          title: 'Cloud Authentication, Hosting and Functions',
+          classes: 'Classes 26-28',
+          subtopics: [
+            'Setting up auth with passport',
+            'Social auth with Google, Facebook and GitHub',
+            'Cloud Functions for scaled Arch',
+            'Firestore and other firebase products'
+          ]
+        },
+        {
+          title: 'Project discussion and best practices',
+          classes: 'Classes 29-30',
+          subtopics: [
+            'Spinning up project ideas and how to explore',
+            'Pitching session and walkthough presentation',
+            'Best Practices for follow for web projects'
+          ]
+        }
       ]
     }
   ],
-}],
   slides: [
     {
       heading: '',

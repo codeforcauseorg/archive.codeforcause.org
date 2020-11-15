@@ -50,85 +50,86 @@ export const machineLearning = {
     {
       title: 'section 1',
 
-  topics: [
-    {
-      title: 'Revising Python Fundamentals',
-      classes: 'Classes 1-4',
-      subtopics: [
-        'In-built Data Structures',
-        'Control Flow Statements ',
-        'Underatanding OOPS and Modules',
-        'Various File operations'
-      ]
-    },
-    {
-      title: 'Data Discovery and Visualiation',
-      classes: 'Classes 5-8',
-      subtopics: [
-        'Numpy and array computation',
-        'Processing Images with Numpy',
-        'Data Acquisition - Web Scrapping, Web APIs',
-        'Data Analysis using Pandas',
-        'Importing and Exporting Data '
-      ]
-    },
-    {
-      title: 'Classical Machine Learning Algorithms',
-      classes: 'Classes 9-13',
-      subtopics: [
-        'K-Nearest Neighbour search',
-        'K-means clustering',
-        'Linear Regression',
-        'Logistic Regression',
-        'Decision trees and Ensembling Learning',
-        'Random Forest Classifiers',
-        'Support Vector Machines'
-      ]
-    },
-    {
-      title: 'Natural Language Processing',
-      classes: 'Classes 14-18',
-      subtopics: [
-        'Text generation using Markov Chain',
-        'Text classification using Naive Bayes',
-        'Deploy ML model with flask on heroku',
-        'Create a facebook chatbot with flask'
-      ]
-    },
-    {
-      title: 'Deep Neural Networks',
-      classes: 'Classes 19-22',
-      subtopics: [
-        'Neural Architectures and Training',
-        'Deep Learning with Keras',
-        'Convolutions and the GoogLe Net',
-        'Transfer Learning with ResNet and AlexNet',
-        'Dimensionality Reduction using Auto-encoders'
-      ]
-    },
-    {
-      title: 'Advanced Deep Learning',
-      classes: 'Classes 23-27',
-      subtopics: [
-        'Recurrent Neural Network',
-        'Long Short Term Memory',
-        'Music Generation using LSTM',
-        'Predict Gender from name with LSTM',
-        'Generative Adversarial Nets'
-      ]
-    },
-    {
-      title: 'Reinforcemnt Learning',
-      classes: 'Classes 27-30',
-      subtopics: [
-        'Foundational Reinforcemnt Learning',
-        'Evolutionary Algorithms and Genetic Algorithms',
-        'Deep Q-learning and training',
-        'Training on OpenAI Gym Simulaters'
+      topics: [
+        {
+          title: 'Revising Python Fundamentals',
+          classes: 'Classes 1-4',
+          subtopics: [
+            'In-built Data Structures',
+            'Control Flow Statements ',
+            'Underatanding OOPS and Modules',
+            'Various File operations'
+          ]
+        },
+        {
+          title: 'Data Discovery and Visualiation',
+          classes: 'Classes 5-8',
+          subtopics: [
+            'Numpy and array computation',
+            'Processing Images with Numpy',
+            'Data Acquisition - Web Scrapping, Web APIs',
+            'Data Analysis using Pandas',
+            'Importing and Exporting Data '
+          ]
+        },
+        {
+          title: 'Classical Machine Learning Algorithms',
+          classes: 'Classes 9-13',
+          subtopics: [
+            'K-Nearest Neighbour search',
+            'K-means clustering',
+            'Linear Regression',
+            'Logistic Regression',
+            'Decision trees and Ensembling Learning',
+            'Random Forest Classifiers',
+            'Support Vector Machines'
+          ]
+        },
+        {
+          title: 'Natural Language Processing',
+          classes: 'Classes 14-18',
+          subtopics: [
+            'Text generation using Markov Chain',
+            'Text classification using Naive Bayes',
+            'Deploy ML model with flask on heroku',
+            'Create a facebook chatbot with flask'
+          ]
+        },
+        {
+          title: 'Deep Neural Networks',
+          classes: 'Classes 19-22',
+          subtopics: [
+            'Neural Architectures and Training',
+            'Deep Learning with Keras',
+            'Convolutions and the GoogLe Net',
+            'Transfer Learning with ResNet and AlexNet',
+            'Dimensionality Reduction using Auto-encoders'
+          ]
+        },
+        {
+          title: 'Advanced Deep Learning',
+          classes: 'Classes 23-27',
+          subtopics: [
+            'Recurrent Neural Network',
+            'Long Short Term Memory',
+            'Music Generation using LSTM',
+            'Predict Gender from name with LSTM',
+            'Generative Adversarial Nets'
+          ]
+        },
+        {
+          title: 'Reinforcemnt Learning',
+          classes: 'Classes 27-30',
+          subtopics: [
+            'Foundational Reinforcemnt Learning',
+            'Evolutionary Algorithms and Genetic Algorithms',
+            'Deep Q-learning and training',
+            'Training on OpenAI Gym Simulaters'
+          ]
+        }
       ]
     }
-  ]
-}],
+  ],
   slides: [
     {
       heading: '',
