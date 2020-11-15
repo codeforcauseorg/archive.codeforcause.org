@@ -44,178 +44,179 @@ export const algoPython = {
   sections: [
     {
       title: 'section 1',
-  topics: [
-    {
-      title: 'Getting started with Python',
-      classes: 'Classes 01-03',
-      subtopics: [
-        'Flowcharts & Pseudocode',
-        'Control Flow Statements ',
-        'Setting up Python Environment',
-        'Primitive data-types',
-        'Input-Output on online judge',
-        'File Handling',
-        'Coding standards in Python',
-        'Methods along with problems',
-        'Setting up debugger'
-      ]
-    },
-    {
-      title: 'Lists & NumPy Arrays',
-      classes: 'Classes 04-07',
-      subtopics: [
-        'Introduction of Lists',
-        'Input-output & traversing',
-        'Linear Search & Binary Search',
-        'Bubble sort, Insertion sort, Selection sort, Count sort',
-        'Multi-Dimensional arrays',
-        'Rotation in arrays',
-        'Intro to NumPy',
-        'Interview problems on Arrays'
-      ]
-    },
-    {
-      title: 'Number theory & Bitmasking',
-      classes: 'Classes 08-09',
-      subtopics: [
-        'Euclidean algorithms',
-        'Sieve of eratosthenes',
-        'Puzzle problems',
-        'Bitwise operators',
-        'Advantages & cost-effectiveness',
-        'Backtracking with Bitmasking',
-        'Interview problems'
-      ]
-    },
-    {
-      title: 'Strings',
-      classes: 'Classes 10-11',
-      subtopics: [
-        'Intro to Strings in Python',
-        'Mutability and Behavior',
-        'is vs ==',
-        'String operations',
-        'String Manipulation'
-      ]
-    },
-    {
-      title: 'Space and Time complexity analysis',
-      classes: 'Classes 12-13',
-      subtopics: [
-        'Best case, worst case, average case',
-        'Sandwich theorem, recurrence relation',
-        'Solving Complex Linear Recurrences',
-        'Solving Divide & Conquer Recurrences',
-        'Theta, Big-oh, Omega notations',
-        'Understanding complexity of loops',
-        'Auxiliary vs Total Space',
-        'Static & Dynamic Memory Allocation'
-      ]
-    },
-    {
-      title: 'Recursion & Backtracking',
-      classes: 'Classes 14-16',
-      subtopics: [
-        'Recursion- what, why, when?',
-        'Control flow & stack trace',
-        'Understanding Recursive Tree',
-        'Merge sort & Quick sort',
-        'Interview problems on Recursion',
-        'Backtracking-Sudoku solver, N-Queens, lexo-permute'
-      ]
-    },
-    {
-      title: 'Object Oriented Programming',
-      classes: 'Classes 17-18',
-      subtopics: [
-        'Classes & Objects',
-        'Constructors, States & Behaviors',
-        'self keyword',
-        'Abstraction, Inheritance, Polymorphism, Encapsulation',
-        'Scopes & Closures',
-        'Static & non-static',
-        'Class Methods',
-        'Decorators, Iterators & Generators'
-      ]
-    },
-    {
-      title: 'Stack & Queue',
-      classes: 'Classes 19-20',
-      subtopics: [
-        'Stack as an Abstract Data Type',
-        'Operations in Stack',
-        'Stack using NumPy',
-        'Push efficient & Pop efficient Stacks',
-        'Queue as generic collection',
-        'Operations in Queue',
-        'Queue using 2 stacks',
-        'Interview problems on Stack & Queue'
-      ]
-    },
-    {
-      title: 'LinkedList',
-      classes: 'Classes 21-22',
-      subtopics: [
-        'Intro to LinkedList',
-        'Implementation of LinkedList',
-        'Operations in LinkedList',
-        'Cycle detection Algorithms',
-        'Problems based on LinkedList'
-      ]
-    },
-    {
-      title: 'Binary Trees',
-      classes: 'Classes 23-24',
-      subtopics: [
-        'Implementation of Binary Trees',
-        'Tree traversal- inorder, preorder, postorder',
-        'Searching Algorithms- DFS, BFS',
-        'Calculate- hieght, depth, diameter of tree',
-        'Implementation of Binary Search Tree',
-        'AVL Trees & Rotations',
-        'Interview problems on BT & BST'
-      ]
-    },
-    {
-      title: 'Heap & Dictionary',
-      classes: 'Classes 25-26',
-      subtopics: [
-        'Implementation of Heaps',
-        'HeapSort with complexity analysis',
-        'Concept of Hashing',
-        'Dictionary implementation',
-        'Problems on Dictionary & Heaps'
-      ]
-    },
-    {
-      title: 'Graph',
-      classes: 'Classes 27-28',
-      subtopics: [
-        'Terminologies in Graph',
-        'EdgeList implementation',
-        'AdjacencyList implementation',
-        'AdjacencyMap implementation',
-        'Searching Algorithms- DFS, BFS',
-        'Connected component, Cycle detection',
-        "Kruskal's, Dijkstra's, Prim's Algorithms"
-      ]
-    },
-    {
-      title: 'Dynamic Programming',
-      classes: 'Classes 29-30',
-      subtopics: [
-        'Understanding the concept in Dynamic Programming',
-        'Understanding overlapping subproblems',
-        'Memorization vs Tabulation',
-        'Top down & bottom-up approach',
-        '0-1 KnapSack problem',
-        'Wildcard pattern problem',
-        'Egg drop problem',
-        'Matrix chain multiplication'
+      topics: [
+        {
+          title: 'Getting started with Python',
+          classes: 'Classes 01-03',
+          subtopics: [
+            'Flowcharts & Pseudocode',
+            'Control Flow Statements ',
+            'Setting up Python Environment',
+            'Primitive data-types',
+            'Input-Output on online judge',
+            'File Handling',
+            'Coding standards in Python',
+            'Methods along with problems',
+            'Setting up debugger'
+          ]
+        },
+        {
+          title: 'Lists & NumPy Arrays',
+          classes: 'Classes 04-07',
+          subtopics: [
+            'Introduction of Lists',
+            'Input-output & traversing',
+            'Linear Search & Binary Search',
+            'Bubble sort, Insertion sort, Selection sort, Count sort',
+            'Multi-Dimensional arrays',
+            'Rotation in arrays',
+            'Intro to NumPy',
+            'Interview problems on Arrays'
+          ]
+        },
+        {
+          title: 'Number theory & Bitmasking',
+          classes: 'Classes 08-09',
+          subtopics: [
+            'Euclidean algorithms',
+            'Sieve of eratosthenes',
+            'Puzzle problems',
+            'Bitwise operators',
+            'Advantages & cost-effectiveness',
+            'Backtracking with Bitmasking',
+            'Interview problems'
+          ]
+        },
+        {
+          title: 'Strings',
+          classes: 'Classes 10-11',
+          subtopics: [
+            'Intro to Strings in Python',
+            'Mutability and Behavior',
+            'is vs ==',
+            'String operations',
+            'String Manipulation'
+          ]
+        },
+        {
+          title: 'Space and Time complexity analysis',
+          classes: 'Classes 12-13',
+          subtopics: [
+            'Best case, worst case, average case',
+            'Sandwich theorem, recurrence relation',
+            'Solving Complex Linear Recurrences',
+            'Solving Divide & Conquer Recurrences',
+            'Theta, Big-oh, Omega notations',
+            'Understanding complexity of loops',
+            'Auxiliary vs Total Space',
+            'Static & Dynamic Memory Allocation'
+          ]
+        },
+        {
+          title: 'Recursion & Backtracking',
+          classes: 'Classes 14-16',
+          subtopics: [
+            'Recursion- what, why, when?',
+            'Control flow & stack trace',
+            'Understanding Recursive Tree',
+            'Merge sort & Quick sort',
+            'Interview problems on Recursion',
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
+          ]
+        },
+        {
+          title: 'Object Oriented Programming',
+          classes: 'Classes 17-18',
+          subtopics: [
+            'Classes & Objects',
+            'Constructors, States & Behaviors',
+            'self keyword',
+            'Abstraction, Inheritance, Polymorphism, Encapsulation',
+            'Scopes & Closures',
+            'Static & non-static',
+            'Class Methods',
+            'Decorators, Iterators & Generators'
+          ]
+        },
+        {
+          title: 'Stack & Queue',
+          classes: 'Classes 19-20',
+          subtopics: [
+            'Stack as an Abstract Data Type',
+            'Operations in Stack',
+            'Stack using NumPy',
+            'Push efficient & Pop efficient Stacks',
+            'Queue as generic collection',
+            'Operations in Queue',
+            'Queue using 2 stacks',
+            'Interview problems on Stack & Queue'
+          ]
+        },
+        {
+          title: 'LinkedList',
+          classes: 'Classes 21-22',
+          subtopics: [
+            'Intro to LinkedList',
+            'Implementation of LinkedList',
+            'Operations in LinkedList',
+            'Cycle detection Algorithms',
+            'Problems based on LinkedList'
+          ]
+        },
+        {
+          title: 'Binary Trees',
+          classes: 'Classes 23-24',
+          subtopics: [
+            'Implementation of Binary Trees',
+            'Tree traversal- inorder, preorder, postorder',
+            'Searching Algorithms- DFS, BFS',
+            'Calculate- hieght, depth, diameter of tree',
+            'Implementation of Binary Search Tree',
+            'AVL Trees & Rotations',
+            'Interview problems on BT & BST'
+          ]
+        },
+        {
+          title: 'Heap & Dictionary',
+          classes: 'Classes 25-26',
+          subtopics: [
+            'Implementation of Heaps',
+            'HeapSort with complexity analysis',
+            'Concept of Hashing',
+            'Dictionary implementation',
+            'Problems on Dictionary & Heaps'
+          ]
+        },
+        {
+          title: 'Graph',
+          classes: 'Classes 27-28',
+          subtopics: [
+            'Terminologies in Graph',
+            'EdgeList implementation',
+            'AdjacencyList implementation',
+            'AdjacencyMap implementation',
+            'Searching Algorithms- DFS, BFS',
+            'Connected component, Cycle detection',
+            "Kruskal's, Dijkstra's, Prim's Algorithms"
+          ]
+        },
+        {
+          title: 'Dynamic Programming',
+          classes: 'Classes 29-30',
+          subtopics: [
+            'Understanding the concept in Dynamic Programming',
+            'Understanding overlapping subproblems',
+            'Memorization vs Tabulation',
+            'Top down & bottom-up approach',
+            '0-1 KnapSack problem',
+            'Wildcard pattern problem',
+            'Egg drop problem',
+            'Matrix chain multiplication'
+          ]
+        }
       ]
     }
   ],
-}],
   slides: [
     {
       heading: '',

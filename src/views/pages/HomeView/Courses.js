@@ -114,8 +114,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Courses() { 
-
+export default function Courses() {
   const classes = useStyles();
   const large = useMediaQuery('(min-width:1100px)');
   const medium = useMediaQuery('(min-width:900px)');
@@ -142,7 +141,8 @@ export default function Courses() {
         <Typography
           variant="h1"
           align="center"
-          color="textPrimary"s
+          color="textPrimary"
+          s
           style={{
             marginBottom: '20px'
           }}
@@ -253,7 +253,7 @@ export default function Courses() {
               })}
             </GridList>
           </TabPanel>
-        
+
           <TabPanel value={value} index={1}>
             <GridList
               className={classes.gridList}

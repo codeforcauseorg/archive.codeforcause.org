@@ -214,8 +214,7 @@ const renderRoutes = () => (
         )}
       />
 
-
-<Route
+      <Route
         path={`/six-months-fullstack-webdev-with-js`}
         exact
         render={props => (
@@ -241,7 +240,7 @@ const renderRoutes = () => (
         )}
       />
 
-<Route
+      <Route
         path={`/six-months-machine-learning-with-python`}
         exact
         render={props => (
