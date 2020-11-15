@@ -1,21 +1,21 @@
 export const competitiveJava = {
-  difficulty: 'Intermediate',
-  duration: '70 Lectures',
+  difficulty: 'Six Months Training ',
+  duration: '70 Live Lectures',
   level: 'Level 2',
-  link: '/competitive-programming-using-java',
-  domain: 'Interview Prepration',
-  title: 'Competitive Programming using Java',
+  link: '/six-months-competitive-programming-with-java',
+  domain: 'Interview Targetted Prepration',
+  title: 'DS Algo and Competitive Programming with Java',
   upcoming: 'Jan 10th',
-  mentors: ['kunal', 'ekta'],
+  mentors: ['anuj', 'ekta'],
   schedule: [
     {
       courseId: 'jcomp0121',
-      dates: '10th Jan - 15th Apr',
+      dates: '10th Jan - 30th Jun',
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
+      priceCut: '₹ 33,000',
+      price: '₹ 9,900',
       active: false
     }
   ],
@@ -28,6 +28,7 @@ export const competitiveJava = {
   sections: [
     {
       title: 'section 1',
+      classes: 'Classes 1-30',
       topics: [
         {
           title: 'Revisiting Java Collection Framework',
@@ -240,7 +241,6 @@ export const competitiveJava = {
       ]
     }
   ],
-
   slides: [
     {
       heading: '',

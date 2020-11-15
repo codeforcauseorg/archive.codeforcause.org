@@ -1,23 +1,23 @@
 export const webDevelopment = {
   courseid: '',
-  difficulty: 'Intermediate',
-  duration: '30 Lectures',
+  difficulty: 'Six Months Training ',
+  duration: '70 Live Lectures',
   level: 'Level 2',
-  link: '/fullstack-webdev-with-js',
-  domain: 'Web Development',
-  title: 'Full Stack Web Development with JS',
-  upcoming: 'Oct 22nd',
-  mentors: ['ganga', 'anuj'],
+  link: '/six-months-fullstack-webdev-with-js',
+  domain: 'Interview Targetted Prepration',
+  title: 'DS Algo and Full Stack Web Development with JS',
+  upcoming: 'Jan 22nd',
+  mentors: ['anuj', 'ganga'],
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '10th Jan - 10th Apr',
+      dates: '22nd Jan - 30th Jun',
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
-      active: false
+      priceCut: '₹ 33,000',
+      price: '₹ 9,900',
+      active: true
     }
   ],
   projects: [
@@ -42,10 +42,10 @@ export const webDevelopment = {
       img: '/static/images/courses/projects/chat.jpg'
     }
   ],
-
   sections: [
     {
-      title: 'Javascript Introduction',
+      title: 'section 1',
+      classes: 'Classes 1-30',
       topics: [
         {
           title: 'Introduction to JavaSript',
@@ -90,12 +90,7 @@ export const webDevelopment = {
             'Various HTTP requests and Form Submissions',
             'Socket.IO for realtime communication'
           ]
-        }
-      ]
-    },
-    {
-      title: 'Javascript Introduction',
-      topics: [
+        },
         {
           title: 'Diving Deep with React and Material UI',
           classes: 'Classes 19-22',

@@ -214,6 +214,45 @@ const renderRoutes = () => (
         )}
       />
 
+      <Route
+        path={`/six-months-fullstack-webdev-with-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage
+              course={coursesContent.training.webDevelopment}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
+      <Route
+        path={`/six-months-competitive-programming-with-java`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage
+              course={coursesContent.training.competitiveJava}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
+      <Route
+        path={`/six-months-machine-learning-with-python`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage
+              course={coursesContent.training.machineLearning}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
       {/* Privacy, refund policies, and terms and conditions routes */}
       <Route
         path={`/privacy`}

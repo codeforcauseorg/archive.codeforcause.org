@@ -133,14 +133,16 @@ export default function Courses() {
 
   const foundation = coursesContent.foundation;
   const advanced = coursesContent.advanced;
+  const training = coursesContent.training;
 
   return (
-    <Grid container className={classes.root}>
+    <Grid id="courses" container className={classes.root}>
       <Grid item lg={12} md={12} sm={12} xs={12}>
         <Typography
           variant="h1"
           align="center"
           color="textPrimary"
+          s
           style={{
             marginBottom: '20px'
           }}
@@ -193,10 +195,23 @@ export default function Courses() {
               label={
                 <Fragment>
                   <Typography variant="h5">
+                    <Box fontWeight={600}>Training</Box>
+                  </Typography>
+                  <Typography variant="body2">
+                    <Box>(6 Months)</Box>
+                  </Typography>
+                </Fragment>
+              }
+            />
+            <Tab
+              classes={tabItemStyles}
+              label={
+                <Fragment>
+                  <Typography variant="h5">
                     <Box fontWeight={600}>Foundation</Box>
                   </Typography>
                   <Typography variant="body2">
-                    <Box>(Reg. Open)</Box>
+                    <Box>(Regular)</Box>
                   </Typography>
                 </Fragment>
               }
@@ -210,31 +225,36 @@ export default function Courses() {
                     <Box fontWeight={600}>Advanced</Box>
                   </Typography>
                   <Typography variant="body2">
-                    <Box>(Reg. Open)</Box>
+                    <Box>(Regular)</Box>
                   </Typography>
                 </Fragment>
               }
-              disableRipple={true}
-            />
-
-            <Tab
-              classes={tabItemStyles}
-              label={
-                <Fragment>
-                  <Typography variant="h5">
-                    <Box fontWeight={600}>Complete</Box>
-                  </Typography>
-                  <Typography variant="body2">
-                    <Box>(Launching Soon)</Box>
-                  </Typography>
-                </Fragment>
-              }
-              disabled
               disableRipple={true}
             />
           </Tabs>
-
           <TabPanel value={value} index={0}>
+            <GridList
+              className={classes.gridList}
+              display="flex"
+              alignItems="center"
+              cols={large ? 3 : medium ? 2.5 : small ? 2.0 : 1.04}
+            >
+              {Object.entries(training).map(([cname, course], index) => {
+                return (
+                  <GridListTile
+                    key={course.id}
+                    style={{
+                      height: '600px'
+                    }}
+                  >
+                    <CourseCard course={course} />
+                  </GridListTile>
+                );
+              })}
+            </GridList>
+          </TabPanel>
+
+          <TabPanel value={value} index={1}>
             <GridList
               className={classes.gridList}
               display="flex"
@@ -255,7 +275,7 @@ export default function Courses() {
               })}
             </GridList>
           </TabPanel>
-          <TabPanel value={value} index={1}>
+          <TabPanel value={value} index={2}>
             <GridList
               className={classes.gridList}
               cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}

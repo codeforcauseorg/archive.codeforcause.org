@@ -97,9 +97,9 @@ const useStyles = makeStyles(theme => ({
   },
   bottomCardContent: {
     margin: '0px 8px 18px 0px',
-    padding: '4px 8px',
+    padding: '2px 4px',
     border: '1px solid',
-    borderColor: '#A6A6A6',
+    borderColor: '#A60000',
     borderRadius: '5px',
     width: 'min-content'
   }
@@ -120,7 +120,7 @@ export default function CourseCard({ course }) {
           <Box display="flex" flexDirection="column">
             <Typography
               align="left"
-              variant="h5"
+              variant="h4"
               style={{
                 color: '#0085FF',
                 paddingTop: '14px'
@@ -130,7 +130,7 @@ export default function CourseCard({ course }) {
             </Typography>
             <Typography
               align="left"
-              variant="h6"
+              variant="h5"
               color="secondary"
               style={{
                 margin: '12px 0'
@@ -139,7 +139,7 @@ export default function CourseCard({ course }) {
               {course.domain}
             </Typography>
 
-            <Typography variant="h4" align="left" style={{ fontWeight: 500 }}>
+            <Typography variant="h4" align="left" style={{ fontWeight: 700 }}>
               {course.title}
             </Typography>
           </Box>
@@ -159,7 +159,7 @@ export default function CourseCard({ course }) {
             {course.tags.slice(0, 3).map((tag, index) => (
               <div className={classes.bottomCardContent} variant="outlined">
                 <Typography
-                  style={{ color: '#a6a6a6', fontWeight: 500 }}
+                  style={{ color: '#a60000', fontWeight: 500 }}
                   variant="caption"
                   noWrap={true}
                 >

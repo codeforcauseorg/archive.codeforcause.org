@@ -5,7 +5,7 @@ import {
   Box,
   Collapse,
   IconButton,
-  Button
+  Button,
 } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -38,6 +38,13 @@ const useStyles = makeStyles(theme => ({
   content: {
     borderRadius: '14px',
     background: '#F1F4FE'
+  },
+  img: {
+    marginBottom: theme.spacing(10),
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(3)
+    }
   }
 }));
 
@@ -47,6 +54,12 @@ export default function Schedule({ course }) {
 
   return (
     <Grid container className={classes.root}>
+      <img
+        src="/static/images/courses/limitedTimeBookNow.jpg"
+        alt="Limited Time Available"
+        className={classes.img}
+      />
+
       <Grid
         item
         xs={12}
