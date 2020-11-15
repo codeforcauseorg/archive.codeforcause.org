@@ -3,20 +3,20 @@ import React from 'react';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: theme.spacing(10),
+    margin: theme.spacing(3, 0, 0),
     padding: '60px 0px 40px',
     backgroundColor: '#F4F4F4',
-    borderRadius: '10px'
+    borderRadius: '0px'
   },
   card: {
     display: 'inline-block',
     verticalAlign: 'top',
     width: 308,
     height: 245,
-    color: '#B4B4B4',
+    color: '#fff',
     padding: '24px',
     margin: '24px',
-    background: 'linear-gradient(180deg, #FF6565 0%, #000000 100%)',
+    background: '#5D517E',
     boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.15)',
     [theme.breakpoints.down('sm')]: {
       margin: '16px'
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   box: {
     height: '51px',
     width: '51px',
-    backgroundColor: '#bebebe',
+    backgroundColor: '#fff',
     padding: '12px',
     boxShadow: '0px 0px 14px rgba(0, 0, 0, 0.14), inset 0px 0px 5px #1D006E',
     borderRadius: '7px'
@@ -43,7 +43,7 @@ function CourseFeatures() {
       >
         Course Features
       </Typography>
-      <div style={{ display: 'block', textAlign: 'center' }}>
+      <div style={{ display: 'block', textAlign: 'center', width: '100%' }}>
         {features.map((feature, index) => {
           return <Card feature={feature} index={index} />;
         })}
@@ -55,15 +55,8 @@ function CourseFeatures() {
 function Card({ feature, index }) {
   const classes = useStyles();
   return (
-    <Paper
-      elevation={0}
-      className={classes.card}
-      style={{ background: `${feature.background}` }}
-    >
-      <Box
-        className={classes.box}
-        style={{ backgroundColor: `${feature.iconBackGround}` }}
-      >
+    <Paper elevation={0} className={classes.card}>
+      <Box className={classes.box}>
         <img
           src={`/static/images/courses/trainingLogos/${index}.svg`}
           alt="logo"
@@ -75,7 +68,7 @@ function Card({ feature, index }) {
       >
         {feature.topic}
       </Typography>
-      <Typography variant="body2" style={{ fontWeight: 500, color: '#d4d4d4' }}>
+      <Typography variant="body2" style={{ fontWeight: 500 }}>
         {feature.subTopic}
       </Typography>
     </Paper>
@@ -85,27 +78,19 @@ function Card({ feature, index }) {
 const features = [
   {
     topic: 'Structured Industry vetted Curiculumn',
-    subTopic: 'Who have been In Out Throughout the Industry',
-    background: 'linear-gradient(180deg, #FF6565 0%, #000000 100%)',
-    iconBackGround: '#BEBEBE'
+    subTopic: 'Who have been In Out Throughout the Industry'
   },
   {
     topic: 'Live Classes By Faculty',
-    subTopic: 'Who have been In Out Throughout the Industry',
-    background: 'linear-gradient(180deg, #5114FF 0%, #000000 100%)',
-    iconBackGround: '#73ABFF'
+    subTopic: 'Who have been In Out Throughout the Industry'
   },
   {
     topic: 'Affordable costing',
-    subTopic: 'Who have been In Out Throughout the Industry',
-    background: 'linear-gradient(180deg, #00A2D6 0%, #000000 100%)',
-    iconBackGround: '#9AFFE7'
+    subTopic: 'Who have been In Out Throughout the Industry'
   },
   {
     topic: 'Live Classes By Faculty',
-    subTopic: 'Who have been In Out Throughout the Industry',
-    background: '#5D517E',
-    iconBackGround: '#bebebe'
+    subTopic: 'Who have been In Out Throughout the Industry'
   }
 ];
 

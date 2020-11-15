@@ -232,7 +232,6 @@ function TopicDropBox({ topic, topicIndex }) {
             return (
               <Box
                 style={{
-                  color: '#777777',
                   backgroundColor: '#F2F2F2',
                   margin: '4px 0px',
                   padding: '8px 8px 8px 24px',
