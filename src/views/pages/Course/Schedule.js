@@ -5,7 +5,7 @@ import {
   Box,
   Collapse,
   IconButton,
-  Button,
+  Button
 } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';

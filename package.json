@@ -105,6 +105,7 @@
     "redux-form": "^8.3.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "swiper": "^6.3.5",
     "uuid": "^7.0.3",
     "yup": "^0.28.3"
   },
