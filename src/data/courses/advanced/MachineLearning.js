@@ -107,7 +107,7 @@ export const machineLearning = {
           subtopics: [
             'Neural Architectures and Training',
             'Deep Learning with Keras',
-            'Convolutions and the GoogLe Net',
+            'Convolutions and the GoogLeNet',
             'Transfer Learning with ResNet and AlexNet',
             'Dimensionality Reduction using Auto-encoders'
           ]
@@ -130,7 +130,7 @@ export const machineLearning = {
             'Foundational Reinforcemnt Learning',
             'Evolutionary Algorithms and Genetic Algorithms',
             'Deep Q-learning and training',
-            'Training on OpenAI Gym Simulaters'
+            'Training on OpenAI Gym Simulators'
           ]
         }
       ]

@@ -83,7 +83,7 @@ export const competitiveJava = {
             'Binomial coefficients',
             'Matrix Exponentiation',
             'Catalan Series',
-            'Fibonnaci & other series facts',
+            'Fibonacci & other series facts',
             'Prime factorization',
             'Pigeonhole Principle',
             'Extended Euclids Algorithms',
@@ -125,7 +125,7 @@ export const competitiveJava = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
@@ -161,9 +161,9 @@ export const competitiveJava = {
           classes: 'Lectures 17-18',
           subtopics: [
             'Implementation of Binary Trees',
-            'Tree traversal- inorder, preorder, postorder',
-            'Searching Algorithms- DFS, BFS',
-            'Calculate- hieght, depth, diameter of tree',
+            'Tree traversal- inorder, preorder and postorder',
+            'Searching Algorithms- DFS and BFS',
+            'Calculate- height, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
             'Interview problems on BT & BST'
@@ -174,7 +174,7 @@ export const competitiveJava = {
           classes: 'Lectures 19-20',
           subtopics: [
             'String Matching Algorithms',
-            'String window pronlems',
+            'String window problems',
             'String Hashing',
             'Rabin Karp Algorithm',
             'Knuth Morris Pratt Algorithm'
@@ -196,7 +196,7 @@ export const competitiveJava = {
           title: 'Segment Tree',
           classes: 'Lectures 22-23',
           subtopics: [
-            'Segment Tree structure & concept',
+            'Segment Tree: structure & concepts',
             'Build & update implementation',
             'Lazy Propagation',
             'Persistent Segment Tree',
@@ -228,7 +228,7 @@ export const competitiveJava = {
             'EdgeList implementation',
             'AdjacencyList implementation',
             'AdjacencyMap implementation',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
             'Bipartite Graph',
             "Kruskal's, Dijkstra's, Prim's Algorithms",

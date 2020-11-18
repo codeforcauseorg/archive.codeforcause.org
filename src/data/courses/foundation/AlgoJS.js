@@ -101,7 +101,7 @@ export const algoJS = {
           title: 'Space and Time complexity analysis',
           classes: 'Classes 12-13',
           subtopics: [
-            'Best case, worst case, average case',
+            'Best case, worst case and average case',
             'Sandwich theorem, recurrence relation',
             'Solving Complex Linear Recurrences',
             'Solving Divide & Conquer Recurrences',
@@ -142,7 +142,7 @@ export const algoJS = {
       classes: 'Classes 20-40',
       topics: [
         {
-          title: 'Stack & Queue',
+          title: 'Stacks & Queues',
           classes: 'Classes 19-20',
           subtopics: [
             'Stack as an Abstract Data Type',
@@ -208,7 +208,7 @@ export const algoJS = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',

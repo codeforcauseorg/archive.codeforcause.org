@@ -65,12 +65,12 @@ export const algoPython = {
           title: 'Lists & NumPy Arrays',
           classes: 'Classes 04-07',
           subtopics: [
-            'Introduction of Lists',
+            'Introduction to Lists',
             'Input-output & traversing',
             'Linear Search & Binary Search',
-            'Bubble sort, Insertion sort, Selection sort, Count sort',
-            'Multi-Dimensional arrays',
-            'Rotation in arrays',
+            'Selection sort, Bubble sort, Insertion sort, Count sort',
+            'Multi-Dimensional Arrays',
+            'Rotation in Arrays',
             'Intro to NumPy',
             'Interview problems on Arrays'
           ]
@@ -103,7 +103,7 @@ export const algoPython = {
           title: 'Space and Time complexity analysis',
           classes: 'Classes 12-13',
           subtopics: [
-            'Best case, worst case, average case',
+            'Best case, worst case and average case',
             'Sandwich theorem, recurrence relation',
             'Solving Complex Linear Recurrences',
             'Solving Divide & Conquer Recurrences',
@@ -140,7 +140,7 @@ export const algoPython = {
           ]
         },
         {
-          title: 'Stack & Queue',
+          title: 'Stacks & Queues',
           classes: 'Classes 19-20',
           subtopics: [
             'Stack as an Abstract Data Type',
@@ -207,7 +207,7 @@ export const algoPython = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',

@@ -68,7 +68,7 @@ export const algoJava = {
             'Introduction of arrays',
             'Input-output & traversing',
             'Linear Search & Binary Search',
-            'Bubble sort, Insertion sort, Selection sort, Count sort',
+            'Selection sort, Bubble sort, Insertion sort, Count sort',
             'Multi-Dimensional arrays',
             'Rotation in arrays',
             'Intro to ArrayList',
@@ -104,7 +104,7 @@ export const algoJava = {
           title: 'Space and Time complexity analysis',
           classes: 'Classes 12',
           subtopics: [
-            'Best case, worst case, average case',
+            'Best case, worst case and average case',
             'Sandwich theorem, recurrence relation',
             'Theta, Big-oh, Omega notations',
             'Understanding complexity of loops',
@@ -144,7 +144,7 @@ export const algoJava = {
       classes: 'Classes 20-40',
       topics: [
         {
-          title: 'Stack & Queue',
+          title: 'Stacks & Queues',
           classes: 'Classes 19-20',
           subtopics: [
             'Stack as generic collection',
@@ -174,7 +174,7 @@ export const algoJava = {
           subtopics: [
             'Implementation of Binary Trees',
             'Tree traversal- inorder, preorder, postorder',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Calculate- hieght, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
@@ -202,7 +202,7 @@ export const algoJava = {
             'EdgeList implementation',
             'AdjacencyList implementation',
             'AdjacencyMap implementation',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
             "Kruskal's, Dijkstra's, Prim's Algorithms"
           ]
@@ -213,7 +213,7 @@ export const algoJava = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',

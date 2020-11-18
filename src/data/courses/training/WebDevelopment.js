@@ -102,7 +102,7 @@ export const webDevelopment = {
           title: 'Space and Time complexity analysis',
           classes: 'Classes 12-13',
           subtopics: [
-            'Best case, worst case, average case',
+            'Best case, worst case and average case',
             'Sandwich theorem, recurrence relation',
             'Solving Complex Linear Recurrences',
             'Solving Divide & Conquer Recurrences',
@@ -143,7 +143,7 @@ export const webDevelopment = {
       classes: 'Classes 21-40',
       topics: [
         {
-          title: 'Stack & Queue',
+          title: 'Stacks & Queues',
           classes: 'Classes 19-20',
           subtopics: [
             'Stack as an Abstract Data Type',
@@ -209,7 +209,7 @@ export const webDevelopment = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
@@ -230,7 +230,7 @@ export const webDevelopment = {
           subtopics: [
             'Variables, Data Types and Statements',
             'Functions, Conditions and looping',
-            'Workin with Arrays and Maps',
+            'Working with Arrays and Maps',
             'String processing and manipulation',
             'Introduction to OOP in JS'
           ]
@@ -255,7 +255,7 @@ export const webDevelopment = {
             'Understanding a figma design',
             'Creating forms and validations',
             'Responsive website design Using bootstrap',
-            'FlexBoxes for rest practices of alignments'
+            'FlexBoxes for best practices of alignments'
           ]
         }
       ]
@@ -269,7 +269,7 @@ export const webDevelopment = {
           classes: 'Classes 15-18',
           subtopics: [
             'React concepts and building components',
-            'ExpressJS Framework for creating REST APIs',
+            'ExpressJS Framework for creating RESTful APIs',
             'Various HTTP requests and Form Submissions',
             'Socket.IO for realtime communication'
           ]
@@ -281,12 +281,12 @@ export const webDevelopment = {
             'React Props, State, Lifecycle Methods, and Keys',
             'Using hooks for functional React experience',
             'Theme and Typography with React MUI',
-            'Horizontal and Verical Steppers with React MUI',
+            'Horizontal and Vertical Steppers with React MUI',
             'Animations and Transitions with React Spring'
           ]
         },
         {
-          title: 'Realtional and Not Relational Databases',
+          title: 'Relational and Not Relational Databases',
           classes: 'Classes 23-25',
           subtopics: [
             'Walk trhough with SQL Queries',
@@ -311,7 +311,7 @@ export const webDevelopment = {
           subtopics: [
             'Spinning up project ideas and how to explore',
             'Pitching session and walkthough presentation',
-            'Best Practices for follow for web projects'
+            'Best Practices to follow for web projects'
           ]
         }
       ]
