@@ -6,16 +6,16 @@ export const competitiveJava = {
   domain: 'Interview Prepration',
   title: 'Competitive Programming using Java',
   upcoming: 'Jan 10th',
-  mentors: ['kunal', 'ekta'],
+  mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [
     {
       courseId: 'jcomp0121',
-      dates: '10th Jan - 15th Apr',
-      days: 'Sat, Sun, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      dates: '13th Feb - 18th May',
+      days: 'Sat, Sun, Wed, Fri',
+      timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
+      priceCut: '₹ 12,000',
+      price: '₹ 5,850',
       active: false
     }
   ],
@@ -83,7 +83,7 @@ export const competitiveJava = {
             'Binomial coefficients',
             'Matrix Exponentiation',
             'Catalan Series',
-            'Fibonnaci & other series facts',
+            'Fibonacci & other series facts',
             'Prime factorization',
             'Pigeonhole Principle',
             'Extended Euclids Algorithms',
@@ -125,7 +125,7 @@ export const competitiveJava = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
@@ -161,9 +161,9 @@ export const competitiveJava = {
           classes: 'Lectures 17-18',
           subtopics: [
             'Implementation of Binary Trees',
-            'Tree traversal- inorder, preorder, postorder',
-            'Searching Algorithms- DFS, BFS',
-            'Calculate- hieght, depth, diameter of tree',
+            'Tree traversal- inorder, preorder and postorder',
+            'Searching Algorithms- DFS and BFS',
+            'Calculate- height, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
             'Interview problems on BT & BST'
@@ -174,7 +174,7 @@ export const competitiveJava = {
           classes: 'Lectures 19-20',
           subtopics: [
             'String Matching Algorithms',
-            'String window pronlems',
+            'String window problems',
             'String Hashing',
             'Rabin Karp Algorithm',
             'Knuth Morris Pratt Algorithm'
@@ -196,7 +196,7 @@ export const competitiveJava = {
           title: 'Segment Tree',
           classes: 'Lectures 22-23',
           subtopics: [
-            'Segment Tree structure & concept',
+            'Segment Tree: structure & concepts',
             'Build & update implementation',
             'Lazy Propagation',
             'Persistent Segment Tree',
@@ -228,7 +228,7 @@ export const competitiveJava = {
             'EdgeList implementation',
             'AdjacencyList implementation',
             'AdjacencyMap implementation',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
             'Bipartite Graph',
             "Kruskal's, Dijkstra's, Prim's Algorithms",

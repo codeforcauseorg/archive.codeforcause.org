@@ -89,7 +89,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function FinalAction({ course, batch }) {
   const classes = useStyles();
-  const [applyState, setApplyState] = useState('Apply');
+  const [applyState, setApplyState] = useState('Enquire');
 
   const user = useSelector(state => state.account.user);
   const baseUrl =

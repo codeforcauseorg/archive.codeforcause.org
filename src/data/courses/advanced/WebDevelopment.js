@@ -5,18 +5,18 @@ export const webDevelopment = {
   level: 'Level 2',
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
-  title: 'Full Stack Web Development with JS',
+  title: 'Master Full Stack Web Development with JS',
   upcoming: 'Oct 22nd',
   mentors: ['ganga', 'anuj'],
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '10th Jan - 10th Apr',
-      days: 'Sat, Sun, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      dates: '13th Feb - 13th May',
+      days: 'Sat, Sun, Tue, Thu',
+      timing: '12:00 PM - 02:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
+      priceCut: '₹ 12,000',
+      price: '₹ 5,850',
       active: false
     }
   ],
@@ -54,7 +54,7 @@ export const webDevelopment = {
           subtopics: [
             'Variables, Data Types and Statements',
             'Functions, Conditions and looping',
-            'Workin with Arrays and Maps',
+            'Working with Arrays and Maps',
             'String processing and manipulation',
             'Introduction to OOP in JS'
           ]
@@ -79,7 +79,7 @@ export const webDevelopment = {
             'Understanding a figma design',
             'Creating forms and validations',
             'Responsive website design Using bootstrap',
-            'FlexBoxes for rest practices of alignments'
+            'FlexBoxes for best practices of alignments'
           ]
         }
       ]
@@ -93,7 +93,7 @@ export const webDevelopment = {
           classes: 'Classes 15-18',
           subtopics: [
             'React concepts and building components',
-            'ExpressJS Framework for creating REST APIs',
+            'ExpressJS Framework for creating RESTful APIs',
             'Various HTTP requests and Form Submissions',
             'Socket.IO for realtime communication'
           ]
@@ -105,12 +105,12 @@ export const webDevelopment = {
             'React Props, State, Lifecycle Methods, and Keys',
             'Using hooks for functional React experience',
             'Theme and Typography with React MUI',
-            'Horizontal and Verical Steppers with React MUI',
+            'Horizontal and Vertical Steppers with React MUI',
             'Animations and Transitions with React Spring'
           ]
         },
         {
-          title: 'Realtional and Not Relational Databases',
+          title: 'Relational and Not Relational Databases',
           classes: 'Classes 23-25',
           subtopics: [
             'Walk trhough with SQL Queries',
@@ -135,7 +135,7 @@ export const webDevelopment = {
           subtopics: [
             'Spinning up project ideas and how to explore',
             'Pitching session and walkthough presentation',
-            'Best Practices for follow for web projects'
+            'Best Practices to follow for web projects'
           ]
         }
       ]

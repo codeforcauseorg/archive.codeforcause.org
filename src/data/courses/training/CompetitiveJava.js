@@ -3,18 +3,18 @@ export const competitiveJava = {
   duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-competitive-programming-with-java',
-  domain: 'Interview Targetted Prepration',
+  domain: 'Interview Targeted Prepration',
   title: 'Competitive Programming with DS & Algo in Java',
   upcoming: 'Jan 10th',
-  mentors: ['anuj', 'ekta'],
+  mentors: ['anuj', 'ekta', 'kunal'],
   schedule: [
     {
       courseId: 'jcomp0121',
-      dates: '10th Jan - 30th Jun',
-      days: 'Sat, Sun, Wed',
+      dates: '16th Jan - 30th Jun',
+      days: 'Sat, Sun, Tue, Thu',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 33,000',
+      priceCut: '₹ 20,000',
       price: '₹ 9,900',
       active: false
     }
@@ -67,7 +67,7 @@ export const competitiveJava = {
             'Introduction of arrays',
             'Input-output & traversing',
             'Linear Search & Binary Search',
-            'Bubble sort, Insertion sort, Selection sort, Count sort',
+            'Selection sort, Bubble sort, Insertion sort, Count sort',
             'Multi-Dimensional arrays',
             'Rotation in arrays',
             'Intro to ArrayList',
@@ -103,7 +103,7 @@ export const competitiveJava = {
           title: 'Space and Time complexity analysis',
           classes: 'Classes 12',
           subtopics: [
-            'Best case, worst case, average case',
+            'Best case, worst case and average case',
             'Sandwich theorem, recurrence relation',
             'Theta, Big-oh, Omega notations',
             'Understanding complexity of loops',
@@ -143,7 +143,7 @@ export const competitiveJava = {
       classes: 'Classes 21-40',
       topics: [
         {
-          title: 'Stack & Queue',
+          title: 'Stacks & Queues',
           classes: 'Classes 19-20',
           subtopics: [
             'Stack as generic collection',
@@ -173,7 +173,7 @@ export const competitiveJava = {
           subtopics: [
             'Implementation of Binary Trees',
             'Tree traversal- inorder, preorder, postorder',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Calculate- hieght, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
@@ -201,9 +201,9 @@ export const competitiveJava = {
             'EdgeList implementation',
             'AdjacencyList implementation',
             'AdjacencyMap implementation',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
-            "Kruskal's, Dijkstra's, Prim's Algorithms"
+            "Kruskal's, Dijkstra's and Prim's Algorithm"
           ]
         },
         {
@@ -212,7 +212,7 @@ export const competitiveJava = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
@@ -263,7 +263,7 @@ export const competitiveJava = {
             'Binomial coefficients',
             'Matrix Exponentiation',
             'Catalan Series',
-            'Fibonnaci & other series facts',
+            'Fibonacci & other series facts',
             'Prime factorization',
             'Pigeonhole Principle',
             'Extended Euclids Algorithms',
@@ -305,7 +305,7 @@ export const competitiveJava = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
@@ -341,9 +341,9 @@ export const competitiveJava = {
           classes: 'Lectures 17-18',
           subtopics: [
             'Implementation of Binary Trees',
-            'Tree traversal- inorder, preorder, postorder',
-            'Searching Algorithms- DFS, BFS',
-            'Calculate- hieght, depth, diameter of tree',
+            'Tree traversal- inorder, preorder and postorder',
+            'Searching Algorithms- DFS and BFS',
+            'Calculate- height, depth and diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
             'Interview problems on BT & BST'
@@ -354,7 +354,7 @@ export const competitiveJava = {
           classes: 'Lectures 19-20',
           subtopics: [
             'String Matching Algorithms',
-            'String window pronlems',
+            'String window problems',
             'String Hashing',
             'Rabin Karp Algorithm',
             'Knuth Morris Pratt Algorithm'
@@ -376,7 +376,7 @@ export const competitiveJava = {
           title: 'Segment Tree',
           classes: 'Lectures 22-23',
           subtopics: [
-            'Segment Tree structure & concept',
+            'Segment Tree: structure & concepts',
             'Build & update implementation',
             'Lazy Propagation',
             'Persistent Segment Tree',
@@ -408,7 +408,7 @@ export const competitiveJava = {
             'EdgeList implementation',
             'AdjacencyList implementation',
             'AdjacencyMap implementation',
-            'Searching Algorithms- DFS, BFS',
+            'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
             'Bipartite Graph',
             "Kruskal's, Dijkstra's, Prim's Algorithms",

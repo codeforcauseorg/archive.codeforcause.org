@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   img: {
     marginBottom: theme.spacing(10),
+    height: 'auto',
     width: '100%',
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(3)

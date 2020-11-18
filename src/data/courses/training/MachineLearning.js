@@ -3,18 +3,18 @@ export const machineLearning = {
   duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-machine-learning-with-python',
-  domain: 'Interview Targetted Prepration',
+  domain: 'Interview Targeted Prepration',
   title: 'Master Machine Learning with DS & Algo in Python',
   upcoming: 'Jan 15th',
   mentors: ['anuj', 'kunal'],
   schedule: [
     {
       courseId: 'mlpy1020',
-      dates: '15th Jan - 30th Jun',
-      days: 'Sat, Sun, Thur',
-      timing: '06:00 PM - 8:00 PM (IST)',
+      dates: '16th Jan - 30th Jun',
+      days: 'Sat, Sun, wed, Fri',
+      timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 33,000',
+      priceCut: '₹ 20,000',
       price: '₹ 9,900',
       active: true
     }
@@ -69,12 +69,12 @@ export const machineLearning = {
           title: 'Lists & NumPy Arrays',
           classes: 'Classes 04-07',
           subtopics: [
-            'Introduction of Lists',
+            'Introduction to Lists',
             'Input-output & traversing',
             'Linear Search & Binary Search',
-            'Bubble sort, Insertion sort, Selection sort, Count sort',
-            'Multi-Dimensional arrays',
-            'Rotation in arrays',
+            'Selection sort, Bubble sort, Insertion sort, Count sort',
+            'Multi-Dimensional Arrays',
+            'Rotation in Arrays',
             'Intro to NumPy',
             'Interview problems on Arrays'
           ]
@@ -107,7 +107,7 @@ export const machineLearning = {
           title: 'Space and Time complexity analysis',
           classes: 'Classes 12-13',
           subtopics: [
-            'Best case, worst case, average case',
+            'Best case, worst case and average case',
             'Sandwich theorem, recurrence relation',
             'Solving Complex Linear Recurrences',
             'Solving Divide & Conquer Recurrences',
@@ -150,7 +150,7 @@ export const machineLearning = {
       classes: 'Classes 21-40',
       topics: [
         {
-          title: 'Stack & Queue',
+          title: 'Stacks & Queues',
           classes: 'Classes 19-20',
           subtopics: [
             'Stack as an Abstract Data Type',
@@ -217,7 +217,7 @@ export const machineLearning = {
           subtopics: [
             'Understanding the concept in Dynamic Programming',
             'Understanding overlapping subproblems',
-            'Memorization vs Tabulation',
+            'Memoization vs Tabulation',
             'Top down & bottom-up approach',
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
@@ -287,7 +287,7 @@ export const machineLearning = {
           subtopics: [
             'Neural Architectures and Training',
             'Deep Learning with Keras',
-            'Convolutions and the GoogLe Net',
+            'Convolutions and the GoogLeNet',
             'Transfer Learning with ResNet and AlexNet',
             'Dimensionality Reduction using Auto-encoders'
           ]
@@ -310,7 +310,7 @@ export const machineLearning = {
             'Foundational Reinforcemnt Learning',
             'Evolutionary Algorithms and Genetic Algorithms',
             'Deep Q-learning and training',
-            'Training on OpenAI Gym Simulaters'
+            'Training on OpenAI Gym Simulators'
           ]
         }
       ]

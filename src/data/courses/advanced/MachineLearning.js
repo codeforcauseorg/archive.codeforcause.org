@@ -10,12 +10,12 @@ export const machineLearning = {
   schedule: [
     {
       courseId: 'mlpy0121',
-      dates: '10th Jan - 10th Apr',
-      days: 'Sat, Sun, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      dates: '13th Feb - 13th May',
+      days: 'Sat, Sun, Tue, Thu',
+      timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
+      priceCut: '₹ 12,000',
+      price: '₹ 5,850',
       active: false
     }
   ],
@@ -107,7 +107,7 @@ export const machineLearning = {
           subtopics: [
             'Neural Architectures and Training',
             'Deep Learning with Keras',
-            'Convolutions and the GoogLe Net',
+            'Convolutions and the GoogLeNet',
             'Transfer Learning with ResNet and AlexNet',
             'Dimensionality Reduction using Auto-encoders'
           ]
@@ -130,7 +130,7 @@ export const machineLearning = {
             'Foundational Reinforcemnt Learning',
             'Evolutionary Algorithms and Genetic Algorithms',
             'Deep Q-learning and training',
-            'Training on OpenAI Gym Simulaters'
+            'Training on OpenAI Gym Simulators'
           ]
         }
       ]
