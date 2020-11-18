@@ -14,8 +14,8 @@ export const devPython = {
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 6,850',
+      priceCut: '₹ 12,000',
+      price: '₹ 5,850',
       active: false
     }
   ],

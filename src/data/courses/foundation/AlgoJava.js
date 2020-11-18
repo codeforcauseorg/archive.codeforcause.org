@@ -6,7 +6,7 @@ export const algoJava = {
   domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with Java',
   upcoming: 'Jan 10th',
-  mentors: ['anuj', 'ekta'],
+  mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [
     {
       courseId: 'jds0121',
@@ -14,8 +14,8 @@ export const algoJava = {
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 14,999',
-      price: '₹ 6,850',
+      priceCut: '₹ 10,000',
+      price: '₹ 4,850',
       active: false
     }
   ],

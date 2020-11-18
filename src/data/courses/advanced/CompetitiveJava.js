@@ -6,7 +6,7 @@ export const competitiveJava = {
   domain: 'Interview Prepration',
   title: 'Competitive Programming using Java',
   upcoming: 'Jan 10th',
-  mentors: ['kunal', 'ekta'],
+  mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [
     {
       courseId: 'jcomp0121',
@@ -14,8 +14,8 @@ export const competitiveJava = {
       days: 'Sat, Sun, Wed',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 15,000',
-      price: '₹ 8,850',
+      priceCut: '₹ 12,000',
+      price: '₹ 5,850',
       active: false
     }
   ],
