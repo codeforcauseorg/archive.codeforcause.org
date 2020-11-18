@@ -1,13 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { Container, makeStyles, Typography } from '@material-ui/core';
 import clsx from 'clsx';
-import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
-import ProcessSteppers from './ProcessSteppers';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const useStyles = makeStyles(theme => ({
   root: {
     background: 'linear-gradient(180deg, #2A185A 0%, #000000 100%)',
-    padding: theme.spacing(14, 10, 10),
+    padding: theme.spacing(20, 10, 17),
     [theme.breakpoints.down('md')]: {
       padding: theme.spacing(14, 0, 10)
     },
@@ -23,14 +22,14 @@ function Process({ benefits, className, ...rest }) {
       <Container maxWidth="lg">
         <Typography
           style={{ color: '#ffffff' }}
-          variant="h2"
+          variant="h1"
           align="center"
           gutterBottom
         >
           Offering 50% Scholarship On this Batch
         </Typography>
 
-        <Typography
+        {/* <Typography
           style={{ marginTop: '32px', color: '#ffffff' }}
           variant="h4"
           align="center"
@@ -40,7 +39,7 @@ function Process({ benefits, className, ...rest }) {
         </Typography>
         <Grid container component="dl" style={{ padding: '20px 0px 20px' }}>
           <ProcessSteppers />
-        </Grid>
+        </Grid> */}
       </Container>
     </div>
   );

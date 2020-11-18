@@ -10,9 +10,9 @@ export const machineLearning = {
   schedule: [
     {
       courseId: 'mlpy0121',
-      dates: '10th Jan - 10th Apr',
-      days: 'Sat, Sun, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      dates: '13th Feb - 13th May',
+      days: 'Sat, Sun, Tue, Thu',
+      timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '₹ 12,000',
       price: '₹ 5,850',

@@ -10,9 +10,9 @@ export const algoJS = {
   schedule: [
     {
       courseId: 'pds0121',
-      dates: '10th Jan - 10th Apr',
-      days: 'Sat, Sun, Wed',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      dates: '16th Jan - 16th Apr',
+      days: 'Sat, Sun, Wed, Fri',
+      timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
       priceCut: '₹ 10,000',
       price: '₹ 4,850',

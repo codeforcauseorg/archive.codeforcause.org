@@ -10,8 +10,8 @@ export const algoJava = {
   schedule: [
     {
       courseId: 'jds0121',
-      dates: '10th Jan - 10th Apr',
-      days: 'Sat, Sun, Wed',
+      dates: '16th Jan - 16th Apr',
+      days: 'Sat, Sun, Tue, Thu',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '₹ 10,000',

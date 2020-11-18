@@ -3,15 +3,15 @@ export const competitiveJava = {
   duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-competitive-programming-with-java',
-  domain: 'Interview Targetted Prepration',
+  domain: 'Interview Targeted Prepration',
   title: 'Competitive Programming with DS & Algo in Java',
   upcoming: 'Jan 10th',
   mentors: ['anuj', 'ekta', 'kunal'],
   schedule: [
     {
       courseId: 'jcomp0121',
-      dates: '10th Jan - 30th Jun',
-      days: 'Sat, Sun, Wed',
+      dates: '16th Jan - 30th Jun',
+      days: 'Sat, Sun, Tue, Thu',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '₹ 20,000',
