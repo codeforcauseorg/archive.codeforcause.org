@@ -5,13 +5,13 @@ export const devPython = {
   link: '/application-dev-using-python',
   domain: 'Development and Automation',
   title: 'Application Development with Python',
-  upcoming: 'Jan 15th',
+  upcoming: 'Jan 16th',
   mentors: ['kunal'],
   schedule: [
     {
       courseId: 'pdev0121',
       dates: '15th Jan - 20th Apr',
-      days: 'Sat, Sun, Wed',
+      days: 'Sat, Sun, Wed, Fri',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '₹ 12,000',

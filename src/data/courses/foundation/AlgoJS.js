@@ -5,7 +5,7 @@ export const algoJS = {
   link: '/ds-algo-with-js',
   domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with JavaScript',
-  upcoming: 'Jan 22nd',
+  upcoming: 'Jan 16th',
   mentors: ['ganga', 'anuj'],
   schedule: [
     {

@@ -5,7 +5,7 @@ export const machineLearning = {
   link: '/machine-learning-using-python',
   domain: 'Artificial Intelligence',
   title: 'Master Machine Learning using Python',
-  upcoming: 'Oct 20th',
+  upcoming: 'Feb 13th',
   mentors: ['anuj', 'kunal'],
   schedule: [
     {

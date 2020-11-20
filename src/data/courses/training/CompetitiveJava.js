@@ -5,7 +5,7 @@ export const competitiveJava = {
   link: '/six-months-competitive-programming-with-java',
   domain: 'Interview Targeted Prepration',
   title: 'Competitive Programming with DS & Algo in Java',
-  upcoming: 'Jan 10th',
+  upcoming: 'Jan 16th',
   mentors: ['anuj', 'ekta', 'kunal'],
   schedule: [
     {
