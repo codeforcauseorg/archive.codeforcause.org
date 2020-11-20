@@ -5,7 +5,7 @@ export const algoPython = {
   link: '/ds-algo-with-python',
   domain: 'Algorithms & Complexities',
   title: 'Data Structure and Algorithms with Python',
-  upcoming: 'Jan 15th',
+  upcoming: 'Jan 16th',
   mentors: ['anuj', 'kunal'],
   schedule: [
     {

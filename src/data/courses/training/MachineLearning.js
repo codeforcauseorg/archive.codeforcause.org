@@ -5,7 +5,7 @@ export const machineLearning = {
   link: '/six-months-machine-learning-with-python',
   domain: 'Interview Targeted Prepration',
   title: 'Master Machine Learning with DS & Algo in Python',
-  upcoming: 'Jan 15th',
+  upcoming: 'Jan 16th',
   mentors: ['anuj', 'kunal'],
   schedule: [
     {

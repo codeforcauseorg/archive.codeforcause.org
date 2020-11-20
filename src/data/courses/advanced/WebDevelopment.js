@@ -6,7 +6,7 @@ export const webDevelopment = {
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
   title: 'Master Full Stack Web Development with JS',
-  upcoming: 'Oct 22nd',
+  upcoming: 'Feb 13th',
   mentors: ['ganga', 'anuj'],
   schedule: [
     {
