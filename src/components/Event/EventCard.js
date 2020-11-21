@@ -79,7 +79,7 @@ function Eventcard({ className, event, index, ...rest }) {
       sm={6}
       md={4}
     >
-      <Card elevation={0} className={classes.card}>
+      <Card elevation={0} className={classes.card} {...rest}>
         {event.time ? (
           <div className={classes.eventdate}>
             <Typography

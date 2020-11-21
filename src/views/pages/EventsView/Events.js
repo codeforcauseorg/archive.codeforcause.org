@@ -10,7 +10,8 @@ import {
   Container,
   Grid,
   Typography,
-  makeStyles
+  makeStyles,
+  CircularProgress
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -89,6 +90,11 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '0px 5px 5px 0px',
     color: 'white',
     backgroundColor: '#000000'
+  },  
+  loading: {
+    position: 'relative',
+    padding: '160px 49vw',
+    width: '100%'
   }
 }));
 
@@ -114,8 +120,10 @@ function Events({ className, ...rest }) {
   }, [getEvents]);
 
   if (!events) {
-    return null;
-  }
+    return <Container className={classes.loading}>
+     <CircularProgress style={{left: '50%', display: 'absolute'}}></CircularProgress>
+   </Container>
+ }
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
