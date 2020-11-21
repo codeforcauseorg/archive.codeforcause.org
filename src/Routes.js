@@ -38,17 +38,17 @@ const renderRoutes = () => (
           </>
         )}
       />
-
       <Route
-        path="/applications"
-        exact
+        path="/courses"
         render={props => (
-          <MainLayout>
-            <ApplicationsView {...props} />
-          </MainLayout>
+          <t>
+            <ScrollReset />
+            <MainLayout>
+              <CoursesView {...props} />
+            </MainLayout>
+          </t>
         )}
       />
-
       <Route
         path="/events"
         exact
@@ -56,6 +56,37 @@ const renderRoutes = () => (
           <MainLayout>
             <ScrollReset />
             <EventsView {...props} />
+          </MainLayout>
+        )}
+      />
+
+      <Route
+        path="/campusLeaders"
+        exact
+        render={props => (
+          <span>
+            <MainLayout>
+              <CAView {...props} />
+            </MainLayout>
+          </span>
+        )}
+      />
+
+      <Route
+        path="/bootcamp"
+        render={props => (
+          <MainLayout>
+            <Bootcamps {...props} />
+          </MainLayout>
+        )}
+      />
+
+      <Route
+        path="/applications"
+        exact
+        render={props => (
+          <MainLayout>
+            <ApplicationsView {...props} />
           </MainLayout>
         )}
       />
@@ -106,38 +137,6 @@ const renderRoutes = () => (
               <Blog {...props} />
             </MainLayout>
           </>
-        )}
-      />
-
-      <Route
-        path="/courses"
-        render={props => (
-          <>
-            <ScrollReset />
-            <MainLayout>
-              <CoursesView {...props} />
-            </MainLayout>
-          </>
-        )}
-      />
-
-      <Route
-        path="/bootcamp"
-        render={props => (
-          <MainLayout>
-            <Bootcamps {...props} />
-          </MainLayout>
-        )}
-      />
-
-      <Route
-        path="/campusLeaders"
-        exact
-        render={props => (
-          <MainLayout>
-            <ScrollReset />
-            <CAView {...props} />
-          </MainLayout>
         )}
       />
 
