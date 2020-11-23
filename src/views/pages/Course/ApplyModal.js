@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ApplyModal() {
+export default function ApplyModal({ fullWidth = false, ...rest }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [formData, updateFormData] = useState({});
@@ -96,6 +96,8 @@ export default function ApplyModal() {
         size="large"
         variant="contained"
         onClick={handleClickOpen}
+        {...rest}
+        fullWidth={fullWidth}
       >
         Enquire
       </Button>
@@ -114,6 +116,7 @@ export default function ApplyModal() {
           </DialogContentText>
           <ValidatorForm onSubmit={handleSubmit}>
             <TextValidator
+              required
               key="name"
               className={classes.textField}
               label="Full Name"
@@ -127,6 +130,7 @@ export default function ApplyModal() {
             />
 
             <TextValidator
+              required
               key="email"
               className={classes.textField}
               label="Email"
@@ -163,6 +167,7 @@ export default function ApplyModal() {
 
               <Grid item xs={10}>
                 <TextValidator
+                  required
                   key="contact"
                   className={classes.textField}
                   label="WhatsApp / Contact Number "
@@ -184,6 +189,7 @@ export default function ApplyModal() {
             </Grid>
 
             <TextValidator
+              required
               key="course"
               className={classes.textField}
               label="Course & Branch"
@@ -197,6 +203,7 @@ export default function ApplyModal() {
             />
 
             <SelectValidator
+              required
               key="year"
               className={classes.textField}
               value={formData.year}
@@ -217,6 +224,7 @@ export default function ApplyModal() {
             </SelectValidator>
 
             <TextValidator
+              required
               key="college"
               className={classes.textField}
               label="College Name"
@@ -231,7 +239,7 @@ export default function ApplyModal() {
 
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">
-                Apply
+                Submit
               </Button>
             ) : (
               <div className={classes.submissions}>
