@@ -36,7 +36,7 @@ function Promoters({ className, ...rest }) {
           container
           component="dl"
           direction="row"
-          justify="center"
+          justify="left"
           alignItems="center"
         >
           <Grid item xs={12} md={5}>
@@ -47,9 +47,9 @@ function Promoters({ className, ...rest }) {
           <Grid item xs={6} md={2}>
             <img alt="Logo" src="/static/images/promoters/google.svg" />
           </Grid>
-          <Grid item xs={6} md={2}>
+          {/* <Grid item xs={6} md={2}>
             <img alt="Logo" src="/static/images/promoters/microsoft.svg" />
-          </Grid>
+          </Grid> */}
           <Grid item xs={6} md={2}>
             <img alt="Logo" src="/static/images/promoters/redhat.svg" />
           </Grid>
