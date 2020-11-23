@@ -8,10 +8,39 @@ import {
 } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useState } from 'react';
-import useIsMountedRef from 'src/hooks/useIsMountedRef';
-import axios from 'src/utils/axios';
+import React from 'react';
 import EventCard from '../../../components/Event/EventCard';
+
+// Temporary------------Temporary------------Temporary------------
+const tempEvents = [
+  {
+    "time": "Oct 19, 7:00 PM IST",
+    "link": "https://youtu.be/dDE3tOa4JUs",
+    "domain": "Open Source",
+    "title": "20 Open Source Programs & Paid Virtual Internships You Can Apply to!!",
+    "upcoming": "false",
+    "image": "https://img.youtube.com/vi/dDE3tOa4JUs/hqdefault.jpg",
+    "type": "Webinar"
+  },
+  {
+    "link": "https://youtu.be/i5oP95218IQ",
+    "image": "https://img.youtube.com/vi/i5oP95218IQ/hqdefault.jpg",
+    "domain": "Open Source",
+    "time": "Sept 14, 7:00 PM IST",
+    "title": "10 Student Programs You Can Apply to Right Now",
+    "type": "Webinar",
+    "upcoming": "false"
+  },
+  {
+    "time": "July 14, 9:00 PM IST",
+    "image": "https://img.youtube.com/vi/7jN24_YVcns/hqdefault.jpg",
+    "link": "https://youtu.be/7jN24_YVcns",
+    "title": "Data Visualization & Outlier Detection with Seaborn, Matplotlib",
+    "domain": "Machine Learning",
+    "upcoming": "false",
+    "type": "Webinar"
+  },]
+// Temporary------------Temporary------------Temporary------------
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -105,28 +134,28 @@ const useStyles = makeStyles(theme => ({
 
 function Events({ className, ...rest }) {
   const classes = useStyles();
-  const isMountedRef = useIsMountedRef();
-  const [events, setEvents] = useState(null);
+  // const isMountedRef = useIsMountedRef();
+  // const [events, setEvents] = useState(null);
 
-  const getEvents = useCallback(() => {
-    axios
-      .get(
-        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/events'
-      )
-      .then(response => {
-        if (isMountedRef.current) {
-          setEvents(response.data);
-        }
-      });
-  }, [isMountedRef]);
+  // const getEvents = useCallback(() => {
+  //   axios
+  //     .get(
+  //       'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/events'
+  //     )
+  //     .then(response => {
+  //       if (isMountedRef.current) {
+  //         setEvents(response.data);
+  //       }
+  //     });
+  // }, [isMountedRef]);
 
-  useEffect(() => {
-    getEvents();
-  }, [getEvents]);
+  // useEffect(() => {
+  //   getEvents();
+  // }, [getEvents]);
 
-  if (!events) {
-    return null;
-  }
+  // if (!events) {
+  //   return null;
+  // }
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -135,9 +164,12 @@ function Events({ className, ...rest }) {
           Our Online Events
         </Typography>
         <Grid container spacing={4} className={classes.extraMargin}>
-          {events.slice(Math.max(events.length - 3, 0)).map((event, index) => (
+          {tempEvents.map((event, index) => (
             <EventCard event={event} index={index} />
           ))}
+          {/* {events.slice(Math.max(events.length - 3, 0)).map((event, index) => (
+            <EventCard event={event} index={index} />
+          ))} */}
           <Grid item xs={12} sm={12} md={12}>
             <div className={classes.box2}>
               <Box
