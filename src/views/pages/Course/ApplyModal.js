@@ -97,7 +97,7 @@ export default function ApplyModal() {
         variant="contained"
         onClick={handleClickOpen}
       >
-        Enquire
+        Enquire Now
       </Button>
       <Dialog
         fullWidth
