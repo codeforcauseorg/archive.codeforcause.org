@@ -116,6 +116,7 @@ export default function ApplyNowModal() {
           </DialogContentText>
           <ValidatorForm onSubmit={handleSubmit}>
             <TextValidator
+              required
               key="name"
               className={classes.textField}
               label="Full Name"
@@ -129,6 +130,7 @@ export default function ApplyNowModal() {
             />
 
             <TextValidator
+              required
               key="email"
               className={classes.textField}
               label="Email"
@@ -165,6 +167,7 @@ export default function ApplyNowModal() {
 
               <Grid item xs={10}>
                 <TextValidator
+                  required
                   key="contact"
                   className={classes.textField}
                   label="WhatsApp / Contact Number "
@@ -186,6 +189,7 @@ export default function ApplyNowModal() {
             </Grid>
 
             <TextValidator
+              required
               key="linkedIn"
               className={classes.textField}
               label="LinkedIn URL"
@@ -205,6 +209,7 @@ export default function ApplyNowModal() {
             />
 
             <TextValidator
+              required
               key="course"
               className={classes.textField}
               label="Course & Branch"
@@ -218,6 +223,7 @@ export default function ApplyNowModal() {
             />
 
             <SelectValidator
+              required
               key="year"
               className={classes.textField}
               value={formData.year}
@@ -238,6 +244,7 @@ export default function ApplyNowModal() {
             </SelectValidator>
 
             <TextValidator
+              required
               key="college"
               className={classes.textField}
               label="College Name"
