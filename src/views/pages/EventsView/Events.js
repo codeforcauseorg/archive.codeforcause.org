@@ -90,7 +90,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '0px 5px 5px 0px',
     color: 'white',
     backgroundColor: '#000000'
-  },  
+  },
   loading: {
     position: 'relative',
     padding: '160px 49vw',
@@ -120,10 +120,14 @@ function Events({ className, ...rest }) {
   }, [getEvents]);
 
   if (!events) {
-    return <Container className={classes.loading}>
-     <CircularProgress style={{left: '50%', display: 'absolute'}}></CircularProgress>
-   </Container>
- }
+    return (
+      <Container className={classes.loading}>
+        <CircularProgress
+          style={{ left: '50%', display: 'absolute' }}
+        ></CircularProgress>
+      </Container>
+    );
+  }
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>

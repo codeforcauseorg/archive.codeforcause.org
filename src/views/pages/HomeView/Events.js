@@ -152,14 +152,18 @@ function Events({ className, ...rest }) {
         <SwiperSlide key={`slide-${index}`} tag="li">
           <EventCard event={event} index={index} style={{ height: 'auto' }} />
         </SwiperSlide>
-      )
-    })
+      );
+    });
   }
 
   if (!events) {
-     return <Container className={classes.loading}>
-      <CircularProgress style={{left: '50%', display: 'absolute'}}></CircularProgress>
-    </Container>
+    return (
+      <Container className={classes.loading}>
+        <CircularProgress
+          style={{ left: '50%', display: 'absolute' }}
+        ></CircularProgress>
+      </Container>
+    );
   }
 
   return (
@@ -170,24 +174,24 @@ function Events({ className, ...rest }) {
         </Typography>
         <Grid container spacing={4} className={classes.extraMargin}>
           <Hidden xsDown>
-          <Swiper
-            id="main"
-            navigation={true}
-            pagination={{ clickable: true }}
-            spaceBetween={70}
-            slidesPerView={
-              large ? 3 : medium ? 2 : small ? 1 : 1
-            }
-            slidesPerGroup={large ? 2 : medium ? 2 : small ? 1 : 1}
-            className={classes.swiper}
-          >
-            {eventSlides}
-          </Swiper>
+            <Swiper
+              id="main"
+              navigation={true}
+              pagination={{ clickable: true }}
+              spaceBetween={70}
+              slidesPerView={large ? 3 : medium ? 2 : small ? 1 : 1}
+              slidesPerGroup={large ? 2 : medium ? 2 : small ? 1 : 1}
+              className={classes.swiper}
+            >
+              {eventSlides}
+            </Swiper>
           </Hidden>
           <Hidden smUp>
-            {events.slice(Math.max(events.length - 3, 0)).map((event, index) => (
-              <EventCard event={event} index={index} />
-            ))}
+            {events
+              .slice(Math.max(events.length - 3, 0))
+              .map((event, index) => (
+                <EventCard event={event} index={index} />
+              ))}
           </Hidden>
           <Grid item xs={12} sm={12} md={12}>
             <div className={classes.box2}>
