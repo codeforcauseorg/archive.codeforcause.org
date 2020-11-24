@@ -14,7 +14,7 @@ import {
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
-import PhoneIcon from '@material-ui/icons/Phone';
+import PhoneIcon from '@material-ui/icons/PhoneInTalk';
 import EmailIcon from '@material-ui/icons/Email';
 
 import axios from 'src/utils/axios';
@@ -124,7 +124,7 @@ function Process({ benefits, className, ...rest }) {
           >
             <CardContent>
               <Typography className={classes.text} variant="h3">
-                Request a Consultation
+                Request <span style={{ color: '#A60000' }}>a Consultation</span>
               </Typography>
 
               <Typography style={{ paddingBottom: '16px' }} variant="body1">
@@ -226,19 +226,18 @@ function Process({ benefits, className, ...rest }) {
               height: '100%'
             }}
           >
-            <CardContent>
+            <CardContent style={{ paddingBottom: '40px' }}>
               <Typography className={classes.text} variant="h3">
-                Request a Consultation
-              </Typography>
-
-              <Typography variant="body1">
-                Setup a call with our counsellor and figure out what’s best for
-                you.
+                For <span style={{ color: '#A60000' }}>Any Query</span>
               </Typography>
             </CardContent>
 
             <CardContent>
-              <Typography className={classes.text} variant="h4">
+              <Typography
+                className={classes.text}
+                variant="h4"
+                style={{ paddingBottom: '20px' }}
+              >
                 Call Us
               </Typography>
 
@@ -271,7 +270,11 @@ function Process({ benefits, className, ...rest }) {
             </CardContent>
 
             <CardContent>
-              <Typography className={classes.text} variant="h4">
+              <Typography
+                className={classes.text}
+                variant="h4"
+                style={{ paddingBottom: '20px', paddingTop: '20px' }}
+              >
                 Email Us
               </Typography>
 
