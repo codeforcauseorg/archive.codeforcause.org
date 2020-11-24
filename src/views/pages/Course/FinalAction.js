@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import { Box, Card, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Grid, Typography, Card, Button } from '@material-ui/core';
+import React from 'react';
+import ApplyNowModal from './ApplyModal';
 import DetailsBottom from './partials/DetailsBottom';
-
-import { login } from 'src/actions/accountActions';
-import axios from 'src/utils/axios';
-import { useDispatch, useSelector } from 'react-redux';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -89,23 +86,23 @@ const useStyles = makeStyles(theme => ({
 
 export default function FinalAction({ course, batch }) {
   const classes = useStyles();
-  const [applyState, setApplyState] = useState('Enquire');
+  // const [applyState, setApplyState] = useState('Enquire');
 
-  const user = useSelector(state => state.account.user);
-  const baseUrl =
-    'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
-  const dispatch = useDispatch();
-  const handleApply = () => {
-    const url = `${baseUrl}/${batch.courseId}`;
-    if (!user) {
-      dispatch(login());
-    } else {
-      setApplyState('Generating...');
-      axios.post(url).then(result => {
-        window.location.href = `/applications?id=${result.data.id}`;
-      });
-    }
-  };
+  // const user = useSelector(state => state.account.user);
+  // const baseUrl =
+  //   'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
+  // const dispatch = useDispatch();
+  // const handleApply = () => {
+  //   const url = `${baseUrl}/${batch.courseId}`;
+  //   if (!user) {
+  //     dispatch(login());
+  //   } else {
+  //     setApplyState('Generating...');
+  //     axios.post(url).then(result => {
+  //       window.location.href = `/applications?id=${result.data.id}`;
+  //     });
+  //   }
+  // };
 
   return (
     <Grid container className={classes.root}>
@@ -231,18 +228,28 @@ export default function FinalAction({ course, batch }) {
             </Box>
           </Card>
 
-          <Button
+          {/* <Button
             variant="contained"
             color="secondary"
-            onClick={handleApply}
+            // onClick={handleApply}
             fullWidth
             style={{
               marginTop: '24px',
               textTransform: 'capitalize'
             }}
-          >
-            {applyState}
-          </Button>
+          > */}
+          <Box style={{ width: '100%' }}>
+            <ApplyNowModal
+              fullWidth={true}
+              style={{
+                marginTop: '24px',
+                textTransform: 'capitalize',
+                padding: '6px 12px'
+              }}
+            />
+          </Box>
+          {/* {applyState} */}
+          {/* </Button>          */}
         </Box>
       </Grid>
     </Grid>

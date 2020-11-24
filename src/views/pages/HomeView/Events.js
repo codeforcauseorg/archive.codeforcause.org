@@ -14,32 +14,34 @@ import EventCard from '../../../components/Event/EventCard';
 // Temporary------------Temporary------------Temporary------------
 const tempEvents = [
   {
-    "time": "Oct 19, 7:00 PM IST",
-    "link": "https://youtu.be/dDE3tOa4JUs",
-    "domain": "Open Source",
-    "title": "20 Open Source Programs & Paid Virtual Internships You Can Apply to!!",
-    "upcoming": "false",
-    "image": "https://img.youtube.com/vi/dDE3tOa4JUs/hqdefault.jpg",
-    "type": "Webinar"
+    time: 'Oct 19, 7:00 PM IST',
+    link: 'https://youtu.be/dDE3tOa4JUs',
+    domain: 'Open Source',
+    title:
+      '20 Open Source Programs & Paid Virtual Internships You Can Apply to!!',
+    upcoming: 'false',
+    image: 'https://img.youtube.com/vi/dDE3tOa4JUs/hqdefault.jpg',
+    type: 'Webinar'
   },
   {
-    "link": "https://youtu.be/i5oP95218IQ",
-    "image": "https://img.youtube.com/vi/i5oP95218IQ/hqdefault.jpg",
-    "domain": "Open Source",
-    "time": "Sept 14, 7:00 PM IST",
-    "title": "10 Student Programs You Can Apply to Right Now",
-    "type": "Webinar",
-    "upcoming": "false"
+    link: 'https://youtu.be/i5oP95218IQ',
+    image: 'https://img.youtube.com/vi/i5oP95218IQ/hqdefault.jpg',
+    domain: 'Open Source',
+    time: 'Sept 14, 7:00 PM IST',
+    title: '10 Student Programs You Can Apply to Right Now',
+    type: 'Webinar',
+    upcoming: 'false'
   },
   {
-    "time": "July 14, 9:00 PM IST",
-    "image": "https://img.youtube.com/vi/7jN24_YVcns/hqdefault.jpg",
-    "link": "https://youtu.be/7jN24_YVcns",
-    "title": "Data Visualization & Outlier Detection with Seaborn, Matplotlib",
-    "domain": "Machine Learning",
-    "upcoming": "false",
-    "type": "Webinar"
-  },]
+    time: 'July 14, 9:00 PM IST',
+    image: 'https://img.youtube.com/vi/7jN24_YVcns/hqdefault.jpg',
+    link: 'https://youtu.be/7jN24_YVcns',
+    title: 'Data Visualization & Outlier Detection with Seaborn, Matplotlib',
+    domain: 'Machine Learning',
+    upcoming: 'false',
+    type: 'Webinar'
+  }
+];
 // Temporary------------Temporary------------Temporary------------
 
 const useStyles = makeStyles(theme => ({
@@ -129,6 +131,15 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '0px 5px 5px 0px',
     color: 'white',
     backgroundColor: '#000000'
+  },
+  swiper: {
+    padding: theme.spacing(2, 3, 5),
+    marginBottom: theme.spacing(1)
+  },
+  loading: {
+    position: 'relative',
+    padding: '140px 49vw',
+    width: '100%'
   }
 }));
 
