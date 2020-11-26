@@ -68,11 +68,13 @@ const useStyles = makeStyles(theme => ({
     }
   },
   profileSettingTypography: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   },
   icon: {
     marginLeft: '12px',
-    height: '80%'
+    height: '30px',
+    marginBottom: '5px'
   },
   socialIcon: {
     marginLeft: '5px',
@@ -119,17 +121,21 @@ function Hero({ className, ...rest }) {
           </Hidden>
           <Grid className={classes.rightPanel} item xs={12} md={6}>
             <Box className={classes.rightPanelItems}>
-              <Box className={classes.profileSetting}>
+              <Box className={classes.profileSetting} justifyContent="center" alignContent="center">
                 <Typography
                   className={classes.profileSettingTypography}
                   variant="subtitle2"
                 >
                   Profile Settings
+                  <Link
+                  to="/editProfile"
+                  >
                   <img
                     alt="setting-icon"
                     className={classes.icon}
-                    src="/static/icons/Vector.svg"
-                  ></img>
+                    src="/static/images/icons/Vector.svg"
+                  />
+                  </Link>
                 </Typography>
               </Box>
               <Box className={classes.socialIconsBox}>
