@@ -5,6 +5,7 @@ import MainLayout from 'src/layouts/MainLayout';
 import HomeView from 'src/views/pages/HomeView';
 import CAView from 'src/views/pages/CLView';
 import EventsView from 'src/views/pages/EventsView';
+import Training from 'src/views/pages/Training';
 import LoadingScreen from 'src/components/LoadingScreen';
 import CoursesView from 'src/views/pages/CoursesView';
 import Bootcamps from 'src/views/pages/BootCampsView/Bootcamps';
@@ -90,7 +91,15 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
-
+      <Route
+        path="/six-months"
+        exact
+        render={props => (
+          <MainLayout>
+            <Training {...props} />
+          </MainLayout>
+        )}
+      />
       <Route
         path="/profile"
         exact

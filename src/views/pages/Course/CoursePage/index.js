@@ -10,7 +10,6 @@ import Schedule from '../Schedule';
 import Major from '../Major';
 import Features from '../Features';
 import Process from '../Process';
-// import CourseFeatures from '../partials/CourseFeatures';
 
 const useStyles = makeStyles(() => ({
   root: {
