@@ -121,20 +121,22 @@ function Hero({ className, ...rest }) {
           </Hidden>
           <Grid className={classes.rightPanel} item xs={12} md={6}>
             <Box className={classes.rightPanelItems}>
-              <Box className={classes.profileSetting} justifyContent="center" alignContent="center">
+              <Box
+                className={classes.profileSetting}
+                justifyContent="center"
+                alignContent="center"
+              >
                 <Typography
                   className={classes.profileSettingTypography}
                   variant="subtitle2"
                 >
                   Profile Settings
-                  <Link
-                  to="/editProfile"
-                  >
-                  <img
-                    alt="setting-icon"
-                    className={classes.icon}
-                    src="/static/images/icons/Vector.svg"
-                  />
+                  <Link to="/editProfile">
+                    <img
+                      alt="setting-icon"
+                      className={classes.icon}
+                      src="/static/images/icons/Vector.svg"
+                    />
                   </Link>
                 </Typography>
               </Box>
