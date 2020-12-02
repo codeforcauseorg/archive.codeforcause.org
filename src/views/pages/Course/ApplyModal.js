@@ -237,6 +237,18 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
               errorMessages={[]}
             />
 
+            <TextValidator
+              key="referralId"
+              className={classes.textField}
+              label="Referral ID"
+              variant="outlined"
+              value={formData.referralId}
+              fullWidth
+              name="referralId"
+              onChange={handleChange}
+              validators={[]}
+            />
+
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">
                 Submit
