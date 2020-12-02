@@ -116,6 +116,7 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
           </DialogContentText>
           <ValidatorForm onSubmit={handleSubmit}>
             <TextValidator
+              autoComplete={false}
               required
               key="name"
               className={classes.textField}
@@ -167,6 +168,7 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
 
               <Grid item xs={10}>
                 <TextValidator
+                  autoComplete={false}
                   required
                   key="contact"
                   className={classes.textField}
