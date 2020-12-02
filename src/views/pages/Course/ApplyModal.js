@@ -238,13 +238,13 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
             />
 
             <TextValidator
-              key="referralId"
+              key="refId"
               className={classes.textField}
               label="Referral ID"
               variant="outlined"
-              value={formData.referralId}
+              value={formData.refId}
               fullWidth
-              name="referralId"
+              name="refId"
               onChange={handleChange}
               validators={[]}
             />
