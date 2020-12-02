@@ -246,7 +246,6 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
               fullWidth
               name="refId"
               onChange={handleChange}
-              validators={[]}
             />
 
             {submitting === 0 ? (
