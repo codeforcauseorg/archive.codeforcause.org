@@ -101,18 +101,58 @@ const useStyles = makeStyles(theme => ({
 export default function Courses() {
   const classes = useStyles();
 
+  const training = coursesContent.training;
   const foundation = coursesContent.foundation;
   const advanced = coursesContent.advanced;
 
   return (
     <Grid container className={classes.root}>
-      <Grid item lg={12} md={12} sm={12} xs={12}>
+      <Grid
+        item
+        lg={12}
+        md={12}
+        sm={12}
+        xs={12}
+        style={{
+          marginTop: '48px'
+        }}
+      >
         <Typography
           variant="h1"
           align="center"
           color="textPrimary"
           style={{
             marginBottom: '20px'
+          }}
+        >
+          Six Months Training
+        </Typography>
+      </Grid>
+
+      <Grid container>
+        <Grid
+          item
+          lg={12}
+          md={12}
+          sm={12}
+          xs={12}
+          align="center"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <CoursesGrid courses={training} />
+        </Grid>
+      </Grid>
+
+      <Grid item lg={12} md={12} sm={12} xs={12}>
+        <Typography
+          variant="h1"
+          align="center"
+          color="textPrimary"
+          style={{
+            marginBottom: '20px',
+            marginTop: '48px'
           }}
         >
           Foundational Courses
