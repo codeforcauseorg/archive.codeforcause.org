@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { create } from 'jss';
@@ -30,6 +30,10 @@ library.add(fab, faEnvelope);
 const history = createBrowserHistory();
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
+const tawkTo = require('tawkto-react');
+
+const tawkToPropertyId = '5f6b99364704467e89f1b758';
+
 const useStyles = makeStyles(() =>
   createStyles({
     '@global': {
@@ -60,6 +64,10 @@ const useStyles = makeStyles(() =>
 
 function App() {
   useStyles();
+
+  useEffect(() => {
+    tawkTo(tawkToPropertyId);
+  }, []);
 
   const { settings } = useSettings();
 
