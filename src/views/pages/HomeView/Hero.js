@@ -38,9 +38,8 @@ function Hero({ className, ...rest }) {
         }
         secondComponent={
           <ButtonComponent
-            title="Watch Our Videos"
-            href="https://youtube.com/codeforcause"
-            target="_blank"
+            title="Our Live Courses"
+            href="/courses"
             size="large"
             variant="contained"
             icon={<PlayArrowIcon style={{ paddingRight: 5 }} />}
