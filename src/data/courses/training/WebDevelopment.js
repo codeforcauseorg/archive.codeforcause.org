@@ -57,7 +57,7 @@ export const webDevelopment = {
             'Fundamental data-types',
             'Input-Output on online judge',
             'File Handling',
-            'Coding standards in Python',
+            'Coding standards in JavaScript',
             'functions along with problems',
             'Setting up debugger'
           ]
@@ -106,7 +106,7 @@ export const webDevelopment = {
             'Sandwich theorem, recurrence relation',
             'Solving Complex Linear Recurrences',
             'Solving Divide & Conquer Recurrences',
-            'Theta, Big-oh, Omega notations',
+            'Theta, Big-O, Omega notations',
             'Understanding complexity of loops',
             'Auxiliary vs Total Space',
             'Static & Dynamic Memory Allocation'
@@ -225,7 +225,7 @@ export const webDevelopment = {
       classes: 'Classes 41-60',
       topics: [
         {
-          title: 'Introduction to JavaSript',
+          title: 'Introduction to JavaScript',
           classes: 'Classes 1-5',
           subtopics: [
             'Variables, Data Types and Statements',
