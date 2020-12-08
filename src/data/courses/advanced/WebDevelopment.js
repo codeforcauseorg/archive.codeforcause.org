@@ -49,7 +49,7 @@ export const webDevelopment = {
       classes: 'Classes 01-20',
       topics: [
         {
-          title: 'Introduction to JavaSript',
+          title: 'Introduction to JavaScript',
           classes: 'Classes 1-5',
           subtopics: [
             'Variables, Data Types and Statements',
