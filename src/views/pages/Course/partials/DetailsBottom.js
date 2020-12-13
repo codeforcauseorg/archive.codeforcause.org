@@ -85,8 +85,7 @@ export default function DetailsBottom({ course, batch }) {
             ))}
           </Box>
 
-          <Box mb={2} display="flex" flexDirection="row">
-          </Box>
+          <Box mb={2} display="flex" flexDirection="row"></Box>
         </Box>
       </Grid>
     </Grid>
