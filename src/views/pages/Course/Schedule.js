@@ -29,10 +29,8 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '14px',
     background: '#F1F4FE'
   },
-  img: {
+  marginBottom: {
     marginBottom: theme.spacing(10),
-    height: 'auto',
-    width: '100%',
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(3)
     }
@@ -45,11 +43,7 @@ export default function Schedule({ course }) {
 
   return (
     <Grid container className={classes.root}>
-      <img
-        src="/static/images/courses/limitedTimeBookNow.jpg"
-        alt="Limited Time Available"
-        className={classes.img}
-      />
+      <LimitedTimeBookNow />
 
       <Grid
         item
@@ -289,5 +283,42 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
         </Box>
       </Collapse>
     </Box>
+  );
+}
+
+function LimitedTimeBookNow() {
+  const classes = useStyles();
+
+  return (
+    <div
+      className={classes.marginBottom}
+      style={{
+        textAlign: 'center',
+        backgroundImage: 'url(/static/images/courses/limitedTimeBookNow.jpg)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPositionY: 'center',
+        backgroundPositionX: 'center',
+        width: '100%'
+      }}
+    >
+      <Typography variant="h2" color="secondary" style={{ marginTop: '80px' }}>
+        Book your Seats by Paying just ₹ 1000/-{' '}
+      </Typography>
+      <Typography
+        variant="h3"
+        color="primary"
+        style={{ margin: '40px 0px 80px' }}
+      >
+        Limited Seats Hurry!
+      </Typography>
+      <Typography
+        variant="h6"
+        color="secondary"
+        style={{ fontWeight: 600, marginBottom: '30px' }}
+      >
+        Terms & Conditions Apply
+      </Typography>
+    </div>
   );
 }
