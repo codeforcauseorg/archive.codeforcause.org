@@ -270,18 +270,6 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
                 {batch.price}
               </Typography>
             </Box>
-
-            <Typography
-              style={{
-                color: '#636363',
-                fontSize: '12px',
-                marginBottom: '4px'
-              }}
-              align="left"
-            >
-              You will need to pay only after your application has been
-              accepted.
-            </Typography>
           </Box>
 
           <Box
@@ -290,6 +278,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
             justifyContent="center"
             alignItems="center"
             style={{
+              marginTop: '12px',
               padding: '4px 16px',
               background: '#282828',
               borderRadius: '5px'

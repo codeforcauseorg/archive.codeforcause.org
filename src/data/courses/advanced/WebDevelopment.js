@@ -5,7 +5,7 @@ export const webDevelopment = {
   level: 'Level 2',
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
-  title: 'Master Full Stack Web Development with JS',
+  title: 'Master Full Stack Web Development with JS (MERN)',
   upcoming: 'Feb 13th',
   mentors: ['ganga', 'anuj'],
   schedule: [
