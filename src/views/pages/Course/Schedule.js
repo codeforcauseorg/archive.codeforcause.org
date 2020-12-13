@@ -299,7 +299,8 @@ function LimitedTimeBookNow() {
         backgroundRepeat: 'no-repeat',
         backgroundPositionY: 'center',
         backgroundPositionX: 'center',
-        width: '100%'
+        width: '100%',
+        borderRadius: '14px'
       }}
     >
       <Typography variant="h2" color="secondary" style={{ marginTop: '80px' }}>
