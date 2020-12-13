@@ -86,16 +86,6 @@ export default function DetailsBottom({ course, batch }) {
           </Box>
 
           <Box mb={2} display="flex" flexDirection="row">
-            <Typography
-              style={{
-                marginRight: '24px',
-                color: '#939393'
-              }}
-              variant="body2"
-            >
-              You will need to pay only after your application have been
-              accepted.
-            </Typography>
           </Box>
         </Box>
       </Grid>

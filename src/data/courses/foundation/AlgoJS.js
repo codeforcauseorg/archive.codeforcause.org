@@ -4,7 +4,7 @@ export const algoJS = {
   level: 'Level 1',
   link: '/ds-algo-with-js',
   domain: 'Algorithms & Complexities',
-  title: 'Data Structure and Algorithms with JavaScript',
+  title: 'Data Structures and Algorithms with JavaScript',
   upcoming: 'Jan 16th',
   mentors: ['ganga', 'anuj'],
   schedule: [

@@ -139,7 +139,7 @@ export default function CourseCard({ course }) {
               {course.domain}
             </Typography>
 
-            <Typography variant="h4" align="left" style={{ fontWeight: 700 }}>
+            <Typography variant="h4" align="left" style={{ fontWeight: 700, width: '105%' }}>
               {course.title}
             </Typography>
           </Box>

@@ -4,7 +4,7 @@ export const algoJava = {
   level: 'Level 1',
   link: '/ds-algo-with-java',
   domain: 'Algorithms & Complexities',
-  title: 'Data Structure and Algorithms with Java',
+  title: 'Data Structures and Algorithms with Java',
   upcoming: 'Jan 16th',
   mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [

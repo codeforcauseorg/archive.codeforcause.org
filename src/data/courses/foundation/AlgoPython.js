@@ -4,7 +4,7 @@ export const algoPython = {
   level: 'Level 1',
   link: '/ds-algo-with-python',
   domain: 'Algorithms & Complexities',
-  title: 'Data Structure and Algorithms with Python',
+  title: 'Data Structures and Algorithms with Python',
   upcoming: 'Jan 16th',
   mentors: ['anuj', 'kunal'],
   schedule: [
