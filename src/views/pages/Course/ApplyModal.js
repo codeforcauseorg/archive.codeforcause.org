@@ -90,8 +90,8 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
               { price: batch.priceId, quantity: 1 }
             ],
             mode: 'payment',
-            successUrl: 'https://codeforcause.org/success',
-            cancelUrl: 'https://codeforcause.org/canceled'
+            successUrl: `https://${window.location.hostname}/success`,
+            cancelUrl: `https://${window.location.hostname}/canceled`
           })
           .then(function(result) {
             // If `redirectToCheckout` fails due to a browser or network
