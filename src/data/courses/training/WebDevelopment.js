@@ -17,6 +17,7 @@ export const webDevelopment = {
       link: '',
       priceCut: '₹ 20,000',
       price: '₹ 9,900',
+      priceId: 'price_1I0UteLVU3L7vcSra2HMJfy4',
       active: true
     }
   ],

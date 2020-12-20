@@ -16,6 +16,7 @@ export const competitiveJava = {
       link: '',
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
+      priceId: 'price_1I0Uz4LVU3L7vcSrx3vOaUdv',
       active: false
     }
   ],

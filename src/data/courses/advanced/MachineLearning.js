@@ -16,6 +16,7 @@ export const machineLearning = {
       link: '',
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
+      priceId: 'price_1I0UxdLVU3L7vcSrm95JI9Jr',
       active: false
     }
   ],

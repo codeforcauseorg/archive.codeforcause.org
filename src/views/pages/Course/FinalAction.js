@@ -229,6 +229,7 @@ export default function FinalAction({ course, batch }) {
           </Card>
           <Box style={{ width: '100%' }}>
             <ApplyModal
+              batch={batch}
               fullWidth={true}
               style={{
                 marginTop: '24px',

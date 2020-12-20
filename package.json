@@ -53,6 +53,8 @@
     "@mui-treasury/components": "^1.9.1",
     "@mui-treasury/styles": "^1.13.0",
     "@react-pdf/renderer": "^1.6.8",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.11.0",
     "apexcharts": "^3.18.0",
     "axios": "^0.19.2",
     "axios-mock-adapter": "^1.17.0",

@@ -16,6 +16,7 @@ export const algoJava = {
       link: '',
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
+      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       active: false
     }
   ],

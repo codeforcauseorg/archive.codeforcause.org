@@ -16,6 +16,7 @@ export const algoPython = {
       link: '',
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
+      priceId: 'price_1I0UwFLVU3L7vcSr9y77KiRe',
       active: false
     }
   ],
