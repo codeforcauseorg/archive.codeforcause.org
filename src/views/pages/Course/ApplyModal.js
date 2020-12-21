@@ -44,6 +44,10 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
 
+  const stripePromise = loadStripe(
+    'pk_live_51HX0eRLVU3L7vcSr5wAyProaDDgdhpqK9im3z7SJJUUOOMJijT0g3CBKJh6sRJOz8Or7yRHt2mka54PSRDXrL3xG0050pPbNE8'
+  );
+
   const { enqueueSnackbar } = useSnackbar();
 
   const handleClickOpen = () => {
@@ -78,10 +82,27 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
         setSubmitting(0);
         handleClose();
         enqueueSnackbar('Application Submitted Successfully');
-      })
+        stripePromise.then(stripe => {
+          stripe.redirectToCheckout({
+            lineItems: [
+              // Replace with the ID of your price
+              { price: batch.priceId, quantity: 1 }
+            ],
+            mode: 'payment',
+            successUrl: `https://${window.location.hostname}/success`,
+            cancelUrl: `https://${window.location.hostname}/canceled`
+          })
+            .then(function (result) {
+              // If `redirectToCheckout` fails due to a browser or network
+              // error, display the localized error message to your customer
+              // using `result.error.message`.
+            });
+        });
+
+
       .catch(error => {
-        enqueueSnackbar('Application Failed. Try again later');
-      });
+          enqueueSnackbar('Application Failed. Try again later');
+        });
   };
 
   const countryCodes = Array(100)
@@ -255,10 +276,10 @@ export default function ApplyModal({ fullWidth = false, ...rest }) {
                 Checkout
               </Button>
             ) : (
-              <div className={classes.submissions}>
-                <CircularProgress />
-              </div>
-            )}
+                <div className={classes.submissions}>
+                  <CircularProgress />
+                </div>
+              )}
 
             <Button
               variant="outlined"
