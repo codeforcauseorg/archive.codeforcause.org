@@ -22,7 +22,7 @@ export default function Success() {
   if (wait) {
     return (
       <div className={classes.root}>
-        <Typography align="center" style={{color: 'red'}}>You last payment to codeforcause was Failed. Redirecting to home page...</Typography>
+        <Typography align="center" style={{color: 'red'}}>Your last payment to codeforcause was Failed. Redirecting to home page...</Typography>
       </div>
     );
   }
