@@ -4,9 +4,11 @@ import CustomButton from '../../../components/Button/ButtonComponent'
 
 const useStyles = makeStyles((theme) => ({
   root: {    
-    marginTop: '35vh',
+    backgroundColor: theme.palette.background.default,
+    marginTop: '30vh',
     textAlign: 'center',
-    color: theme.palette.text
+    color: '#000',
+    padding: theme.spacing(5)
   },
   button: {
     marginTop: '40px'
@@ -19,7 +21,7 @@ export default function Success() {
   if (true) {
     return (
       <div className={classes.root}>
-        <Typography align="center">Your last payment to codeforcause was Failed. You can retry the payment on the course website.</Typography>
+        <Typography align="center">Your last payment to codeforcause was Failed. You can retry the payment from the course website.</Typography>
         <Typography align="center">Connect with us at {` `}
           <Link
             href="mailto:team@codeforcause.org"
