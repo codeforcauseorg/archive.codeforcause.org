@@ -119,7 +119,7 @@ const renderRoutes = () => (
         )}
       />
       <Route
-        path="/canceled"
+        path="/cancel"
         exact
         render={props => (
           <Cancelled />
