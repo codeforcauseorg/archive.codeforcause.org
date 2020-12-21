@@ -21,7 +21,7 @@ export default function Success() {
     return (
       <div className={classes.root}>
         <Typography align="center">Your last payment to codeforcause was successful. We will connect to you within 24 hours with more details and
-          you'll receive an email from as well.
+          you'll receive an email from us as well.
         </Typography>
         <Typography align="center">Connect with us at {` `}
           <Link
