@@ -19,7 +19,6 @@ import {
 } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
-import { loadStripe } from '@stripe/stripe-js';
 
 const useStyles = makeStyles(theme => ({
   btn: {
@@ -39,15 +38,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
+export default function ApplyModal({ fullWidth = false, ...rest }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
-
-  const stripePromise = loadStripe(
-    'pk_live_51HX0eRLVU3L7vcSr5wAyProaDDgdhpqK9im3z7SJJUUOOMJijT0g3CBKJh6sRJOz8Or7yRHt2mka54PSRDXrL3xG0050pPbNE8'
-  );
 
   const { enqueueSnackbar } = useSnackbar();
 
@@ -83,23 +78,6 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
         setSubmitting(0);
         handleClose();
         enqueueSnackbar('Application Submitted Successfully');
-        stripePromise.then(stripe => {
-          stripe.redirectToCheckout({
-            lineItems: [
-              // Replace with the ID of your price
-              { price: batch.priceId, quantity: 1 }
-            ],
-            mode: 'payment',
-            successUrl: `https://${window.location.hostname}/success`,
-            cancelUrl: `https://${window.location.hostname}/canceled`
-          })
-          .then(function(result) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer
-            // using `result.error.message`.
-          });
-        });
-          
       })
       .catch(error => {
         enqueueSnackbar('Application Failed. Try again later');
@@ -121,7 +99,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
         {...rest}
         fullWidth={fullWidth}
       >
-        Enquire Now
+        Apply Now
       </Button>
       <Dialog
         fullWidth
@@ -274,7 +252,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
 
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">
-                Submit
+                Checkout
               </Button>
             ) : (
               <div className={classes.submissions}>
