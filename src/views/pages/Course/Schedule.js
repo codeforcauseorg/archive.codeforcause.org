@@ -304,7 +304,7 @@ function LimitedTimeBookNow() {
       }}
     >
       <Typography variant="h2" color="secondary" style={{ marginTop: '80px' }}>
-        Book your Seats by Paying just ₹ 1000/-{' '}
+        Book your Seat Now-{' '}
       </Typography>
       <Typography
         variant="h3"
@@ -312,13 +312,6 @@ function LimitedTimeBookNow() {
         style={{ margin: '40px 0px 80px' }}
       >
         Limited Seats Hurry!
-      </Typography>
-      <Typography
-        variant="h6"
-        color="secondary"
-        style={{ fontWeight: 600, marginBottom: '30px' }}
-      >
-        Terms & Conditions Apply
       </Typography>
     </div>
   );

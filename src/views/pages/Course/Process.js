@@ -26,7 +26,7 @@ function Process({ benefits, className, ...rest }) {
           align="center"
           gutterBottom
         >
-          Offering 50% Scholarship On this Batch
+          Offering 50% Flat Discount On this Batch
         </Typography>
 
         {/* <Typography

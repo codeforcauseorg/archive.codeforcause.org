@@ -83,7 +83,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
       .then(response => {
         setSubmitting(0);
         handleClose();
-        enqueueSnackbar('Application Submitted Successfully');
+        enqueueSnackbar('Redirecting to payment page.');
         stripePromise.then(stripe => {
           stripe
             .redirectToCheckout({
@@ -116,7 +116,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
         {...rest}
         fullWidth={fullWidth}
       >
-        Enquire Now
+        Register Now
       </Button>
       <Dialog
         fullWidth
@@ -125,7 +125,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
         aria-labelledby="form-dialog-title"
       >
         <DialogTitle id="form-dialog-title">
-          Enquire for Course Enrollment
+          Register for Course Enrollment
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -254,17 +254,6 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
               onChange={handleChange}
               validators={[]}
               errorMessages={[]}
-            />
-
-            <TextValidator
-              key="refId"
-              className={classes.textField}
-              label="Referral ID"
-              variant="outlined"
-              value={formData.refId}
-              fullWidth
-              name="refId"
-              onChange={handleChange}
             />
 
             {submitting === 0 ? (
