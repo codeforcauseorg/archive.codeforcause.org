@@ -55,6 +55,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
     setOpen(true);
     formData.countryCode = '+91';
     formData.phone = '';
+    formData.priceId = batch.priceId;
   };
 
   const handleClose = () => {
@@ -76,7 +77,7 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
     axios({
       method: 'post',
       url:
-        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/courseenquiries',
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/courseregs',
       data: formData
     })
       .then(response => {
@@ -84,22 +85,16 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
         handleClose();
         enqueueSnackbar('Application Submitted Successfully');
         stripePromise.then(stripe => {
-          stripe.redirectToCheckout({
-            lineItems: [
-              // Replace with the ID of your price
-              { price: batch.priceId, quantity: 1 }
-            ],
-            mode: 'payment',
-            successUrl: `https://${window.location.hostname}/success`,
-            cancelUrl: `https://${window.location.hostname}/canceled`
-          })
-          .then(function(result) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer
-            // using `result.error.message`.
-          });
+          stripe
+            .redirectToCheckout({
+              sessionId: response.data.id
+            })
+            .then(function(result) {
+              // If `redirectToCheckout` fails due to a browser or network
+              // error, display the localized error message to your customer
+              // using `result.error.message`.
+            });
         });
-          
       })
       .catch(error => {
         enqueueSnackbar('Application Failed. Try again later');
