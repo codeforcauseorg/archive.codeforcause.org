@@ -3,10 +3,11 @@ import React from 'react';
 import CustomButton from '../../../components/Button/ButtonComponent'
 
 const useStyles = makeStyles((theme) => ({
-  root: {    
-    marginTop: '35vh',
+  root: {
+    marginTop: '30vh',
     textAlign: 'center',
-    color: theme.palette.text
+    color: '#000',
+    padding: theme.spacing(5)
   },
   button: {
     marginTop: '40px'
@@ -19,7 +20,9 @@ export default function Success() {
   if (true) {
     return (
       <div className={classes.root}>
-        <Typography align="center">Your last payment to codeforcause was successful. We will connect with you within 24 hours with more details.</Typography>
+        <Typography align="center">Your last payment to codeforcause was successful. We will connect to you within 24 hours with more details and
+          you'll receive an email from as well.
+        </Typography>
         <Typography align="center">Connect with us at {` `}
           <Link
             href="mailto:team@codeforcause.org"
