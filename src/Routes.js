@@ -22,6 +22,8 @@ import PrivacyView from './views/pages/documents/privacyView';
 import RefundView from './views/pages/documents/refundView';
 import ScrollReset from './components/ScrollReset';
 import coursesContent from 'src/data/courses';
+import Success from './views/pages/PaymentStatus/Success'
+import Cancelled from './views/pages/PaymentStatus/Failure'
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -107,6 +109,20 @@ const renderRoutes = () => (
           <MainLayout>
             <StudentDashboardView {...props} />
           </MainLayout>
+        )}
+      />
+      <Route
+        path="/success"
+        exact
+        render={props => (
+          <Success />
+        )}
+      />
+      <Route
+        path="/canceled"
+        exact
+        render={props => (
+          <Cancelled />
         )}
       />
       <Route
