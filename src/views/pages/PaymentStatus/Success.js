@@ -4,6 +4,7 @@ import CustomButton from '../../../components/Button/ButtonComponent'
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: theme.palette.background.default,
     marginTop: '30vh',
     textAlign: 'center',
     color: '#000',

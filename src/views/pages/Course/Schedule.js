@@ -304,7 +304,7 @@ function LimitedTimeBookNow() {
       }}
     >
       <Typography variant="h2" color="secondary" style={{ marginTop: '80px' }}>
-        Book your Seat Now-{' '}
+        Book your Seat Now{' '}
       </Typography>
       <Typography
         variant="h3"
