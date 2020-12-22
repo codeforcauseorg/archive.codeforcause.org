@@ -97,7 +97,7 @@ function CTA({ className, ...rest }) {
                     <Button
                       className={classes.Button + ' ' + classes.primeBtn}
                       component="a"
-                      href="https://codecau.se/ws"
+                      href="/workshops"
                       target="_blank"
                       size="large"
                       variant="contained"
