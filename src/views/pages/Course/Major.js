@@ -107,7 +107,7 @@ export default function Major({ course }) {
         <Hidden smDown>
           <Box display="flex" flexDirection="column" mb={3} ml={2}>
             <Projects
-              title="Learn To Make From This Course"
+              title="Projects you'll make in this course"
               projects={course.projects}
             />
           </Box>
