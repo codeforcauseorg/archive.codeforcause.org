@@ -72,7 +72,7 @@ export default function ApplyModal({ course, batch, fullWidth = false, ...rest }
   const handleSubmit = e => {
     formData.phone = `${formData.countryCode}-${formData.phone}`;
     formData.source = window.location.href;
-    formData.schedule = batch.schedule;
+    formData.batch = batch;
     formData.courseName = course.title;
     setSubmitting(1);
     e.preventDefault();
