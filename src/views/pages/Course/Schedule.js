@@ -278,7 +278,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               borderRadius: '5px'
             }}
           >
-            <ApplyModal batch={batch}/>
+            <ApplyModal course={course} batch={batch}/>
           </Box>
         </Box>
       </Collapse>

@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
+export default function ApplyModal({ course, batch, fullWidth = false, ...rest }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [formData, updateFormData] = useState({});
@@ -72,6 +72,8 @@ export default function ApplyModal({ batch, fullWidth = false, ...rest }) {
   const handleSubmit = e => {
     formData.phone = `${formData.countryCode}-${formData.phone}`;
     formData.source = window.location.href;
+    formData.schedule = batch.schedule;
+    formData.courseName = course.title;
     setSubmitting(1);
     e.preventDefault();
     axios({
