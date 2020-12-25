@@ -138,7 +138,7 @@ function StandsFor({ className, ...rest }) {
               <Box mt={2}>
                 <Typography variant="body1">
                   Most sought after value - an effort maker and giving
-                  peronality <h4>- An Investor</h4>
+                  personality <h4>- An Investor</h4>
                 </Typography>
               </Box>
             </Box>
