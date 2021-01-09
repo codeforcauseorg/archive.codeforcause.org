@@ -6,12 +6,12 @@ export const webDevelopment = {
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
   title: 'Master Full Stack Web Development with JS (MERN)',
-  upcoming: 'Feb 13th',
+  upcoming: 'April 15th',
   mentors: ['ganga', 'anuj'],
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '13th Feb - 13th May',
+      dates: '15th Apr - 15th July',
       days: 'Sat, Sun, Tue, Thu',
       timing: '12:00 PM - 02:00 PM (IST)',
       link: '',
