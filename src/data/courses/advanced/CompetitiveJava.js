@@ -5,12 +5,12 @@ export const competitiveJava = {
   link: '/competitive-programming-using-java',
   domain: 'Interview Prepration',
   title: 'Competitive Programming using Java',
-  upcoming: 'Feb 13th',
+  upcoming: 'April 15th',
   mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [
     {
       courseId: 'jcomp0121',
-      dates: '13th Feb - 18th May',
+      dates: '15th Apr - 18th July',
       days: 'Sat, Sun, Wed, Fri',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',

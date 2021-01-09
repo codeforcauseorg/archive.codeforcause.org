@@ -5,12 +5,12 @@ export const algoJS = {
   link: '/ds-algo-with-js',
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with JavaScript',
-  upcoming: 'Jan 16th',
+  upcoming: 'Jan 30th',
   mentors: ['ganga', 'anuj'],
   schedule: [
     {
       courseId: 'pds0121',
-      dates: '16th Jan - 16th Apr',
+      dates: '30th Jan - 30th Apr',
       days: 'Sat, Sun, Wed, Fri',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
