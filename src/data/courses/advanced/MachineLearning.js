@@ -10,7 +10,7 @@ export const machineLearning = {
   schedule: [
     {
       courseId: 'mlpy0121',
-      dates: '15th April - 15th July',
+      dates: '15th Apr - 15th July',
       days: 'Sat, Sun, Tue, Thu',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
