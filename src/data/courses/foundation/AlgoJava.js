@@ -5,12 +5,12 @@ export const algoJava = {
   link: '/ds-algo-with-java',
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with Java',
-  upcoming: 'Jan 16th',
+  upcoming: 'Jan 30th',
   mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [
     {
       courseId: 'jds0121',
-      dates: '16th Jan - 16th Apr',
+      dates: '30th Jan - 30th Apr',
       days: 'Sat, Sun, Tue, Thu',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',

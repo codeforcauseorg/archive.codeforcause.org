@@ -6,12 +6,12 @@ export const webDevelopment = {
   link: '/six-months-fullstack-webdev-with-js',
   domain: 'Interview Targeted Prepration',
   title: 'Master Full Stack Web Dev (MERN) with DS & Algo in JS',
-  upcoming: 'Jan 16th',
+  upcoming: 'Jan 30th',
   mentors: ['anuj', 'ganga'],
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '16th Jan - 30th Jun',
+      dates: '30th Jan - 14th July',
       days: 'Sat, Sun, Wed, Fri',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',

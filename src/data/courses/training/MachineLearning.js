@@ -5,12 +5,12 @@ export const machineLearning = {
   link: '/six-months-machine-learning-with-python',
   domain: 'Interview Targeted Prepration',
   title: 'Master Machine Learning with DS & Algo in Python',
-  upcoming: 'Jan 16th',
+  upcoming: 'Jan 30th',
   mentors: ['anuj', 'kunal'],
   schedule: [
     {
       courseId: 'mlpy1020',
-      dates: '16th Jan - 30th Jun',
+      dates: '30th Jan - 14th July',
       days: 'Sat, Sun, wed, Fri',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
