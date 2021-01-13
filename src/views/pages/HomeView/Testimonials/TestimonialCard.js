@@ -7,7 +7,6 @@ import Box from '@material-ui/core/Box';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
 const useStyles = makeStyles(theme => ({

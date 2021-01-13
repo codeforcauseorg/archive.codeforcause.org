@@ -39,7 +39,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ApplyModal({ course, batch, fullWidth = false, ...rest }) {
+export default function ApplyModal({
+  course,
+  batch,
+  fullWidth = false,
+  ...rest
+}) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [formData, updateFormData] = useState({});
