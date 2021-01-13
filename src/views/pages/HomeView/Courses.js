@@ -172,10 +172,11 @@ export default function Courses() {
           md={12}
           sm={12}
           xs={12}
+          align="center"
+          display="flex"
           style={{
-            align: 'center',
-            display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
           <Tabs
