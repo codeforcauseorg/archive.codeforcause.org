@@ -142,7 +142,6 @@ export default function Courses() {
           variant="h1"
           align="center"
           color="textPrimary"
-          s
           style={{
             marginBottom: '20px'
           }}
@@ -173,10 +172,11 @@ export default function Courses() {
           md={12}
           sm={12}
           xs={12}
-          align="center"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
+          style={{
+            align: 'center',
+            display: 'flex',
+            justifyContent: 'center'
+          }}
         >
           <Tabs
             value={value}
@@ -197,7 +197,7 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Training</Box>
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography component={'div'} variant="body2">
                     <Box>(6 Months)</Box>
                   </Typography>
                 </Fragment>
@@ -210,7 +210,7 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Foundation</Box>
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography component={'div'} variant="body2">
                     <Box>(Regular)</Box>
                   </Typography>
                 </Fragment>
@@ -224,7 +224,7 @@ export default function Courses() {
                   <Typography variant="h5">
                     <Box fontWeight={600}>Advanced</Box>
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography component={'div'} variant="body2">
                     <Box>(Regular)</Box>
                   </Typography>
                 </Fragment>
@@ -235,14 +235,16 @@ export default function Courses() {
           <TabPanel value={value} index={0}>
             <GridList
               className={classes.gridList}
-              display="flex"
-              alignItems="center"
+              style={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
               cols={large ? 3 : medium ? 2.5 : small ? 2.0 : 1.04}
             >
               {Object.entries(training).map(([cname, course], index) => {
                 return (
                   <GridListTile
-                    key={course.id}
+                    key={index}
                     style={{
                       height: '600px'
                     }}
@@ -257,14 +259,16 @@ export default function Courses() {
           <TabPanel value={value} index={1}>
             <GridList
               className={classes.gridList}
-              display="flex"
-              alignItems="center"
+              style={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
               cols={large ? 3 : medium ? 2.5 : small ? 2.0 : 1.04}
             >
               {Object.entries(foundation).map(([cname, course], index) => {
                 return (
                   <GridListTile
-                    key={course.id}
+                    key={index}
                     style={{
                       height: '600px'
                     }}
@@ -283,7 +287,7 @@ export default function Courses() {
               {Object.entries(advanced).map(([cname, course], index) => {
                 return (
                   <GridListTile
-                    key={course.id}
+                    key={index}
                     style={{
                       height: '600px'
                     }}

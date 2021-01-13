@@ -235,7 +235,7 @@ function Footer({ className, ...rest }) {
 
           <Typography
             display="block"
-            guitterBottom
+            gutterBottom
             variant="body2"
             color="textSecondary"
           >

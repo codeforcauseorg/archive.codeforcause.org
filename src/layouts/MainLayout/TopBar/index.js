@@ -81,20 +81,22 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
       onKeyDown={toggleDrawer('right', false)}
     >
       <List>
-        {navItems.map((item, index) => (
-          <ListItem button key={index}>
-            <Link
-              smooth
-              to={item.link}
-              variant="h5"
-              className={classes.textStyle}
-            >
-              <Typography variant="h4" color="textPrimary">
-                {item.title}
-              </Typography>
-            </Link>
-          </ListItem>
-        ))}
+        {navItems.map((item, index) => {
+          return (
+            <ListItem button key={index}>
+              <Link
+                smooth
+                to={item.link}
+                variant="h5"
+                className={classes.textStyle}
+              >
+                <Typography variant="h4" color="textPrimary">
+                  {item.title}
+                </Typography>
+              </Link>
+            </ListItem>
+          );
+        })}
         {!user ? (
           <ListItem>
             <Account />
@@ -147,13 +149,16 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
         </RouterLink>
         <Hidden smDown>
           <Box ml={2} flexGrow={1} />
-          {navItems.map((item, index) => (
-            <Item
-              active={item.link === pathname}
-              title={item.title}
-              link={item.link}
-            />
-          ))}
+          {navItems.map((item, index) => {
+            return (
+              <Item
+                key={index}
+                active={item.link === pathname}
+                title={item.title}
+                link={item.link}
+              />
+            );
+          })}
           <Box ml={2} flexGrow={0.05} />
           <Box ml={2}>
             <LoginDialog />

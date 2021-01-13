@@ -190,7 +190,7 @@ function Events({ className, ...rest }) {
             {events
               .slice(Math.max(events.length - 3, 0))
               .map((event, index) => (
-                <EventCard event={event} index={index} />
+                <EventCard event={event} key={index} />
               ))}
           </Hidden>
           <Grid item xs={12} sm={12} md={12}>
