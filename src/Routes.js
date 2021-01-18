@@ -41,6 +41,18 @@ const renderRoutes = () => (
         )}
       />
       <Route
+        path="/home"
+        exact
+        render={props => (
+          <>
+            <ScrollReset />
+            <MainLayout>
+              <HomeView {...props} />
+            </MainLayout>
+          </>
+        )}
+      />
+      <Route
         path="/courses"
         render={props => (
           <t>
