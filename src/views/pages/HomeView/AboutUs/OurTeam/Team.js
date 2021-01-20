@@ -19,8 +19,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor,
     paddingTop: '30px',
-    paddingLeft: 70,
-    paddingRight: 70,
     textAlign: 'center',
     //write css for small screen
     [theme.breakpoints.down('md')]: {
@@ -65,6 +63,11 @@ const useStyles = makeStyles(theme => ({
   },
   pointer: {
     cursor: 'pointer'
+  },
+  mentorBox: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(10)
+    }
   }
 }));
 
@@ -78,9 +81,9 @@ function Team({ mentors, className, ...rest }) {
           Our Team
         </Typography>
         {/* End hero unit */}
-        <Grid container spacing={2} className={classes.extraMargin}>
+        <Grid align="center" container spacing={2} className={classes.extraMargin} justify="center">
           {mentors.map(mentor => (
-            <Grid item key={mentor.id} xs={6} sm={4} md={4} lg={2}>
+            <Grid item key={mentor.id} xs={6} sm={4} md={2} lg={2}>
               <Card className={classes.card + ' ' + classes.member}>
                 <CardContent>
                   <Box
@@ -88,6 +91,7 @@ function Team({ mentors, className, ...rest }) {
                     alignItems="center"
                     flexDirection="column"
                     textAlign="center"
+                    className={classes.mentorBox}
                   >
                     <Avatar
                       className={classes.avatar}

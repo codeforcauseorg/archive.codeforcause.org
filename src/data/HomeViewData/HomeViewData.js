@@ -37,30 +37,24 @@ export const mentors = [
   },
   {
     id: '2',
-    name: 'Gaurav Beriwal',
-    avatar: '/static/images/members/gaurav.png',
-    linkedin: 'https://www.linkedin.com/in/gauravberiwal/'
-  },
-  {
-    id: '3',
     name: 'Kunal Kushwaha',
     avatar: '/static/images/members/kunal.png',
     linkedin: 'https://www.linkedin.com/in/kunal-kushwaha/'
   },
   {
-    id: '4',
+    id: '3',
     name: 'Ganga Chaturvedi',
     avatar: '/static/images/members/ganga.png',
     linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
   },
   {
-    id: '5',
+    id: '4',
     name: 'Ekta Mishra',
     avatar: '/static/images/members/ekta.png',
     linkedin: 'https://www.linkedin.com/in/darecoder/'
   },
   {
-    id: '6',
+    id: '5',
     name: 'Bharat Kumar',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
