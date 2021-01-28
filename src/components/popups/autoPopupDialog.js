@@ -66,7 +66,7 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
   };
 
   const handleSubmit = e => {
-    formData.phone = `${formData.countryCode}-${formData.phone}`;
+    formData.phone = `${formData.countryCode}${formData.phone}`;
     formData.source = window.location.href;
 
     setSubmitting(1);
