@@ -39,7 +39,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
+export default function AutoPopupDialog({
+  allowPopup,
+  fullWidth = true,
+  ...rest
+}) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
@@ -50,9 +54,9 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
 
   useEffect(() => {
     setTimeout(() => {
-      setOpen(true);
+      if (allowPopup) setOpen(true);
     }, 15000);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleClose = () => {
     setOpen(false);

@@ -19,14 +19,16 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function CoursePage({ course }) {
+function CoursePage({ course, location }) {
   const batch = course.schedule[0];
 
   const classes = useStyles();
 
   return (
     <Page className={classes.root} title={course.title}>
-      <AutoPopup />
+      <AutoPopup
+        allowPopup={String(location.search).startsWith('?request=true')}
+      />
       <Major course={course} />
       {/* <CourseFeatures /> */}
       <Process />
