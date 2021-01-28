@@ -81,7 +81,13 @@ function Team({ mentors, className, ...rest }) {
           Our Team
         </Typography>
         {/* End hero unit */}
-        <Grid align="center" container spacing={2} className={classes.extraMargin} justify="center">
+        <Grid
+          align="center"
+          container
+          spacing={2}
+          className={classes.extraMargin}
+          justify="center"
+        >
           {mentors.map(mentor => (
             <Grid item key={mentor.id} xs={6} sm={4} md={2} lg={2}>
               <Card className={classes.card + ' ' + classes.member}>
