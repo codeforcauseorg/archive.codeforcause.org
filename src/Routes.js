@@ -24,6 +24,7 @@ import ScrollReset from './components/ScrollReset';
 import coursesContent from 'src/data/courses';
 import Success from './views/pages/PaymentStatus/Success';
 import Cancelled from './views/pages/PaymentStatus/Failure';
+import HireWithUsView from 'src/views/pages/HireWithUsView';
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -303,6 +304,15 @@ const renderRoutes = () => (
           <DocsLayout>
             <RefundView />
           </DocsLayout>
+        )}
+      />
+      <Route
+        path={`/hirewithus`}
+        exact
+        render={props => (
+          <MainLayout>
+            <HireWithUsView />
+          </MainLayout>
         )}
       />
       <Route component={Error404View} />
