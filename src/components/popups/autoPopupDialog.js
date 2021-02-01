@@ -51,7 +51,7 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
   useEffect(() => {
     setTimeout(() => {
       setOpen(true);
-    }, 15000);
+    }, 18000);
   }, []);
 
   const handleClose = () => {
