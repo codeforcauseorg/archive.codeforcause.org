@@ -124,6 +124,27 @@ export default function Details({ course, bottom }) {
             })}
           </Box>
         </Box>
+        <Box mb={1} display="flex" flexDirection="row">
+          <Typography>Price:</Typography>
+          <Typography
+            style={{
+              margin: '0px 16px',
+              color: '#939393',
+              textDecoration: 'line-through'
+            }}
+          >
+            {course.schedule[0].priceCut}
+          </Typography>
+
+          <Typography
+            style={{
+              color: '#A60000'
+            }}
+            variant="h4"
+          >
+            {course.schedule[0].price}
+          </Typography>
+        </Box>
       </Grid>
     </Grid>
   );
