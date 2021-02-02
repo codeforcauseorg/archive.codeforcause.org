@@ -1,11 +1,12 @@
 export const devPython = {
   difficulty: 'Foundation',
-  duration: '30 Live Lectures',
+  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/application-dev-using-python',
   domain: 'Development and Automation',
   title: 'Application Development with Python',
-  upcoming: 'Jan 30th',
+  started: 'Jan 30th (Regular)',
+  upcoming: 'Feb 28th (Weekends)',
   mentors: ['kunal'],
   schedule: [
     {
@@ -16,6 +17,7 @@ export const devPython = {
       link: '',
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
+      duration: '30 LiveLectures',
       active: false
     }
   ],
