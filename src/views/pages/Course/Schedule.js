@@ -226,7 +226,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               >
                 Duration
               </Typography>
-              <Typography variant="body2">{course.duration}</Typography>
+              <Typography variant="body2">{batch.duration}</Typography>
             </Box>
 
             <Box mb={2} display="flex" flexDirection="row">

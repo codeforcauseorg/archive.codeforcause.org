@@ -51,7 +51,7 @@ export default function DetailsBottom({ course, batch }) {
             >
               Duration
             </Typography>
-            <Typography>{course.duration}</Typography>
+            <Typography>{batch.duration}</Typography>
           </Box>
 
           <Box mb={2} display="flex" flexDirection="row">
