@@ -16,7 +16,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'blue',
     width: '250px',
     fontWeight: 'bold',
-    fontSize: '17px'
+    fontSize: '17px',
+    '&:hover': {
+      backgroundColor: 'rgba(0, 0, 220, 1)'
+    }
   }
 }));
 
