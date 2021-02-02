@@ -9,9 +9,6 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: "url('/static/images/hire-with-us/hero.png')",
     backgroundSize: 'cover'
   },
-  description: {
-    marginBottom: '3rem'
-  },
   button: {
     backgroundColor: 'blue',
     width: '250px',
@@ -34,7 +31,7 @@ export default function Hero() {
         className={classes.root}
         firstComponent={
           <>
-            <Typography variant="body1" className={classes.description}>
+            <Typography variant="body1">
               Explore Endless Possiblities With Developers Forged In Code And
               Atticates Start Hiring
             </Typography>
