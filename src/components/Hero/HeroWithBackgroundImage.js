@@ -30,6 +30,19 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     left: '0px',
     position: 'absolute'
+  },
+  description: {
+    marginBottom: '3rem',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '1.3rem',
+      marginBottom: '1.5rem'
+    }
+  },
+  content: {
+    marginLeft: '150px',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '120px'
+    }
   }
 }));
 
@@ -54,9 +67,9 @@ function Hero({
                 flexDirection="column"
                 justifyContent="center"
                 height="100%"
-                style={{ marginLeft: '150px' }}
+                className={classes.content}
               >
-                <Grid item xs={12} md={5}>
+                <Grid item md={5}>
                   <Box>
                     <Typography
                       align="left"
@@ -67,12 +80,12 @@ function Hero({
                       {title}
                     </Typography>
                     <Typography variant="h1"> {title2}</Typography>
-                    <Box mt={5}>{firstComponent}</Box>
+                    <Box mt={5} className={classes.description}>
+                      {firstComponent}
+                    </Box>
                     <Box mt={2}>
-                      <Grid container xs={12} md={12}>
-                        <Grid item xs={12} md={12}>
-                          {secondComponent}
-                        </Grid>
+                      <Grid container>
+                        <Grid item>{secondComponent}</Grid>
                       </Grid>
                     </Box>
                   </Box>
