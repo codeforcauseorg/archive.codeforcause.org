@@ -1,6 +1,7 @@
 export const webDevelopment = {
   courseid: '',
   difficulty: 'Intermediate',
+  duration: '40 Live Lectures',
   level: 'Level 2',
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',

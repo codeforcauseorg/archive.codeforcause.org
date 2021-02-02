@@ -1,5 +1,6 @@
 export const algoJava = {
   difficulty: 'Foundation',
+  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-java',
   domain: 'Algorithms & Complexities',
@@ -17,7 +18,7 @@ export const algoJava = {
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
-      duration: '40 Live Lectures',
+      duration: '40 Live Lectures (2 hrs)',
       active: false
     },
     {

@@ -1,5 +1,6 @@
 export const machineLearning = {
   difficulty: 'Intermediate',
+  duration: '40 Live Lectures',
   level: 'Level 2',
   link: '/machine-learning-using-python',
   domain: 'Artificial Intelligence',

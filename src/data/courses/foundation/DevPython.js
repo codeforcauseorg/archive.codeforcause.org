@@ -1,5 +1,6 @@
 export const devPython = {
   difficulty: 'Foundation',
+  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/application-dev-using-python',
   domain: 'Development and Automation',

@@ -1,5 +1,6 @@
 export const algoPython = {
   difficulty: 'Foundation',
+  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-python',
   domain: 'Algorithms & Complexities',
@@ -17,7 +18,7 @@ export const algoPython = {
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
       priceId: 'price_1I0UwFLVU3L7vcSr9y77KiRe',
-      duration: '40 Live Lectures',
+      duration: '40 Live Lectures (2 hrs)',
       active: false
     },
     {

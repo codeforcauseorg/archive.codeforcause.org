@@ -1,5 +1,6 @@
 export const machineLearning = {
   difficulty: 'Six Months Training ',
+  duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-machine-learning-with-python',
   domain: 'Interview Targeted Prepration',

@@ -1,5 +1,6 @@
 export const competitiveJava = {
   difficulty: 'Intermediate',
+  duration: '40 Live Lectures',
   level: 'Level 2',
   link: '/competitive-programming-using-java',
   domain: 'Interview Prepration',

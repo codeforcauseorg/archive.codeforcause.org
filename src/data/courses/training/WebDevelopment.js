@@ -1,6 +1,7 @@
 export const webDevelopment = {
   courseid: '',
   difficulty: 'Six Months Training ',
+  duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-fullstack-webdev-with-js',
   domain: 'Interview Targeted Prepration',

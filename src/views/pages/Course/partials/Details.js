@@ -63,7 +63,7 @@ export default function Details({ course, bottom }) {
                 marginRight: '24px'
               }}
             >
-              {course.schedule[0].duration}{' '}
+              {course.duration}{' '}
               {/* The default duration is set to 0th index of schedule */}
             </Typography>
             <Typography>Hindi</Typography>
