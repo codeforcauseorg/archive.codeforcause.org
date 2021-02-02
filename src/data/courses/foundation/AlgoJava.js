@@ -1,11 +1,11 @@
 export const algoJava = {
   difficulty: 'Foundation',
-  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-java',
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with Java',
-  upcoming: 'Jan 30th',
+  started: 'Jan 30th (Regular)',
+  upcoming: 'Feb 28th (Weekends)',
   mentors: ['anuj', 'kunal', 'ekta'],
   schedule: [
     {
@@ -17,6 +17,19 @@ export const algoJava = {
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
+      duration: '40 Live Lectures',
+      active: false
+    },
+    {
+      courseId: 'jds0122',
+      dates: '28th Feb - 30th May',
+      days: 'Sat, Sun',
+      timing: '12:00 PM - 03:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 10,000',
+      price: '₹ 4,850',
+      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
+      duration: '27 Live Lectures (3 hrs)',
       active: false
     }
   ],

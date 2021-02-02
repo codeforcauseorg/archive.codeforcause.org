@@ -1,11 +1,11 @@
 export const algoJS = {
   difficulty: 'Foundation',
-  duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/ds-algo-with-js',
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with JavaScript',
-  upcoming: 'Jan 30th',
+  started: 'Jan 30th (Regular)',
+  upcoming: 'Feb 28th (Weekends)',
   mentors: ['ganga', 'anuj'],
   schedule: [
     {
@@ -17,6 +17,7 @@ export const algoJS = {
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
       priceId: 'price_1I0UveLVU3L7vcSrvRIaf1aL',
+      duration: '40 Live Lectures',
       active: false
     }
   ],

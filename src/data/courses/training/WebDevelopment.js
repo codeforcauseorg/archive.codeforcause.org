@@ -1,12 +1,12 @@
 export const webDevelopment = {
   courseid: '',
   difficulty: 'Six Months Training ',
-  duration: '80 Live Lectures',
   level: 'Level 2',
   link: '/six-months-fullstack-webdev-with-js',
   domain: 'Interview Targeted Prepration',
   title: 'Master Full Stack Web Dev (MERN) with DS & Algo in JS',
-  upcoming: 'Jan 30th',
+  started: 'Jan 30th',
+  upcoming: 'June 27th',
   mentors: ['anuj', 'ganga'],
   schedule: [
     {
@@ -18,6 +18,7 @@ export const webDevelopment = {
       priceCut: '₹ 20,000',
       price: '₹ 9,900',
       priceId: 'price_1I0qNVLVU3L7vcSr4PmkT5pK',
+      duration: '80 Live Lectures',
       active: true
     }
   ],
