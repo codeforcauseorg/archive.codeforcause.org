@@ -58,6 +58,13 @@ export const mentors = [
     name: 'Bharat Kumar',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
+  },
+  {
+    id: '6',
+    name: 'Shubham Rawat',
+    position: 'Instructor',
+    avatar: '/static/images/members/shubham.jpeg',
+    linkedIn: 'https://www.linkedin.com/in/shubhamrwt/'
   }
 ];
 
