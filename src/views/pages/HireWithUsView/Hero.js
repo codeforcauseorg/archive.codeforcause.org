@@ -30,12 +30,10 @@ export default function Hero() {
         subtitle="It's Time to learn from Experts"
         className={classes.root}
         firstComponent={
-          <>
-            <Typography variant="body1">
-              Explore Endless Possiblities With Developers Forged In Code And
-              Atticates Start Hiring
-            </Typography>
-          </>
+          <Typography variant="body1">
+            Explore Endless Possiblities With Developers Forged In Code And
+            Atticates Start Hiring
+          </Typography>
         }
         secondComponent={
           <ButtonComponent
