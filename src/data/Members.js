@@ -40,7 +40,7 @@ export const members = {
   shubham: {
     name: 'Shubham Rawat',
     position: 'Instructor',
-    avatar: '/static/images/members/bharat.png',
+    avatar: '/static/images/members/shubham.jpeg',
     linkedIn: 'https://www.linkedin.com/in/shubhamrwt/'
   }
 };
