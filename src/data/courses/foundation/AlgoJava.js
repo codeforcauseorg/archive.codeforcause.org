@@ -7,7 +7,7 @@ export const algoJava = {
   title: 'Data Structures and Algorithms with Java',
   started: 'Jan 30th (Regular)',
   upcoming: 'Feb 28th (Weekends)',
-  mentors: ['anuj', 'kunal', 'ekta'],
+  mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
   schedule: [
     {
       courseId: 'jds0121',
@@ -19,6 +19,7 @@ export const algoJava = {
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Anuj Garg, Ekta Mishra, Kunal Kushwaha',
       active: false
     },
     {
@@ -31,6 +32,7 @@ export const algoJava = {
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '27 Live Lectures (3 hrs)',
+      mentor: 'Shubham Rawat, Anuj Garg',
       active: false
     }
   ],

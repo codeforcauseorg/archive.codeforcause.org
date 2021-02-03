@@ -36,5 +36,11 @@ export const members = {
     position: 'Instructor',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
+  },
+  shubham: {
+    name: 'Shubham Rawat',
+    position: 'Instructor',
+    avatar: '/static/images/members/bharat.png',
+    linkedIn: 'https://www.linkedin.com/in/shubhamrwt/'
   }
 };
