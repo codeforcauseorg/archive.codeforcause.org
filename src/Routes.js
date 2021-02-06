@@ -3,6 +3,7 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen'; //
 import coursesContent from 'src/data/courses';
+import HireWithUsView from 'src/views/pages/HireWithUsView';
 import HomeView from 'src/views/pages/HomeView';
 const MainLayout = lazy(() => import('src/layouts/MainLayout'));
 const CAView = lazy(() => import('src/views/pages/CLView')); //
@@ -307,6 +308,15 @@ const renderRoutes = () => (
           <DocsLayout>
             <RefundView />
           </DocsLayout>
+        )}
+      />
+      <Route
+        path={`/hirewithus`}
+        exact
+        render={props => (
+          <MainLayout>
+            <HireWithUsView />
+          </MainLayout>
         )}
       />
       <Route component={Error404View} />
