@@ -90,6 +90,12 @@ function Footer({ className, ...rest }) {
     padding: 0
   };
 
+  const flexColumn = {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 0
+  }
+
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
@@ -102,7 +108,7 @@ function Footer({ className, ...rest }) {
               Contact us
             </Typography>
             <Grid item xs={3} md={3} className={classes.extraMargin}>
-              <List style={flexContainer}>
+              <List style={flexColumn}>
                 <ListItem
                   className={classes.centerCls}
                   component="a"
@@ -114,6 +120,32 @@ function Footer({ className, ...rest }) {
                   <ListItemText
                     className={classes.iconSocialMedia}
                     primary="team@codeforcause.org"
+                  />
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="mailto:events@codeforcause.org"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon="envelope" size="lg" />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="events@codeforcause.org"
+                  />
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="mailto:career@codeforcause.org"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <FontAwesomeIcon icon="envelope" size="lg" />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="career@codeforcause.org"
                   />
                 </ListItem>
               </List>
@@ -228,9 +260,9 @@ function Footer({ className, ...rest }) {
             {'Copyright © '}
             {new Date().getFullYear()}{' '}
             <Link color="inherit" href="https://codeforcause.org">
-              Code For Cause
+              Code For Cause Pvt. Ltd.
             </Link>
-            {'. All rights reserved.'}
+            {' | All rights reserved.'}
           </Typography>
 
           <Typography
