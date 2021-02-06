@@ -28,7 +28,7 @@ const devBox = (props)=>{
       <div className={classes.DevBox}>
         <div className={classes.Content}>
           <div>
-            <img src={img} className={classes.Gold_Ribbon} alt="Loading Image!"/>
+            <img src={img} className={classes.Gold_Ribbon}/>
           </div>
           <strong><p>1000+</p></strong>
           <strong><p>Problems Solved</p></strong>
