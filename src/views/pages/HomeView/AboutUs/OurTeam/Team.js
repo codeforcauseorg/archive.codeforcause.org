@@ -20,6 +20,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor,
     paddingTop: '30px',
     textAlign: 'center',
+    paddingLeft: 70,
+    paddingRight: 70,
     //write css for small screen
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
@@ -63,11 +65,6 @@ const useStyles = makeStyles(theme => ({
   },
   pointer: {
     cursor: 'pointer'
-  },
-  mentorBox: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: theme.spacing(10)
-    }
   }
 }));
 
@@ -97,7 +94,6 @@ function Team({ mentors, className, ...rest }) {
                     alignItems="center"
                     flexDirection="column"
                     textAlign="center"
-                    className={classes.mentorBox}
                   >
                     <Avatar
                       className={classes.avatar}

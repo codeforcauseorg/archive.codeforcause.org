@@ -217,6 +217,22 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               {course.title}
             </Typography>
 
+            {batch.mentor ? (
+              <Box mb={1} display="flex" flexDirection="row">
+                <Typography
+                  style={{
+                    marginRight: '12px'
+                  }}
+                  variant="body2"
+                >
+                  Mentors
+                </Typography>
+                <Typography variant="body2">{batch.mentor}</Typography>
+              </Box>
+            ) : (
+              ''
+            )}
+
             <Box mb={1} display="flex" flexDirection="row">
               <Typography
                 style={{
@@ -226,7 +242,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               >
                 Duration
               </Typography>
-              <Typography variant="body2">{course.duration}</Typography>
+              <Typography variant="body2">{batch.duration}</Typography>
             </Box>
 
             <Box mb={2} display="flex" flexDirection="row">
