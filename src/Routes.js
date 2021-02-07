@@ -3,7 +3,6 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen'; //
 import coursesContent from 'src/data/courses';
-import HireWithUsView from 'src/views/pages/HireWithUsView';
 import HomeView from 'src/views/pages/HomeView';
 const MainLayout = lazy(() => import('src/layouts/MainLayout'));
 const CAView = lazy(() => import('src/views/pages/CLView')); //
@@ -25,10 +24,11 @@ const TermsView = lazy(() => import('./views/pages/documents/termsView'));
 const DocsLayout = lazy(() => import('./layouts/DocsLayout'));
 const PrivacyView = lazy(() => import('./views/pages/documents/privacyView'));
 const RefundView = lazy(() => import('./views/pages/documents/refundView'));
-// const ScrollReset = lazy(() => import('./components/ScrollReset'));
+const ScrollReset = lazy(() => import('./components/ScrollReset'));
 const Success = lazy(() => import('./views/pages/PaymentStatus/Success'));
 const Cancelled = lazy(() => import('./views/pages/PaymentStatus/Failure'));
 const EventsView = lazy(() => import('src/views/pages/EventsView')); //
+const HireWithUsView = lazy(() => import('src/views/pages/HireWithUsView'));
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -37,26 +37,35 @@ const renderRoutes = () => (
         path="/"
         exact
         render={props => (
+          <>
+            <ScrollReset />
             <MainLayout>
               <HomeView {...props} />
             </MainLayout>
+          </>
         )}
       />
       <Route
         path="/home"
         exact
         render={props => (
+          <>
+            <ScrollReset />
             <MainLayout>
               <HomeView {...props} />
             </MainLayout>
+          </>
         )}
       />
       <Route
         path="/courses"
         render={props => (
+          <t>
+            <ScrollReset />
             <MainLayout>
               <CoursesView {...props} />
             </MainLayout>
+          </t>
         )}
       />
       <Route
@@ -64,6 +73,7 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
+            <ScrollReset />
             <EventsView {...props} />
           </MainLayout>
         )}
@@ -73,9 +83,11 @@ const renderRoutes = () => (
         path="/campusLeaders"
         exact
         render={props => (
+          <span>
             <MainLayout>
               <CAView {...props} />
             </MainLayout>
+          </span>
         )}
       />
 
@@ -140,9 +152,12 @@ const renderRoutes = () => (
         path="/blog/:id"
         exact
         render={props => (
+          <>
+            <ScrollReset />
             <MainLayout>
               <Blog {...props} />
             </MainLayout>
+          </>
         )}
       />
 
