@@ -60,7 +60,6 @@ const useStyles = makeStyles(theme => ({
     background: "rgba(255, 255, 255, 0.1)",
     borderRadius: "121.5px 121.5px 121px 121.5px",
     border:"1px solid #BAAEAE",
-    position: "relative",
     backgroundColor: "#f2e6ff",
     position:"relative",
     float: "right",
