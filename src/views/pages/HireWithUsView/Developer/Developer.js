@@ -11,9 +11,9 @@ class Developer extends Component{
       <div>
         <div className={classes.Developer}>
 
-        <div>
-         <p><span className={classes.heading1}>The Making Of </span>
-           <span className={classes.heading2}>The Fine Developer</span></p>
+        <div className={classes.Head}>
+          <Typography variant="h2" className={classes.heading1}>The Making Of </Typography>
+          <Typography variant="h1" className={classes.heading2}>The Fine Developer</Typography>
        </div>
 
           <div className={classes.Box}>

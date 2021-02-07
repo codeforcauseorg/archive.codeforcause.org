@@ -6,15 +6,16 @@
   background-color: #e6e6ff;
 
 }
-
+.Head{
+  display: block;
+}
 .heading1{
-    font-weight:bold;
-    font-size: 30px
+  display: inline-block;
 }
 
 .heading2{
-  font-weight: bolder;
-  font-size: 40px;
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .Box{

@@ -3,7 +3,7 @@ import classes from './DevBox.module.css'
 import Gold_Ribbon from '../../../../../assets/images/Gold_Ribbon.png'
 import Book_Icon from '../../../../../assets/images/Book_Icon.png'
 import Thumbs_Up from '../../../../../assets/images/Thumbs_Up.png'
-
+import { Typography } from '@material-ui/core';
 
 const devBox = (props)=>{
   let img;
@@ -30,8 +30,8 @@ const devBox = (props)=>{
           <div>
             <img src={img} className={classes.Icon} alt=""/>
           </div>
-          <strong><p>1000+</p></strong>
-          <strong><p>Problems Solved</p></strong>
+          <Typography variant="h4">1000+</Typography>
+          <Typography variant="h4">Problems Solved</Typography>
         </div>
       </div>
     </div>
