@@ -4,7 +4,7 @@
   padding-top: 50px;
   font-family: 'Montserrat', sans-serif;
   background-color: #e6e6ff;
-
+  height: 800px;
 }
 .Head{
   display: block;
@@ -49,12 +49,14 @@
   border-radius: 121.5px 20px 121px 121.5px;
   /* border:5px solid black; */
   position: relative;
-  top:-130px;
-  left:-380px;
+  float: right;
+  top:-190px;
+  left:-10;
   z-index: 700;
 }
+
 .SideBox{
-  width: 800px;
+  width: 750px;
   height: 120px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 121.5px 121.5px 121px 121.5px;
@@ -62,8 +64,9 @@
   position: relative;
   background-color: #f2e6ff;
   position:relative;
-  left: 940px;
-  top: -390px;
+  float: right;
+  left: 380px;
+  top: -420px;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px #BAAEAE;
   opacity: 0.8;
   transform: rotate(90deg);
@@ -71,9 +74,11 @@
 }
 
 .Footer{
-  position: relative;
+  margin-top: 30px;
+  float: none;
   height: 90px;
   width: 100%;
-  top:-90px;
-  background-color: white;
+  top:-50px;
+  background:none;
+  z-index: 400
 }

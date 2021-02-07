@@ -7,7 +7,8 @@
   border:1px solid #BAAEAE;
   background-color: #f2e6ff;
   padding-top: 30px;
-  padding-left: 50px
+  padding-left: 50px;
+  z-index: 500
 }
 
 .Icon{
