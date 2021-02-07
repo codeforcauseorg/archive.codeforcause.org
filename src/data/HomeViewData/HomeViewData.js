@@ -100,58 +100,60 @@ export const experience = [
 // Open source section data-----------------
 export const openKnowledgeContent = {
   title: 'Open Knowledge',
-  about:
-    'Our structure is based on generating the knowledge flow that is not limited by bottlenecks. So we expand our mentor base with every student we teach. We inspire our mentees to pass on the guidance and support.',
+  about: `Our structure is based on generating knowledge flow that is not limited by bottlenecks. We inspire
+    our mentees to pass on guidance and support, expanding our mentor base with each student we
+    teach.`,
   points: [
     {
       id: '1',
       img: '/static/images/icons/ok1.svg',
       contentTitle: 'Live Classes',
       content:
-        'We host live classes and workshops regularly with focus on hands-on learning, which is crucial in gaining real-world software development experience.'
+        'We host live classes and workshops regularly with a focus on hands-on learning, a crucial skill in gaining real-world software development experience.'
     },
     {
       id: '2',
       img: '/static/images/icons/ok2.svg',
       contentTitle: 'Doubt Resolution',
       content:
-        'Get connected to a large group of developers and open-source enthusiasts to get all your doubts resolved - whether technical, career-oriented or soft skills.'
+        '​ Get connected to a large network of developers and open-source enthusiasts to get all your doubts resolved - be it technical, career-oriented, or related to soft skills.'
     },
     {
       id: '3',
       img: '/static/images/icons/ok3.svg',
       contentTitle: 'Career Guidance',
       content:
-        'Learn from the experiences of the community members in the industry which will help you with career guidance for the path best suited to you.'
+        'Learn from the experiences of the community members acting as career guidance to help choose the path best suited to you.'
     }
   ]
 };
 
 export const openSourceContent = {
   title: 'Open Source',
-  about:
-    'Our motivation is to funnel learning through OSS development that can solve real world problems. With this you can enhance your ideation, development and soft skills like communication, teamwork and leadership.',
+  about: `Our motivation is to funnel learning through OSS development that can solve real-world problems.
+    With this, you can enhance your ideation, development, and soft skills such as communication,
+    teamwork, and leadership.`,
   points: [
     {
       id: '1',
       img: '/static/images/icons/os1.svg',
       contentTitle: 'Develop Products',
       content:
-        'Practical development experience is crucial in becoming a pragmatic programmer. Join us and develop products to enhance your skill set for real.'
+        'Practical development experience is crucial in becoming a pragmatic programmer. Join us and develop products to enhance your skillset for the real world.'
     },
     {
       id: '2',
       img: '/static/images/icons/os2.svg',
       contentTitle: 'Collaborative Coding',
       content:
-        'When talking about graphs, the edges matter as much as the nodes. We follow Collaborative Working that helps you generate showcasable work.'
+        '​ When talking about graphs, the edges matter as much as the nodes. We follow Collaborative Working that helps you generate showcase-worthy work.'
     },
     {
       id: '3',
       img: '/static/images/icons/os3.svg',
       contentTitle: 'Networking Events',
       content:
-        'As we already know software development professionals flourish by networking. Get connected to people who matter by our online/offline events.'
+        '​ As we already know that software development professionals flourish by networking, we help you in connecting to people who matter via our online/offline events.'
     }
   ]
 };
