@@ -71,7 +71,7 @@ function StandsFor({ className, ...rest }) {
           gutterBottom
           color="textPrimary"
         >
-          What Does a Campus Leader Stands For?
+          What Does a Campus Leader Stand For?
         </Typography>
         <Grid container spacing={3} className={classes.extraMargin}>
           <Hidden smDown>
