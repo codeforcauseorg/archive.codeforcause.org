@@ -166,10 +166,10 @@ const useStyles = makeStyles(theme => ({
 
 function getSteps() {
   return [
-    'You Fill The Form',
-    'You Get Shortlisted',
-    'Online Meeting',
-    'Welcome to The Team'
+    'Fill The Form',
+    'Get Shortlisted',
+    'An Online Meeting with us',
+    'Welcome to The Team!'
   ];
 }
 

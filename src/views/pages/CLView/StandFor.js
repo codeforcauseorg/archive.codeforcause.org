@@ -8,7 +8,7 @@ import {
   Grid,
   Hidden,
   Typography,
-  makeStyles
+  makeStyles,
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -71,7 +71,7 @@ function StandsFor({ className, ...rest }) {
           gutterBottom
           color="textPrimary"
         >
-          What Does the Campus Leader Stands For
+          What Does the Campus Leader Stands For?
         </Typography>
         <Grid container spacing={3} className={classes.extraMargin}>
           <Hidden smDown>
@@ -115,32 +115,72 @@ function StandsFor({ className, ...rest }) {
                   from our campus leaders are
                 </Typography>
               </Box>
-              <Box mt={2}>
-                <Typography variant="body1">
-                  He/she shall be entusiastic about going social and build &amp;
-                  contribute for the community<h4>- An Initiative taker</h4>
+
+              <Box mt={3} mb={1}>
+                <Typography variant="h5" align="center">
+                  Here’s what we expect out of a true Campus Leader:
                 </Typography>
               </Box>
-              <Box mt={2}>
-                <Typography variant="body1">
-                  A Leader shall always have a way of talking people out from
-                  problems and leading them to do that for others too{' '}
-                  <h4> - A Community Builder</h4>
-                </Typography>
-              </Box>
-              <Box mt={2}>
-                <Typography variant="body1">
-                  He/she should be connecting to the resources available in
-                  community that might help in building a better &amp; more
-                  helpful community <h4>- A Resource Seeker</h4>
-                </Typography>
-              </Box>
-              <Box mt={2}>
-                <Typography variant="body1">
-                  Most sought after value - an effort maker and giving
-                  personality <h4>- An Investor</h4>
-                </Typography>
-              </Box>
+
+              <ul>
+                <li>
+                  <Box mt={2}>
+                    <Typography variant="body1">
+                      <h4 style={{ display: 'inline' }}>Enthusiasm</h4> to go
+                      social while building and contributing to the community
+                      with their skill.
+                    </Typography>
+                  </Box>
+                </li>
+
+                <li>
+                  <Box mt={2}>
+                    <Typography variant="body1">
+                      <h4 style={{ display: 'inline' }}>
+                        An Initiative taker:{' '}
+                      </h4>
+                      A Leader should always have a way of talking people out of
+                      problems and leading them to do the same for others.
+                    </Typography>
+                  </Box>
+                </li>
+
+                <li>
+                  <Box mt={2}>
+                    <Typography variant="body1">
+                      <h4 style={{ display: 'inline' }}>
+                        A Community Builder:
+                      </h4>
+                      ​ A true leader should identify the resources available
+                      within the community, and use them to help build a better
+                      & more helpful one.
+                    </Typography>
+                  </Box>
+                </li>
+
+                <li>
+                  <Box mt={2}>
+                    <Typography variant="body1">
+                      <h4 style={{ display: 'inline' }}>
+                        A Resource Seeker:​{' '}
+                      </h4>
+                      Most sought out value for a Leader - a giving personality
+                      and an effort maker, making anything possible with the
+                      given resources.
+                    </Typography>
+                  </Box>
+                </li>
+
+                <li>
+                  <Box mt={2}>
+                    <Typography variant="body1">
+                      <h4 style={{ display: 'inline' }}>An Investor: </h4>S
+                      hould be up & ready to take initiative and invest their
+                      time and effort into building a community.
+                    </Typography>
+                  </Box>
+                </li>
+              </ul>
             </Box>
           </Grid>
         </Grid>
