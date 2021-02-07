@@ -94,7 +94,7 @@ function Footer({ className, ...rest }) {
     display: 'flex',
     flexDirection: 'column',
     padding: 0
-  };
+  }
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
