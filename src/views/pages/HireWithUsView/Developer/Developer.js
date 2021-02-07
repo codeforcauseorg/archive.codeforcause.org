@@ -1,11 +1,90 @@
-import React,{Component} from 'react';
+import React from 'react';
 import Devbox from './DevBox/index';
-import classes from './Developer.module.css';
-import { Typography } from '@material-ui/core';
+// import classes from './Developer.module.css';
+import { Typography,makeStyles } from '@material-ui/core';
 
-class Developer extends Component{
-  render(){
+const useStyles = makeStyles(theme => ({
+  Developer:{
+    marginTop: "70px",
+    paddingLeft:"200px",
+    paddingTop: "50px",
+    fontFamily: "'Montserrat', sans-serif",
+    backgroundColor: "#e6e6ff",
+    height: "800px"
+  },
+  Head:{
+    display: "block",
+  },
+  heading1:{
+    display: "inline-block"
+  },
+  heading2:{
+    display: "inline-block",
+    paddingLeft: "10px"
+  },
+  Box:{
+    marginTop: "110px",
+    width: "60%",
+    flexWrap: "wrap",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "flex-start"
+  },
+  Lastbox:{
+    marginTop:"20px"
+  },
+  Bottom:{
+    marginTop: "77px"
+  },
+  BottomBox:{
+    marginLeft: "800px",
+    paddingTop: "40px",
+    paddingLeft: "55px",
+    paddingRight: "200px",
+    width: "970px",
+    height: "230px",
+    background: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "white",
+    boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px salmon",
+    borderRadius: "121.5px 20px 121px 121.5px",
+    /* border:5px solid black; */
+    position: "relative",
+    float: "right",
+    top:"-190px",
+    left:"-10",
+    zIndex: "700"
+  },
+  SideBox:{
+    width: "750px",
+    height: "120px",
+    background: "rgba(255, 255, 255, 0.1)",
+    borderRadius: "121.5px 121.5px 121px 121.5px",
+    border:"1px solid #BAAEAE",
+    position: "relative",
+    backgroundColor: "#f2e6ff",
+    position:"relative",
+    float: "right",
+    left: "380px",
+    top: "-420px",
+    boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px #BAAEAE",
+    opacity: "0.8",
+    transform: "rotate(90deg)",
+    zIndex: "1000"
+  },
+  Footer:{
+    marginTop: "30px",
+    float: "none",
+    height: "90px",
+    width: "100%",
+    top:"-50px",
+    background:"none",
+    zIndex: "400"
+  }
 
+}));
+
+export default function Developer(props){
+      const classes = useStyles();
     return (
 
       <div>
@@ -23,7 +102,7 @@ class Developer extends Component{
           </div>
 
           <div className={classes.Bottom}>
-          <div className={classes.lastbox}><Devbox/></div>
+          <div className={classes.Lastbox}><Devbox/></div>
 
               <div className={classes.BottomBox}>
                 <Typography variant="body1">
@@ -31,14 +110,12 @@ class Developer extends Component{
                 </Typography>
             </div>
             <div className={classes.SideBox} />
-            
+
           </div>
 
         </div>
         <div className={classes.Footer}></div>
       </div>
     )
-  }
-}
 
-export default Developer;
+}
