@@ -188,8 +188,7 @@ function Events({ className, ...rest }) {
             </Swiper>
           </Hidden>
           <Hidden smUp>
-            {events
-              .slice(Math.max(events.length - 3, 0))
+            {bootcamps
               .map((event, index) => (
                 <EventCard event={event} index={index} />
               ))}

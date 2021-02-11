@@ -29,6 +29,15 @@ export const events = [
 // Bootcamps data
 export const bootcamps = [
   {
+    domain: 'Zomato clone',
+    link: 'https://rzp.io/l/zomatoclone',
+    type: 'Bootcamp',
+    title: 'Build a React Native Zomato clone live with doubt support',
+    time: '1-7 March 9 PM IST',
+    image:
+      'https://www.frescofud.com/blog_image/d6137807ad6abdac3f4471cb14aae8d7.jpg'
+  },
+  {
     domain: 'Machine Learning',
     link:
       'https://www.youtube.com/watch?v=CjqMg0wyAWY&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
@@ -46,15 +55,6 @@ export const bootcamps = [
     time: 'August 25',
     image: 'https://img.youtube.com/vi/hkx_JFFwM1o/hqdefault.jpg'
   },
-  {
-    domain: 'Zomato clone',
-    link: 'https://rzp.io/l/zomatoclone',
-    type: 'Bootcamp',
-    title: 'Build a React Native Zomato clone live with doubt support',
-    time: 'Upcoming, Live',
-    image:
-      'https://www.frescofud.com/blog_image/d6137807ad6abdac3f4471cb14aae8d7.jpg'
-  }
 ];
 
 // mentors data----------------
