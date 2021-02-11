@@ -64,7 +64,7 @@ export const mentors = [
     name: 'Shubham Rawat',
     position: 'Instructor',
     avatar: '/static/images/members/shubham.jpeg',
-    linkedIn: 'https://www.linkedin.com/in/shubhamrwt/'
+    linkedin: 'https://www.linkedin.com/in/shubhamrwt/'
   }
 ];
 
