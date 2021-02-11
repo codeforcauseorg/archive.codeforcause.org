@@ -2,13 +2,13 @@ export const benefits = [
   {
     id: '1',
     img: '/static/images/cl/benefits/b1.svg',
-    detail: 'Code for Cause VIP Swags and an opportunity to get special editions.'
+    detail:
+      'Code for Cause VIP Swags and an opportunity to get special editions.'
   },
   {
     id: '2',
     img: '/static/images/cl/benefits/b2.png',
-    detail:
-      'Free study material- courses and guidance from our mentors.'
+    detail: 'Free study material- courses and guidance from our mentors.'
   },
   {
     id: '3',

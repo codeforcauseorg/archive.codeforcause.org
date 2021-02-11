@@ -26,6 +26,37 @@ export const events = [
   }
 ];
 
+// Bootcamps data
+export const bootcamps = [
+  {
+    domain: 'Machine Learning',
+    link:
+      'https://www.youtube.com/watch?v=CjqMg0wyAWY&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
+    type: 'Bootcamp',
+    title: 'Complete Machine Learning Bootcamp to start your ML Journey',
+    time: 'July 11',
+    image: 'https://img.youtube.com/vi/ycvSMpsg7qk/hqdefault.jpg'
+  },
+  {
+    domain: 'Data Structures & Algo',
+    link:
+      'https://www.youtube.com/watch?v=hkx_JFFwM1o&list=PLyzHIYrZBplpsh_PQimtVosH72wSVOpy2',
+    type: 'Bootcamp',
+    title: 'Data Structures and Algorithms with Java',
+    time: 'August 25',
+    image: 'https://img.youtube.com/vi/hkx_JFFwM1o/hqdefault.jpg'
+  },
+  {
+    domain: 'Zomato clone',
+    link: 'https://rzp.io/l/zomatoclone',
+    type: 'Bootcamp',
+    title: 'Build a React Native Zomato clone live with doubt support',
+    time: 'Upcoming, Live',
+    image:
+      'https://www.frescofud.com/blog_image/d6137807ad6abdac3f4471cb14aae8d7.jpg'
+  }
+];
+
 // mentors data----------------
 
 export const mentors = [
