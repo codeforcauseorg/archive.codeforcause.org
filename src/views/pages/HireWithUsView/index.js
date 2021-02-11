@@ -4,6 +4,7 @@ import Page from 'src/components/Page';
 import Hero from './Hero';
 import Developer from './Developer/Developer'
 import Footer from '../common/Footer';
+import Philosphy from './Philosphy/Philosphy';
 // import CTA from './CTA';
 // import Apply from '../common/Apply';
 
@@ -18,6 +19,7 @@ function HireWithUsView() {
     <Page className={classes.root} title="Hire With Us">
       <Hero />
       <Developer/>
+      <Philosphy/>
       <Footer />
     </Page>
   );
