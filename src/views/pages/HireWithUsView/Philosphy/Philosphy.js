@@ -1,30 +1,36 @@
 import React from 'react';
 // import classes from './Developer.module.css';
-import { Typography,makeStyles } from '@material-ui/core';
+import {Grid,Typography,makeStyles } from '@material-ui/core';
 import Businessman from '../../../../assets/images/Businessman.png';
 
 const useStyles = makeStyles(theme => ({
   Philosphy:{
-    height:"900px"
+    height:"1000px",
+    
+    [theme.breakpoints.down('xs')]: {
+      height:"800px"
+    }
   },
   Heading:{
     width: "100%",
-    height:"200px",
-    flexWrap: "wrap",
-    display: "flex",
-    alignItems: "flex-end"
+    height:"100px",
+    [theme.breakpoints.down('xs')]: {
+      height:"100px",
+    },
   },
   Inner1:{
     width:"35%",
     height:"100px",
-    background:"none"
+    background:"none",
+    [theme.breakpoints.down('xs')]: {
+      height:"50px"
+    },
   },
   Inner2:{
       width: "65%",
       height : "100px",
       top: "0",
       bottom: "0",
-      right: "40px",
       background: "#deded9",
       float:"right",
       paddingLeft:"140px",
@@ -33,18 +39,26 @@ const useStyles = makeStyles(theme => ({
       borderBottomLeftRadius:"50px",
       // boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px #BAAEAE",
       opacity:"0.7",
-      zIndex:"200"
+      zIndex:"200",
+      [theme.breakpoints.down('xs')]: {
+        paddingLeft:"28px",
+        paddingTop:"35px",
+      },
   },
   Inner3:{
     height:"100px",
     width:"65%",
+    top: "0",
+    bottom: "0",
+    float:"right",
     backgroundColor:"#adaba5",
     borderTopLeftRadius:"350px",
     borderBottomLeftRadius:"50px",
     boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px #BAAEAE",
     transform:"translate(0px,-120px)",
     opacity:"0.2",
-    zIndex:"100"
+    zIndex:"100",
+
   },
   MidSection:{
     marginLeft:"80px",
@@ -53,13 +67,26 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    [theme.breakpoints.down('xs')]: {
+      flexDirection:"column",
+    },
   },
   First:{
-    transform:"translate(40px,20px)"
+    width:"50%",
+    height:"100%",
+    [theme.breakpoints.down('md')]: {
+      transform:"translate(-70px,250px)"
+    },
+    [theme.breakpoints.down('sm')]: {
+      transform:"translate(-70px,250px)"
+    },
+    [theme.breakpoints.down('xs')]: {
+      transform:"translate(-70px,180px)"
+    },
   },
   Design1:{
-    transform:"translate(100px,70px) rotate(-8deg)"
+    transform:"translate(100px,70px) rotate(-8deg)",
   },
   Design11:{
     width: "340px",
@@ -69,26 +96,60 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px gray",
     borderRadius: "200px 121.5px 121.5px 10px ",
     marginTop:"20px",
-    opacity:"0.3"
+    opacity:"0.3",
+    [theme.breakpoints.down('md')]: {
+      height:"40px",
+      width:"240px",
+    },
+    [theme.breakpoints.down('xs')]: {
+      height:"30px",
+      width:"180px"
+    },
   },
   Design2:{
     height:"40px",
     transform:"translate(80px,105px) rotate(5deg)",
     borderRadius: "121.5px 200px 10px  121.5px ",
+    [theme.breakpoints.down('md')]: {
+      height:"40px",
+      width:"240px",
+    },
+    [theme.breakpoints.down('xs')]: {
+      height:"35px",
+      width:"190px"
+    },
   },
   Design3:{
     height:"50px",
     width:"315px",
     transform:"translate(100px,130px) rotate(-4deg)",
     borderRadius: "121.5px 200px 10px  121.5px ",
+    [theme.breakpoints.down('md')]: {
+      height:"40px",
+      width:"240px",
+    },
+    [theme.breakpoints.down('xs')]: {
+      height:"30px",
+      width:"140px"
+    },
   },
   Businessman:{
     height:"470px",
-    transform:"translate(90px ,-208px)"
+    width:"350px",
+    transform:"translate(90px ,-208px)",
+    [theme.breakpoints.down('md')]: {
+      height:"360px",
+      width:"280px",
+    },
+    [theme.breakpoints.down('xs')]: {
+      height:"270px",
+      width:"200px",
+      transform:"translate(90px ,-120px)",
+    },
   },
   Box:{
-    width: "239px",
-    height: "170px",
+    width: "50%",
+    height: "100%",
     background: "rgba(255, 255, 255, 0.1)",
     boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px #BAAEAE",
     borderRadius: " 300px 200px 200px 10px",
@@ -104,7 +165,20 @@ Box1:{
   backgroundColor:"#0054db",
   zIndex:"100",
   opacity:"0.7",
-  padding:"105px 50px 20px 110px"
+  padding:"105px 50px 20px 110px",
+  [theme.breakpoints.down('md')]: {
+    height:"280px",
+    width:"400px",
+    padding:"50px 10px 0 60px",
+    transform:"translate(20px,0px)"
+  },
+  [theme.breakpoints.down('xs')]: {
+    height:"170px",
+    width:"280px",
+    padding:"30px 10px 0 32px",
+    transform:"translate(20px,0px)"
+  },
+
 },
 Box2:{
   width:"270px",
@@ -112,22 +186,63 @@ Box2:{
   transform:"translate(-280px,-80px)",
   boxShadow: "0px 0px 60px rgba(0, 0, 0, 0.1), inset 0px 0px 30px #BAAEAE",
   zIndex:"200",
-  opacity:"0.8"
+  opacity:"0.8",
+  [theme.breakpoints.down('md')]: {
+    height:"85px",
+    width:"120px",
+    transform:"translate(-45px,-45px)",
+  },
+  [theme.breakpoints.down('xs')]: {
+    height:"50px",
+    width:"100px",
+    transform:"translate(-30px,-20px)"
+  },
+
 },
 Box3:{
   width:"170px",
   height:"110px",
   boxShadow: "2px 2px 100px rgba(0, 0, 0, 0.1), inset 0px 0px 40px #BAAEAE",
   transform:"translate(-320px,-165px)",
-  zIndex:"400"
+  zIndex:"400",
+  [theme.breakpoints.down('md')]: {
+    height:"65px",
+    width:"90px",
+    transform:"translate(-55px,-85px)",
+  },
+  [theme.breakpoints.down('xs')]: {
+    height:"35px",
+    width:"70px",
+    transform:"translate(-45px,-45px)",
+  },
+
 },
 Second:{
   transform:"translate(-120px,-40px)",
-  color:"white"
+  color:"white",
+  [theme.breakpoints.down('md')]: {
+    paddingRight:"320px",
+    transform:"translate(150px,-555px)",
+  },
+  [theme.breakpoints.down('sm')]: {
+    paddingRight:"320px",
+    transform:"translate(150px,-555px)",
+  },
+  [theme.breakpoints.down('xs')]: {
+    transform:"translate(-210px,30px)",
+  },
 },
 Innerdiv:{
-  marginTop:"20px"
-}
+  marginTop:"20px",
+  [theme.breakpoints.down('md')]: {
+    fontSize:"12px"
+  },
+  [theme.breakpoints.down('xs')]: {
+    fontSize:"8px"
+  },
+
+},
+
 
 }));
 
@@ -135,37 +250,40 @@ export default function Philosphy(props){
       const classes = useStyles();
     return (
 
-      <div className={classes.Philosphy}>
-        <div className={classes.Heading}>
-          <div className={classes.Inner1}></div>
-          <div className={classes.Inner2}>
+      <Grid container className={classes.Philosphy}>
+        <Grid className={classes.Heading}>
+          <Grid className={classes.Inner1}></Grid>
+          <Grid className={classes.Inner2}>
             <Typography variant='h1'> Our Philosphy </Typography>
-          </div>
-          <div className={classes.Inner1}></div>
-          <div className={classes.Inner3}></div>
-        </div>
-        <div className={classes.MidSection}>
-          <div className={classes.First}>
-            <div className={classes.Design1}>
-              <div className={classes.Design11}></div>
-              <div className={classes.Design11}></div>
+          </Grid>
+          <Grid className={classes.Inner1}></Grid>
+          <Grid className={classes.Inner3}></Grid>
+        </Grid>
+        <Grid container className={classes.MidSection}>
+          <Grid item xs={12} sm={12} md={12} lg={4} className={classes.First}>
+            <Grid item className={classes.Design1}>
+              <Grid item className={classes.Design11}/>
+              <Grid item className={classes.Design11}/>
+            </Grid>
+            <div>
+              <Grid item className={`${classes.Design11} ${classes.Design2}`}/>
+              <Grid item className={`${classes.Design11} ${classes.Design3}`}/>
+              <Grid item>
+                <img src={Businessman}  alt="" className={classes.Businessman} />
+              </Grid>
             </div>
-            <div className={`${classes.Design11} ${classes.Design2}`}></div>
-            <div className={`${classes.Design11} ${classes.Design3}`}></div>
-            <img src={Businessman}  alt="" className={classes.Businessman} />
-          </div>
-          <div className={classes.Second}>
-              <div className={`${classes.Box} ${classes.Box1}`}>
-                <Typography variant="h2">Our Philosphy</Typography>
-                <Typography variant="h6" className={classes.Innerdiv}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </Typography>
-              </div>
-              <div className={`${classes.Box} ${classes.Box2}`} />
-              <div className={`${classes.Box} ${classes.Box3}`} />
-          </div>
-        </div>
-      </div>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12} lg={4} className={classes.Second}>
+              <Grid item className={`${classes.Box} ${classes.Box1}`}>
+                <Typography variant="h3">Our Philosphy</Typography>
+                <Typography variant="body1" className={classes.Innerdiv}>
+                  Lorem Ipsum is simply dummy. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets cont                </Typography>
+              </Grid>
+              <Grid item className={`${classes.Box} ${classes.Box2}`} />
+              <Grid item className={`${classes.Box} ${classes.Box3}`} />
+          </Grid>
+        </Grid>
+      </Grid>
     )
 
 }
