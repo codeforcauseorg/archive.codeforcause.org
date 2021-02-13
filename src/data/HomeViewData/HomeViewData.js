@@ -35,7 +35,8 @@ export const bootcamps = [
     title:
       'Learn to make a Zomato Clone in our week long React Bootcamp',
     timeBelow: '1-7 March',
-    image: '/static/temp/rn.jpeg'
+    image: '/static/temp/rn.jpeg',
+    target: '_self'
   },
   {
     domain: 'Machine Learning',
@@ -47,7 +48,7 @@ export const bootcamps = [
     image: 'https://img.youtube.com/vi/ycvSMpsg7qk/hqdefault.jpg'
   },
   {
-    domain: 'Data Structures & Algorithms',
+    domain: 'DS & Algorithms',
     link:
       'https://www.youtube.com/watch?v=hkx_JFFwM1o&list=PLyzHIYrZBplpsh_PQimtVosH72wSVOpy2',
     type: 'Bootcamp',

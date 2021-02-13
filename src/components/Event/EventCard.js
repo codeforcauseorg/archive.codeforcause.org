@@ -73,7 +73,7 @@ function Eventcard({ className, event, index, ...rest }) {
       className={classes.gridCls}
       component="a"
       href={event.link}
-      target="_blank"
+      target={event.target ? event.target : "_blank"}
       item
       key={index}
       xs={12}
