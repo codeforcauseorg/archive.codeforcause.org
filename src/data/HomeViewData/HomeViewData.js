@@ -29,11 +29,11 @@ export const events = [
 // Bootcamps data
 export const bootcamps = [
   {
-    domain: 'React Native',
-    link: 'https://rzp.io/l/zomatoclone',
+    domain: 'React',
+    link: '/zomato-clone-with-react-js',
     type: 'Bootcamp',
     title:
-      'Learn to make a Zomato Clone in our week long React Native Bootcamp',
+      'Learn to make a Zomato Clone in our week long React Bootcamp',
     timeBelow: '1-7 March',
     image: '/static/temp/rn.jpeg'
   },
