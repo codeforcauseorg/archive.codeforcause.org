@@ -2,7 +2,7 @@ import jwtDecode from 'jwt-decode';
 import axios from 'src/utils/axios';
 
 import firebase from 'firebase/app';
-import 'firebase/auth'
+import 'firebase/auth';
 
 class AuthService {
   // Configure Firebase.
@@ -55,7 +55,7 @@ class AuthService {
         .then(profile => {
           resolve(profile);
         })
-        .catch(function () {
+        .catch(function() {
           alert('Failed to load user profile');
         });
     });
@@ -69,7 +69,7 @@ class AuthService {
           this.keycloak.login();
         }
       })
-      .catch(function (e) {
+      .catch(function(e) {
         console.log(e);
       });
   };
