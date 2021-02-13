@@ -107,7 +107,7 @@ function StandsFor({ className, ...rest }) {
             >
               <Box>
                 <Typography variant="body1">
-                  <b>Campus Leaders at Code For Cause</b> ​ are people with an
+                  <b>Campus Leaders at Code For Cause</b> are people with an
                   entrepreneurial mindset who want to add value to the community
                   by spreading awareness about the cause and gather like-minded
                   people to work towards it. Above all, Campus Leaders
