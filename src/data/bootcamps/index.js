@@ -1,5 +1,5 @@
 import js from './js';
 
-const coursesContent = [js];
+const bootcampsContent = { js };
 
-export default coursesContent;
+export default bootcampsContent;
