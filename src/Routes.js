@@ -3,11 +3,11 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen'; //
 import coursesContent from 'src/data/courses';
+import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
 const MainLayout = lazy(() => import('src/layouts/MainLayout'));
 const CAView = lazy(() => import('src/views/pages/CLView')); //
 const CoursesView = lazy(() => import('src/views/pages/CoursesView')); //
-const Bootcamps = lazy(() => import('src/views/pages/BootCampsView/Bootcamps'));
 const ProfileView = lazy(() => import('src/views/pages/ProfileView')); //
 const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView')); //
 const BlogsView = lazy(() => import('src/views/pages/BlogsView'));
@@ -20,6 +20,7 @@ const EditProfileView = lazy(() =>
   import('src/views/pages/StudentDashboardView/EditProfile')
 );
 const CoursePage = lazy(() => import('src/views/pages/Course/CoursePage'));
+const BootcampPage = lazy(() => import('src/views/pages/Bootcamp/BootcampPage'));
 const TermsView = lazy(() => import('./views/pages/documents/termsView'));
 const DocsLayout = lazy(() => import('./layouts/DocsLayout'));
 const PrivacyView = lazy(() => import('./views/pages/documents/privacyView'));
@@ -92,15 +93,6 @@ const renderRoutes = () => (
       />
 
       <Route
-        path="/bootcamp"
-        render={props => (
-          <MainLayout>
-            <Bootcamps {...props} />
-          </MainLayout>
-        )}
-      />
-
-      <Route
         path="/applications"
         exact
         render={props => (
@@ -160,7 +152,18 @@ const renderRoutes = () => (
           </>
         )}
       />
-
+    <Route
+        path={`/zomato-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage
+              course={bootcampsContent.js.zomatoClone}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
       <Route
         path={`/machine-learning-using-python`}
         exact
