@@ -12,6 +12,12 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     minHeight: '100%',
     padding: theme.spacing(3)
+  },
+  loadingLogo: {
+    marginBottom: '32px'
+  },
+  box: {
+    textAlign: 'center'
   }
 }));
 
@@ -28,7 +34,8 @@ function LoadingScreen() {
 
   return (
     <div className={classes.root}>
-      <Box width={400}>
+      <Box className={classes.box} width={400}>
+        <img src="/static/logo/logo.png" alt="logo" className={classes.loadingLogo} />
         <LinearProgress />
       </Box>
     </div>
