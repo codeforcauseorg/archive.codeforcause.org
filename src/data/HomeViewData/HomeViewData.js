@@ -32,10 +32,10 @@ export const bootcamps = [
     domain: 'React Native',
     link: 'https://rzp.io/l/zomatoclone',
     type: 'Bootcamp',
-    title: 'Learn to make a Zomato Clone in our week long React Native Bootcamp',
+    title:
+      'Learn to make a Zomato Clone in our week long React Native Bootcamp',
     timeBelow: '1-7 March',
-    image:
-      '/static/temp/rn.jpeg'
+    image: '/static/temp/rn.jpeg'
   },
   {
     domain: 'Machine Learning',
@@ -43,18 +43,18 @@ export const bootcamps = [
       'https://www.youtube.com/watch?v=CjqMg0wyAWY&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
     type: 'Bootcamp',
     title: 'Complete Machine Learning Bootcamp to start your ML Journey',
-    time: 'July 11',
+    timeBelow: 'July 11',
     image: 'https://img.youtube.com/vi/ycvSMpsg7qk/hqdefault.jpg'
   },
   {
-    domain: 'Data Structures & Algo',
+    domain: 'Data Structures & Algorithms',
     link:
       'https://www.youtube.com/watch?v=hkx_JFFwM1o&list=PLyzHIYrZBplpsh_PQimtVosH72wSVOpy2',
     type: 'Bootcamp',
     title: 'Data Structures and Algorithms with Java',
-    time: 'August 25',
+    timeBelow: 'August 25',
     image: 'https://img.youtube.com/vi/hkx_JFFwM1o/hqdefault.jpg'
-  },
+  }
 ];
 
 // mentors data----------------

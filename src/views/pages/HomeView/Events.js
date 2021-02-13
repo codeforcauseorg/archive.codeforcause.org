@@ -188,10 +188,9 @@ function Events({ className, ...rest }) {
             </Swiper>
           </Hidden>
           <Hidden smUp>
-            {bootcamps
-              .map((event, index) => (
-                <EventCard event={event} index={index} />
-              ))}
+            {bootcamps.map((event, index) => (
+              <EventCard event={event} index={index} />
+            ))}
           </Hidden>
           <Grid item xs={12} sm={12} md={12}>
             <div className={classes.box2}>

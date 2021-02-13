@@ -19,8 +19,8 @@ function HireWithUsView() {
     <Page className={classes.root} title="Hire With Us">
       <Hero />
 
-      <Developer/>
-      <Philosphy/>
+      <Developer />
+      <Philosphy />
 
       <Footer />
     </Page>

@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     borderBottom: '1px solid #eee'
   },
   cardContent: {
-    flexGrow: 1
+    flexGrow: 1,
+    width: '104%'
   },
   gridCls: {
     padding: '32px !important',
@@ -93,8 +94,8 @@ function Eventcard({ className, event, index, ...rest }) {
             </Typography>
           </div>
         ) : (
-            <></>
-          )}
+          <></>
+        )}
         <CardMedia
           className={classes.cardMedia}
           image={event.image}
@@ -125,8 +126,7 @@ function Eventcard({ className, event, index, ...rest }) {
           >
             {event.type}
           </Typography>
-          {event.timeBelow
-            ?
+          {event.timeBelow ? (
             <Typography
               display="inline"
               style={{
@@ -142,7 +142,9 @@ function Eventcard({ className, event, index, ...rest }) {
             >
               {event.timeBelow}
             </Typography>
-            : ''}
+          ) : (
+            ''
+          )}
           <Typography variant="subtitle1" className={classes.titleDesc}>
             {event.title}
           </Typography>
