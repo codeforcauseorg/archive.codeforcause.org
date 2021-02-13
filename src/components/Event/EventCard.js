@@ -27,7 +27,9 @@ const useStyles = makeStyles(theme => ({
     borderBottom: '1px solid #eee'
   },
   cardContent: {
-    flexGrow: 1
+    flexGrow: 1,
+    width: '104%'
+
   },
   gridCls: {
     padding: '32px !important',
@@ -105,7 +107,7 @@ function Eventcard({ className, event, index, ...rest }) {
             display="inline"
             style={{
               paddingRight: '15px',
-              color: '#000'
+              color: '#000',
             }}
             gutterBottom
           >
@@ -129,6 +131,7 @@ function Eventcard({ className, event, index, ...rest }) {
             ?
             <Typography
               display="inline"
+              noWrap
               style={{
                 marginLeft: '5px',
                 fontWeight: 500,
