@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Hero from './Hero';
-import Developer from './Developer/Developer'
+import Developer from './Developer/Developer';
 import Footer from '../common/Footer';
 import Philosphy from './Philosphy/Philosphy';
 // import CTA from './CTA';
@@ -18,8 +18,10 @@ function HireWithUsView() {
   return (
     <Page className={classes.root} title="Hire With Us">
       <Hero />
+
       <Developer/>
       <Philosphy/>
+
       <Footer />
     </Page>
   );
