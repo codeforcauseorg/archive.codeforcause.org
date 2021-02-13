@@ -107,12 +107,12 @@ function StandsFor({ className, ...rest }) {
             >
               <Box>
                 <Typography variant="body1">
-                  <b>Campus Leaders at Code For Cause</b> are the entreprenurial
-                  mindset people who want create value in the community by
-                  awaring people, and gathering the like minded to work for
-                  cause. And above all set example and influence on people for
-                  contributing. So, some values and the expectations we have
-                  from our campus leaders are
+                  <b>Campus Leaders at Code For Cause</b> ​ are people with an
+                  entrepreneurial mindset who want to add value to the community
+                  by spreading awareness about the cause and gather like-minded
+                  people to work towards it. Above all, Campus Leaders
+                  lead-by-example and influence people by their contribution to
+                  the community.
                 </Typography>
               </Box>
 
@@ -149,9 +149,9 @@ function StandsFor({ className, ...rest }) {
                   <Box mt={2}>
                     <Typography variant="body1">
                       <h4 style={{ display: 'inline' }}>
-                        A Community Builder:
+                        A Community Builder:{' '}
                       </h4>
-                      ​ A true leader should identify the resources available
+                      ​A true leader should identify the resources available
                       within the community, and use them to help build a better
                       & more helpful one.
                     </Typography>
@@ -174,8 +174,8 @@ function StandsFor({ className, ...rest }) {
                 <li>
                   <Box mt={2}>
                     <Typography variant="body1">
-                      <h4 style={{ display: 'inline' }}>An Investor: </h4>S
-                      hould be up & ready to take initiative and invest their
+                      <h4 style={{ display: 'inline' }}>An Investor: </h4>
+                      Should be up & ready to take initiative and invest their
                       time and effort into building a community.
                     </Typography>
                   </Box>

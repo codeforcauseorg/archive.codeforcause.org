@@ -170,7 +170,7 @@ export const openSourceContent = {
       img: '/static/images/icons/os1.svg',
       contentTitle: 'Develop Products',
       content:
-        'Practical development experience is crucial in becoming a pragmatic programmer. Join us and develop products to enhance your skillset for the real world.'
+        ' Practical development experience is crucial in becoming a pragmatic programmer. Join us and develop products to enhance your skillset for the real world.'
     },
     {
       id: '2',
