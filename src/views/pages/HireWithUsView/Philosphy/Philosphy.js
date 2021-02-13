@@ -6,7 +6,7 @@ import Businessman from '../../../../assets/images/Businessman.png';
 const useStyles = makeStyles(theme => ({
   Philosphy:{
     height:"1000px",
-    
+
     [theme.breakpoints.down('xs')]: {
       height:"800px"
     }
@@ -87,6 +87,12 @@ const useStyles = makeStyles(theme => ({
   },
   Design1:{
     transform:"translate(100px,70px) rotate(-8deg)",
+    [theme.breakpoints.down('md')]: {
+      transform:"translate(100px,20px) rotate(-8deg)",
+    },
+    [theme.breakpoints.down('xs')]: {
+      transform:"translate(100px,70px) rotate(-8deg)"
+    },
   },
   Design11:{
     width: "340px",
@@ -108,15 +114,17 @@ const useStyles = makeStyles(theme => ({
   },
   Design2:{
     height:"40px",
-    transform:"translate(80px,105px) rotate(5deg)",
+    transform:"translate(80px,105px) rotate(4deg)",
     borderRadius: "121.5px 200px 10px  121.5px ",
     [theme.breakpoints.down('md')]: {
       height:"40px",
-      width:"240px",
+      width:"260px",
+      transform:"translate(80px,90px) rotate(3deg)",
     },
     [theme.breakpoints.down('xs')]: {
-      height:"35px",
-      width:"190px"
+      height:"30px",
+      width:"190px",
+      transform:"translate(80px,95px) rotate(3deg)",
     },
   },
   Design3:{
@@ -127,24 +135,27 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       height:"40px",
       width:"240px",
+      transform:"translate(100px,110px) rotate(-4deg)",
     },
     [theme.breakpoints.down('xs')]: {
       height:"30px",
-      width:"140px"
+      width:"160px",
+      transform:"translate(108px,100px) rotate(-4deg)",
     },
   },
   Businessman:{
     height:"470px",
     width:"350px",
-    transform:"translate(90px ,-208px)",
+    transform:"translate(90px ,-195px)",
     [theme.breakpoints.down('md')]: {
       height:"360px",
       width:"280px",
+      transform:"translate(90px ,-178px)",
     },
     [theme.breakpoints.down('xs')]: {
       height:"270px",
       width:"200px",
-      transform:"translate(90px ,-120px)",
+      transform:"translate(90px ,-110px)",
     },
   },
   Box:{
