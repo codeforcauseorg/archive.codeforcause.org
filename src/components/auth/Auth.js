@@ -16,9 +16,11 @@ function Auth({ children }) {
       authService.handleAuthentication();
       authService.firebase.auth().onAuthStateChanged(user => {
         dispatch(setUserData(user));
-        user.getIdToken().then(token => {
-          authService.setSession(token);
-        });
+        if (user) {
+          user.getIdToken().then(token => {
+            authService.setSession(token);
+          });
+        }
       });
     };
     initAuth();

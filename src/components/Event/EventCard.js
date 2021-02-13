@@ -93,8 +93,8 @@ function Eventcard({ className, event, index, ...rest }) {
             </Typography>
           </div>
         ) : (
-          <></>
-        )}
+            <></>
+          )}
         <CardMedia
           className={classes.cardMedia}
           image={event.image}
@@ -125,6 +125,24 @@ function Eventcard({ className, event, index, ...rest }) {
           >
             {event.type}
           </Typography>
+          {event.timeBelow
+            ?
+            <Typography
+              display="inline"
+              style={{
+                marginLeft: '5px',
+                fontWeight: 500,
+                background: '#A60000',
+                color: '#fff',
+                padding: '0px 8px',
+                fontSize: '14px',
+                borderRadius: '2px'
+              }}
+              gutterBottom
+            >
+              {event.timeBelow}
+            </Typography>
+            : ''}
           <Typography variant="subtitle1" className={classes.titleDesc}>
             {event.title}
           </Typography>

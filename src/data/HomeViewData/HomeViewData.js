@@ -33,7 +33,7 @@ export const bootcamps = [
     link: 'https://rzp.io/l/zomatoclone',
     type: 'Bootcamp',
     title: 'Learn to make a Zomato Clone in our week long React Native Bootcamp',
-    time: '1-7 March, 9 PM IST',
+    timeBelow: '1-7 March',
     image:
       '/static/temp/rn.jpeg'
   },
