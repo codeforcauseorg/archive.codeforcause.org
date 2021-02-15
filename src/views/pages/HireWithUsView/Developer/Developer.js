@@ -21,14 +21,17 @@ const useStyles = makeStyles(theme => ({
     },
   },
   Head: {
-    display: 'block'
+    display: 'block',
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft:"20px"
+    },
   },
   heading1: {
     display: 'inline-block'
   },
   heading2: {
     display: 'inline-block',
-    paddingLeft: '10px'
+    paddingLeft: '20px'
   },
   Box: {
     marginTop: '70px',
@@ -41,8 +44,8 @@ const useStyles = makeStyles(theme => ({
       transform:"translate(-250px,0px)"
     },
     [theme.breakpoints.down('xs')]: {
-      marginRight:"200px",
-      paddingRight:"10px"
+      marginBottom:"30px",
+      paddingLeft:"40px"
     },
 
     // paddingRight:"550px"
@@ -88,7 +91,7 @@ const useStyles = makeStyles(theme => ({
       width:"610px",
     },
     [theme.breakpoints.down('xs')]: {
-      height: '250px',
+      height: '230px',
       width:"350px",
       paddingRight:"55px"
     },
