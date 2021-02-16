@@ -3,7 +3,7 @@ import React from 'react';
 import Gold_Ribbon from '../../../../../assets/images/Gold_Ribbon.png';
 import Book_Icon from '../../../../../assets/images/Book_Icon.png';
 import Thumbs_Up from '../../../../../assets/images/Thumbs_Up.png';
-import { Typography, makeStyles } from '@material-ui/core';
+import {Grid, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   DevBox: {
@@ -16,15 +16,38 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#f2e6ff',
     paddingTop: '30px',
     paddingLeft: '50px',
-    zIndex: '500'
+    zIndex: '500',
+    margin:"20px",
+    [theme.breakpoints.down('sm')]: {
+      height: '135px',
+      width:"200px",
+      marginLeft:"250px",
+      paddingTop:'20px'
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '135px',
+      width:"200px"
+    }
   },
   Icon: {
     position: 'relative',
     left: '130px',
     top: '-20px',
     height: '30px',
-    width: '30px'
-  }
+    width: '30px',
+    [theme.breakpoints.down('sm')]: {
+      height: '20px',
+      width:"20px",
+      left:"115px",
+      top: '-10px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '20px',
+      width:"20px"
+    }
+  },
+
+
 }));
 
 export default function Devbox(props) {
@@ -49,16 +72,18 @@ export default function Devbox(props) {
   }
 
   return (
-    <div>
+    <Grid item xs={12} sm={4} md={4}>
       <div className={classes.DevBox}>
         <div className={classes.Content}>
           <div>
             <img src={img} className={classes.Icon} alt="" />
           </div>
-          <Typography variant="h4">1000+</Typography>
-          <Typography variant="h4">Problems Solved</Typography>
+
+            <Typography variant="h4">1000+</Typography>
+            <Typography variant="h4">Problems Solved</Typography>
+
         </div>
       </div>
-    </div>
+    </Grid>
   );
 }
