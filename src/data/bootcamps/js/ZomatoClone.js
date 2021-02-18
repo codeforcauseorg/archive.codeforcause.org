@@ -55,7 +55,7 @@ export const zomatoClone = {
           subtopics: [
             'Understanding Figma Sheets',
             'Functional Components vs Class Components',
-            'Building React Components',
+            'Building React Components'
           ]
         },
         {
@@ -76,7 +76,6 @@ export const zomatoClone = {
         }
       ]
     }
-
   ],
   slides: [
     {
@@ -91,11 +90,11 @@ export const zomatoClone = {
     'Express',
     'Firebase',
     'Server',
-    'Payment Gateway',
+    'Payment Gateway'
   ],
   overview: [
-    "React Ionic is React's trending framework to build awesome apps for iOS, Android and Web. With this Bootcamp, we are providing a hands-on approach to learn React, Firebase, express and how to get them wired.",
-   ],
+    "React Ionic is React's trending framework to build awesome apps for iOS, Android and Web. With this Bootcamp, we are providing a hands-on approach to learn React, Firebase, express and how to get them wired."
+  ],
   faqs: [
     {
       title: 'Do I need to know React for this bootcamp?',

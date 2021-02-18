@@ -1,4 +1,4 @@
 import { zomatoClone } from './ZomatoClone';
-const js = { zomatoClone};
+const js = { zomatoClone };
 
 export default js;

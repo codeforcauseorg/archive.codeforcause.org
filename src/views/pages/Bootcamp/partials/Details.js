@@ -4,7 +4,6 @@ import { Grid, Typography, Box, Avatar } from '@material-ui/core';
 import { members } from 'src/data/Members';
 import ApplyModal from './../ApplyModal';
 
-
 export default function Details({ course, bottom }) {
   return (
     <Grid
@@ -161,9 +160,7 @@ export default function Details({ course, bottom }) {
               );
             })}
           </Box>
-          
         </Box>
-        
       </Grid>
     </Grid>
   );

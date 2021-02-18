@@ -1,7 +1,7 @@
 import React from 'react';
 import Devbox from './DevBox/index';
 // import classes from './Developer.module.css';
-import {Grid,Typography, makeStyles } from '@material-ui/core';
+import { Grid, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   Developer: {
@@ -12,19 +12,19 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#e6e6ff',
     height: '800px',
     [theme.breakpoints.down('sm')]: {
-      padding:"0px",
-      paddingTop: '50px',
+      padding: '0px',
+      paddingTop: '50px'
     },
     [theme.breakpoints.down('xs')]: {
       height: '1150px',
-      paddingLeft:"10px"
-    },
+      paddingLeft: '10px'
+    }
   },
   Head: {
     display: 'block',
     [theme.breakpoints.down('xs')]: {
-      paddingLeft:"20px"
-    },
+      paddingLeft: '20px'
+    }
   },
   heading1: {
     display: 'inline-block'
@@ -36,17 +36,17 @@ const useStyles = makeStyles(theme => ({
   Box: {
     marginTop: '70px',
     width: '100%',
-    height:"400px",
+    height: '400px',
     [theme.breakpoints.down('md')]: {
-      transform:"translate(-150px,0px)"
+      transform: 'translate(-150px,0px)'
     },
     [theme.breakpoints.down('sm')]: {
-      transform:"translate(-250px,0px)"
+      transform: 'translate(-250px,0px)'
     },
     [theme.breakpoints.down('xs')]: {
-      marginBottom:"30px",
-      paddingLeft:"40px"
-    },
+      marginBottom: '30px',
+      paddingLeft: '40px'
+    }
 
     // paddingRight:"550px"
   },
@@ -57,12 +57,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: '77px',
 
     [theme.breakpoints.down('sm')]: {
-      marginTop: '150px',
+      marginTop: '150px'
     },
     [theme.breakpoints.down('xs')]: {
-      marginTop: '475px',
-    },
-
+      marginTop: '475px'
+    }
   },
   BottomBox: {
     marginLeft: '800px',
@@ -71,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '200px',
     width: '910px',
     height: '260px',
-    display:"inline-block",
+    display: 'inline-block',
     background: 'rgba(255, 255, 255, 0.1)',
     backgroundColor: 'white',
     boxShadow: '0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px salmon',
@@ -84,18 +83,18 @@ const useStyles = makeStyles(theme => ({
     zIndex: '700',
     [theme.breakpoints.down('md')]: {
       height: '300px',
-      width:"700px"
+      width: '700px'
     },
     [theme.breakpoints.down('sm')]: {
       height: '250px',
-      width:"610px",
+      width: '610px'
     },
     [theme.breakpoints.down('xs')]: {
       height: '230px',
-      width:"350px",
-      paddingRight:"55px"
+      width: '350px',
+      paddingRight: '55px'
     },
-    opacity:"1"
+    opacity: '1'
   },
   SideBox: {
     width: '750px',
@@ -112,13 +111,12 @@ const useStyles = makeStyles(theme => ({
     opacity: '0.8',
     transform: 'rotate(90deg)',
     zIndex: '1000',
-    display:"inline-block",
+    display: 'inline-block',
     [theme.breakpoints.down('md')]: {
       // height: '90px',
-      width:"500px",
-      left:"250px"
-    },
-
+      width: '500px',
+      left: '250px'
+    }
   },
   Footer: {
     marginTop: '30px',
@@ -129,19 +127,18 @@ const useStyles = makeStyles(theme => ({
     background: 'none',
     zIndex: '400'
   },
-  Write:{
-    fontSize:"18px",
+  Write: {
+    fontSize: '18px',
     [theme.breakpoints.down('md')]: {
-      fontSize:"16px"
+      fontSize: '16px'
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize:"13px"
+      fontSize: '13px'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize:"11px"
+      fontSize: '11px'
     }
   }
-
 }));
 
 export default function Developer(props) {
@@ -166,9 +163,9 @@ export default function Developer(props) {
         </Grid>
 
         <Grid item xs={12} sm={12} className={classes.Bottom}>
-          <Grid item  className={classes.BottomBox}>
+          <Grid item className={classes.BottomBox}>
             <Typography variant="body1" class={classes.Write}>
-            Lorem Ipsum is simply dummy. Lorem Ipsum has been the industry's
+              Lorem Ipsum is simply dummy. Lorem Ipsum has been the industry's
               standard dummy text ever since the 1500s, when an unknown printer
               took a galley of type and scrambled it to make a type specimen
               book. It has survived not only five centuries, but also the leap

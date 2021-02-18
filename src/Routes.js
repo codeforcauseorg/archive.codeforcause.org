@@ -20,7 +20,9 @@ const EditProfileView = lazy(() =>
   import('src/views/pages/StudentDashboardView/EditProfile')
 );
 const CoursePage = lazy(() => import('src/views/pages/Course/CoursePage'));
-const BootcampPage = lazy(() => import('src/views/pages/Bootcamp/BootcampPage'));
+const BootcampPage = lazy(() =>
+  import('src/views/pages/Bootcamp/BootcampPage')
+);
 const TermsView = lazy(() => import('./views/pages/documents/termsView'));
 const DocsLayout = lazy(() => import('./layouts/DocsLayout'));
 const PrivacyView = lazy(() => import('./views/pages/documents/privacyView'));
@@ -152,15 +154,12 @@ const renderRoutes = () => (
           </>
         )}
       />
-    <Route
+      <Route
         path={`/zomato-clone-with-react-js`}
         exact
         render={props => (
           <MainLayout>
-            <BootcampPage
-              course={bootcampsContent.js.zomatoClone}
-              {...props}
-            />
+            <BootcampPage course={bootcampsContent.js.zomatoClone} {...props} />
           </MainLayout>
         )}
       />

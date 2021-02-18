@@ -35,7 +35,11 @@ function LoadingScreen() {
   return (
     <div className={classes.root}>
       <Box className={classes.box} width={400}>
-        <img src="/static/logo/logo.png" alt="logo" className={classes.loadingLogo} />
+        <img
+          src="/static/logo/logo.png"
+          alt="logo"
+          className={classes.loadingLogo}
+        />
         <LinearProgress />
       </Box>
     </div>
