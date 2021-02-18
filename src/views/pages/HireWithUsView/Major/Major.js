@@ -45,7 +45,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   ContentBox: {
-    margin: 'auto'
+    margin: 'auto',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column-reverse'
+    }
   },
   ButtonCommon: {
     backgroundColor: 'blue',
@@ -55,11 +58,6 @@ const useStyles = makeStyles(theme => ({
     marginTop: '40px',
     '&:hover': {
       backgroundColor: 'rgba(0, 0, 220, 1)'
-    }
-  },
-  Button: {
-    [theme.breakpoints.down('xs')]: {
-      display: 'none'
     }
   },
   Images: {
@@ -77,13 +75,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'flex-start',
     padding: '5px'
-  },
-  MobileBtn: {
-    display: 'none',
-    [theme.breakpoints.down('xs')]: {
-      display: 'block',
-      margin: '10px'
-    }
   },
   Shape1: {
     position: 'absolute',
@@ -162,13 +153,6 @@ export default function Major(props) {
           </div>
         </Grid>
       </Grid>
-      <ButtonComponent
-        title="Start Hiring"
-        href="#"
-        size="large"
-        variant="contained"
-        className={`${classes.MobileBtn} ${classes.ButtonCommon}`}
-      />
     </Grid>
   );
 }
