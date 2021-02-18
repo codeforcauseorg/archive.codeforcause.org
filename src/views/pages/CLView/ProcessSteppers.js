@@ -153,7 +153,9 @@ ColorlibStepIcon.propTypes = {
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    overflowX: 'scroll'
+    [theme.breakpoints.down('xs')]: {
+      overflowX: 'scroll'
+    }
   },
   button: {
     marginRight: theme.spacing(1)
@@ -166,10 +168,10 @@ const useStyles = makeStyles(theme => ({
 
 function getSteps() {
   return [
-    'You Fill The Form',
-    'You Get Shortlisted',
-    'Online Meeting',
-    'Welcome to The Team'
+    'Fill The Form',
+    'Get Shortlisted',
+    'An Online Meeting with us',
+    'Welcome to The Team!'
   ];
 }
 

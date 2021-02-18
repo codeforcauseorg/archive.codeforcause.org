@@ -1,35 +1,60 @@
 /* eslint-disable react/no-array-index-key */
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import MainLayout from 'src/layouts/MainLayout';
-import HomeView from 'src/views/pages/HomeView';
-import CAView from 'src/views/pages/CLView';
-import EventsView from 'src/views/pages/EventsView';
-import LoadingScreen from 'src/components/LoadingScreen';
-import CoursesView from 'src/views/pages/CoursesView';
-import Bootcamps from 'src/views/pages/BootCampsView/Bootcamps';
-import ProfileView from 'src/views/pages/ProfileView';
-import ApplicationsView from 'src/views/pages/ApplicationsView';
-import BlogsView from 'src/views/pages/BlogsView';
-import Blog from 'src/views/pages/BlogsView/Blog';
-import Error404View from 'src/views/pages/Error404View';
-import StudentDashboardView from 'src/views/pages/StudentDashboardView';
-import EditProfileView from 'src/views/pages/StudentDashboardView/EditProfile';
-import CoursePage from 'src/views/pages/Course/CoursePage';
-import TermsView from './views/pages/documents/termsView';
-import DocsLayout from './layouts/DocsLayout';
-import PrivacyView from './views/pages/documents/privacyView';
-import RefundView from './views/pages/documents/refundView';
-import ScrollReset from './components/ScrollReset';
+import LoadingScreen from 'src/components/LoadingScreen'; //
 import coursesContent from 'src/data/courses';
+<<<<<<< HEAD
 import Success from './views/pages/PaymentStatus/Success';
 import Cancelled from './views/pages/PaymentStatus/Failure';
+=======
+import bootcampsContent from 'src/data/bootcamps';
+import HomeView from 'src/views/pages/HomeView';
+const MainLayout = lazy(() => import('src/layouts/MainLayout'));
+const CAView = lazy(() => import('src/views/pages/CLView')); //
+const CoursesView = lazy(() => import('src/views/pages/CoursesView')); //
+const ProfileView = lazy(() => import('src/views/pages/ProfileView')); //
+const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView')); //
+const BlogsView = lazy(() => import('src/views/pages/BlogsView'));
+const Blog = lazy(() => import('src/views/pages/BlogsView/Blog'));
+const Error404View = lazy(() => import('src/views/pages/Error404View')); //
+const StudentDashboardView = lazy(() =>
+  import('src/views/pages/StudentDashboardView')
+);
+const EditProfileView = lazy(() =>
+  import('src/views/pages/StudentDashboardView/EditProfile')
+);
+const CoursePage = lazy(() => import('src/views/pages/Course/CoursePage'));
+const BootcampPage = lazy(() =>
+  import('src/views/pages/Bootcamp/BootcampPage')
+);
+const TermsView = lazy(() => import('./views/pages/documents/termsView'));
+const DocsLayout = lazy(() => import('./layouts/DocsLayout'));
+const PrivacyView = lazy(() => import('./views/pages/documents/privacyView'));
+const RefundView = lazy(() => import('./views/pages/documents/refundView'));
+const ScrollReset = lazy(() => import('./components/ScrollReset'));
+const Success = lazy(() => import('./views/pages/PaymentStatus/Success'));
+const Cancelled = lazy(() => import('./views/pages/PaymentStatus/Failure'));
+const EventsView = lazy(() => import('src/views/pages/EventsView')); //
+const HireWithUsView = lazy(() => import('src/views/pages/HireWithUsView'));
+>>>>>>> 4c2118ad64ad68602a613c55ea17d168c7b20f22
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
     <Switch>
       <Route
         path="/"
+        exact
+        render={props => (
+          <>
+            <ScrollReset />
+            <MainLayout>
+              <HomeView {...props} />
+            </MainLayout>
+          </>
+        )}
+      />
+      <Route
+        path="/home"
         exact
         render={props => (
           <>
@@ -71,15 +96,6 @@ const renderRoutes = () => (
               <CAView {...props} />
             </MainLayout>
           </span>
-        )}
-      />
-
-      <Route
-        path="/bootcamp"
-        render={props => (
-          <MainLayout>
-            <Bootcamps {...props} />
-          </MainLayout>
         )}
       />
 
@@ -143,7 +159,15 @@ const renderRoutes = () => (
           </>
         )}
       />
-
+      <Route
+        path={`/zomato-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage course={bootcampsContent.js.zomatoClone} {...props} />
+          </MainLayout>
+        )}
+      />
       <Route
         path={`/machine-learning-using-python`}
         exact
@@ -291,6 +315,15 @@ const renderRoutes = () => (
           <DocsLayout>
             <RefundView />
           </DocsLayout>
+        )}
+      />
+      <Route
+        path={`/hirewithus`}
+        exact
+        render={props => (
+          <MainLayout>
+            <HireWithUsView />
+          </MainLayout>
         )}
       />
       <Route component={Error404View} />

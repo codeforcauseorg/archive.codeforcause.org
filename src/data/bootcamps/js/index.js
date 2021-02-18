@@ -1,4 +1,4 @@
-import { instagram } from './instagram';
-const information = { title: 'JavaScript', camps: [instagram] };
+import { zomatoClone } from './ZomatoClone';
+const js = { zomatoClone };
 
-export default information;
+export default js;

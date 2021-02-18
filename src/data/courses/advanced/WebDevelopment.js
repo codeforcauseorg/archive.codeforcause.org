@@ -18,6 +18,7 @@ export const webDevelopment = {
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
       priceId: 'price_1I0UyTLVU3L7vcSrBn1QACYX',
+      duration: '40 Live Lectures',
       active: false
     }
   ],

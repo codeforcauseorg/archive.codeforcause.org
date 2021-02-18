@@ -2,23 +2,23 @@ export const benefits = [
   {
     id: '1',
     img: '/static/images/cl/benefits/b1.svg',
-    detail: 'Code for Cause VIP Swags. Oportunities to get special editions.'
+    detail:
+      'Code for Cause VIP Swags and an opportunity to get special editions.'
   },
   {
     id: '2',
     img: '/static/images/cl/benefits/b2.png',
-    detail:
-      'Free study materials - courses, guidance from our mentors and much more.'
+    detail: 'Free study material- courses and guidance from our mentors.'
   },
   {
     id: '3',
     img: '/static/images/cl/benefits/b3.png',
-    detail: 'Recommendations and opportunity to intern and work with us.'
+    detail: 'Recommendations and opportunities to intern and work with us.'
   },
   {
     id: '4',
     img: '/static/images/cl/benefits/b4.svg',
-    detail: 'Connect with our mentors and Industry experts linked with us.'
+    detail: 'Connect with our mentors and industry experts.'
   }
 ];
 

@@ -6,8 +6,8 @@ import HeroWithOneButton from '../../../components/Hero/HeroWithOneButton';
 function Hero({ className, ...rest }) {
   return (
     <HeroWithOneButton
-      title="Campus Leader"
-      subtitle="Stand Up and fight for the Cause with the Code For Cause"
+      title="Become a Campus Leader"
+      subtitle="Join us in building a reliable and worthy community"
       className
       backgroundImage="linear-gradient(270.25deg, #180255 0.25%, rgba(0, 0, 0, 0.8) 48.47%, #000000 97.54%), url(/static/images/backs/cl.png)"
       component={<ApplyNowModal />}

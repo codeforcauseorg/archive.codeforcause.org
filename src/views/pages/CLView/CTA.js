@@ -121,7 +121,8 @@ function CTA({ className, ...rest }) {
                   variant="body1"
                   style={{ lineHeight: '1.5', marginTop: '12px' }}
                 >
-                  Aware people about new tech and thoughts
+                  Spread awareness about the latest technology and share your
+                  thoughts on our platform
                 </Typography>
               </Hidden>
 
@@ -131,7 +132,9 @@ function CTA({ className, ...rest }) {
                   variant="body1"
                   style={{ lineHeight: '1.5', marginTop: '12px' }}
                 >
-                  Aware people about new <br /> tech and thoughts
+                  Spread awareness about the <br /> latest technology and share{' '}
+                  <br /> your thoughts on our <br />
+                  platform
                 </Typography>
               </Hidden>
 
@@ -182,7 +185,8 @@ function CTA({ className, ...rest }) {
                   variant="body1"
                   style={{ lineHeight: '1.5', marginTop: '12px' }}
                 >
-                  Teach yourself and your people best practices in the world.
+                  Teach people at your institute about the best software
+                  practices by requesting a workshop or holding one!
                 </Typography>
               </Hidden>
 
@@ -192,8 +196,8 @@ function CTA({ className, ...rest }) {
                   variant="body1"
                   style={{ lineHeight: '1.5', marginTop: '12px' }}
                 >
-                  Teach yourself and your people <br /> best practices in the
-                  world
+                  Teach people at your institute about the best software
+                  practices by requesting a workshop or holding one!
                 </Typography>
               </Hidden>
 
@@ -244,7 +248,7 @@ function CTA({ className, ...rest }) {
                   variant="body1"
                   style={{ lineHeight: '1.5', marginTop: '12px' }}
                 >
-                  Gather work experience in the real world by working with Us.
+                  Gather hands-on work experience by working with us.
                 </Typography>
               </Hidden>
 
@@ -254,8 +258,8 @@ function CTA({ className, ...rest }) {
                   variant="body1"
                   style={{ lineHeight: '1.5', marginTop: '12px' }}
                 >
-                  Gather work experience in the <br /> real world by working
-                  with Us
+                  Gather hands-on work experience by working with us. <br />{' '}
+                  <br /> <br />
                 </Typography>
               </Hidden>
 

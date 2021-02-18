@@ -18,6 +18,7 @@ import SwiperCore, { Controller, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '../../../assets/css/swiper-styles.css';
 import EventCard from '../../../components/Event/EventCard';
+import { bootcamps } from 'src/data/HomeViewData/HomeViewData';
 
 SwiperCore.use([Navigation, Pagination, Controller]);
 
@@ -147,7 +148,7 @@ function Events({ className, ...rest }) {
 
   const eventSlides = [];
   if (events) {
-    events.reverse().map((event, index) => {
+    bootcamps.map((event, index) => {
       return eventSlides.push(
         <SwiperSlide key={`slide-${index}`} tag="li">
           <EventCard event={event} index={index} style={{ height: 'auto' }} />
@@ -170,7 +171,7 @@ function Events({ className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container className={classes.cardGrid} maxWidth="lg">
         <Typography variant="h1" align="center" color="textPrimary">
-          Our Online Events
+          Our Bootcamps
         </Typography>
         <Grid container spacing={4} className={classes.extraMargin}>
           <Hidden xsDown>
@@ -187,11 +188,17 @@ function Events({ className, ...rest }) {
             </Swiper>
           </Hidden>
           <Hidden smUp>
+<<<<<<< HEAD
             {events
               .slice(Math.max(events.length - 3, 0))
               .map((event, index) => (
                 <EventCard event={event} key={index} />
               ))}
+=======
+            {bootcamps.map((event, index) => (
+              <EventCard event={event} index={index} />
+            ))}
+>>>>>>> 4c2118ad64ad68602a613c55ea17d168c7b20f22
           </Hidden>
           <Grid item xs={12} sm={12} md={12}>
             <div className={classes.box2}>

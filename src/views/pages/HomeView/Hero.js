@@ -29,9 +29,10 @@ function Hero({ className, ...rest }) {
         firstComponent={
           <>
             <Typography variant="body1">
-              An initiative to help the community by providing training,
-              guidance and awareness about the possibilities in the software
-              field to students & professionals.
+              An initiative to contribute to the Open Source community by
+              providing training, guidance, and awareness about the
+              possibilities in the field of software to students &
+              professionals.
             </Typography>
             <div style={{ height: '16px' }}></div>
           </>

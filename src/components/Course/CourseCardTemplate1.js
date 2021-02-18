@@ -178,6 +178,29 @@ export default function CourseCard({ course }) {
           </Box>
 
           <Box display="flex" flexDirection="column">
+            {course.started ? (
+              <Box
+                display="flex"
+                flexDirection="row"
+                style={{
+                  marginBottom: '8px'
+                }}
+              >
+                <Typography
+                  variant="caption"
+                  style={{
+                    marginRight: '8px',
+                    color: '#A3A3A3'
+                  }}
+                >
+                  Started
+                </Typography>
+                <Typography variant="caption">{course.started}</Typography>
+              </Box>
+            ) : (
+              ''
+            )}
+
             <Box
               display="flex"
               flexDirection="row"
@@ -194,7 +217,9 @@ export default function CourseCard({ course }) {
               >
                 Duration
               </Typography>
-              <Typography variant="caption">{course.duration}</Typography>
+              <Typography variant="caption">
+                {course.schedule[0].duration}
+              </Typography>
             </Box>
 
             <Box
@@ -216,6 +241,30 @@ export default function CourseCard({ course }) {
               </Typography>
               <Typography variant="caption">{course.upcoming}</Typography>
             </Box>
+            {course.schedule[1] ? (
+              <Box
+                display="flex"
+                flexDirection="row"
+                style={{
+                  marginBottom: '8px'
+                }}
+              >
+                <Typography
+                  variant="caption"
+                  style={{
+                    marginRight: '8px',
+                    color: '#A3A3A3'
+                  }}
+                >
+                  Duration
+                </Typography>
+                <Typography variant="caption">
+                  {course.schedule[1].duration}
+                </Typography>
+              </Box>
+            ) : (
+              ''
+            )}
           </Box>
         </CardContent>
 
