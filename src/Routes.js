@@ -3,10 +3,6 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen'; //
 import coursesContent from 'src/data/courses';
-<<<<<<< HEAD
-import Success from './views/pages/PaymentStatus/Success';
-import Cancelled from './views/pages/PaymentStatus/Failure';
-=======
 import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
 const MainLayout = lazy(() => import('src/layouts/MainLayout'));
@@ -36,7 +32,6 @@ const Success = lazy(() => import('./views/pages/PaymentStatus/Success'));
 const Cancelled = lazy(() => import('./views/pages/PaymentStatus/Failure'));
 const EventsView = lazy(() => import('src/views/pages/EventsView')); //
 const HireWithUsView = lazy(() => import('src/views/pages/HireWithUsView'));
->>>>>>> 4c2118ad64ad68602a613c55ea17d168c7b20f22
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -68,12 +63,12 @@ const renderRoutes = () => (
       <Route
         path="/courses"
         render={props => (
-          <t>
+          <>
             <ScrollReset />
             <MainLayout>
               <CoursesView {...props} />
             </MainLayout>
-          </t>
+          </>
         )}
       />
       <Route

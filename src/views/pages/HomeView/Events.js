@@ -188,17 +188,9 @@ function Events({ className, ...rest }) {
             </Swiper>
           </Hidden>
           <Hidden smUp>
-<<<<<<< HEAD
-            {events
-              .slice(Math.max(events.length - 3, 0))
-              .map((event, index) => (
-                <EventCard event={event} key={index} />
-              ))}
-=======
             {bootcamps.map((event, index) => (
               <EventCard event={event} index={index} />
             ))}
->>>>>>> 4c2118ad64ad68602a613c55ea17d168c7b20f22
           </Hidden>
           <Grid item xs={12} sm={12} md={12}>
             <div className={classes.box2}>

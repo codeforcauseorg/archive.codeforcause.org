@@ -138,8 +138,10 @@ export default function Courses() {
           xs={12}
           align="center"
           display="flex"
-          justifyContent="center"
-          alignItems="center"
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
         >
           <CoursesGrid courses={training} />
         </Grid>
@@ -168,8 +170,10 @@ export default function Courses() {
           xs={12}
           align="center"
           display="flex"
-          justifyContent="center"
-          alignItems="center"
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
         >
           <CoursesGrid courses={foundation} />
         </Grid>
@@ -206,8 +210,10 @@ export default function Courses() {
           xs={12}
           align="center"
           display="flex"
-          justifyContent="center"
-          alignItems="center"
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
         >
           <CoursesGrid courses={advanced} />
         </Grid>
@@ -231,7 +237,7 @@ const CoursesGrid = ({ courses }) => {
         return (
           <Grid
             item
-            key={course.id}
+            key={index}
             lg={4}
             md={4}
             sm={6}

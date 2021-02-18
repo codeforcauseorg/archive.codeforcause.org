@@ -92,7 +92,7 @@ function CTA({ className, ...rest }) {
               </Hidden>
 
               <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
+                <Grid container>
                   <Grid item xs={12} sm={12}>
                     <Button
                       className={classes.Button + ' ' + classes.primeBtn}
@@ -133,7 +133,7 @@ function CTA({ className, ...rest }) {
               </Hidden>
 
               <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
+                <Grid container>
                   <Grid item xs={12} sm={12}>
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
@@ -174,7 +174,7 @@ function CTA({ className, ...rest }) {
               </Hidden>
 
               <Box className={classes.flex}>
-                <Grid container xs={12} sm={12}>
+                <Grid container>
                   <Grid item xs={12} sm={12}>
                     <Button
                       className={classes.Button + ' ' + classes.secondaryBtn}
