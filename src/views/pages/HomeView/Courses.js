@@ -160,8 +160,8 @@ export default function Courses() {
             color: '#848484'
           }}
         >
-          Our courses are designed to fulfill the need of both students and
-          professional developers. Learn from the ground and become an expert
+          Our courses are designed to fulfill the needs of both students and
+          professional developers. Learn from the ground-up and become an expert
           with a purely practical approach to learning.
         </Typography>
       </Grid>

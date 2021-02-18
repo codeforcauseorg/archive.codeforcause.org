@@ -36,25 +36,22 @@ function Promoters({ className, ...rest }) {
           container
           component="dl"
           direction="row"
-          justify="center"
+          justify="space-between"
           alignItems="center"
         >
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={7}>
             <Typography variant="h4" gutterBottom>
               Our mentors are associated with
             </Typography>
           </Grid>
           <Grid item xs={6} md={2}>
-            <img alt="Logo" src="/static/images/promoters/google.svg" />
+            <img alt="google-Logo" src="/static/images/promoters/google.svg" />
           </Grid>
           <Grid item xs={6} md={2}>
-            <img alt="Logo" src="/static/images/promoters/microsoft.svg" />
-          </Grid>
-          <Grid item xs={6} md={2}>
-            <img alt="Logo" src="/static/images/promoters/redhat.svg" />
+            <img alt="redhat-Logo" src="/static/images/promoters/redhat.svg" />
           </Grid>
           <Grid item xs={6} md={1}>
-            <img alt="Logo" src="/static/images/promoters/ibm.svg" />
+            <img alt="ibm-Logo" src="/static/images/promoters/ibm.svg" />
           </Grid>
         </Grid>
       </Container>

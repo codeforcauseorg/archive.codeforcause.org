@@ -67,7 +67,7 @@ export default function ApplyNowModal() {
   };
 
   const handleSubmit = e => {
-    formData.phone = `${formData.countryCode}-${formData.phone}`;
+    formData.phone = `${formData.countryCode}${formData.phone}`;
     setSubmitting(1);
     e.preventDefault();
     axios({

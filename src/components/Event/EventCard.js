@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     borderBottom: '1px solid #eee'
   },
   cardContent: {
-    flexGrow: 1
+    flexGrow: 1,
+    width: '104%'
   },
   gridCls: {
     padding: '32px !important',
@@ -72,7 +73,7 @@ function Eventcard({ className, event, index, ...rest }) {
       className={classes.gridCls}
       component="a"
       href={event.link}
-      target="_blank"
+      target={event.target ? event.target : '_blank'}
       item
       key={index}
       xs={12}
@@ -125,6 +126,25 @@ function Eventcard({ className, event, index, ...rest }) {
           >
             {event.type}
           </Typography>
+          {event.timeBelow ? (
+            <Typography
+              display="inline"
+              style={{
+                marginLeft: '5px',
+                fontWeight: 500,
+                background: '#A60000',
+                color: '#fff',
+                padding: '0px 8px',
+                fontSize: '14px',
+                borderRadius: '2px'
+              }}
+              gutterBottom
+            >
+              {event.timeBelow}
+            </Typography>
+          ) : (
+            ''
+          )}
           <Typography variant="subtitle1" className={classes.titleDesc}>
             {event.title}
           </Typography>

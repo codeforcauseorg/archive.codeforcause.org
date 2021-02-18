@@ -75,7 +75,7 @@ export default function ApplyModal({
   };
 
   const handleSubmit = e => {
-    formData.phone = `${formData.countryCode}-${formData.phone}`;
+    formData.phone = `${formData.countryCode}${formData.phone}`;
     formData.source = window.location.href;
     formData.batch = batch;
     formData.courseName = course.title;

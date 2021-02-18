@@ -1,7 +1,8 @@
 import jwtDecode from 'jwt-decode';
 import axios from 'src/utils/axios';
 
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 class AuthService {
   // Configure Firebase.
