@@ -96,7 +96,7 @@ function Hero({
               </Hidden>
               <Box mt={5}>{firstComponent}</Box>
               <Box mt={2} mb={3}>
-                <Grid item xs={12} md={12}>
+                <Grid container>
                   <Grid item xs={12} md={12}>
                     {secondComponent}
                   </Grid>

@@ -189,7 +189,7 @@ function Events({ className, ...rest }) {
           </Hidden>
           <Hidden smUp>
             {bootcamps.map((event, index) => (
-              <EventCard event={event} index={index} />
+              <EventCard key={index} event={event} index={index} />
             ))}
           </Hidden>
           <Grid item xs={12} sm={12} md={12}>

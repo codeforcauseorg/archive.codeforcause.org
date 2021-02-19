@@ -1,18 +1,18 @@
 /* eslint-disable react/no-array-index-key */
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import LoadingScreen from 'src/components/LoadingScreen'; //
+import LoadingScreen from 'src/components/LoadingScreen';
 import coursesContent from 'src/data/courses';
 import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
-const MainLayout = lazy(() => import('src/layouts/MainLayout'));
-const CAView = lazy(() => import('src/views/pages/CLView')); //
-const CoursesView = lazy(() => import('src/views/pages/CoursesView')); //
-const ProfileView = lazy(() => import('src/views/pages/ProfileView')); //
-const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView')); //
+import MainLayout from 'src/layouts/MainLayout';
+const CAView = lazy(() => import('src/views/pages/CLView')); 
+const CoursesView = lazy(() => import('src/views/pages/CoursesView')); 
+const ProfileView = lazy(() => import('src/views/pages/ProfileView')); 
+const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView')); 
 const BlogsView = lazy(() => import('src/views/pages/BlogsView'));
 const Blog = lazy(() => import('src/views/pages/BlogsView/Blog'));
-const Error404View = lazy(() => import('src/views/pages/Error404View')); //
+const Error404View = lazy(() => import('src/views/pages/Error404View')); 
 const StudentDashboardView = lazy(() =>
   import('src/views/pages/StudentDashboardView')
 );
@@ -63,12 +63,12 @@ const renderRoutes = () => (
       <Route
         path="/courses"
         render={props => (
-          <>
+          <sub>
             <ScrollReset />
             <MainLayout>
               <CoursesView {...props} />
             </MainLayout>
-          </>
+          </sub>
         )}
       />
       <Route
