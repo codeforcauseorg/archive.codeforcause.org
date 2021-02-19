@@ -107,7 +107,7 @@ function Team({ mentors, className, ...rest }) {
                       className={classes.teamName}
                       color="textPrimary"
                       variant="h5"
-                      underline="never"
+                      underline="none"
                       href={mentor.linkedin}
                       target="_blank"
                     >

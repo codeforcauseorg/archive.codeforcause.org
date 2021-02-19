@@ -161,7 +161,11 @@ export default function CourseCard({ course }) {
             style={{ width: '102%' }}
           >
             {course.tags.slice(0, 3).map((tag, index) => (
-              <div className={classes.bottomCardContent} variant="outlined">
+              <div
+                className={classes.bottomCardContent}
+                key={index}
+                variant="outlined"
+              >
                 <Typography
                   style={{ color: '#a60000', fontWeight: 500 }}
                   variant="caption"
@@ -265,10 +269,10 @@ export default function CourseCard({ course }) {
         </CardContent>
 
         <Link
-          display="flex"
-          justifyContent="center"
           to={course.link}
           style={{
+            display: 'flex',
+            justifyContent: 'center',
             background: '#A60000',
             color: '#FF4C00',
             textDecoration: 'none',
@@ -298,6 +302,7 @@ const ParallaxCarousel = ({ slides }) => {
     slides.map((slide, index) => {
       return (
         <Box
+          key={index}
           display="flex"
           flexDirection="column"
           alignItems="bottom"

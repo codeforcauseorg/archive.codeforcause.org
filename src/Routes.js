@@ -63,12 +63,12 @@ const renderRoutes = () => (
       <Route
         path="/courses"
         render={props => (
-          <t>
+          <>
             <ScrollReset />
             <MainLayout>
               <CoursesView {...props} />
             </MainLayout>
-          </t>
+          </>
         )}
       />
       <Route

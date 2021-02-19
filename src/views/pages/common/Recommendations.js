@@ -206,6 +206,7 @@ export default function Recommendations({ recommendationsImages }) {
                   <CardContent className={classes.cardContent}>
                     <Box display="flex" justifyContent="center">
                       <Typography
+                        component={'div'}
                         variant="body2"
                         className={classes.recommenderDetail}
                       >
@@ -223,7 +224,7 @@ export default function Recommendations({ recommendationsImages }) {
                         src={recommendation['avatar']}
                       />
                       <Box display="flex" flexDirection="column">
-                        <Typography>
+                        <Typography component={'div'}>
                           <Box fontWeight="fontWeightBold">
                             {recommendation.name}
                           </Box>
