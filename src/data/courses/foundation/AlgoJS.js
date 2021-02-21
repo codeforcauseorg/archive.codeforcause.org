@@ -7,7 +7,9 @@ export const algoJS = {
   title: 'Data Structures and Algorithms with JavaScript',
   started: 'Jan 30th (Regular)',
   upcoming: 'Feb 28th (Weekends)',
+  language: 'Hindi',
   mentors: ['ganga', 'anuj'],
+  default: 0,
   schedule: [
     {
       courseId: 'pds0121',

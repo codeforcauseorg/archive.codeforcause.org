@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Schedule({ course }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = useState(0);
+  const [expanded, setExpanded] = useState(course.default);
 
   return (
     <Grid container className={classes.root}>
@@ -242,7 +242,18 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               >
                 Duration
               </Typography>
-              <Typography variant="body2">{batch.duration}</Typography>
+              <Typography variant="body2">
+                {batch.duration}
+                {batch.language ? (
+                  <span>
+                    {' '}
+                    <span style={{ fontWeight: 900 }}> &#183; </span>{' '}
+                    {batch.language}
+                  </span>
+                ) : (
+                  ''
+                )}
+              </Typography>
             </Box>
 
             <Box mb={2} display="flex" flexDirection="row">

@@ -7,8 +7,10 @@ export const webDevelopment = {
   domain: 'Interview Targeted Prepration',
   title: 'Master Full Stack Web Dev (MERN) with DS & Algo in JS',
   started: 'Jan 30th',
+  language: 'Hindi',
   upcoming: 'June 27th',
   mentors: ['anuj', 'ganga'],
+  default: 0,
   schedule: [
     {
       courseId: 'jsfs0121',

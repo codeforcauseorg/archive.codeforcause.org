@@ -7,7 +7,9 @@ export const webDevelopment = {
   domain: 'Web Development',
   title: 'Master Full Stack Web Development with JS (MERN)',
   upcoming: 'April 15th',
+  language: 'Hindi',
   mentors: ['ganga', 'anuj'],
+  default: 0,
   schedule: [
     {
       courseId: 'jsfs0121',

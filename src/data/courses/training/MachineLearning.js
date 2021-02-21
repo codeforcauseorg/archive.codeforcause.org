@@ -7,7 +7,9 @@ export const machineLearning = {
   title: 'Master Machine Learning with DS & Algo in Python',
   started: 'Jan 30th',
   upcoming: 'June 27th',
+  language: 'Hindi',
   mentors: ['anuj', 'kunal'],
+  default: 0,
   schedule: [
     {
       courseId: 'mlpy1020',

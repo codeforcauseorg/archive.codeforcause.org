@@ -7,7 +7,9 @@ export const devPython = {
   title: 'Application Development with Python',
   started: 'Jan 30th (Regular)',
   upcoming: 'Feb 28th (Weekends)',
+  language: 'Hindi',
   mentors: ['kunal'],
+  default: 0,
   schedule: [
     {
       courseId: 'pdev0121',
@@ -18,6 +20,7 @@ export const devPython = {
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
       duration: '30 LiveLectures',
+      language: 'Hindi',
       active: false
     }
   ],

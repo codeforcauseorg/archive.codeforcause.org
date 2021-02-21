@@ -66,7 +66,7 @@ export default function Details({ course, bottom }) {
               {course.duration}{' '}
               {/* The default duration is set to 0th index of schedule */}
             </Typography>
-            <Typography>Hindi</Typography>
+            <Typography>{course.language}</Typography>
           </Box>
           <Box mb={2} display="flex" flexDirection="row">
             <Typography

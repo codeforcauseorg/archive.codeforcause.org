@@ -6,7 +6,9 @@ export const machineLearning = {
   domain: 'Artificial Intelligence',
   title: 'Master Machine Learning using Python',
   upcoming: 'April 15th',
+  language: 'Hindi',
   mentors: ['anuj', 'kunal'],
+  default: 0,
   schedule: [
     {
       courseId: 'mlpy0121',

@@ -7,7 +7,9 @@ export const algoPython = {
   title: 'Data Structures and Algorithms with Python',
   started: 'Jan 30th (Regular)',
   upcoming: 'Feb 28th (Weekends)',
+  language: '',
   mentors: ['anuj', 'kunal'],
+  default: 1,
   schedule: [
     {
       courseId: 'pds0121',
@@ -19,6 +21,7 @@ export const algoPython = {
       price: '₹ 4,850',
       priceId: 'price_1I0UwFLVU3L7vcSr9y77KiRe',
       duration: '40 Live Lectures (2 hrs)',
+      language: 'Hindi',
       active: false
     },
     {
@@ -31,6 +34,7 @@ export const algoPython = {
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '27 Live Lectures (3 hrs)',
+      language: 'English',
       active: false
     }
   ],

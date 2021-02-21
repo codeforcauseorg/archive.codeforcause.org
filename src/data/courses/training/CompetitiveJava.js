@@ -7,7 +7,9 @@ export const competitiveJava = {
   title: 'Competitive Programming with DS & Algo in Java',
   started: 'Jan 30th',
   upcoming: 'June 27th',
+  language: 'Hindi',
   mentors: ['anuj', 'ekta', 'kunal'],
+  default: 0,
   schedule: [
     {
       courseId: 'jcomp0121',

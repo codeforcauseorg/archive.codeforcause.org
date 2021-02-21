@@ -6,13 +6,13 @@ import coursesContent from 'src/data/courses';
 import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
 import MainLayout from 'src/layouts/MainLayout';
-const CAView = lazy(() => import('src/views/pages/CLView')); 
-const CoursesView = lazy(() => import('src/views/pages/CoursesView')); 
-const ProfileView = lazy(() => import('src/views/pages/ProfileView')); 
-const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView')); 
+const CAView = lazy(() => import('src/views/pages/CLView'));
+const CoursesView = lazy(() => import('src/views/pages/CoursesView'));
+const ProfileView = lazy(() => import('src/views/pages/ProfileView'));
+const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView'));
 const BlogsView = lazy(() => import('src/views/pages/BlogsView'));
 const Blog = lazy(() => import('src/views/pages/BlogsView/Blog'));
-const Error404View = lazy(() => import('src/views/pages/Error404View')); 
+const Error404View = lazy(() => import('src/views/pages/Error404View'));
 const StudentDashboardView = lazy(() =>
   import('src/views/pages/StudentDashboardView')
 );

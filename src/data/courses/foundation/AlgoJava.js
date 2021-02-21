@@ -8,6 +8,8 @@ export const algoJava = {
   started: 'Jan 30th (Regular)',
   upcoming: 'Feb 28th (Weekends)',
   mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
+  language: 'Hindi',
+  default: 1,
   schedule: [
     {
       courseId: 'jds0121',
@@ -33,6 +35,7 @@ export const algoJava = {
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '27 Live Lectures (3 hrs)',
       mentor: 'Shubham Rawat, Anuj Garg',
+      language: 'Hindi',
       active: false
     }
   ],
