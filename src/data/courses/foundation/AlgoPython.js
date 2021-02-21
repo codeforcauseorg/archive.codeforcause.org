@@ -28,7 +28,7 @@ export const algoPython = {
       courseId: 'pds0122',
       dates: '28th Feb - 30th May',
       days: 'Sat, Sun',
-      timing: '12:00 PM - 03:00 PM (IST)',
+      timing: '10:00 AM - 01:00 PM (IST)',
       link: '',
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
