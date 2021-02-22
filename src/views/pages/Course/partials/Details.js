@@ -149,7 +149,11 @@ export default function Details({ course, bottom }) {
                     flexDirection="column"
                     justifyContent="center"
                   >
-                    <Typography noWrap={true} component={'span'} variant="body2">
+                    <Typography
+                      noWrap={true}
+                      component={'span'}
+                      variant="body2"
+                    >
                       <Box fontWeight={500}>{members[mentor].name}</Box>
                     </Typography>
                     <Typography variant="body2" component={'span'}>

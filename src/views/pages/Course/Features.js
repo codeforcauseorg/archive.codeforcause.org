@@ -97,7 +97,7 @@ const Features = () => {
         >
           {features.primary.map((feature, index) => {
             return (
-              <Grid item lg={4} md={4} sm={6} xs={6} key={index} >
+              <Grid item lg={4} md={4} sm={6} xs={6} key={index}>
                 <Hidden smDown>
                   <Boxes flexDirection="row" feature={feature} />
                 </Hidden>

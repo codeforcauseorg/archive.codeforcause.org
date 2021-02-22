@@ -142,7 +142,11 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
                 fullWidth
               >
                 {countryCodes.map(code => {
-                  return <MenuItem key={`+${code}`} value={`+${code}`}>+{code}</MenuItem>;
+                  return (
+                    <MenuItem key={`+${code}`} value={`+${code}`}>
+                      +{code}
+                    </MenuItem>
+                  );
                 })}
               </SelectValidator>
             </Grid>

@@ -43,7 +43,9 @@ export default function Overview({ course }) {
                   color: '#606060'
                 }}
               >
-                <Box fontWeight={400} component={'span'} variant="body2">{paragraph}</Box>
+                <Box fontWeight={400} component={'span'} variant="body2">
+                  {paragraph}
+                </Box>
               </Typography>
             );
           })}

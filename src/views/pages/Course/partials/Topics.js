@@ -159,7 +159,13 @@ function SectionDropBox({ section, sectionIndex, expanded, setExpanded }) {
 
       <Collapse in={sectionIndex === expanded}>
         {section.topics.map((topic, topicIndex) => {
-          return <TopicDropBox topic={topic} topicIndex={topicIndex} key={topicIndex}/>;
+          return (
+            <TopicDropBox
+              topic={topic}
+              topicIndex={topicIndex}
+              key={topicIndex}
+            />
+          );
         })}
       </Collapse>
     </Box>
