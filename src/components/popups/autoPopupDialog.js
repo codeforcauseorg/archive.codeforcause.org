@@ -107,13 +107,13 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
       <DialogTitle id="form-dialog-title">Request a consultation</DialogTitle>
       <DialogContent>
         <DialogContentText style={{ marginBottom: '10px' }}>
-          <Typography>
+          <Typography component={'span'}>
             Request a free counseling session with one of our mentors.
           </Typography>
         </DialogContentText>
         <ValidatorForm onSubmit={handleSubmit}>
           <TextValidator
-            autoComplete={false}
+            autoComplete=""
             required
             key="name"
             className={classes.textField}
@@ -142,14 +142,14 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
                 fullWidth
               >
                 {countryCodes.map(code => {
-                  return <MenuItem value={`+${code}`}>+{code}</MenuItem>;
+                  return <MenuItem key={`+${code}`} value={`+${code}`}>+{code}</MenuItem>;
                 })}
               </SelectValidator>
             </Grid>
 
             <Grid item xs={10}>
               <TextValidator
-                autoComplete={false}
+                autoComplete=""
                 required
                 key="contact"
                 className={classes.textField}

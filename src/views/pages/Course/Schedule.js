@@ -47,15 +47,16 @@ export default function Schedule({ course }) {
 
       <Grid
         item
+        container
         xs={12}
         sm={12}
         md={12}
         lg={12}
         align="center"
         display="flex"
-        justifyContent="center"
+        justify="center"
         alignItems="center"
-        flexDirection="column"
+        direction="column"
       >
         <Box display="flex" flexDirection="column" className={classes.content}>
           <Typography
@@ -77,6 +78,7 @@ export default function Schedule({ course }) {
             {course.schedule.map((batch, batchIndex) => {
               return (
                 <BatchDropBox
+                  key={batchIndex}
                   course={course}
                   batch={batch}
                   batchIndex={batchIndex}
@@ -148,6 +150,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               style={{
                 width: '100%'
               }}
+              component={'span'}
             >
               {batch.dates}
             </Typography>
@@ -158,6 +161,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               style={{
                 width: '100%'
               }}
+              component={'span'}
             >
               <Box fontWeight={300}>Applications Open</Box>
             </Typography>

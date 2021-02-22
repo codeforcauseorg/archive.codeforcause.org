@@ -90,14 +90,14 @@ const Features = () => {
         <Grid
           container
           display="flex"
-          flexDirection="row"
+          direction="row"
           justify="center"
           alignItems="center"
           className={classes.grid}
         >
           {features.primary.map((feature, index) => {
             return (
-              <Grid item lg={4} md={4} sm={6} xs={6}>
+              <Grid item lg={4} md={4} sm={6} xs={6} key={index} >
                 <Hidden smDown>
                   <Boxes flexDirection="row" feature={feature} />
                 </Hidden>

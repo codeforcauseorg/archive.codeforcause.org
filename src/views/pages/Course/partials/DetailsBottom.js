@@ -6,13 +6,14 @@ export default function DetailsBottom({ course, batch }) {
     <Grid container>
       <Grid
         item
+        container
         xs={12}
         sm={12}
         md={12}
         lg={12}
         align="left"
         display="flex"
-        justifyContent="left"
+        justify="flex-start"
         alignItems="center"
       >
         <Box display="flex" flexDirection="column">
@@ -69,6 +70,7 @@ export default function DetailsBottom({ course, batch }) {
           <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
             {course.tags.map((tag, index) => (
               <div
+                key={index}
                 style={{
                   margin: '4px 16px 4px 0px',
                   padding: '4px 8px',
