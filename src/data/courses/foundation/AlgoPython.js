@@ -36,6 +36,19 @@ export const algoPython = {
       duration: '27 Live Lectures (3 hrs)',
       language: 'English',
       active: false
+    },
+    {
+      courseId: 'pds0123',
+      dates: '14th March - 15th June',
+      days: 'Sat, Sun',
+      timing: '10:00 AM - 01:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 10,000',
+      price: '₹ 4,850',
+      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
+      duration: '27 Live Lectures (3 hrs)',
+      language: 'Hindi',
+      active: false
     }
   ],
   projects: [

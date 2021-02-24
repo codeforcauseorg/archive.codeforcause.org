@@ -37,6 +37,20 @@ export const algoJava = {
       mentor: 'Shubham Rawat, Anuj Garg',
       language: 'Hindi',
       active: false
+    },
+    {
+      courseId: 'jds0123',
+      dates: '14th March - 15th June',
+      days: 'Sat, Sun',
+      timing: '12:00 PM - 03:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 10,000',
+      price: '₹ 4,850',
+      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
+      duration: '27 Live Lectures (3 hrs)',
+      mentor: 'Shubham Rawat, Anuj Garg',
+      language: 'Hindi',
+      active: false
     }
   ],
   projects: [
