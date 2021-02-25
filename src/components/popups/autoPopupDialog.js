@@ -113,7 +113,6 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
         </DialogContentText>
         <ValidatorForm onSubmit={handleSubmit}>
           <TextValidator
-            autoComplete=""
             required
             key="name"
             className={classes.textField}
@@ -153,7 +152,6 @@ export default function AutoPopupDialog({ fullWidth = true, ...rest }) {
 
             <Grid item xs={10}>
               <TextValidator
-                autoComplete=""
                 required
                 key="contact"
                 className={classes.textField}
