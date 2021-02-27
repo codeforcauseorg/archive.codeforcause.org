@@ -18,6 +18,7 @@ import {
 import Courses from './Courses';
 
 import Recommendations from '../common/Recommendations';
+import Promo from './Promo';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -33,6 +34,7 @@ function HomeView() {
       <Hero />
       <Promoters />
       <Events id="events" />
+      <Promo />
       <MentorExperience experience={experience} />
       <StandForSection id="about" />
       <Courses />

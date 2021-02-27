@@ -4,7 +4,7 @@ export const webDevelopment = {
   duration: '40 Live Lectures',
   level: 'Level 1',
   link: '/special-practical-webdev-with-js',
-  domain: 'Web Development',
+  domain: 'Web Development Ground Up',
   title: 'Practical Full Stack Web Development with JS',
   upcoming: 'March 29th',
   mentors: ['anuj', 'ganga'],

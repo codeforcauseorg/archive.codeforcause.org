@@ -69,7 +69,7 @@ export default function Details({ course, bottom }) {
             </Typography>
             <Typography>Hindi</Typography>
           </Box>
-          <Box mb={2} display="flex" flexDirection="row">
+          <Box mb={1} display="flex" flexDirection="row">
             <Typography
               style={{
                 marginRight: '24px'
@@ -100,11 +100,10 @@ export default function Details({ course, bottom }) {
             <Typography
               style={{
                 marginRight: '24px',
-                color: '#0085FF'
               }}
               variant="body1"
             >
-              {course.difficulty}
+              {`Upcoming ${course.upcoming}`}
             </Typography>
           </Box>
 

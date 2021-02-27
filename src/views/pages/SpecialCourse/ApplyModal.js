@@ -108,7 +108,7 @@ export default function ApplyModal({
         {...rest}
         fullWidth={fullWidth}
       >
-        Register Now
+        Apply Now
       </Button>
       <Dialog
         fullWidth

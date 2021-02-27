@@ -25,7 +25,7 @@ function Header({ benefits, className, ...rest }) {
           variant="h1"
           align="center"
         >
-          Offering 90% Flat Discount On this Batch
+          Offering 90% Scholarship On this Batch. Apply Now.
         </Typography>
 
       </Container>
