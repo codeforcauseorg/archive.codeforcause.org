@@ -55,7 +55,7 @@ export default function Schedule({ course }) {
         align="center"
         display="flex"
         justify="center"
-        alignItems="center"
+        alignItems="stretch"
         direction="column"
       >
         <Box display="flex" flexDirection="column" className={classes.content}>
