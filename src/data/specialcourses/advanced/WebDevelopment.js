@@ -11,7 +11,7 @@ export const webDevelopment = {
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '29th March - 15th July',
+      dates: '29th March - 15th June',
       days: 'Mon, Tue, Thr, Fri',
       timing: '8:00 AM - 09:00 AM (IST)',
       link: '',
