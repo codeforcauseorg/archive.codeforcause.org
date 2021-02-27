@@ -256,6 +256,7 @@ export default function ApplyModal({
               variant="outlined"
               value={formData.why}
               fullWidth
+              multiline
               rows={3}
               name="why"
               onChange={handleChange}
