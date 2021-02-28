@@ -78,7 +78,8 @@ const useStyles = makeStyles(theme => ({
   },
   copyRightPadding: {
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(3)
+    paddingBottom: theme.spacing(3),
+    textAlign: 'center'
   }
 }));
 
