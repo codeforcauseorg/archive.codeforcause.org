@@ -87,6 +87,7 @@ export default function ApplyModal({
     formData.source = window.location.href;
     formData.batch = batch;
     formData.courseName = course.title;
+    formData.email = user.email;
     setSubmitting(1);
     e.preventDefault();
     axios({
@@ -160,15 +161,9 @@ export default function ApplyModal({
               disabled
               label="Email"
               variant="outlined"
-              value={formData.email}
+              value={user.email}
               fullWidth
               name="email"
-              onChange={handleChange}
-              validators={['required', 'isEmail']}
-              errorMessages={[
-                'This is a required field',
-                'Please enter a valid email'
-              ]}
             />
 
             <Grid container spacing={2} justify="space-evenly">
