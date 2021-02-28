@@ -161,7 +161,7 @@ export default function ApplyModal({
               disabled
               label="Email"
               variant="outlined"
-              value={user.email}
+              value={user?user.email:""}
               fullWidth
               name="email"
             />
