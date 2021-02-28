@@ -19,6 +19,8 @@ import {
 } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(theme => ({
   btn: {
@@ -49,14 +51,24 @@ export default function ApplyModal({
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
 
-
   const { enqueueSnackbar } = useSnackbar();
+
+  const user = useSelector(state => state.account.user);
+  const dispatch = useDispatch();
 
   const handleClickOpen = () => {
     setOpen(true);
-    formData.countryCode = '+91';
-    formData.phone = '';
-    formData.priceId = batch.priceId;
+    if (!user) {
+      dispatch(login());
+    } else {
+      updateFormData({
+        countryCode: '+91',
+        phone: '',
+        priceId: batch.priceId,
+        email: user.email,
+        name: user.displayName
+      });
+    }
   };
 
   const handleClose = () => {
@@ -86,7 +98,9 @@ export default function ApplyModal({
       .then(response => {
         setSubmitting(0);
         handleClose();
-        enqueueSnackbar('Application Submitted. You will be contacted over email.');
+        enqueueSnackbar(
+          'Application Submitted. You will be contacted over email.'
+        );
       })
       .catch(error => {
         enqueueSnackbar('Application Failed. Try again later');
@@ -112,7 +126,7 @@ export default function ApplyModal({
       </Button>
       <Dialog
         fullWidth
-        open={open}
+        open={open && user}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
@@ -143,6 +157,7 @@ export default function ApplyModal({
               required
               key="email"
               className={classes.textField}
+              disabled
               label="Email"
               variant="outlined"
               value={formData.email}
@@ -260,12 +275,8 @@ export default function ApplyModal({
               rows={3}
               name="why"
               onChange={handleChange}
-              validators={[
-                'required'
-              ]}
-              errorMessages={[
-                'This is a required field'
-              ]}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
             {submitting === 0 ? (
