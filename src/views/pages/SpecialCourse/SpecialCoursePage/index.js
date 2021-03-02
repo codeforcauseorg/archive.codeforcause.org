@@ -11,7 +11,6 @@ import Major from '../Major';
 import Features from '../Features';
 import Process from '../Process';
 import Header from '../Header';
-import AutoPopup from '../../../../components/popups/autoPopupDialog';
 // import CourseFeatures from '../partials/CourseFeatures';
 
 const useStyles = makeStyles(() => ({
@@ -27,7 +26,6 @@ function SpecialCoursePage({ course }) {
 
   return (
     <Page className={classes.root} title={course.title}>
-      <AutoPopup />
       <Header />
       <Major course={course} />
       {/* <CourseFeatures /> */}

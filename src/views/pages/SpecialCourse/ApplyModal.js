@@ -132,7 +132,7 @@ export default function ApplyModal({
         aria-labelledby="form-dialog-title"
       >
         <DialogTitle id="form-dialog-title">
-          Register for Course Enrollment
+          Apply for Scholarship
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -273,6 +273,10 @@ export default function ApplyModal({
               validators={['required']}
               errorMessages={['This is a required field']}
             />
+
+          <DialogContentText>
+            <Typography>You are submitting Scholarship Application. You will get an email for fee payment if you get selected.</Typography>
+          </DialogContentText>
 
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">
