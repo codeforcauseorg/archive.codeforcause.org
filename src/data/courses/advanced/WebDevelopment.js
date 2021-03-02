@@ -34,7 +34,7 @@ export const webDevelopment = {
       img: '/static/images/courses/projects/githubcli.png'
     },
     {
-      title: 'Protfolio Website to Standout',
+      title: 'Portfolio Website to Standout',
       img: '/static/images/courses/projects/portfolio.png'
     },
     {
