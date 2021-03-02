@@ -29,6 +29,7 @@ export default function ApplyModal({
     <div>
       <Button
         className={classes.btn}
+        disabled={!course.enabled}
         size="large"
         variant="contained"
         onClick={handleClickOpen}

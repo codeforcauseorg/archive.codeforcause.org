@@ -1,5 +1,6 @@
 export const zomatoClone = {
   courseid: '',
+  enabled: false,
   difficulty: 'Intermediate',
   duration: '4 Live Lectures',
   level: 'Level 1',
