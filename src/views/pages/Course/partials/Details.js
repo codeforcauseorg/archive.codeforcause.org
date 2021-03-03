@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { Grid, Typography, Box, Avatar } from '@material-ui/core';
 
@@ -13,13 +14,14 @@ export default function Details({ course, bottom }) {
     >
       <Grid
         item
+        container
         xs={12}
         sm={12}
         md={12}
         lg={12}
         align="left"
         display="flex"
-        justifyContent="left"
+        justify="flex-start"
         alignItems="center"
       >
         <Box display="flex" flexDirection="column">
@@ -110,6 +112,7 @@ export default function Details({ course, bottom }) {
           <Box mb={4} display="flex" flexDirection="row" flexWrap="wrap">
             {course.tags.map((tag, index) => (
               <div
+                key={index}
                 style={{
                   margin: '4px 16px 4px 0px',
                   padding: '4px 8px',
@@ -131,7 +134,7 @@ export default function Details({ course, bottom }) {
           <Box display="flex" flexDirection="row" flexWrap="wrap">
             {course.mentors.map((mentor, index) => {
               return (
-                <Box m={2} display="flex" flexDirection="row">
+                <Box key={index} m={2} display="flex" flexDirection="row">
                   <Avatar
                     style={{
                       width: '64px',
@@ -146,10 +149,14 @@ export default function Details({ course, bottom }) {
                     flexDirection="column"
                     justifyContent="center"
                   >
-                    <Typography noWrap={true}>
+                    <Typography
+                      noWrap={true}
+                      component={'span'}
+                      variant="body2"
+                    >
                       <Box fontWeight={500}>{members[mentor].name}</Box>
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body2" component={'span'}>
                       <Box fontWeight={300}>{members[mentor].position}</Box>
                     </Typography>
                   </Box>

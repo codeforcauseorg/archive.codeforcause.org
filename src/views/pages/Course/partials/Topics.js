@@ -58,15 +58,16 @@ export default function Topics({ course }) {
     <Grid container>
       <Grid
         item
+        container
         xs={12}
         sm={12}
         md={12}
         lg={12}
         align="center"
         display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
+        justify="center"
+        alignItems="stretch"
+        direction="column"
       >
         <Box display="flex" flexDirection="column">
           <Typography
@@ -82,7 +83,7 @@ export default function Topics({ course }) {
           {course.sections.map((section, sectionIndex) => {
             console.log(section);
             return (
-              <Box m={1}>
+              <Box m={1} key={sectionIndex}>
                 <SectionDropBox
                   section={section}
                   sectionIndex={sectionIndex}
@@ -131,6 +132,7 @@ function SectionDropBox({ section, sectionIndex, expanded, setExpanded }) {
               align="left"
               variant="body2"
               style={{ width: '100%', fontWeight: 500 }}
+              component={'span'}
             >
               <Box>{section.classes}</Box>
             </Typography>
@@ -157,7 +159,13 @@ function SectionDropBox({ section, sectionIndex, expanded, setExpanded }) {
 
       <Collapse in={sectionIndex === expanded}>
         {section.topics.map((topic, topicIndex) => {
-          return <TopicDropBox topic={topic} topicIndex={topicIndex} />;
+          return (
+            <TopicDropBox
+              topic={topic}
+              topicIndex={topicIndex}
+              key={topicIndex}
+            />
+          );
         })}
       </Collapse>
     </Box>
@@ -231,6 +239,7 @@ function TopicDropBox({ topic, topicIndex }) {
           {topic.subtopics.map((subtopic, subtopicIndex) => {
             return (
               <Box
+                key={subtopicIndex}
                 style={{
                   backgroundColor: '#F2F2F2',
                   margin: '4px 0px',

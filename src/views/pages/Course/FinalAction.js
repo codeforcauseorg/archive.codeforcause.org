@@ -108,19 +108,21 @@ export default function FinalAction({ course, batch }) {
     <Grid container className={classes.root}>
       <Grid
         item
+        container
         xs={12}
         sm={8}
         md={9}
         lg={9}
         align="center"
         display="flex"
-        justifyContent="center"
+        justify="flex-start"
       >
         <DetailsBottom course={course} batch={batch} bottom={true} />
       </Grid>
 
       <Grid
         item
+        container
         xs={12}
         sm={4}
         md={3}
@@ -190,6 +192,7 @@ export default function FinalAction({ course, batch }) {
                     width: '100%',
                     marginTop: '12px'
                   }}
+                  component={'span'}
                 >
                   <Box fontWeight={500}>{batch.timing}</Box>
                 </Typography>
@@ -199,6 +202,7 @@ export default function FinalAction({ course, batch }) {
                   style={{
                     width: '100%'
                   }}
+                  component={'span'}
                 >
                   <Box fontWeight={500}>{batch.days}</Box>
                 </Typography>

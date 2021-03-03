@@ -10,20 +10,22 @@ export function FAQuestions({ course }) {
     <Grid container>
       <Grid
         item
+        container
         xs={12}
         sm={12}
         md={12}
         lg={12}
         align="center"
         display="flex"
-        justifyContent="center"
+        justify="flex-start"
         alignItems="center"
-        flexDirection="column"
+        direction="column"
       >
         <Box display="flex" flexDirection="column">
           {course.faqs.map((question, questionIndex) => {
             return (
               <QuestionDropBox
+                key={questionIndex}
                 question={question}
                 questionIndex={questionIndex}
                 expanded={expanded}
@@ -59,6 +61,7 @@ function QuestionDropBox({ question, questionIndex, expanded, setExpanded }) {
           style={{
             width: '100%'
           }}
+          component={'span'}
         >
           <Box fontWeight={500}>{question.title}</Box>
         </Typography>

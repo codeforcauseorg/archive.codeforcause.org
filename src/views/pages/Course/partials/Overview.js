@@ -11,13 +11,14 @@ export default function Overview({ course }) {
     >
       <Grid
         item
+        container
         xs={12}
         sm={12}
         md={12}
         lg={12}
         align="center"
         display="flex"
-        justifyContent="center"
+        justify="center"
         alignItems="center"
       >
         <Box display="flex" flexDirection="column">
@@ -34,6 +35,7 @@ export default function Overview({ course }) {
           {course.overview.map((paragraph, index) => {
             return (
               <Typography
+                key={index}
                 variant="body1"
                 align="left"
                 style={{
@@ -41,7 +43,9 @@ export default function Overview({ course }) {
                   color: '#606060'
                 }}
               >
-                <Box fontWeight={400}>{paragraph}</Box>
+                <Box fontWeight={400} component={'span'} variant="body2">
+                  {paragraph}
+                </Box>
               </Typography>
             );
           })}

@@ -42,7 +42,7 @@ function Projects({ projects, flat }) {
             Projects you'll make in this course
           </Typography>
           {projects.map((project, index) => {
-            return <Project project={project} />;
+            return <Project project={project} key={index} />;
           })}
         </Box>
       </Container>

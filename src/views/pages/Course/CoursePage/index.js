@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
