@@ -99,7 +99,7 @@ export default function Details({ course, bottom }) {
           <Box mb={2} display="flex" flexDirection="row">
             <Typography
               style={{
-                marginRight: '24px',
+                marginRight: '24px'
               }}
               variant="body1"
             >

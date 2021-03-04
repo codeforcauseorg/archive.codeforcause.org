@@ -1,12 +1,9 @@
-import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-
-import { Grid, Typography } from '@material-ui/core';
-
+import React from 'react';
 import coursesContent from 'src/data/courses';
 import CourseCard from '../../../components/Course/CourseCardTemplate1';
-import { Fragment } from 'react';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -116,7 +113,7 @@ export default function Courses() {
     <Grid container className={classes.root}>
       {coursesList.map(([courseName, courses], idx) => {
         return (
-          <Fragment>
+          <div key={idx} id={courseName.split(' ')[0]}>
             <Grid item lg={12} md={12} sm={12} xs={12}>
               <Typography
                 variant="h1"
@@ -148,7 +145,7 @@ export default function Courses() {
                 <CoursesGrid courses={courses} />
               </Grid>
             </Grid>
-          </Fragment>
+          </div>
         );
       })}
     </Grid>

@@ -180,6 +180,7 @@ export default function Courses() {
           }}
         >
           <Tabs
+            id="course"
             value={value}
             onChange={handleChange}
             aria-label="Tabs"

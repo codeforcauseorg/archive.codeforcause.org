@@ -57,7 +57,7 @@ export const webDevelopment = {
             'Variables and Data Types',
             'Conditions and expression Statements',
             'Various type of looping in JS',
-            'Star Pattern Questions',
+            'Star Pattern Questions'
           ]
         },
         {
@@ -74,7 +74,7 @@ export const webDevelopment = {
             'JS Arrays and how cool they are',
             'Searching Algoriths (Linear and Binary)',
             'Sorting Algoriths (Bubble, Selection, Insertion)',
-            'String methods and processing and manipulation',
+            'String methods and processing and manipulation'
           ]
         },
         {
@@ -82,7 +82,7 @@ export const webDevelopment = {
           subtopics: [
             'Lambda as trendy anonymous function',
             'Convering and procession with map',
-            'Filter from iterables',
+            'Filter from iterables'
           ]
         }
       ]
@@ -98,7 +98,7 @@ export const webDevelopment = {
             'Setting and installing project dependencies',
             'Combining past JS concepts with npm',
             'Understanding components of API call',
-            'Mini-project - GitHub API calls with Axios',
+            'Mini-project - GitHub API calls with Axios'
           ]
         },
         {
@@ -119,7 +119,7 @@ export const webDevelopment = {
             'Styling and CSS Selectors',
             'Understanding a figma design',
             'Creating forms validations',
-            'Responsive website design Using bootstrap',
+            'Responsive website design Using bootstrap'
           ]
         },
         {
@@ -127,7 +127,7 @@ export const webDevelopment = {
           subtopics: [
             'Mobile first web applications',
             'Layouts and when to use what',
-            'FlexBoxes for best practices of alignments',
+            'FlexBoxes for best practices of alignments'
           ]
         }
       ]
@@ -178,7 +178,7 @@ export const webDevelopment = {
             'Animations  with React Spring',
             'Transitions with React Spring'
           ]
-        },
+        }
       ]
     },
     {

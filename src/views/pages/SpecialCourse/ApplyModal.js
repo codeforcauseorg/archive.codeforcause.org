@@ -131,9 +131,7 @@ export default function ApplyModal({
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">
-          Apply for Scholarship
-        </DialogTitle>
+        <DialogTitle id="form-dialog-title">Apply for Scholarship</DialogTitle>
         <DialogContent>
           <DialogContentText>
             <Typography>Please provide your details below.</Typography>
@@ -161,7 +159,7 @@ export default function ApplyModal({
               disabled
               label="Email"
               variant="outlined"
-              value={user?user.email:""}
+              value={user ? user.email : ''}
               fullWidth
               name="email"
             />
@@ -274,9 +272,12 @@ export default function ApplyModal({
               errorMessages={['This is a required field']}
             />
 
-          <DialogContentText>
-            <Typography>You are submitting Scholarship Application. You will get an email for fee payment if you get selected.</Typography>
-          </DialogContentText>
+            <DialogContentText>
+              <Typography>
+                You are submitting Scholarship Application. You will get an
+                email for fee payment if you get selected.
+              </Typography>
+            </DialogContentText>
 
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">

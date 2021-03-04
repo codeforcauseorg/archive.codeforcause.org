@@ -10,6 +10,14 @@ export const algoJava = {
   mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
   language: 'Hindi',
   default: 1,
+  events: [
+    {
+      name: "Women's Day special Benefit",
+      price: '999/-',
+      time: '5 - 10th March',
+      link: '/fullstack-webdev-with-js'
+    }
+  ],
   schedule: [
     {
       courseId: 'jds0121',

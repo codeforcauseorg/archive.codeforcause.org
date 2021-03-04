@@ -23,7 +23,9 @@ const EditProfileView = lazy(() =>
   import('src/views/pages/StudentDashboardView/EditProfile')
 );
 const CoursePage = lazy(() => import('src/views/pages/Course/CoursePage'));
-const SpecialCoursePage = lazy(() => import('src/views/pages/SpecialCourse/SpecialCoursePage'));
+const SpecialCoursePage = lazy(() =>
+  import('src/views/pages/SpecialCourse/SpecialCoursePage')
+);
 
 const BootcampPage = lazy(() =>
   import('src/views/pages/Bootcamp/BootcampPage')
@@ -164,7 +166,10 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <SpecialCoursePage course={specialContent.advanced.webDevelopment} {...props} />
+            <SpecialCoursePage
+              course={specialContent.advanced.webDevelopment}
+              {...props}
+            />
           </MainLayout>
         )}
       />

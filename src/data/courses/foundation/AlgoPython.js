@@ -10,6 +10,14 @@ export const algoPython = {
   language: '',
   mentors: ['anuj', 'kunal'],
   default: 1,
+  events: [
+    {
+      name: "Women's Day special Benefit",
+      price: '999/-',
+      time: '5 - 10th March',
+      link: '/fullstack-webdev-with-js'
+    }
+  ],
   schedule: [
     {
       courseId: 'pds0121',

@@ -135,7 +135,7 @@ function SectionDropBox({ section, sectionIndex, expanded, setExpanded }) {
               <Box>{section.classes}</Box>
             </Typography>
           </Hidden>
-  </Box>
+        </Box>
       </Box>
 
       <Collapse in={true}>

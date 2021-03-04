@@ -10,6 +10,14 @@ export const devPython = {
   language: 'Hindi',
   mentors: ['kunal'],
   default: 0,
+  events: [
+    {
+      name: "Women's Day special Benefit",
+      price: '999/-',
+      time: '5 - 10th March',
+      link: '/fullstack-webdev-with-js'
+    }
+  ],
   schedule: [
     {
       courseId: 'pdev0121',

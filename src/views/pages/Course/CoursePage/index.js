@@ -1,17 +1,17 @@
 /* eslint-disable linebreak-style */
-import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import React from 'react';
 import Page from 'src/components/Page';
 import Footer from '../../common/Footer';
 import Recommendations from '../../common/Recommendations';
-import FAQ from '../FAQ';
 import CTA from '../CTA';
-import FinalAction from '../FinalAction';
-import Schedule from '../Schedule';
-import Major from '../Major';
+import FAQ from '../FAQ';
 import Features from '../Features';
+import FinalAction from '../FinalAction';
+import Major from '../Major';
 import Process from '../Process';
-import AutoPopup from '../../../../components/popups/autoPopupDialog';
+import Schedule from '../Schedule';
+import SpecialHeader from '../specialDis';
 // import CourseFeatures from '../partials/CourseFeatures';
 
 const useStyles = makeStyles(() => ({
@@ -27,7 +27,8 @@ function CoursePage({ course }) {
 
   return (
     <Page className={classes.root} title={course.title}>
-      <AutoPopup />
+      {/* <AutoPopup /> */}
+      <SpecialHeader event={course.events} />
       <Major course={course} />
       {/* <CourseFeatures /> */}
       <Process />
