@@ -6,6 +6,7 @@ import { Grid, Typography } from '@material-ui/core';
 
 import coursesContent from 'src/data/courses';
 import CourseCard from '../../../components/Course/CourseCardTemplate1';
+import { Fragment } from 'react';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -105,119 +106,51 @@ export default function Courses() {
   const foundation = coursesContent.foundation;
   const advanced = coursesContent.advanced;
 
+  const coursesList = [
+    ['Foundational Courses', foundation],
+    ['Advanced Courses', advanced],
+    ['Six Months Training', training]
+  ];
+
   return (
     <Grid container className={classes.root}>
-      <Grid
-        item
-        lg={12}
-        md={12}
-        sm={12}
-        xs={12}
-        style={{
-          marginTop: '48px'
-        }}
-      >
-        <Typography
-          variant="h1"
-          align="center"
-          color="textPrimary"
-          style={{
-            marginBottom: '20px'
-          }}
-        >
-          Six Months Training
-        </Typography>
-      </Grid>
+      {coursesList.map(([courseName, courses], idx) => {
+        return (
+          <Fragment>
+            <Grid item lg={12} md={12} sm={12} xs={12}>
+              <Typography
+                variant="h1"
+                align="center"
+                color="textPrimary"
+                style={{
+                  marginBottom: '20px',
+                  marginTop: '48px'
+                }}
+              >
+                {courseName}
+              </Typography>
+            </Grid>
 
-      <Grid container>
-        <Grid
-          item
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          align="center"
-          display="flex"
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <CoursesGrid courses={training} />
-        </Grid>
-      </Grid>
-
-      <Grid item lg={12} md={12} sm={12} xs={12}>
-        <Typography
-          variant="h1"
-          align="center"
-          color="textPrimary"
-          style={{
-            marginBottom: '20px',
-            marginTop: '48px'
-          }}
-        >
-          Foundational Courses
-        </Typography>
-      </Grid>
-
-      <Grid container>
-        <Grid
-          item
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          align="center"
-          display="flex"
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <CoursesGrid courses={foundation} />
-        </Grid>
-      </Grid>
-
-      <Grid
-        item
-        lg={12}
-        md={12}
-        sm={12}
-        xs={12}
-        style={{
-          marginTop: '48px'
-        }}
-      >
-        <Typography
-          variant="h1"
-          align="center"
-          color="textPrimary"
-          style={{
-            marginBottom: '20px'
-          }}
-        >
-          Advanced Courses
-        </Typography>
-      </Grid>
-
-      <Grid container>
-        <Grid
-          item
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          align="center"
-          display="flex"
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <CoursesGrid courses={advanced} />
-        </Grid>
-      </Grid>
+            <Grid container>
+              <Grid
+                item
+                lg={12}
+                md={12}
+                sm={12}
+                xs={12}
+                align="center"
+                display="flex"
+                style={{
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                <CoursesGrid courses={courses} />
+              </Grid>
+            </Grid>
+          </Fragment>
+        );
+      })}
     </Grid>
   );
 }
