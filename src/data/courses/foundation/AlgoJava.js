@@ -9,7 +9,7 @@ export const algoJava = {
   upcoming: 'Feb 28th (Weekends)',
   mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
   language: 'Hindi',
-  default: 1,
+  default: 2,
   events: [
     {
       name: "Women's Day special Offer",

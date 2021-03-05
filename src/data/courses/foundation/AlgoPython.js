@@ -9,7 +9,7 @@ export const algoPython = {
   upcoming: 'Feb 28th (Weekends)',
   language: '',
   mentors: ['anuj', 'kunal'],
-  default: 1,
+  default: 2,
   events: [
     {
       name: "Women's Day Special Offer",
