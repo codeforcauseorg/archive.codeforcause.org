@@ -15,7 +15,7 @@ export const algoPython = {
       name: "Women's Day special Benefit",
       price: '999/-',
       time: '5 - 10th March',
-      link: '/fullstack-webdev-with-js'
+      link: 'https://rzp.io/l/Wn5GnX0Q'
     }
   ],
   schedule: [

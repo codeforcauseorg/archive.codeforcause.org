@@ -15,7 +15,7 @@ export const algoJava = {
       name: "Women's Day special Benefit",
       price: '999/-',
       time: '5 - 10th March',
-      link: '/fullstack-webdev-with-js'
+      link: 'https://rzp.io/l/0nhjR6m2P'
     }
   ],
   schedule: [
