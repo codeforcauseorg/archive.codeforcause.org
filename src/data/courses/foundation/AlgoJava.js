@@ -59,7 +59,8 @@ export const algoJava = {
       duration: '27 Live Lectures (3 hrs)',
       mentor: 'Shubham Rawat, Anuj Garg',
       language: 'Hindi',
-      active: false
+      active: false,
+      iwd: "https://rzp.io/l/0nhjR6m2P"
     }
   ],
   projects: [

@@ -28,7 +28,8 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'capitalize',
     '&:hover': {
       backgroundColor: 'rgba(166, 0, 0, 0.8)'
-    }
+    },
+    margin: '4px 8px'
   },
   textField: {
     marginBottom: '16px'
@@ -125,6 +126,23 @@ export default function ApplyModal({
       >
         Register Now
       </Button>
+      {batch.iwd ? (
+        <Button
+          className={classes.btn}
+          size="large"
+          variant="contained"
+          onClick={() => {
+            window.open(batch.iwd);
+          }}
+          {...rest}
+          fullWidth={fullWidth}
+        >
+          IWD Special
+        </Button>
+      ) : (
+        <div />
+      )}
+
       <Dialog
         fullWidth
         open={open}
