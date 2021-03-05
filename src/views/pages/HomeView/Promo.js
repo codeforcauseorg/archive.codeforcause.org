@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   CardContent,
-  CardHeader,
   CardMedia,
   Container,
   Grid,
@@ -17,8 +16,11 @@ import ButtonComponent from 'src/components/Button/ButtonComponent';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: 'linear-gradient(180deg, #2A185A 0%, #000000 100%)',
-    padding: theme.spacing(7, 10, 10),
+    backgroundImage: 'url("/static/images/backs/sb.png")',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPositionY: 'center',
+    padding: theme.spacing(10),
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(10, 3)
     },
@@ -47,20 +49,24 @@ const offers = [
   {
     name: 'MERN Scholarship',
     applied_on: '*Only Applied on Web Development with JS',
+    desc:
+      'Introducing the MERN scholarship for Web Enthusiast, a thorough go through of every concept and building awesome project while learning and implementing concepts of MERN stack',
     link: '/special-practical-webdev-with-js',
     terms: '',
     special_price: '1200/-',
     original_price: '₹ 12,000',
-    ill: '/static/illustrations/sc.svg'
+    pic: '/static/images/backs/sc.png'
   },
   {
     name: "Women's Day Special",
     applied_on: '*Applied on All Fundamental courses',
     link: '/courses/#Foundational',
+    desc:
+      "Celebrating Women's day with the will to empower women in Tech industry, offering massive discount on all Foundational courses being registered while celebrating Women's day",
     terms: 'Only Girls/Women are allowed for benefits',
     special_price: '999/-',
     original_price: '₹ 10,000',
-    ill: '/static/illustrations/wd.svg'
+    pic: '/static/images/backs/wom.png'
   }
 ];
 
@@ -71,33 +77,38 @@ function Promo({ benefits, className, ...rest }) {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container>
         <Typography
-          style={{ color: '#ffffff', marginBottom: '16px' }}
+          style={{
+            color: '#ffffff',
+            marginBottom: '16px',
+            textTransform: 'capitalize',
+            fontWeight: 700
+          }}
           variant="h1"
           align="center"
         >
-          SPECIAL BENEFITS
+          Special Benefits
         </Typography>
 
-        <Grid
-          container
-          spacing={9}
-          style={{ textAlign: 'center', marginTop: '40px' }}
-        >
+        <Grid container spacing={9} style={{ marginTop: '40px' }}>
           {offers.map((item, index) => {
             return (
               <Grid item xs={12} md={6} key={index}>
-                <CardMedia
-                  image={item.ill}
-                  style={{ height: 100, width: '80%', margin: 'auto' }}
-                />
                 <Card key={index} raised className={classes.cards}>
-                  <CardHeader title={item.name} />
-                  <CardContent style={{ textAlign: 'center' }}>
-                    <img src={item.ill} height="150px" alt="" />
-                  </CardContent>
+                  <CardMedia image={item.pic} style={{ height: '280px' }} />
+                  <Typography
+                    variant="h2"
+                    style={{
+                      color: '#fff',
+                      fontWeight: 700,
+                      margin: '-54px 0px 20px 26px'
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
                   <CardContent
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
+                    <Typography variant="body1">{item.desc}</Typography>
                     <TextBox
                       title="Special Price"
                       left={item.original_price}
@@ -114,7 +125,11 @@ function Promo({ benefits, className, ...rest }) {
                     <Typography
                       variant="caption"
                       color="textSecondary"
-                      style={{ fontSize: '10px' }}
+                      style={{
+                        fontSize: '10px',
+                        marginTop: '16px',
+                        display: 'block'
+                      }}
                     >
                       {item.applied_on}. Terms and Conditions Apply.
                     </Typography>
@@ -137,18 +152,11 @@ export default Promo;
 
 function TextBox({ title, left, right = '', lineThrough = false }) {
   return (
-    <Box mb={2} display="flex" flexDirection="row">
+    <Box mb={2} mt={2} display="flex" flexDirection="row">
+      <Typography variant="h5">{title}</Typography>
       <Typography
         style={{
-          fontSize: '14px',
-          marginRight: '0px'
-        }}
-      >
-        {title}
-      </Typography>
-      <Typography
-        style={{
-          fontSize: '14px',
+          fontSize: '18px',
           margin: '0px 16px 0px 29px',
           color: '#939393',
           textDecoration: lineThrough ? 'line-through' : 'none'
@@ -159,7 +167,7 @@ function TextBox({ title, left, right = '', lineThrough = false }) {
 
       <Typography
         style={{
-          fontSize: '14px',
+          fontSize: '18px',
           color: '#A60000',
           fontWeight: 700
         }}
