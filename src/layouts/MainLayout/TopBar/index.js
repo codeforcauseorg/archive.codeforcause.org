@@ -68,7 +68,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
   const pathname = window.location.pathname;
 
   const navItems = [
-    { title: 'Special Benefits', link: '#special-benefits' },
+    { title: 'Special Offers', link: '#special-offers' },
     { title: 'Campus Leaders', link: '/campusLeaders' },
     { title: 'Events', link: '/events' },
     { title: 'Courses', link: '/courses' }

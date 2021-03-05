@@ -60,7 +60,12 @@ const offers = [
     applied_on: '*Only Applied on Web Development with JS',
     desc:
       'Introducing the MERN scholarship for Web Enthusiast, a thorough go through of every concept and building awesome project while learning and implementing concepts of MERN Stack.',
-    link: '/special-practical-webdev-with-js',
+    links: [
+      {
+        name: 'Apply Now',
+        link: '/special-practical-webdev-with-js'
+      }
+    ],
     terms: '',
     special_price: '1200/-',
     original_price: '₹ 12,000',
@@ -69,7 +74,16 @@ const offers = [
   {
     name: "Women's Day Special",
     applied_on: '*Applied on All Fundamental courses',
-    link: '/courses/#Foundational',
+    links: [
+      {
+        name: 'Java DSA',
+        link: '/ds-algo-with-java'
+      },
+      {
+        name: 'Python DSA',
+        link: 'ds-algo-with-python'
+      }
+    ],
     desc:
       "Celebrating Women's day with the will to empower women in Tech industry, offering massive discount on all Foundational courses being registered while celebrating Women's day.",
     terms: 'Only Girls/Women are allowed for benefits',
@@ -84,7 +98,7 @@ function Promo({ benefits, className, ...rest }) {
 
   return (
     <div
-      id="special-benefits"
+      id="special-offers"
       className={clsx(classes.root, className)}
       {...rest}
     >
@@ -99,7 +113,7 @@ function Promo({ benefits, className, ...rest }) {
           variant="h1"
           align="center"
         >
-          Special Benefits
+          Special Offers
         </Typography>
 
         <Grid container spacing={9} className={classes.grid}>
@@ -128,13 +142,32 @@ function Promo({ benefits, className, ...rest }) {
                       right={item.special_price}
                       lineThrough
                     />
-                    <HashLink smooth to={item.link} style={{textDecoration: 'none'}}>
-                      <ButtonComponent
-                        fullWidth
-                        title="Apply Now"
-                        className={classes.btn}
-                      />
-                    </HashLink>
+                    <Grid
+                      container
+                      direction="row"
+                      flexDirection="row"
+                      justify="center"
+                    >
+                      {item.links.map((link, idx) => {
+                        return (
+                          <HashLink
+                            smooth
+                            to={link.link}
+                            style={{
+                              textDecoration: 'none',
+                              flexGrow: 1,
+                              marginRight: '10px'
+                            }}
+                          >
+                            <ButtonComponent
+                              fullWidth
+                              title={link.name}
+                              className={classes.btn}
+                            />
+                          </HashLink>
+                        );
+                      })}
+                    </Grid>
                     <Typography
                       variant="caption"
                       color="textSecondary"

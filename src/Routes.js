@@ -7,11 +7,12 @@ import specialContent from 'src/data/specialcourses';
 import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
 import MainLayout from 'src/layouts/MainLayout';
-import CoursesView from 'src/views/pages/CoursesView';
+// import CoursesView from 'src/views/pages/CoursesView';
 
 const CAView = lazy(() => import('src/views/pages/CLView'));
 const ProfileView = lazy(() => import('src/views/pages/ProfileView'));
 const ApplicationsView = lazy(() => import('src/views/pages/ApplicationsView'));
+const CoursesView = lazy(() => import('src/views/pages/CoursesView'));
 
 const BlogsView = lazy(() => import('src/views/pages/BlogsView'));
 const Blog = lazy(() => import('src/views/pages/BlogsView/Blog'));

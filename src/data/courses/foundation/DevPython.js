@@ -12,7 +12,7 @@ export const devPython = {
   default: 0,
   events: [
     {
-      name: "Women's Day special Benefit",
+      name: "Women's Day special Offer",
       price: '999/-',
       time: '5 - 10th March',
       link: '/fullstack-webdev-with-js'

@@ -12,9 +12,10 @@ export const algoPython = {
   default: 1,
   events: [
     {
-      name: "Women's Day special Benefit",
+      name: "Women's Day Special Offer",
       price: '999/-',
-      time: '5 - 10th March',
+      time:
+        'Specially Available at price ₹ 999/- from 5 - 8th March for Women Only',
       link: 'https://rzp.io/l/Wn5GnX0Q'
     }
   ],
