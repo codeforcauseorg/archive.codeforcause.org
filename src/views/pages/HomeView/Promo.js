@@ -128,7 +128,7 @@ function Promo({ benefits, className, ...rest }) {
                       right={item.special_price}
                       lineThrough
                     />
-                    <HashLink smooth to={item.link}>
+                    <HashLink smooth to={item.link} style={{textDecoration: 'none'}}>
                       <ButtonComponent
                         fullWidth
                         title="Apply Now"
