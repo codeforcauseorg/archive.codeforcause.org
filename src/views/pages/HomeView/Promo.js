@@ -16,11 +16,14 @@ import ButtonComponent from 'src/components/Button/ButtonComponent';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    borderRadius: '10px',
+    margin: theme.spacing(6, 4, 0),
     backgroundImage: 'url("/static/images/backs/sb.png")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPositionY: 'center',
-    padding: theme.spacing(10),
+    backgroundPositionX: 'center',
+    // backgroundPositionY: 'center',
+    padding: theme.spacing(10, 10, 20),
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(10, 3)
     },
@@ -42,6 +45,12 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '50%',
     marginTop: '8px',
     transform: 'translateX(-50%)'
+  },
+  grid: {
+    marginTop: theme.spacing(7),
+    [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(3)
+    }
   }
 }));
 
@@ -50,7 +59,7 @@ const offers = [
     name: 'MERN Scholarship',
     applied_on: '*Only Applied on Web Development with JS',
     desc:
-      'Introducing the MERN scholarship for Web Enthusiast, a thorough go through of every concept and building awesome project while learning and implementing concepts of MERN stack',
+      'Introducing the MERN scholarship for Web Enthusiast, a thorough go through of every concept and building awesome project while learning and implementing concepts of MERN Stack.',
     link: '/special-practical-webdev-with-js',
     terms: '',
     special_price: '1200/-',
@@ -62,7 +71,7 @@ const offers = [
     applied_on: '*Applied on All Fundamental courses',
     link: '/courses/#Foundational',
     desc:
-      "Celebrating Women's day with the will to empower women in Tech industry, offering massive discount on all Foundational courses being registered while celebrating Women's day",
+      "Celebrating Women's day with the will to empower women in Tech industry, offering massive discount on all Foundational courses being registered while celebrating Women's day.",
     terms: 'Only Girls/Women are allowed for benefits',
     special_price: '999/-',
     original_price: '₹ 10,000',
@@ -74,7 +83,11 @@ function Promo({ benefits, className, ...rest }) {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} {...rest}>
+    <div
+      id="special-benefits"
+      className={clsx(classes.root, className)}
+      {...rest}
+    >
       <Container>
         <Typography
           style={{
@@ -89,7 +102,7 @@ function Promo({ benefits, className, ...rest }) {
           Special Benefits
         </Typography>
 
-        <Grid container spacing={9} style={{ marginTop: '40px' }}>
+        <Grid container spacing={9} className={classes.grid}>
           {offers.map((item, index) => {
             return (
               <Grid item xs={12} md={6} key={index}>

@@ -33,8 +33,8 @@ function HomeView() {
     <Page className={classes.root} title="Code for Cause">
       <Hero />
       <Promoters />
-      <Events id="events" />
       <Promo />
+      <Events id="events" />
       <MentorExperience experience={experience} />
       <StandForSection id="about" />
       <Courses />
