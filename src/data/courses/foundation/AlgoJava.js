@@ -10,15 +10,6 @@ export const algoJava = {
   mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
   language: 'Hindi',
   default: 1,
-  events: [
-    {
-      name: "Women's Day special Offer",
-      price: '999/-',
-      time:
-        'Specially Available at price ₹ 999/- from 5 - 8th March for Women Only',
-      link: 'https://rzp.io/l/0nhjR6m2P'
-    }
-  ],
   schedule: [
     {
       courseId: 'jds0121',

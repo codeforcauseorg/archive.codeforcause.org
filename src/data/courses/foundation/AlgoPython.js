@@ -10,15 +10,6 @@ export const algoPython = {
   language: '',
   mentors: ['anuj', 'kunal'],
   default: 1,
-  events: [
-    {
-      name: "Women's Day Special Offer",
-      price: '999/-',
-      time:
-        'Specially Available at price ₹ 999/- from 5 - 8th March for Women Only',
-      link: 'https://rzp.io/l/Wn5GnX0Q'
-    }
-  ],
   schedule: [
     {
       courseId: 'pds0121',

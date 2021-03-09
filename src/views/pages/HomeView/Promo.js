@@ -71,27 +71,7 @@ const offers = [
     original_price: '₹ 12,000',
     pic: '/static/images/backs/sc.png'
   },
-  {
-    name: "Women's Day Special",
-    applied_on: '*Applied on All Fundamental courses',
-    links: [
-      {
-        name: 'Java DSA',
-        link: '/ds-algo-with-java'
-      },
-      {
-        name: 'Python DSA',
-        link: 'ds-algo-with-python'
-      }
-    ],
-    desc:
-      "Celebrating Women's day with the will to empower women in Tech industry, offering massive discount on all Foundational courses being registered while celebrating Women's day.",
-    terms: 'Only Girls/Women are allowed for benefits',
-    special_price: '999/-',
-    original_price: '₹ 10,000',
-    pic: '/static/images/backs/wom.png'
-  }
-];
+]
 
 function Promo({ benefits, className, ...rest }) {
   const classes = useStyles();
@@ -116,7 +96,7 @@ function Promo({ benefits, className, ...rest }) {
           Special Offers
         </Typography>
 
-        <Grid container spacing={9} className={classes.grid}>
+        <Grid container spacing={9} className={classes.grid} justify="center">
           {offers.map((item, index) => {
             return (
               <Grid item xs={12} md={6} key={index}>
