@@ -57,8 +57,7 @@ export const algoPython = {
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '27 Live Lectures (3 hrs)',
       language: 'Hindi',
-      active: false,
-      iwd: "https://rzp.io/l/Wn5GnX0Q"
+      active: false
     }
   ],
   projects: [
