@@ -9,7 +9,7 @@ export const algoJava = {
   upcoming: 'Feb 28th (Weekends)',
   mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
   language: 'Hindi',
-  default: 1,
+  default: 2,
   schedule: [
     {
       courseId: 'jds0121',
@@ -50,7 +50,7 @@ export const algoJava = {
       duration: '27 Live Lectures (3 hrs)',
       mentor: 'Shubham Rawat, Anuj Garg',
       language: 'Hindi',
-      active: false
+      active: false,
     }
   ],
   projects: [

@@ -11,7 +11,7 @@ import FinalAction from '../FinalAction';
 import Major from '../Major';
 import Process from '../Process';
 import Schedule from '../Schedule';
-import SpecialHeader from '../specialDis';
+// import SpecialHeader from '../specialDis';
 // import CourseFeatures from '../partials/CourseFeatures';
 
 const useStyles = makeStyles(() => ({
@@ -28,7 +28,7 @@ function CoursePage({ course }) {
   return (
     <Page className={classes.root} title={course.title}>
       {/* <AutoPopup /> */}
-      <SpecialHeader event={course.events} />
+      {/* <SpecialHeader event={course.events} /> */}
       <Major course={course} />
       {/* <CourseFeatures /> */}
       <Process />
