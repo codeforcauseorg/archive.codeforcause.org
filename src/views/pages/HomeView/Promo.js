@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     // backgroundPositionY: 'center',
     padding: theme.spacing(10, 10, 20),
     [theme.breakpoints.down('sm')]: {
-      padding: theme.spacing(10, 3)
+      padding: theme.spacing(10, 2),
+      margin: theme.spacing(6, 2, 0)
     },
     color: '#000000'
   },
@@ -185,7 +186,8 @@ function TextBox({ title, left, right = '', lineThrough = false }) {
           fontSize: '18px',
           margin: '0px 16px 0px 29px',
           color: '#939393',
-          textDecoration: lineThrough ? 'line-through' : 'none'
+          textDecoration: lineThrough ? 'line-through' : 'none',
+          whiteSpace: 'nowrap'
         }}
       >
         {left}
