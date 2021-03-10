@@ -109,7 +109,7 @@ const useStyles = makeStyles(theme => ({
 export default function CourseCard({ course }) {
   const classes = useStyles();
   return (
-    <Box style={{ height: '100%' }}>
+    <Box style={{ height: '95%' }}>
       <Card
         className={classes.card}
         display="flex"
