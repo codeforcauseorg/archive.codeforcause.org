@@ -6,14 +6,26 @@ export const algoJS = {
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with JavaScript',
   started: 'Jan 30th (Regular)',
-  upcoming: 'Feb 28th (Weekends)',
+  upcoming: 'June 27th (Regular)',
   language: 'Hindi',
   mentors: ['ganga', 'anuj'],
-  default: 0,
+  default: 1,
   schedule: [
     {
       courseId: 'pds0121',
       dates: '30th Jan - 30th Apr',
+      days: 'Sat, Sun, Wed, Fri',
+      timing: '04:00 PM - 06:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 10,000',
+      price: '₹ 4,850',
+      priceId: 'price_1I0UveLVU3L7vcSrvRIaf1aL',
+      duration: '40 Live Lectures (2 hrs)',
+      active: false
+    },
+    {
+      courseId: 'pds0122',
+      dates: '27th June - 30th Sept',
       days: 'Sat, Sun, Wed, Fri',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
