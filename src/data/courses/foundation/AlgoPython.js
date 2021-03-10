@@ -6,7 +6,7 @@ export const algoPython = {
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with Python',
   started: 'Jan 30th (Regular)',
-  upcoming: 'Feb 28th (Weekends)',
+  upcoming: 'March 14th (Weekends)',
   language: '',
   mentors: ['anuj', 'kunal'],
   default: 2,

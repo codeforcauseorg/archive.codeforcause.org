@@ -35,7 +35,8 @@ const useStyles = makeStyles(theme => ({
     // paddingTop: "56.25%", // 16:9
   },
   cardContent: {
-    padding: '16px 0px 16px 16px'
+    padding: '16px 0px 16px 16px',
+    flexGrow: 1
   },
   chipActions: {
     display: 'block'
@@ -108,7 +109,7 @@ const useStyles = makeStyles(theme => ({
 export default function CourseCard({ course }) {
   const classes = useStyles();
   return (
-    <Box>
+    <Box style={{ height: '100%' }}>
       <Card
         className={classes.card}
         display="flex"
@@ -222,25 +223,29 @@ export default function CourseCard({ course }) {
               </Typography>
             </Box>
 
-            <Box
-              display="flex"
-              flexDirection="row"
-              style={{
-                marginTop: '4px'
-              }}
-            >
-              <Typography
-                variant="caption"
+            {course.upcoming ? (
+              <Box
+                display="flex"
+                flexDirection="row"
                 style={{
-                  marginRight: '8px',
-                  marginBottom: '8px',
-                  color: '#A3A3A3'
+                  marginTop: '4px'
                 }}
               >
-                Upcoming
-              </Typography>
-              <Typography variant="caption">{course.upcoming}</Typography>
-            </Box>
+                <Typography
+                  variant="caption"
+                  style={{
+                    marginRight: '8px',
+                    marginBottom: '8px',
+                    color: '#A3A3A3'
+                  }}
+                >
+                  Upcoming
+                </Typography>
+                <Typography variant="caption">{course.upcoming}</Typography>
+              </Box>
+            ) : (
+              ''
+            )}
             {course.schedule[1] ? (
               <Box
                 display="flex"

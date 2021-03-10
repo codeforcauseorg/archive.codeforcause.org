@@ -71,8 +71,8 @@ const offers = [
     special_price: '1200/-',
     original_price: '₹ 12,000',
     pic: '/static/images/backs/sc.png'
-  },
-]
+  }
+];
 
 function Promo({ benefits, className, ...rest }) {
   const classes = useStyles();
