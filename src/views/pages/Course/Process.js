@@ -29,17 +29,7 @@ function Process({ benefits, className, ...rest }) {
           Offering 50% Flat Discount On this Batch
         </Typography>
 
-        {/* <Typography
-          style={{ marginTop: '32px', color: '#ffffff' }}
-          variant="h4"
-          align="center"
-          gutterBottom
-        >
-          Application Process To Get Shortlisted
-        </Typography>
-        <Grid container component="dl" style={{ padding: '20px 0px 20px' }}>
-          <ProcessSteppers />
-        </Grid> */}
+       
       </Container>
     </div>
   );

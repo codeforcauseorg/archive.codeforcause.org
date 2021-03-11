@@ -167,9 +167,7 @@
 
 :root {
   --swiper-navigation-size: 32px;
-  /*
---swiper-navigation-color: var(--swiper-theme-color);
-*/
+  
 }
 
 .swiper-button-prev,
@@ -242,11 +240,8 @@
   display: none;
 }
 
-:root {
-  /*
---swiper-pagination-color: var(--swiper-theme-color);
-*/
-}
+
+ 
 
 .swiper-pagination {
   position: absolute;
@@ -261,7 +256,6 @@
   opacity: 0;
 }
 
-/* Common Styles */
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
@@ -271,7 +265,6 @@
   width: 100%;
 }
 
-/* Bullets */
 
 .swiper-pagination-bullets-dynamic {
   overflow: hidden;
@@ -387,7 +380,6 @@ button.swiper-pagination-bullet {
   transition: 200ms transform, 200ms right;
 }
 
-/* Progress */
 
 .swiper-pagination-progressbar {
   background: rgba(0, 0, 0, 0.25);
@@ -441,12 +433,11 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
-/* Scrollbar */
 
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
-  -ms-touch-action: none;
+  /* -ms-touch-action: none; */
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -509,11 +500,7 @@ button.swiper-pagination-bullet {
 
 /* Preloader */
 
-:root {
-  /*
---swiper-preloader-color: var(--swiper-theme-color);
-*/
-}
+
 
 .swiper-lazy-preloader {
   width: 42px;
@@ -546,7 +533,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-/* a11y */
 
 .swiper-container .swiper-notification {
   position: absolute;

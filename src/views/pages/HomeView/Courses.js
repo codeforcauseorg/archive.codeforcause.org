@@ -89,9 +89,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   slide: {
-    perspective: 0, // create perspective
+    perspective: 0, 
     overflow: 'hidden',
-    // relative is a must if you want to create overlapping layers in children
     position: 'relative'
   },
   background: {
@@ -103,7 +102,6 @@ const useStyles = makeStyles(theme => ({
   gridList: {
     flexWrap: 'nowrap',
     width: '100%',
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
     [theme.breakpoints.up('lg')]: {
       padding: '0px 50px'

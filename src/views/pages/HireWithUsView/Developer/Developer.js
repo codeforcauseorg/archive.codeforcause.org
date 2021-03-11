@@ -1,6 +1,5 @@
 import React from 'react';
 import Devbox from './DevBox/index';
-// import classes from './Developer.module.css';
 import { Grid, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -48,7 +47,6 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: '40px'
     }
 
-    // paddingRight:"550px"
   },
   Lastbox: {
     marginTop: '20px'
@@ -75,7 +73,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'white',
     boxShadow: '0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px salmon',
     borderRadius: '121.5px 20px 121px 121.5px',
-    /* border:5px solid black; */
     position: 'relative',
     float: 'right',
     top: '-190px',
@@ -113,7 +110,6 @@ const useStyles = makeStyles(theme => ({
     zIndex: '1000',
     display: 'inline-block',
     [theme.breakpoints.down('md')]: {
-      // height: '90px',
       width: '500px',
       left: '250px'
     }

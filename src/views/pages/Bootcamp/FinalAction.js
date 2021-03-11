@@ -86,23 +86,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function FinalAction({ course, batch }) {
   const classes = useStyles();
-  // const [applyState, setApplyState] = useState('Enquire');
-
-  // const user = useSelector(state => state.account.user);
-  // const baseUrl =
-  //   'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications';
-  // const dispatch = useDispatch();
-  // const handleApply = () => {
-  //   const url = `${baseUrl}/${batch.courseId}`;
-  //   if (!user) {
-  //     dispatch(login());
-  //   } else {
-  //     setApplyState('Generating...');
-  //     axios.post(url).then(result => {
-  //       window.location.href = `/applications?id=${result.data.id}`;
-  //     });
-  //   }
-  // };
+ 
 
   return (
     <Grid container className={classes.root}>

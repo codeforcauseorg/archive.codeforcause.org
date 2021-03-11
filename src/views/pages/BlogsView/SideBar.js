@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Typography, makeStyles, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-// import blogs from '../../../data/blogs';
 
 const useStyles = makeStyles(theme => ({
   root: {

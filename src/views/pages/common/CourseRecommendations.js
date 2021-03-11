@@ -41,7 +41,6 @@ const useStyles = makeStyles(theme => ({
   cardMedia: {
     width: '100%',
     height: 'auto'
-    // paddingTop: "56.25%", // 16:9
   },
   cardContent: {},
   chipActions: {
@@ -85,9 +84,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   slide: {
-    perspective: 0, // create perspective
+    perspective: 0, 
     overflow: 'hidden',
-    // relative is a must if you want to create overlapping layers in children
     position: 'relative'
   },
   background: {

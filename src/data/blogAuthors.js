@@ -1,4 +1,3 @@
-// mentors data----------------
 
 export const authors = {
   'Anuj Garg': {

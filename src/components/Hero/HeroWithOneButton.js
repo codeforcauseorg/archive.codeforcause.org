@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { Box, Container, Typography, makeStyles } from '@material-ui/core';
-// import ApplyNowModal from './ApplyNowModal';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,9 +39,9 @@ function Hero({
   title,
   subtitle,
   subtitleDesign,
-  className, // className
-  backgroundImage = null, // Link to the  background image if any
-  component = null, // The Button or any component provided
+  className, 
+  backgroundImage = null, 
+  component = null, 
   ...rest
 }) {
   const classes = useStyles();

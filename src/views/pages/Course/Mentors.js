@@ -67,7 +67,6 @@ function Mentors({ mentors, className, ...rest }) {
         <Typography variant="h3" align="left" color="textPrimary">
           Meet Our Mentors
         </Typography>
-        {/* End hero unit */}
         <Grid
           container
           spacing={2}

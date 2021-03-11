@@ -11,7 +11,6 @@ import Major from '../Major';
 import Features from '../Features';
 import Process from '../Process';
 import AutoPopup from '../../../../components/popups/autoPopupDialog';
-// import CourseFeatures from '../partials/CourseFeatures';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -28,7 +27,6 @@ function CoursePage({ course }) {
     <Page className={classes.root} title={course.title}>
       <AutoPopup />
       <Major course={course} />
-      {/* <CourseFeatures /> */}
       <Process />
       <Schedule course={course} />
       <Features />

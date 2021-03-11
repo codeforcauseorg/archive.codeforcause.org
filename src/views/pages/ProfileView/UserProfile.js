@@ -36,21 +36,7 @@ export default function UserProfile() {
     });
   };
 
-  // const handleSubmit = e => {
-  //   setSubmitting(1);
-  //   e.preventDefault();
-  //   axios({
-  //     method: 'post',
-  //     url:
-  //       'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/leads',
-  //     data: formData
-  //   })
-  //     .then(response => {
-  //       setSubmitting(0);
-  //     })
-  //     .catch(error => {});
-  // };
-
+  
   return (
     <div>
       <form noValidate autoComplete="off">

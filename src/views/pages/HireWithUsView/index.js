@@ -6,8 +6,6 @@ import Developer from './Developer/Developer';
 import Footer from '../common/Footer';
 import Philosphy from './Philosphy/Philosphy';
 import Major from './Major/Major';
-// import CTA from './CTA';
-// import Apply from '../common/Apply';
 
 const useStyles = makeStyles(() => ({
   root: {}

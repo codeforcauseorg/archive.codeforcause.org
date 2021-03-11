@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from './DevBox.module.css'
 import Gold_Ribbon from '../../../../../assets/images/Gold_Ribbon.png';
 import Book_Icon from '../../../../../assets/images/Book_Icon.png';
 import Thumbs_Up from '../../../../../assets/images/Thumbs_Up.png';

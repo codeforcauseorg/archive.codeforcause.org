@@ -1,4 +1,3 @@
-// event data------------------
 export const events = [
   {
     img: 'https://img.youtube.com/vi/hkx_JFFwM1o/hqdefault.jpg',
@@ -57,7 +56,6 @@ export const bootcamps = [
   }
 ];
 
-// mentors data----------------
 
 export const mentors = [
   {
@@ -99,7 +97,6 @@ export const mentors = [
   }
 ];
 
-// experience data ---------------------
 
 export const experience = [
   {
@@ -128,7 +125,6 @@ export const experience = [
   }
 ];
 
-// Open source section data-----------------
 export const openKnowledgeContent = {
   title: 'Open Knowledge',
   about: `Our structure is based on generating knowledge flow that is not limited by bottlenecks. We inspire

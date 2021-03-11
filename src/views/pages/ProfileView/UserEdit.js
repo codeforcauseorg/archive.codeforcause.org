@@ -13,7 +13,6 @@ export class UserEdit extends React.Component {
   };
 
   handleSubmit = () => {
-    // your submit logic
   };
 
   render() {

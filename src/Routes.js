@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen';
@@ -298,7 +297,6 @@ const renderRoutes = () => (
         )}
       />
 
-      {/* Privacy, refund policies, and terms and conditions routes */}
       <Route
         path={`/privacy`}
         exact

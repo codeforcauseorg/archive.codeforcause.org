@@ -86,9 +86,9 @@ const useStyles = makeStyles(theme => ({
   },
 
   slide: {
-    perspective: 0, // create perspective
+    perspective: 0, 
     overflow: 'hidden',
-    // relative is a must if you want to create overlapping layers in children
+    
     position: 'relative'
   },
   background: {
@@ -243,8 +243,7 @@ export default function CourseCard({ course }) {
             </Box>
           </Typography>
         </Link>
-        {/* <Typography style={{fontSize: '0.56rem', padding: '0px 10px'}} variant='caption'>
-                    You will be able to enroll into the course as soon as you successfully completed your online meeting.</Typography> */}
+        
       </Card>
     </Box>
   );

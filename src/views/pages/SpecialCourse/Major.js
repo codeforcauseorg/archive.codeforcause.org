@@ -74,9 +74,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   slide: {
-    perspective: 0, // create perspective
+    perspective: 0, 
     overflow: 'hidden',
-    // relative is a must if you want to create overlapping layers in children
     position: 'relative'
   },
   background: {
@@ -96,9 +95,7 @@ export default function Major({ course }) {
         <Box display="flex" flexDirection="column">
           <Details course={course} />
 
-          {/* <Hidden mdUp>
-            <Projects projects={course.projects} flat={true} />
-          </Hidden> */}
+        
 
           <Overview course={course} />
           <Topics course={course} />

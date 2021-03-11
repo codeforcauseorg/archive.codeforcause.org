@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from './Developer.module.css';
 import { Grid, Typography, makeStyles } from '@material-ui/core';
 import Businessman from '../../../../assets/images/Businessman.png';
 
@@ -37,7 +36,6 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '30px',
     borderTopLeftRadius: '350px',
     borderBottomLeftRadius: '50px',
-    // boxShadow: "0px 0px 14px rgba(0, 0, 0, 0.1), inset 0px 0px 18px #BAAEAE",
     opacity: '0.7',
     zIndex: '200',
     [theme.breakpoints.down('xs')]: {

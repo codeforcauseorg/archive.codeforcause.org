@@ -74,9 +74,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   slide: {
-    perspective: 0, // create perspective
-    overflow: 'hidden',
-    // relative is a must if you want to create overlapping layers in children
+    perspective: 0, 
+        overflow: 'hidden',
     position: 'relative'
   },
   background: {

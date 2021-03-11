@@ -96,10 +96,7 @@ export default function Major({ course }) {
         <Box display="flex" flexDirection="column">
           <Details course={course} />
 
-          {/* <Hidden mdUp>
-            <Projects projects={course.projects} flat={true} />
-          </Hidden> */}
-
+         
           <Overview course={course} />
           <Topics course={course} />
         </Box>

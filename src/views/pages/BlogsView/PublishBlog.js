@@ -106,7 +106,6 @@ function Form() {
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
 
-  //   const { enqueueSnackbar } = useSnackbar();
 
   const handleChange = event => {
     updateFormData({
@@ -119,21 +118,7 @@ function Form() {
     setSubmitting(1);
     e.preventDefault();
     formData.source = window.location.href;
-    // axios({
-    //   method: 'post',
-    //   url:
-    //     'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/enquiries',
-    //   data: formData
-    // })
-    //   .then(response => {
-    //     setSubmitting(0);
-    //     updateFormData({ name: '', email: '', phone: '' });
-    //     enqueueSnackbar('Request Submitted Successfully.');
-    //   })
-    //   .catch(error => {
-    //     enqueueSnackbar('Request Failed. Please check your connection.');
-    //     setSubmitting(0);
-    //   });
+    
   };
 
   return (

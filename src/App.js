@@ -14,8 +14,6 @@ import {
 } from '@material-ui/core';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import Auth from 'src/components/auth/Auth';
-// import CookiesNotification from 'src/components/CookiesNotification';
-// import SettingsNotification from 'src/components/SettingsNotification';
 import GoogleAnalytics from 'src/components/GoogleAnalytics';
 import ScrollReset from 'src/components/ScrollReset';
 import useSettings from 'src/hooks/useSettings';
@@ -80,8 +78,7 @@ function App() {
               <Auth>
                 <ScrollReset />
                 <GoogleAnalytics />
-                {/* <CookiesNotification /> */}
-                {/* <SettingsNotification /> */}
+               
                 <Routes />
               </Auth>
             </Router>
