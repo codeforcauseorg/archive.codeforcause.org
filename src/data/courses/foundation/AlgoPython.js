@@ -47,7 +47,7 @@ export const algoPython = {
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '27 Live Lectures (3 hrs)',
-      language: 'Hindi',
+      language: 'English',
       active: false
     }
   ],
