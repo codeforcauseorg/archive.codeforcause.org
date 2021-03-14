@@ -32,7 +32,7 @@ export const algoPython = {
       link: '',
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
-      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
+      priceId: 'price_1I0UwFLVU3L7vcSr9y77KiRe',
       duration: '27 Live Lectures (3 hrs)',
       language: 'English',
       active: false
@@ -45,7 +45,7 @@ export const algoPython = {
       link: '',
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
-      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
+      priceId: 'price_1I0UwFLVU3L7vcSr9y77KiRe',
       duration: '27 Live Lectures (3 hrs)',
       language: 'English',
       active: false
