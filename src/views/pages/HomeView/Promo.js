@@ -57,6 +57,22 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
+    name: 'WhatsApp Clone',
+    applied_on: '',
+    desc:
+      'We will build app with MERN (MongoDB ExpressJS ReactJS and Node) in hands-on packed manner. You will be on jouney of learning key steps in creating web and mobile applications.',
+    links: [
+      {
+        name: 'Know Details',
+        link: '/whatsapp-clone-with-mern'
+      }
+    ],
+    terms: '',
+    special_price: '685/-',
+    original_price: '₹ 3,880',
+    pic: '/static/images/backs/wapp.jpg'
+  },
+  {
     name: 'MERN Scholarship',
     applied_on: '*Only Applied on Web Development with JS',
     desc:
@@ -72,6 +88,7 @@ const offers = [
     original_price: '₹ 12,000',
     pic: '/static/images/backs/sc.png'
   }
+  
 ];
 
 function Promo({ benefits, className, ...rest }) {
