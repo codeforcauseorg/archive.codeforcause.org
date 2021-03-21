@@ -175,6 +175,15 @@ const renderRoutes = () => (
         )}
       />
       <Route
+        path={`/whatsapp-clone-with-mern`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage course={bootcampsContent.js.whatsAppClone} {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
         path={`/zomato-clone-with-react-js`}
         exact
         render={props => (

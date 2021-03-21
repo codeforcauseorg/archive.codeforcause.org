@@ -1,4 +1,5 @@
 import { zomatoClone } from './ZomatoClone';
-const js = { zomatoClone };
+import { whatsAppClone } from './WhatsAppClone';
+const js = { zomatoClone, whatsAppClone };
 
 export default js;
