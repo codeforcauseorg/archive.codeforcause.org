@@ -14,8 +14,8 @@ export const webDevelopment = {
     {
       courseId: 'jsfs0121',
       dates: '15th Apr - 15th July',
-      days: 'Sat, Sun, Tue, Thu',
-      timing: '12:00 PM - 02:00 PM (IST)',
+      days: 'Wed, Fri, Sat, Sun',
+      timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
