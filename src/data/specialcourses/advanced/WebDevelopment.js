@@ -6,12 +6,12 @@ export const webDevelopment = {
   link: '/special-practical-webdev-with-js',
   domain: 'Web Development Ground Up',
   title: 'Practical Full Stack Web Development with JS',
-  upcoming: 'March 29th',
+  upcoming: 'April 1st',
   mentors: ['anuj', 'ganga'],
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '29th March - 15th June',
+      dates: '1st April - 15th June',
       days: 'Mon, Tue, Thr, Fri',
       timing: '6:00 PM - 07:00 PM (IST)',
       link: '',
