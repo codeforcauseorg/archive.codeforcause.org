@@ -8,6 +8,7 @@ export const webDevelopment = {
   title: 'Practical Full Stack Web Development with JS',
   upcoming: 'April 1st',
   mentors: ['anuj', 'ganga'],
+  active: false,
   schedule: [
     {
       courseId: 'jsfs0121',

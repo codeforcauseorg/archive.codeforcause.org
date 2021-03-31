@@ -116,6 +116,7 @@ export default function ApplyModal({
   return (
     <div>
       <Button
+        disabled={!course.active}
         className={classes.btn}
         size="large"
         variant="contained"
@@ -123,7 +124,7 @@ export default function ApplyModal({
         {...rest}
         fullWidth={fullWidth}
       >
-        Apply Now
+        {course.active ? 'Apply Now' : 'Applications Closed'}
       </Button>
       <Dialog
         fullWidth
