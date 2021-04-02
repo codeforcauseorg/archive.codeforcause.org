@@ -84,7 +84,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function FinalAction({ course, isFoundation, batch }) {
+export default function FinalAction({ course, batch }) {
   const classes = useStyles();
   // const [applyState, setApplyState] = useState('Enquire');
 
@@ -234,7 +234,6 @@ export default function FinalAction({ course, isFoundation, batch }) {
           <Box style={{ width: '100%' }}>
             <ApplyModal
               course={course}
-              isFoundation={isFoundation}
               batch={batch}
               fullWidth={true}
               style={{

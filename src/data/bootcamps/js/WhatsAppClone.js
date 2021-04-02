@@ -20,7 +20,7 @@ export const whatsAppClone = {
       price: '₹ 685',
       priceId: 'https://pages.razorpay.com/whatsappclone',
       duration: '6 Live Lectures',
-      active: false
+      active: true
     }
   ],
   projects: [

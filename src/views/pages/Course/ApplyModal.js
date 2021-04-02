@@ -42,7 +42,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function ApplyModal({
   course,
-  isFoundation,
   batch,
   fullWidth = false,
   ...rest
@@ -117,7 +116,7 @@ export default function ApplyModal({
 
   return (
     <div>
-      {isFoundation ? (
+      {batch.active ? (
         <Button
         className={classes.btn}
         size="large"
@@ -125,7 +124,6 @@ export default function ApplyModal({
         onClick={handleClickOpen}
         {...rest}
         fullWidth={fullWidth}
-        disabled
       >
         Register Now
       </Button>
@@ -137,6 +135,7 @@ export default function ApplyModal({
         onClick={handleClickOpen}
         {...rest}
         fullWidth={fullWidth}
+        disabled
       >
         Register Now
       </Button>

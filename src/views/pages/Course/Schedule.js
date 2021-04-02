@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Schedule({ course, isFoundation }) {
+export default function Schedule({ course }) {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(course.default);
 
@@ -80,7 +80,6 @@ export default function Schedule({ course, isFoundation }) {
                 <BatchDropBox
                   key={batchIndex}
                   course={course}
-                  isFoundation={isFoundation}
                   batch={batch}
                   batchIndex={batchIndex}
                   expanded={expanded}
@@ -95,7 +94,7 @@ export default function Schedule({ course, isFoundation }) {
   );
 }
 
-function BatchDropBox({ course, isFoundation, batch, batchIndex, expanded, setExpanded }) {
+function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
   return (
     <Box
       display="flex"
@@ -310,7 +309,7 @@ function BatchDropBox({ course, isFoundation, batch, batchIndex, expanded, setEx
               borderRadius: '5px'
             }}
           >
-            <ApplyModal course={course} isFoundation={isFoundation} batch={batch} />
+            <ApplyModal course={course} batch={batch} />
           </Box>
         </Box>
       </Collapse>
