@@ -116,31 +116,17 @@ export default function ApplyModal({
 
   return (
     <div>
-      {batch.active ? (
-        <Button
+      <Button
         className={classes.btn}
         size="large"
         variant="contained"
         onClick={handleClickOpen}
         {...rest}
         fullWidth={fullWidth}
+        disabled={!batch.active}
       >
         Register Now
       </Button>
-      ) : (
-        <Button
-        className={classes.btn}
-        size="large"
-        variant="contained"
-        onClick={handleClickOpen}
-        {...rest}
-        fullWidth={fullWidth}
-        disabled
-      >
-        Register Now
-      </Button>
-      )}
-       
       {batch.iwd ? (
         <Button
           className={classes.btn}
