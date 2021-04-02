@@ -42,6 +42,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ApplyModal({
   course,
+  isFoundation,
   batch,
   fullWidth = false,
   ...rest
@@ -116,7 +117,20 @@ export default function ApplyModal({
 
   return (
     <div>
-      <Button
+      {isFoundation ? (
+        <Button
+        className={classes.btn}
+        size="large"
+        variant="contained"
+        onClick={handleClickOpen}
+        {...rest}
+        fullWidth={fullWidth}
+        disabled
+      >
+        Register Now
+      </Button>
+      ) : (
+        <Button
         className={classes.btn}
         size="large"
         variant="contained"
@@ -126,6 +140,8 @@ export default function ApplyModal({
       >
         Register Now
       </Button>
+      )}
+       
       {batch.iwd ? (
         <Button
           className={classes.btn}

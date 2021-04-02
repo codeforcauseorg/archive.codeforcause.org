@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function CoursePage({ course }) {
+function CoursePage({ course, isFoundation }) {
   const batch = course.schedule[0];
 
   const classes = useStyles();
@@ -32,10 +32,10 @@ function CoursePage({ course }) {
       <Major course={course} />
       {/* <CourseFeatures /> */}
       <Process />
-      <Schedule course={course} />
+      <Schedule course={course} isFoundation={isFoundation}/>
       <Features />
       <Recommendations />
-      <FinalAction course={course} batch={batch} />
+      <FinalAction course={course} isFoundation={isFoundation} batch={batch} />
       <FAQ course={course} />
       <CTA />
       <Footer />

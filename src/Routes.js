@@ -211,6 +211,7 @@ const renderRoutes = () => (
           <MainLayout>
             <CoursePage
               course={coursesContent.foundation.algoJava}
+              isFoundation={true}
               {...props}
             />
           </MainLayout>
@@ -223,6 +224,7 @@ const renderRoutes = () => (
           <MainLayout>
             <CoursePage
               course={coursesContent.foundation.algoPython}
+              isFoundation={true}
               {...props}
             />
           </MainLayout>
@@ -233,7 +235,11 @@ const renderRoutes = () => (
         exact
         render={props => (
           <MainLayout>
-            <CoursePage course={coursesContent.foundation.algoJS} {...props} />
+            <CoursePage
+              course={coursesContent.foundation.algoJS}
+              isFoundation={true}
+              {...props} 
+            />
           </MainLayout>
         )}
       />
