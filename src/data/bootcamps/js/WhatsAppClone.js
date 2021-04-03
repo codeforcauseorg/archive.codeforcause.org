@@ -104,11 +104,13 @@ export const whatsAppClone = {
   ],
   tags: [
     'React',
-    'Ionic React',
+    'MongoDB',
     'Express',
     'Firebase',
     'Server',
-    'Payment Gateway'
+    'Chat',
+    'WebRTC',
+    'P2P'
   ],
   overview: [
     "We will cover MERN (MongoDB ExpressJS ReactJS and Node) in hands-on packed manner. From CRUD operation and REST API to storing BLOB items in MongoDB with ExpressJS. You will be on jouney of learning key steps in creating web and mobile applications.",
