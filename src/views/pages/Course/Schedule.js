@@ -163,7 +163,7 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
               }}
               component={'span'}
             >
-              <Box fontWeight={300}>Applications Open</Box>
+              <Box fontWeight={300}>{batch.active ? "Applications Open" : "Applications Closed"}</Box>
             </Typography>
           </Box>
 
