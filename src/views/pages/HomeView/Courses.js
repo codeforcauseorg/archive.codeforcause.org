@@ -126,7 +126,7 @@ export default function Courses() {
     bgColor: '#1D006E'
   });
 
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(2);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
