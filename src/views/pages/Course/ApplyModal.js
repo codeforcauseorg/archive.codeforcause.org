@@ -10,7 +10,8 @@ import {
   MenuItem,
   Grid
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {
   ValidatorForm,
@@ -114,18 +115,30 @@ export default function ApplyModal({
     .map((x, y) => x + y)
     .reverse();
 
+  const theme = createMuiTheme({
+    palette: {
+      action: {
+        disabledBackground: '#A60000',
+        disabled: '	#C0C0C0'
+      }
+    }
+  });
+
   return (
     <div>
-      <Button
-        className={classes.btn}
-        size="large"
-        variant="contained"
-        onClick={handleClickOpen}
-        {...rest}
-        fullWidth={fullWidth}
-      >
-        Register Now
-      </Button>
+      <ThemeProvider theme={theme}>
+        <Button
+          className={classes.btn}
+          size="large"
+          variant="contained"
+          onClick={handleClickOpen}
+          {...rest}
+          fullWidth={fullWidth}
+          disabled={!batch.active}
+        >
+          {batch.active ? "Register Now" : "Applications Closed"}
+        </Button>
+      </ThemeProvider>
       {batch.iwd ? (
         <Button
           className={classes.btn}
