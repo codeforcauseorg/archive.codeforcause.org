@@ -174,15 +174,33 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
+
+      <Route
+        path={`/six-weeks-of-dsa-with-cpp`}
+        exact
+        render={props => (
+          <MainLayout>
+            <SpecialCoursePage
+              course={specialContent.foundation.cppBootcamp}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
       <Route
         path={`/whatsapp-clone-with-mern`}
         exact
         render={props => (
           <MainLayout>
-            <BootcampPage course={bootcampsContent.js.whatsAppClone} {...props} />
+            <BootcampPage
+              course={bootcampsContent.js.whatsAppClone}
+              {...props}
+            />
           </MainLayout>
         )}
       />
+      
       <Route
         path={`/zomato-clone-with-react-js`}
         exact

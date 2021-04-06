@@ -280,11 +280,11 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
                 {batch.price}
               </Typography>
             </Box>
-            <Typography>
+            {batch.application ? <Typography>
               You are submitting Scholarship Application. You will get an email
               for fee payment if you get selected. Fees is completely non
               refundable.
-            </Typography>
+            </Typography> : undefined}
           </Box>
 
           <Box

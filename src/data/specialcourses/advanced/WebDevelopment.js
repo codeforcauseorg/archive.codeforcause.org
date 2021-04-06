@@ -1,5 +1,6 @@
 export const webDevelopment = {
   courseid: '',
+  discount: "90% Scholarship",
   difficulty: 'Foundation',
   duration: '40 Live Lectures',
   level: 'Level 1',
@@ -9,6 +10,7 @@ export const webDevelopment = {
   upcoming: 'April 1st',
   mentors: ['anuj', 'ganga'],
   active: false,
+  application: true,
   schedule: [
     {
       courseId: 'jsfs0121',
@@ -20,7 +22,8 @@ export const webDevelopment = {
       price: '₹ 1200',
       priceId: 'https://rzp.io/l/webdevcfc',
       duration: '40 Live Lectures',
-      active: false
+      active: false,
+      application: true
     }
   ],
   projects: [

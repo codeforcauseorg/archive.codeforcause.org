@@ -39,7 +39,7 @@ function Projects({ projects, flat }) {
               margin: '12px 0px 12px 8px'
             }}
           >
-            Projects you'll make in this course
+            You'll make in this course
           </Typography>
           {projects.map((project, index) => {
             return <Project project={project} />;

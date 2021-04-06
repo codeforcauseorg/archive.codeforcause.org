@@ -7,11 +7,11 @@ export const members = {
     avatar: '/static/images/members/anuj.png',
     linkedin: 'https://www.linkedin.com/in/keenwarrior/'
   },
-  gaurav: {
-    name: 'Gaurav Beriwal',
+  nityanand: {
+    name: 'Nityanand Rai',
     position: 'Instructor',
-    avatar: '/static/images/members/gaurav.png',
-    linkedin: 'https://www.linkedin.com/in/gauravberiwal/'
+    avatar: '/static/images/members/nityanand.png',
+    linkedin: 'https://www.linkedin.com/in/nityanand-rai-905854184/'
   },
   kunal: {
     name: 'Kunal Kushwaha',

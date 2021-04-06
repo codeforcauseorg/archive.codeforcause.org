@@ -50,25 +50,43 @@ export default function ApplyModal({
   const [open, setOpen] = useState(false);
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
+  const [checking, setChecking] = useState(false);
 
   const { enqueueSnackbar } = useSnackbar();
 
   const user = useSelector(state => state.account.user);
   const dispatch = useDispatch();
 
+  const handleLogin = () => {
+    dispatch(login());
+  };
+
   const handleClickOpen = () => {
-    setOpen(true);
-    if (!user) {
-      dispatch(login());
-    } else {
-      updateFormData({
-        countryCode: '+91',
-        phone: '',
-        priceId: batch.priceId,
-        email: user.email,
-        name: user.displayName
-      });
-    }
+    setChecking(true);
+    console.log(user.email);
+    axios(
+      'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special/status/',
+      {
+        params: { email: user.email }
+      }
+    ).then(response => {
+      setChecking(false);
+      if (response.data.status === 'Credit') {
+        enqueueSnackbar('Registration is already complete with this account.');
+      } else {
+        setOpen(true);
+        updateFormData({
+          countryCode: '+91',
+          phone: '',
+          priceId: batch.priceId,
+          email: user.email,
+          name: user.displayName
+        });
+      }
+    }).catch(err=>{
+      setChecking(false);
+      enqueueSnackbar('Application Failed. Try again later');
+    });
   };
 
   const handleClose = () => {
@@ -85,7 +103,6 @@ export default function ApplyModal({
   const handleSubmit = e => {
     formData.phone = `${formData.countryCode}${formData.phone}`;
     formData.source = window.location.href;
-    formData.batch = batch;
     formData.courseName = course.title;
     formData.email = user.email;
     setSubmitting(1);
@@ -97,11 +114,20 @@ export default function ApplyModal({
       data: formData
     })
       .then(response => {
-        setSubmitting(0);
-        handleClose();
-        enqueueSnackbar(
-          'Application Submitted. You will be contacted over email.'
-        );
+        if (response.data.status && response.data.status === 'Credit') {
+          enqueueSnackbar(
+            'Registration is already complete with this account.'
+          );
+          setSubmitting(0);
+          handleClose();
+        } else if (response.data.payment_request) {
+          window.open(response.data.payment_request.longurl);
+          enqueueSnackbar('Forwarding to fees payment.');
+          setSubmitting(0);
+          handleClose();
+        } else {
+          enqueueSnackbar('Application Failed. Try again later');
+        }
       })
       .catch(error => {
         enqueueSnackbar('Application Failed. Try again later');
@@ -115,17 +141,32 @@ export default function ApplyModal({
 
   return (
     <div>
-      <Button
-        disabled={!course.active}
-        className={classes.btn}
-        size="large"
-        variant="contained"
-        onClick={handleClickOpen}
-        {...rest}
-        fullWidth={fullWidth}
-      >
-        {course.active ? 'Apply Now' : 'Applications Closed'}
-      </Button>
+      {user ? (
+        <Button
+          disabled={!course.active}
+          className={classes.btn}
+          size="large"
+          variant="contained"
+          onClick={handleClickOpen}
+          {...rest}
+          fullWidth={fullWidth}
+        >
+          {course.active ? (checking ? "Checking Seats..." : "Register") : 'Applications Closed'}
+        </Button>
+      ) : (
+        <Button
+          disabled={!course.active}
+          className={classes.btn}
+          size="large"
+          variant="contained"
+          onClick={handleLogin}
+          {...rest}
+          fullWidth={fullWidth}
+        >
+          {course.active ? 'Sign in to Register' : 'Applications Closed'}
+        </Button>
+      )}
+
       <Dialog
         fullWidth
         open={open && user}
@@ -255,22 +296,6 @@ export default function ApplyModal({
               onChange={handleChange}
               validators={[]}
               errorMessages={[]}
-            />
-
-            <TextValidator
-              required
-              key="why"
-              className={classes.textField}
-              label="Why you deserve this Scholarship?"
-              variant="outlined"
-              value={formData.why}
-              fullWidth
-              multiline
-              rows={3}
-              name="why"
-              onChange={handleChange}
-              validators={['required']}
-              errorMessages={['This is a required field']}
             />
 
             <DialogContentText>

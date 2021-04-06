@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProcessSteppers from './ProcessSteppers';
+import Countdown from 'react-countdown';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Process({ benefits, className, ...rest }) {
+function Process({ course, className, ...rest }) {
   const classes = useStyles();
 
   return (
@@ -27,24 +28,61 @@ function Process({ benefits, className, ...rest }) {
           align="center"
           gutterBottom
         >
-          Offering 90% Scholarship On this Batch
+          {`Offering ${course.discount} On this Batch`}
         </Typography>
 
-        <Typography
-          style={{ marginTop: '32px', color: '#ffffff' }}
-          variant="h4"
-          align="center"
-          gutterBottom
-        >
-          Application Process To Get Shortlisted
-        </Typography>
-        <Grid container component="dl" style={{ padding: '20px 0px 20px' }}>
-          <ProcessSteppers />
-        </Grid>
+        {course.application ? (
+          <React.Fragment>
+            <Typography
+              style={{ marginTop: '32px', color: '#ffffff' }}
+              variant="h2"
+              align="center"
+              gutterBottom
+            >
+              Application Process To Get Shortlisted
+            </Typography>
+            <Grid container component="dl" style={{ padding: '20px 0px 20px' }}>
+              <ProcessSteppers />
+            </Grid>
+          </React.Fragment>
+        ) : (
+          <Countdown
+            date={Date.parse(course.discountEnds)}
+            renderer={renderer}
+          />
+        )}
       </Container>
     </div>
   );
 }
+
+const Completionist = () => (
+  <Typography
+    style={{ marginTop: '32px', color: '#ffffff' }}
+    variant="h1"
+    align="center"
+    gutterBottom
+  >
+    Offer Expired
+  </Typography>
+);
+
+const renderer = ({ days, completed }) => {
+  if (completed) {
+    return <Completionist />;
+  } else {
+    return (
+      <Typography
+        style={{ marginTop: '32px', color: '#ffffff' }}
+        variant="h1"
+        align="center"
+        gutterBottom
+      >
+        Ending {days === 0 ? 'Today' : `in ${days} days`}
+      </Typography>
+    );
+  }
+};
 
 Process.propTypes = {
   className: PropTypes.string

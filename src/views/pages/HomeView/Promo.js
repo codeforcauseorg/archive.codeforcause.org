@@ -57,13 +57,29 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
+    name: '6 Weeks of DSA with C++',
+    applied_on: 'Special offer till 11th April',
+    desc:
+      'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
+    links: [
+      {
+        name: 'Know More',
+        link: '/six-weeks-of-dsa-with-cpp'
+      }
+    ],
+    terms: '',
+    special_price: '1500/-',
+    original_price: '₹ 10,000',
+    pic: '/static/images/backs/dsa.png'
+  },
+  {
     name: 'WhatsApp Clone',
     applied_on: '',
     desc:
       'We will build app with MERN (MongoDB ExpressJS ReactJS and Node) in hands-on packed manner. You will be on jouney of learning key steps in creating web and mobile applications.',
     links: [
       {
-        name: 'Know Details',
+        name: 'Know More',
         link: '/whatsapp-clone-with-mern'
       }
     ],
@@ -71,22 +87,6 @@ const offers = [
     special_price: '685/-',
     original_price: '₹ 3,880',
     pic: '/static/images/backs/wapp.jpg'
-  },
-  {
-    name: 'MERN Scholarship',
-    applied_on: '*Only Applied on Web Development with JS',
-    desc:
-      'Introducing the MERN scholarship for Web Enthusiast, a thorough go through of every concept and building awesome project while learning and implementing concepts of MERN Stack.',
-    links: [
-      {
-        name: 'Apply Now',
-        link: '/special-practical-webdev-with-js'
-      }
-    ],
-    terms: '',
-    special_price: '1200/-',
-    original_price: '₹ 12,000',
-    pic: '/static/images/backs/sc.png'
   }
   
 ];

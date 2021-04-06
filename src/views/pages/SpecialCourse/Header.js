@@ -14,14 +14,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Header({ benefits, className, ...rest }) {
+function Header({ course, className, ...rest }) {
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Typography style={{ color: '#ffffff' }} variant="h3" align="center">
-          Offering 90% Scholarship On this Batch. Apply Now.
+          {`Offering ${course.discount} On this Batch. Apply Now.`}
         </Typography>
       </Container>
     </div>

@@ -26,10 +26,10 @@ function SpecialCoursePage({ course }) {
 
   return (
     <Page className={classes.root} title={course.title}>
-      <Header />
+      <Header course={course}/>
       <Major course={course} />
       {/* <CourseFeatures /> */}
-      <Process />
+      <Process course={course}/>
       <Schedule course={course} />
       <Features />
       <Recommendations />
