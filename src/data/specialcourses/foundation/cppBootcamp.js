@@ -8,7 +8,7 @@ export const cppBootcamp = {
   domain: 'DSA Ground Up',
   title: 'Six Weeks of Data Structures and Algorithms with C++',
   upcoming: 'April 22nd',
-  mentors: ['nityanand'],
+  mentors: ['anuj', 'nityanand'],
   active: true,
   application: false,
   discountEnds: '12 Apr 2021 00:00:00 GMT',
