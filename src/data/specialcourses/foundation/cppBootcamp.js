@@ -10,7 +10,7 @@ export const cppBootcamp = {
   upcoming: 'April 22nd',
   mentors: ['nityanand'],
   active: true,
-  application: true,
+  application: false,
   discountEnds: '12 Apr 2021 00:00:00 GMT',
   schedule: [
     {
@@ -23,7 +23,7 @@ export const cppBootcamp = {
       price: '₹ 1500',
       duration: '24 Live Lectures',
       active: true,
-      application: true
+      application: false
     }
   ],
 
