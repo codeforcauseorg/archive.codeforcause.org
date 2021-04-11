@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 const offers = [
   {
     name: '6 Weeks of DSA with C++',
-    applied_on: 'Special offer till 11th April',
+    applied_on: 'Special offer till 18th April',
     desc:
       'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
     links: [
