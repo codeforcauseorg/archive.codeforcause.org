@@ -48,7 +48,7 @@ function Process({ course, className, ...rest }) {
         ) : (
           ''
           // Temporarily disabled...............
-          // <Countdown 
+          // <Countdown
           //   date={Date.parse(course.discountEnds)}
           //   renderer={renderer}
           // />

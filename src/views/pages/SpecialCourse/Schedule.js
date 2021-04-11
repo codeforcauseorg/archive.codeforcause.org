@@ -159,7 +159,9 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
                 width: '100%'
               }}
             >
-              <Box fontWeight={300}>{batch.active ? "Applications Open" : "Applications Closed"}</Box>
+              <Box fontWeight={300}>
+                {batch.active ? 'Applications Open' : 'Applications Closed'}
+              </Box>
             </Typography>
           </Box>
 
@@ -280,11 +282,15 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
                 {batch.price}
               </Typography>
             </Box>
-            {batch.application ? <Typography>
-              You are submitting Scholarship Application. You will get an email
-              for fee payment if you get selected. Fees is completely non
-              refundable.
-            </Typography> : undefined}
+            {batch.application ? (
+              <Typography>
+                You are submitting Scholarship Application. You will get an
+                email for fee payment if you get selected. Fees is completely
+                non refundable.
+              </Typography>
+            ) : (
+              undefined
+            )}
           </Box>
 
           <Box

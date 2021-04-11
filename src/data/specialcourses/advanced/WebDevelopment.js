@@ -1,6 +1,6 @@
 export const webDevelopment = {
   courseid: '',
-  discount: "90% Scholarship",
+  discount: '90% Scholarship',
   difficulty: 'Foundation',
   duration: '40 Live Lectures',
   level: 'Level 1',

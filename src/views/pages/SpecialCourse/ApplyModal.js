@@ -69,24 +69,28 @@ export default function ApplyModal({
       {
         params: { email: user.email }
       }
-    ).then(response => {
-      setChecking(false);
-      if (response.data.status === 'Credit') {
-        enqueueSnackbar('Registration is already complete with this account.');
-      } else {
-        setOpen(true);
-        updateFormData({
-          countryCode: '+91',
-          phone: '',
-          priceId: batch.priceId,
-          email: user.email,
-          name: user.displayName
-        });
-      }
-    }).catch(err=>{
-      setChecking(false);
-      enqueueSnackbar('Application Failed. Try again later');
-    });
+    )
+      .then(response => {
+        setChecking(false);
+        if (response.data.status === 'Credit') {
+          enqueueSnackbar(
+            'Registration is already complete with this account.'
+          );
+        } else {
+          setOpen(true);
+          updateFormData({
+            countryCode: '+91',
+            phone: '',
+            priceId: batch.priceId,
+            email: user.email,
+            name: user.displayName
+          });
+        }
+      })
+      .catch(err => {
+        setChecking(false);
+        enqueueSnackbar('Application Failed. Try again later');
+      });
   };
 
   const handleClose = () => {
@@ -151,7 +155,11 @@ export default function ApplyModal({
           {...rest}
           fullWidth={fullWidth}
         >
-          {course.active ? (checking ? "Checking Seats..." : "Register") : 'Applications Closed'}
+          {course.active
+            ? checking
+              ? 'Checking Seats...'
+              : 'Register'
+            : 'Applications Closed'}
         </Button>
       ) : (
         <Button

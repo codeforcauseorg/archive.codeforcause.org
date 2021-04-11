@@ -1,6 +1,6 @@
 export const cppBootcamp = {
   courseid: '',
-  discount: "85% Discount",
+  discount: '85% Discount',
   difficulty: 'Foundation',
   duration: '24 Live Lectures',
   level: 'Level 1',
@@ -127,7 +127,7 @@ export const cppBootcamp = {
             'Classes & Objects',
             'Constructors, states & behaviors',
             'Abstraction, Inheritance, Polymorphism, Encapsulation',
-            'Access modifiers',
+            'Access modifiers'
           ]
         },
         {

@@ -136,7 +136,7 @@ export default function ApplyModal({
           fullWidth={fullWidth}
           disabled={!batch.active}
         >
-          {batch.active ? "Register Now" : "Applications Closed"}
+          {batch.active ? 'Register Now' : 'Applications Closed'}
         </Button>
       </ThemeProvider>
       {batch.iwd ? (

@@ -200,7 +200,7 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
-      
+
       <Route
         path={`/zomato-clone-with-react-js`}
         exact

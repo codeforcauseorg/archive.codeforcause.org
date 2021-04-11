@@ -88,7 +88,6 @@ const offers = [
     original_price: '₹ 3,880',
     pic: '/static/images/backs/wapp.jpg'
   }
-  
 ];
 
 function Promo({ benefits, className, ...rest }) {

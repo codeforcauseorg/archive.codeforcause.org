@@ -113,8 +113,8 @@ export const whatsAppClone = {
     'P2P'
   ],
   overview: [
-    "We will cover MERN (MongoDB ExpressJS ReactJS and Node) in hands-on packed manner. From CRUD operation and REST API to storing BLOB items in MongoDB with ExpressJS. You will be on jouney of learning key steps in creating web and mobile applications.",
-    "With this Bootcamp, we are providing a hands-on approach to learn React, Firebase, express and how to get them wired."
+    'We will cover MERN (MongoDB ExpressJS ReactJS and Node) in hands-on packed manner. From CRUD operation and REST API to storing BLOB items in MongoDB with ExpressJS. You will be on jouney of learning key steps in creating web and mobile applications.',
+    'With this Bootcamp, we are providing a hands-on approach to learn React, Firebase, express and how to get them wired.'
   ],
   faqs: [
     {
