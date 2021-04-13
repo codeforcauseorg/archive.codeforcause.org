@@ -308,8 +308,7 @@ export default function ApplyModal({
 
             <DialogContentText>
               <Typography>
-                You are submitting Scholarship Application. You will get an
-                email for fee payment if you get selected.
+                You will be redirected to payment page. For fail-safe yous will also get email containing payment link (expires in 15 minutes).
               </Typography>
             </DialogContentText>
 
