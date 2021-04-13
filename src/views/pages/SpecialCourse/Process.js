@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProcessSteppers from './ProcessSteppers';
-// import Countdown from 'react-countdown'; // temporarily disabled
+import Countdown from 'react-countdown';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,47 +46,43 @@ function Process({ course, className, ...rest }) {
             </Grid>
           </React.Fragment>
         ) : (
-          ''
-          // Temporarily disabled...............
-          // <Countdown
-          //   date={Date.parse(course.discountEnds)}
-          //   renderer={renderer}
-          // />
+          <Countdown
+            date={Date.parse(course.discountEnds)}
+            renderer={renderer}
+          />
         )}
       </Container>
     </div>
   );
 }
 
-// const Completionist = () => (
-//   <Typography
-//     style={{ marginTop: '32px', color: '#ffffff' }}
-//     variant="h1"
-//     align="center"
-//     gutterBottom
-//   >
-//     Offer Expired
-//   </Typography>
-// );
+const Completionist = () => (
+  <Typography
+    style={{ marginTop: '32px', color: '#ffffff' }}
+    variant="h1"
+    align="center"
+    gutterBottom
+  >
+    Offer Expired
+  </Typography>
+);
 
-// Temporarily disabled.......................................................................................................
-
-// const renderer = ({ days, completed }) => {
-//   if (completed) {
-//     return <Completionist />;
-//   } else {
-//     return (
-//       <Typography
-//         style={{ marginTop: '32px', color: '#ffffff' }}
-//         variant="h1"
-//         align="center"
-//         gutterBottom
-//       >
-//         Ending {days === 0 ? 'Today' : `in ${days} days`}
-//       </Typography>
-//     );
-//   }
-// };
+const renderer = ({ days, completed }) => {
+  if (completed) {
+    return <Completionist />;
+  } else {
+    return (
+      <Typography
+        style={{ marginTop: '32px', color: '#ffffff' }}
+        variant="h1"
+        align="center"
+        gutterBottom
+      >
+        Ending {days === 0 ? 'Today' : `in ${days} days`}
+      </Typography>
+    );
+  }
+};
 
 Process.propTypes = {
   className: PropTypes.string
