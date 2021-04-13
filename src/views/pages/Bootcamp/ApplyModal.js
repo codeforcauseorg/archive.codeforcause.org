@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
   btn: {
@@ -25,19 +26,30 @@ export default function ApplyModal({
     window.open(batch.priceId);
   };
 
+  const theme = createMuiTheme({
+    palette: {
+      action: {
+        disabledBackground: '#A60000',
+        disabled: '	#C0C0C0'
+      }
+    }
+  });
+
   return (
     <div>
-      <Button
-        className={classes.btn}
-        disabled={!course.enabled}
-        size="large"
-        variant="contained"
-        onClick={handleClickOpen}
-        {...rest}
-        fullWidth={fullWidth}
-      >
-        Register Now
-      </Button>
+      <ThemeProvider theme={theme}>
+        <Button
+          className={classes.btn}
+          disabled={!course.enabled}
+          size="large"
+          variant="contained"
+          onClick={handleClickOpen}
+          {...rest}
+          fullWidth={fullWidth}
+        >
+          {course.enabled ? "Register Now" : "Applications Closed"}
+        </Button>
+      </ThemeProvider>
     </div>
   );
 }
