@@ -368,6 +368,13 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
+      <Route
+        path={`/hire-with-us`}
+        exact
+        render={props => (
+            <h1>hello duniya</h1>
+        )}
+      />
       <Route component={Error404View} />
     </Switch>
   </Suspense>
