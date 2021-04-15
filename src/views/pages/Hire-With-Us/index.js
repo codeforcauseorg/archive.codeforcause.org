@@ -1,9 +1,9 @@
 import React from 'react'
-
+import TopMain from "./TopMain";
 function HIRE_WITH_US() {
     return (
         <div>
-            <h1>Hello ji</h1>
+            <TopMain />
         </div>
     )
 }
