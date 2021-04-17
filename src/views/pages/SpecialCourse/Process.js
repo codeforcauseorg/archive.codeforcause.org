@@ -63,11 +63,19 @@ const Completionist = () => (
     align="center"
     gutterBottom
   >
-    Offer Expired
+    Offer Expired.
   </Typography>
 );
 
-const renderer = ({ days, completed }) => {
+const timeString = (days, hours, minutes, seconds) => {
+  if (days > 0) {
+    return `Ending in ${days} ${days === 1 ? 'Day' : 'Days'}`;
+  } else {
+    return `Ending in ${String(hours).padStart(2, "0")} : ${String(minutes).padStart(2, "0")} : ${String(seconds).padStart(2, "0")}`;
+  }
+};
+
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
     return <Completionist />;
   } else {
@@ -78,7 +86,7 @@ const renderer = ({ days, completed }) => {
         align="center"
         gutterBottom
       >
-        Ending {days === 0 ? 'Today' : `in ${days} days`}
+        {timeString(days, hours, minutes, seconds)}
       </Typography>
     );
   }
