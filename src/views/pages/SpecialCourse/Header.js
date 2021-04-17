@@ -12,6 +12,14 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(3, 10, 3)
     },
     color: '#000000'
+  },
+  lineBox: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      alignItems: 'center'
+    }
   }
 }));
 
@@ -20,8 +28,16 @@ function Header({ course, className, ...rest }) {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Box display="flex" maxWidth="lg" justifyContent="center">
-        <Typography style={{ color: '#ffffff' }} variant="h3" align="center">
+      <Box
+        display="flex"
+        className={classes.lineBox}
+        justifyContent="center"
+      >
+        <Typography
+          style={{ color: '#ffffff', padding: '10px' }}
+          variant="h3"
+          align="center"
+        >
           {`Offering ${course.discount} On this Batch.`}
         </Typography>
         <Countdown date={Date.parse(course.discountEnds)} renderer={renderer} />
@@ -32,7 +48,7 @@ function Header({ course, className, ...rest }) {
 
 const Completionist = () => (
   <Typography
-    style={{ color: '#ffffff', paddingLeft: '10px' }}
+    style={{ color: '#ffffff', padding: '10px', align: 'center' }}
     variant="h3"
   >
     Offer Expired
@@ -54,7 +70,10 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     return <Completionist />;
   } else {
     return (
-      <Typography style={{ color: '#ffffff', paddingLeft: '10px' }} variant="h3">
+      <Typography
+        style={{ color: '#ffffff', padding: '10px', align: 'center' }}
+        variant="h3"
+      >
         {timeString(days, hours, minutes, seconds)}
       </Typography>
     );
