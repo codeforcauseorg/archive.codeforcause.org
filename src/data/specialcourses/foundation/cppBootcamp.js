@@ -11,7 +11,7 @@ export const cppBootcamp = {
   mentors: ['anuj', 'nityanand'],
   active: true,
   application: false,
-  discountEnds: '18 Apr 2021 00:00:00 GMT',
+  discountEnds: '18 Apr 2021 18:30:00 GMT',
   schedule: [
     {
       courseId: 'jsfs0121',
