@@ -34,7 +34,7 @@ function Header({ course, className, ...rest }) {
         justifyContent="center"
       >
         <Typography
-          style={{ color: '#ffffff', padding: '10px' }}
+          style={{ color: '#ffffff', padding: '5px' }}
           variant="h3"
           align="center"
         >
@@ -71,8 +71,8 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   } else {
     return (
       <Typography
-        style={{ color: '#ffffff', padding: '10px', align: 'center' }}
-        variant="h3"
+        style={{ color: '#ffffff', padding: '5px', align: 'center' }}
+        variant="h4"
       >
         {timeString(days, hours, minutes, seconds)}
       </Typography>
