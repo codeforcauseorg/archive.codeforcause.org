@@ -35,7 +35,7 @@ function Header({ course, className, ...rest }) {
       >
         <Typography
           style={{ color: '#ffffff', padding: '5px' }}
-          variant="h3"
+          variant="h4"
           align="center"
         >
           {`Offering ${course.discount} On this Batch.`}
@@ -49,7 +49,7 @@ function Header({ course, className, ...rest }) {
 const Completionist = () => (
   <Typography
     style={{ color: '#ffffff', padding: '10px', align: 'center' }}
-    variant="h3"
+    variant="h4"
   >
     Offer Expired
   </Typography>
@@ -57,11 +57,11 @@ const Completionist = () => (
 
 const timeString = (days, hours, minutes, seconds) => {
   if (days > 0) {
-    return `Ending in ${days} ${days === 1 ? 'Day' : 'Days'}.`;
+    return `Ending in ${days} ${days === 1 ? 'Day':'Days'}`;
   } else {
     return `Ending in ${String(hours).padStart(2, '0')} : ${String(
       minutes
-    ).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}.`;
+    ).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
   }
 };
 
