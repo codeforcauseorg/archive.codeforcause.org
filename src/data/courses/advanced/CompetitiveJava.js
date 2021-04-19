@@ -8,7 +8,7 @@ export const competitiveJava = {
   upcoming: 'April 15th',
   language: 'Hindi',
   mentors: ['anuj', 'kunal', 'ekta'],
-  default: 0,
+  default: 1,
   schedule: [
     {
       courseId: 'jcomp0121',
@@ -16,9 +16,21 @@ export const competitiveJava = {
       days: 'Sat, Sun, Wed, Fri',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 12,000',
-      price: '₹ 5,850',
+      priceCut: '',
+      price: '₹ 12,000',
       priceId: 'price_1I0Uz4LVU3L7vcSrx3vOaUdv',
+      duration: '40 Live Lectures',
+      active: false
+    },
+    {
+      courseId: 'jcomp0121',
+      dates: '15th June - 18th Aug',
+      days: ' Wed, Fri, Sat, Sun',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IhpOILVU3L7vcSrkFTKJrfI',
       duration: '40 Live Lectures',
       active: true
     }

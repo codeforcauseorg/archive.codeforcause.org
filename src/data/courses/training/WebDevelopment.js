@@ -18,8 +18,8 @@ export const webDevelopment = {
       days: 'Sat, Sun, Wed, Fri',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
-      priceCut: '₹ 20,000',
-      price: '₹ 9,900',
+      priceCut: '',
+      price: '₹ 20,000',
       priceId: 'price_1I0qNVLVU3L7vcSr4PmkT5pK',
       duration: '80 Live Lectures',
       active: true

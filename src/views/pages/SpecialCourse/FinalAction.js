@@ -203,17 +203,21 @@ export default function FinalAction({ course, batch }) {
                   <Box fontWeight={500}>{batch.days}</Box>
                 </Typography>
 
-                <Typography
-                  variant="h3"
-                  style={{
-                    width: '100%',
-                    marginTop: '12px',
-                    color: '#939393',
-                    textDecoration: 'line-through'
-                  }}
-                >
-                  <Box fontWeight={500}>{batch.priceCut}</Box>
-                </Typography>
+                {batch.priceCut ? (
+                  <Typography
+                    variant="h3"
+                    style={{
+                      width: '100%',
+                      marginTop: '12px',
+                      color: '#939393',
+                      textDecoration: 'line-through'
+                    }}
+                  >
+                    <Box fontWeight={500}>{batch.priceCut}</Box>
+                  </Typography>
+                ) : (
+                  undefined
+                )}
 
                 <Typography
                   variant="h2"

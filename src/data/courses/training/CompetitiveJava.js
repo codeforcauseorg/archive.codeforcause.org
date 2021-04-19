@@ -17,8 +17,8 @@ export const competitiveJava = {
       days: 'Sat, Sun, Tue, Thu',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
-      priceCut: '₹ 20,000',
-      price: '₹ 9,900',
+      priceCut: '',
+      price: '₹ 20,000',
       priceId: 'price_1I0qKLLVU3L7vcSrULlRk1ek',
       duration: '80 Live Lectures',
       active: true

@@ -8,7 +8,7 @@ export const machineLearning = {
   upcoming: 'April 15th',
   language: 'Hindi',
   mentors: ['anuj', 'kunal'],
-  default: 0,
+  default: 1,
   schedule: [
     {
       courseId: 'mlpy0121',
@@ -16,9 +16,21 @@ export const machineLearning = {
       days: 'Sat, Sun, Tue, Thu',
       timing: '08:00 PM - 10:00 PM (IST)',
       link: '',
-      priceCut: '₹ 12,000',
-      price: '₹ 5,850',
+      priceCut: '',
+      price: '₹ 12,000',
       priceId: 'price_1I0UxdLVU3L7vcSrm95JI9Jr',
+      duration: '40 Live Lectures',
+      active: false
+    },
+    {
+      courseId: 'jcomp0121',
+      dates: '15th June - 18th Aug',
+      days: ' Wed, Fri, Sat, Sun',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IhqEuLVU3L7vcSrEvZMKZxd',
       duration: '40 Live Lectures',
       active: true
     }
