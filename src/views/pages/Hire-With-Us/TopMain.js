@@ -6,7 +6,7 @@ import ButtonComponent from 'src/components/Button/ButtonComponent';
 
 const useStyles = makeStyles({
   root: {
-    backgroundImage: "url('/static/images/hire-with-us/hero.png')",
+    background: "url('/static/images/hire-with-us/topImage.png')",
     backgroundSize: 'cover'
   },
   button: {
