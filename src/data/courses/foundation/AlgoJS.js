@@ -17,8 +17,8 @@ export const algoJS = {
       days: 'Sat, Sun, Wed, Fri',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
-      priceCut: '₹ 10,000',
-      price: '₹ 4,850',
+      priceCut: '',
+      price: '₹ 10,000',
       priceId: 'price_1I0UveLVU3L7vcSrvRIaf1aL',
       duration: '40 Live Lectures (2 hrs)',
       active: false
@@ -29,8 +29,8 @@ export const algoJS = {
       days: 'Sat, Sun, Wed, Fri',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
-      priceCut: '₹ 10,000',
-      price: '₹ 4,850',
+      priceCut: '',
+      price: '₹ 10,000',
       priceId: 'price_1I0UveLVU3L7vcSrvRIaf1aL',
       duration: '40 Live Lectures (2 hrs)',
       active: false

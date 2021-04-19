@@ -9,7 +9,7 @@ export const webDevelopment = {
   upcoming: 'April 15th',
   language: 'Hindi',
   mentors: ['ganga', 'anuj'],
-  default: 0,
+  default: 1,
   schedule: [
     {
       courseId: 'jsfs0121',
@@ -17,9 +17,21 @@ export const webDevelopment = {
       days: 'Wed, Fri, Sat, Sun',
       timing: '04:00 PM - 06:00 PM (IST)',
       link: '',
-      priceCut: '₹ 12,000',
-      price: '₹ 5,850',
+      priceCut: '',
+      price: '₹ 12,000',
       priceId: 'price_1I0UyTLVU3L7vcSrBn1QACYX',
+      duration: '40 Live Lectures',
+      active: false
+    },
+    {
+      courseId: 'jsfs0121',
+      dates: '20th Jun - 25th Aug',
+      days: 'Wed, Fri, Sat, Sun',
+      timing: '09:00 PM - 11:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IhqFcLVU3L7vcSrTq3eqfJk',
       duration: '40 Live Lectures',
       active: true
     }

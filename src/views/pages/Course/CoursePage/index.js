@@ -9,7 +9,7 @@ import FAQ from '../FAQ';
 import Features from '../Features';
 import FinalAction from '../FinalAction';
 import Major from '../Major';
-import Process from '../Process';
+// import Process from '../Process';
 import Schedule from '../Schedule';
 // import SpecialHeader from '../specialDis';
 // import CourseFeatures from '../partials/CourseFeatures';
@@ -31,7 +31,7 @@ function CoursePage({ course }) {
       {/* <SpecialHeader event={course.events} /> */}
       <Major course={course} />
       {/* <CourseFeatures /> */}
-      <Process />
+      {/* <Process /> */}
       <Schedule course={course} />
       <Features />
       <Recommendations />
