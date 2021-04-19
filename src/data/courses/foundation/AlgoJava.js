@@ -7,7 +7,7 @@ export const algoJava = {
   title: 'Data Structures and Algorithms with Java',
   started: 'Jan 30th (Regular)',
   upcoming: 'March 14th (Weekends)',
-  mentors: ['anuj', 'kunal', 'ekta', 'shubham'],
+  mentors: ['anuj', 'kunal', 'ekta', 'shubham', 'nityanand'],
   language: 'Hindi',
   default: 2,
   schedule: [
@@ -48,7 +48,7 @@ export const algoJava = {
       price: '₹ 10,000',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '27 Live Lectures (3 hrs)',
-      mentor: 'Shubham Rawat, Anuj Garg',
+      mentor: 'Shubham Rawat, Anuj Garg, Nityanand Rai',
       language: 'Hindi',
       active: false
     }
