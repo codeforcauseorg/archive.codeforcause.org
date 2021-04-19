@@ -13,7 +13,14 @@ const useStyles = makeStyles(theme => ({
   root: {
     fontFamily: "'Montserrat', sans-serif",
     height: '700px',
-    flexGrow: 1
+    flexGrow: 1,
+    [theme.breakpoints.down('md')]: {
+      paddingBottom: '900px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingBottom: '1400px',
+    },
+    
   },
   heading: {
     display: 'flex',
@@ -97,8 +104,8 @@ function HireAtEase() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
+    <div >
+      <Grid container spacing={3} className={classes.root}>
         <Grid item className={classes.Head} xs={12}>
           <Typography variant="h1" className={classes.heading}>
             HIRE <Typography variant="h3">At Ease </Typography>
@@ -106,7 +113,7 @@ function HireAtEase() {
         </Grid>
 
         {/* Cards */}
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4} md={4} lg={3}>
           <Card className={classes.card1}>
             <CardContent>
               <svg
@@ -162,7 +169,7 @@ function HireAtEase() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4} md={4} lg={3}>
           <Card className={classes.card2}>
             <CardContent>
               <svg
@@ -191,7 +198,7 @@ function HireAtEase() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4} md={4} lg={3}>
           <Card className={classes.card3}>
             <CardContent>
               <svg
@@ -231,7 +238,7 @@ function HireAtEase() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4} md={4} lg={3}>
           <Card className={classes.card4}>
             <CardContent>
               <svg
