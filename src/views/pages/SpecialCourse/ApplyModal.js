@@ -10,7 +10,8 @@ import {
   MenuItem,
   Grid
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {
   ValidatorForm,
@@ -142,37 +143,50 @@ export default function ApplyModal({
     .fill(1)
     .map((x, y) => x + y)
     .reverse();
+  
+  const theme = createMuiTheme({
+    palette: {
+      action: {
+        disabledBackground: '#A60000',
+        disabled: '	#C0C0C0'
+      }
+    }
+  });
 
   return (
     <div>
       {user ? (
-        <Button
-          disabled={!course.active}
-          className={classes.btn}
-          size="large"
-          variant="contained"
-          onClick={handleClickOpen}
-          {...rest}
-          fullWidth={fullWidth}
-        >
-          {course.active
-            ? checking
-              ? 'Checking Seats...'
-              : 'Register'
-            : 'Applications Closed'}
-        </Button>
+        <ThemeProvider theme={theme}>
+          <Button
+            disabled={!course.active}
+            className={classes.btn}
+            size="large"
+            variant="contained"
+            onClick={handleClickOpen}
+            {...rest}
+            fullWidth={fullWidth}
+          >
+            {course.active
+              ? checking
+                ? 'Checking Seats...'
+                : 'Register'
+              : 'Applications Closed'}
+          </Button>
+        </ThemeProvider>
       ) : (
-        <Button
-          disabled={!course.active}
-          className={classes.btn}
-          size="large"
-          variant="contained"
-          onClick={handleLogin}
-          {...rest}
-          fullWidth={fullWidth}
-        >
-          {course.active ? 'Sign in to Register' : 'Applications Closed'}
-        </Button>
+        <ThemeProvider theme={theme}>
+          <Button
+            disabled={!course.active}
+            className={classes.btn}
+            size="large"
+            variant="contained"
+            onClick={handleLogin}
+            {...rest}
+            fullWidth={fullWidth}
+          >
+            {course.active ? 'Sign in to Register' : 'Applications Closed'}
+          </Button>
+        </ThemeProvider>
       )}
 
       <Dialog
