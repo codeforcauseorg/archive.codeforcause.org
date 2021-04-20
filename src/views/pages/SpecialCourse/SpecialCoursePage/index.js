@@ -29,7 +29,7 @@ function SpecialCoursePage({ course }) {
       <Header course={course} />
       <Major course={course} />
       {/* <CourseFeatures /> */}
-      <Process course={course} />
+      {course.active ? <Process course={course} /> : undefined}
       <Schedule course={course} />
       <Features />
       <Recommendations />

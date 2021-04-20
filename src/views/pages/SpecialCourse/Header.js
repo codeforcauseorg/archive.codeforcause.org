@@ -38,9 +38,9 @@ function Header({ course, className, ...rest }) {
           variant="h4"
           align="center"
         >
-          {`Offering ${course.discount} On this Batch.`}
+          {course.active ? `Offering ${course.discount} On this Batch.` : 'Oops! The seats are full. ✅ We will be happy to see you in the next batch! 😊'}
         </Typography>
-        <Countdown date={Date.parse(course.discountEnds)} renderer={renderer} />
+        {course.active ? <Countdown date={Date.parse(course.discountEnds)} renderer={renderer} /> : undefined}
       </Box>
     </div>
   );

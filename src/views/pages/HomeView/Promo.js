@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 const offers = [
   {
     name: '6 Weeks of DSA with C++',
-    applied_on: 'Special offer till 22nd April',
+    applied_on: 'Batch will start from 26th April',
     desc:
       'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
     links: [
@@ -68,7 +68,7 @@ const offers = [
       }
     ],
     terms: '',
-    special_price: '2000/-',
+    special_price: 'Seats are full.',
     original_price: '₹ 10,000',
     pic: '/static/images/backs/dsa.png'
   },

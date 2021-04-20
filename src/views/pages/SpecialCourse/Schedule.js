@@ -43,7 +43,7 @@ export default function Schedule({ course }) {
 
   return (
     <Grid container className={classes.root}>
-      <LimitedTimeBookNow />
+      {course.active ? <LimitedTimeBookNow /> : undefined}
 
       <Grid
         item

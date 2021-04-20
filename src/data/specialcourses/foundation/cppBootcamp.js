@@ -9,7 +9,7 @@ export const cppBootcamp = {
   title: 'Six Weeks of Data Structures and Algorithms with C++',
   upcoming: 'April 26th',
   mentors: ['anuj', 'nityanand'],
-  active: true,
+  active: false,
   application: false,
   discountEnds: '22 Apr 2021 18:30:00 GMT',
   schedule: [
@@ -19,10 +19,10 @@ export const cppBootcamp = {
       days: 'Mon, Tue, Thr, Fri',
       timing: '6:00 PM - 07:30 PM (IST)',
       link: '',
-      priceCut: '₹ 10,000',
-      price: '₹ 2000',
+      priceCut: '',
+      price: '₹ 10,000',
       duration: '24 Live Lectures',
-      active: true,
+      active: false,
       application: false
     }
   ],
