@@ -179,13 +179,13 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       height: '280px',
       width: '400px',
-      padding: '50px 10px 0 60px',
+      padding: '50px 10px 0 80px',
       transform: 'translate(20px,0px)'
     },
     [theme.breakpoints.down('xs')]: {
       height: '170px',
       width: '280px',
-      padding: '30px 10px 0 32px',
+      padding: '30px 32px 0 50px',
       transform: 'translate(20px,0px)'
     }
   },
@@ -245,7 +245,8 @@ const useStyles = makeStyles(theme => ({
       fontSize: '12px'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '8px'
+      fontSize: '8px',
+      marginTop: '7px',
     }
   }
 }));
