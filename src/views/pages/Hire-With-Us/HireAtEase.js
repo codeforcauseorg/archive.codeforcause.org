@@ -19,6 +19,8 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down('xs')]: {
       paddingBottom: '1400px',
+      paddingLeft: '50px',
+      paddingRight: '50px',
     },
     
   },
@@ -32,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   card1: {
     background: ' #FF8989',
     margin: '5px',
-    width: 'auto',
+    width: '100%',
     height: '220px',
     boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.4), inset 0px 0px 8px #FFEEEE',
     borderRadius: '300px 0px 300px 300px',
