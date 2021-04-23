@@ -6,7 +6,8 @@ export const webDevelopment = {
   link: '/fullstack-webdev-with-js',
   domain: 'Web Development',
   title: 'Master Full Stack Web Development with JS (MERN)',
-  upcoming: 'April 15th',
+  started: 'April 15th',
+  upcoming: '27th Jun',
   language: 'Hindi',
   mentors: ['ganga', 'anuj'],
   default: 1,
@@ -25,13 +26,13 @@ export const webDevelopment = {
     },
     {
       courseId: 'jsfs0121',
-      dates: '20th Jun - 25th Aug',
+      dates: '27th Jun - 25th Aug',
       days: 'Wed, Fri, Sat, Sun',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1IhqFcLVU3L7vcSrTq3eqfJk',
+      price: '₹ 15,000',
+      priceId: 'price_1IjJmLLVU3L7vcSrnaBiAL5Y',
       duration: '40 Live Lectures',
       active: true
     }

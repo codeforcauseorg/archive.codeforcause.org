@@ -21,7 +21,7 @@ export const competitiveJava = {
       price: '₹ 20,000',
       priceId: 'price_1I0qKLLVU3L7vcSrULlRk1ek',
       duration: '80 Live Lectures',
-      active: true
+      active: false
     }
   ],
   projects: [
