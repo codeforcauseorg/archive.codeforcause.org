@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
     transform: 'translateZ(0)'
   },
   bottomCardContent: {
-    margin: '0px 8px 18px 0px',
+    margin: '0px 8px 8px 0px',
     padding: '2px 4px',
     border: '1px solid',
     borderColor: '#A60000',
@@ -152,32 +152,33 @@ export default function CourseCard({ course }) {
 
         <ParallaxCarousel slides={course.slides} />
 
-        <CardContent className={classes.cardContent}>
-          <Box
-            mt={0}
-            mr={0}
-            display="flex"
-            flexDirection="row"
-            flexWrap="wrap"
-            style={{ width: '102%' }}
-          >
-            {course.tags.slice(0, 3).map((tag, index) => (
-              <div
-                className={classes.bottomCardContent}
-                key={index}
-                variant="outlined"
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+          flexWrap="wrap"
+          style={{ width: '102%', padding: '8px' }}
+        >
+          {course.tags.slice(0, 5).map((tag, index) => (
+            <div
+              className={classes.bottomCardContent}
+              key={index}
+              variant="outlined"
+            >
+              <Typography
+                style={{ color: '#a60000', fontWeight: 500 }}
+                variant="caption"
+                noWrap={true}
               >
-                <Typography
-                  style={{ color: '#a60000', fontWeight: 500 }}
-                  variant="caption"
-                  noWrap={true}
-                >
-                  {tag}
-                </Typography>
-              </div>
-            ))}
-          </Box>
+                {tag}
+              </Typography>
+            </div>
+          ))}
+        </Box>
 
+        {/* <CardContent className={classes.cardContent}>
+          
           <Box display="flex" flexDirection="column">
             {course.started ? (
               <Box
@@ -271,7 +272,7 @@ export default function CourseCard({ course }) {
               ''
             )}
           </Box>
-        </CardContent>
+        </CardContent> */}
 
         <Link
           to={course.link}

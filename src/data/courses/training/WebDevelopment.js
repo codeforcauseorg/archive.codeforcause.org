@@ -10,7 +10,7 @@ export const webDevelopment = {
   language: 'Hindi',
   upcoming: 'June 27th',
   mentors: ['anuj', 'ganga'],
-  default: 0,
+  default: 1,
   schedule: [
     {
       courseId: 'jsfs0121',
@@ -21,6 +21,18 @@ export const webDevelopment = {
       priceCut: '',
       price: '₹ 20,000',
       priceId: 'price_1I0qNVLVU3L7vcSr4PmkT5pK',
+      duration: '80 Live Lectures',
+      active: false
+    },
+    {
+      courseId: 'jsfs0122',
+      dates: '27th Jun - 13th Nov',
+      days: 'Sat, Sun, Wed, Fri',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 25,000',
+      priceId: 'price_1IjJqGLVU3L7vcSrPsDxmTDt',
       duration: '80 Live Lectures',
       active: true
     }

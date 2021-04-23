@@ -5,7 +5,8 @@ export const machineLearning = {
   link: '/machine-learning-using-python',
   domain: 'Artificial Intelligence',
   title: 'Master Machine Learning using Python',
-  upcoming: 'April 15th',
+  started: 'April 15th',
+  upcoming: '27th June',
   language: 'Hindi',
   mentors: ['anuj', 'kunal'],
   default: 1,
@@ -23,15 +24,15 @@ export const machineLearning = {
       active: false
     },
     {
-      courseId: 'jcomp0121',
-      dates: '15th June - 18th Aug',
-      days: ' Wed, Fri, Sat, Sun',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      courseId: 'mlpy0122',
+      dates: '27th June - 26th Sep',
+      days: 'Sat, Sun',
+      timing: '10:00 AM - 01:00 PM (IST)',
       link: '',
       priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1IhqEuLVU3L7vcSrEvZMKZxd',
-      duration: '40 Live Lectures',
+      price: '₹ 15,000',
+      priceId: 'price_1IjJmvLVU3L7vcSrYou2Gu8G',
+      duration: '27 Live Lectures (3 hrs)',
       active: true
     }
   ],

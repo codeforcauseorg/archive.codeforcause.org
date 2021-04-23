@@ -21,7 +21,7 @@ export const machineLearning = {
       price: '₹ 20,000',
       priceId: 'price_1I0qOjLVU3L7vcSrMplYFrFV',
       duration: '80 Live Lectures',
-      active: true
+      active: false
     }
   ],
   projects: [

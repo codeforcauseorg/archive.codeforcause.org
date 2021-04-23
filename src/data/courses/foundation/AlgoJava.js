@@ -5,11 +5,11 @@ export const algoJava = {
   link: '/ds-algo-with-java',
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with Java',
-  started: 'Jan 30th (Regular)',
-  upcoming: 'March 14th (Weekends)',
-  mentors: ['anuj', 'kunal', 'ekta', 'shubham', 'nityanand'],
+  started: 'March 14th (Weekends)',
+  upcoming: 'June 20th (Weekends)',
+  mentors: ['anuj', 'ekta', 'nityanand'],
   language: 'Hindi',
-  default: 2,
+  default: 3,
   schedule: [
     {
       courseId: 'jds0121',
@@ -51,6 +51,34 @@ export const algoJava = {
       mentor: 'Shubham Rawat, Anuj Garg, Nityanand Rai',
       language: 'Hindi',
       active: false
+    },
+    {
+      courseId: 'jds0124',
+      dates: '20th June - 28th August',
+      days: 'Mon, Tue, Thurs, Sat',
+      timing: '09:00 PM - 11:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
+      duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
+      active: true
+    },
+    {
+      courseId: 'jds0125',
+      dates: '27th June - 04th September',
+      days: 'Mon, Tue, Thurs, Sat',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
+      duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Ekta Mishra',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [
