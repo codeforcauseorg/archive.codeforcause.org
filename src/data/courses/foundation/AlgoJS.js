@@ -25,14 +25,14 @@ export const algoJS = {
     },
     {
       courseId: 'pds0122',
-      dates: '27th Jun - 13th Nov',
+      dates: '27th Jun - 04th Sep',
       days: 'Sat, Sun, Wed, Fri',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 12,000',
       priceId: 'price_1IjJohLVU3L7vcSr4sYdfDCP',
-      duration: '80 Live Lectures',
+      duration: '40 Live Lectures',
       mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
       language: 'Hindi',
       active: true
