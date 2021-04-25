@@ -8,8 +8,8 @@ export const competitiveJava = {
   started: 'Jan 30th',
   upcoming: 'June 27th',
   language: 'Hindi',
-  mentors: ['anuj', 'ekta', 'kunal'],
-  default: 0,
+  mentors: ['ekta', 'nityanand'],
+  default: 1,
   schedule: [
     {
       courseId: 'jcomp0121',
@@ -22,6 +22,20 @@ export const competitiveJava = {
       priceId: 'price_1I0qKLLVU3L7vcSrULlRk1ek',
       duration: '80 Live Lectures',
       active: false
+    },
+    {
+      courseId: 'jcomp0122',
+      dates: '27th June - 13th Nov',
+      days: 'Sat, Sun, Tue, Thurs',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 25,000',
+      priceId: 'price_1IjJpaLVU3L7vcSrtrHYrNVV',
+      duration: '80 Live Lectures',
+      mentor: ' Ekta Mishra, Nityanand Rai',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [

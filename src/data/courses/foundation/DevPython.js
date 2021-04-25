@@ -8,7 +8,7 @@ export const devPython = {
   started: 'Jan 30th (Regular)',
   upcoming: 'Feb 28th (Weekends)',
   language: 'Hindi',
-  mentors: ['kunal'],
+  mentors: ['anuj'],
   default: 0,
   events: [
     {

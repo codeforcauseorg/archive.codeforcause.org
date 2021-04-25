@@ -8,8 +8,8 @@ export const machineLearning = {
   started: 'Jan 30th',
   upcoming: 'June 27th',
   language: 'Hindi',
-  mentors: ['anuj', 'kunal'],
-  default: 0,
+  mentors: ['anuj'],
+  default: 1,
   schedule: [
     {
       courseId: 'mlpy1020',
@@ -22,6 +22,20 @@ export const machineLearning = {
       priceId: 'price_1I0qOjLVU3L7vcSrMplYFrFV',
       duration: '80 Live Lectures',
       active: false
+    },
+    {
+      courseId: 'mlpy1021',
+      dates: '27th June - 13th Nov',
+      days: 'Tue, Thurs, Sat, Mon',
+      timing: '09:00 PM - 11:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 25,000',
+      priceId: 'price_1IjJqdLVU3L7vcSrYRjlbK0S',
+      duration: '80 Live Lectures',
+      mentor: 'Anuj Garg',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [

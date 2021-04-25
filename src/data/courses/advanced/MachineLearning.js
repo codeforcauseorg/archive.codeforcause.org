@@ -8,7 +8,7 @@ export const machineLearning = {
   started: 'April 15th',
   upcoming: '27th June',
   language: 'Hindi',
-  mentors: ['anuj', 'kunal'],
+  mentors: ['anuj'],
   default: 1,
   schedule: [
     {
@@ -25,14 +25,16 @@ export const machineLearning = {
     },
     {
       courseId: 'mlpy0122',
-      dates: '27th June - 26th Sep',
-      days: 'Sat, Sun',
-      timing: '10:00 AM - 01:00 PM (IST)',
+      dates: '27th June - 04th Sep',
+      days: 'Tue, Thurs, Sat, Mon',
+      timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 15,000',
       priceId: 'price_1IjJmvLVU3L7vcSrYou2Gu8G',
       duration: '27 Live Lectures (3 hrs)',
+      mentor: 'Anuj Garg',
+      language: 'English',
       active: true
     }
   ],
