@@ -51,15 +51,15 @@ export const algoPython = {
       active: false
     },
     {
-      courseId: 'pds0124',
-      dates: '20th June - 28th August',
-      days: 'Mon, Tue, Thurs, Sat',
+      courseId: 'pde0124',
+      dates: '27th June - 13th Nov',
+      days: 'Tue, Thurs, Sat, Mon',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 12,000',
       priceId: 'price_1IjJoFLVU3L7vcSrjERKjPMu',
-      duration: '40 Live Lectures (2 hrs)',
+      duration: '80 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
       active: true

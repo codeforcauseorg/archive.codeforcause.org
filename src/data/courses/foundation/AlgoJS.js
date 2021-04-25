@@ -8,7 +8,7 @@ export const algoJS = {
   started: 'Jan 30th (Regular)',
   upcoming: 'June 27th (Regular)',
   language: 'Hindi',
-  mentors: ['anuj'],
+  mentors: ['anuj', 'abhishek', 'vasu'],
   default: 1,
   schedule: [
     {
@@ -25,15 +25,17 @@ export const algoJS = {
     },
     {
       courseId: 'pds0122',
-      dates: '27th June - 04th Sept',
+      dates: '27th Jun - 13th Nov',
       days: 'Sat, Sun, Wed, Fri',
-      timing: '04:00 PM - 06:00 PM (IST)',
+      timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '',
-      price: '₹ 10,000',
+      price: '₹ 12,000',
       priceId: 'price_1IjJohLVU3L7vcSr4sYdfDCP',
-      duration: '40 Live Lectures (2 hrs)',
-      active: false
+      duration: '80 Live Lectures',
+      mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [

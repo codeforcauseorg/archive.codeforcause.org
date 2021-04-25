@@ -54,29 +54,15 @@ export const algoJava = {
     },
     {
       courseId: 'jds0124',
-      dates: '20th June - 28th August',
-      days: 'Mon, Tue, Thurs, Sat',
-      timing: '09:00 PM - 11:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
-      duration: '40 Live Lectures (2 hrs)',
-      mentor: 'Nityanand Rai',
-      language: 'Hindi',
-      active: true
-    },
-    {
-      courseId: 'jds0125',
       dates: '27th June - 04th September',
-      days: 'Mon, Tue, Thurs, Sat',
+      days: 'Sat, Sun, Tue, Thurs',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 12,000',
       priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
       duration: '40 Live Lectures (2 hrs)',
-      mentor: 'Ekta Mishra',
+      mentor: 'Ekta Mishra, Nityanand Rai',
       language: 'Hindi',
       active: true
     }
