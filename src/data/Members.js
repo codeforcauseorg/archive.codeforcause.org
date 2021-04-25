@@ -42,5 +42,17 @@ export const members = {
     position: 'Instructor',
     avatar: '/static/images/members/shubham.jpeg',
     linkedIn: 'https://www.linkedin.com/in/shubhamrwt/'
+  },
+  abhishek: {
+    name: 'Abhishek Kumar',
+    position: 'Instructor',
+    avatar: '/static/images/members/abhishek.jpg',
+    linkedin: 'https://www.linkedin.com/in/abhishek-kr09/'
+  },
+  vasu: {
+    name: 'Vasudev Singhal',
+    position: 'Instructor',
+    avatar: '/static/images/members/vasu.jpeg',
+    linkedin: 'https://www.linkedin.com/in/vasudev-singhal-809a40192'
   }
 };

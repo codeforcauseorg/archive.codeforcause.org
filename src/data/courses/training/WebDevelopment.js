@@ -9,7 +9,7 @@ export const webDevelopment = {
   started: 'Jan 30th',
   language: 'Hindi',
   upcoming: 'June 27th',
-  mentors: ['anuj', 'ganga'],
+  mentors: ['anuj', 'abhishek', 'vasu'],
   default: 1,
   schedule: [
     {
@@ -34,6 +34,8 @@ export const webDevelopment = {
       price: '₹ 25,000',
       priceId: 'price_1IjJqGLVU3L7vcSrPsDxmTDt',
       duration: '80 Live Lectures',
+      mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
+      language: 'Hindi',
       active: true
     }
   ],

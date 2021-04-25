@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 function CoursePage({ course }) {
-  const batch = course.schedule[0];
+  const batch = course.schedule[course.default];
 
   const classes = useStyles();
 

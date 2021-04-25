@@ -7,7 +7,7 @@ export const competitiveJava = {
   title: 'Competitive Programming using Java',
   upcoming: 'April 15th',
   language: 'Hindi',
-  mentors: ['anuj', 'kunal', 'ekta'],
+  mentors: ['ekta', 'nityanand'],
   default: 1,
   schedule: [
     {
@@ -23,15 +23,17 @@ export const competitiveJava = {
       active: false
     },
     {
-      courseId: 'jcomp0121',
-      dates: '15th June - 18th Aug',
-      days: ' Wed, Fri, Sat, Sun',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      courseId: 'jcomp0122',
+      dates: '27th June - 04th Sep',
+      days: ' Tue, Thurs, Sat, Mon',
+      timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 15,000',
       priceId: 'price_1IjJlGLVU3L7vcSrU8qUVqWV',
       duration: '40 Live Lectures',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
       active: true
     }
   ],

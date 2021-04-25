@@ -5,11 +5,11 @@ export const algoPython = {
   link: '/ds-algo-with-python',
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with Python',
-  started: 'Jan 30th (Regular)',
-  upcoming: 'March 14th (Weekends)',
+  started: 'March 14th (Weekends)',
+  upcoming: 'June 20th (Weekdays)',
   language: '',
-  mentors: ['anuj', 'kunal'],
-  default: 2,
+  mentors: ['anuj'],
+  default: 3,
   schedule: [
     {
       courseId: 'pds0121',
@@ -49,6 +49,20 @@ export const algoPython = {
       duration: '27 Live Lectures (3 hrs)',
       language: 'English',
       active: false
+    },
+    {
+      courseId: 'pde0124',
+      dates: '27th June - 04th Sep',
+      days: 'Tue, Thurs, Sat, Mon',
+      timing: '09:00 PM - 11:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJoFLVU3L7vcSrjERKjPMu',
+      duration: '40 Live Lectures',
+      mentor: 'Anuj Garg',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [
