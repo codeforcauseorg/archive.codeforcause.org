@@ -147,7 +147,6 @@ export const competitiveJava = {
             'Wildcard pattern problem',
             'Egg drop problem',
             'Matrix chain multiplication',
-            'Wildcard Matching',
             'Longest Increasing Subsequence',
             'Maximum Subarray Sum'
           ]

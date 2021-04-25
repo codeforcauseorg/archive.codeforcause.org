@@ -9,6 +9,7 @@ import FAQ from '../FAQ';
 import Features from '../Features';
 import FinalAction from '../FinalAction';
 import Major from '../Major';
+import Header from '../Header';
 // import Process from '../Process';
 import Schedule from '../Schedule';
 // import SpecialHeader from '../specialDis';
@@ -27,6 +28,7 @@ function CoursePage({ course }) {
 
   return (
     <Page className={classes.root} title={course.title}>
+      <Header course={course}/>
       {/* <AutoPopup /> */}
       {/* <SpecialHeader event={course.events} /> */}
       <Major course={course} />
