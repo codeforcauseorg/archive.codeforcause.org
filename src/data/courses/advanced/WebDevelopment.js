@@ -27,7 +27,7 @@ export const webDevelopment = {
     {
       courseId: 'jsfs0121',
       dates: '27th Jun - 04th Sep',
-      days: 'Tue, Thurs, Fri, Sun',
+      days: 'Mon, Wed, Fri, Sun',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '',

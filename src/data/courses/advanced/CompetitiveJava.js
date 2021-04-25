@@ -7,7 +7,7 @@ export const competitiveJava = {
   title: 'Competitive Programming using Java',
   upcoming: 'April 15th',
   language: 'Hindi',
-  mentors: ['nityanand', 'ekta'],
+  mentors: ['ekta', 'nityanand'],
   default: 1,
   schedule: [
     {

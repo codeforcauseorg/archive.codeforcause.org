@@ -32,7 +32,7 @@ export const machineLearning = {
       priceCut: '',
       price: '₹ 15,000',
       priceId: 'price_1IjJmvLVU3L7vcSrYou2Gu8G',
-      duration: '27 Live Lectures (3 hrs)',
+      duration: '40 Live Lectures (2 hrs)',
       mentor: 'Anuj Garg',
       language: 'English',
       active: true
