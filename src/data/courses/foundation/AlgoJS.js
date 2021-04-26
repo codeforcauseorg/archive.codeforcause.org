@@ -242,7 +242,7 @@ export const algoJS = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/python.png'
+      image: '/static/swipes/web.png'
     }
   ],
   tags: [
