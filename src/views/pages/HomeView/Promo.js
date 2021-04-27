@@ -57,7 +57,23 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
-    name: '6 Weeks of DSA with C++',
+    name: 'Early Bird Discount',
+    applied_on: '',
+    desc:
+      'Be an early bird and grab a FLAT 60% OFF on any of our courses on DSA  fundamentals in Python, Java, JavaScript, and C++ to advanced courses in Web Development, Machine Learning, and Competitive Programming with Java and C++.',
+    links: [
+      {
+        name: 'Check our course',
+        link: '/courses'
+      }
+    ],
+    terms: '',
+    special_price: 'All Courses',
+    original_price: '',
+    pic: '/static/images/backs/earlybird.jpg'
+  },
+  {
+    name: 'DSA with C++',
     applied_on: 'Batch will start from 26th April',
     desc:
       'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
@@ -71,22 +87,6 @@ const offers = [
     special_price: 'Seats are full.',
     original_price: '₹ 10,000',
     pic: '/static/images/backs/dsa.png'
-  },
-  {
-    name: 'WhatsApp Clone',
-    applied_on: '',
-    desc:
-      'We will build app with MERN (MongoDB ExpressJS ReactJS and Node) in hands-on packed manner. You will be on jouney of learning key steps in creating web and mobile applications.',
-    links: [
-      {
-        name: 'Know More',
-        link: '/whatsapp-clone-with-mern'
-      }
-    ],
-    terms: '',
-    special_price: '685/-',
-    original_price: '₹ 3,880',
-    pic: '/static/images/backs/wapp.jpg'
   }
 ];
 
@@ -117,7 +117,16 @@ function Promo({ benefits, className, ...rest }) {
           {offers.map((item, index) => {
             return (
               <Grid item xs={12} md={6} key={index}>
-                <Card key={index} raised className={classes.cards}>
+                <Card
+                  key={index}
+                  style={{
+                    height: '100%',
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                  raised
+                  className={classes.cards}
+                >
                   <CardMedia image={item.pic} style={{ height: '280px' }} />
                   <Typography
                     variant="h2"
@@ -130,15 +139,27 @@ function Promo({ benefits, className, ...rest }) {
                     {item.name}
                   </Typography>
                   <CardContent
-                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                    style={{
+                      textAlign: 'left',
+                      flexGrow: 1,
+                      paddingLeft: '30px',
+                      display: 'flex',
+                      flexDirection: 'column'
+                    }}
                   >
-                    <Typography variant="body1">{item.desc}</Typography>
-                    <TextBox
-                      title="Special Price"
-                      left={item.original_price}
-                      right={item.special_price}
-                      lineThrough
-                    />
+                    <Typography style={{
+                      flexGrow: 1
+                    }} variant="body1">{item.desc}</Typography>
+                    {item.disabled ? (
+                      undefined
+                    ) : (
+                      <TextBox
+                        title="Applicable On"
+                        left={item.original_price}
+                        right={item.special_price}
+                        lineThrough
+                      />
+                    )}
                     <Grid
                       container
                       direction="row"
