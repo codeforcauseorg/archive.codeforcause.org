@@ -6,7 +6,7 @@ export const algoJava = {
   domain: 'Algorithms & Complexities',
   title: 'Data Structures and Algorithms with Java',
   started: 'March 14th (Weekends)',
-  upcoming: 'June 20th (Weekends)',
+  upcoming: 'June 27th (Weekends)',
   mentors: ['anuj', 'ekta', 'nityanand'],
   language: 'Hindi',
   default: 3,

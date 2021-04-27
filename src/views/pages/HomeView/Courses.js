@@ -241,7 +241,7 @@ export default function Courses() {
                 display: 'flex',
                 alignItems: 'center'
               }}
-              cols={large ? 3 : medium ? 2.5 : small ? 2.0 : 1.04}
+              cols={large ? 3.5 : medium ? 2.5 : small ? 2.0 : 1.04}
             >
               {Object.entries(training).map(([cname, course], index) => {
                 return (
@@ -265,7 +265,7 @@ export default function Courses() {
                 display: 'flex',
                 alignItems: 'center'
               }}
-              cols={large ? 3 : medium ? 2.5 : small ? 2.0 : 1.04}
+              cols={large ? 3.5 : medium ? 2.5 : small ? 2.0 : 1.04}
             >
               {Object.entries(foundation).map(([cname, course], index) => {
                 return (
@@ -284,7 +284,7 @@ export default function Courses() {
           <TabPanel value={value} index={2}>
             <GridList
               className={classes.gridList}
-              cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
+              cols={large ? 3.5 : medium ? 2.5 : small ? 1.7 : 1.2}
             >
               {Object.entries(advanced).map(([cname, course], index) => {
                 return (

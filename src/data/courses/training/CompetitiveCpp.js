@@ -1,37 +1,26 @@
-export const competitiveJava = {
-  difficulty: 'Intermediate',
-  duration: '40 Live Lectures',
+export const competitiveCpp = {
+  difficulty: 'Six Months Training ',
+  duration: '80 Live Lectures',
   level: 'Level 2',
-  link: '/competitive-programming-using-java',
-  domain: 'Interview Prepration',
-  title: 'Competitive Programming using Java',
-  upcoming: 'June 27th',
+  link: '/six-months-competitive-programming-with-cpp',
+  domain: 'Interview Targeted Prepration',
+  title: 'Competitive Programming with DS & Algo in C++',
+  started: '',
+  upcoming: 'June 20th',
   language: 'Hindi',
-  mentors: ['ekta', 'nityanand'],
-  default: 1,
+  mentors: ['nityanand'],
+  default: 0,
   schedule: [
     {
-      courseId: 'jcomp0121',
-      dates: '15th Apr - 18th July',
-      days: 'Sat, Sun, Wed, Fri',
+      courseId: 'ccomp0121',
+      dates: '20th June - 06th Nov',
+      days: 'Mon, Wed, Fri, Sun',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',
       priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1I0Uz4LVU3L7vcSrx3vOaUdv',
-      duration: '40 Live Lectures',
-      active: false
-    },
-    {
-      courseId: 'jcomp0122',
-      dates: '27th June - 04th Sep',
-      days: ' Tue, Thurs, Sat, Mon',
-      timing: '09:00 PM - 11:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 15,000',
-      priceId: 'price_1IjJlGLVU3L7vcSrU8qUVqWV',
-      duration: '40 Live Lectures',
+      price: '₹ 25,000',
+      priceId: 'price_1IjKAQLVU3L7vcSrkWAerd0M',
+      duration: '80 Live Lectures',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
       active: true
@@ -61,16 +50,189 @@ export const competitiveJava = {
   ],
   sections: [
     {
+      title: 'C++ Foundation Constructs',
+      classes: 'Classes 01-20',
+      topics: [
+        {
+          title: 'Getting started with C++',
+          classes: 'Classes 1-3',
+          subtopics: [
+            'Flowcharts & Pseudocode',
+            'Control Flow Statements ',
+            'Setting up Coding Environment',
+            'Primitive data-types',
+            'Input-Output on online judge',
+            'Coding standards in C++',
+            'Methods along with problems',
+            'Setting up debugger'
+          ]
+        },
+        {
+          title: '1D and 2D Arrays',
+          classes: 'Classes 4-7',
+          subtopics: [
+            'Introduction of arrays',
+            'Input-output & traversing',
+            'Linear Search & Binary Search',
+            'Selection sort, Bubble sort, Insertion sort, Count sort',
+            'Multi-Dimensional arrays',
+            'Rotation in arrays',
+          ]
+        },
+        {
+          title: 'Number theory & Bitmasking',
+          classes: 'Classes 8-9',
+          subtopics: [
+            'Euclidean algorithms',
+            'Sieve of eratosthenes',
+            'Puzzle problems',
+            'Bitwise operators',
+            'Advantages & cost-effectiveness',
+            'Backtracking with Bitmasking',
+            'Interview problems'
+          ]
+        },
+        {
+          title: 'String and Operations',
+          classes: 'Classes 10-11',
+          subtopics: [
+            'Intro to Strings in C++',
+            'Mutability and behavior',
+            'String operations',
+            'String operations optimization',
+            'String Manipulation'
+          ]
+        },
+        {
+          title: 'Space and Time complexity analysis',
+          classes: 'Classes 12',
+          subtopics: [
+            'Best case, worst case and average case',
+            'Sandwich theorem, recurrence relation',
+            'Theta, Big-oh, Omega notations',
+            'Understanding complexity of loops',
+            'Auxiliary vs Total space',
+            'Static & Dynamic Memory Allocation'
+          ]
+        },
+        {
+          title: 'Recursion & Backtracking',
+          classes: 'Classes 13-16',
+          subtopics: [
+            'Recursion- what, why, when?',
+            'Control flow & stack trace',
+            'understanding recursive tree',
+            'Merge sort & Quick sort',
+            'Interview problems on Recursion',
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
+          ]
+        },
+        {
+          title: 'Object Oriented Programming',
+          classes: 'Classes 17-18',
+          subtopics: [
+            'Classes & Objects',
+            'Constructors, states & behaviors',
+            'Abstraction, Inheritance, Polymorphism, Encapsulation',
+            'Access modifiers',
+            'Static & non-static',
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Data Structure & Algorithms',
+      classes: 'Classes 20-40',
+      topics: [
+        {
+          title: 'Stacks & Queues',
+          classes: 'Classes 19-20',
+          subtopics: [
+            'Stack Implementation',
+            'Operations in Stack',
+            'Stack using Array & LinkedList',
+            'Push efficient & Pop efficient Stacks',
+            'Queue Implementation',
+            'Operations in Queue',
+            'Queue using 2 stacks',
+            'Interview problems on Stack & Queue'
+          ]
+        },
+        {
+          title: 'LinkedList',
+          classes: 'Classes 21-22',
+          subtopics: [
+            'Intro to LinkedList',
+            'Implementation of LinkedList',
+            'Operations in LinkedList',
+            'Cycle detection Algorithms',
+            'Problems based on LinkedList'
+          ]
+        },
+        {
+          title: 'Binary Trees',
+          classes: 'Classes 23-24',
+          subtopics: [
+            'Implementation of Binary Trees',
+            'Tree traversal- inorder, preorder, postorder',
+            'Searching Algorithms- DFS and BFS',
+            'Calculate- hieght, depth, diameter of tree',
+            'Implementation of Binary Search Tree',
+            'AVL Trees & Rotations',
+            'Interview problems on BT & BST'
+          ]
+        },
+        {
+          title: 'Heap & HashMap',
+          classes: 'Classes 25-26',
+          subtopics: [
+            'Implementation of Heaps',
+            'HeapSort with complexity analysis',
+            'Concept of Hashing',
+            'HashMap implementation using LinkedList',
+            'Problems on Hashmap & Heaps'
+          ]
+        },
+        {
+          title: 'Graph',
+          classes: 'Classes 27-28',
+          subtopics: [
+            'Terminologies in Graph',
+            'EdgeList implementation',
+            'AdjacencyList implementation',
+            'AdjacencyMap implementation',
+            'Searching Algorithms- DFS and BFS',
+            'Connected component, Cycle detection',
+            "Kruskal's, Dijkstra's, Prim's Algorithms"
+          ]
+        },
+        {
+          title: 'Dynamic Programming',
+          classes: 'Classes 29-30',
+          subtopics: [
+            'Understanding the concept in Dynamic Programming',
+            'Understanding overlapping subproblems',
+            'Memoization vs Tabulation',
+            'Top down & bottom-up approach',
+            '0-1 KnapSack problem',
+            'Wildcard pattern problem',
+            'Egg drop problem',
+            'Matrix chain multiplication'
+          ]
+        }
+      ]
+    },
+    {
       title: 'Advance Competetive Algorithms',
       classes: 'Classes 01-20',
       topics: [
         {
-          title: 'Revisiting Java Collection Framework',
+          title: 'Revisiting STL',
           classes: 'Lectures 1-2',
           subtopics: [
             'In-built Data Structures',
-            'Classes, Interfaces and Inheritance',
-            'Best practices with Generics and Collections',
+            'OOP Refresher',
+            'Best practices with STL',
             'lurking over recursion problems'
           ]
         },
@@ -79,7 +241,7 @@ export const competitiveJava = {
           classes: 'Lectures 3',
           subtopics: [
             'Start Competitive Programming on Codeforces',
-            'Set up IntelliJ idea for Competitive Coding',
+            'Set up ide for Competitive Coding',
             'Create Template to save time in Competitive Coding'
           ]
         },
@@ -280,18 +442,18 @@ export const competitiveJava = {
       ]
     }
   ],
-
   slides: [
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/comp.png'
+      image: '/static/images/backs/dsa.png'
     }
   ],
   tags: [
     'Dynamic Programming',
     'Tree',
     'Graph',
+    'Pointer',
     'Bitwise',
     'Pigeonhole Principle',
     'Number Theory',

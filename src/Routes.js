@@ -256,6 +256,15 @@ const renderRoutes = () => (
         )}
       />
       <Route
+        path={`/ds-algo-with-cpp`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage course={coursesContent.foundation.algoCpp} {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
         path={`/fullstack-webdev-with-js`}
         exact
         render={props => (
@@ -274,6 +283,18 @@ const renderRoutes = () => (
           <MainLayout>
             <CoursePage
               course={coursesContent.advanced.competitiveJava}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path={`/competitive-programming-using-cpp`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage
+              course={coursesContent.advanced.competitiveCpp}
               {...props}
             />
           </MainLayout>
@@ -325,6 +346,19 @@ const renderRoutes = () => (
           <MainLayout>
             <CoursePage
               course={coursesContent.training.machineLearning}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
+      <Route
+        path={`/six-months-competitive-programming-with-cpp`}
+        exact
+        render={props => (
+          <MainLayout>
+            <CoursePage
+              course={coursesContent.training.competitiveCpp}
               {...props}
             />
           </MainLayout>

@@ -7,7 +7,7 @@ export const machineLearning = {
   title: 'Master Machine Learning using Python',
   started: 'April 15th',
   upcoming: '27th June',
-  language: 'Hindi',
+  language: 'English',
   mentors: ['anuj'],
   default: 1,
   schedule: [

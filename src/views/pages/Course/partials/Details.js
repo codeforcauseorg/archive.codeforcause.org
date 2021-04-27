@@ -97,7 +97,21 @@ export default function Details({ course, bottom }) {
               {course.schedule[course.default].price}
             </Typography>
           </Box>
-          <Box mb={2} display="flex" flexDirection="row">
+          <Typography
+            style={{
+              color: '#000000'
+            }}
+            variant="body1"
+          >
+            Apply coupon <strong>EARLYSAVE60</strong> to get this course in{' '}
+            <strong>
+              ₹{' '}
+              {parseInt(
+                course.schedule[course.default].price.match(/\d+/g).join('')
+              ) * 0.4}
+            </strong>
+          </Typography>
+          <Box mb={2} display="flex" flexDirection="row" paddingTop="10px">
             <Typography
               style={{
                 marginRight: '24px',
