@@ -169,8 +169,8 @@ const CoursesGrid = ({ courses }) => {
             item
             key={index}
             lg={4}
-            md={4}
-            sm={6}
+            md={6}
+            sm={12}
             xs={12}
             style={{
               maxWidth: '330px'
