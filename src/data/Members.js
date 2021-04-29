@@ -53,6 +53,6 @@ export const members = {
     name: 'Vasudev Singhal',
     position: 'Instructor',
     avatar: '/static/images/members/vasu.jpeg',
-    linkedin: 'https://www.linkedin.com/in/vasudev-singhal-809a40192'
+    linkedin: 'https://www.linkedin.com/in/vasudevsinghal'
   }
 };
