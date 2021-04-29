@@ -85,8 +85,8 @@ function Team({ mentors, className, ...rest }) {
           className={classes.extraMargin}
           justify="center"
         >
-          {mentors.map(mentor => (
-            <Grid item key={mentor.id} xs={6} sm={4} md={2} lg={2}>
+          {mentors.map((mentor, idx) => (
+            <Grid item key={idx} xs={6} sm={4} md={2} lg={2}>
               <Card className={classes.card + ' ' + classes.member}>
                 <CardContent>
                   <Box

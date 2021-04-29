@@ -61,42 +61,46 @@ export const bootcamps = [
 
 export const mentors = [
   {
-    id: '1',
     name: 'Anuj Garg',
     avatar: '/static/images/members/anuj.png',
     linkedin: 'https://www.linkedin.com/in/keenwarrior/'
   },
   {
-    id: '2',
     name: 'Kunal Kushwaha',
     avatar: '/static/images/members/kunal.png',
     linkedin: 'https://www.linkedin.com/in/kunal-kushwaha/'
   },
   {
-    id: '3',
     name: 'Ganga Chaturvedi',
     avatar: '/static/images/members/ganga.png',
     linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
   },
   {
-    id: '4',
     name: 'Ekta Mishra',
     avatar: '/static/images/members/ekta.png',
     linkedin: 'https://www.linkedin.com/in/darecoder/'
   },
   {
-    id: '5',
+    name: 'Abhishek Kumar',
+    avatar: '/static/images/members/abhishek.jpg',
+    linkedin: 'https://www.linkedin.com/in/abhishek-kr09/'
+  },
+  {
+    name: 'Nityanand Rai',
+    avatar: '/static/images/members/nityanand.png',
+    linkedin: 'https://www.linkedin.com/in/nityanand-rai-905854184/'
+  },
+  {
+    name: 'Vasudev Singhal',
+    avatar: '/static/images/members/vasu.jpeg',
+    linkedin: 'https://www.linkedin.com/in/vasudevsinghal'
+  },
+  {
     name: 'Bharat Kumar',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
   },
-  {
-    id: '6',
-    name: 'Shubham Rawat',
-    position: 'Instructor',
-    avatar: '/static/images/members/shubham.jpeg',
-    linkedin: 'https://www.linkedin.com/in/shubhamrwt/'
-  }
+
 ];
 
 // experience data ---------------------
