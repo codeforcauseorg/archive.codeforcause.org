@@ -61,6 +61,11 @@ export const bootcamps = [
 
 export const mentors = [
   {
+    name: 'Amit Kumar',
+    avatar: '/static/images/members/amit.png',
+    linkedin: 'https://www.linkedin.com/in/amikudev/'
+  },
+  {
     name: 'Anuj Garg',
     avatar: '/static/images/members/anuj.png',
     linkedin: 'https://www.linkedin.com/in/keenwarrior/'
