@@ -10,8 +10,7 @@ import {
   MenuItem,
   Grid
 } from '@material-ui/core';
-import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {
   ValidatorForm,
@@ -20,14 +19,15 @@ import {
 } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(theme => ({
   btn: {
     backgroundColor: '#A60000',
     color: '#ffffff',
     textTransform: 'capitalize',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+    },
     '&:hover': {
       backgroundColor: 'rgba(166, 0, 0, 0.8)'
     }
@@ -41,57 +41,18 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ApplyModal({
-  course,
-  batch,
-  fullWidth = false,
-  ...rest
-}) {
+export default function VolunteerFormModal({ className }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
-  const [checking, setChecking] = useState(false);
 
   const { enqueueSnackbar } = useSnackbar();
 
-  const user = useSelector(state => state.account.user);
-  const dispatch = useDispatch();
-
-  const handleLogin = () => {
-    dispatch(login());
-  };
-
   const handleClickOpen = () => {
-    setChecking(true);
-    console.log(user.email);
-    axios(
-      'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special/status/',
-      {
-        params: { email: user.email }
-      }
-    )
-      .then(response => {
-        setChecking(false);
-        if (response.data.status === 'Credit') {
-          enqueueSnackbar(
-            'Registration is already complete with this account.'
-          );
-        } else {
-          setOpen(true);
-          updateFormData({
-            countryCode: '+91',
-            phone: '',
-            priceId: batch.priceId,
-            email: user.email,
-            name: user.displayName
-          });
-        }
-      })
-      .catch(err => {
-        setChecking(false);
-        enqueueSnackbar('Application Failed. Try again later');
-      });
+    setOpen(true);
+    formData.countryCode = '+91';
+    formData.phone = '';
   };
 
   const handleClose = () => {
@@ -107,32 +68,18 @@ export default function ApplyModal({
 
   const handleSubmit = e => {
     formData.phone = `${formData.countryCode}${formData.phone}`;
-    formData.source = window.location.href;
-    formData.courseName = course.title;
-    formData.email = user.email;
     setSubmitting(1);
     e.preventDefault();
     axios({
       method: 'post',
       url:
-        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special',
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/leads', // TO CHANGE******************
       data: formData
     })
       .then(response => {
-        if (response.data.status && response.data.status === 'Credit') {
-          enqueueSnackbar(
-            'Registration is already complete with this account.'
-          );
-          setSubmitting(0);
-          handleClose();
-        } else if (response.data.payment_request) {
-          window.open(response.data.payment_request.longurl);
-          enqueueSnackbar('Forwarding to fees payment.');
-          setSubmitting(0);
-          handleClose();
-        } else {
-          enqueueSnackbar('Application Failed. Try again later');
-        }
+        setSubmitting(0);
+        handleClose();
+        enqueueSnackbar('Application Submitted Successfully');
       })
       .catch(error => {
         enqueueSnackbar('Application Failed. Try again later');
@@ -144,65 +91,31 @@ export default function ApplyModal({
     .map((x, y) => x + y)
     .reverse();
 
-  const theme = createMuiTheme({
-    palette: {
-      action: {
-        disabledBackground: '#A60000',
-        disabled: '	#C0C0C0'
-      }
-    }
-  });
-
   return (
     <div>
-      {user ? (
-        <ThemeProvider theme={theme}>
-          <Button
-            disabled={!course.active}
-            className={classes.btn}
-            size="large"
-            variant="contained"
-            onClick={handleClickOpen}
-            {...rest}
-            fullWidth={fullWidth}
-          >
-            {course.active
-              ? checking
-                ? 'Checking Seats...'
-                : 'Register'
-              : 'Applications Closed'}
-          </Button>
-        </ThemeProvider>
-      ) : (
-        <ThemeProvider theme={theme}>
-          <Button
-            disabled={!course.active}
-            className={classes.btn}
-            size="large"
-            variant="contained"
-            onClick={handleLogin}
-            {...rest}
-            fullWidth={fullWidth}
-          >
-            {course.active ? 'Sign in to Register' : 'Applications Closed'}
-          </Button>
-        </ThemeProvider>
-      )}
-
+      <Button
+        className={className}
+        size="large"
+        variant="outlined"
+        onClick={handleClickOpen}
+      >
+        Apply now
+      </Button>
       <Dialog
         fullWidth
-        open={open && user}
+        open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Apply for Scholarship</DialogTitle>
+        <DialogTitle id="form-dialog-title">
+          Apply to Volunteer with Codeforcause
+        </DialogTitle>
         <DialogContent>
           <DialogContentText>
             <Typography>Please provide your details below.</Typography>
           </DialogContentText>
           <ValidatorForm onSubmit={handleSubmit}>
             <TextValidator
-              autoComplete={false}
               required
               key="name"
               className={classes.textField}
@@ -220,12 +133,17 @@ export default function ApplyModal({
               required
               key="email"
               className={classes.textField}
-              disabled
               label="Email"
               variant="outlined"
-              value={user ? user.email : ''}
+              value={formData.email}
               fullWidth
               name="email"
+              onChange={handleChange}
+              validators={['required', 'isEmail']}
+              errorMessages={[
+                'This is a required field',
+                'Please enter a valid email'
+              ]}
             />
 
             <Grid container spacing={2} justify="space-evenly">
@@ -249,7 +167,6 @@ export default function ApplyModal({
 
               <Grid item xs={10}>
                 <TextValidator
-                  autoComplete={false}
                   required
                   key="contact"
                   className={classes.textField}
@@ -273,59 +190,51 @@ export default function ApplyModal({
 
             <TextValidator
               required
-              key="course"
+              key="linkedIn"
               className={classes.textField}
-              label="Course & Branch"
+              label="LinkedIn URL"
               variant="outlined"
-              value={formData.course}
+              value={formData.linkedIn}
               fullWidth
-              name="course"
+              name="linkedIn"
               onChange={handleChange}
-              validators={[]}
-              errorMessages={[]}
+              validators={[
+                'required',
+                'matchRegexp:^(http(s)?://)?([w]+.)?linkedin.com/(pub|in|profile)'
+              ]}
+              errorMessages={[
+                'This is a required field',
+                'Please enter a valid URL'
+              ]}
             />
-
-            <SelectValidator
-              required
-              key="year"
-              className={classes.textField}
-              value={formData.year}
-              onChange={handleChange}
-              name="year"
-              variant="outlined"
-              validators={['required']}
-              errorMessages={['Please select a year']}
-              label="Year"
-              fullWidth
-            >
-              <MenuItem value={'1st'}>1st</MenuItem>
-              <MenuItem value={'2nd'}>2nd</MenuItem>
-              <MenuItem value={'3rd'}>3rd</MenuItem>
-              <MenuItem value={'4th'}>4th</MenuItem>
-              <MenuItem value={'5th'}>5th</MenuItem>
-              <MenuItem value={'Graduated'}>Graduated</MenuItem>
-            </SelectValidator>
 
             <TextValidator
               required
-              key="college"
+              key="interests"
               className={classes.textField}
-              label="College Name"
+              label="Interested Domains"
               variant="outlined"
-              value={formData.college}
+              value={formData.interests}
               fullWidth
-              name="college"
+              name="interests"
               onChange={handleChange}
-              validators={[]}
-              errorMessages={[]}
+              validators={['required']}
+              errorMessages={['This is a required field']}
             />
 
-            <DialogContentText>
-              <Typography>
-                You will be redirected to payment page. For fail-safe yous will
-                also get email containing payment link (expires in 15 minutes).
-              </Typography>
-            </DialogContentText>
+            <TextValidator
+              required
+              key="videoLink"
+              className={classes.textField}
+              label="Demo Video Link (3 - 10 min)"
+              variant="outlined"
+              value={formData.videoLink}
+              fullWidth
+              name="videoLink"
+              onChange={handleChange}
+              validators={['required']}
+              errorMessages={['This is a required field']}
+            />
 
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">

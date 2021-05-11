@@ -47,7 +47,7 @@ export default function ApplyModal({
           {...rest}
           fullWidth={fullWidth}
         >
-          {course.enabled ? "Register Now" : "Applications Closed"}
+          {course.enabled ? 'Register Now' : 'Applications Closed'}
         </Button>
       </ThemeProvider>
     </div>

@@ -121,8 +121,8 @@ function Promo({ benefits, className, ...rest }) {
                   key={index}
                   style={{
                     height: '100%',
-                    display: "flex",
-                    flexDirection: "column"
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                   raised
                   className={classes.cards}
@@ -147,9 +147,14 @@ function Promo({ benefits, className, ...rest }) {
                       flexDirection: 'column'
                     }}
                   >
-                    <Typography style={{
-                      flexGrow: 1
-                    }} variant="body1">{item.desc}</Typography>
+                    <Typography
+                      style={{
+                        flexGrow: 1
+                      }}
+                      variant="body1"
+                    >
+                      {item.desc}
+                    </Typography>
                     {item.disabled ? (
                       undefined
                     ) : (

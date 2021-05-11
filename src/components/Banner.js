@@ -12,7 +12,11 @@ function Banner() {
   const classes = useStyles();
   return (
     <Box>
-      <img className={classes.image} src="/static/banner/forWebsiteHighResolution.jpg" alt="Banner" />
+      <img
+        className={classes.image}
+        src="/static/banner/forWebsiteHighResolution.jpg"
+        alt="Banner"
+      />
     </Box>
   );
 }

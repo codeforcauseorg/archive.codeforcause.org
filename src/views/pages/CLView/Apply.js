@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { Box, Grid, Typography, makeStyles, Hidden } from '@material-ui/core';
-import ApplyNowModal from './ApplyNowModal';
+import ApplyNowModal from '../../../components/forms/ApplyNowModal';
 
 const useStyles = makeStyles(theme => ({
   root: {

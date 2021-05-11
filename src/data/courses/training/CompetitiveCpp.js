@@ -76,7 +76,7 @@ export const competitiveCpp = {
             'Linear Search & Binary Search',
             'Selection sort, Bubble sort, Insertion sort, Count sort',
             'Multi-Dimensional arrays',
-            'Rotation in arrays',
+            'Rotation in arrays'
           ]
         },
         {
@@ -135,7 +135,7 @@ export const competitiveCpp = {
             'Constructors, states & behaviors',
             'Abstraction, Inheritance, Polymorphism, Encapsulation',
             'Access modifiers',
-            'Static & non-static',
+            'Static & non-static'
           ]
         }
       ]

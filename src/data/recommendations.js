@@ -118,5 +118,5 @@ export const recommendations = [
     avatar: '/static/reviews/students/AswinBarath.png',
     text:
       'I took the Zomato Bootcamp from Code for Cause and I really liked their live & interactive sessions where we learn to build a clone from scratch with just basic knowledge of JavaScript.'
-  },
+  }
 ];

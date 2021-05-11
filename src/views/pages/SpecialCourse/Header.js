@@ -28,19 +28,24 @@ function Header({ course, className, ...rest }) {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Box
-        display="flex"
-        className={classes.lineBox}
-        justifyContent="center"
-      >
+      <Box display="flex" className={classes.lineBox} justifyContent="center">
         <Typography
           style={{ color: '#ffffff', padding: '5px' }}
           variant="h4"
           align="center"
         >
-          {course.active ? `Offering ${course.discount} On this Batch.` : 'Oops! The seats are full. ✅ We will be happy to see you in the next batch! 😊'}
+          {course.active
+            ? `Offering ${course.discount} On this Batch.`
+            : 'Oops! The seats are full. ✅ We will be happy to see you in the next batch! 😊'}
         </Typography>
-        {course.active ? <Countdown date={Date.parse(course.discountEnds)} renderer={renderer} /> : undefined}
+        {course.active ? (
+          <Countdown
+            date={Date.parse(course.discountEnds)}
+            renderer={renderer}
+          />
+        ) : (
+          undefined
+        )}
       </Box>
     </div>
   );
@@ -57,7 +62,7 @@ const Completionist = () => (
 
 const timeString = (days, hours, minutes, seconds) => {
   if (days > 0) {
-    return `Ending in ${days} ${days === 1 ? 'Day':'Days'}`;
+    return `Ending in ${days} ${days === 1 ? 'Day' : 'Days'}`;
   } else {
     return `Ending in ${String(hours).padStart(2, '0')} : ${String(
       minutes

@@ -28,7 +28,7 @@ function CoursePage({ course }) {
 
   return (
     <Page className={classes.root} title={course.title}>
-      <Header course={course}/>
+      <Header course={course} />
       {/* <AutoPopup /> */}
       {/* <SpecialHeader event={course.events} /> */}
       <Major course={course} />
