@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -127,7 +127,20 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Recommendations({ recommendationsImages }) {
+export default function Recommendations() {
+  let [reviews, setReviews] = useState([]);
+  useEffect(function(){
+    let set = new Set();
+    let list = [];
+    while(set.size<8){
+      let random = Math.floor(Math.random() * 20);
+      if(!set.has(recommendations[random])){
+        set.add(recommendations[random]);
+        list.push(recommendations[random]);
+      }
+    }
+    setReviews(list);
+  }, []);
   const classes = useStyles();
 
   const large = useMediaQuery('(min-width:1100px)');
@@ -166,7 +179,7 @@ export default function Recommendations({ recommendationsImages }) {
           className={classes.gridList}
           cols={large ? 4.4 : medium ? 3.8 : small ? 2.7 : 1.5}
         >
-          {recommendations.map((recommendation, index) => {
+          {reviews.map((recommendation, index) => {
             if (index % 2 === 0) {
               topMargin = '110px';
               bottomMargin = '20px';
