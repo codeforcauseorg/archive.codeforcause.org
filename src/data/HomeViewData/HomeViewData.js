@@ -104,8 +104,7 @@ export const mentors = [
     name: 'Bharat Kumar',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
-  },
-
+  }
 ];
 
 // experience data ---------------------

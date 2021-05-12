@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -129,12 +129,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function Recommendations() {
   let [reviews, setReviews] = useState([]);
-  useEffect(function(){
+  useEffect(function() {
     let set = new Set();
     let list = [];
-    while(set.size<8){
+    while (set.size < 8) {
       let random = Math.floor(Math.random() * 20);
-      if(!set.has(recommendations[random])){
+      if (!set.has(recommendations[random])) {
         set.add(recommendations[random]);
         list.push(recommendations[random]);
       }

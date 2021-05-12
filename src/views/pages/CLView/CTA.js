@@ -11,6 +11,7 @@ import {
   Button,
   Hidden
 } from '@material-ui/core';
+import VolunteerFormModal from 'src/components/forms/VolunteerForm';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -266,17 +267,9 @@ function CTA({ className, ...rest }) {
               <Box className={classes.flex}>
                 <Grid container xs={12} sm={12}>
                   <Grid item xs={12} sm={12}>
-                    <Button
+                    <VolunteerFormModal
                       className={classes.Button + ' ' + classes.secondaryBtn}
-                      component="a"
-                      href="https://cdn.forms-content.sg-form.com/34a5f5b6-c515-11ea-ae40-26ea0c9b1f0c"
-                      target="_blank"
-                      size="large"
-                      variant="outlined"
-                      disabled="true"
-                    >
-                      Apply Now
-                    </Button>
+                    />
                   </Grid>
                 </Grid>
               </Box>

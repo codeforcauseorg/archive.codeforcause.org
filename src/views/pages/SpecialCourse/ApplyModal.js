@@ -143,7 +143,7 @@ export default function ApplyModal({
     .fill(1)
     .map((x, y) => x + y)
     .reverse();
-  
+
   const theme = createMuiTheme({
     palette: {
       action: {
@@ -322,7 +322,8 @@ export default function ApplyModal({
 
             <DialogContentText>
               <Typography>
-                You will be redirected to payment page. For fail-safe yous will also get email containing payment link (expires in 15 minutes).
+                You will be redirected to payment page. For fail-safe yous will
+                also get email containing payment link (expires in 15 minutes).
               </Typography>
             </DialogContentText>
 

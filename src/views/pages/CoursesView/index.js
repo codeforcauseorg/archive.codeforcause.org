@@ -18,7 +18,7 @@ function CoursesView() {
 
   return (
     <Page className={classes.root} title="Courses">
-      <Banner/>
+      <Banner />
       {/* <Hero /> */}
       <Courses />
       <Recommendations />

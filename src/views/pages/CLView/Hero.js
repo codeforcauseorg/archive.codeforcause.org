@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ApplyNowModal from './ApplyNowModal';
+import ApplyNowModal from '../../../components/forms/ApplyNowModal';
 import HeroWithOneButton from '../../../components/Hero/HeroWithOneButton';
 
 function Hero({ className, ...rest }) {
