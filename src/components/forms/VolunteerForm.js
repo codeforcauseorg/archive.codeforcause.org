@@ -167,7 +167,6 @@ export default function VolunteerFormModal({ className }) {
 
               <Grid item xs={10}>
                 <TextValidator
-                  required
                   key="contact"
                   className={classes.textField}
                   label="WhatsApp / Contact Number "
