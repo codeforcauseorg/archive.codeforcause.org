@@ -68,9 +68,26 @@ const offers = [
       }
     ],
     terms: '',
+    is_course: false,
     special_price: 'All Courses',
     original_price: '',
     pic: '/static/images/backs/earlybird.jpg'
+  },
+  {
+    name: 'Zomato Clone',
+    applied_on: '',
+    desc: `React Ionic is React's trending framework to build awesome apps for iOS, Android and Web. With this Bootcamp, we are providing a hands-on approach to learn React, Firebase, express and how to get them wired.`,
+    links: [
+      {
+        name: 'Know More',
+        link: '/zomato-clone-with-react-js'
+      }
+    ],
+    terms: '',
+    is_course: true,
+    special_price: '₹ 685',
+    original_price: '₹ 4,880',
+    pic: '/static/images/backs/zom.jpg'
   },
   {
     name: 'DSA with C++',
@@ -84,6 +101,7 @@ const offers = [
       }
     ],
     terms: '',
+    is_course: true,
     special_price: 'Seats are full.',
     original_price: '₹ 10,000',
     pic: '/static/images/backs/dsa.png'
@@ -114,15 +132,15 @@ function Promo({ benefits, className, ...rest }) {
         </Typography>
 
         <Grid container spacing={9} className={classes.grid} justify="center">
-          {offers.map((item, index) => {
+          {offers.slice(0, 2).map((item, index) => {
             return (
               <Grid item xs={12} md={6} key={index}>
                 <Card
                   key={index}
                   style={{
                     height: '100%',
-                    display: "flex",
-                    flexDirection: "column"
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                   raised
                   className={classes.cards}
@@ -147,14 +165,19 @@ function Promo({ benefits, className, ...rest }) {
                       flexDirection: 'column'
                     }}
                   >
-                    <Typography style={{
-                      flexGrow: 1
-                    }} variant="body1">{item.desc}</Typography>
+                    <Typography
+                      style={{
+                        flexGrow: 1
+                      }}
+                      variant="body1"
+                    >
+                      {item.desc}
+                    </Typography>
                     {item.disabled ? (
                       undefined
                     ) : (
                       <TextBox
-                        title="Applicable On"
+                        title={`${item.is_course ? 'Price' : 'Applicable On'}`}
                         left={item.original_price}
                         right={item.special_price}
                         lineThrough
