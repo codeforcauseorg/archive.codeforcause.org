@@ -84,7 +84,7 @@ export default function Details({ course, bottom }) {
                 textDecoration: 'line-through'
               }}
             >
-              {course.schedule[0].priceCut}
+              {course.schedule[course.default].priceCut}
             </Typography>
 
             <Typography
@@ -93,7 +93,7 @@ export default function Details({ course, bottom }) {
               }}
               variant="h4"
             >
-              {course.schedule[0].price}
+              {course.schedule[course.default].price}
             </Typography>
           </Box>
           <Box mb={2} display="flex" flexDirection="row">
@@ -128,7 +128,7 @@ export default function Details({ course, bottom }) {
           </Box>
         </Box>
 
-        <ApplyModal course={course} batch={course.schedule[0]} />
+        <ApplyModal course={course} batch={course.schedule[course.default]} />
 
         <Box mb={4}>
           <Box display="flex" flexDirection="row" flexWrap="wrap">

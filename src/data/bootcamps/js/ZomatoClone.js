@@ -1,14 +1,15 @@
 export const zomatoClone = {
   courseid: '',
-  enabled: false,
+  enabled: true,
   difficulty: 'Intermediate',
-  duration: '4 Live Lectures',
+  duration: '7 Live Lectures',
   level: 'Level 1',
   link: '/zomato-clone-with-react-js',
   domain: 'Web Development',
   title: 'Zomato Clone Bootcamp with React',
-  upcoming: 'March 1st',
-  mentors: ['ganga', 'anuj'],
+  upcoming: 'May 31st',
+  mentors: ['anuj', 'vasu'],
+  default: 1,
   schedule: [
     {
       courseId: 'jsfs0121',
@@ -20,7 +21,19 @@ export const zomatoClone = {
       price: '₹ 485',
       priceId: 'https://pages.razorpay.com/zomatoclone',
       duration: '4 Live Lectures',
-      active: false
+      active: false,
+    },
+    {
+      courseId: 'jsfs0121',
+      dates: '31st May - 14th June',
+      days: 'Mon, Wed, Fri,',
+      timing: '8:30 PM - 10:00 PM (IST)',
+      link: '',
+      priceCut: '₹ 4,880',
+      price: '₹ 685',
+      priceId: 'https://pages.razorpay.com/zomatoclone',
+      duration: '7 Live Lectures',
+      active: true
     }
   ],
   projects: [
@@ -46,33 +59,40 @@ export const zomatoClone = {
         {
           title: 'Setting up Node Application.',
           subtopics: [
-            'Setting Up the Backend and DB',
-            'REST API request and response with Express',
-            'Firestore CRUD Operations with Firebase Functions.'
+            'Revisit expected JS Fundamentals',
+            'Setting Up node application',
+            'React.JS Hello World',
+            'Taking a look at MUI'
           ]
         },
         {
           title: 'Setting up Wireframe',
           subtopics: [
-            'Understanding Figma Sheets',
-            'Functional Components vs Class Components',
-            'Building React Components'
+            'Setting up Firebase auth',
+            'Bottom Navigation Bar',
+            'Building Default pages'
           ]
         },
         {
-          title: 'Navigation in Multi-Screen App',
+          title: 'Express.JS Auth and API',
           subtopics: [
-            'Setting up Wireframe',
-            'Building React Components',
-            'React navigations'
+            'Populate MongoDB with hotels info',
+            'Hotels CRUD API',
+            'Menus CRUD and roles'
+          ]
+        },
+        {
+          title: 'MUI Pages and Components',
+          subtopics: [
+            'Displaying hotels and menues',
+            'Building up Order with Context API'
           ]
         },
         {
           title: 'Order generation and placement',
           subtopics: [
             'Payment Gateway Concept',
-            'Gateway Integration',
-            'How Cart and Coupon system works'
+            'How Cart system works'
           ]
         }
       ]

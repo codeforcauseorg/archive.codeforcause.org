@@ -33,7 +33,7 @@ export const bootcamps = [
     link: '/zomato-clone-with-react-js',
     type: 'Bootcamp',
     title: 'Learn to make a Zomato Clone in our week long React Bootcamp',
-    timeBelow: '1-7 March',
+    timeBelow: '31st May-14th June',
     image: '/static/temp/rn.jpeg',
     target: '_self'
   },

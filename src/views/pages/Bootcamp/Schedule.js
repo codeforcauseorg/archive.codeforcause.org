@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Schedule({ course }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = useState(0);
+  const [expanded, setExpanded] = useState(course.default);
 
   return (
     <Grid container className={classes.root}>
