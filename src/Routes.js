@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen';
 import coursesContent from 'src/data/courses';
 import specialContent from 'src/data/specialcourses';
+import events from 'src/data/events';
 import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
 import MainLayout from 'src/layouts/MainLayout';
@@ -24,6 +25,7 @@ const EditProfileView = lazy(() =>
   import('src/views/pages/StudentDashboardView/EditProfile')
 );
 const CoursePage = lazy(() => import('src/views/pages/Course/CoursePage'));
+const EventPage = lazy(() => import('src/views/pages/Event/EventPage'));
 const SpecialCoursePage = lazy(() =>
   import('src/views/pages/SpecialCourse/SpecialCoursePage')
 );
@@ -361,6 +363,16 @@ const renderRoutes = () => (
               course={coursesContent.training.competitiveCpp}
               {...props}
             />
+          </MainLayout>
+        )}
+      />
+
+      <Route
+        path={`/elastic-weekend-hackathon`}
+        exact
+        render={props => (
+          <MainLayout>
+            <EventPage course={events.hackathons.elastic} {...props} />
           </MainLayout>
         )}
       />
