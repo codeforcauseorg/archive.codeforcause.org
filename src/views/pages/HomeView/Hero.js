@@ -23,24 +23,23 @@ function Hero({ className, ...rest }) {
     <div className={className} {...rest}>
       <HeroWithLogo
         className={classes.hero}
-        title="Learn for Cause"
-        title2="Code for Cause"
+        title="Elastic Weekend"
+        title2="Prizes worth 100K"
         imageUrl="/static/home/codeforcause.svg"
         firstComponent={
           <>
             <Typography variant="body1">
-              An initiative to contribute to the Open Source community by
-              providing training, guidance, and awareness about the
-              possibilities in the field of software to students &
-              professionals.
+              {`Learn about Building Search Engines, DevOps & Security, & Data
+              Science 📈 ‼️ Prizes worth INR 1 lakh, including iPad, PS4, mobile
+              phones, premium headphones, accessories, and more! 🤩`}
             </Typography>
             <div style={{ height: '16px' }}></div>
           </>
         }
         secondComponent={
           <ButtonComponent
-            title="Our Live Courses"
-            href="/courses"
+            title="Know More"
+            href="/elastic-weekend-hackathon"
             size="large"
             variant="contained"
             icon={<PlayArrowIcon style={{ paddingRight: 5 }} />}
