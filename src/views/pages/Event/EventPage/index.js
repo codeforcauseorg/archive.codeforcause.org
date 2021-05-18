@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import Page from 'src/components/Page';
 import Footer from '../../common/Footer';
-import Recommendations from '../../common/Recommendations';
 import FAQ from '../FAQ';
 import FinalAction from '../FinalAction';
 import Major from '../Major';
@@ -25,7 +24,6 @@ function CoursePage({ course }) {
       <HeadBanner banner={course.banner}/>
       <Major course={course} />
       <Schedule course={course} />
-      <Recommendations />
       <FinalAction course={course} batch={batch} />
       <FAQ course={course} />
       <Footer />

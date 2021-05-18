@@ -1,6 +1,14 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import { Grid, Typography, Box } from '@material-ui/core';
+import {
+  Grid,
+  Typography,
+  Box,
+  ListItem,
+  ListItemIcon,
+  List,
+  ListItemText
+} from '@material-ui/core';
 import ApplyModal from '../ApplyModal';
 
 export default function Details({ course }) {
@@ -93,10 +101,39 @@ export default function Details({ course }) {
             }}
             variant="body1"
           >
-            Learn by amazing sessions and build to win. Stand chance to win
-            prizes like Apple iPad, Samsung Galaxy M31, Skullcandy Wireless
-            Over-Ear Headphone, and much more by participating in 3 days long
-            hackathon starting on 28th May.
+            Code for Cause in collaboration with Elastic is bringing you Elastic
+            Weekend + Hackathon!
+          </Typography>
+
+          <Typography
+            style={{
+              color: '#000000'
+            }}
+            variant="body1"
+          >
+            Learn about:
+          </Typography>
+
+          <List component="nav" aria-label="main mailbox folders">
+            <ListItem>
+              <ListItemText primary="➡ Building Search Engines" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary={`➡ DevOps & Security`} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary={`➡ Data Science`} />
+            </ListItem>
+          </List>
+
+          <Typography
+            style={{
+              color: '#000000'
+            }}
+            variant="body1"
+          >
+            Hackathon winners will get prizes worth INR 1 lakh, including iPad,
+            PS4, mobile phones, premium headphones, accessories, and more!
           </Typography>
           <Box mb={2} display="flex" flexDirection="row" paddingTop="10px">
             <Typography

@@ -67,7 +67,7 @@ export default function Schedule({ course }) {
               marginTop: '40px'
             }}
           >
-            Select Event that Fits Your Schedule
+             Register for the Event
           </Typography>
 
           <Box
@@ -337,14 +337,14 @@ function LimitedTimeBookNow() {
       }}
     >
       <Typography variant="h2" color="secondary" style={{ marginTop: '80px' }}>
-        Book your Seat Now{' '}
+        Sessions and Hackathon are free for All
       </Typography>
       <Typography
         variant="h3"
         color="primary"
         style={{ margin: '40px 0px 80px' }}
       >
-        Limited Seats Hurry!
+        No Prerequisites
       </Typography>
     </div>
   );

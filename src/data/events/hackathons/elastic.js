@@ -2,7 +2,7 @@ export const elastic = {
   banner: {
     path: '/static/banner/elasticbanner.png'
   },
-  duration: '1 Week',
+  duration: '3 days',
   prizeMoney: '1 Lakh Rupees',
   level: 'Level 1',
   link: 'https://ehack.devpost.com/',
@@ -14,14 +14,14 @@ export const elastic = {
   schedule: [
     {
       courseId: 'jds0124',
-      dates: '22nd May - 30th May',
-      days: 'Hackathon from 28th to 30th May',
+      dates: '22nd May - 25th May',
+      days: 'Sat, Sun, Mon Tue',
       timing: '',
       link: '',
       priceCut: '',
       price: '₹ 0.00',
       priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
-      duration: '1 Week',
+      duration: '3 Days',
       language: 'English',
       active: true
     }
@@ -144,12 +144,12 @@ export const elastic = {
     {
       title: 'Is this event suitable for me?',
       answer:
-        'Definitely! If you want to get your hands dirty with elastic stack, or wish to win great prizes. In all cases, this event is perfect for you!'
+        'Definitely! If you want to get your hands dirty with elastic stack, or wish to win great prizes. In both cases, this event is perfect for you!'
     },
     {
       title: 'What if I want to learn but do not want to take part in hackathon?',
       answer:
-        `Don't worry. Register for event. You will get notified for all the sessions. Enrollment for hackathon take additional step, that is registering on DevPost.`
+        `Don't worry. Register for event. You will get notified for all the sessions. You can skip Hackathon if uou don't feel ready yet.`
     },
   ]
 };
