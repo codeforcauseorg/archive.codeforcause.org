@@ -125,7 +125,7 @@ export const elastic = {
   ],
   tags: ['Elastic', 'Search', 'Logstash', 'Kibana', 'Webinars', 'Hackathon'],
   overview: [
-    `There will be 5 sparkeling YouTube sessions about Elastic Stack and 3 days long Hackathon starting on 22th of May.`,
+    `There will be 5 sparkeling YouTube sessions about Elastic Stack and 3 days long Hackathon starting on 22nd of May.`,
     `Search is foundational to many of the experiences we have every day. But it goes deeper than we might realize. The Story of Search is much more than search boxes and the top 10 results. In fact, there's a good chance that many of the problems you face each day are actually search problems.`,
     `Elastic is the company behind the Elastic Stack — that's Elasticsearch, Kibana, Beats, and Logstash. From stock quotes to Twitter streams, Apache logs to WordPress blogs, they help people explore and analyze their data differently using the power of search.`,
   ],
