@@ -149,7 +149,7 @@ export const elastic = {
     {
       title: 'What if I want to learn but do not want to take part in hackathon?',
       answer:
-        `Don't worry. Register for event. You will get notified for all the sessions. You can skip Hackathon if uou don't feel ready yet.`
+        `Don't worry. Register for event. You will get notified for all the sessions. You can skip Hackathon if you don't feel ready yet.`
     },
   ]
 };
