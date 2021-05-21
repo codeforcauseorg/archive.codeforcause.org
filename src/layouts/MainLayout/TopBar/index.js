@@ -48,10 +48,13 @@ const useStyles = makeStyles(theme => ({
     width: '100% !important',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    
   },
   textStyle: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    justifyContent: 'center',
+    margin:'auto',
   }
 }));
 

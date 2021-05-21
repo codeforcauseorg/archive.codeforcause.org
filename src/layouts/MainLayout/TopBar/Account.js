@@ -17,7 +17,8 @@ import { login, dismissLogin, logout } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    minWidth: '120px'
+    minWidth: '120px',
+    marginLeft:'5px',
   }
 }));
 
