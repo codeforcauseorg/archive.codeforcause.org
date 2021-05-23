@@ -204,7 +204,7 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             <div className={classes.border} style={{ width: '55px' }} />
           </div>
         );
-      case 3:
+      default:
         return (
           <div>
             <Typography variant="h5">{item.title}</Typography>
