@@ -44,14 +44,75 @@ const useStyles = makeStyles(theme => ({
     color: '#000',
     marginRight: '0px'
   },
-  list: {
-    width: '100% !important',
+  drawer: {
+    minHeight: '-webkit-fill-available',
+    backgroundColor: theme.palette.background.default
+  },
+  drawerHeader: {
+    width: '100%',
+    minHeight: '64px',
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
+  },
+  closeButton: {
+    marginLeft: 'auto',
+    marginRight: '14px',
+    color: '#000'
+  },
+  drawerBody: {
+    maxWidth: '100vw',
+    minHeight: '-webkit-fill-available',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  drawerList: {
+    padding: '0',
+    transform: 'translateY(-2%)'
+  },
+  drawerListItem: {
+    width: '100vw',
+    display: 'flex',
+    padding: '0',
+    marginTop: '0'
+  },
+  drawerListItemImage: {
+    width: '175px'
+  },
+  drawerTextStyle: {
+    fontStyle: 'italic',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    color: theme.palette.text.primary
+  },
+  border: {
+    borderBottom: '1px solid black'
+  },
+  // images on right side and text on the left
+  drawerListItemRight: {
+    width: '100vw',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '0 10px 0 20px'
+  },
+  drawerListItemRightText: {
+    width: '180px',
+    display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center'
   },
-  textStyle: {
-    textDecoration: 'none'
+  // images on left side and text on the right
+  drawerListItemLeft: {
+    width: '100vw',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '0 20px 0 10px'
+  },
+  drawerListItemLeftText: {
+    width: '180px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'right'
   }
 }));
 
@@ -68,66 +129,136 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
   const pathname = window.location.pathname;
 
   const navItems = [
-    { title: 'Special Offers', link: '/#special-offers' },
-    { title: 'Campus Leaders', link: '/campusLeaders' },
-    { title: 'Events', link: '/events' },
-    { title: 'Courses', link: '/courses' }
+    {
+      title: 'Special Offers',
+      subtitle: 'For You',
+      link: '/#special-offers',
+      image: '/static/images/nav/offers.jpg'
+    },
+    {
+      title: 'Campus Leader',
+      subtitle: 'Become A',
+      link: '/campusLeaders',
+      image: '/static/images/nav/campus-leader.jpg'
+    },
+    {
+      title: 'Events',
+      subtitle: 'Upcoming',
+      link: '/events',
+      image: '/static/images/nav/events.jpg'
+    },
+    {
+      title: 'Courses',
+      subtitle: 'Learn and Earn',
+      link: '/courses',
+      image: '/static/images/nav/courses.jpg'
+    }
   ];
 
-  const list = () => (
-    <div
-      className={classes.list}
-      role="presentation"
-      onClick={toggleDrawer('right', false)}
-      onKeyDown={toggleDrawer('right', false)}
-    >
-      <List>
+  const drawerHeader = () => (
+    <div className={classes.drawerHeader}>
+      <RouterLink
+        to="/"
+        onClick={toggleDrawer('right', false)}
+        style={{ marginLeft: '25px', marginTop: '10px' }}
+      >
+        <Logo className={classes.logo} />
+      </RouterLink>
+      <IconButton
+        edge="end"
+        className={classes.closeButton}
+        aria-label="close"
+        onClick={toggleDrawer('right', false)}
+      >
+        <CloseIcon />
+      </IconButton>
+    </div>
+  );
+
+  const drawerTextList = (item, index) => {
+    switch (index) {
+      case 0:
+        return (
+          <div>
+            <Typography variant="h5">{item.title}</Typography>
+            <Typography variant="subtitle2">{item.subtitle}</Typography>
+            <div className={classes.border} style={{ width: '55px' }} />
+          </div>
+        );
+      case 1:
+        return (
+          <div>
+            <Typography variant="subtitle2">{item.subtitle}</Typography>
+            <Typography variant="h5">{item.title}</Typography>
+            <div
+              className={classes.border}
+              style={{ width: '150px', marginLeft: 'auto' }}
+            />
+          </div>
+        );
+      case 2:
+        return (
+          <div>
+            <Typography variant="subtitle2">{item.subtitle}</Typography>
+            <Typography variant="h5">{item.title}</Typography>
+            <div className={classes.border} style={{ width: '55px' }} />
+          </div>
+        );
+      case 3:
+        return (
+          <div>
+            <Typography variant="h5">{item.title}</Typography>
+            <Typography variant="subtitle2">{item.subtitle}</Typography>
+            <div
+              className={classes.border}
+              style={{ width: '140px', marginLeft: 'auto' }}
+            />
+          </div>
+        );
+    }
+  };
+
+  const drawerItemList = () => (
+    <div className={classes.drawerBody}>
+      <List className={classes.drawerList}>
         {navItems.map((item, index) => {
           return (
-            <ListItem button key={index}>
+            <ListItem key={index} className={classes.drawerListItem}>
               <Link
                 smooth
                 to={item.link}
-                variant="h5"
-                className={classes.textStyle}
+                className={classes.drawerTextStyle}
+                onClick={toggleDrawer('right', false)}
+                onKeyDown={toggleDrawer('right', false)}
               >
-                <Typography variant="h4" color="textPrimary">
-                  {item.title}
-                </Typography>
+                {index % 2 === 0 ? (
+                  <div className={classes.drawerListItemRight}>
+                    <div className={classes.drawerListItemRightText}>
+                      {drawerTextList(item, index)}
+                    </div>
+                    <img
+                      className={classes.drawerListItemImage}
+                      alt={item.title}
+                      src={item.image}
+                    />
+                  </div>
+                ) : (
+                  <div className={classes.drawerListItemLeft}>
+                    <img
+                      className={classes.drawerListItemImage}
+                      alt={item.title}
+                      src={item.image}
+                    />
+                    <div className={classes.drawerListItemLeftText}>
+                      {drawerTextList(item, index)}
+                    </div>
+                  </div>
+                )}
               </Link>
             </ListItem>
           );
         })}
-        {!user ? (
-          <ListItem>
-            <Account />
-          </ListItem>
-        ) : (
-          <div />
-        )}
       </List>
-    </div>
-  );
-  const headerMoblie = () => (
-    <div>
-      <RouterLink
-        to="/"
-        onClick={toggleDrawer('right', false)}
-        style={{ position: 'absolute', left: '20px', top: '3%' }}
-      >
-        <Logo className={classes.logo} />
-      </RouterLink>
-      <Box ml={8}>
-        <IconButton
-          edge="end"
-          className={classes.menuButton}
-          aria-label="menu"
-          onClick={toggleDrawer('right', false)}
-          style={{ position: 'absolute', right: '15px', top: '1%' }}
-        >
-          <CloseIcon />
-        </IconButton>
-      </Box>
     </div>
   );
 
@@ -138,7 +269,6 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
     ) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
@@ -186,13 +316,16 @@ function TopBar({ className, onMobileNavOpen, ...rest }) {
             </IconButton>
           </Box>
           <Drawer
-            width={'100%'}
+            width="100vw"
             anchor="right"
             open={state['right']}
             onClose={toggleDrawer('right', false)}
           >
-            {headerMoblie()}
-            {list()}
+            <div className={classes.drawer}>
+              {drawerHeader()}
+              {drawerItemList()}
+              {!user ? <Account /> : <div />}
+            </div>
           </Drawer>
         </Hidden>
       </Toolbar>

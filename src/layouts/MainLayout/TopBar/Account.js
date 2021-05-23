@@ -17,7 +17,16 @@ import { login, dismissLogin, logout } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    minWidth: '120px'
+    minWidth: '120px',
+    textTransform: 'capitalize',
+    [theme.breakpoints.down('sm')]: {
+      minWidth: '130px',
+      minHeight: '45px',
+      borderRadius: '6px',
+      position: 'fixed',
+      bottom: '20px',
+      left: '20px'
+    }
   }
 }));
 
@@ -122,9 +131,6 @@ function Account() {
             color="secondary"
             className={classes.button}
             onClick={handleLoginOpen}
-            style={{
-              textTransform: 'capitalize'
-            }}
           >
             {user === undefined ? (
               <CircularProgress size="24px" color="inherit" />
