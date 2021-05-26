@@ -73,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     width: '100vw',
     display: 'flex',
     padding: '0',
-    marginTop: '0'
+    margin: '8px 0px 8px 0px'
   },
   drawerListItemImage: {
     width: '175px'
