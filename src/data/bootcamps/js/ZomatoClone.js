@@ -21,7 +21,7 @@ export const zomatoClone = {
       price: '₹ 485',
       priceId: 'https://pages.razorpay.com/zomatoclone',
       duration: '4 Live Lectures',
-      active: false,
+      active: false
     },
     {
       courseId: 'jsfs0121',
@@ -90,10 +90,7 @@ export const zomatoClone = {
         },
         {
           title: 'Order generation and placement',
-          subtopics: [
-            'Payment Gateway Concept',
-            'How Cart system works'
-          ]
+          subtopics: ['Payment Gateway Concept', 'How Cart system works']
         }
       ]
     }
@@ -132,5 +129,9 @@ export const zomatoClone = {
       answer:
         'Definitely! If you want to take headstart in app development, then this bootcamp is perfect for you!'
     }
-  ]
+  ],
+  offer: {
+    title: 'Swags Giveaway',
+    subheading: 'CFC Swags kit including Sipper, Key Chains and Stickers with this Bootcamp'
+  }
 };

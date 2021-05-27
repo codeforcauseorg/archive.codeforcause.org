@@ -9,6 +9,7 @@ import FinalAction from '../FinalAction';
 import Schedule from '../Schedule';
 import Major from '../Major';
 import Features from '../Features';
+import SpecialOffer from '../specialOffer';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -23,6 +24,7 @@ function CoursePage({ course }) {
 
   return (
     <Page className={classes.root} title={course.title}>
+      <SpecialOffer offer={course.offer} />
       <Major course={course} />
       <Schedule course={course} />
       <Features />
