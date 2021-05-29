@@ -202,13 +202,63 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
-
       <Route
         path={`/zomato-clone-with-react-js`}
         exact
         render={props => (
           <MainLayout>
             <BootcampPage course={bootcampsContent.js.zomatoClone} {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path={`/instagram-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage
+              course={bootcampsContent.js.instagramClone}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path={`/amazon-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage course={bootcampsContent.js.amazonClone} {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path={`/swiggy-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage course={bootcampsContent.js.swiggyClone} {...props} />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path={`/spotify-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage
+              course={bootcampsContent.js.spotifyClone}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+      <Route
+        path={`/gaana-clone-with-react-js`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage course={bootcampsContent.js.gaanaClone} {...props} />
           </MainLayout>
         )}
       />
