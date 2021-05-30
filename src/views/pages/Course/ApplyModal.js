@@ -298,6 +298,21 @@ export default function ApplyModal({
               errorMessages={[]}
             />
 
+            <TextValidator
+              key="address"
+              className={classes.textField}
+              label="Address"
+              variant="outlined"
+              value={formData.address}
+              fullWidth
+              rows={2}
+              multiline
+              name="address"
+              onChange={handleChange}
+              validators={[]}
+              errorMessages={[]}
+            />
+
             {submitting === 0 ? (
               <Button type="submit" variant="contained" color="secondary">
                 Submit
