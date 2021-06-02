@@ -29,7 +29,7 @@ export default function Success() {
           Connect with us at {` `}
           <Link href="mailto:team@codeforcause.org">team@codeforcause.org</Link>
           {` `}or{` `}
-          <Link href="tel:+919810468685">+91 98104 68685</Link>
+          <Link href="tel:+918882434509">+91 88824 34509</Link>
           {` `} in case of any help.
         </Typography>
         <CustomButton
