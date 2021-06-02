@@ -38,7 +38,7 @@ function Header({ course, className, ...rest }) {
           variant="h4"
           align="center"
         >
-          {course.schedule[course.default].active ? '🕊️ Use Coupon code : EARLYSAVE60 and get Flat 60% early bird discount 🕊️' : 'Oops! The seats are full. ✅ We will be happy to see you in the next batch! 😊'}
+          {course.schedule[course.default].active ? '🕊️ Use Coupon code : SUMMERS21 and get Flat 50% early bird discount 🕊️' : 'Oops! The seats are full. ✅ We will be happy to see you in the next batch! 😊'}
         </Typography>
         {course.schedule[course.default].active ? <Countdown date={Date.parse(course.discountEnds)} renderer={renderer} /> : undefined}
       </Box>
