@@ -57,10 +57,10 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
-    name: 'Early Bird Discount',
+    name: 'Summer Courses',
     applied_on: '',
     desc:
-      'Be an early bird and grab a FLAT 60% OFF on any of our courses on DSA  fundamentals in Python, Java, JavaScript, and C++ to advanced courses in Web Development, Machine Learning, and Competitive Programming with Java and C++.',
+      'Grab a FLAT 50% OFF on any of our courses on DSA  fundamentals in Python, Java, JavaScript, and C++ to advanced courses in Web Development, Machine Learning, and Competitive Programming with Java and C++.',
     links: [
       {
         name: 'Check our course',
@@ -71,7 +71,7 @@ const offers = [
     is_course: false,
     special_price: 'All Courses',
     original_price: '',
-    pic: '/static/images/backs/earlybird.jpg'
+    pic: '/static/images/backs/summers21.jpeg'
   },
   {
     name: 'Zomato Clone',
