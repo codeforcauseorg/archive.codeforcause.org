@@ -245,19 +245,6 @@ function Process({ benefits, className, ...rest }) {
                 className={classes.actBtn}
                 fullWidth
                 variant="contained"
-                size="large"
-                startIcon={<PhoneIcon />}
-                component="a"
-                href="tel:+919810468685"
-                target="_blank"
-              >
-                <Typography>+91 98104 68685 </Typography>
-              </Button>
-
-              <Button
-                className={classes.actBtn}
-                fullWidth
-                variant="contained"
                 color="secondary"
                 size="large"
                 startIcon={<PhoneIcon />}
