@@ -11,7 +11,7 @@ import {
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { useHistory } from 'react-router-dom';
 import ButtonComponent from 'src/components/Button/ButtonComponent';
 
 const useStyles = makeStyles(theme => ({
@@ -64,7 +64,8 @@ const offers = [
     links: [
       {
         name: 'Check our course',
-        link: '/courses'
+        link: '/courses',
+        type: 'internal'
       }
     ],
     terms: '',
@@ -74,20 +75,26 @@ const offers = [
     pic: '/static/images/backs/summers21.jpeg'
   },
   {
-    name: 'Zomato Clone',
+    name: '',
     applied_on: '',
-    desc: `React Ionic is React's trending framework to build awesome apps for iOS, Android and Web. With this Bootcamp, we are providing a hands-on approach to learn React, Firebase, express and how to get them wired.`,
+    desc: `An exciting opportunity to grab a scholarship of up to 90% on any one of the Code for Cause Live Professional Cousrses! Answer questions on HackerRank, and stand the chance to win!`,
     links: [
       {
-        name: 'Know More',
-        link: '/zomato-clone-with-react-js'
+        name: 'Foundation + 6 Month Courses',
+        link: 'https://codecau.se/scholarship',
+        type: 'external'
+      },
+      {
+        name: 'Advance Courses',
+        link: 'https://codecau.se/contest',
+        type: 'external'
       }
     ],
     terms: '',
-    is_course: true,
-    special_price: '₹ 685',
-    original_price: '₹ 4,880',
-    pic: '/static/images/backs/zom.jpg'
+    is_course: false,
+    special_price: 'All Courses',
+    original_price: '',
+    pic: '/static/images/backs/scholarship.jpeg'
   },
   {
     name: 'DSA with C++',
@@ -110,6 +117,7 @@ const offers = [
 
 function Promo({ benefits, className, ...rest }) {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <div
@@ -151,7 +159,8 @@ function Promo({ benefits, className, ...rest }) {
                     style={{
                       color: '#fff',
                       fontWeight: 700,
-                      margin: '-54px 0px 20px 26px'
+                      margin: '-54px 0px 20px 26px',
+                      height: '50px'
                     }}
                   >
                     {item.name}
@@ -191,9 +200,7 @@ function Promo({ benefits, className, ...rest }) {
                     >
                       {item.links.map((link, idx) => {
                         return (
-                          <HashLink
-                            smooth
-                            to={link.link}
+                          <div
                             style={{
                               textDecoration: 'none',
                               flexGrow: 1,
@@ -201,11 +208,18 @@ function Promo({ benefits, className, ...rest }) {
                             }}
                           >
                             <ButtonComponent
+                              onClick={() => {
+                                if (link.type === 'external') {
+                                  window.location.href = link.link;
+                                } else {
+                                  history.push(link.link);
+                                }
+                              }}
                               fullWidth
                               title={link.name}
                               className={classes.btn}
                             />
-                          </HashLink>
+                          </div>
                         );
                       })}
                     </Grid>
