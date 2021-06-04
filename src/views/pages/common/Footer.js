@@ -15,6 +15,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -146,6 +147,19 @@ function Footer({ className, ...rest }) {
                   <ListItemText
                     className={classes.iconSocialMedia}
                     primary="career@codeforcause.org"
+                  />
+                </ListItem>
+                <ListItem
+                  className={classes.centerCls}
+                  component="a"
+                  href="tel:+918882434509"
+                >
+                  <ListItemIcon className={classes.iconSocialMedia}>
+                    <PhoneIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.iconSocialMedia}
+                    primary="+918882434509"
                   />
                 </ListItem>
               </List>
