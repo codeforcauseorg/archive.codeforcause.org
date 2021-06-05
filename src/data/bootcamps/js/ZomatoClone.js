@@ -1,6 +1,6 @@
 export const zomatoClone = {
   courseid: '',
-  enabled: true,
+  enabled: false,
   difficulty: 'Intermediate',
   duration: '7 Live Lectures',
   level: 'Level 1',
@@ -33,7 +33,7 @@ export const zomatoClone = {
       price: '₹ 685',
       priceId: 'https://pages.razorpay.com/zomatoclone',
       duration: '7 Live Lectures',
-      active: true
+      active: false
     }
   ],
   projects: [
