@@ -79,7 +79,8 @@ const useStyles = makeStyles(theme => ({
   },
   copyRightPadding: {
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(3)
+    paddingBottom: theme.spacing(3),
+    textAlign: 'center',
   }
 }));
 
@@ -272,7 +273,8 @@ function Footer({ className, ...rest }) {
         <Grid className={classes.copyRightPadding}>
           <Typography display="block" variant="body2" color="textSecondary">
             {'Copyright © '}
-            {new Date().getFullYear()}{' '}
+            {new Date().getFullYear()}
+            {' '}
             <Link color="inherit" href="https://codeforcause.org">
               Code For Cause Pvt. Ltd.
             </Link>
