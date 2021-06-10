@@ -37,7 +37,7 @@ function Hero({ className, ...rest }) {
                 color: '#ffffff'
               }}
             >
-              Explore our courses below
+              Explore our courses below. Top performers may get an opportunity to work with us.
             </Typography>
           }
         />
