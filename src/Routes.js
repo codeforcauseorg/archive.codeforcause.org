@@ -212,6 +212,20 @@ const renderRoutes = () => (
           </MainLayout>
         )}
       />
+
+      <Route
+        path={`/deep-learning-using-python`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage
+              course={bootcampsContent.python.deepLearning}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
       <Route
         path={`/machine-learning-using-python`}
         exact

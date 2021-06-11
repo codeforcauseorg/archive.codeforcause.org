@@ -42,14 +42,14 @@ const useStyles = makeStyles(theme => ({
 }));
 
 let emptyData = {
-  college : "",
-  countryCode: "+91",
-  course: "",
-  email: "",
-  name: "",
-  phone: "",
-  year: ""
-}
+  college: '',
+  countryCode: '+91',
+  course: '',
+  email: '',
+  name: '',
+  phone: '',
+  year: ''
+};
 
 export default function ApplyModal({
   course,
@@ -85,7 +85,10 @@ export default function ApplyModal({
         setChecking(false);
         if (response.data.status === 'Credit') {
           enqueueSnackbar(
-            'Registration is already complete with this account.'
+            'Registration is already complete with this account.',
+            {
+              variant: 'success'
+            }
           );
         } else {
           setOpen(true);
@@ -128,6 +131,7 @@ export default function ApplyModal({
       data: formData
     })
       .then(response => {
+        console.log(response);
         if (response.data.status && response.data.status === 'Credit') {
           enqueueSnackbar(
             'Registration is already complete with this account.'
@@ -152,7 +156,7 @@ export default function ApplyModal({
     .fill(1)
     .map((x, y) => x + y)
     .reverse();
-  
+
   const theme = createMuiTheme({
     palette: {
       action: {
@@ -204,7 +208,7 @@ export default function ApplyModal({
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Apply for Scholarship</DialogTitle>
+        <DialogTitle id="form-dialog-title">Apply for Bootcamp</DialogTitle>
         <DialogContent>
           <DialogContentText>
             <Typography>Please provide your details below.</Typography>
@@ -331,7 +335,8 @@ export default function ApplyModal({
 
             <DialogContentText>
               <Typography>
-                You will be redirected to payment page. For fail-safe yous will also get email containing payment link (expires in 15 minutes).
+                You will be redirected to payment page. For fail-safe yous will
+                also get email containing payment link (expires in 15 minutes).
               </Typography>
             </DialogContentText>
 

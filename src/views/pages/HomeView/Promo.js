@@ -75,26 +75,20 @@ const offers = [
     pic: '/static/images/backs/summers21.jpeg'
   },
   {
-    name: '',
+    name: 'Deep Learning Bootcamp',
     applied_on: '',
-    desc: `An exciting opportunity to grab a scholarship of up to 90% on any one of the Code for Cause Live Professional Cousrses! Answer questions on HackerRank, and stand the chance to win!`,
+    desc: `In this bootcamp we will target on understanding deep learning concepts as well as building practical applications on them. Eg. Camera App, Facial Landmarking, Gesture Controls etc`,
     links: [
       {
-        name: 'Foundation + 6 Month Courses',
-        link: 'https://codecau.se/scholarship',
-        type: 'external'
-      },
-      {
-        name: 'Advance Courses',
-        link: 'https://codecau.se/contest',
-        type: 'external'
+        name: 'Know More',
+        link: '/deep-learning-using-python'
       }
     ],
     terms: '',
-    is_course: false,
-    special_price: 'All Courses',
-    original_price: '',
-    pic: '/static/images/backs/scholarship.jpeg'
+    is_course: true,
+    special_price: '985',
+    original_price: '5,880',
+    pic: '/static/images/backs/hand.jpeg'
   },
   {
     name: 'DSA with C++',

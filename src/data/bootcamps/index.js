@@ -1,5 +1,6 @@
 import js from './js';
+import python from './python';
 
-const bootcampsContent = { js };
+const bootcampsContent = { js, python };
 
 export default bootcampsContent;
