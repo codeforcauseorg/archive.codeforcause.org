@@ -254,6 +254,20 @@ function Process({ benefits, className, ...rest }) {
               >
                 <Typography>+91 8882434509 </Typography>
               </Button>
+
+              <Button
+                className={classes.actBtn}
+                fullWidth
+                variant="contained"
+                color="secondary"
+                size="large"
+                startIcon={<PhoneIcon />}
+                component="a"
+                href="tel:+919810468685"
+                target="_blank"
+              >
+                <Typography>+91 9810468685 </Typography>
+              </Button>
             </CardContent>
 
             <CardContent>
