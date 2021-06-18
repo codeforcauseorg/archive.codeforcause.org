@@ -30,6 +30,8 @@ export default function Success() {
           <Link href="mailto:team@codeforcause.org">team@codeforcause.org</Link>
           {` `}or{` `}
           <Link href="tel:+918882434509">+91 88824 34509</Link>
+          {`, `}
+          <Link href="tel:+919810468685">+91 98104 68685</Link>
           {` `} in case of any help.
         </Typography>
         <CustomButton
