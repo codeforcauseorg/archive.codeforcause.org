@@ -37,7 +37,7 @@ export default function SpecialHeader({ event }) {
     <div className={classes.root}>
       <Hidden xsDown>
         <img
-          src="https://i.pinimg.com/originals/b7/5f/ee/b75feef936c4e0224cd1dcde29b82370.png"
+          src="\static\images\courses\SpecialAcc.png"
           height="150px"
           style={{
             overflow: 'hidden',

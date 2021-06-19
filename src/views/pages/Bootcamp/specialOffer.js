@@ -38,7 +38,7 @@ export default function SpecialOffer({ offer }) {
     <div className={classes.root}>
       <Hidden xsDown>
         <img
-          src="https://i.pinimg.com/originals/b7/5f/ee/b75feef936c4e0224cd1dcde29b82370.png"
+          src="\static\images\courses\SpecialAcc.png"
           style={{
             height: '100px'
           }}
@@ -59,7 +59,7 @@ export default function SpecialOffer({ offer }) {
       </Box>
       <Hidden xsDown>
         <img
-          src="https://i.pinimg.com/originals/b7/5f/ee/b75feef936c4e0224cd1dcde29b82370.png"
+          src="\static\images\courses\SpecialAcc.png"
           style={{
             height: '100px',
             transform: 'scaleX(-1)'
