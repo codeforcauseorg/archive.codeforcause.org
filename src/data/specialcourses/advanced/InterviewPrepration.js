@@ -1,40 +1,28 @@
-export const competitiveJava = {
+export const interviewPrep = {
+  courseid: '',
+  discount: '90% Scholarship',
   difficulty: 'Intermediate',
   duration: '40 Live Lectures',
-  level: 'Level 2',
-  link: '/competitive-programming-using-java',
-  domain: 'Interview Prepration',
-  title: 'Competitive Programming using Java',
-  upcoming: 'June 27th',
-  language: 'Hindi',
-  mentors: ['ekta', 'nityanand'],
-  default: 1,
+  level: 'Level 1',
+  link: '/interview-prep-using-java',
+  domain: 'Problem Solving',
+  title: 'Interview Prepration using Java',
+  upcoming: 'July 17th',
+  mentors: ['nityanand'],
+  active: true,
+  application: true,
   schedule: [
     {
-      courseId: 'jcomp0121',
-      dates: '15th Apr - 18th July',
-      days: 'Sat, Sun, Wed, Fri',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      courseId: 'jsfs0121',
+      dates: '17th July - 30th Sept',
+      days: 'Mon, Tue, Thurs, Sat',
+      timing: '09:00 PM - 10:30 PM (IST)',
       link: '',
-      priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1I0Uz4LVU3L7vcSrx3vOaUdv',
+      priceCut: '₹ 18,850',
+      price: '₹ 1,885',
       duration: '40 Live Lectures',
-      active: false
-    },
-    {
-      courseId: 'jcomp0122',
-      dates: '27th June - 04th Sep',
-      days: ' Tue, Thurs, Sat, Mon',
-      timing: '09:00 PM - 11:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 15,000',
-      priceId: 'price_1IjJlGLVU3L7vcSrU8qUVqWV',
-      duration: '40 Live Lectures',
-      mentor: 'Nityanand Rai',
-      language: 'Hindi',
-      active: false
+      active: true,
+      application: true
     }
   ],
   projects: [
@@ -59,10 +47,72 @@ export const competitiveJava = {
       img: '/static/images/courses/projects/git.png'
     }
   ],
+
   sections: [
     {
+      title: 'Data Structure & Algorithms',
+      classes: 'Classes 01-10',
+      topics: [
+        {
+          title: 'Understanding online platforms: Codeforces & Leetcode',
+          classes: 'Lectures 3',
+          subtopics: [
+            'Start Competitive Programming on Codeforces',
+            'Set up IntelliJ idea for Competitive Coding',
+            'Create Template to save time in Competitive Coding'
+          ]
+        },
+        {
+          title: 'Stacks & Queues',
+          subtopics: [
+            'Stack as generic collection',
+            'Operations in Stack',
+            'Stack using Array & LinkedList',
+            'Push efficient & Pop efficient Stacks',
+            'Queue as generic collection',
+            'Operations in Queue',
+            'Interview problems on Stack & Queue'
+          ]
+        },
+        {
+          title: 'LinkedList',
+          subtopics: [
+            'Intro to LinkedList',
+            'Implementation of LinkedList',
+            'Operations in LinkedList',
+            'Cycle detection Algorithms',
+            'Problems based on LinkedList'
+          ]
+        },
+        {
+          title: 'Binary Trees',
+          subtopics: [
+            'Implementation of Binary Trees',
+            'Tree traversal- inorder, preorder, postorder',
+            'Searching Algorithms- DFS and BFS',
+            'Calculate- hieght, depth, diameter of tree',
+            'Implementation of Binary Search Tree',
+            'AVL Trees & Rotations',
+            'Interview problems on BT & BST'
+          ]
+        },
+        {
+          title: 'Heap & HashMap',
+          subtopics: [
+            'Implementation of Heaps',
+            'PriorityQueue as generic collection',
+            'HeapSort with complexity analysis',
+            'Concept of Hashing',
+            'HashMap implementation using ArrayList & LinkedList',
+            'Types of Maps in Java collections',
+            'Problems on Hashmap & Heaps'
+          ]
+        }
+      ]
+    },
+    {
       title: 'Advance Competetive Algorithms',
-      classes: 'Classes 01-20',
+      classes: 'Classes 11-25',
       topics: [
         {
           title: 'Revisiting Java Collection Framework',
@@ -72,15 +122,6 @@ export const competitiveJava = {
             'Classes, Interfaces and Inheritance',
             'Best practices with Generics and Collections',
             'lurking over recursion problems'
-          ]
-        },
-        {
-          title: 'Understanding online platforms: Codeforces & Leetcode',
-          classes: 'Lectures 3',
-          subtopics: [
-            'Start Competitive Programming on Codeforces',
-            'Set up IntelliJ idea for Competitive Coding',
-            'Create Template to save time in Competitive Coding'
           ]
         },
         {
@@ -95,21 +136,6 @@ export const competitiveJava = {
           ]
         },
         {
-          title: 'Number theory & Computational Theory',
-          classes: 'Lectures 6-7',
-          subtopics: [
-            'Binomial coefficients',
-            'Matrix Exponentiation',
-            'Catalan Series',
-            'Fibonacci & other series facts',
-            'Prime factorization',
-            'Pigeonhole Principle',
-            'Extended Euclids Algorithms',
-            'Willsons Theorem',
-            'Pollards rho Theorem'
-          ]
-        },
-        {
           title: 'Divide & Conquer Algorithms',
           classes: 'Lectures 8',
           subtopics: [
@@ -117,8 +143,6 @@ export const competitiveJava = {
             'Merge sort & Quick sort',
             'Second largest element',
             'Painter partition problem',
-            'Aggressive Cows',
-            'Tilling problem'
           ]
         },
         {
@@ -127,12 +151,9 @@ export const competitiveJava = {
           subtopics: [
             'Recursive tree, Stack trace',
             'Generate all passwords from given character set',
-            'Lockdown Game',
             'Its confidential problem',
             'Sudoku solver',
             'Optimal BST problem',
-            'Subset sum',
-            'M coloring problem',
             'Lexical permutation',
             'N-Queens & N-Knights'
           ]
@@ -149,8 +170,6 @@ export const competitiveJava = {
             'Wildcard pattern problem',
             'Egg drop problem',
             'Matrix chain multiplication',
-            'Longest Increasing Subsequence',
-            'Maximum Subarray Sum'
           ]
         },
         {
@@ -160,8 +179,6 @@ export const competitiveJava = {
             'Greedy Algorithm concept &  philosphy',
             'Pirates & Gold coins problem',
             'Activity selection & Job sequencing problem',
-            'Policemen catch thieves',
-            'Efficient Huffman encoding & decoding',
             'Assign mice to holes',
             'Minimum Spanning Tree',
             'Memory Management Algorithms'
@@ -171,21 +188,8 @@ export const competitiveJava = {
     },
     {
       title: 'Advanced non-linear data structures',
-      classes: 'Classes 21-40',
+      classes: 'Classes 26-40',
       topics: [
-        {
-          title: 'Binary Tree',
-          classes: 'Lectures 17-18',
-          subtopics: [
-            'Implementation of Binary Trees',
-            'Tree traversal- inorder, preorder and postorder',
-            'Searching Algorithms- DFS and BFS',
-            'Calculate- height, depth, diameter of tree',
-            'Implementation of Binary Search Tree',
-            'AVL Trees & Rotations',
-            'Interview problems on BT & BST'
-          ]
-        },
         {
           title: 'String Matching',
           classes: 'Lectures 19-20',
@@ -225,19 +229,6 @@ export const competitiveJava = {
           ]
         },
         {
-          title: 'Fenwick Tree',
-          classes: 'Lectures 24-25',
-          subtopics: [
-            'Fenwick Tree concept',
-            'Build & update implementation',
-            'Range Sum query',
-            'Inversion count',
-            '2D Binary Indexed Tree',
-            'No. of elements greater than K in [L,R] range',
-            'Range Queries problems'
-          ]
-        },
-        {
           title: 'Graphs',
           classes: 'Lectures 26-27',
           subtopics: [
@@ -249,22 +240,6 @@ export const competitiveJava = {
             'Connected component, Cycle detection',
             'Bipartite Graph',
             "Kruskal's, Dijkstra's, Prim's Algorithms",
-            "Kosaraju's Algorithm",
-            'Dynamic Programming with Graphs'
-          ]
-        },
-        {
-          title: 'Advanced Mathematics',
-          classes: 'Lectures 28-29',
-          subtopics: [
-            'Fast Fourier transform concepts',
-            'FFT Implementation',
-            'Discrete Fourier transform',
-            'Inverse FFT',
-            'Square Root Decompositions',
-            'Segmented Sieve',
-            'Modulo inverse',
-            'Lucas Theorem'
           ]
         },
         {
@@ -280,23 +255,24 @@ export const competitiveJava = {
       ]
     }
   ],
-
   slides: [
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/comp.png'
+      image: '/static/swipes/web.png'
     }
   ],
   tags: [
+    'Stack',
+    'Queue',
+    'Linked List',
+    'Backtracking',
     'Dynamic Programming',
     'Tree',
     'Graph',
     'Bitwise',
-    'Pigeonhole Principle',
     'Number Theory',
     'Segment Tree',
-    'Fenwick Tree',
     'Decompositions'
   ],
   overview: [

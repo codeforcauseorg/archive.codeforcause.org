@@ -1,4 +1,5 @@
 import { webDevelopment } from './WebDevelopment';
-const advanced = { webDevelopment };
+import {interviewPrep} from './InterviewPrepration'
+const advanced = { webDevelopment, interviewPrep };
 
 export default advanced;

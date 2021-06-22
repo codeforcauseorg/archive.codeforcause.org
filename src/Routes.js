@@ -178,6 +178,19 @@ const renderRoutes = () => (
       />
 
       <Route
+        path={`/interview-prep-using-java`}
+        exact
+        render={props => (
+          <MainLayout>
+            <SpecialCoursePage
+              course={specialContent.advanced.interviewPrep}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
+      <Route
         path={`/six-weeks-of-dsa-with-cpp`}
         exact
         render={props => (

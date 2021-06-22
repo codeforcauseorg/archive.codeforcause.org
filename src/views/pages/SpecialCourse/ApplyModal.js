@@ -49,7 +49,9 @@ export default function ApplyModal({
 }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [formData, updateFormData] = useState({});
+  const [formData, updateFormData] = useState({
+    countryCode: "+91"
+  });
   const [submitting, setSubmitting] = useState(0);
   const [checking, setChecking] = useState(false);
 
@@ -66,17 +68,18 @@ export default function ApplyModal({
     setChecking(true);
     console.log(user.email);
     axios(
-      'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special/status/',
+      'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/scholar/status/',
       {
         params: { email: user.email }
       }
     )
       .then(response => {
         setChecking(false);
-        if (response.data.status === 'Credit') {
+        if (response.data.status === 'requested') {
           enqueueSnackbar(
-            'Registration is already complete with this account.'
+            'Your application is already submitted. we will connect with you within 7 days.'
           );
+          setOpen(false)
         } else {
           setOpen(true);
           updateFormData({
@@ -106,7 +109,6 @@ export default function ApplyModal({
   };
 
   const handleSubmit = e => {
-    formData.phone = `${formData.countryCode}${formData.phone}`;
     formData.source = window.location.href;
     formData.courseName = course.title;
     formData.email = user.email;
@@ -115,23 +117,12 @@ export default function ApplyModal({
     axios({
       method: 'post',
       url:
-        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special',
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/scholar',
       data: formData
     })
       .then(response => {
-        if (response.data.status && response.data.status === 'Credit') {
-          enqueueSnackbar(
-            'Registration is already complete with this account.'
-          );
-          setSubmitting(0);
-          handleClose();
-        } else if (response.data.payment_request) {
-          window.open(response.data.payment_request.longurl);
-          enqueueSnackbar('Forwarding to fees payment.');
-          setSubmitting(0);
-          handleClose();
-        } else {
-          enqueueSnackbar('Application Failed. Try again later');
+        if (response.data.status && response.data.status === 'submitted') {
+          enqueueSnackbar('Your application is submitted. we will connect with you within 7 days.');
         }
       })
       .catch(error => {
@@ -143,7 +134,7 @@ export default function ApplyModal({
     .fill(1)
     .map((x, y) => x + y)
     .reverse();
-  
+
   const theme = createMuiTheme({
     palette: {
       action: {
@@ -320,9 +311,23 @@ export default function ApplyModal({
               errorMessages={[]}
             />
 
+            <TextValidator
+              required
+              key="why"
+              className={classes.textField}
+              label="Why you should get this scholarship?"
+              variant="outlined"
+              value={formData.why}
+              fullWidth
+              name="why"
+              onChange={handleChange}
+              validators={[]}
+              errorMessages={[]}  
+            />
+
             <DialogContentText>
               <Typography>
-                You will be redirected to payment page. For fail-safe yous will also get email containing payment link (expires in 15 minutes).
+                You are submitting Scholarship Application. You will get an email for fee payment if you get selected. Fees is completely non refundable.
               </Typography>
             </DialogContentText>
 

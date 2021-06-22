@@ -75,20 +75,20 @@ const offers = [
     pic: '/static/images/backs/summers21.jpeg'
   },
   {
-    name: 'Deep Learning Bootcamp',
+    name: 'Interview Prep Scholarship',
     applied_on: '',
-    desc: `In this bootcamp we will target on understanding deep learning concepts as well as building practical applications on them. Eg. Camera App, Facial Landmarking, Gesture Controls etc`,
+    desc: `During the course, you’ll learn everything needed to participate in real interviews. Along the way you’ll also gain useful problem solving skills, which are so highly valued by employers`,
     links: [
       {
-        name: 'Know More',
-        link: '/deep-learning-using-python'
+        name: 'Apply Here',
+        link: '/interview-prep-using-java'
       }
     ],
     terms: '',
     is_course: true,
-    special_price: '985',
-    original_price: '5,880',
-    pic: '/static/images/backs/hand.jpeg'
+    special_price: '₹ 1,885',
+    original_price: '₹ 18,850',
+    pic: '/static/images/backs/dsa.png'
   },
   {
     name: 'DSA with C++',
