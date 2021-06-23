@@ -33,7 +33,7 @@ export const competitiveJava = {
       price: '₹ 25,000',
       priceId: 'price_1IjJpaLVU3L7vcSrtrHYrNVV',
       duration: '80 Live Lectures',
-      mentor: 'Anuj Garg, Nityanand Rai',
+      mentor: 'Nityanand Rai',
       language: 'Hindi',
       active: true
     }

@@ -13,7 +13,7 @@ export const algoCpp = {
     schedule: [
       {
         courseId: 'cds0121',
-        dates: '20th June - 28th Aug',
+        dates: '27th June - 04th Sep',
         days: 'Mon, Wed, Fri, Sun',
         timing: '06:00 PM - 08:00 PM (IST)',
         link: '',
