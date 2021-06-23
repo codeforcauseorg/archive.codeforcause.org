@@ -13,7 +13,7 @@ export const competitiveCpp = {
   schedule: [
     {
       courseId: 'ccomp0121',
-      dates: '20th June - 06th Nov',
+      dates: '27th June - 13th Nov',
       days: 'Mon, Wed, Fri, Sun',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',

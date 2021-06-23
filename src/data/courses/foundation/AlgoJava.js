@@ -62,7 +62,7 @@ export const algoJava = {
       price: '₹ 12,000',
       priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
       duration: '40 Live Lectures (2 hrs)',
-      mentor: 'Anuj Garg, Nityanand Rai',
+      mentor: 'Nityanand Rai',
       language: 'Hindi',
       active: true
     }
