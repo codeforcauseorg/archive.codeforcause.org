@@ -124,6 +124,7 @@ export default function ApplyModal({
         if (response.data.status && response.data.status === 'submitted') {
           enqueueSnackbar('Your application is submitted. we will connect with you within 7 days.');
         }
+        setOpen(false);
       })
       .catch(error => {
         enqueueSnackbar('Application Failed. Try again later');
