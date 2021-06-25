@@ -24,6 +24,20 @@ export const algoCpp = {
         mentor: 'Nityanand Rai',
         language: 'Hindi',
         active: true
+      },
+      {
+        courseId: 'cds0121',
+        dates: '06th Sep - 13th Nov',
+        days: 'Mon, Wed, Fri, Sun',
+        timing: '06:00 PM - 08:00 PM (IST)',
+        link: '',
+        priceCut: '',
+        price: '₹ 12,000',
+        priceId: 'price_1IjK7oLVU3L7vcSrdSju1Tu7',
+        duration: '40 Live Lectures (2 hrs)',
+        mentor: 'Nityanand Rai',
+        language: 'Hindi',
+        active: true
       }
     ],
     projects: [

@@ -79,6 +79,20 @@ export const algoJava = {
       mentor: 'Nityanand Rai',
       language: 'Hindi',
       active: true
+    },
+    {
+      courseId: 'jds0126',
+      dates: '06th Sep - 13th Nov',
+      days: 'Sat, Sun, Tue, Thurs',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
+      duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [
