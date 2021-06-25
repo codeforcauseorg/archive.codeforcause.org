@@ -54,7 +54,21 @@ export const algoJava = {
     },
     {
       courseId: 'jds0124',
-      dates: '27th June - 04th September',
+      dates: '27th June - 04th Sep',
+      days: 'Sat, Sun, Tue, Thurs',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
+      duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
+      active: true
+    },
+    {
+      courseId: 'jds0125',
+      dates: '04th July - 11th Sep',
       days: 'Sat, Sun, Tue, Thurs',
       timing: '06:00 PM - 08:00 PM (IST)',
       link: '',

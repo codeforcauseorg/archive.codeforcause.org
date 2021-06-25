@@ -37,6 +37,20 @@ export const webDevelopment = {
       mentor: 'Anuj Garg, Vasudev Singhal',
       language: 'Hindi',
       active: true
+    },
+    {
+      courseId: 'jsfs0122',
+      dates: '04th July - 11th Sep',
+      days: 'Mon, Wed, Fri, Sun',
+      timing: '09:00 PM - 11:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 15,000',
+      priceId: 'price_1IjJmLLVU3L7vcSrnaBiAL5Y',
+      duration: '40 Live Lectures',
+      mentor: 'Anuj Garg, Vasudev Singhal',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [
