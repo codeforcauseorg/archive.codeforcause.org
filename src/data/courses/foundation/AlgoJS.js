@@ -36,6 +36,34 @@ export const algoJS = {
       mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
       language: 'Hindi',
       active: true
+    },
+    {
+      courseId: 'pds0123',
+      dates: '04th July - 11th Sep',
+      days: 'Sat, Sun, Wed, Fri',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJohLVU3L7vcSr4sYdfDCP',
+      duration: '40 Live Lectures',
+      mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
+      language: 'Hindi',
+      active: true
+    },
+    {
+      courseId: 'pds0124',
+      dates: '06th Sep - 13th Nov',
+      days: 'Sat, Sun, Wed, Fri',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJohLVU3L7vcSr4sYdfDCP',
+      duration: '40 Live Lectures',
+      mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [

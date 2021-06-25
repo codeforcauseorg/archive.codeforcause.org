@@ -8,7 +8,7 @@ export const competitiveJava = {
   upcoming: 'June 27th',
   language: 'Hindi',
   mentors: ['ekta', 'nityanand'],
-  default: 1,
+  default: 2,
   schedule: [
     {
       courseId: 'jcomp0121',
@@ -35,6 +35,20 @@ export const competitiveJava = {
       mentor: 'Nityanand Rai',
       language: 'Hindi',
       active: false
+    },
+    {
+      courseId: 'jcomp0123',
+      dates: '06th Sep - 13th Nov',
+      days: ' Tue, Thurs, Sat, Mon',
+      timing: '09:00 PM - 11:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 15,000',
+      priceId: 'price_1IjJlGLVU3L7vcSrU8qUVqWV',
+      duration: '40 Live Lectures',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
+      active: true
     }
   ],
   projects: [
