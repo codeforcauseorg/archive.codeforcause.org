@@ -103,12 +103,12 @@ export default function Details({ course, bottom }) {
             }}
             variant="body1"
           >
-            Apply coupon <strong>SUMMERS21</strong> to get this course in{' '}
+            Apply coupon <strong>LASTCALL</strong> to get this course in{' '}
             <strong>
               ₹{' '}
               {parseInt(
                 course.schedule[course.default].price.match(/\d+/g).join('')
-              ) * 0.5}
+              ) * 0.4}
             </strong>
           </Typography>
           <Box mb={2} display="flex" flexDirection="row" paddingTop="10px">
