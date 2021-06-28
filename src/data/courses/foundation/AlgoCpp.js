@@ -23,7 +23,7 @@ export const algoCpp = {
         duration: '40 Live Lectures (2 hrs)',
         mentor: 'Nityanand Rai',
         language: 'Hindi',
-        active: false
+        active: true
       },
       {
         courseId: 'cds0121',

@@ -9,7 +9,7 @@ export const competitiveJava = {
   upcoming: 'June 27th',
   language: 'Hindi',
   mentors: ['ekta', 'nityanand'],
-  default: 2,
+  default: 1,
   schedule: [
     {
       courseId: 'jcomp0121',
@@ -35,7 +35,7 @@ export const competitiveJava = {
       duration: '80 Live Lectures',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: false
+      active: true
     },
     {
       courseId: 'jcomp0123',

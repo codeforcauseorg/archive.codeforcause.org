@@ -9,7 +9,7 @@ export const algoJS = {
   upcoming: 'June 27th (Regular)',
   language: 'Hindi',
   mentors: ['anuj', 'abhishek', 'vasu'],
-  default: 2,
+  default: 1,
   schedule: [
     {
       courseId: 'pds0121',
@@ -35,7 +35,7 @@ export const algoJS = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
       language: 'Hindi',
-      active: false
+      active: true
     },
     {
       courseId: 'pds0123',

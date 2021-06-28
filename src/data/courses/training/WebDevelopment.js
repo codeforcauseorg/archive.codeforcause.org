@@ -10,7 +10,7 @@ export const webDevelopment = {
   language: 'Hindi',
   upcoming: 'June 27th',
   mentors: ['anuj', 'abhishek', 'vasu'],
-  default: 2,
+  default: 1,
   schedule: [
     {
       courseId: 'jsfs0121',
@@ -36,7 +36,7 @@ export const webDevelopment = {
       duration: '80 Live Lectures',
       mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
       language: 'Hindi',
-      active: false
+      active: true
     },
     {
       courseId: 'jsfs0123',

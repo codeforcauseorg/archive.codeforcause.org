@@ -9,7 +9,7 @@ export const algoPython = {
   upcoming: 'June 27th (Weekdays)',
   language: '',
   mentors: ['anuj'],
-  default: 4,
+  default: 3,
   schedule: [
     {
       courseId: 'pds0121',
@@ -62,7 +62,7 @@ export const algoPython = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: false
+      active: true
     },
     {
       courseId: 'pde0125',

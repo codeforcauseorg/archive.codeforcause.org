@@ -9,7 +9,7 @@ export const machineLearning = {
   upcoming: 'June 27th',
   language: 'Hindi',
   mentors: ['anuj'],
-  default: 2,
+  default: 1,
   schedule: [
     {
       courseId: 'mlpy1020',
@@ -35,7 +35,7 @@ export const machineLearning = {
       duration: '80 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: false
+      active: true
     },
     {
       courseId: 'mlpy1022',

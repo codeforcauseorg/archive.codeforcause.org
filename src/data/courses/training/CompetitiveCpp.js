@@ -23,7 +23,7 @@ export const competitiveCpp = {
       duration: '80 Live Lectures',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: false
+      active: true
     }
   ],
   projects: [
