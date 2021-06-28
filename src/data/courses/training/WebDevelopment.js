@@ -40,20 +40,6 @@ export const webDevelopment = {
     },
     {
       courseId: 'jsfs0123',
-      dates: '04th July - 20th Nov',
-      days: 'Sat, Sun, Wed, Fri',
-      timing: '06:00 PM - 08:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 25,000',
-      priceId: 'price_1IjJqGLVU3L7vcSrPsDxmTDt',
-      duration: '80 Live Lectures',
-      mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
-      language: 'Hindi',
-      active: true
-    },
-    {
-      courseId: 'jsfs0143',
       dates: '06th Sep - 22th Jan',
       days: 'Sat, Sun, Wed, Fri',
       timing: '06:00 PM - 08:00 PM (IST)',

@@ -66,20 +66,6 @@ export const algoPython = {
     },
     {
       courseId: 'pde0125',
-      dates: '04th July - 11th Sep',
-      days: 'Tue, Thurs, Sat, Mon',
-      timing: '09:00 PM - 11:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1IjJoFLVU3L7vcSrjERKjPMu',
-      duration: '40 Live Lectures',
-      mentor: 'Anuj Garg',
-      language: 'Hindi',
-      active: true
-    },
-    {
-      courseId: 'pde0126',
       dates: '06th Sep - 13th Nov',
       days: 'Tue, Thurs, Sat, Mon',
       timing: '09:00 PM - 11:00 PM (IST)',
