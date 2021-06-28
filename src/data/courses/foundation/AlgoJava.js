@@ -9,7 +9,7 @@ export const algoJava = {
   upcoming: 'June 27th (Weekends)',
   mentors: ['anuj', 'ekta', 'nityanand'],
   language: 'Hindi',
-  default: 3,
+  default: 4,
   schedule: [
     {
       courseId: 'jds0121',
@@ -64,10 +64,24 @@ export const algoJava = {
       duration: '40 Live Lectures (2 hrs)',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'jds0125',
+      dates: '04th July - 11th Sep',
+      days: 'Sat, Sun, Tue, Thurs',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
+      duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
+      active: false
+    },
+    {
+      courseId: 'jds0126',
       dates: '06th Sep - 13th Nov',
       days: 'Sat, Sun, Tue, Thurs',
       timing: '06:00 PM - 08:00 PM (IST)',
