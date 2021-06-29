@@ -178,7 +178,6 @@ function Events({ className, ...rest }) {
             <Swiper
               id="main"
               navigation={true}
-              pagination={{ clickable: true }}
               spaceBetween={70}
               slidesPerView={large ? 3 : medium ? 2 : small ? 1 : 1}
               slidesPerGroup={large ? 2 : medium ? 2 : small ? 1 : 1}
