@@ -304,12 +304,12 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
             }}
             variant="body2"
           >
-            Apply coupon <strong>LASTCALL</strong> to get this course in{' '}
+            Apply coupon <strong>SUMMERS21</strong> to get this course in{' '}
             <strong>
               ₹{' '}
               {parseInt(
                 course.schedule[course.default].price.match(/\d+/g).join('')
-              ) * 0.4}
+              ) * 0.5}
             </strong>
           </Typography>
           ) : undefined}
