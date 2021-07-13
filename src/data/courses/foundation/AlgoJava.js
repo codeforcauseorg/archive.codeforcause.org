@@ -7,7 +7,7 @@ export const algoJava = {
   title: 'Data Structures and Algorithms with Java',
   started: 'March 14th (Weekends)',
   upcoming: 'June 27th (Weekends)',
-  mentors: ['anuj', 'ekta', 'nityanand'],
+  mentors: ['anuj', 'nityanand'],
   language: 'Hindi',
   default: 3,
   schedule: [

@@ -8,7 +8,7 @@ export const competitiveJava = {
   started: 'Jan 30th',
   upcoming: 'June 27th',
   language: 'Hindi',
-  mentors: ['ekta', 'nityanand'],
+  mentors: ['nityanand'],
   default: 1,
   schedule: [
     {
