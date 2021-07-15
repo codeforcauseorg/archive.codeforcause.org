@@ -9,8 +9,8 @@ export const interviewPrep = {
   title: 'Interview Prepration using Java',
   upcoming: 'July 17th',
   mentors: ['nityanand'],
-  active: true,
-  application: true,
+  active: false,
+  application: false,
   schedule: [
     {
       courseId: 'jsfs0121',
@@ -21,8 +21,8 @@ export const interviewPrep = {
       priceCut: '₹ 18,850',
       price: '₹ 1,885',
       duration: '40 Live Lectures',
-      active: true,
-      application: true
+      active: false,
+      application: false
     }
   ],
   projects: [
