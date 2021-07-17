@@ -13,12 +13,6 @@ export const members = {
     avatar: '/static/images/members/nityanand.png',
     linkedin: 'https://www.linkedin.com/in/nityanand-rai-905854184/'
   },
-  kunal: {
-    name: 'Kunal Kushwaha',
-    position: 'Instructor',
-    avatar: '/static/images/members/kunal.png',
-    linkedin: 'https://www.linkedin.com/in/kunal-kushwaha/'
-  },
   ganga: {
     name: 'Ganga Chaturvedi',
     avatar: '/static/images/members/ganga.png',

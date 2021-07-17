@@ -21,7 +21,7 @@ export const algoJava = {
       price: '₹ 10,000',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
       duration: '40 Live Lectures (2 hrs)',
-      mentor: 'Anuj Garg, Ekta Mishra, Kunal Kushwaha',
+      mentor: 'Anuj Garg, Ekta Mishra',
       active: false
     },
     {

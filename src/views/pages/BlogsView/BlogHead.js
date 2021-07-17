@@ -99,7 +99,7 @@ export default function BlogHead({ blogHead }) {
                   className={classes.avatarLarge}
                   alt=""
                   width="50px"
-                  src="/static/images/members/kunal.png"
+                  src="/static/images/members/anuj.png"
                 />
                 <Box display="flex" flexDirection="column">
                   <Box fontWeight="fontWeightBold">

@@ -9,10 +9,6 @@ export const authors = {
     uname: 'gauravberiwal',
     avatar: '/static/images/members/gaurav.png'
   },
-  'Kunal Kushwaha': {
-    uname: 'kunalkushwaha453',
-    avatar: '/static/images/members/kunal.png'
-  },
   'Ganga Chaturvedi': {
     uname: 'GangaChatrvedi',
     avatar: '/static/images/members/ganga.png'

@@ -13,7 +13,7 @@ const blogs = [
     desc: 'Functions, arrays and more...',
     date: 'Jun 18, 2019',
     time: '7 min Read',
-    author: 'Kunal Kushwaha'
+    author: 'Anuj Garg'
   },
   {
     title: 'Data Structures',
