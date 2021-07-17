@@ -71,11 +71,6 @@ export const mentors = [
     linkedin: 'https://www.linkedin.com/in/keenwarrior/'
   },
   {
-    name: 'Kunal Kushwaha',
-    avatar: '/static/images/members/kunal.png',
-    linkedin: 'https://www.linkedin.com/in/kunal-kushwaha/'
-  },
-  {
     name: 'Ganga Chaturvedi',
     avatar: '/static/images/members/ganga.png',
     linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
