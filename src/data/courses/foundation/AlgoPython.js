@@ -9,7 +9,7 @@ export const algoPython = {
   upcoming: 'June 27th (Weekdays)',
   language: '',
   mentors: ['anuj'],
-  default: 3,
+  default: 5,
   schedule: [
     {
       courseId: 'pds0121',
@@ -62,7 +62,7 @@ export const algoPython = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'pde0125',
@@ -80,6 +80,20 @@ export const algoPython = {
     },
     {
       courseId: 'pde0126',
+      dates: '28th Aug - 09th Jan',
+      days: 'Sat, Sun',
+      timing: '06:00 PM - 08:00 PM (IST)',
+      link: '',
+      priceCut: '',
+      price: '₹ 12,000',
+      priceId: 'price_1IjJoFLVU3L7vcSrjERKjPMu',
+      duration: '40 Live Lectures',
+      mentor: 'Anuj Garg',
+      language: 'Hindi',
+      active: true
+    },
+    {
+      courseId: 'pde0127',
       dates: '06th Sep - 13th Nov',
       days: 'Tue, Thurs, Sat, Mon',
       timing: '09:00 PM - 11:00 PM (IST)',
