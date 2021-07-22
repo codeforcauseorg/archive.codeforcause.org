@@ -57,6 +57,22 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
+    name: 'Full Stack Scholarship',
+    applied_on: '',
+    desc: `In this course, we will learn from the basic tools that every web page coder needs to know to implement modern web pages with MERN stack, deployment at different platforms, putting application at scale and much more.`,
+    links: [
+      {
+        name: 'Know More',
+        link: '/special-practical-webdev-with-js'
+      }
+    ],
+    terms: '',
+    is_course: true,
+    special_price: '₹ 1,500',
+    original_price: '₹ 15,000',
+    pic: '/static/images/backs/sc.png'
+  },
+  {
     name: 'Summer Courses',
     applied_on: '',
     desc:
@@ -74,22 +90,7 @@ const offers = [
     original_price: '',
     pic: '/static/images/backs/summers21.jpeg'
   },
-  {
-    name: 'Interview Prep Scholarship',
-    applied_on: '',
-    desc: `During the course, you’ll learn everything needed to participate in real interviews. Along the way you’ll also gain useful problem solving skills, which are so highly valued by employers`,
-    links: [
-      {
-        name: 'Apply Here',
-        link: '/interview-prep-using-java'
-      }
-    ],
-    terms: '',
-    is_course: true,
-    special_price: '₹ 1,885',
-    original_price: '₹ 18,850',
-    pic: '/static/images/backs/dsa.png'
-  },
+
   {
     name: 'DSA with C++',
     applied_on: 'Batch will start from 26th April',

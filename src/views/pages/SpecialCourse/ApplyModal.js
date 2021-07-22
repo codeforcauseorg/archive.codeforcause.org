@@ -312,20 +312,6 @@ export default function ApplyModal({
               errorMessages={[]}
             />
 
-            <TextValidator
-              required
-              key="why"
-              className={classes.textField}
-              label="Why you should get this scholarship?"
-              variant="outlined"
-              value={formData.why}
-              fullWidth
-              name="why"
-              onChange={handleChange}
-              validators={[]}
-              errorMessages={[]}  
-            />
-
             <DialogContentText>
               <Typography>
                 You are submitting Scholarship Application. You will get an email for fee payment if you get selected. Fees is completely non refundable.

@@ -7,22 +7,22 @@ export const webDevelopment = {
   link: '/special-practical-webdev-with-js',
   domain: 'Web Development Ground Up',
   title: 'Practical Full Stack Web Development with JS',
-  upcoming: 'April 1st',
+  upcoming: 'Aug 23rd',
   mentors: ['anuj', 'ganga'],
-  active: false,
+  active: true,
   application: true,
   schedule: [
     {
       courseId: 'jsfs0121',
-      dates: '1st April - 15th June',
+      dates: '23rd Aug - 5th Nov',
       days: 'Mon, Tue, Thr, Fri',
       timing: '6:00 PM - 07:00 PM (IST)',
       link: '',
-      priceCut: '₹ 12,000',
-      price: '₹ 1200',
+      priceCut: '₹ 15,000',
+      price: '₹ 1500',
       priceId: 'https://rzp.io/l/webdevcfc',
       duration: '40 Live Lectures',
-      active: false,
+      active: true,
       application: true
     }
   ],
