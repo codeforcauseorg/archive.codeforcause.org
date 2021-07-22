@@ -40,11 +40,11 @@ export const bootcamps = [
   {
     domain: 'Machine Learning',
     link:
-      'https://www.youtube.com/watch?v=CjqMg0wyAWY&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
+      'https://www.youtube.com/watch?v=Uf7N1tab6Ho&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
     type: 'Bootcamp',
-    title: 'Complete Machine Learning Bootcamp to start your ML Journey',
-    timeBelow: 'July 11',
-    image: 'https://img.youtube.com/vi/ycvSMpsg7qk/hqdefault.jpg'
+    title: 'ML Bootcamp - Introduction to Artificial Neurons, Neural Networks and Deep Learning',
+    timeBelow: 'Aug 8',
+    image: 'https://img.youtube.com/vi/Uf7N1tab6Ho/hqdefault.jpg'
   },
   {
     domain: 'DS & Algorithms',
