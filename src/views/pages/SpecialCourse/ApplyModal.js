@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Dialog,
   DialogActions,
@@ -49,6 +49,7 @@ export default function ApplyModal({
 }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [status, setStatus] = useState("unregistered");
   const [formData, updateFormData] = useState({
     countryCode: "+91"
   });
@@ -63,6 +64,24 @@ export default function ApplyModal({
   const handleLogin = () => {
     dispatch(login());
   };
+
+  useEffect(function () {
+
+    if (user) {
+      setChecking(true);
+      console.log(user.email);
+      axios(
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/scholar/status/',
+        {
+          params: { email: user.email }
+        }
+      ).then(response => {
+        setChecking(false);
+        setStatus(response.data.status);
+      });
+    }
+
+  }, [user])
 
   const handleClickOpen = () => {
     setChecking(true);
@@ -131,6 +150,25 @@ export default function ApplyModal({
       });
   };
 
+
+  const handleFeeSubmit = e => {
+
+    e.preventDefault();
+    axios.get('https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/scholar/payment',
+      { params: { email: user.email } }).then(response => {
+        if (response.data.payment_request && response.data.payment_request.longurl) {
+          enqueueSnackbar('Redirecting for Fee Submission.');
+          window.open(response.data.payment_request.longurl,'_blank');
+        } else {
+          enqueueSnackbar('Fee payment failed. Connect us over email.');
+        }
+      })
+      .catch(error => {
+        enqueueSnackbar('Fee payment failed. Connect us over email.');
+      });
+  };
+
+
   const countryCodes = Array(100)
     .fill(1)
     .map((x, y) => x + y)
@@ -147,39 +185,83 @@ export default function ApplyModal({
 
   return (
     <div>
-      {user ? (
-        <ThemeProvider theme={theme}>
-          <Button
-            disabled={!course.active}
-            className={classes.btn}
-            size="large"
-            variant="contained"
-            onClick={handleClickOpen}
-            {...rest}
-            fullWidth={fullWidth}
-          >
-            {course.active
-              ? checking
-                ? 'Checking Seats...'
-                : 'Register'
-              : 'Applications Closed'}
-          </Button>
-        </ThemeProvider>
-      ) : (
-        <ThemeProvider theme={theme}>
-          <Button
-            disabled={!course.active}
-            className={classes.btn}
-            size="large"
-            variant="contained"
-            onClick={handleLogin}
-            {...rest}
-            fullWidth={fullWidth}
-          >
-            {course.active ? 'Sign in to Register' : 'Applications Closed'}
-          </Button>
-        </ThemeProvider>
-      )}
+      {(() => {
+        if (!user) {
+          return (<ThemeProvider theme={theme}>
+            <Button
+              disabled={!course.active}
+              className={classes.btn}
+              size="large"
+              variant="contained"
+              onClick={handleLogin}
+              {...rest}
+              fullWidth={fullWidth}
+            >
+              {course.active ? 'Sign in to Register' : 'Applications Closed'}
+            </Button>
+          </ThemeProvider>)
+        } else if (status === "unregistered") {
+          return (<ThemeProvider theme={theme}>
+            <Button
+              disabled={!course.active}
+              className={classes.btn}
+              size="large"
+              variant="contained"
+              onClick={handleClickOpen}
+              {...rest}
+              fullWidth={fullWidth}
+            >
+              {course.active
+                ? checking
+                  ? 'Checking Seats...'
+                  : 'Register'
+                : 'Applications Closed'}
+            </Button>
+          </ThemeProvider>)
+        } else if (status === "pending") {
+          return (<ThemeProvider theme={theme}>
+            <Button
+              disabled={true}
+              className={classes.btn}
+              size="large"
+              variant="contained"
+              onClick={handleClickOpen}
+              {...rest}
+              fullWidth={fullWidth}
+            >
+              {"Approval is pending"}
+            </Button>
+          </ThemeProvider>)
+        } else if (status === "accepted") {
+          return (<ThemeProvider theme={theme}>
+            <Button
+              className={classes.btn}
+              size="large"
+              variant="contained"
+              onClick={handleFeeSubmit}
+              {...rest}
+              fullWidth={fullWidth}
+            >
+              {"Submit Fees"}
+            </Button>
+            <Typography>Application Accepted</Typography>
+          </ThemeProvider>)
+        } else if (status === "complete") {
+          return (<ThemeProvider theme={theme}>
+            <Button
+              disabled={true}
+              className={classes.btn}
+              size="large"
+              variant="contained"
+              onClick={handleClickOpen}
+              {...rest}
+              fullWidth={fullWidth}
+            >
+              {"Admission Successful"}
+            </Button>
+          </ThemeProvider>)
+        }
+      })()}
 
       <Dialog
         fullWidth
