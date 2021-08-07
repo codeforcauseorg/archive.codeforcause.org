@@ -7,7 +7,9 @@ import specialContent from 'src/data/specialcourses';
 import events from 'src/data/events';
 import bootcampsContent from 'src/data/bootcamps';
 import HomeView from 'src/views/pages/HomeView';
+import EnableTrainingProgramView from 'src/views/pages/EnableTrainingProgramView';
 import MainLayout from 'src/layouts/MainLayout';
+import MainLayoutTraining from 'src/layouts/MainLayout/MainLayoutTraining';
 // import CoursesView from 'src/views/pages/CoursesView';
 
 const CAView = lazy(() => import('src/views/pages/CLView'));
@@ -67,6 +69,18 @@ const renderRoutes = () => (
             <MainLayout>
               <HomeView {...props} />
             </MainLayout>
+          </>
+        )}
+      />
+      <Route
+        path="/enableTrainingProgram"
+        exact
+        render={props => (
+          <>
+            <ScrollReset />
+            <MainLayoutTraining>
+              <EnableTrainingProgramView {...props} />
+            </MainLayoutTraining>
           </>
         )}
       />
