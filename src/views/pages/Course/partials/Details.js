@@ -97,6 +97,7 @@ export default function Details({ course, bottom }) {
               {course.schedule[course.default].price}
             </Typography>
           </Box>
+          {course.schedule[course.default].active && !course.schedule[course.default].special? (
           <Typography
             style={{
               color: '#000000'
@@ -110,7 +111,7 @@ export default function Details({ course, bottom }) {
                 course.schedule[course.default].price.match(/\d+/g).join('')
               ) * 0.5}
             </strong>
-          </Typography>
+          </Typography>) : undefined}
           <Box mb={2} display="flex" flexDirection="row" paddingTop="10px">
             <Typography
               style={{
@@ -143,7 +144,6 @@ export default function Details({ course, bottom }) {
             ))}
           </Box>
         </Box>
-
         <Box mb={4}>
           <Box display="flex" flexDirection="row" flexWrap="wrap">
             {course.mentors.map((mentor, index) => {

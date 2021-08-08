@@ -76,6 +76,36 @@ export default function ApplyModal({
     });
   };
 
+  const handleSubmitSpecial = e => {
+    formData.phone = `${formData.countryCode}${formData.phone}`;
+    formData.source = window.location.href;
+    formData.batch = batch;
+    formData.courseName = course.title;
+    setSubmitting(1);
+    e.preventDefault();
+
+    axios({
+      method: 'post',
+      url:
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/mlspecial',
+      data: formData
+    })
+      .then(response => {
+        setSubmitting(0);
+        handleClose();
+        enqueueSnackbar('Redirecting to payment page.');
+        if (response.data.payment_request && response.data.payment_request.longurl) {
+          enqueueSnackbar('Redirecting for Fee Submission.');
+          window.open(response.data.payment_request.longurl,'_blank');
+        } else {
+          enqueueSnackbar('Fee payment failed. Connect us over email.');
+        }
+      })
+      .catch(error => {
+        enqueueSnackbar('Fee payment failed. Connect us over email.');
+      });
+  };
+
   const handleSubmit = e => {
     formData.phone = `${formData.countryCode}${formData.phone}`;
     formData.source = window.location.href;
@@ -169,7 +199,9 @@ export default function ApplyModal({
           <DialogContentText>
             <Typography>Please provide your details below.</Typography>
           </DialogContentText>
-          <ValidatorForm onSubmit={handleSubmit}>
+          <ValidatorForm
+            onSubmit={batch.special ? handleSubmitSpecial : handleSubmit}
+          >
             <TextValidator
               autoComplete={false}
               required

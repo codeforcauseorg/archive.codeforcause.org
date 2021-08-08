@@ -297,26 +297,26 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
                 {batch.price}
               </Typography>
             </Box>
-            {batch.active?(
-            <Typography
-            style={{
-              color: '#000000'
-            }}
-            variant="body2"
-          >
-            Apply coupon <strong>SUMMERS21</strong> to get this course in{' '}
-            <strong>
-              ₹{' '}
-              {parseInt(
-                course.schedule[course.default].price.match(/\d+/g).join('')
-              ) * 0.5}
-            </strong>
-          </Typography>
-          ) : undefined}
-
+            {batch.active && !batch.special? (
+              <Typography
+                style={{
+                  color: '#000000'
+                }}
+                variant="body2"
+              >
+                Apply coupon <strong>SUMMERS21</strong> to get this course in{' '}
+                <strong>
+                  ₹{' '}
+                  {parseInt(
+                    course.schedule[course.default].price.match(/\d+/g).join('')
+                  ) * 0.5}
+                </strong>
+              </Typography>
+            ) : (
+              undefined
+            )}
           </Box>
 
-         
           <Box
             flexDirection="row"
             display="flex"
