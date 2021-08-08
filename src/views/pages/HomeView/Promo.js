@@ -57,6 +57,23 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
+    name: 'Machine Learning for All',
+    applied_on: '',
+    desc:
+      'Grab a FLAT 90% OFF Machine Learning Batch. We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning.',
+    links: [
+      {
+        name: 'Know More',
+        link: '/machine-learning-using-python'
+      }
+    ],
+    terms: '',
+    is_course: true,
+    special_price: '₹ 1,500',
+    original_price: '₹ 15,000',
+    pic: '/static/images/backs/hand.jpeg'
+  },
+  {
     name: 'Full Stack Scholarship',
     applied_on: '',
     desc: `In this course, we will learn from the basic tools that every web page coder needs to know to implement modern web pages with MERN stack, deployment at different platforms, putting application at scale and much more.`,
@@ -71,24 +88,6 @@ const offers = [
     special_price: '₹ 1,500',
     original_price: '₹ 15,000',
     pic: '/static/images/backs/sc.png'
-  },
-  {
-    name: 'Summer Courses',
-    applied_on: '',
-    desc:
-      'Grab a FLAT 50% OFF on any of our courses on DSA  fundamentals in Python, Java, JavaScript, and C++ to advanced courses in Web Development, Machine Learning, and Competitive Programming with Java and C++.',
-    links: [
-      {
-        name: 'Check our course',
-        link: '/courses',
-        type: 'internal'
-      }
-    ],
-    terms: '',
-    is_course: false,
-    special_price: 'All Courses',
-    original_price: '',
-    pic: '/static/images/backs/summers21.jpeg'
   },
 
   {
