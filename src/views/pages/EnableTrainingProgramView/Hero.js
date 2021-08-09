@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core';
+
+import { makeStyles, Typography } from '@material-ui/core';
+
 import HeroWithLogo from '../../../components/Hero/HeroWithLogo';
 import ButtonComponent from 'src/components/Button/ButtonComponent';
 
@@ -20,10 +22,21 @@ function Hero({ className, ...rest }) {
     <div className={className} {...rest}>
       <HeroWithLogo
         className={classes.hero}
-        title="ENABLE TRAINING"
-        title2="PROGRAMME 2021"
+        title="Enable Tranining"
+        title2="Programme 2021"
         imageUrl="/static/images/backs/enable_hero.png"
         firstComponent={
+          <>
+            <Typography variant="body1">
+              An initiative to contribute to the Open Source community by
+              providing training, guidance, and awareness about the
+              possibilities in the field of software to students &
+              professionals.
+            </Typography>
+            <div style={{ height: '16px' }}></div>
+          </>
+        }
+        secondComponent={
           <ButtonComponent
             title="Register Now"
             href="/courses"

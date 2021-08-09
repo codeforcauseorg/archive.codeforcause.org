@@ -1,6 +1,4 @@
 import {
-  Card,
-  CardMedia,
   Container,
   Grid,
   List,
@@ -8,6 +6,8 @@ import {
   ListItemIcon,
   ListItemText,
   makeStyles,
+  Hidden,
+  Box,
   Typography
 } from '@material-ui/core';
 import clsx from 'clsx';
@@ -126,25 +126,19 @@ function AboutETP({ benefits, className, ...rest }) {
             </List>
           </Grid>
           <Grid xs={12} md={6} key={1}>
-            <Card
-              key={0}
-              style={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column'
-              }}
-              raised
-              className={classes.cards}
-            >
-              <CardMedia
-                image="/static/images/backs/table.jpg"
-                style={{ height: '100%' }}
-              />
-            </Card>
+            <Hidden smDown>
+              <Box display="flex" alignItems="center" height="100%">
+                <img
+                  alt="AboutETP"
+                  src="/static/images/backs/table.jpg"
+                  width="100%"
+                />
+              </Box>
+            </Hidden>
           </Grid>
         </Grid>
       </Container>
-      <Process/>
+      <Process />
     </div>
   );
 }

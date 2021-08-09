@@ -1,14 +1,14 @@
 import {
-  Card,
-  CardMedia,
   Container,
   Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Hidden,
   makeStyles,
-  Typography
+  Typography,
+  Box
 } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
@@ -52,13 +52,17 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       marginTop: theme.spacing(3)
     }
-  },
+  }
 }));
 
 function CourseDetails({ benefits, className, ...rest }) {
   const classes = useStyles();
   return (
-    <div id="course-details" className={clsx(classes.root, className)} {...rest}>
+    <div
+      id="course-details"
+      className={clsx(classes.root, className)}
+      {...rest}
+    >
       <Container>
         <Typography
           style={{
@@ -75,21 +79,15 @@ function CourseDetails({ benefits, className, ...rest }) {
 
         <Grid container spacing={9} className={classes.grid} justify="center">
           <Grid xs={12} md={6} key={0} className={classes.innerGrid}>
-            <Card
-              key={0}
-              style={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column'
-              }}
-              raised
-              className={classes.cards}
-            >
-              <CardMedia
-                image="/static/images/backs/detail.jpg"
-                style={{ height: '100%' }}
-              />
-            </Card>
+            <Hidden smDown>
+              <Box display="flex" alignItems="center" height="100%">
+                <img
+                  alt="Course Detail"
+                  src="/static/images/backs/detail.jpg"
+                  width="100%"
+                />
+              </Box>
+            </Hidden>
           </Grid>
           <Grid xs={12} md={6} key={1} className={classes.innerGrid}>
             <Typography variant="h5" className={classes.title}>
@@ -128,9 +126,9 @@ function CourseDetails({ benefits, className, ...rest }) {
               </ListItem>
             </List>
             <Typography variant="h5" className={classes.title}>
-              The Course Will Be Covered By Our Most Experienced Trainer
-              Mr. Anuj Garg To Ensure Students Extract The Maximum Out Of
-              Every Session And Meet Consistent Levels Of Quality Across The Board.
+              The Course Will Be Covered By Our Most Experienced Trainer Mr.
+              Anuj Garg To Ensure Students Extract The Maximum Out Of Every
+              Session And Meet Consistent Levels Of Quality Across The Board.
             </Typography>
           </Grid>
         </Grid>

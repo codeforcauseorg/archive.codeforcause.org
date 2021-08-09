@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Hero from './Hero';
-import Sponsors from './Sponsors';
+// import Sponsors from './Sponsors';
 import Footer from '../common/Footer';
 import CourseDetails from './CourseDetails';
 import AboutETP from './AboutETP';
@@ -25,9 +25,9 @@ function EnableTrainingProgramView() {
       <AboutETP />
       <CourseDetails/>
       <TimeLine/>
-      <FAQ/>
       <Features/>
-      <Sponsors id="actions" />
+      <FAQ/>
+      {/* <Sponsors id="actions" /> */}
       <Footer />
     </Page>
   );
