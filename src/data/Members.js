@@ -19,23 +19,11 @@ export const members = {
     position: 'Instructor',
     linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
   },
-  ekta: {
-    name: 'Ekta Mishra',
-    avatar: '/static/images/members/ekta.png',
-    position: 'Instructor',
-    linkedin: 'https://www.linkedin.com/in/darecoder/'
-  },
   bharat: {
     name: 'Bharat Kumar',
     position: 'Instructor',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
-  },
-  shubham: {
-    name: 'Shubham Rawat',
-    position: 'Instructor',
-    avatar: '/static/images/members/shubham.jpeg',
-    linkedIn: 'https://www.linkedin.com/in/shubhamrwt/'
   },
   abhishek: {
     name: 'Abhishek Kumar',

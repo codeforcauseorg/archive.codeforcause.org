@@ -76,11 +76,6 @@ export const mentors = [
     linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
   },
   {
-    name: 'Ekta Mishra',
-    avatar: '/static/images/members/ekta.png',
-    linkedin: 'https://www.linkedin.com/in/darecoder/'
-  },
-  {
     name: 'Abhishek Kumar',
     avatar: '/static/images/members/abhishek.jpg',
     linkedin: 'https://www.linkedin.com/in/abhishek-kr09/'
