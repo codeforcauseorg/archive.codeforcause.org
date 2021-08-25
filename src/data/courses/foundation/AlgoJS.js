@@ -63,7 +63,7 @@ export const algoJS = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg, Abhishek Kumar, Vasudev Singhal',
       language: 'Hindi',
-      active: true
+      active: false
     }
   ],
   projects: [

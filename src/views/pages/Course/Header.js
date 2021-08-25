@@ -27,7 +27,12 @@ function Header({ course, className, ...rest }) {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Box display="flex" className={classes.lineBox} justifyContent="center">
+      <Box
+        display="flex"
+        className={classes.lineBox}
+        justifyContent="center"
+        flexDirection="column"
+      >
         <Typography
           style={{ color: '#ffffff', padding: '5px' }}
           variant="h4"
@@ -38,10 +43,10 @@ function Header({ course, className, ...rest }) {
               if (course.schedule[course.default].special) {
                 return course.schedule[course.default].special;
               } else {
-                return '☀️ Use Coupon code : SUMMERS21 and get Flat 50% Off on All Live courses ☀️';
+                return '☀️ Flat 90% Off on Data Structures and Algorithms with Java ☀️';
               }
             } else {
-              return 'Oops! The seats are full. ✅ We will be happy to see you in the next batch! 😊';
+              return 'Oops! The seats are full. We will be happy to see you in the next batch!';
             }
           })()}
         </Typography>

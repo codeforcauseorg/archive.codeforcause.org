@@ -57,10 +57,26 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
+    name: 'Live Java DSA @ 90% Off',
+    applied_on: '',
+    desc: 'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
+    links: [
+      {
+        name: 'Know More',
+        link: '/ds-algo-with-java'
+      }
+    ],
+    terms: '',
+    is_course: true,
+    special_price: '₹ 1200',
+    original_price: '₹ 12,000',
+    pic: '/static/images/backs/dsa.png'
+  },
+  {
     name: 'Machine Learning for All',
     applied_on: '',
     desc:
-      'Grab a FLAT 90% OFF Machine Learning Batch. We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning.',
+      'Grab a FLAT 90% OFF Machine Learning Batch. We follow the onion peeling approach to create a level order approach towards such great technologies.',
     links: [
       {
         name: 'Know More',
@@ -72,22 +88,6 @@ const offers = [
     special_price: '₹ 1,500',
     original_price: '₹ 15,000',
     pic: '/static/images/backs/hand.jpeg'
-  },
-  {
-    name: 'Full Stack Scholarship',
-    applied_on: '',
-    desc: `In this course, we will learn from the basic tools that every web page coder needs to know to implement modern web pages with MERN stack, deployment at different platforms, putting application at scale and much more.`,
-    links: [
-      {
-        name: 'Know More',
-        link: '/special-practical-webdev-with-js'
-      }
-    ],
-    terms: '',
-    is_course: true,
-    special_price: '₹ 1,500',
-    original_price: '₹ 15,000',
-    pic: '/static/images/backs/sc.png'
   },
 
   {

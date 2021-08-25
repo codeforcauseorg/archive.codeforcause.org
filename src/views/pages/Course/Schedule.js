@@ -42,7 +42,7 @@ export default function Schedule({ course }) {
   const [expanded, setExpanded] = useState(course.default);
 
   return (
-    <Grid container className={classes.root}>
+    <Grid id="schedule" container className={classes.root}>
       <LimitedTimeBookNow />
 
       <Grid
@@ -297,19 +297,21 @@ function BatchDropBox({ course, batch, batchIndex, expanded, setExpanded }) {
                 {batch.price}
               </Typography>
             </Box>
-            {batch.active && !batch.special? (
+            {batch.scholar ? (
               <Typography
                 style={{
                   color: '#000000'
                 }}
                 variant="body2"
               >
-                Apply coupon <strong>SUMMERS21</strong> to get this course in{' '}
+                Flat 90% off on this course. Get your seat in
                 <strong>
-                  ₹{' '}
+                  ₹
                   {parseInt(
-                    course.schedule[course.default].price.match(/\d+/g).join('')
-                  ) * 0.5}
+                    course.schedule[course.default].priceCut
+                      .match(/\d+/g)
+                      .join('')
+                  ) * 0.1}
                 </strong>
               </Typography>
             ) : (

@@ -73,7 +73,11 @@ const renderRoutes = () => (
         )}
       />
       <Route
+<<<<<<< Updated upstream
         path="/enableTrainingProgram"
+=======
+        path="/enable"
+>>>>>>> Stashed changes
         exact
         render={props => (
           <>

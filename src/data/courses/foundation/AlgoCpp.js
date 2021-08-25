@@ -9,7 +9,7 @@ export const algoCpp = {
     upcoming: 'June 20th (Weekdays)',
     mentors: ['nityanand'],
     language: 'Hindi',
-    default: 0,
+    default: 1,
     schedule: [
       {
         courseId: 'cds0121',
@@ -23,7 +23,7 @@ export const algoCpp = {
         duration: '40 Live Lectures (2 hrs)',
         mentor: 'Nityanand Rai',
         language: 'Hindi',
-        active: true
+        active: false
       },
       {
         courseId: 'cds0121',
@@ -37,7 +37,7 @@ export const algoCpp = {
         duration: '40 Live Lectures (2 hrs)',
         mentor: 'Nityanand Rai',
         language: 'Hindi',
-        active: true
+        active: false
       }
     ],
     projects: [

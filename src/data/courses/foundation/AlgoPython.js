@@ -90,7 +90,7 @@ export const algoPython = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'pde0127',
@@ -104,7 +104,7 @@ export const algoPython = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true
+      active: false
     }
   ],
   projects: [

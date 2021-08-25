@@ -97,21 +97,25 @@ export default function Details({ course, bottom }) {
               {course.schedule[course.default].price}
             </Typography>
           </Box>
-          {course.schedule[course.default].active && !course.schedule[course.default].special? (
-          <Typography
-            style={{
-              color: '#000000'
-            }}
-            variant="body1"
-          >
-            Apply coupon <strong>SUMMERS21</strong> to get this course in{' '}
-            <strong>
-              ₹{' '}
-              {parseInt(
-                course.schedule[course.default].price.match(/\d+/g).join('')
-              ) * 0.5}
-            </strong>
-          </Typography>) : undefined}
+          {course.schedule[course.default].scholar &&
+          course.schedule[course.default].active ? (
+            <Typography
+              style={{
+                color: '#000000'
+              }}
+              variant="body1"
+            >
+              Flat 90% off on this course. Get your seat in:
+              <strong>
+                ₹{' '}
+                {parseInt(
+                  course.schedule[course.default].priceCut.match(/\d+/g).join('')
+                ) * 0.1}
+              </strong>
+            </Typography>
+          ) : (
+            undefined
+          )}
           <Box mb={2} display="flex" flexDirection="row" paddingTop="10px">
             <Typography
               style={{

@@ -9,63 +9,8 @@ export const algoJava = {
   upcoming: 'June 27th (Weekends)',
   mentors: ['anuj', 'nityanand'],
   language: 'Hindi',
-  default: 5,
+  default: 3,
   schedule: [
-    {
-      courseId: 'jds0121',
-      dates: '30th Jan - 30th Apr',
-      days: 'Sat, Sun, Tue, Thu',
-      timing: '06:00 PM - 08:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 10,000',
-      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
-      duration: '40 Live Lectures (2 hrs)',
-      mentor: 'Anuj Garg, Ekta Mishra',
-      active: false
-    },
-    {
-      courseId: 'jds0122',
-      dates: '28th Feb - 30th May',
-      days: 'Sat, Sun',
-      timing: '12:00 PM - 03:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 10,000',
-      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
-      duration: '27 Live Lectures (3 hrs)',
-      mentor: 'Shubham Rawat, Anuj Garg',
-      language: 'Hindi',
-      active: false
-    },
-    {
-      courseId: 'jds0123',
-      dates: '14th March - 15th June',
-      days: 'Sat, Sun',
-      timing: '12:00 PM - 03:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 10,000',
-      priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
-      duration: '27 Live Lectures (3 hrs)',
-      mentor: 'Shubham Rawat, Anuj Garg, Nityanand Rai',
-      language: 'Hindi',
-      active: false
-    },
-    {
-      courseId: 'jds0124',
-      dates: '27th June - 04th Sep',
-      days: 'Sat, Sun, Tue, Thurs',
-      timing: '06:00 PM - 08:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
-      duration: '40 Live Lectures (2 hrs)',
-      mentor: 'Nityanand Rai',
-      language: 'Hindi',
-      active: false
-    },
     {
       courseId: 'jds0125',
       dates: '04th July - 11th Sep',
@@ -92,7 +37,7 @@ export const algoJava = {
       duration: '40 Live Lectures (2 hrs)',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'jds0127',
@@ -106,7 +51,22 @@ export const algoJava = {
       duration: '40 Live Lectures (2 hrs)',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: true
+      active: false
+    },
+    {
+      courseId: 'jds0126',
+      dates: '20th Sept - 18th Dec',
+      days: 'Mon, Wed, Fri',
+      timing: '06:30 PM - 8:00 PM (IST)',
+      link: '',
+      priceCut: '12,000',
+      price: '₹ 1,200',
+      priceId: 'java0921',
+      duration: '40 Live Lectures (2 hrs)',
+      mentor: 'Nityanand Rai',
+      language: 'Hindi',
+      active: true,
+      special: '☀️ Flat 90% Off on Data Structures and Algorithms with Java ☀️'
     }
   ],
   projects: [

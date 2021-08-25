@@ -87,7 +87,7 @@ export default function ApplyModal({
     axios({
       method: 'post',
       url:
-        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/mlspecial',
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/specialoffer',
       data: formData
     })
       .then(response => {
