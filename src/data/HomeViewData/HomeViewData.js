@@ -53,7 +53,7 @@ export const bootcamps = [
     type: 'Bootcamp',
     title: 'Data Structures and Algorithms with Java',
     timeBelow: 'Aug 25',
-    image: 'https://img.youtube.com/vi/hkx_JFFwM1o/hqdefault.jpg'
+    image: '/static/events/hqdefault2.jpg'
   }
 ];
 
