@@ -24,7 +24,7 @@ export const machineLearning = {
     },
     {
       courseId: 'mlpy0122',
-      dates: '06th Sep - 13th Nov',
+      dates: '16th Sep - 23th Nov',
       days: 'Tue, Thurs, Sat, Mon',
       timing: '09:00 PM - 10:30 PM (IST)',
       link: '',
