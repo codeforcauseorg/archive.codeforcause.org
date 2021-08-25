@@ -57,12 +57,16 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
-    name: 'Live Java DSA @ 90% Off',
+    name: '90% Off on DSA Courses',
     applied_on: '',
     desc: 'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
     links: [
       {
-        name: 'Know More',
+        name: 'DSA C++',
+        link: '/ds-algo-with-cpp'
+      },
+      {
+        name: 'DSA Java',
         link: '/ds-algo-with-java'
       }
     ],

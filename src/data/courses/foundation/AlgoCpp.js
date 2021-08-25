@@ -9,7 +9,7 @@ export const algoCpp = {
     upcoming: 'June 20th (Weekdays)',
     mentors: ['nityanand'],
     language: 'Hindi',
-    default: 1,
+    default: 2,
     schedule: [
       {
         courseId: 'cds0121',
@@ -38,6 +38,21 @@ export const algoCpp = {
         mentor: 'Nityanand Rai',
         language: 'Hindi',
         active: false
+      },
+      {
+        courseId: 'jds0126',
+        dates: '28th Sept - 28th Dec',
+        days: 'Tue, Sat, Sun',
+        timing: '06:30 PM - 8:00 PM (IST)',
+        link: '',
+        priceCut: '12,000',
+        price: '₹ 1,200',
+        priceId: 'cpp0921',
+        duration: '40 Live Lectures (1.5 hrs)',
+        mentor: 'Nityanand Rai',
+        language: 'Hindi',
+        active: true,
+        special: '☀️ Flat 90% Off on Data Structures and Algorithms with C++ ☀️'
       }
     ],
     projects: [

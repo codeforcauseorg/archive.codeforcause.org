@@ -43,7 +43,7 @@ function Header({ course, className, ...rest }) {
               if (course.schedule[course.default].special) {
                 return course.schedule[course.default].special;
               } else {
-                return '☀️ Flat 90% Off on Data Structures and Algorithms with Java ☀️';
+                return '☀️ Flat 90% Off on Data Structures and Algorithms Courses ☀️';
               }
             } else {
               return 'Oops! The seats are full. We will be happy to see you in the next batch!';

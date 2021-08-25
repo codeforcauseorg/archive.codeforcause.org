@@ -62,7 +62,7 @@ export const algoJava = {
       priceCut: '12,000',
       price: '₹ 1,200',
       priceId: 'java0921',
-      duration: '40 Live Lectures (2 hrs)',
+      duration: '40 Live Lectures (1.5 hrs)',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
       active: true,
