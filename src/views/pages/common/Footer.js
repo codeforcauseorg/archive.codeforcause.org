@@ -152,19 +152,6 @@ function Footer({ className, ...rest }) {
                 <ListItem
                   className={classes.centerCls}
                   component="a"
-                  href="tel:+918882434509"
-                >
-                  <ListItemIcon className={classes.iconSocialMedia}>
-                    <PhoneIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    className={classes.iconSocialMedia}
-                    primary="+918882434509"
-                  />
-                </ListItem>
-                <ListItem
-                  className={classes.centerCls}
-                  component="a"
                   href="tel:+919810468685"
                 >
                   <ListItemIcon className={classes.iconSocialMedia}>
