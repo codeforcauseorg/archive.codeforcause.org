@@ -65,7 +65,7 @@ export const algoJava = {
       duration: '40 Live Lectures (1.5 hrs)',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: true,
+      active: false,
       special: '☀️ Flat 90% Off on Data Structures and Algorithms with Java ☀️'
     }
   ],
