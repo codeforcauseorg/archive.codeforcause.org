@@ -65,10 +65,10 @@ const offers = [
         name: 'DSA C++',
         link: '/ds-algo-with-cpp'
       },
-      {
-        name: 'DSA Java',
-        link: '/ds-algo-with-java'
-      }
+      // { // Commenting to hide a button
+      //   name: 'DSA Java',
+      //   link: '/ds-algo-with-java'
+      // }
     ],
     terms: '',
     is_course: true,

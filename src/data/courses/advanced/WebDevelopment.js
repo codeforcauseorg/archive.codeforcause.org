@@ -13,20 +13,8 @@ export const webDevelopment = {
   default: 1,
   schedule: [
     {
-      courseId: 'jsfs0121',
-      dates: '15th Apr - 15th July',
-      days: 'Wed, Fri, Sat, Sun',
-      timing: '04:00 PM - 06:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 12,000',
-      priceId: 'price_1I0UyTLVU3L7vcSrBn1QACYX',
-      duration: '40 Live Lectures',
-      active: false
-    },
-    {
-      courseId: 'jsfs0121',
-      dates: '27th Jun - 04th Sep',
+      courseId: 'jsfs0123',
+      dates: '06th Sep - 13th Nov',
       days: 'Mon, Wed, Fri, Sun',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
@@ -39,8 +27,8 @@ export const webDevelopment = {
       active: true
     },
     {
-      courseId: 'jsfs0122',
-      dates: '04th July - 11th Sep',
+      courseId: 'jsfs0124',
+      dates: '15th Oct - 16th Dec',
       days: 'Mon, Wed, Fri, Sun',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
@@ -48,21 +36,7 @@ export const webDevelopment = {
       price: '₹ 15,000',
       priceId: 'price_1IjJmLLVU3L7vcSrnaBiAL5Y',
       duration: '40 Live Lectures',
-      mentor: 'Anuj Garg, Vasudev Singhal',
-      language: 'Hindi',
-      active: false
-    },
-    {
-      courseId: 'jsfs0123',
-      dates: '06th Sep - 13th Nov',
-      days: 'Mon, Wed, Fri, Sun',
-      timing: '09:00 PM - 11:00 PM (IST)',
-      link: '',
-      priceCut: '',
-      price: '₹ 15,000',
-      priceId: 'price_1IjJmLLVU3L7vcSrnaBiAL5Y',
-      duration: '40 Live Lectures',
-      mentor: 'Anuj Garg, Vasudev Singhal',
+      mentor: 'Anuj Garg',
       language: 'Hindi',
       active: true
     }
