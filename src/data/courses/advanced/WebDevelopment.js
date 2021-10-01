@@ -32,7 +32,7 @@ export const webDevelopment = {
       days: 'Mon, Wed, Fri, Sun',
       timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
-      price: '₹ 9,000',
+      price: '₹ 6,000',
       priceCut: '₹ 15,000',
       priceId: 'price_1IjJmLLVU3L7vcSrnaBiAL5Y',
       duration: '40 Live Lectures',
