@@ -14,7 +14,7 @@ export const competitiveJava = {
       courseId: 'jcomp0121',
       dates: '15th Apr - 18th July',
       days: 'Sat, Sun, Wed, Fri',
-      timing: '06:00 PM - 08:00 PM (IST)',
+      timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 12,000',

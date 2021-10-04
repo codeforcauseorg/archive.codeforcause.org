@@ -44,6 +44,7 @@ const Success = lazy(() => import('./views/pages/PaymentStatus/Success'));
 const Cancelled = lazy(() => import('./views/pages/PaymentStatus/Failure'));
 const EventsView = lazy(() => import('src/views/pages/EventsView')); //
 const HireWithUsView = lazy(() => import('src/views/pages/HireWithUsView'));
+const HIRE_WITH_US = lazy(() => import('src/views/pages/Hire-With-Us'));
 
 const renderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -453,6 +454,15 @@ const renderRoutes = () => (
           <MainLayout>
             <HireWithUsView />
           </MainLayout>
+        )}
+      />
+      <Route
+        path={`/hire-with-us`}
+        exact
+        render={props => (
+          <MainLayout>
+            <HIRE_WITH_US />
+          </MainLayout>        
         )}
       />
       <Route component={Error404View} />

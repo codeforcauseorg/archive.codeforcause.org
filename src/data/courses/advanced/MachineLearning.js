@@ -14,7 +14,7 @@ export const machineLearning = {
       courseId: 'mlpy0121',
       dates: '15th Apr - 15th July',
       days: 'Sat, Sun, Tue, Thu',
-      timing: '08:00 PM - 10:00 PM (IST)',
+      timing: '09:00 PM - 11:00 PM (IST)',
       link: '',
       priceCut: '',
       price: '₹ 12,000',
