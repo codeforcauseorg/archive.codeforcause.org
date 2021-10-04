@@ -17,6 +17,10 @@ import {
   SelectValidator
 } from 'react-material-ui-form-validator';
 
+import { getStates, getDistrict, getColleges } from './educationFormUtil';
+
+// import axios from 'axios';
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%'
@@ -79,7 +83,7 @@ export function ApplicationSteps({ applicationId, setCourseTitle }) {
   const isMountedRef = useIsMountedRef();
   const baseUrl =
     'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/applications/request';
-  const [activeStep, setActiveStep] = React.useState(-1);
+  const [activeStep, setActiveStep] = React.useState(1);
   const [formData, setFormData] = React.useState({
     personal: {},
     education: {},
@@ -297,6 +301,9 @@ function FormEducationInfo({
 }) {
   const classes = useStyles();
   const [formData, updateFormData] = useState(data.education);
+  const [districtToCollegePair, updateDistrictToCollegePair] = useState({});
+  const [districts, updateDistricts] = useState([]);
+  const [collegeList, updateCollege] = useState([]);
 
   const handleChange = event => {
     updateFormData({
@@ -328,9 +335,42 @@ function FormEducationInfo({
     setActiveStep(2);
   };
 
+  const handleStateFieldChange = event => {
+    updateFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
+    updateDistrictToCollegePair(getDistrict(event.target.value));
+    updateDistricts([]);
+    updateCollege([]);
+  };
+
+  const handleDistrictFieldChange = event => {
+    updateFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
+    updateCollege(getColleges(districtToCollegePair, event.target.value));
+  };
+
+  const handleDistrictFocus = () => {
+    if (formData.state !== undefined) {
+      updateDistricts(Object.keys(districtToCollegePair));
+    }
+  };
+
+  function notIndia() {
+    return (
+      formData.country === undefined ||
+      formData.country.trim().toLowerCase() !== 'india'
+    );
+  }
+
   const years = Array(25)
-    .fill(2000)
-    .map((x, y) => x + y);
+    .fill(2024)
+    .map((x, y) => x - y);
+
+  const states = getStates();
 
   return (
     <ValidatorForm onSubmit={handleSubmit}>
@@ -350,33 +390,6 @@ function FormEducationInfo({
           return <MenuItem value={year}>{year}</MenuItem>;
         })}
       </SelectValidator>
-
-      <TextValidator
-        key="college"
-        className={classes.textField}
-        label="College"
-        variant="outlined"
-        value={formData.college}
-        fullWidth
-        name="college"
-        onChange={handleChange}
-        validators={['required']}
-        errorMessages={['College is a required field']}
-      />
-
-      <TextValidator
-        key="state"
-        className={classes.textField}
-        label="State"
-        variant="outlined"
-        value={formData.state}
-        fullWidth
-        name="state"
-        onChange={handleChange}
-        validators={['required']}
-        errorMessages={['State is a required field']}
-      />
-
       <TextValidator
         key="country"
         className={classes.textField}
@@ -389,6 +402,115 @@ function FormEducationInfo({
         validators={['required']}
         errorMessages={['Country is a required field']}
       />
+
+      {notIndia() ? (
+        <TextValidator
+          key="state"
+          className={classes.textField}
+          autoComplete="true"
+          label="State"
+          variant="outlined"
+          value={formData.state}
+          fullWidth
+          name="state"
+          onChange={handleChange}
+          validators={['required']}
+          errorMessages={['State is a required field']}
+        />
+      ) : (
+        <SelectValidator
+          key="state"
+          className={classes.textField}
+          autoComplete="true"
+          label="State"
+          variant="outlined"
+          value={formData.state}
+          fullWidth
+          name="state"
+          onChange={handleStateFieldChange}
+          validators={['required']}
+          errorMessages={['State is a required field']}
+        >
+          {states.sort().map(state => {
+            return <MenuItem value={state}>{state}</MenuItem>;
+          })}
+        </SelectValidator>
+      )}
+
+      {notIndia() ? (
+        <TextValidator
+          key="district"
+          className={classes.textField}
+          autoComplete="true"
+          label="District"
+          variant="outlined"
+          value={formData.district}
+          fullWidth
+          name="district"
+          onChange={handleChange}
+          validators={['required']}
+          errorMessages={['State is a required field']}
+        />
+      ) : (
+        <SelectValidator
+          key="district"
+          className={classes.textField}
+          autoComplete="true"
+          label="District"
+          variant="outlined"
+          value={formData.district}
+          fullWidth
+          onFocus={handleDistrictFocus}
+          name="district"
+          onChange={handleDistrictFieldChange}
+          validators={['required']}
+          errorMessages={['State is a required field']}
+        >
+          {districts.length === 0 ? (
+            <MenuItem value="undefined">{'Select State'}</MenuItem>
+          ) : (
+            districts.sort().map(dis => {
+              return <MenuItem value={dis}>{dis}</MenuItem>;
+            })
+          )}
+        </SelectValidator>
+      )}
+
+      {notIndia() ? (
+        <TextValidator
+          key="college"
+          className={classes.textField}
+          label="College"
+          variant="outlined"
+          value={formData.college}
+          onChange={handleChange}
+          fullWidth
+          name="college"
+          validators={['required']}
+          errorMessages={['College is a required field']}
+        />
+      ) : (
+        <SelectValidator
+          key="college"
+          className={classes.textField}
+          label="College"
+          variant="outlined"
+          value={formData.college}
+          fullWidth
+          onChange={handleChange}
+          name="college"
+          validators={['required']}
+          errorMessages={['College is a required field']}
+        >
+          {collegeList.length === 0 ? (
+            <MenuItem value="undefined">{'Select District'}</MenuItem>
+          ) : (
+            collegeList.sort().map(college => {
+              return <MenuItem value={college}>{college}</MenuItem>;
+            })
+          )}
+        </SelectValidator>
+      )}
 
       <Button variant="outlined" onClick={handlePrev} color="secondary">
         Prev
