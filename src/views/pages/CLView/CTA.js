@@ -275,7 +275,7 @@ function CTA({ className, ...rest }) {
                       variant="outlined"
                       disabled="true"
                     >
-                      Apply Now
+                      Coming Soon
                     </Button>
                   </Grid>
                 </Grid>
