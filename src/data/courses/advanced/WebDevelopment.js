@@ -34,11 +34,12 @@ export const webDevelopment = {
       link: '',
       price: '₹ 6,000',
       priceCut: '₹ 15,000',
-      priceId: 'price_1IjJmLLVU3L7vcSrnaBiAL5Y',
+      priceId: 'mern1021',
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true
+      active: true,
+      special: '☀️ Flat 60% Off on Full Stack Web Dev Batch ☀️'
     }
   ],
   projects: [
