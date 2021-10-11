@@ -24,7 +24,7 @@ export const webDevelopment = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg, Vasudev Singhal',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'jsfs0124',
@@ -38,7 +38,7 @@ export const webDevelopment = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true,
+      active: false,
       special: '☀️ Flat 60% Off on Full Stack Web Dev Batch ☀️'
     }
   ],

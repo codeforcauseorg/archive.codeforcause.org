@@ -23,7 +23,7 @@ export const elastic = {
       priceId: 'price_1IjJneLVU3L7vcSrTQSFHn86',
       duration: '3 Days',
       language: 'English',
-      active: true
+      active: false
     }
   ],
   projects: [

@@ -34,7 +34,7 @@ export const machineLearning = {
       duration: '40 Live Lectures (1.5 hrs)',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true,
+      active: false,
       special: '☀️ ML for all offer. Flat 90% Off on Machine Learning Batch ☀️'
     },
   ],

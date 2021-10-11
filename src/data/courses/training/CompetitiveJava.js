@@ -35,7 +35,7 @@ export const competitiveJava = {
       duration: '80 Live Lectures',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'jcomp0123',

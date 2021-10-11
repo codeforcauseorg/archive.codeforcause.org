@@ -48,7 +48,7 @@ export const competitiveJava = {
       duration: '40 Live Lectures',
       mentor: 'Nityanand Rai',
       language: 'Hindi',
-      active: true
+      active: false
     }
   ],
   projects: [

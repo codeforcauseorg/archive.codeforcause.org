@@ -35,7 +35,7 @@ export const machineLearning = {
       duration: '80 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: true
+      active: false
     },
     {
       courseId: 'mlpy1022',

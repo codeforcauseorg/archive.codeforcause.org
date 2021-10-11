@@ -9,7 +9,7 @@ export const webDevelopment = {
   title: 'Practical Full Stack Web Development with JS',
   upcoming: 'Aug 23rd',
   mentors: ['anuj', 'ganga'],
-  active: true,
+  active: false,
   application: true,
   schedule: [
     {
@@ -22,7 +22,7 @@ export const webDevelopment = {
       price: '₹ 1500',
       priceId: 'https://rzp.io/l/webdevcfc',
       duration: '40 Live Lectures',
-      active: true,
+      active: false,
       application: true
     }
   ],

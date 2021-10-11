@@ -20,7 +20,7 @@ export const deepLearning = {
       priceCut: '₹ 5,880',
       price: '₹ 985',
       duration: '9 Live Lectures',
-      active: true
+      active: false
     }
   ],
   projects: [
