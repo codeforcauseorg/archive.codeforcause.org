@@ -38,7 +38,7 @@ export const webDevelopment = {
       duration: '40 Live Lectures',
       mentor: 'Anuj Garg',
       language: 'Hindi',
-      active: false,
+      active: true,
       special: '☀️ Flat 60% Off on Full Stack Web Dev Batch ☀️'
     }
   ],
