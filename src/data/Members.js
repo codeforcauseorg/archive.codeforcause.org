@@ -36,5 +36,17 @@ export const members = {
     position: 'Instructor',
     avatar: '/static/images/members/vasu.jpeg',
     linkedin: 'https://www.linkedin.com/in/vasudevsinghal'
+  },
+  prakrit: {
+    name: 'Prakrit Pathak',
+    position: 'Instructor',
+    avatar: '/static/images/members/prakrit.jpeg',
+    linkedin: 'https://www.linkedin.com/in/prakrit-pathak-9a10691a9/'
+  },
+  akash: {
+    name: 'Akash Jain',
+    position: 'Instructor',
+    avatar: '/static/images/members/akash.jpeg',
+    linkedin: 'https://www.linkedin.com/in/akash-jain-23b857205/'
   }
 };

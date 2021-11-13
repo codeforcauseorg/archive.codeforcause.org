@@ -7,9 +7,9 @@ export const algoCpp = {
     title: 'Data Structures and Algorithms with C++',
     started: '',
     upcoming: 'June 20th (Weekdays)',
-    mentors: ['nityanand'],
+    mentors: ['nityanand', 'akash'],
     language: 'Hindi',
-    default: 2,
+    default: 3,
     schedule: [
       {
         courseId: 'cds0121',
@@ -53,6 +53,21 @@ export const algoCpp = {
         language: 'Hindi',
         active: false,
         special: '☀️ Flat 90% Off on Data Structures and Algorithms with C++ ☀️'
+      },
+      {
+        courseId: 'jds0127',
+        dates: '3rd Jan - 6th March',
+        days: 'Tue, Thurs, Sat, Sun',
+        timing: '06:30 PM - 8:00 PM (IST)',
+        link: '',
+        priceCut: '12,000',
+        price: '₹ 4,800',
+        priceId: 'cpp0122',
+        duration: '40 Live Lectures (1.5 hrs)',
+        mentor: 'Nityanand Rai, Akash Jain',
+        language: 'Hindi',
+        active: true,
+        special: '☀️ Flat 60% Off on Data Structures and Algorithms with C++ ☀️'
       }
     ],
     projects: [

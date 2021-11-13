@@ -7,9 +7,9 @@ export const algoJava = {
   title: 'Data Structures and Algorithms with Java',
   started: 'March 14th (Weekends)',
   upcoming: 'June 27th (Weekends)',
-  mentors: ['anuj', 'nityanand'],
+  mentors: ['anuj', 'nityanand', 'prakrit'],
   language: 'Hindi',
-  default: 3,
+  default: 4,
   schedule: [
     {
       courseId: 'jds0125',
@@ -67,6 +67,21 @@ export const algoJava = {
       language: 'Hindi',
       active: false,
       special: '☀️ Flat 90% Off on Data Structures and Algorithms with Java ☀️'
+    },
+    {
+      courseId: 'jds0127',
+      dates: '3rd Jan - 6th March',
+      days: 'Mon, Wed, Fri, Sun',
+      timing: '06:30 PM - 8:00 PM (IST)',
+      link: '',
+      priceCut: '12,000',
+      price: '₹ 4,800',
+      priceId: 'java0122',
+      duration: '40 Live Lectures (1.5 hrs)',
+      mentor: 'Nityanand Rai, Prakrit Pathak',
+      language: 'Hindi',
+      active: true,
+      special: '☀️ Flat 60% Off on Data Structures and Algorithms with Java ☀️'
     }
   ],
   projects: [
