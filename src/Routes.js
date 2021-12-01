@@ -231,6 +231,19 @@ const renderRoutes = () => (
       />
 
       <Route
+        path={`/github-ui-clone-with-react`}
+        exact
+        render={props => (
+          <MainLayout>
+            <BootcampPage
+              course={bootcampsContent.js.githubClone}
+              {...props}
+            />
+          </MainLayout>
+        )}
+      />
+
+      <Route
         path={`/zomato-clone-with-react-js`}
         exact
         render={props => (

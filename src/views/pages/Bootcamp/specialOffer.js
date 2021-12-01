@@ -31,7 +31,7 @@ export default function SpecialOffer({ offer }) {
   const classes = useStyles();
 
   if (!offer) {
-    return undefined;
+    return <h1>No available Offer</h1>;
   }
 
   return (

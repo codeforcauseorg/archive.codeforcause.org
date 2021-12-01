@@ -7,7 +7,7 @@ import CTA from './CTA';
 import Footer from '../common/Footer';
 import StandForSection from './AboutUs/AboutUsView/StandForView';
 import Team from './AboutUs/OurTeam/Team';
-import Promoters from './Promoters';
+// import Promoters from './Promoters';
 import MentorExperience from './MentorExperience';
 import WatchOurVideoView from './WatchVideos';
 import {
@@ -32,7 +32,7 @@ function HomeView() {
   return (
     <Page className={classes.root} title="Code for Cause">
       <Hero />
-      <Promoters />
+      {/* <Promoters /> */}
       <Promo />
       <Events id="events" />
       <MentorExperience experience={experience} />

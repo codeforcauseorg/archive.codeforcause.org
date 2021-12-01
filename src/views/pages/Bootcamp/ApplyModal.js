@@ -20,8 +20,7 @@ import {
 } from 'react-material-ui-form-validator';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from 'src/actions/accountActions';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles(theme => ({
   btn: {
@@ -66,45 +65,44 @@ export default function ApplyModal({
   const { enqueueSnackbar } = useSnackbar();
 
   const user = useSelector(state => state.account.user);
-  const dispatch = useDispatch();
-
-  const handleLogin = () => {
-    dispatch(login());
-  };
 
   const handleClickOpen = () => {
-    setChecking(true);
-    console.log(user.email);
-    axios(
-      'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special/status/',
-      {
-        params: { email: user.email }
-      }
-    )
-      .then(response => {
-        setChecking(false);
-        if (response.data.status === 'Credit') {
-          enqueueSnackbar(
-            'Registration is already complete with this account.',
-            {
-              variant: 'success'
-            }
-          );
-        } else {
-          setOpen(true);
-          updateFormData({
-            countryCode: '+91',
-            phone: '',
-            priceId: batch.priceId,
-            email: user.email,
-            name: user.displayName
-          });
+    if (batch.razor) {
+      window.open(batch.razor, '_blank').focus();
+    } else {
+      setChecking(true);
+      console.log(user.email);
+      axios(
+        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/special/status/',
+        {
+          params: { email: user.email }
         }
-      })
-      .catch(err => {
-        setChecking(false);
-        enqueueSnackbar('Application Failed. Try again later');
-      });
+      )
+        .then(response => {
+          setChecking(false);
+          if (response.data.status === 'Credit') {
+            enqueueSnackbar(
+              'Registration is already complete with this account.',
+              {
+                variant: 'success'
+              }
+            );
+          } else {
+            setOpen(true);
+            updateFormData({
+              countryCode: '+91',
+              phone: '',
+              priceId: batch.priceId,
+              email: user.email,
+              name: user.displayName
+            });
+          }
+        })
+        .catch(err => {
+          setChecking(false);
+          enqueueSnackbar('Application Failed. Try again later');
+        });
+    }
   };
 
   const handleClose = () => {
@@ -168,39 +166,23 @@ export default function ApplyModal({
 
   return (
     <div>
-      {user ? (
-        <ThemeProvider theme={theme}>
-          <Button
-            disabled={!course.enabled}
-            className={classes.btn}
-            size="large"
-            variant="contained"
-            onClick={handleClickOpen}
-            {...rest}
-            fullWidth={fullWidth}
-          >
-            {course.enabled
-              ? checking
-                ? 'Checking Seats...'
-                : 'Register'
-              : 'Applications Closed'}
-          </Button>
-        </ThemeProvider>
-      ) : (
-        <ThemeProvider theme={theme}>
-          <Button
-            disabled={!course.enabled}
-            className={classes.btn}
-            size="large"
-            variant="contained"
-            onClick={handleLogin}
-            {...rest}
-            fullWidth={fullWidth}
-          >
-            {course.enabled ? 'Sign in to Register' : 'Applications Closed'}
-          </Button>
-        </ThemeProvider>
-      )}
+      <ThemeProvider theme={theme}>
+        <Button
+          disabled={!course.enabled}
+          className={classes.btn}
+          size="large"
+          variant="contained"
+          onClick={handleClickOpen}
+          {...rest}
+          fullWidth={fullWidth}
+        >
+          {course.enabled
+            ? checking
+              ? 'Checking Seats...'
+              : 'Register'
+            : 'Applications Closed'}
+        </Button>
+      </ThemeProvider>
 
       <Dialog
         fullWidth

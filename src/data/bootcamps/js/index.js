@@ -1,5 +1,6 @@
 import { zomatoClone } from './ZomatoClone';
 import { whatsAppClone } from './WhatsAppClone';
-const js = { zomatoClone, whatsAppClone };
+import { githubClone } from './GitHubClone';
+const js = { githubClone, zomatoClone, whatsAppClone };
 
 export default js;

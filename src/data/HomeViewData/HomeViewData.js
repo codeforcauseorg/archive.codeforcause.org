@@ -42,7 +42,8 @@ export const bootcamps = [
     link:
       'https://www.youtube.com/watch?v=Uf7N1tab6Ho&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
     type: 'Bootcamp',
-    title: 'ML Bootcamp - Introduction to Artificial Neurons, Neural Networks and Deep Learning',
+    title:
+      'ML Bootcamp - Introduction to Artificial Neurons, Neural Networks and Deep Learning',
     timeBelow: 'Aug 8',
     image: 'https://img.youtube.com/vi/Uf7N1tab6Ho/hqdefault.jpg'
   },
@@ -61,11 +62,6 @@ export const bootcamps = [
 
 export const mentors = [
   {
-    name: 'Amit Kumar',
-    avatar: '/static/images/members/amit.png',
-    linkedin: 'https://www.linkedin.com/in/amikudev/'
-  },
-  {
     name: 'Anuj Garg',
     avatar: '/static/images/members/anuj.png',
     linkedin: 'https://www.linkedin.com/in/keenwarrior/'
@@ -75,6 +71,12 @@ export const mentors = [
     avatar: '/static/images/members/ganga.png',
     linkedin: 'https://www.linkedin.com/in/gangachatrvedi/'
   },
+  {
+    name: 'Amit Kumar',
+    avatar: '/static/images/members/amit.png',
+    linkedin: 'https://www.linkedin.com/in/amikudev/'
+  },
+
   {
     name: 'Abhishek Kumar',
     avatar: '/static/images/members/abhishek.jpg',
@@ -94,8 +96,7 @@ export const mentors = [
     name: 'Bharat Kumar',
     avatar: '/static/images/members/bharat.png',
     linkedin: 'https://www.linkedin.com/in/bharatbbhardwaj/'
-  },
-
+  }
 ];
 
 // experience data ---------------------

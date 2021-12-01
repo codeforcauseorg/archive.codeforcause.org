@@ -22,9 +22,8 @@ export default function Success() {
     return (
       <div className={classes.root}>
         <Typography align="center">
-          Your last payment to codeforcause was successful. We will connect to
-          you within 24 hours with more details and you'll receive an email from
-          us as well.
+          Your last payment to codeforcause was successful. You'll be added to
+          whatsapp group one day prior to batch start.
         </Typography>
         <Typography align="center">
           Connect with us at {` `}
