@@ -57,24 +57,20 @@ const useStyles = makeStyles(theme => ({
 
 const offers = [
   {
-    name: '90% Off on DSA Courses',
+    name: 'React with GitHub Clone',
     applied_on: '',
-    desc: 'Introducing the DSA scholarship for all Coding Enthusiast, great go through of every fundamental concept while learning and implementing data strucures from scratch.',
+    desc: 'We will cover JS fundamentals, async, await, promises,  hands-on with React.JS working with GitHub API.',
     links: [
       {
-        name: 'DSA C++',
-        link: '/ds-algo-with-cpp'
+        name: 'Learn More',
+        link: '/github-ui-clone-with-react'
       },
-      // { // Commenting to hide a button
-      //   name: 'DSA Java',
-      //   link: '/ds-algo-with-java'
-      // }
     ],
     terms: '',
     is_course: true,
-    special_price: '₹ 1200',
-    original_price: '₹ 12,000',
-    pic: '/static/images/backs/dsa.png'
+    special_price: '₹ 950',
+    original_price: '₹ 3,900',
+    pic: '/static/images/backs/sc.png'
   },
   {
     name: 'Machine Learning for All',

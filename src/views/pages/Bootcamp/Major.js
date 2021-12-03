@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Box, Hidden } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import Details from './partials/Details';
 import Overview from './partials/Overview';
 import Topics from './partials/Topics';
-import Projects from './partials/Projects';
+// import Projects from './partials/Projects';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -104,11 +104,11 @@ export default function Major({ course }) {
           <Topics course={course} />
         </Box>
 
-        <Hidden smDown>
+        {/* <Hidden smDown>
           <Box display="flex" flexDirection="column" mb={3} ml={2}>
             <Projects projects={course.projects} />
           </Box>
-        </Hidden>
+        </Hidden> */}
       </Box>
     </Grid>
   );

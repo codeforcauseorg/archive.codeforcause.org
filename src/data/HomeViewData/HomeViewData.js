@@ -28,30 +28,30 @@ export const events = [
 
 // Bootcamps data
 export const bootcamps = [
+  
   {
+    domain: 'React',
+    link: '/github-ui-clone-with-react',
+    type: 'Bootcamp',
+    title: '30 Days React Bootcamp GitHub UI Clone',
+    timeBelow: '1st Jan - 30th Jan',
+    image: '/static/temp/github.jpeg',
+    target: '_self'
+  },{
     domain: 'React',
     link: '/zomato-clone-with-react-js',
     type: 'Bootcamp',
     title: 'Learn to make a Zomato Clone in our week long React Bootcamp',
-    timeBelow: '31st May-14th June',
+    timeBelow: '31st May',
     image: '/static/temp/rn.jpeg',
     target: '_self'
   },
-  {
-    domain: 'Machine Learning',
-    link:
-      'https://www.youtube.com/watch?v=Uf7N1tab6Ho&list=PLyzHIYrZBplo3K0dNUqppd2ynnoZPD6N1',
-    type: 'Bootcamp',
-    title:
-      'ML Bootcamp - Introduction to Artificial Neurons, Neural Networks and Deep Learning',
-    timeBelow: 'Aug 8',
-    image: 'https://img.youtube.com/vi/Uf7N1tab6Ho/hqdefault.jpg'
-  },
+
   {
     domain: 'DS & Algorithms',
     link:
       'https://www.youtube.com/watch?v=hkx_JFFwM1o&list=PLyzHIYrZBplpsh_PQimtVosH72wSVOpy2',
-    type: 'Bootcamp',
+    type: 'YT',
     title: 'Data Structures and Algorithms with Java',
     timeBelow: 'Aug 25',
     image: '/static/events/hqdefault2.jpg'
@@ -75,12 +75,6 @@ export const mentors = [
     name: 'Amit Kumar',
     avatar: '/static/images/members/amit.png',
     linkedin: 'https://www.linkedin.com/in/amikudev/'
-  },
-
-  {
-    name: 'Abhishek Kumar',
-    avatar: '/static/images/members/abhishek.jpg',
-    linkedin: 'https://www.linkedin.com/in/abhishek-kr09/'
   },
   {
     name: 'Nityanand Rai',
